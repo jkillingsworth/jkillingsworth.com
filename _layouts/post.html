@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<main>
+  <article>
+    <header>
+      <h1>{{ page.title | escape }}</h1>
+    </header>
+    {{ content }}
+    <footer>
+      <em>{{ page.date | date: "%B %e, %Y" }}</em>
+    </footer>
+  </article>
+</main>

@@ -1,0 +1,24 @@
+title: Jim Killingsworth
+
+description: >-
+    Jim Killingsworth is a computer programmer with over a decade of experience building software systems.
+
+excerpt_separator: <!--excerpt-->
+
+permalink: /blog/:year/:month/:day/:title/
+
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - README.md
+
+sass:
+    style: compressed
+
+plugins:
+    - jekyll-minifier
+
+jekyll-minifier:
+    remove_http_protocol: true
+    remove_https_protocol: true
+    remove_intertag_spaces: true

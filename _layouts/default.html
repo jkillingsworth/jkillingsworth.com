@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}" />
+  <link rel="stylesheet" href="/assets/css/normalize.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+  <header>
+    <h1>
+      <a href="/">Jim Killingsworth</a>
+    </h1>
+    <nav class="navmain">
+      <h1>Main Menu</h1>
+      <ul>
+        <li>
+          <a href="/">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/about/">
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="content">
+    <h1>Content</h1>
+    {{ content }}
+  </section>
+  <section class="sidebar">
+    <h1>Sidebar</h1>
+    {% include sidebar.html %}
+  </section>
+  <footer>
+    <em>&copy; 2017 Jim Killingsworth. All rights reserved.</em>
+  </footer>
+</body>
+</html>
