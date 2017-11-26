@@ -21,6 +21,4 @@ plugins:
     - jekyll-minifier
 
 jekyll-minifier:
-    remove_http_protocol: true
-    remove_https_protocol: true
     remove_intertag_spaces: true
