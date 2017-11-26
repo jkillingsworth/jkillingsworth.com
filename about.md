@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-<img src="/assets/img/headshot-utah.jpg" alt="Headshot" class="floating" />
+<img src="./assets/img/headshot-utah.jpg" alt="Headshot" class="floating" />
 
 Jim Killingsworth is a computer programmer with over a decade of experience building software systems. He holds a bachelor's degree in computer engineering and has a penchant for applied mathematics and functional programming.
 
