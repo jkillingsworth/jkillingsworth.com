@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+permalink: /about/
 ---
 
 <img src="./assets/img/headshot-utah.jpg" alt="Headshot" class="floating" />

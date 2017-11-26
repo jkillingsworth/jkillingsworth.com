@@ -14,6 +14,9 @@ exclude:
     - Gemfile.lock
     - README.md
 
+include:
+    - _pages
+
 sass:
     style: compressed
 
