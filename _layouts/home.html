@@ -7,13 +7,19 @@ layout: default
   <article>
     <header>
       <h1>
-        <a href="{{ page.url }}">{{ page.title | escape }}</a>
+        <a href=".{{ page.url }}">{{ page.title | escape }}</a>
       </h1>
     </header>
     {{ page.excerpt }}
     <footer>
-      <em><a href="{{ page.url }}">Read more&hellip;</a></em>
+      <a href=".{{ page.url }}">Read more&hellip;</a>
     </footer>
   </article>
   {% endfor %}
 </main>
+{% if site.posts.size > 0 %}
+<nav class="navmore">
+  <h1>More Articles</h1>
+  <a href="./">Show More</a>
+</nav>
+{% endif %}

@@ -9,16 +9,21 @@ html
     box-sizing: inherit;
 }
 
+$shade50: #808080;
+$shade80: #cccccc;
+$shade90: #e6e6e6;
+
 $header-image: $baseurl + "/assets/img/sahara-west.jpg";
 $header-image-w: 1200px;
 $header-image-h: 240px;
 $margin-percent: 10%;
-$border-upper: 3px solid gray;
-$border-lower: 1px solid lightgray;
+$border-upper: 3px solid $shade50;
+$border-lower: 1px solid $shade80;
 
 body
 {
     background-color: white;
+    color: black;
     display: flex;
     flex-flow: row wrap;
     font-family: "Lora", "Georgia", serif;
@@ -39,11 +44,11 @@ h1, h2, h3, h4, h5, h6, nav
 {
     font-family: "Open Sans", "Verdana", sans-serif;
     font-weight: bold;
-}
 
-h1 > a
-{
-    color: black;
+    a
+    {
+        color: inherit;
+    }
 }
 
 a
@@ -57,7 +62,6 @@ a:hover
     color: blue;
     text-decoration: underline;
 }
-
 
 footer
 {
@@ -75,7 +79,7 @@ body > header
     }
 }
 
-body > header > nav
+.navmain
 {
     border-bottom: $border-lower;
     border-top: $border-upper;
@@ -97,7 +101,6 @@ body > header > nav
 
     li a
     {
-        color: black;
         display: block;
         padding: 4px 0;
         text-align: center;
@@ -106,7 +109,25 @@ body > header > nav
     li a:hover,
     li a:focus
     {
-        background-color: gray;
+        background-color: $shade50;
+        color: white;
+    }
+}
+
+.navmore
+{
+    a
+    {
+        background-color: $shade90;
+        display: block;
+        padding: 4px 0;
+        text-align: center;
+    }
+
+    a:hover,
+    a:focus
+    {
+        background-color: $shade50;
         color: white;
     }
 }
@@ -168,11 +189,15 @@ body > footer
     }
 }
 
-.content > h1,
-.sidebar > h1,
-.navmain > h1
+.content,
+.sidebar,
+.navmain,
+.navmore
 {
-    display: none;
+    > h1
+    {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 1000px)
