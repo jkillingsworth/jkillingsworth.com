@@ -13,12 +13,11 @@ $shade50: #808080;
 $shade80: #cccccc;
 $shade90: #e6e6e6;
 
-$header-image: $baseurl + "/assets/img/sahara-west.jpg";
-$header-image-w: 1200px;
-$header-image-h: 240px;
-$margin-percent: 10%;
 $border-upper: 3px solid $shade50;
 $border-lower: 1px solid $shade80;
+
+$header-width: 1200px;
+$margin-percent: 10%;
 
 body
 {
@@ -31,7 +30,7 @@ body
     justify-content: space-between;
     line-height: 1.5;
     margin: 0 auto;
-    max-width: $header-image-w;
+    max-width: $header-width;
     width: 100% - (2 * $margin-percent);
 
     > *
@@ -130,17 +129,6 @@ body > header
         background-color: $shade50;
         color: white;
     }
-}
-
-body > header::after
-{
-    background-image: url($header-image);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    content: "";
-    display: block;
-    max-width: 100%;
-    padding: ($header-image-h / $header-image-w) * 100% 0 0;
 }
 
 body > footer
