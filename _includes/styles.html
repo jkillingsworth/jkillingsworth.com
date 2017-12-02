@@ -1,6 +1,12 @@
+{% capture normalize %}
+{% include normalize.css %}
+{% endcapture %}
+
 {% capture styles %}
 {% include styles.scss %}
 {% endcapture %}
+
 {{ "<style>" }}
+{{ normalize }}
 {{ styles | scssify }}
 {{ "</style>" }}
