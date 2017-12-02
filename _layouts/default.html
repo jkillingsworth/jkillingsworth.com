@@ -6,10 +6,10 @@
   <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}" />
   <base href="{{ site.baseurl }}/" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora%7CLora:i%7COpen+Sans:b" />
-  <link rel="stylesheet" href="./assets/css/main.css" />
   <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora%7CLora:i%7COpen+Sans:b" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  {% include styles.html %}
 </head>
 <body>
   <header>
