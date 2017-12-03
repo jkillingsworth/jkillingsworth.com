@@ -35,6 +35,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
+    mimemagic (0.3.2)
     pathutil (0.16.0)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.1)
@@ -57,6 +58,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll-minifier
+  mimemagic
   wdm (>= 0.1.1)
 
 BUNDLED WITH
