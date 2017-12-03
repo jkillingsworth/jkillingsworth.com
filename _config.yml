@@ -10,6 +10,7 @@ permalink: /blog/:year/:month/:day/:title/
 baseurl: /blog
 
 exclude:
+    - inline/
     - Gemfile
     - Gemfile.lock
     - README.md
