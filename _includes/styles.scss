@@ -62,7 +62,6 @@ a:hover
 
 footer
 {
-    clear: both;
     font-style: italic;
 }
 
@@ -143,6 +142,13 @@ body > footer
     header, footer, p, figure
     {
         margin: 24px 0;
+    }
+
+    footer::before
+    {
+        clear: both;
+        content: "";
+        display: block;
     }
 }
 
