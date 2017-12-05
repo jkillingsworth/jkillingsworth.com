@@ -66,15 +66,10 @@ footer
     font-style: italic;
 }
 
-body > header
+body > header > h1
 {
-    > h1
-    {
-        font-size: 32px;
-        font-size: 40px;
-        margin: 10px 0;
-        text-align: center;
-    }
+    font-size: 32px;
+    margin: 10px 0;
 }
 
 body > footer
@@ -92,23 +87,22 @@ body > footer
     ul
     {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column wrap;
         list-style-type: none;
+        justify-content: flex-start;
         margin: 0;
         padding: 0;
     }
 
     li
     {
-        flex: 0 100%;
-        max-width: 100px;
+        flex: none;
     }
 
     li a
     {
         display: block;
-        padding: 4px 0;
-        text-align: center;
+        padding: 4px 32px;
     }
 
     li a:hover,
@@ -196,6 +190,17 @@ body > footer
     {
         max-width: 760px;
         width: 100% - (2 * $margin-width);
+    }
+
+    body > header > h1
+    {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .navmain ul
+    {
+        flex-flow: row wrap;
     }
 
     .content p.floating
