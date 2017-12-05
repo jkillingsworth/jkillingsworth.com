@@ -138,15 +138,9 @@ body > footer
     header > h1
     {
         font-size: 32px;
-        margin: 24px 0;
     }
 
-    footer
-    {
-        margin: 24px 0;
-    }
-
-    p
+    header, footer, p, figure
     {
         margin: 24px 0;
     }
@@ -203,7 +197,7 @@ body > footer
         flex-flow: row wrap;
     }
 
-    .content p.floating
+    .content .floating
     {
         float: left;
         margin: 0 24px 0 0;
