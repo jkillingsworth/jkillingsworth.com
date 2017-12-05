@@ -17,7 +17,8 @@ $border-upper: 3px solid $shade50;
 $border-lower: 1px solid $shade80;
 
 $header-width: 1200px;
-$margin-percent: 10%;
+$margin-outer: 10%;
+$margin-inner: $margin-outer / 2;
 
 body
 {
@@ -31,7 +32,7 @@ body
     line-height: 1.5;
     margin: 0 auto;
     max-width: $header-width;
-    width: 100% - (2 * $margin-percent);
+    width: 100% - (2 * $margin-outer);
 
     > *
     {
@@ -175,7 +176,7 @@ body > footer
     {
         border-bottom: $border-lower;
         border-top: $border-upper;
-        font-size: 16px;
+        font-size: inherit;
         margin: 0;
         padding: 4px 0;
     }
@@ -194,21 +195,20 @@ body > footer
     }
 }
 
-@media only screen and (min-width: 1000px)
+@media only screen and (min-width: 1200px)
 {
     .content
     {
-        flex: 0 (2 / 3) * (100% - $margin-percent) + ($margin-percent / 2);
-        margin: 0 ($margin-percent / 2) 0 0;
+        flex: 0 (2 / 3) * (100% - $margin-inner);
     }
 
     .sidebar
     {
-        flex: 0 (1 / 3) * (100% - $margin-percent);
+        flex: 0 (1 / 3) * (100% - $margin-inner);
+    }
 
-        aside:first-of-type
-        {
-            margin: 40px 0 0;
-        }
+    .sidebar aside:first-of-type
+    {
+        margin: 40px 0 0;
     }
 }
