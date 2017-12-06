@@ -9,7 +9,7 @@ module Jekyll
 
         def render(context)
             text = open(@src, "rt") { |f| data = f.read }
-            text.gsub(/\<\?xml.+\?\>|\<\!DOCTYPE.+\>/, "")
+            text.gsub(/\<\?xml.+\?\>|\<\!DOCTYPE.+\>|id\=\".*?\"/, "")
         end
     end
 end
