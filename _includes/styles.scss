@@ -48,6 +48,11 @@ h1, h2, h3, h4, h5, h6, nav
     }
 }
 
+svg
+{
+    fill: currentColor;
+}
+
 a
 {
     color: blue;
@@ -166,6 +171,44 @@ body > footer
         font-size: inherit;
         margin: 0;
         padding: 4px 0;
+    }
+}
+
+.sidebar .social-media
+{
+    $icon-size: 48px;
+
+    ul
+    {
+        list-style: none;
+        padding: 0 16px;
+    }
+
+    ul > li a
+    {
+        display: inline-block;
+    }
+
+    ul > li a *
+    {
+        vertical-align: middle;
+    }
+
+    ul > li a span
+    {
+        margin: 0 10px;
+    }
+
+    ul > li a svg
+    {
+        color: $shade50;
+        height: $icon-size;
+        width: $icon-size;
+    }
+
+    ul > li a:hover svg
+    {
+        color: inherit;
     }
 }
 
