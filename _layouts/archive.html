@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<main>
+  {% if site.posts.size > 0 %}
+  <article class="archive">
+    {% for page in site.posts %}
+    {% unless year %}
+    {% assign year = page.date | date: "%Y" %}
+    <header>
+      <h1>{{ year }}</h1>
+    </header>
+    <ul>
+      {% endunless %}
+      <li>
+        <span>[{{ page.date | date: "%b %d" }}]: </span>
+        <a href=".{{ page.url }}">{{ page.title | escape }}</a>
+      </li>
+      {% assign next = page.previous.date | date: "%Y" %}
+      {% unless year == next %}
+      {% assign year = nil %}
+    </ul>
+    {% endunless %}
+    {% endfor %}
+    <footer></footer>
+  </article>
+  {% endif %}
+</main>

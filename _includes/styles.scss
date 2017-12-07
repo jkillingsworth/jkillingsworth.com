@@ -166,6 +166,24 @@ body > footer
     }
 }
 
+.content .archive
+{
+    ul > li
+    {
+        margin: 16px 0;
+    }
+
+    ul > li span
+    {
+        font-family: monospace;
+    }
+
+    ul > li a
+    {
+        display: block;
+    }
+}
+
 .sidebar
 {
     aside
@@ -264,6 +282,19 @@ body > footer
     {
         float: left;
         margin: 0 24px 0 0;
+    }
+
+    .content .archive
+    {
+        ul > li
+        {
+            margin: 0;
+        }
+
+        ul > li a
+        {
+            display: inline;
+        }
     }
 }
 
