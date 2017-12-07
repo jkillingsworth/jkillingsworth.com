@@ -79,7 +79,6 @@ body > header > h1
 body > footer
 {
     border-top: $border-upper;
-    margin: 16px 0 0;
     padding: 16px 0;
 }
 
@@ -119,7 +118,7 @@ body > footer
 
 .navmore
 {
-    margin: 8px 0;
+    margin: 24px 0;
     text-align: center;
 
     a
@@ -155,13 +154,28 @@ body > footer
         content: "";
         display: block;
     }
+
+    .floating
+    {
+        text-align: center;
+
+        img
+        {
+            max-width: 100%;
+        }
+    }
 }
 
 .sidebar
 {
     aside
     {
-        margin: 16px 0;
+        margin: 24px 0;
+    }
+
+    aside:first-of-type
+    {
+        margin-top: 0;
     }
 
     header > h1
@@ -275,6 +289,6 @@ body > footer
 
     .sidebar aside:first-of-type
     {
-        margin: 40px 0 0;
+        margin-top: 40px;
     }
 }
