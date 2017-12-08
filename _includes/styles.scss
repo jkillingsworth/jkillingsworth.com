@@ -257,6 +257,22 @@ body > footer
     }
 }
 
+@mixin archive-list-inline
+{
+    .content .archive
+    {
+        ul > li
+        {
+            margin: 0;
+        }
+
+        ul > li a
+        {
+            display: inline;
+        }
+    }
+}
+
 @media only screen and (min-width: 600px)
 {
     $margin-width: 7.5%;
@@ -284,18 +300,7 @@ body > footer
         margin: 0 24px 0 0;
     }
 
-    .content .archive
-    {
-        ul > li
-        {
-            margin: 0;
-        }
-
-        ul > li a
-        {
-            display: inline;
-        }
-    }
+    @include archive-list-inline();
 }
 
 @media only screen and (min-width: 1200px)
@@ -352,16 +357,5 @@ body > footer
         display: none;
     }
 
-    .content .archive
-    {
-        ul > li
-        {
-            margin: 0;
-        }
-
-        ul > li a
-        {
-            display: inline;
-        }
-    }
+    @include archive-list-inline();
 }
