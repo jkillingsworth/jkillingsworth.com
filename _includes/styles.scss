@@ -323,3 +323,45 @@ body > footer
         margin-top: 40px;
     }
 }
+
+@media only print
+{
+    @page
+    {
+        margin: 1in 1.25in;
+    }
+
+    body
+    {
+        display: inherit;
+        margin: auto;
+        width: 100%;
+    }
+
+    body > header > h1
+    {
+        font-size: inherit;
+        margin: inherit;
+        text-align: inherit;
+    }
+
+    .navmain,
+    .navmore,
+    .sidebar
+    {
+        display: none;
+    }
+
+    .content .archive
+    {
+        ul > li
+        {
+            margin: 0;
+        }
+
+        ul > li a
+        {
+            display: inline;
+        }
+    }
+}
