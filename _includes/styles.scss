@@ -72,7 +72,7 @@ footer
 
 body > header > h1
 {
-    font-size: 32px;
+    font-size: 24px;
     margin: 10px 0;
 }
 
@@ -286,7 +286,6 @@ body > footer
     body > header > h1
     {
         font-size: 40px;
-        text-align: center;
     }
 
     .navmain ul
@@ -311,6 +310,11 @@ body > footer
     {
         max-width: 1200px;
         width: 100% - (2 * $margin-width);
+    }
+
+    body > header > h1
+    {
+        text-align: center;
     }
 
     .content
@@ -345,9 +349,12 @@ body > footer
 
     body > header > h1
     {
+        border-bottom: $border-lower;
+        border-top: $border-upper;
         font-size: inherit;
-        margin: inherit;
-        text-align: inherit;
+        margin: 0;
+        padding: 4px 0;
+        text-align: left;
     }
 
     .navmain,
