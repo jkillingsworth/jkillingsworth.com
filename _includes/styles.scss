@@ -105,7 +105,7 @@ body > footer
     li a
     {
         display: block;
-        padding: 4px 32px;
+        padding: 4px 16px;
     }
 
     li a:hover,
@@ -286,6 +286,11 @@ body > footer
     .navmain ul
     {
         flex-flow: row wrap;
+    }
+
+    .navmain li a
+    {
+        padding: 4px 32px;
     }
 
     .content .floating
