@@ -168,17 +168,14 @@ body > footer
 {
     ul > li
     {
-        margin: 16px 0;
+        margin: 4px 0;
     }
 
     ul > li span
     {
-        font-family: monospace;
-    }
-
-    ul > li a
-    {
         display: block;
+        font-family: monospace;
+        font-size: 10pt;
     }
 }
 
@@ -264,7 +261,7 @@ body > footer
             margin: 0;
         }
 
-        ul > li a
+        ul > li span
         {
             display: inline;
         }
