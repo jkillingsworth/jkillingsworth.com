@@ -136,6 +136,7 @@ body > footer
     }
 }
 
+
 .content
 {
     header > h1
@@ -148,21 +149,18 @@ body > footer
         margin: 24px 0;
     }
 
-    footer::before
+    p:last-of-type::after
     {
         clear: both;
         content: "";
         display: block;
     }
 
-    .floating
+    .floating > img
     {
-        text-align: center;
-
-        img
-        {
-            max-width: 100%;
-        }
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
     }
 }
 
@@ -342,7 +340,7 @@ body > footer
 
     body
     {
-        display: inherit;
+        display: block;
         margin: auto;
         width: 100%;
     }
