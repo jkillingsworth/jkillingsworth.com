@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 group :jekyll_plugins do
+    gem "jekyll-hyphenate_filter"
     gem "jekyll-minifier"
 end
 

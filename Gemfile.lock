@@ -20,6 +20,9 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 3)
       safe_yaml (~> 1.0)
+    jekyll-hyphenate_filter (0.0.2)
+      nokogiri (~> 1.6)
+      text-hyphen (~> 1.4)
     jekyll-minifier (0.1.5)
       cssminify2 (~> 2.0)
       htmlcompressor (~> 0.3)
@@ -36,6 +39,9 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
     mimemagic (0.3.2)
+    mini_portile2 (2.3.0)
+    nokogiri (1.8.1-x64-mingw32)
+      mini_portile2 (~> 2.3.0)
     pathutil (0.16.0)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.1)
@@ -49,6 +55,7 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    text-hyphen (1.4.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     wdm (0.1.1)
@@ -57,6 +64,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  jekyll-hyphenate_filter
   jekyll-minifier
   mimemagic
   wdm (>= 0.1.1)

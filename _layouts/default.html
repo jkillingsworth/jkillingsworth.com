@@ -41,11 +41,14 @@
   </header>
   <section class="content">
     <h1>Content</h1>
-    {{ content }}
+    {{ content | hyphenate }}
   </section>
   <section class="sidebar">
     <h1>Sidebar</h1>
+    {% capture sidebar %}
     {% include sidebar.html %}
+    {% endcapture %}
+    {{ sidebar | hyphenate }}
   </section>
   <footer>
     &copy; 2017 Jim Killingsworth. All rights reserved.
