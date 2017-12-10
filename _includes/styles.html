@@ -6,7 +6,7 @@
 {% include styles.scss %}
 {% endcapture %}
 
-{{ "<style>" }}
-{{ normalize }}
-{{ styles | scssify }}
-{{ "</style>" }}
+{{- "<style>" }}
+{{- normalize | scssify }}
+{{- styles | scssify }}
+{{- "</style>" }}
