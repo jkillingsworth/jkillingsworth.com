@@ -5,7 +5,13 @@ permalink: /about/
 ---
 
 <figure class="floating">
-  <img src="{% datauri ./inline/headshot-utah.jpg %}" width="180" alt="Headshot" />
+  <img width="180" height="320" alt="Headshot"
+    srcset="
+      ./assets/headshot-utah-720.jpg 4x,
+      ./assets/headshot-utah-540.jpg 3x,
+      ./assets/headshot-utah-360.jpg 2x,
+      ./assets/headshot-utah-180.jpg 1x"
+    src="{% datauri ./inline/headshot-utah-low.jpg %}" />
 </figure>
 
 Jim Killingsworth is a computer programmer with over a decade of experience building software systems. He holds a bachelor's degree in computer engineering and has a penchant for applied mathematics and functional programming.
