@@ -339,11 +339,6 @@ body > footer
 
 @media only print
 {
-    @page
-    {
-        margin: 1in 1.25in;
-    }
-
     body
     {
         display: block;
@@ -369,4 +364,9 @@ body > footer
     }
 
     @include archive-list-inline();
+}
+
+@page
+{
+    margin: 1in 1.25in;
 }
