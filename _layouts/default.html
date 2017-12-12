@@ -7,7 +7,7 @@
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}" />
   <base href="{{ site.baseurl }}/" />
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora%7CLora:i%7COpen+Sans:b" />
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Lora%7CLora:i%7COpen+Sans:b" as="style" />
   {% include styles.html %}
 </head>
 <body>
@@ -50,5 +50,9 @@
   <footer>
     &copy; 2017 Jim Killingsworth. All rights reserved.
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+  <script>
+    WebFont.load({ google: { families: ["Lora", "Lora:i", "Open+Sans:b"] } });
+  </script>
 </body>
 </html>

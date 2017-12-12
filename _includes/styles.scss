@@ -16,6 +16,11 @@ $shade90: #e6e6e6;
 $border-upper: 3px solid $shade50;
 $border-lower: 1px solid $shade80;
 
+$font-content-backup: "Georgia", serif;
+$font-heading-backup: "Verdana", sans-serif;
+$font-content-active: "Lora";
+$font-heading-active: "Open Sans";
+
 $margin-width: 5%;
 
 body
@@ -24,12 +29,17 @@ body
     color: black;
     display: flex;
     flex-flow: row wrap;
-    font-family: "Lora", "Georgia", serif;
+    font-family: $font-content-backup;
     font-size: 12pt;
     justify-content: space-between;
     line-height: 1.5;
     margin: 0 auto;
     width: 100% - (2 * $margin-width);
+
+    .wf-active &
+    {
+        font-family: $font-content-active, $font-content-backup;
+    }
 
     > *
     {
@@ -39,8 +49,13 @@ body
 
 h1, h2, h3, h4, h5, h6, nav
 {
-    font-family: "Open Sans", "Verdana", sans-serif;
+    font-family: $font-heading-backup;
     font-weight: bold;
+
+    .wf-active &
+    {
+        font-family: $font-heading-active, $font-heading-backup;
+    }
 
     a
     {
