@@ -16,10 +16,10 @@ $shade90: #e6e6e6;
 $border-upper: 3px solid $shade50;
 $border-lower: 1px solid $shade80;
 
-$font-content-backup: "Georgia", serif;
-$font-heading-backup: "Verdana", sans-serif;
-$font-content-active: "Lora";
-$font-heading-active: "Open Sans";
+$font-content-fallback: "Georgia", serif;
+$font-heading-fallback: "Verdana", sans-serif;
+$font-content-webfonts: "Lora";
+$font-heading-webfonts: "Open Sans";
 
 $margin-width: 5%;
 
@@ -29,16 +29,16 @@ body
     color: black;
     display: flex;
     flex-flow: row wrap;
-    font-family: $font-content-backup;
+    font-family: $font-content-fallback;
     font-size: 12pt;
     justify-content: space-between;
     line-height: 1.5;
     margin: 0 auto;
     width: 100% - (2 * $margin-width);
 
-    .wf-active &
+    .webfonts &
     {
-        font-family: $font-content-active, $font-content-backup;
+        font-family: $font-content-webfonts, $font-content-fallback;
     }
 
     > *
@@ -49,12 +49,12 @@ body
 
 h1, h2, h3, h4, h5, h6, nav
 {
-    font-family: $font-heading-backup;
+    font-family: $font-heading-fallback;
     font-weight: bold;
 
-    .wf-active &
+    .webfonts &
     {
-        font-family: $font-heading-active, $font-heading-backup;
+        font-family: $font-heading-webfonts, $font-heading-fallback;
     }
 
     a
