@@ -8,8 +8,8 @@ module Jekyll
         end
 
         def render(context)
-            text = open(@src, "rt") { |f| data = f.read }
-            text.gsub(/\<\?xml.+\?\>|\<\!DOCTYPE.+\>|id\=\".*?\"/, "")
+            data = open(@src, "rt") { |f| f.read }
+            data.gsub(/\<\?xml.+\?\>|\<\!DOCTYPE.+\>|id\=\".*?\"/, "")
         end
     end
 end

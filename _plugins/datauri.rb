@@ -10,7 +10,7 @@ module Jekyll
         end
 
         def render(context)
-            data = open(@src, "rb") { |f| data = f.read }
+            data = open(@src, "rb") { |f| f.read }
             type = MimeMagic.by_magic(data)
             encoded = Base64.strict_encode64(data)
             "data:#{type};base64,#{encoded}"
