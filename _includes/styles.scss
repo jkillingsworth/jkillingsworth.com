@@ -175,6 +175,13 @@ body > footer
         display: block;
     }
 
+    .equation > img
+    {
+        display: block;
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
     .floating > img
     {
         background-color: $shade90;
@@ -312,6 +319,11 @@ body > footer
     .navmain li a
     {
         padding: 4px 32px;
+    }
+
+    .content .equation > img
+    {
+        padding: 0 40px;
     }
 
     .content .floating
