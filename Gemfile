@@ -5,5 +5,4 @@ group :jekyll_plugins do
     gem "jekyll-minifier"
 end
 
-gem "mimemagic"
 gem "wdm", ">= 0.1.1" if Gem.win_platform?
