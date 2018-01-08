@@ -1,3 +1,5 @@
+require "open-uri"
+
 module Jekyll
 
     class LatexBlock < Liquid::Block
@@ -13,14 +15,13 @@ module Jekyll
             hash = Digest::SHA1.hexdigest(latex)
             site = context.registers[:site]
             post = context.registers[:page]
-            path = File.join("_assets", post.path.gsub(/(.*)\/(.*)\.md/, '\2'))
+            path = File.join($assets_dir, post.path.gsub(/(.*)\/(.*)\.md/, '\2'))
             file = File.join(path, "fig-#{figno}-latex-#{hash[0...8]}.svg")
             name = File.basename(file)
 
             if !Dir.exist?(path) then
                 Dir.mkdir(path)
             end
-
             if !File.exist?(file) then
                 print "Generating #{file}..."
                 url = "https://latex.codecogs.com/svg.latex?#{latex}"
