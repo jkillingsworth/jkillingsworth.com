@@ -178,8 +178,8 @@ body > footer
     .equation > img
     {
         display: block;
-        max-width: 100%;
-        padding: 0 16px;
+        margin: 0 16px;
+        max-width: calc(100% - 32px);
     }
 
     .floating > img
@@ -323,7 +323,7 @@ body > footer
 
     .content .equation > img
     {
-        padding: 0 40px;
+        margin: 0 40px;
     }
 
     .content .floating

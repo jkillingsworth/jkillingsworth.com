@@ -22,6 +22,7 @@ module Jekyll
             if !Dir.exist?(path) then
                 Dir.mkdir(path)
             end
+
             if !File.exist?(file) then
                 print "Generating #{file}..."
                 url = "https://latex.codecogs.com/svg.latex?#{latex}"
@@ -31,7 +32,18 @@ module Jekyll
                 print "done\n"
             end
 
-            "<img src=\".#{post.url}/#{name}\" alt=\"Figure #{figno.to_i}\" />"
+            def capture_px(xml, xpath)
+                value = xml.xpath(xpath).to_s.sub("pt", "").to_f
+                value = value * 4 / 3
+                value.round(0)
+            end
+
+            xml = open(file, "r") { |f| Nokogiri::XML(f) }
+            xml.remove_namespaces!
+            w = capture_px(xml, "/svg/@width")
+            h = capture_px(xml, "/svg/@height")
+
+            "<img width=\"#{w}\" height=\"#{h}\" alt=\"Figure #{figno.to_i}\" src=\".#{post.url}#{name}\" />"
         end
     end
 end
