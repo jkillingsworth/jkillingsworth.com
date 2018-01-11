@@ -1,5 +1,5 @@
 ---
 layout: archive
 title: Archive
-permalink: /blog/
+permalink: /archive/
 ---
