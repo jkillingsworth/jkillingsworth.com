@@ -2,7 +2,7 @@ require "open-uri"
 
 module Jekyll
 
-    class SvgTag < Liquid::Tag
+    class InlineSvgTag < Liquid::Tag
 
         def initialize(name, input, tokens)
             super
@@ -10,11 +10,12 @@ module Jekyll
         end
 
         def render(context)
-            file = File.join($assets_dir, @input)
+            name = @input
+            file = Assets.inline_file(name)
             data = open(file, "r") { |f| f.read }
             data.gsub(/\<\?xml.+\?\>|id\=\".*?\"/, "")
         end
     end
 end
 
-Liquid::Template.register_tag("svg", Jekyll::SvgTag)
+Liquid::Template.register_tag("inline_svg", Jekyll::InlineSvgTag)

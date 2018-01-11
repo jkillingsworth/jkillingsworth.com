@@ -15,7 +15,7 @@ module Jekyll
             hash = Digest::SHA1.hexdigest(latex)
             site = context.registers[:site]
             post = context.registers[:page]
-            path = File.join($assets_dir, post.path.gsub(/(.*)\/(.*)\.md/, '\2'))
+            path = Assets.source_path(post)
             file = File.join(path, "fig-#{figno}-latex-#{hash[0...8]}.svg")
             name = File.basename(file)
 
