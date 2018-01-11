@@ -32,16 +32,16 @@ module Jekyll
                 print "done\n"
             end
 
-            def capture_px(xml, xpath)
-                value = xml.xpath(xpath).to_s.sub("pt", "").to_f
+            def capture_px(xml, attribute)
+                value = xml.xpath("/xmlns:svg")[0][attribute]
+                value = value.to_s.sub("pt", "").to_f
                 value = value * 4 / 3
                 value.round(0)
             end
 
             xml = open(file, "r") { |f| Nokogiri::XML(f) }
-            xml.remove_namespaces!
-            w = capture_px(xml, "/svg/@width")
-            h = capture_px(xml, "/svg/@height")
+            w = capture_px(xml, "width")
+            h = capture_px(xml, "height")
 
             "<img width=\"#{w}\" height=\"#{h}\" alt=\"Figure #{figno.to_i}\" src=\".#{post.url}#{name}\" />"
         end
