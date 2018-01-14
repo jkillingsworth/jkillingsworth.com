@@ -177,7 +177,6 @@ body > footer
 
     .equation > img
     {
-        background-color: $shade90;
         display: block;
         margin: 0 16px;
         max-width: calc(100% - 32px);
@@ -185,11 +184,27 @@ body > footer
 
     .floating > img
     {
-        background-color: $shade90;
         display: block;
         margin: 0 auto;
         max-width: 100%;
         object-fit: cover;
+    }
+
+    .equation,
+    .floating
+    {
+        > img
+        {
+            animation: placeholder 1s ease forwards;
+        }
+
+        @keyframes placeholder
+        {
+            to
+            {
+                background-color: $shade90;
+            }
+        }
     }
 }
 
