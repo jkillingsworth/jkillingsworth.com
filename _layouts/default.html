@@ -1,19 +1,6 @@
 <!doctype html>
 <html lang="en-US">
 <head>
-  <script>
-    if (sessionStorage.getItem("webfonts")) {
-      document.documentElement.classList.add("webfonts");
-    }
-    var activate = function () {
-      document.documentElement.classList.add("webfonts");
-      sessionStorage.setItem("webfonts", true);
-    };
-    WebFontConfig = {
-      google: { families: ["Lora", "Lora:i", "Open+Sans:b"] },
-      active: activate
-    };
-  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
@@ -22,6 +9,22 @@
   <link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon" />
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Lora%7CLora:i%7COpen+Sans:b" as="style" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" defer></script>
+  <script>
+    var activate = function () {
+      document.documentElement.classList.add("webfonts");
+      sessionStorage.setItem("webfonts", true);
+    };
+    if (sessionStorage.getItem("webfonts")) {
+      var element = document.createElement("link");
+      element.rel = "stylesheet";
+      element.href = "https://fonts.googleapis.com/css?family=Lora%7CLora:i%7COpen+Sans:b";
+      element.media = "all";
+      document.head.appendChild(element);
+      activate();
+    } else {
+      WebFontConfig = { google: { families: ["Lora", "Lora:i", "Open+Sans:b"] }, active: activate };
+    }
+  </script>
   {% include styles.html %}
 </head>
 <body>
