@@ -24,7 +24,7 @@ Follow the instructions for installing [Jekyll on Windows](https://jekyllrb.com/
 
        gem install jekyll bundler
 
-   You can use the following command to see what version of Jekyll is installed:
+   Use the following command to verify the latest version of Jekyll is installed:
 
        jekyll -v
 
@@ -38,6 +38,10 @@ Follow the instructions for installing [Jekyll on Windows](https://jekyllrb.com/
 
       bundle install --path=<name>
 
+* Execute command in the context of a local path installation:
+
+      bundle exec <command>
+
 * Create a new blank site:
 
       jekyll new <name> --blank
@@ -50,6 +54,6 @@ Follow the instructions for installing [Jekyll on Windows](https://jekyllrb.com/
 
       jekyll serve
 
-* Include drafts:
+* Build and host a site with incremental rebuild:
 
-      jekyll serve --drafts
+      jekyll serve --incremental
