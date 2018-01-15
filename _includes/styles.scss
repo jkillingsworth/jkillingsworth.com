@@ -20,6 +20,7 @@ $font-content-fallback: "Georgia", serif;
 $font-heading-fallback: "Verdana", sans-serif;
 $font-content-webfonts: "Lora";
 $font-heading-webfonts: "Open Sans";
+$font-monospace: "Consolas", monospace;
 
 $margin-width: 5%;
 
@@ -45,9 +46,23 @@ body
     {
         flex: 0 100%;
     }
+
+    > header > h1
+    {
+        font-size: 18pt;
+        margin: 10px 0;
+    }
+
+    > footer
+    {
+        border-top: $border-upper;
+        font-size: 10pt;
+        font-style: italic;
+        padding: 16px 0;
+    }
 }
 
-h1, h2, h3, h4, h5, h6, nav
+h1, h2, nav
 {
     font-family: $font-heading-fallback;
     font-weight: bold;
@@ -61,20 +76,6 @@ h1, h2, h3, h4, h5, h6, nav
     {
         color: inherit;
     }
-}
-
-body > header > h1
-{
-    font-size: 18pt;
-    margin: 10px 0;
-}
-
-body > footer
-{
-    border-top: $border-upper;
-    font-size: 10pt;
-    font-style: italic;
-    padding: 16px 0;
 }
 
 a
@@ -150,6 +151,11 @@ svg
 
 .content
 {
+    header, footer, h1, h2, p, ul, figure
+    {
+        margin: 24px 0;
+    }
+
     header > h1
     {
         font-size: 24pt;
@@ -165,11 +171,6 @@ svg
         font-style: italic;
     }
 
-    header, footer, p, figure
-    {
-        margin: 24px 0;
-    }
-
     p:last-of-type::after
     {
         clear: both;
@@ -177,35 +178,30 @@ svg
         display: block;
     }
 
+    figure > img
+    {
+        animation: placeholder 1s ease forwards;
+        display: block;
+    }
+
     .equation > img
     {
-        display: block;
         margin: 0 16px;
         max-width: calc(100% - 32px);
     }
 
     .floating > img
     {
-        display: block;
         margin: 0 auto;
         max-width: 100%;
         object-fit: cover;
     }
 
-    .equation,
-    .floating
+    @keyframes placeholder
     {
-        > img
+        to
         {
-            animation: placeholder 1s ease forwards;
-        }
-
-        @keyframes placeholder
-        {
-            to
-            {
-                background: $shade90;
-            }
+            background: $shade90;
         }
     }
 }
@@ -220,13 +216,22 @@ svg
     ul > li span
     {
         display: block;
-        font-family: monospace;
+        font-family: $font-monospace;
         font-size: 10pt;
     }
 }
 
 .sidebar
 {
+    header > h1
+    {
+        border-bottom: $border-lower;
+        border-top: $border-upper;
+        font-size: inherit;
+        margin: 0;
+        padding: 4px 0;
+    }
+
     aside
     {
         margin: 24px 0;
@@ -235,15 +240,6 @@ svg
     aside:first-of-type
     {
         margin-top: 0;
-    }
-
-    header > h1
-    {
-        border-bottom: $border-lower;
-        border-top: $border-upper;
-        font-size: inherit;
-        margin: 0;
-        padding: 4px 0;
     }
 }
 
