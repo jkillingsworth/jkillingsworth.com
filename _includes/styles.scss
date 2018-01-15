@@ -25,7 +25,7 @@ $margin-width: 5%;
 
 body
 {
-    background-color: white;
+    background: white;
     color: black;
     display: flex;
     flex-flow: row wrap;
@@ -63,9 +63,18 @@ h1, h2, h3, h4, h5, h6, nav
     }
 }
 
-svg
+body > header > h1
 {
-    fill: currentColor;
+    font-size: 18pt;
+    margin: 10px 0;
+}
+
+body > footer
+{
+    border-top: $border-upper;
+    font-size: 10pt;
+    font-style: italic;
+    padding: 16px 0;
 }
 
 a
@@ -80,26 +89,9 @@ a:hover
     text-decoration: underline;
 }
 
-p
+svg
 {
-    text-align: justify;
-}
-
-footer
-{
-    font-style: italic;
-}
-
-body > header > h1
-{
-    font-size: 18pt;
-    margin: 10px 0;
-}
-
-body > footer
-{
-    border-top: $border-upper;
-    padding: 16px 0;
+    fill: currentColor;
 }
 
 .navmain
@@ -117,21 +109,21 @@ body > footer
         padding: 0;
     }
 
-    li
+    ul > li
     {
         flex: none;
     }
 
-    li a
+    ul > li a
     {
         display: block;
         padding: 4px 16px;
     }
 
-    li a:hover,
-    li a:focus
+    ul > li a:hover,
+    ul > li a:focus
     {
-        background-color: $shade50;
+        background: $shade50;
         color: white;
     }
 }
@@ -143,7 +135,7 @@ body > footer
 
     a
     {
-        background-color: $shade90;
+        background: $shade90;
         display: block;
         padding: 4px 0;
     }
@@ -151,7 +143,7 @@ body > footer
     a:hover,
     a:focus
     {
-        background-color: $shade50;
+        background: $shade50;
         color: white;
     }
 }
@@ -161,6 +153,11 @@ body > footer
     header > h1
     {
         font-size: 24pt;
+    }
+
+    footer
+    {
+        font-style: italic;
     }
 
     header, footer, p, figure
@@ -202,7 +199,7 @@ body > footer
         {
             to
             {
-                background-color: $shade90;
+                background: $shade90;
             }
         }
     }
@@ -284,6 +281,15 @@ body > footer
 }
 
 .content,
+.sidebar
+{
+    p
+    {
+        text-align: justify;
+    }
+}
+
+.content,
 .sidebar,
 .navmain,
 .navmore
@@ -332,7 +338,7 @@ body > footer
         flex-flow: row wrap;
     }
 
-    .navmain li a
+    .navmain ul > li a
     {
         padding: 4px 32px;
     }
@@ -342,7 +348,7 @@ body > footer
         margin: 0 40px;
     }
 
-    .content .floating
+    .content .floating > img
     {
         float: left;
         margin: 0 24px 0 0;
