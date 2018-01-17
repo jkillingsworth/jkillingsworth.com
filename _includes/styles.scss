@@ -96,8 +96,8 @@ svg
 }
 
 $navtoggle-size: 24px;
-$navtoggle-show: to bottom;
-$navtoggle-hide: to right;
+$navtoggle-horz: to bottom;
+$navtoggle-vert: to right;
 $navtoggle-icon: transparent 0px, transparent 3px, white 3px, white 6px;
 
 #navtoggle
@@ -123,13 +123,13 @@ label[for="navtoggle"]
     #navtoggle ~ &
     {
         background-color: $shade50;
-        background-image: repeating-linear-gradient($navtoggle-show, $navtoggle-icon);
+        background-image: repeating-linear-gradient($navtoggle-horz, $navtoggle-icon);
     }
 
     #navtoggle:checked ~ &
     {
         background-color: $shade50;
-        background-image: repeating-linear-gradient($navtoggle-hide, $navtoggle-icon);
+        background-image: repeating-linear-gradient($navtoggle-vert, $navtoggle-icon);
     }
 
     #navtoggle:hover ~ &
@@ -138,18 +138,7 @@ label[for="navtoggle"]
     }
 }
 
-#navtoggle ~ .navmain
-{
-    border-bottom: none;
-
-    ul
-    {
-        height: 0;
-        visibility: hidden;
-    }
-}
-
-#navtoggle:checked ~ .navmain
+@mixin navmain-show
 {
     border-bottom: $border-lower;
 
@@ -160,10 +149,30 @@ label[for="navtoggle"]
     }
 }
 
+@mixin navmain-hide
+{
+    border-bottom: none;
+
+    ul
+    {
+        height: 0;
+        visibility: hidden;
+    }
+}
+
 .navmain
 {
-    border-bottom: $border-lower;
     border-top: $border-upper;
+
+    #navtoggle ~ &
+    {
+        @include navmain-hide();
+    }
+
+    #navtoggle:checked ~ &
+    {
+        @include navmain-show();
+    }
 
     ul
     {
@@ -272,7 +281,7 @@ label[for="navtoggle"]
     }
 }
 
-.content .archive
+@mixin archive-list-tall
 {
     ul > li
     {
@@ -282,6 +291,28 @@ label[for="navtoggle"]
     ul > li span
     {
         display: block;
+    }
+}
+
+@mixin archive-list-wide
+{
+    ul > li
+    {
+        margin: 0;
+    }
+
+    ul > li span
+    {
+        display: inline;
+    }
+}
+
+.content .archive
+{
+    @include archive-list-tall();
+
+    ul > li span
+    {
         font-family: $font-monospace;
         font-size: 10pt;
     }
@@ -369,22 +400,6 @@ label[for="navtoggle"]
     }
 }
 
-@mixin archive-list-inline
-{
-    .content .archive
-    {
-        ul > li
-        {
-            margin: 0;
-        }
-
-        ul > li span
-        {
-            display: inline;
-        }
-    }
-}
-
 @media only screen and (min-width: 600px)
 {
     $margin-width: 10%;
@@ -393,11 +408,11 @@ label[for="navtoggle"]
     {
         max-width: 720px;
         width: 100% - (2 * $margin-width);
-    }
 
-    body > header > h1
-    {
-        font-size: 30pt;
+        > header > h1
+        {
+            font-size: 30pt;
+        }
     }
 
     #navtoggle
@@ -410,39 +425,42 @@ label[for="navtoggle"]
         display: none;
     }
 
-    #navtoggle ~ .navmain
+    .navmain
     {
-        border-bottom: $border-lower;
+        #navtoggle ~ &
+        {
+            @include navmain-show();
+        }
 
         ul
         {
-            height: auto;
-            visibility: visible;
+            flex-flow: row wrap;
+        }
+
+        ul > li a
+        {
+            padding: 4px 32px;
         }
     }
 
-    .navmain ul
+    .content
     {
-        flex-flow: row wrap;
+        .equation > img
+        {
+            margin: 0 40px;
+        }
+
+        .floating > img
+        {
+            float: left;
+            margin: 0 24px 0 0;
+        }
     }
 
-    .navmain ul > li a
+    .content .archive
     {
-        padding: 4px 32px;
+        @include archive-list-wide();
     }
-
-    .content .equation > img
-    {
-        margin: 0 40px;
-    }
-
-    .content .floating > img
-    {
-        float: left;
-        margin: 0 24px 0 0;
-    }
-
-    @include archive-list-inline();
 }
 
 @media only screen and (min-width: 1200px)
@@ -453,11 +471,11 @@ label[for="navtoggle"]
     {
         max-width: 1200px;
         width: 100% - (2 * $margin-width);
-    }
 
-    body > header > h1
-    {
-        text-align: center;
+        > header > h1
+        {
+            text-align: center;
+        }
     }
 
     .content
@@ -468,11 +486,11 @@ label[for="navtoggle"]
     .sidebar
     {
         flex: 0 35%;
-    }
 
-    .sidebar aside:first-of-type
-    {
-        margin-top: 40px;
+        aside:first-of-type
+        {
+            margin-top: 40px;
+        }
     }
 }
 
@@ -483,16 +501,21 @@ label[for="navtoggle"]
         display: block;
         margin: auto;
         width: 100%;
+
+        > header > h1
+        {
+            border-bottom: $border-lower;
+            border-top: $border-upper;
+            font-size: inherit;
+            margin: 0;
+            padding: 4px 0;
+            text-align: left;
+        }
     }
 
-    body > header > h1
+    .content .archive
     {
-        border-bottom: $border-lower;
-        border-top: $border-upper;
-        font-size: inherit;
-        margin: 0;
-        padding: 4px 0;
-        text-align: left;
+        @include archive-list-wide();
     }
 
     .navmain,
@@ -501,8 +524,6 @@ label[for="navtoggle"]
     {
         display: none;
     }
-
-    @include archive-list-inline();
 }
 
 @page
