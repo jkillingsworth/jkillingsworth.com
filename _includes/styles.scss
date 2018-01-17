@@ -132,10 +132,8 @@ label[for="navtoggle"]
         background-image: repeating-linear-gradient($navtoggle-hide, $navtoggle-icon);
     }
 
-    #navtoggle:hover ~ &,
-    #navtoggle:focus ~ &
+    #navtoggle:hover ~ &
     {
-        background-color: blue;
         cursor: pointer;
     }
 }
