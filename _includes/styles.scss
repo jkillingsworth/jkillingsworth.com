@@ -95,6 +95,73 @@ svg
     fill: currentColor;
 }
 
+$navtoggle-size: 24px;
+$navtoggle-show: to bottom;
+$navtoggle-hide: to right;
+$navtoggle-icon: transparent 0px, transparent 3px, white 3px, white 6px;
+
+#navtoggle
+{
+    float: left;
+    height: $navtoggle-size;
+    margin: 6px 0 0;
+    width: $navtoggle-size;
+}
+
+label[for="navtoggle"]
+{
+    color: transparent;
+    display: block;
+    float: left;
+    height: $navtoggle-size;
+    margin: 6px (-$navtoggle-size) 0;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+    width: $navtoggle-size;
+
+    #navtoggle ~ &
+    {
+        background-color: $shade50;
+        background-image: repeating-linear-gradient($navtoggle-show, $navtoggle-icon);
+    }
+
+    #navtoggle:checked ~ &
+    {
+        background-color: $shade50;
+        background-image: repeating-linear-gradient($navtoggle-hide, $navtoggle-icon);
+    }
+
+    #navtoggle:hover ~ &,
+    #navtoggle:focus ~ &
+    {
+        background-color: blue;
+        cursor: pointer;
+    }
+}
+
+#navtoggle ~ .navmain
+{
+    border-bottom: none;
+
+    ul
+    {
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+#navtoggle:checked ~ .navmain
+{
+    border-bottom: $border-lower;
+
+    ul
+    {
+        height: auto;
+        visibility: visible;
+    }
+}
+
 .navmain
 {
     border-bottom: $border-lower;
@@ -107,6 +174,7 @@ svg
         list-style-type: none;
         justify-content: flex-start;
         margin: 0;
+        overflow: hidden;
         padding: 0;
     }
 
@@ -332,6 +400,27 @@ svg
     body > header > h1
     {
         font-size: 30pt;
+    }
+
+    #navtoggle
+    {
+        display: none;
+    }
+
+    label[for="navtoggle"]
+    {
+        display: none;
+    }
+
+    #navtoggle ~ .navmain
+    {
+        border-bottom: $border-lower;
+
+        ul
+        {
+            height: auto;
+            visibility: visible;
+        }
     }
 
     .navmain ul
