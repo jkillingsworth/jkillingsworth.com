@@ -95,44 +95,44 @@ svg
     fill: currentColor;
 }
 
-$navtoggle-size: 24px;
-$navtoggle-horz: to bottom;
-$navtoggle-vert: to right;
-$navtoggle-icon: transparent 0px, transparent 3px, white 3px, white 6px;
+$navtogg-size: 24px;
+$navtogg-horz: to bottom;
+$navtogg-vert: to right;
+$navtogg-icon: transparent 0px, transparent 3px, white 3px, white 6px;
 
-#navtoggle
+#navtogg
 {
     float: left;
-    height: $navtoggle-size;
+    height: $navtogg-size;
     margin: 6px 0 0;
-    width: $navtoggle-size;
+    width: $navtogg-size;
 }
 
-label[for="navtoggle"]
+label[for="navtogg"]
 {
     color: transparent;
     display: block;
     float: left;
-    height: $navtoggle-size;
-    margin: 6px (-$navtoggle-size) 0;
+    height: $navtogg-size;
+    margin: 6px (-$navtogg-size) 0;
     overflow: hidden;
     position: relative;
     user-select: none;
-    width: $navtoggle-size;
+    width: $navtogg-size;
 
-    #navtoggle ~ &
+    #navtogg ~ &
     {
         background-color: $shade50;
-        background-image: repeating-linear-gradient($navtoggle-horz, $navtoggle-icon);
+        background-image: repeating-linear-gradient($navtogg-horz, $navtogg-icon);
     }
 
-    #navtoggle:checked ~ &
+    #navtogg:checked ~ &
     {
         background-color: $shade50;
-        background-image: repeating-linear-gradient($navtoggle-vert, $navtoggle-icon);
+        background-image: repeating-linear-gradient($navtogg-vert, $navtogg-icon);
     }
 
-    #navtoggle:hover ~ &
+    #navtogg:hover ~ &
     {
         cursor: pointer;
     }
@@ -164,12 +164,12 @@ label[for="navtoggle"]
 {
     border-top: $border-upper;
 
-    #navtoggle ~ &
+    #navtogg ~ &
     {
         @include navmain-hide();
     }
 
-    #navtoggle:checked ~ &
+    #navtogg:checked ~ &
     {
         @include navmain-show();
     }
@@ -415,19 +415,19 @@ label[for="navtoggle"]
         }
     }
 
-    #navtoggle
+    #navtogg
     {
         display: none;
     }
 
-    label[for="navtoggle"]
+    label[for="navtogg"]
     {
         display: none;
     }
 
     .navmain
     {
-        #navtoggle ~ &
+        #navtogg ~ &
         {
             @include navmain-show();
         }
