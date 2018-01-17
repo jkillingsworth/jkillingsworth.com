@@ -9,6 +9,9 @@ html
     box-sizing: inherit;
 }
 
+$rgbback: white;
+$rgbfore: black;
+$rgblink: blue;
 $shade50: #808080;
 $shade80: #cccccc;
 $shade90: #e6e6e6;
@@ -26,8 +29,8 @@ $margin-width: 5%;
 
 body
 {
-    background: white;
-    color: black;
+    background: $rgbback;
+    color: $rgbfore;
     display: flex;
     flex-flow: row wrap;
     font-family: $font-content-fallback;
@@ -80,13 +83,13 @@ h1, h2, nav
 
 a
 {
-    color: blue;
+    color: $rgblink;
     text-decoration: none;
 }
 
 a:hover
 {
-    color: blue;
+    color: $rgblink;
     text-decoration: underline;
 }
 
@@ -98,7 +101,7 @@ svg
 $navtogg-size: 24px;
 $navtogg-horz: to bottom;
 $navtogg-vert: to right;
-$navtogg-icon: transparent 0px, transparent 3px, white 3px, white 6px;
+$navtogg-icon: transparent 0px, transparent 3px, $rgbback 3px, $rgbback 6px;
 
 #navtogg
 {
@@ -200,7 +203,7 @@ label[for="navtogg"]
     ul > li a:focus
     {
         background: $shade50;
-        color: white;
+        color: $rgbback;
     }
 }
 
@@ -220,7 +223,7 @@ label[for="navtogg"]
     a:focus
     {
         background: $shade50;
-        color: white;
+        color: $rgbback;
     }
 }
 
