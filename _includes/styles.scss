@@ -12,9 +12,9 @@ html
 $rgbback: white;
 $rgbfore: black;
 $rgblink: blue;
-$shade50: #808080;
-$shade80: #cccccc;
-$shade90: #e6e6e6;
+$shade50: mix($rgbback, $rgbfore, 50);
+$shade80: mix($rgbback, $rgbfore, 80);
+$shade90: mix($rgbback, $rgbfore, 90);
 
 $border-upper: 3px solid $shade50;
 $border-lower: 1px solid $shade80;
