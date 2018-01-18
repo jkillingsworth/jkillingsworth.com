@@ -133,6 +133,9 @@ svg
             padding: 4px 0;
             position: relative;
             user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none;
         }
 
         + label::before
