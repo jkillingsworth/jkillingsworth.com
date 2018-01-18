@@ -18,6 +18,7 @@ $shade90: mix($rgbback, $rgbfore, 90);
 
 $border-upper: 3px solid $shade50;
 $border-lower: 1px solid $shade80;
+$border-inner: 1px solid $shade90;
 
 $font-content-fallback: "Georgia", serif;
 $font-heading-fallback: "Verdana", sans-serif;
@@ -98,83 +99,107 @@ svg
     fill: currentColor;
 }
 
-$navtogg-size: 24px;
-$navtogg-horz: to bottom;
-$navtogg-vert: to right;
-$navtogg-icon: transparent 0px, transparent 3px, $rgbback 3px, $rgbback 6px;
-
-#navtogg
+@mixin toggle-show
 {
-    float: left;
-    height: $navtogg-size;
-    margin: 6px 0 0;
-    width: $navtogg-size;
+    height: auto;
+    visibility: visible;
 }
 
-label[for="navtogg"]
+@mixin toggle-hide
 {
-    color: transparent;
-    display: block;
-    float: left;
-    height: $navtogg-size;
-    margin: 6px (-$navtogg-size) 0;
-    overflow: hidden;
-    position: relative;
-    user-select: none;
-    width: $navtogg-size;
-
-    #navtogg ~ &
-    {
-        background-color: $shade50;
-        background-image: repeating-linear-gradient($navtogg-horz, $navtogg-icon);
-    }
-
-    #navtogg:checked ~ &
-    {
-        background-color: $shade50;
-        background-image: repeating-linear-gradient($navtogg-vert, $navtogg-icon);
-    }
-
-    #navtogg:hover ~ &
-    {
-        cursor: pointer;
-    }
-}
-
-@mixin navmain-show
-{
-    border-bottom: $border-lower;
-
-    ul
-    {
-        height: auto;
-        visibility: visible;
-    }
-}
-
-@mixin navmain-hide
-{
-    border-bottom: none;
-
-    ul
-    {
-        height: 0;
-        visibility: hidden;
-    }
+    height: 0;
+    visibility: hidden;
 }
 
 .navmain
 {
     border-top: $border-upper;
+    border-bottom: $border-lower;
 
-    #navtogg ~ &
+    #toggle
     {
-        @include navmain-hide();
+        $toggle-size: 24px;
+
+        float: right;
+        height: $toggle-size;
+        margin: 4px 0;
+        width: $toggle-size;
+
+        + label
+        {
+            color: transparent;
+            cursor: pointer;
+            display: block;
+            padding: 4px 0;
+            position: relative;
+            user-select: none;
+        }
+
+        + label::before
+        {
+            background-color: $rgbback;
+            background-size: $toggle-size;
+            content: "";
+            float: right;
+            height: $toggle-size;
+            left: $toggle-size;
+            position: relative;
+            width: $toggle-size;
+        }
+
+        + label::after
+        {
+            content: "Menu";
+            left: 0;
+            padding: 0 16px;
+            position: absolute;
+        }
     }
 
-    #navtogg:checked ~ &
+    #toggle
     {
-        @include navmain-show();
+        + label
+        {
+            border-bottom: none;
+        }
+
+        + label::before
+        {
+            background-image: url("./static/chevron-down.svg");
+        }
+
+        + label::after
+        {
+            color: $rgbfore;
+        }
+
+        ~ ul
+        {
+            @include toggle-hide();
+        }
+    }
+
+    #toggle:checked
+    {
+        + label
+        {
+            border-bottom: $border-inner;
+        }
+
+        + label::before
+        {
+            background-image: url("./static/chevron-up.svg");
+        }
+
+        + label::after
+        {
+            color: $shade50;
+        }
+
+        ~ ul
+        {
+            @include toggle-show();
+        }
     }
 
     ul
@@ -418,21 +443,21 @@ label[for="navtogg"]
         }
     }
 
-    #navtogg
-    {
-        display: none;
-    }
-
-    label[for="navtogg"]
-    {
-        display: none;
-    }
-
     .navmain
     {
-        #navtogg ~ &
+        #toggle
         {
-            @include navmain-show();
+            display: none;
+        }
+
+        #toggle + label
+        {
+            display: none;
+        }
+
+        #toggle ~ ul
+        {
+            @include toggle-show();
         }
 
         ul
