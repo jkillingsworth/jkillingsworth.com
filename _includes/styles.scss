@@ -146,7 +146,7 @@ svg
 
         + label::before
         {
-            background-color: $rgbback;
+            background: $rgbback;
             background-size: $toggle-size;
             content: "";
             float: right;
@@ -245,7 +245,7 @@ svg
 
 @mixin content-section-label
 {
-    background-color: yellow;
+    background: yellow;
     display: inline-block;
     font-size: 12pt;
     margin: 0;
