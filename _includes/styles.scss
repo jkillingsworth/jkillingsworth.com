@@ -9,6 +9,8 @@ html
     box-sizing: inherit;
 }
 
+//-------------------------------------------------------------------------------------------------
+
 $rgbback: white;
 $rgbfore: black;
 $rgblink: blue;
@@ -66,7 +68,7 @@ body
     }
 }
 
-h1, h2, nav
+h1, h2, nav, .oldpost
 {
     font-family: $font-heading-fallback;
     font-weight: bold;
@@ -98,6 +100,8 @@ svg
 {
     fill: currentColor;
 }
+
+//-------------------------------------------------------------------------------------------------
 
 @mixin toggle-show
 {
@@ -235,25 +239,7 @@ svg
     }
 }
 
-.navmore
-{
-    margin: 24px 0;
-    text-align: center;
-
-    a
-    {
-        background: $shade90;
-        display: block;
-        padding: 4px 0;
-    }
-
-    a:hover,
-    a:focus
-    {
-        background: $shade50;
-        color: $rgbback;
-    }
-}
+//-------------------------------------------------------------------------------------------------
 
 .content
 {
@@ -262,7 +248,7 @@ svg
         margin: 24px 0;
     }
 
-    header > h1
+    h1
     {
         font-size: 24pt;
     }
@@ -312,6 +298,66 @@ svg
     }
 }
 
+@mixin content-section-label
+{
+    background-color: yellow;
+    display: inline-block;
+    font-size: 12pt;
+    margin: 0;
+    text-transform: lowercase;
+
+    &::first-letter
+    {
+        text-transform: uppercase;
+    }
+
+    &::after
+    {
+        content: ":";
+    }
+}
+
+.content .message
+{
+    > header > h1
+    {
+        @include content-section-label();
+    }
+
+    p
+    {
+        font-style: italic;
+    }
+}
+
+.content .newpost
+{
+    > header > h1
+    {
+        @include content-section-label();
+    }
+}
+
+.content .oldpost
+{
+    margin: 24px 0;
+    text-align: center;
+
+    a
+    {
+        background: $shade90;
+        display: block;
+        padding: 4px 0;
+    }
+
+    a:hover,
+    a:focus
+    {
+        background: $shade50;
+        color: $rgbback;
+    }
+}
+
 @mixin archive-list-tall
 {
     ul > li
@@ -348,6 +394,8 @@ svg
         font-size: 10pt;
     }
 }
+
+//-------------------------------------------------------------------------------------------------
 
 .sidebar
 {
@@ -409,6 +457,8 @@ svg
     }
 }
 
+//-------------------------------------------------------------------------------------------------
+
 .content,
 .sidebar
 {
@@ -418,18 +468,23 @@ svg
     }
 }
 
+.navmain,
 .content,
 .sidebar,
-.navmain,
-.navmore
+.oldpost
 {
-    > h1
+    > header,
+    > header > h1
     {
+        border: none;
         height: 0;
         margin: 0;
         overflow: hidden;
+        padding: 0;
     }
 }
+
+//-------------------------------------------------------------------------------------------------
 
 @media only screen and (min-width: 600px)
 {
@@ -494,6 +549,8 @@ svg
     }
 }
 
+//-------------------------------------------------------------------------------------------------
+
 @media only screen and (min-width: 1200px)
 {
     $margin-width: 10%;
@@ -503,7 +560,7 @@ svg
         max-width: 1200px;
         width: 100% - (2 * $margin-width);
 
-        > header > h1
+        > header h1
         {
             text-align: center;
         }
@@ -524,6 +581,8 @@ svg
         }
     }
 }
+
+//-------------------------------------------------------------------------------------------------
 
 @media only print
 {
@@ -550,8 +609,8 @@ svg
     }
 
     .navmain,
-    .navmore,
-    .sidebar
+    .sidebar,
+    .oldpost
     {
         display: none;
     }

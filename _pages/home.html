@@ -4,23 +4,28 @@ permalink: /
 ---
 
 <main>
-  {% for page in site.posts %}
-  <article>
+  <section class="newpost">
     <header>
-      <h1>
-        <a href=".{{ page.url }}">{{ page.title | escape }}</a>
-      </h1>
+      <h1>Latest Posts</h1>
     </header>
-    {{ page.excerpt }}
-    <footer>
-      <a href=".{{ page.url }}">Read more &raquo;</a>
-    </footer>
-  </article>
-  {% endfor %}
+    {% for page in site.posts %}
+    <article>
+      <header>
+        <h1>
+          <a href=".{{ page.url }}">{{ page.title | escape }}</a>
+        </h1>
+      </header>
+      {{ page.excerpt }}
+      <footer>
+        <a href=".{{ page.url }}">Read more &raquo;</a>
+      </footer>
+    </article>
+    {% endfor %}
+  </section>
+  <section class="oldpost">
+    <header>
+      <h1>Older Posts</h1>
+    </header>
+    <a href="./archive/">Show archive</a>
+  </section>
 </main>
-{% if site.posts.size > 0 %}
-<nav class="navmore">
-  <h1>More Posts</h1>
-  <a href="./archive/">Show archive</a>
-</nav>
-{% endif %}

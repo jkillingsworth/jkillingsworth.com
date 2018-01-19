@@ -33,35 +33,41 @@
     <h1>
       <a href="./">Jim Killingsworth</a>
     </h1>
-    <nav class="navmain">
-      <h1>Main Menu</h1>
-      <input id="toggle" type="checkbox" />
-      <label for="toggle">Enable menu</label>
-      <ul>
-        <li>
-          <a href="./">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="./archive/">
-            Archive
-          </a>
-        </li>
-        <li>
-          <a href="./about/">
-            About
-          </a>
-        </li>
-      </ul>
-    </nav>
   </header>
+  <nav class="navmain">
+    <header>
+      <h1>Main Menu</h1>
+    </header>
+    <input id="toggle" type="checkbox" />
+    <label for="toggle">Enable menu</label>
+    <ul>
+      <li>
+        <a href="./">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="./archive/">
+          Archive
+        </a>
+      </li>
+      <li>
+        <a href="./about/">
+          About
+        </a>
+      </li>
+    </ul>
+  </nav>
   <section class="content">
-    <h1>Content</h1>
+    <header>
+      <h1>Content</h1>
+    </header>
     {{ content | hyphenate }}
   </section>
   <section class="sidebar">
-    <h1>Sidebar</h1>
+    <header>
+      <h1>Sidebar</h1>
+    </header>
     {% capture sidebar %}
     {% include sidebar.html %}
     {% endcapture %}
