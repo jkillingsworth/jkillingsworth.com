@@ -28,6 +28,8 @@ $font-content-webfonts: "Lora";
 $font-heading-webfonts: "Open Sans";
 $font-monospace: "Consolas", monospace;
 
+$max-overall-width: 1200px;
+$max-content-width: 720px;
 $margin-width: 5%;
 
 body
@@ -288,6 +290,8 @@ svg
 
 .content
 {
+    max-width: $max-content-width;
+
     header, footer, h1, h2, p, ul, figure
     {
         margin: 24px 0;
@@ -492,7 +496,7 @@ svg
 
     body
     {
-        max-width: 720px;
+        max-width: $max-content-width;
         width: 100% - (2 * $margin-width);
 
         > header > h1
@@ -557,7 +561,7 @@ svg
 
     body
     {
-        max-width: 1200px;
+        max-width: $max-overall-width;
         width: 100% - (2 * $margin-width);
 
         > header h1
