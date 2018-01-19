@@ -103,13 +103,13 @@ svg
 
 //-------------------------------------------------------------------------------------------------
 
-@mixin toggle-show
+@mixin navmenu-toggle-show
 {
     height: auto;
     visibility: visible;
 }
 
-@mixin toggle-hide
+@mixin navmenu-toggle-hide
 {
     height: 0;
     visibility: hidden;
@@ -182,7 +182,7 @@ svg
 
         ~ ul
         {
-            @include toggle-hide();
+            @include navmenu-toggle-hide();
         }
     }
 
@@ -205,7 +205,7 @@ svg
 
         ~ ul
         {
-            @include toggle-show();
+            @include navmenu-toggle-show();
         }
     }
 
@@ -240,6 +240,51 @@ svg
 }
 
 //-------------------------------------------------------------------------------------------------
+
+@mixin content-section-label
+{
+    background-color: yellow;
+    display: inline-block;
+    font-size: 12pt;
+    margin: 0;
+    text-transform: lowercase;
+
+    &::first-letter
+    {
+        text-transform: uppercase;
+    }
+
+    &::after
+    {
+        content: ":";
+    }
+}
+
+@mixin content-archive-li-tall
+{
+    ul > li
+    {
+        margin: 4px 0;
+    }
+
+    ul > li span
+    {
+        display: block;
+    }
+}
+
+@mixin content-archive-li-wide
+{
+    ul > li
+    {
+        margin: 0;
+    }
+
+    ul > li span
+    {
+        display: inline;
+    }
+}
 
 .content
 {
@@ -298,25 +343,6 @@ svg
     }
 }
 
-@mixin content-section-label
-{
-    background-color: yellow;
-    display: inline-block;
-    font-size: 12pt;
-    margin: 0;
-    text-transform: lowercase;
-
-    &::first-letter
-    {
-        text-transform: uppercase;
-    }
-
-    &::after
-    {
-        content: ":";
-    }
-}
-
 .content .message
 {
     > header > h1
@@ -358,35 +384,9 @@ svg
     }
 }
 
-@mixin archive-list-tall
-{
-    ul > li
-    {
-        margin: 4px 0;
-    }
-
-    ul > li span
-    {
-        display: block;
-    }
-}
-
-@mixin archive-list-wide
-{
-    ul > li
-    {
-        margin: 0;
-    }
-
-    ul > li span
-    {
-        display: inline;
-    }
-}
-
 .content .archive
 {
-    @include archive-list-tall();
+    @include content-archive-li-tall();
 
     ul > li span
     {
@@ -515,7 +515,7 @@ svg
 
         #toggle ~ ul
         {
-            @include toggle-show();
+            @include navmenu-toggle-show();
         }
 
         ul
@@ -545,7 +545,7 @@ svg
 
     .content .archive
     {
-        @include archive-list-wide();
+        @include content-archive-li-wide();
     }
 }
 
@@ -605,7 +605,7 @@ svg
 
     .content .archive
     {
-        @include archive-list-wide();
+        @include content-archive-li-wide();
     }
 
     .navmenu,
