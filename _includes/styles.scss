@@ -115,7 +115,7 @@ svg
     visibility: hidden;
 }
 
-.navmain
+.navmenu
 {
     border-top: $border-upper;
     border-bottom: $border-lower;
@@ -468,7 +468,7 @@ svg
     }
 }
 
-.navmain,
+.navmenu,
 .content,
 .sidebar,
 .oldpost
@@ -501,7 +501,7 @@ svg
         }
     }
 
-    .navmain
+    .navmenu
     {
         #toggle
         {
@@ -608,7 +608,7 @@ svg
         @include archive-list-wide();
     }
 
-    .navmain,
+    .navmenu,
     .sidebar,
     .oldpost
     {
