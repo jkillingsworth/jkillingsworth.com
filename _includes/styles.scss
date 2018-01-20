@@ -270,7 +270,7 @@ svg
         margin: 4px 0;
     }
 
-    ul > li span
+    ul > li time
     {
         display: block;
     }
@@ -283,7 +283,7 @@ svg
         margin: 0;
     }
 
-    ul > li span
+    ul > li time
     {
         display: inline;
     }
@@ -398,7 +398,7 @@ svg
 {
     @include content-archive-li-tall();
 
-    ul > li span
+    ul > li time
     {
         font-family: $font-monospace;
         font-size: 10pt;

@@ -11,8 +11,10 @@ permalink: /archive/
   <h2>{{ year }}</h2>
   <ul>
     {% endunless %}
+    {% assign date_robot = page.date | date: "%Y-%m-%d" %}
+    {% assign date_human = page.date | date: "%b %d" %}
     <li>
-      <span>[{{ page.date | date: "%b %d" }}]: </span>
+      <time datetime="{{ date_robot }}">[{{ date_human }}]: </time>
       <a href=".{{ page.url }}">{{ page.title | escape }}</a>
     </li>
     {% assign next = page.previous.date | date: "%Y" %}

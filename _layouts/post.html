@@ -8,8 +8,10 @@ layout: default
       <h1>{{ page.title | escape }}</h1>
     </header>
     {{ content }}
+    {% assign date_robot = page.date | date: "%Y-%m-%d" %}
+    {% assign date_human = page.date | date: "%B %e, %Y" %}
     <footer>
-      {{ page.date | date: "%B %e, %Y" }}
+      <time datetime="{{ date_robot }}">{{ date_human }}</time>
     </footer>
   </article>
 </main>
