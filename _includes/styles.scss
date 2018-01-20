@@ -23,10 +23,10 @@ $border-upper: 3px solid $shade50;
 $border-lower: 1px solid $shade80;
 $border-inner: 1px solid $shade90;
 
-$font-content-fallback: "Georgia", serif;
-$font-heading-fallback: "Verdana", sans-serif;
-$font-content-webfonts: "Lora";
-$font-heading-webfonts: "Open Sans";
+$font-fallback-content: "Georgia", serif;
+$font-fallback-outline: "Verdana", sans-serif;
+$font-webfonts-content: "Lora";
+$font-webfonts-outline: "Open Sans";
 $font-monospace: "Consolas", monospace;
 
 $max-overall-width: 1200px;
@@ -39,7 +39,7 @@ body
     color: $rgbfore;
     display: flex;
     flex-flow: row wrap;
-    font-family: $font-content-fallback;
+    font-family: $font-fallback-content;
     font-size: 12pt;
     justify-content: space-between;
     line-height: 1.5;
@@ -48,7 +48,7 @@ body
 
     .webfonts &
     {
-        font-family: $font-content-webfonts, $font-content-fallback;
+        font-family: $font-webfonts-content, $font-fallback-content;
     }
 
     > *
@@ -73,12 +73,12 @@ body
 
 h1, h2, nav, .oldpost
 {
-    font-family: $font-heading-fallback;
+    font-family: $font-fallback-outline;
     font-weight: bold;
 
     .webfonts &
     {
-        font-family: $font-heading-webfonts, $font-heading-fallback;
+        font-family: $font-webfonts-outline, $font-fallback-outline;
     }
 
     a
