@@ -367,6 +367,11 @@ svg
     {
         @include content-section-label();
     }
+
+    a.readmore::after
+    {
+        content: " \00bb";
+    }
 }
 
 .content .oldpost
