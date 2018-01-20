@@ -14,6 +14,7 @@ html
 $rgbback: white;
 $rgbfore: black;
 $rgblink: blue;
+$rgbmark: yellow;
 $shade50: mix($rgbback, $rgbfore, 50);
 $shade80: mix($rgbback, $rgbfore, 80);
 $shade90: mix($rgbback, $rgbfore, 90);
@@ -245,7 +246,7 @@ svg
 
 @mixin content-section-label
 {
-    background: yellow;
+    background: $rgbmark;
     display: inline-block;
     font-size: 12pt;
     margin: 0;
