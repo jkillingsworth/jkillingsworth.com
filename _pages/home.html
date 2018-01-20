@@ -4,6 +4,16 @@ permalink: /
 ---
 
 <main>
+  {% for item in site.data.messages %}
+  <section class="message">
+    <header>
+      <h1>{{ item.heading }}</h1>
+    </header>
+    <p>
+      {{ item.message }}
+    </p>
+  </section>
+  {% endfor %}
   <section class="newpost">
     <header>
       <h1>Latest Posts</h1>
