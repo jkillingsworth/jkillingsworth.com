@@ -65,6 +65,7 @@ $margin-width: 5%;
 
 body
 {
+    @include font-content();
     background: $rgbback;
     color: $rgbfore;
     display: flex;
@@ -74,8 +75,6 @@ body
     line-height: 1.5;
     margin: 0 auto;
     width: 100% - (2 * $margin-width);
-
-    @include font-content();
 
     > *
     {
@@ -97,7 +96,7 @@ body
     }
 }
 
-h1, h2, nav, .oldpost, .contact label, .contact input[type="submit"]
+h1, h2, nav
 {
     @include font-outline();
 
@@ -396,12 +395,14 @@ svg
 
 .content .oldpost
 {
+    @include font-outline();
     margin: 24px 0;
     text-align: center;
 
     a
     {
         background: $shade90;
+        color: inherit;
         display: block;
         padding: 4px 0;
     }
@@ -430,6 +431,7 @@ svg
     label,
     input[type="submit"]
     {
+        @include font-outline();
         cursor: pointer;
         display: block;
         margin: 16px 0;
