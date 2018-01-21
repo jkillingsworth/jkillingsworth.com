@@ -71,7 +71,7 @@ body
     }
 }
 
-h1, h2, nav, .oldpost
+h1, h2, nav, .oldpost, .contact label, .contact input[type="submit"]
 {
     font-family: $font-fallback-outline;
     font-weight: bold;
@@ -402,6 +402,41 @@ svg
     {
         font-family: $font-monospace;
         font-size: 10pt;
+    }
+}
+
+.content .contact
+{
+    label,
+    input[type="submit"]
+    {
+        cursor: pointer;
+        display: block;
+        margin: 16px 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea
+    {
+        display: block;
+        font-family: $font-monospace;
+        line-height: 1.25;
+        margin: 4px 0;
+        padding: 4px;
+        width: 100%;
+    }
+
+    textarea
+    {
+        height: 200px;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    input[type="submit"]
+    {
+        padding: 4px 40px;
     }
 }
 

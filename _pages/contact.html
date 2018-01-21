@@ -1,0 +1,26 @@
+---
+layout: page
+title: Contact
+permalink: /contact/
+---
+
+<p>
+  Fill out the form below to send me a message.
+</p>
+<form class="contact" method="POST" action="https://formspree.io/jkillingsworth@gmail.com">
+  <label for="name">
+    Name
+    <input required type="text" id="name" name="name" autofocus />
+  </label>
+  <label for="email">
+    Email
+    <input required type="email" id="email" name="email" />
+  </label>
+  <label for="message">
+    Message
+    <textarea required id="message" name="message" />
+  </label>
+  <input type="submit" value="Send" />
+  <input type="hidden" name="_subject" value="New message from contact form" />
+  <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/contact/sent/" />
+</form>
