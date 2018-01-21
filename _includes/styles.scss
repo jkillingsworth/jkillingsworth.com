@@ -27,7 +27,7 @@ $max-overall-width: 1200px;
 $max-content-width: 720px;
 $margin-width: 5%;
 
-@mixin font-content
+@mixin font-paragraph
 {
     $font-fallback: "Georgia", serif;
     $font-webfonts: "Lora";
@@ -41,7 +41,7 @@ $margin-width: 5%;
     }
 }
 
-@mixin font-outline
+@mixin font-prominent
 {
     $font-fallback: "Verdana", sans-serif;
     $font-webfonts: "Open Sans";
@@ -55,7 +55,7 @@ $margin-width: 5%;
     }
 }
 
-@mixin font-special
+@mixin font-technical
 {
     $font-fallback: "Consolas", monospace;
 
@@ -65,7 +65,7 @@ $margin-width: 5%;
 
 body
 {
-    @include font-content();
+    @include font-paragraph();
     background: $rgbback;
     color: $rgbfore;
     display: flex;
@@ -98,7 +98,7 @@ body
 
 h1, h2, nav
 {
-    @include font-outline();
+    @include font-prominent();
 
     a
     {
@@ -120,7 +120,7 @@ a:hover
 
 strong
 {
-    @include font-outline();
+    @include font-prominent();
 }
 
 svg
@@ -400,7 +400,7 @@ svg
 
 .content .oldpost
 {
-    @include font-outline();
+    @include font-prominent();
     margin: 24px 0;
     text-align: center;
 
@@ -426,7 +426,7 @@ svg
 
     ul > li time
     {
-        @include font-special();
+        @include font-technical();
         font-size: 10pt;
     }
 }
@@ -436,7 +436,7 @@ svg
     label,
     input[type="submit"]
     {
-        @include font-outline();
+        @include font-prominent();
         cursor: pointer;
         display: block;
         margin: 16px 0;
@@ -446,7 +446,7 @@ svg
     input[type="email"],
     textarea
     {
-        @include font-special();
+        @include font-technical();
         display: block;
         line-height: 1.25;
         margin: 4px 0;
