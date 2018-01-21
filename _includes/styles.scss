@@ -23,15 +23,45 @@ $border-upper: 3px solid $shade50;
 $border-lower: 1px solid $shade80;
 $border-inner: 1px solid $shade90;
 
-$font-fallback-content: "Georgia", serif;
-$font-fallback-outline: "Verdana", sans-serif;
-$font-webfonts-content: "Lora";
-$font-webfonts-outline: "Open Sans";
-$font-monospace: "Consolas", monospace;
-
 $max-overall-width: 1200px;
 $max-content-width: 720px;
 $margin-width: 5%;
+
+@mixin font-content
+{
+    $font-fallback: "Georgia", serif;
+    $font-webfonts: "Lora";
+
+    font-family: $font-fallback;
+    font-weight: normal;
+
+    .webfonts &
+    {
+        font-family: $font-webfonts, $font-fallback;
+    }
+}
+
+@mixin font-outline
+{
+    $font-fallback: "Verdana", sans-serif;
+    $font-webfonts: "Open Sans";
+
+    font-family: $font-fallback;
+    font-weight: bold;
+
+    .webfonts &
+    {
+        font-family: $font-webfonts, $font-fallback;
+    }
+}
+
+@mixin font-special
+{
+    $font-fallback: "Consolas", monospace;
+
+    font-family: $font-fallback;
+    font-weight: normal;
+}
 
 body
 {
@@ -39,17 +69,13 @@ body
     color: $rgbfore;
     display: flex;
     flex-flow: row wrap;
-    font-family: $font-fallback-content;
     font-size: 12pt;
     justify-content: space-between;
     line-height: 1.5;
     margin: 0 auto;
     width: 100% - (2 * $margin-width);
 
-    .webfonts &
-    {
-        font-family: $font-webfonts-content, $font-fallback-content;
-    }
+    @include font-content();
 
     > *
     {
@@ -73,13 +99,7 @@ body
 
 h1, h2, nav, .oldpost, .contact label, .contact input[type="submit"]
 {
-    font-family: $font-fallback-outline;
-    font-weight: bold;
-
-    .webfonts &
-    {
-        font-family: $font-webfonts-outline, $font-fallback-outline;
-    }
+    @include font-outline();
 
     a
     {
@@ -400,7 +420,7 @@ svg
 
     ul > li time
     {
-        font-family: $font-monospace;
+        @include font-special();
         font-size: 10pt;
     }
 }
@@ -419,8 +439,8 @@ svg
     input[type="email"],
     textarea
     {
+        @include font-special();
         display: block;
-        font-family: $font-monospace;
         line-height: 1.25;
         margin: 4px 0;
         padding: 4px;
