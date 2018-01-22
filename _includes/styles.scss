@@ -57,7 +57,7 @@ $margin-width: 5%;
 
 @mixin font-technical
 {
-    $font-fallback: "Consolas", monospace;
+    $font-fallback: "Consolas", "Monaco", monospace;
 
     font-family: $font-fallback;
     font-weight: normal;
