@@ -1,0 +1,9 @@
+---
+permalink: /robots.txt
+---
+
+User-agent: *
+Disallow: /404.html
+Disallow: /contact/sent/
+
+Sitemap: {{ site.url }}/sitemap.txt

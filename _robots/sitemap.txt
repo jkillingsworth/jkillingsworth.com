@@ -1,0 +1,11 @@
+---
+permalink: /sitemap.txt
+---
+
+{{ site.url }}/
+{{ site.url }}/archive/
+{{ site.url }}/about/
+{{ site.url }}/contact/
+{%- for page in site.posts %}
+{{ site.url }}{{ page.url }}
+{%- endfor %}
