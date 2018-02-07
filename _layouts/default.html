@@ -67,7 +67,7 @@
     <header>
       <h1>Content</h1>
     </header>
-    {{ content | hyphenate }}
+    {{ content | hyphenate | replace: '-­', '-' }}
   </section>
   <section class="sidebar">
     <header>
@@ -76,7 +76,7 @@
     {% capture sidebar %}
     {% include sidebar.html %}
     {% endcapture %}
-    {{ sidebar | hyphenate }}
+    {{ sidebar | hyphenate | replace: '-­', '-' }}
   </section>
   <footer>
     &copy; {{ site.time | date: "%Y" }} Jim Killingsworth. All rights reserved.
