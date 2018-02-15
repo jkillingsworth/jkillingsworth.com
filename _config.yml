@@ -5,9 +5,9 @@ description: >-
 
 excerpt_separator: <!--excerpt-->
 
-permalink: /posts/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
 
-baseurl: /blog
+url: https://jkillingsworth.com
 
 exclude:
     - .vs/
