@@ -6,6 +6,7 @@
   <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}" />
   <base href="{{ site.baseurl }}/" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   <link rel="icon" href="./static/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="./static/favicon-256.jpg" sizes="256x256" />
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Lora%7CLora:i%7COpen+Sans:b" as="style" />
