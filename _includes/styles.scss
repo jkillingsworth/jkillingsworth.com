@@ -81,7 +81,7 @@ body
         flex: 0 100%;
     }
 
-    > header > h1
+    > header
     {
         font-size: 18pt;
         margin: 10px 0;
@@ -96,7 +96,7 @@ body
     }
 }
 
-h1, h2, nav
+header, nav, h1, h2
 {
     @include font-prominent();
 
@@ -374,7 +374,7 @@ svg
 
 .content .message
 {
-    > header > h1
+    header > h1
     {
         @include content-section-label();
     }
@@ -387,9 +387,14 @@ svg
 
 .content .newpost
 {
-    > header > h1
+    header > h1
     {
         @include content-section-label();
+    }
+
+    header > h2
+    {
+        font-size: 24pt;
     }
 
     a.readmore::after
@@ -403,6 +408,11 @@ svg
     @include font-prominent();
     margin: 24px 0;
     text-align: center;
+
+    header > h1
+    {
+        display: none;
+    }
 
     a
     {
@@ -471,7 +481,12 @@ svg
 
 .sidebar
 {
-    aside > header > h1
+    header > h1
+    {
+        display: none;
+    }
+
+    header > h2
     {
         border-bottom: $border-lower;
         border-top: $border-upper;
@@ -480,12 +495,12 @@ svg
         padding: 4px 0;
     }
 
-    aside
+    section
     {
         margin: 24px 0;
     }
 
-    aside:first-of-type
+    section:first-of-type
     {
         margin-top: 0;
     }
@@ -540,22 +555,6 @@ svg
     }
 }
 
-.navmenu,
-.content,
-.sidebar,
-.oldpost
-{
-    > header,
-    > header > h1
-    {
-        border: none;
-        height: 0;
-        margin: 0;
-        overflow: hidden;
-        padding: 0;
-    }
-}
-
 //-------------------------------------------------------------------------------------------------
 
 @media only screen and (min-width: 600px)
@@ -567,7 +566,7 @@ svg
         max-width: $max-content-width;
         width: 100% - (2 * $margin-width);
 
-        > header > h1
+        > header
         {
             font-size: 30pt;
         }
@@ -632,7 +631,7 @@ svg
         max-width: $max-overall-width;
         width: 100% - (2 * $margin-width);
 
-        > header h1
+        > header
         {
             text-align: center;
         }
@@ -647,7 +646,7 @@ svg
     {
         flex: 0 35%;
 
-        aside:first-of-type
+        section:first-of-type
         {
             margin-top: 40px;
         }
@@ -664,7 +663,7 @@ svg
         margin: auto;
         width: 100%;
 
-        > header > h1
+        > header
         {
             border-bottom: $border-lower;
             border-top: $border-upper;

@@ -2,16 +2,14 @@
 layout: default
 ---
 
-<main>
-  <article>
-    <header>
-      <h1>{{ page.title | escape }}</h1>
-    </header>
-    {{ content }}
-    {% assign date_robot = page.date | date: "%Y-%m-%d" %}
-    {% assign date_human = page.date | date: "%B %e, %Y" %}
-    <footer>
-      <time datetime="{{ date_robot }}">{{ date_human }}</time>
-    </footer>
-  </article>
-</main>
+<article>
+  <header>
+    <h1>{{ page.title | escape }}</h1>
+  </header>
+  {{ content }}
+  {% assign date_robot = page.date | date: "%Y-%m-%d" %}
+  {% assign date_human = page.date | date: "%B %e, %Y" %}
+  <footer>
+    <time datetime="{{ date_robot }}">{{ date_human }}</time>
+  </footer>
+</article>

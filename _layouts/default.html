@@ -31,14 +31,9 @@
 </head>
 <body>
   <header>
-    <h1>
-      <a href="./">Jim Killingsworth</a>
-    </h1>
+    <a href="./">Jim Killingsworth</a>
   </header>
   <nav class="navmenu">
-    <header>
-      <h1>Main Menu</h1>
-    </header>
     <input id="toggle" type="checkbox" />
     <label for="toggle">Enable menu</label>
     <ul>
@@ -64,13 +59,10 @@
       </li>
     </ul>
   </nav>
-  <section class="content">
-    <header>
-      <h1>Content</h1>
-    </header>
+  <main class="content">
     {{ content | hyphenate | replace: '-­', '-' }}
-  </section>
-  <section class="sidebar">
+  </main>
+  <aside class="sidebar">
     <header>
       <h1>Sidebar</h1>
     </header>
@@ -78,7 +70,7 @@
     {% include sidebar.html %}
     {% endcapture %}
     {{ sidebar | hyphenate | replace: '-­', '-' }}
-  </section>
+  </aside>
   <footer>
     &copy; {{ site.time | date: "%Y" }} Jim Killingsworth. All rights reserved.
   </footer>

@@ -3,39 +3,37 @@ layout: default
 permalink: /
 ---
 
-<main>
-  {% for item in site.data.messages %}
-  <section class="message">
+{% for item in site.data.messages %}
+<section class="message">
+  <header>
+    <h1>{{ item.heading }}</h1>
+  </header>
+  <p>
+    {{ item.message }}
+  </p>
+</section>
+{% endfor %}
+<section class="newpost">
+  <header>
+    <h1>Latest Posts</h1>
+  </header>
+  {% for page in site.posts %}
+  <article>
     <header>
-      <h1>{{ item.heading }}</h1>
+      <h2>
+        <a href=".{{ page.url }}">{{ page.title | escape }}</a>
+      </h2>
     </header>
-    <p>
-      {{ item.message }}
-    </p>
-  </section>
+    {{ page.excerpt }}
+    <footer>
+      <a href=".{{ page.url }}" class="readmore">Read more</a>
+    </footer>
+  </article>
   {% endfor %}
-  <section class="newpost">
-    <header>
-      <h1>Latest Posts</h1>
-    </header>
-    {% for page in site.posts %}
-    <article>
-      <header>
-        <h1>
-          <a href=".{{ page.url }}">{{ page.title | escape }}</a>
-        </h1>
-      </header>
-      {{ page.excerpt }}
-      <footer>
-        <a href=".{{ page.url }}" class="readmore">Read more</a>
-      </footer>
-    </article>
-    {% endfor %}
-  </section>
-  <section class="oldpost">
-    <header>
-      <h1>Older Posts</h1>
-    </header>
-    <a href="./archive/">Show archive</a>
-  </section>
-</main>
+</section>
+<section class="oldpost">
+  <header>
+    <h1>Older Posts</h1>
+  </header>
+  <a href="./archive/">Show archive</a>
+</section>
