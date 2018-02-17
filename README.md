@@ -1,6 +1,6 @@
 ## Overview
 
-This is the source code for my personal website [https://jkillingsworth.com](https://jkillingsworth.com).
+This is the source code for my personal website.
 
 ## Toolchain
 
