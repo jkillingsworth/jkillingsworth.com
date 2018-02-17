@@ -10,16 +10,16 @@ permalink: /contact/
 <form class="contact" method="POST" action="https://formspree.io/jkillingsworth@gmail.com">
   <label for="name">
     Name
-    <input required type="text" id="name" name="name" autofocus />
   </label>
+  <input required type="text" id="name" name="name" autofocus />
   <label for="email">
     Email
-    <input required type="email" id="email" name="email" />
   </label>
+  <input required type="email" id="email" name="email" />
   <label for="message">
     Message
-    <textarea required id="message" name="message" />
   </label>
+  <textarea required id="message" name="message" />
   <input type="submit" value="Send" />
   <input type="hidden" name="_subject" value="New message from contact form" />
   <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/contact/sent/" />

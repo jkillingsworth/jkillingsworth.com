@@ -452,6 +452,11 @@ svg
         margin: 16px 0;
     }
 
+    label
+    {
+        margin-bottom: 4px;
+    }
+
     input[type="text"],
     input[type="email"],
     textarea
@@ -459,7 +464,6 @@ svg
         @include font-technical();
         display: block;
         line-height: 1.25;
-        margin: 4px 0;
         padding: 4px;
         width: 100%;
     }
