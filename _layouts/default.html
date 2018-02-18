@@ -1,13 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114299226-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-114299226-1');
-  </script>
+  {% include analytics.html %}
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
@@ -17,23 +11,7 @@
   <link rel="icon" href="./static/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="./static/favicon-256.jpg" sizes="256x256" />
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Lora%7CLora:i%7COpen+Sans:b" as="style" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" defer></script>
-  <script>
-    var activate = function () {
-      document.documentElement.classList.add("webfonts");
-      sessionStorage.setItem("webfonts", true);
-    };
-    if (sessionStorage.getItem("webfonts")) {
-      var element = document.createElement("link");
-      element.rel = "stylesheet";
-      element.href = "https://fonts.googleapis.com/css?family=Lora%7CLora:i%7COpen+Sans:b";
-      element.media = "all";
-      document.head.appendChild(element);
-      activate();
-    } else {
-      WebFontConfig = { google: { families: ["Lora", "Lora:i", "Open+Sans:b"] }, active: activate };
-    }
-  </script>
+  {% include webfonts.html %}
   {% include styles.html %}
 </head>
 <body>
