@@ -1,4 +1,6 @@
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+{% assign webfont-url = "https://fonts.googleapis.com/css?family=Lora%7CLora:i%7COpen+Sans:b" %}
+<link rel="preload" href="{{ webfont-url }}" as="style" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" defer></script>
 <script>
   var activate = function () {
     document.documentElement.classList.add("webfonts");
@@ -7,7 +9,7 @@
   if (sessionStorage.getItem("webfonts")) {
     var element = document.createElement("link");
     element.rel = "stylesheet";
-    element.href = "https://fonts.googleapis.com/css?family=Lora%7CLora:i%7COpen+Sans:b";
+    element.href = "{{ webfont-url }}";
     element.media = "all";
     document.head.appendChild(element);
     activate();
