@@ -1,12 +1,12 @@
-{% capture normalize %}
-{% include normalize.css %}
+{% capture css-normalize %}
+{% include css/normalize.css %}
 {% endcapture %}
 
-{% capture styles %}
-{% include styles.scss %}
+{% capture css-site %}
+{% include css/site.scss %}
 {% endcapture %}
 
 {{- "<style>" }}
-{{- normalize | scssify }}
-{{- styles | scssify }}
+{{- css-normalize | scssify }}
+{{- css-site | scssify }}
 {{- "</style>" }}
