@@ -1,6 +1,7 @@
 #!/bin/bash
 
-jekyll build
+JEKYLL_ENV=production jekyll build
+
 pushd _site
 git update-ref -d HEAD
 git add -A

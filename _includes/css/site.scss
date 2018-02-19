@@ -481,6 +481,26 @@ svg
     }
 }
 
+.content .comments
+{
+    margin: 24px 0 8px;
+
+    header > h2
+    {
+        border-bottom: $border-lower;
+        border-top: $border-upper;
+        font-size: inherit;
+        margin: 0;
+        padding: 4px 0;
+    }
+
+    noscript
+    {
+        display: block;
+        margin: 24px 0;
+    }
+}
+
 //-------------------------------------------------------------------------------------------------
 
 .sidebar
