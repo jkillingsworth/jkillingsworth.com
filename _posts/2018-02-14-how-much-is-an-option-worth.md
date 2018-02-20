@@ -32,7 +32,7 @@ The intrinsic value of the option at the time of expiration is a function of two
   {% endlatex %}
 </figure>
 
-The market price of the underlying asset at the point in time in which the option contract expires cannot be known ahead of time. To value an option, you must somehow guess what the price of the underlying might be when the option expires.
+Since the market price of the underlying can fluctuate over time, the price of the underlying at the time of expiration cannot be known in advance. To value an option, you must somehow guess what the price of the underlying might be when the option expires.
 
 ## Averaging Predictions
 
@@ -79,7 +79,7 @@ In a more realistic scenario, there might be many possible outcomes. Some outcom
   {% endlatex %}
 </figure>
 
-Again, using the formula defined above, we can compute the intrinsic value of the option at each of the possible outcomes:
+Using the formula above again, we can compute the intrinsic value of the option at each of the possible outcomes:
 
 <figure class="equation">
   {% latex 05 %}
@@ -108,7 +108,7 @@ Again, using the formula defined above, we can compute the intrinsic value of th
   {% endlatex %}
 </figure>
 
-Now let's say the probability of each possible outcome is this:
+Now let's assume the probability of each outcome is this:
 
 <figure class="equation">
   {% latex 06 %}
@@ -159,7 +159,7 @@ In real markets, prices don't always snap neatly to $10 increments. Tick sizes c
   {% endlatex %}
 </figure>
 
-Prices can't fall below zero, so the range of possible values has a lower bound at zero. As before, some outcomes might have a higher probability of occurring than others. The cumulative distribution function is the probability that, when the option expires, the price of the underlying is equal to or below a given value:
+Prices can't fall below zero, so the range of possible values has a lower bound at zero. As before, some outcomes might have a higher probability of occurring than others. The cumulative distribution function is the probability that, when the option expires, the price of the underlying is less than or equal to a given value:
 
 <figure class="equation">
   {% latex 09 %}
@@ -225,4 +225,4 @@ The examples above present a few simple models for estimating the value of an op
 * Computing the value of American-style options on dividend paying stocks
 * Heteroskedastic variances, price jumps, and other such hazards
 
-There are more sophisticated option pricing models available which take these and other factors into consideration. I might explore some of these topics in future posts.
+There are other, more sophisticated option pricing models available which take these and other factors into consideration. I might explore some of these topics in future posts.
