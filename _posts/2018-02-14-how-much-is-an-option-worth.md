@@ -90,11 +90,11 @@ Using the formula above again, we can compute the intrinsic value of the option 
     \\[-1.25em]
     S_T & V(S_T)
     \\[0.25em]\hline
-    \$20  & \$0
+    \$20 & \$0
     \\[0.25em]\hline
-    \$30  & \$0
+    \$30 & \$0
     \\[0.25em]\hline
-    \$40  & \$0
+    \$40 & \$0
     \\[0.25em]\hline
     \$50 & \$0
     \\[0.25em]\hline
@@ -117,11 +117,11 @@ Now let's assume the probability of each outcome is this:
     \hline
     S_T & Pr(S_T)
     \\[0.25em]\hline
-    \$20  & 0.05
+    \$20 & 0.05
     \\[0.25em]\hline
-    \$30  & 0.10
+    \$30 & 0.10
     \\[0.25em]\hline
-    \$40  & 0.15
+    \$40 & 0.15
     \\[0.25em]\hline
     \$50 & 0.40
     \\[0.25em]\hline
