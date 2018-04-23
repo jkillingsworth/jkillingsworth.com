@@ -352,8 +352,10 @@ svg
 
     .equation > img
     {
+        height: auto;
         margin: 0 16px;
         max-width: calc(100% - 32px);
+        min-height: 24px;
     }
 
     .floating > img
@@ -361,6 +363,13 @@ svg
         margin: 0 auto;
         max-width: 100%;
         object-fit: cover;
+    }
+
+    .fullwide > img
+    {
+        height: auto;
+        max-width: 100%;
+        min-height: 24px;
     }
 
     @keyframes placeholder
