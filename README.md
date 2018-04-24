@@ -38,6 +38,10 @@ Follow the instructions for installing [Jekyll on Windows](https://jekyllrb.com/
 
       bundle install --path=<name>
 
+* Update gems to the latest version:
+
+      bundle update
+
 * Execute command in the context of a local path installation:
 
       bundle exec <command>
