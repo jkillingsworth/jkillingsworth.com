@@ -19,7 +19,6 @@
     <OutputPath>$(BaseOutputPath)\$(Configuration)\</OutputPath>
     <BaseIntermediateOutputPath>..\..\build\obj</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Configuration)\</IntermediateOutputPath>
-    <NoWarn>NU1701</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,7 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MathNet.Numerics" Version="4.4.0" />
     <PackageReference Include="MathNet.Numerics.FSharp" Version="4.4.0" />
   </ItemGroup>
 
