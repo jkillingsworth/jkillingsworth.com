@@ -18,7 +18,7 @@ let private mapping = function
 
 let private generateFlips (seed : int) =
     seed
-    |> MersenneTwister
+    |> Random.mersenneTwisterSeed
     |> Sample.discreteUniformSeq 0 1
     |> Seq.map mapping
 
