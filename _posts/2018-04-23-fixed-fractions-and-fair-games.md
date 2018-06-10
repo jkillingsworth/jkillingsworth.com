@@ -195,7 +195,7 @@ Unlike the previous example, the median value decays steadily downward, graduall
   <img width="720" height="405" alt="Figure 19" src=".{{ page.id }}/fig-19.svg" />
 </figure>
 
-So is this a fair game or not? The mean value suggest that it might be, but the median value hints otherwise. What if we take an analytical approach? Since the fixed fraction betting strategy is multiplicative instead of additive, let's consider the geometric mean instead of the arithmetic mean:
+So is this a fair game or not? The mean value suggest that it might be, but the median value suggests otherwise. What if we take an analytical approach? Since the fixed fraction betting strategy is multiplicative instead of additive, let's consider the geometric mean instead of the arithmetic mean:
 
 <figure class="equation">
   {% latex 20 %}
@@ -217,7 +217,7 @@ Using the law of large numbers, we can apply the expected number of winning and 
   {% endlatex %}
 </figure>
 
-The geometric mean computed above indicates that the gambler's bankroll is expected to be a fraction of its previous value after each play, leading to a persuasion that the gambler is at a disadvantage when playing with a fixed fraction betting strategy. But how can we account for the break-even average values we observed in the empirical results? Perhaps we can get a better understanding if we examine the possible outcomes more closely.
+The geometric mean computed above indicates that the gambler's bankroll is expected to be a fraction of its previous value after each play, leading to a conclusion that the gambler is at a disadvantage when playing with a fixed fraction betting strategy. But how can we account for the break-even average values we observed in the empirical results? Perhaps we can get a better understanding if we examine the possible outcomes more closely.
 
 ## Understanding the Results
 
