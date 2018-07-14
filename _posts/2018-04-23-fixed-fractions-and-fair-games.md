@@ -3,7 +3,7 @@ layout: post
 title: Fixed Fractions and Fair Games
 ---
 
-A gambler has a $100 bankroll. He's feeling lucky and he wants to make some bets. But he only wants to play fair games where the expectation is break-even for a large number of plays. If the gambler plays a fair game repeatedly using a constant bet amount, would it still be a fair game if he decides to bet a fixed fraction of his bankroll instead of betting a fixed constant amount?
+A gambler has a $100 bankroll. He's feeling lucky and he wants to make some bets. But he only wants to play fair games where the expectation is breakeven for a large number of plays. If the gambler plays a fair game repeatedly using a constant bet amount, would it still be a fair game if he decides to bet a fixed fraction of his bankroll instead of betting a fixed constant amount?
 
 <!--excerpt-->
 
@@ -92,13 +92,13 @@ It looks like it just zigzags up and down randomly with no clear pattern. Empiri
   <img width="720" height="405" alt="Figure 7" src=".{{ page.id }}/fig-07.svg" />
 </figure>
 
-The value appears to have a steady mean of $100, suggesting that this is indeed a fair game with a break-even expectation. Taking the median value for each round produces a similar result:
+The value appears to have a steady mean of $100, suggesting that this is indeed a fair game with a breakeven expectation. Taking the median value for each round produces a similar result:
 
 <figure class="fullwide">
   <img width="720" height="405" alt="Figure 8" src=".{{ page.id }}/fig-08.svg" />
 </figure>
 
-The median value straddles the break-even value of $100, lending further evidence that this is in fact a fair game. But can we determine the expected outcome analytically? Consider the arithmetic mean as the number of plays approaches infinity:
+The median value straddles the breakeven value of $100, lending further evidence that this is in fact a fair game. But can we determine the expected outcome analytically? Consider the arithmetic mean as the number of plays approaches infinity:
 
 <figure class="equation">
   {% latex 09 %}
@@ -217,14 +217,14 @@ Using the law of large numbers, we can apply the expected number of winning and 
   {% endlatex %}
 </figure>
 
-The geometric mean computed above indicates that the gambler's bankroll is expected to be a fraction of its previous value after each play, leading to a conclusion that the gambler is at a disadvantage when playing with a fixed fraction betting strategy. But how can we account for the break-even average values we observed in the empirical results? Perhaps we can get a better understanding if we examine the possible outcomes more closely.
+The geometric mean computed above indicates that the gambler's bankroll is expected to be a fraction of its previous value after each play, leading to a conclusion that the gambler is at a disadvantage when playing with a fixed fraction betting strategy. But how can we account for the breakeven average values we observed in the empirical results? Perhaps we can get a better understanding if we examine the possible outcomes more closely.
 
 ## Understanding the Results
 
-What exactly does it mean for a gambling game to be a fair game with a break-even expectation? As we saw with the fixed fraction betting game, the answer can be somewhat ambiguous. There are two aspects of the coin toss game that are worth looking at:
+What exactly does it mean for a gambling game to be a fair game with a breakeven expectation? As we saw with the fixed fraction betting game, the answer can be somewhat ambiguous. There are two aspects of the coin toss game that are worth looking at:
 
 * The average value of the gambler's bankroll for all possible outcomes
-* The percentage of winning, losing, and break-even outcomes
+* The percentage of winning, losing, and breakeven outcomes
 
 Let's suppose the gambler plays two rounds of the coin toss game and always bets on heads. There are four possible outcomes, each with an equal probability of occurring. If the gambler chooses the fixed constant betting strategy, the value of the gambler's stake after each possible outcome is shown below:
 
@@ -247,7 +247,7 @@ Let's suppose the gambler plays two rounds of the coin toss game and always bets
   {% endlatex %}
 </figure>
 
-The average value of all possible outcomes in this case is $100, which is the break-even amount. Also notice that there are an equal number of winning games as there are losing games. Both aspects are indicative of a fair game. If the gambler chooses the fixed fraction betting strategy, the results are a bit different:
+The average value of all possible outcomes in this case is $100, which is the breakeven amount. Also notice that there are an equal number of winning games as there are losing games. Both aspects are indicative of a fair game. If the gambler chooses the fixed fraction betting strategy, the results are a bit different:
 
 <figure class="equation">
   {% latex 23 %}
