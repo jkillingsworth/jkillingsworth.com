@@ -111,7 +111,7 @@ This is the idealized form of the previous chart. Notice that the chart is symme
   {% endlatex %}
 </figure>
 
-While the symmetry between the distribution of winning and losing outcomes may not be surprising when using a fixed constant bet size, can we expect the same property hold true if we use the fix fraction bet size strategy instead? Let's find out.
+While the symmetry between the distribution of winning and losing outcomes may not be surprising when using a fixed constant bet size, can we expect the same property hold true if we use the fixed fraction bet size strategy instead? Let's find out.
 
 ## Distributions on a Logarithmic Scale
 
@@ -171,7 +171,7 @@ As with the previous post, we assume the gambler always bets on heads. Recall th
 
 With this reward function, for any given round of the coin toss game, the value of the winning amount is always equal to the amount the gambler risks on a loss. While this might seem like an equal tradeoff on the surface, we have shown above that a repeated coin toss game with this strategy results in a high probability of a losing outcome.
 
-How can the reward function for the fixed fraction betting strategy be modified to give a balanced distribution of winning and losing outcomes? Instead of having a reward function in which the winning and losing amounts are the same, we need to come up with a reward function in which the multiplier applied to the gambler's bankroll for a winning play has the same magnitude as the multiplier applied for a losing play. But the multipliers must have an equal magnitude on a logarithmic scale instead of a linear scale. Holding the gambler's risk of loss constant, we can define the reward function for a winning case in terms of the reward function used for the losing case using the following equation:
+How can the reward function for the fixed fraction betting strategy be modified to give a balanced distribution of winning and losing outcomes? Instead of having a reward function in which the winning and losing amounts are the same, we need to come up with a reward function in which the multiplier applied to the gambler's bankroll for a winning play has the same magnitude as the multiplier used for a losing play. But the multipliers must have an equal magnitude on a logarithmic scale instead of a linear scale. Holding the gambler's risk of loss constant, we can define the reward function for the winning case in terms of the reward function used for the losing case using the following equation:
 
 <figure class="equation">
   {% latex 14 %}
@@ -185,7 +185,7 @@ How can the reward function for the fixed fraction betting strategy be modified 
   {% endlatex %}
 </figure>
 
-Taking the exponent of both sides, we get the reward function for the winning case. Putting both the winning and losing reward functions together, we now have a balanced reward function that looks like this:
+Taking the exponent of both sides, we can get the reward function for the winning case. Putting both the winning and losing reward functions together, we now have a balanced reward function that looks like this:
 
 <figure class="equation">
   {% latex 15 %}
