@@ -171,7 +171,7 @@ As with the previous post, we assume the gambler always bets on heads. Recall th
 
 With this reward function, for any given round of the coin toss game, the value of the winning amount is always equal to the amount the gambler risks on a loss. While this might seem like an equal tradeoff on the surface, we have shown above that a repeated coin toss game with this strategy results in a high probability of a losing outcome.
 
-How can the reward function for the fixed fraction betting strategy be modified to give a balanced distribution of winning and losing outcomes? Instead of having a reward function in which the winning and losing amounts are the same, we need to come up with a reward function in which the multiplier applied to the gambler's bankroll for a winning play has the same magnitude as the multiplier used for a losing play. But the multipliers must have an equal magnitude on a logarithmic scale instead of a linear scale. Holding the gambler's risk of loss constant, we can define the reward function for the winning case in terms of the reward function used for the losing case using the following equation:
+How can the reward function for the fixed fraction betting strategy be modified to give a balanced distribution of winning and losing outcomes? Instead of having a reward function in which the winning and losing amounts are the same, we need to come up with a reward function in which the multiplier applied to the gambler's bankroll for a winning play has the same magnitude as the multiplier used for a losing play. But the multipliers must have an equal magnitude on a logarithmic scale instead of a linear scale. Holding the gambler's risk of loss constant, we can define the reward function for the winning case in terms of the reward function applied for the losing case using the following equation:
 
 <figure class="equation">
   {% latex 14 %}
@@ -237,4 +237,4 @@ With the modified reward function for the fixed fraction betting strategy, the g
   {% endlatex %}
 </figure>
 
-But while the distribution is balanced in terms of winning and losing outcomes, the payoff for a winning outcome always outweighs the payoff for a losing outcome---sometimes even by several orders of magnitude. I imagine an advantage player could probably find a way to profit from such a game.
+But while the distribution is balanced in terms of winning and losing outcomes, the payoff for a winning outcome always outweighs the payoff for a losing outcome---sometimes even by several orders of magnitude. I imagine an advantage player could easily find a way to profit from such a game.
