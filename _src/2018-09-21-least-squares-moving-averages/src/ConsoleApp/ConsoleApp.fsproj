@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Data.fs" />
+    <Compile Include="Compute.fs" />
+    <Compile Include="Chart.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aether" Version="8.2.0" />
+    <PackageReference Include="Chiron" Version="6.2.1">
+      <NoWarn>NU1701</NoWarn>
+    </PackageReference>
+    <PackageReference Include="FParsec" Version="1.0.3" />
+    <PackageReference Include="MathNet.Numerics.FSharp" Version="4.5.1" />
+  </ItemGroup>
+
+</Project>
