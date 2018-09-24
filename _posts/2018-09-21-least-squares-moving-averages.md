@@ -43,31 +43,31 @@ The charts below illustrate what the moving average looks like for three differe
 For ticker symbol `MSFT`:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 3" src=".{{ page.id }}/fig-03-simple-MSFT-full.svg" />
+  {% chart fig-03-simple-MSFT-full.svg %}
 </figure>
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 4" src=".{{ page.id }}/fig-04-simple-MSFT-zoom.svg" />
+  {% chart fig-04-simple-MSFT-zoom.svg %}
 </figure>
 
 For ticker symbol `WYNN`:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 5" src=".{{ page.id }}/fig-05-simple-WYNN-full.svg" />
+  {% chart fig-05-simple-WYNN-full.svg %}
 </figure>
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 6" src=".{{ page.id }}/fig-06-simple-WYNN-zoom.svg" />
+  {% chart fig-06-simple-WYNN-zoom.svg %}
 </figure>
 
 For ticker symbol `HEAR`:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 7" src=".{{ page.id }}/fig-07-simple-HEAR-full.svg" />
+  {% chart fig-07-simple-HEAR-full.svg %}
 </figure>
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 8" src=".{{ page.id }}/fig-08-simple-HEAR-zoom.svg" />
+  {% chart fig-08-simple-HEAR-zoom.svg %}
 </figure>
 
 The moving averages are nice and smooth in all three cases, but they fail to accurately track the market prices during uptrends and downtrends. The moving average lags behind the actual price movement. If you look at the fitted lines, you can see that the fit is less than ideal because it's constrained to the form of a constant function.
@@ -99,31 +99,31 @@ Like before, the charts below illustrate what the moving average looks like for 
 For ticker symbol `MSFT`:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 11" src=".{{ page.id }}/fig-11-lsrlin-MSFT-full.svg" />
+  {% chart fig-11-lsrlin-MSFT-full.svg %}
 </figure>
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 12" src=".{{ page.id }}/fig-12-lsrlin-MSFT-zoom.svg" />
+  {% chart fig-12-lsrlin-MSFT-zoom.svg %}
 </figure>
 
 For ticker symbol `WYNN`:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 13" src=".{{ page.id }}/fig-13-lsrlin-WYNN-full.svg" />
+  {% chart fig-13-lsrlin-WYNN-full.svg %}
 </figure>
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 14" src=".{{ page.id }}/fig-14-lsrlin-WYNN-zoom.svg" />
+  {% chart fig-14-lsrlin-WYNN-zoom.svg %}
 </figure>
 
 For ticker symbol `HEAR`:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 15" src=".{{ page.id }}/fig-15-lsrlin-HEAR-full.svg" />
+  {% chart fig-15-lsrlin-HEAR-full.svg %}
 </figure>
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 16" src=".{{ page.id }}/fig-16-lsrlin-HEAR-zoom.svg" />
+  {% chart fig-16-lsrlin-HEAR-zoom.svg %}
 </figure>
 
 The linear least squares moving average tracks the price much better than the simple moving average does, especially during periods when the price is trending up or down. If you look at the fitted line for `MSFT`, you can see how it is almost a perfect fit. The linear model still seems to lag a little but during reversals, however.
@@ -169,31 +169,31 @@ Using the same three stock price data sets as before, the charts below illustrat
 For ticker symbol `MSFT`:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 19" src=".{{ page.id }}/fig-19-lsrpol-MSFT-full.svg" />
+  {% chart fig-19-lsrpol-MSFT-full.svg %}
 </figure>
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 20" src=".{{ page.id }}/fig-20-lsrpol-MSFT-zoom.svg" />
+  {% chart fig-20-lsrpol-MSFT-zoom.svg %}
 </figure>
 
 For ticker symbol `WYNN`:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 21" src=".{{ page.id }}/fig-21-lsrpol-WYNN-full.svg" />
+  {% chart fig-21-lsrpol-WYNN-full.svg %}
 </figure>
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 22" src=".{{ page.id }}/fig-22-lsrpol-WYNN-zoom.svg" />
+  {% chart fig-22-lsrpol-WYNN-zoom.svg %}
 </figure>
 
 For ticker symbol `HEAR`:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 23" src=".{{ page.id }}/fig-23-lsrpol-HEAR-full.svg" />
+  {% chart fig-23-lsrpol-HEAR-full.svg %}
 </figure>
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 24" src=".{{ page.id }}/fig-24-lsrpol-HEAR-zoom.svg" />
+  {% chart fig-24-lsrpol-HEAR-zoom.svg %}
 </figure>
 
 Notice that the fitted line for `WYNN` tracks the reversal quite nicely. The moving average computed using second order polynomial regression appears to track the market prices much more tightly than the other methods. The drawback, however, is that the moving average is not quite as smooth.
@@ -267,31 +267,31 @@ Once again, the charts below illustrate what the moving average looks like for a
 For ticker symbol `MSFT`:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 31" src=".{{ page.id }}/fig-31-lsrexp-MSFT-full.svg" />
+  {% chart fig-31-lsrexp-MSFT-full.svg %}
 </figure>
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 32" src=".{{ page.id }}/fig-32-lsrexp-MSFT-zoom.svg" />
+  {% chart fig-32-lsrexp-MSFT-zoom.svg %}
 </figure>
 
 For ticker symbol `WYNN`:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 33" src=".{{ page.id }}/fig-33-lsrexp-WYNN-full.svg" />
+  {% chart fig-33-lsrexp-WYNN-full.svg %}
 </figure>
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 34" src=".{{ page.id }}/fig-34-lsrexp-WYNN-zoom.svg" />
+  {% chart fig-34-lsrexp-WYNN-zoom.svg %}
 </figure>
 
 For ticker symbol `HEAR`:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 35" src=".{{ page.id }}/fig-35-lsrexp-HEAR-full.svg" />
+  {% chart fig-35-lsrexp-HEAR-full.svg %}
 </figure>
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 36" src=".{{ page.id }}/fig-36-lsrexp-HEAR-zoom.svg" />
+  {% chart fig-36-lsrexp-HEAR-zoom.svg %}
 </figure>
 
 When performing the regression using the exponential model, the results look very similar to those found using the linear model. While exponential regression might provide a slightly better fit in cases where there is exponential growth or decay, the price tracking can still lag behind during reversals. As the charts for `HEAR` show, the moving average can even overshoot quite a bit in cases where there is a sharp reversal.

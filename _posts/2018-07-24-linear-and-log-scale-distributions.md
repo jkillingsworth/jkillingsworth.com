@@ -12,7 +12,7 @@ In my previous post titled *Fixed Fractions and Fair Games*, I explored the prop
 Suppose a gambler with $100 plays 200 rounds of the coin toss game, betting a fixed constant of $20 on each play. The expectation is breakeven. The most likely outcome for the gambler is that he has the same amount of money that he started with after 200 plays. The results can vary, however. There are other outcomes that are not as likely to happen but are still possible. We can estimate the probability of each possible outcome by running 10,000 unique simulations of the coin toss game and observing the frequency of each outcome:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 1" src=".{{ page.id }}/fig-01.svg" />
+  {% chart fig-01.svg %}
 </figure>
 
 The chart above looks like it roughly approximates a binomial distribution, with outcomes closer to the breakeven amount more likely than outcomes further away. We can also separate the outcomes into categories based on whether the result is a profit, a loss, or a breakeven amount:
@@ -89,7 +89,7 @@ However, I prefer to use the following alternative method when using a computer 
 If the gambler plays 200 rounds of the coin toss game, there is a total of 201 unique possible outcomes. We can compute the probability of each outcome analytically by applying the formulas above. Using the same parameters of the coin toss game as before, the computed distribution looks like this:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 7" src=".{{ page.id }}/fig-07.svg" />
+  {% chart fig-07.svg %}
 </figure>
 
 This is the idealized form of the previous chart. Notice that the chart is symmetrical. The distribution of profitable outcomes to the right of $100 mirrors the distribution of losing outcomes to the left of $100. Grouping the results into profit, loss, and breakeven categories again, we get the following:
@@ -126,13 +126,13 @@ To generate the equivalent probability distribution chart for the fixed fraction
 Plugging in the numbers, using the same parameters of the coin toss game as we used in previous examples, we get a probability distribution chart that looks completely different than the one above:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 10" src=".{{ page.id }}/fig-10.svg" />
+  {% chart fig-10.svg %}
 </figure>
 
 In the fixed fraction case, the gambler's bankroll can never fall below zero. This is why the chart doesn't show the existence of any possible outcomes below zero. Notice that there is a cluster of outcomes between zero and the $100 breakeven amount, while outcomes above $100 are fewer and more spaced out. The set of possible outcomes are not evenly spaced. It might be more appropriate to plot this chart on a logarithmic scale:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 11" src=".{{ page.id }}/fig-11.svg" />
+  {% chart fig-11.svg %}
 </figure>
 
 The outcomes are evenly distributed on a logarithmic scale, but the most likely outcomes are shifted to the left of the $100 breakeven amount. After playing 200 rounds, the gambler is far more likely to take a loss than to go home with a profit:
@@ -209,13 +209,13 @@ The reward multiplier that gets applied to the gambler's bankroll when the coin 
 The probability distribution chart now looks like this:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 17" src=".{{ page.id }}/fig-17.svg" />
+  {% chart fig-17.svg %}
 </figure>
 
 Of course, it makes more sense to plot this on a logarithmic chart:
 
 <figure class="fullwide">
-  <img width="720" height="405" alt="Figure 18" src=".{{ page.id }}/fig-18.svg" />
+  {% chart fig-18.svg %}
 </figure>
 
 With the modified reward function for the fixed fraction betting strategy, the gambler now has an equal probability of getting a winning outcome as he does a losing outcome. The breakdown of profit, loss, and breakeven outcomes is now the same as that of the fixed constant betting strategy:
