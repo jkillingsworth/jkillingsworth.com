@@ -184,7 +184,7 @@ Here we treat our model as the mean. We also consider the standard deviation, de
   {% endlatex %}
 </figure>
 
-The likelihood is equal to the probability density. For all data points combined, the likelihood function for a given mean and standard deviation is equal to the product of the density for each data point individually:
+The likelihood is equal to the probability density. For all data points combined, the likelihood function for a given mean and standard deviation is equal to the product of the density at each individual data point:
 
 <figure class="equation">
   {% latex 15 %}
