@@ -194,7 +194,7 @@ The likelihood is equal to the probability density. For all data points combined
   {% endlatex %}
 </figure>
 
-At this point, we just need to find the mean and standard deviation values that maximize the likelihood function. Similar to what we did in the previous section, we can find the maximum by first taking the partial derivative of the likelihood function with respect to each of the coefficients, setting the derivative to zero, and then solving for the coefficients. This might be easier to do if we first take the natural logarithm of the likelihood function:
+At this point, we just need to find the mean and standard deviation values that maximize the likelihood function. Similar to what we did in the previous section, we can find the maximum by taking the partial derivative of the likelihood function with respect to each of the coefficients, setting the derivative to zero, and then solving for the coefficients. This might be easier to do if we first take the natural logarithm of the likelihood function:
 
 <figure class="equation">
   {% latex 16 %}
