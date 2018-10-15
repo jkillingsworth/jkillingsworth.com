@@ -25,7 +25,7 @@ $border-inner: 1px solid $shade90;
 
 $max-overall-width: 1200px;
 $max-content-width: 720px;
-$margin-width: 5%;
+$margin-percentage: 5;
 
 @mixin font-paragraph
 {
@@ -74,7 +74,7 @@ body
     justify-content: space-between;
     line-height: 1.5;
     margin: 0 auto;
-    width: 100% - (2 * $margin-width);
+    width: 100% - (2 * $margin-percentage);
 
     > *
     {
@@ -344,6 +344,12 @@ svg
         display: block;
     }
 
+    figure
+    {
+        max-width: 100vw - (2 * $margin-percentage);
+        overflow-x: auto;
+    }
+
     figure > img
     {
         animation: placeholder 1s ease forwards;
@@ -352,10 +358,7 @@ svg
 
     .equation > img
     {
-        height: auto;
         margin: 0 16px;
-        max-width: calc(100% - 32px);
-        min-height: 24px;
     }
 
     .floating > img
@@ -589,12 +592,12 @@ svg
 
 @media only screen and (min-width: 600px)
 {
-    $margin-width: 10%;
+    $margin-percentage: 10;
 
     body
     {
         max-width: $max-content-width;
-        width: 100% - (2 * $margin-width);
+        width: 100% - (2 * $margin-percentage);
 
         > header
         {
@@ -632,6 +635,11 @@ svg
 
     .content
     {
+        figure
+        {
+            max-width: 100vw - (2 * $margin-percentage);
+        }
+
         .equation > img
         {
             margin: 0 40px;
@@ -654,12 +662,12 @@ svg
 
 @media only screen and (min-width: 1200px)
 {
-    $margin-width: 10%;
+    $margin-percentage: 10;
 
     body
     {
         max-width: $max-overall-width;
-        width: 100% - (2 * $margin-width);
+        width: 100% - (2 * $margin-percentage);
 
         > header
         {
@@ -704,9 +712,17 @@ svg
         }
     }
 
-    .content .archive
+    .content
     {
-        @include content-archive-li-wide();
+        figure
+        {
+            max-width: 100vw;
+        }
+
+        .archive
+        {
+            @include content-archive-li-wide();
+        }
     }
 
     .navmenu,
