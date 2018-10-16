@@ -688,12 +688,9 @@ svg
 
 @media only screen and (min-width: 1200px)
 {
-    $margin-percent: 10;
-
     body
     {
         max-width: $max-overall-width;
-        width: 100% - (2 * $margin-percent);
 
         > header
         {
