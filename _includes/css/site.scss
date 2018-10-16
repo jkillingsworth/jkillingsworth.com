@@ -25,7 +25,7 @@ $border-inner: 1px solid $shade90;
 
 $max-overall-width: 1200px;
 $max-content-width: 720px;
-$margin-percentage: 5;
+$margin-percent: 5;
 $indent-width: 16px;
 
 @mixin font-paragraph
@@ -75,7 +75,7 @@ body
     justify-content: space-between;
     line-height: 1.5;
     margin: 0 auto;
-    width: 100% - (2 * $margin-percentage);
+    width: 100% - (2 * $margin-percent);
 
     > *
     {
@@ -352,7 +352,7 @@ svg
 
     figure
     {
-        max-width: 100vw - (2 * $margin-percentage);
+        max-width: 100vw - (2 * $margin-percent);
         overflow-x: auto;
 
         > img
@@ -612,13 +612,13 @@ svg
 
 @media only screen and (min-width: 600px)
 {
-    $margin-percentage: 10;
+    $margin-percent: 10;
     $indent-width: 40px;
 
     body
     {
         max-width: $max-content-width;
-        width: 100% - (2 * $margin-percentage);
+        width: 100% - (2 * $margin-percent);
 
         > header
         {
@@ -663,7 +663,7 @@ svg
 
         figure
         {
-            max-width: 100vw - (2 * $margin-percentage);
+            max-width: 100vw - (2 * $margin-percent);
         }
 
         .equation > img
@@ -688,12 +688,12 @@ svg
 
 @media only screen and (min-width: 1200px)
 {
-    $margin-percentage: 10;
+    $margin-percent: 10;
 
     body
     {
         max-width: $max-overall-width;
-        width: 100% - (2 * $margin-percentage);
+        width: 100% - (2 * $margin-percent);
 
         > header
         {
