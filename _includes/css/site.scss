@@ -348,24 +348,30 @@ svg
     {
         max-width: 100vw - (2 * $margin-percentage);
         overflow-x: auto;
+
+        > img
+        {
+            animation: placeholder 1s ease forwards;
+            display: block;
+        }
     }
 
-    figure > img
+    .equation
     {
-        animation: placeholder 1s ease forwards;
-        display: block;
+        > img
+        {
+            margin: 0 16px;
+        }
     }
 
-    .equation > img
+    .floating
     {
-        margin: 0 16px;
-    }
-
-    .floating > img
-    {
-        margin: 0 auto;
-        max-width: 100%;
-        object-fit: cover;
+        > img
+        {
+            margin: 0 auto;
+            max-width: 100%;
+            object-fit: cover;
+        }
     }
 
     .fullwide
@@ -373,14 +379,14 @@ svg
         $aspect-ratio: 16 / 9;
         padding-top: 100% / $aspect-ratio;
         position: relative;
-    }
 
-    .fullwide > img
-    {
-        max-height: 100%;
-        max-width: 100%;
-        position: absolute;
-        top: 0;
+        > img
+        {
+            max-height: 100%;
+            max-width: 100%;
+            position: absolute;
+            top: 0;
+        }
     }
 
     @keyframes placeholder
