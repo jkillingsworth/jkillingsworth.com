@@ -30,3 +30,6 @@ jekyll-minifier:
     exclude:
         - robots.txt
         - sitemap.txt
+
+hyphenate_filter:
+    selector: "p, li"
