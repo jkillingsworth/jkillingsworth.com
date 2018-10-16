@@ -368,11 +368,19 @@ svg
         object-fit: cover;
     }
 
+    .fullwide
+    {
+        $aspect-ratio: 16 / 9;
+        padding-top: 100% / $aspect-ratio;
+        position: relative;
+    }
+
     .fullwide > img
     {
-        height: auto;
+        max-height: 100%;
         max-width: 100%;
-        min-height: 24px;
+        position: absolute;
+        top: 0;
     }
 
     @keyframes placeholder
