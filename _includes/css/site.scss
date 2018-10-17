@@ -346,7 +346,8 @@ svg
 
         > img
         {
-            animation: placeholder 1s ease forwards;
+            background: $shade90;
+            box-shadow: 0 0 0 1px $rgbback inset;
             display: block;
         }
     }
@@ -383,14 +384,6 @@ svg
             max-width: 100%;
             position: absolute;
             top: 0;
-        }
-    }
-
-    @keyframes placeholder
-    {
-        to
-        {
-            background: $shade90;
         }
     }
 }
