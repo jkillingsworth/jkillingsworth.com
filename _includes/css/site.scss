@@ -290,11 +290,6 @@ svg
 
 @mixin content-archive-li-tall
 {
-    ul > li
-    {
-        margin: 4px 0;
-    }
-
     ul > li time
     {
         display: block;
@@ -303,11 +298,6 @@ svg
 
 @mixin content-archive-li-wide
 {
-    ul > li
-    {
-        margin: 0;
-    }
-
     ul > li time
     {
         display: inline;
