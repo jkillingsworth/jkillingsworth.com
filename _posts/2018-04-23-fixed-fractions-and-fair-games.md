@@ -82,21 +82,15 @@ The gambler gains $20 if the coin lands on heads; he loses $20 if the coin lands
 
 Using a random number generator, we can run a computer simulation of the coin toss game and plot the gambler's bankroll after each round. Here is a plot of the gambler's holdings over a period of 200 plays using a random sequence of coin tosses:
 
-<figure class="fullwide">
-  {% chart fig-06-constant-add-lin-sim.svg %}
-</figure>
+{% chart fig-06-constant-add-lin-sim.svg %}
 
 It looks like it just zigzags up and down randomly with no clear pattern. Empirically, this doesn't tell us much. If we run 10,000 unique simulations like the one above and then take the average value for each play, here is the result that emerges:
 
-<figure class="fullwide">
-  {% chart fig-07-constant-add-lin-avg.svg %}
-</figure>
+{% chart fig-07-constant-add-lin-avg.svg %}
 
 The value appears to have a steady mean of $100, suggesting that this is indeed a fair game with a breakeven expectation. Taking the median value for each round produces a similar result:
 
-<figure class="fullwide">
-  {% chart fig-08-constant-add-lin-med.svg %}
-</figure>
+{% chart fig-08-constant-add-lin-med.svg %}
 
 The median value straddles the breakeven value of $100, lending further evidence that this is in fact a fair game. But can we determine the expected outcome analytically? Consider the arithmetic mean as the number of plays approaches infinity:
 
@@ -167,33 +161,23 @@ In this case, the reward function returns a multiplier that gets applied to the 
 
 Using the same sequence of coin tosses from the previous example, we can simulate the coin toss game again using the fixed fraction bet size strategy. Here is a plot of the gambler's holdings over the same 200 coin tosses using fixed fraction bets:
 
-<figure class="fullwide">
-  {% chart fig-15-fraction-add-lin-sim.svg %}
-</figure>
+{% chart fig-15-fraction-add-lin-sim.svg %}
 
 It looks like it bounces up and down with smaller and smaller spikes until it ultimately fizzles out to zero. Here is the same plot on a logarithmic scale:
 
-<figure class="fullwide">
-  {% chart fig-16-fraction-add-log-sim.svg %}
-</figure>
+{% chart fig-16-fraction-add-log-sim.svg %}
 
 On the logarithmic chart, the plot looks similar to that of the game played with a fixed constant bet size, only with a slight tilt downwards. Does this indicate a downward bias when playing with the fixed fraction bet size strategy? Let's see what happens if we take the average value of 10,000 simulations:
 
-<figure class="fullwide">
-  {% chart fig-17-fraction-add-lin-avg.svg %}
-</figure>
+{% chart fig-17-fraction-add-lin-avg.svg %}
 
 As with the previous example, the value appears to have a mean of $100. Notice, however, that the value seems to become increasingly unstable as more rounds are played. Taking the median value for each round produces a very different result:
 
-<figure class="fullwide">
-  {% chart fig-18-fraction-add-lin-med.svg %}
-</figure>
+{% chart fig-18-fraction-add-lin-med.svg %}
 
 Unlike the previous example, the median value decays steadily downward, gradually approaching the zero asymptote. Here it is again on a logarithmic chart:
 
-<figure class="fullwide">
-  {% chart fig-19-fraction-add-log-med.svg %}
-</figure>
+{% chart fig-19-fraction-add-log-med.svg %}
 
 So is this a fair game or not? The mean value suggest that it might be, but the median value suggests otherwise. What if we take an analytical approach? Since the fixed fraction betting strategy is multiplicative instead of additive, let's consider the geometric mean instead of the arithmetic mean:
 
