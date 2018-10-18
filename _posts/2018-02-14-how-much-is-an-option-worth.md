@@ -9,8 +9,7 @@ Consider an at-the-money call option with a strike price of $50. The underlying 
 
 The intrinsic value of the option at the time of expiration is a function of two things: the strike price of the option contract and the market price of the underlying asset when the option expires. You can compute the value of the option at expiration using this equation:
 
-<figure class="equation">
-  {% latex 01 %}
+{% latex 01 %}
     \begin{aligned}
     &
     \begin{aligned}
@@ -29,8 +28,7 @@ The intrinsic value of the option at the time of expiration is a function of two
     & K   && \text{is the strike price of the option}
     \end{aligned}
     \end{aligned}
-  {% endlatex %}
-</figure>
+{% endlatex %}
 
 Since the market price of the underlying can fluctuate over time, the price of the underlying at the time of expiration cannot be known in advance. To value an option, you must somehow guess what the price of the underlying might be when the option expires.
 
@@ -38,8 +36,7 @@ Since the market price of the underlying can fluctuate over time, the price of t
 
 Let's say the seller of the option contract predicts the price of the underlying will be trading at $40 per share at expiration. The buyer, on the other hand, speculates that the underlying will be trading at $60 per share at expiration. Using the formula above, we can compute the intrinsic value of the option at each of the anticipated outcomes:
 
-<figure class="equation">
-  {% latex 02 %}
+{% latex 02 %}
     \setlength{\arraycolsep}{1em}
     \begin{array}{@{\rule{0em}{1.25em}}|l|l|}
     \hline
@@ -52,20 +49,17 @@ Let's say the seller of the option contract predicts the price of the underlying
     \$60 & \$10
     \\[0.25em]\hline
     \end{array}
-  {% endlatex %}
-</figure>
+{% endlatex %}
 
 The seller reasons that offering the option at any price greater than zero would be to his advantage since, according to his prediction, the option will expire worthless. The buyer figures that purchasing the option at any price below $10 is an opportunity for profit. The two traders decide that the fairest price can be obtained by taking the average value of the option for the two predicted outcomes:
 
-<figure class="equation">
-  {% latex 03 %}
+{% latex 03 %}
     \begin{aligned}
     \mathbb{E}[V(S_T)] & = \frac{V(S_T = \$40) + V(S_T = \$60)}{2}
     \\[1em]
                        & = \$5
     \end{aligned}
-  {% endlatex %}
-</figure>
+{% endlatex %}
 
 In valuing the option, the two traders effectively give equal weight to the probability of each outcome occurring. The trader who predicts the correct outcome profits from the transaction, while the trader who predicts incorrectly takes a loss.
 
@@ -73,16 +67,13 @@ In valuing the option, the two traders effectively give equal weight to the prob
 
 In a more realistic scenario, there might be many possible outcomes. Some outcomes might have a higher probability of occurring than others. Consider another example with the following set of possible outcomes:
 
-<figure class="equation">
-  {% latex 04 %}
+{% latex 04 %}
     X = \{\ \$20,\ \$30,\ \$40,\ \$50,\ \$60\,\ \$70,\ \$80\ \}
-  {% endlatex %}
-</figure>
+{% endlatex %}
 
 Using the formula above again, we can compute the intrinsic value of the option at each of the possible outcomes:
 
-<figure class="equation">
-  {% latex 05 %}
+{% latex 05 %}
     \setlength{\arraycolsep}{1em}
     \begin{array}{@{\rule{0em}{1.25em}}|l|l|}
     \hline
@@ -105,13 +96,11 @@ Using the formula above again, we can compute the intrinsic value of the option 
     \$80 & \$30
     \\[0.25em]\hline
     \end{array}
-  {% endlatex %}
-</figure>
+{% endlatex %}
 
 Now let's assume the probability of each outcome is this:
 
-<figure class="equation">
-  {% latex 06 %}
+{% latex 06 %}
     \setlength{\arraycolsep}{1em}
     \begin{array}{@{\rule{0em}{1.25em}}|l|l|}
     \hline
@@ -132,20 +121,17 @@ Now let's assume the probability of each outcome is this:
     \$80 & 0.05
     \\[0.25em]\hline
     \end{array}
-  {% endlatex %}
-</figure>
+{% endlatex %}
 
 We can compute the expected value of the option as a weighted average:
 
-<figure class="equation">
-  {% latex 07 %}
+{% latex 07 %}
     \begin{aligned}
     \mathbb{E}[V(S_T)] & = \sum_{x \in X}^{ } Pr(S_T = x)V(S_T = x)
     \\[1em]
                        & = \$5
     \end{aligned}
-  {% endlatex %}
-</figure>
+{% endlatex %}
 
 This approach lets us to model a prediction as a probability mass function across a range of values. The prediction might be based on historical price action or it might simply be an arbitrary belief chosen at our discretion.
 
@@ -153,40 +139,31 @@ This approach lets us to model a prediction as a probability mass function acros
 
 In real markets, prices don't always snap neatly to $10 increments. Tick sizes can be as small as a penny or even smaller. It might be better to model a price prediction as a continuous probability distribution. Let's consider a set of possible outcomes that can span across a continuous range of values:
 
-<figure class="equation">
-  {% latex 08 %}
+{% latex 08 %}
     X = \{\ x \in \mathbb{R}\ |\ x \geq 0\ \}
-  {% endlatex %}
-</figure>
+{% endlatex %}
 
 Prices can't fall below zero, so the range of possible values has a lower bound at zero. As before, some outcomes might have a higher probability of occurring than others. The cumulative distribution function is the probability that, when the option expires, the price of the underlying is less than or equal to a given value:
 
-<figure class="equation">
-  {% latex 09 %}
+{% latex 09 %}
     F(x) = Pr(S_T \leq x)
-  {% endlatex %}
-</figure>
+{% endlatex %}
 
 From probability theory, we know that the probability density function is just the derivative of the cumulative distribution function:
 
-<figure class="equation">
-  {% latex 10 %}
+{% latex 10 %}
     f(x) = \frac{d}{dx} F(x)
-  {% endlatex %}
-</figure>
+{% endlatex %}
 
 If we can come up with a probability density function that models our prediction, we can compute the expected value of the option by integrating over the range of possible outcomes:
 
-<figure class="equation">
-  {% latex 11 %}
+{% latex 11 %}
     \mathbb{E}[V(S_T)] = \int_{0}^{\infty} V(x)f(x)\,dx
-  {% endlatex %}
-</figure>
+{% endlatex %}
 
 Here the lower limit is zero because the price of the underlying can never fall below zero. The upper limit approaches infinity if the density function is unbounded. If using a bounded density function, you can set the limits accordingly. Let's look at a concrete example. Suppose we model our prediction as a simple triangular distribution:
 
-<figure class="equation">
-  {% latex 12 %}
+{% latex 12 %}
     \begin{aligned}
     & f(x) =
     \begin{cases}
@@ -197,21 +174,18 @@ Here the lower limit is zero because the price of the underlying can never fall 
     0                                  & \quad \text{otherwise}
     \end{cases}
     \end{aligned}
-  {% endlatex %}
-</figure>
+{% endlatex %}
 
 Since the probability density is zero for all values outside the range spanning from $20 to $80, we can ignore values outside of this range. Furthermore, since we're only considering at-the-money call options with a strike price of $50 in this context, we know the intrinsic value of the option upon expiration is always zero if the underlying is trading below $50. Plugging in the density function and simplifying:
 
 
-<figure class="equation">
-  {% latex 13 %}
+{% latex 13 %}
     \begin{aligned}
     \mathbb{E}[V(S_T)] & = \int_{50}^{80} \frac{(x - 50)(80 - x)}{900}\,dx
     \\[1em]
                        & = \$5
     \end{aligned}
-  {% endlatex %}
-</figure>
+{% endlatex %}
 
 Following this approach, you can plug in any probability distribution function that models the volatility of the underlying asset price.
 
