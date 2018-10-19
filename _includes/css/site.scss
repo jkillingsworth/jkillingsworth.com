@@ -288,22 +288,6 @@ svg
     }
 }
 
-@mixin content-archive-li-tall
-{
-    ul > li time
-    {
-        display: block;
-    }
-}
-
-@mixin content-archive-li-wide
-{
-    ul > li time
-    {
-        display: inline;
-    }
-}
-
 .content
 {
     max-width: $max-content-width;
@@ -457,11 +441,10 @@ svg
 
 .content .archive
 {
-    @include content-archive-li-tall();
-
     ul > li time
     {
         @include font-monospace();
+        display: block;
         font-size: 10pt;
     }
 }
@@ -679,7 +662,10 @@ svg
 
     .content .archive
     {
-        @include content-archive-li-wide();
+        ul > li time
+        {
+            display: inline;
+        }
     }
 }
 
@@ -764,10 +750,13 @@ svg
             float: right;
             margin: 0 0 0 24px;
         }
+    }
 
-        .archive
+    .content .archive
+    {
+        ul > li time
         {
-            @include content-archive-li-wide();
+            display: inline;
         }
     }
 
