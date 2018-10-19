@@ -10,13 +10,12 @@ module Jekyll
         end
 
         def render(context)
-            name = @input
+            match = @input.match /^fig-(?<figno>\d{2}).*\.svg$/
+            figno = match ? match["figno"] : "00"
             post = context.registers[:page]
             path = Assets.source_path(post)
-            file = File.join(path, name)
-
-            match = name.match /^fig-(?<figno>\d{2}).*\.svg$/
-            figno = match ? match["figno"] : "00"
+            file = File.join(path, @input)
+            name = File.basename(file)
 
             def capture_px(xml, attribute)
                 xml.xpath("/xmlns:svg")[0][attribute]
@@ -28,7 +27,9 @@ module Jekyll
                 h = capture_px(xml, "height")
             end
 
-            opening = "<figure class=\"fullwide\">"
+            aspect_ratio = 100 / (w.to_f / h.to_f)
+
+            opening = "<figure class=\"fullwide\" style=\"padding-top: #{aspect_ratio}%;\">"
             content = "<img width=\"#{w}\" height=\"#{h}\" alt=\"Figure #{figno.to_i}\" src=\".#{post.url}#{name}\" />"
             closing = "</figure>"
 
