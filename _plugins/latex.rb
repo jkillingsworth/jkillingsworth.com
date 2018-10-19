@@ -10,7 +10,8 @@ module Jekyll
         end
 
         def render(context)
-            figno = @input
+            match = @input.match /^fig-(?<figno>\d{2})$/
+            figno = match ? match["figno"] : "00"
             latex = URI.encode(super.strip)
             hash = Digest::SHA1.hexdigest(latex)
             site = context.registers[:site]

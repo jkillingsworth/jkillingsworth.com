@@ -11,25 +11,25 @@ The method of least squares estimates the coefficients of a model function by mi
 
 Suppose we have a set of two-dimensional data points that we observed by measuring some kind of phenomenon:
 
-{% latex 01 %}
+{% latex fig-01 %}
     \{\ (x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)\ \}
 {% endlatex %}
 
 Also suppose that the measuring device is inaccurate. The data we observed on one of the axes contains errors. Despite the errors, we know the correct readings fall somewhere on a line given by the following linear equation:
 
-{% latex 02 %}
+{% latex fig-02 %}
     \hat{y} = a_0 + a_1 x
 {% endlatex %}
 
 For each data point, we can compute the error as the difference between the observed value and the correct value according to the model function:
 
-{% latex 03 %}
+{% latex fig-03 %}
     \varepsilon_i = y_i - \hat{y}_i
 {% endlatex %}
 
 The errors can be positive or negative. Taking the square of each error always yields a positive number. We can define the sum of the squared errors like this:
 
-{% latex 04 %}
+{% latex fig-04 %}
     \begin{aligned}
     S &= \sum_{i = 1}^{n} {\varepsilon_i^2}
     \\[1em]
@@ -41,13 +41,13 @@ The errors can be positive or negative. Taking the square of each error always y
 
 Since the coefficients are unknown variables, we can treat the sum of the squared errors as a function of the coefficients:
 
-{% latex 05 %}
+{% latex fig-05 %}
     S(a_0, a_1) = \textstyle \sum{(y_i - a_0 - a_1 x_i)^2}
 {% endlatex %}
 
 To estimate the coefficients of the model function using the least squares method, we need to figure out what values for the coefficients give us the smallest value for the sum of the squared errors. We can find the minimum by first taking the partial derivative of the sum of squares function with respect to each of the coefficients, setting the derivative to zero, and then solving for the coefficient. Here are the derivatives with respect to each coefficient:
 
-{% latex 06 %}
+{% latex fig-06 %}
     \begin{aligned}
     \frac{\partial S}{\partial a_0}
     &=
@@ -61,7 +61,7 @@ To estimate the coefficients of the model function using the least squares metho
 
 Setting the derivative with respect to the first coefficient to zero, we get the following result:
 
-{% latex 07 %}
+{% latex fig-07 %}
     \begin{aligned}
     &
     \text{Let } \frac{\partial S}{\partial a_0} = 0 \text{,}
@@ -77,13 +77,13 @@ Setting the derivative with respect to the first coefficient to zero, we get the
 
 Rearranging the equation and solving for the coefficient:
 
-{% latex 08 %}
+{% latex fig-08 %}
     a_0 = \frac{\sum{y_i} - a_1 \sum{x_i}}{n}
 {% endlatex %}
 
 Setting the derivative with respect to the second coefficient to zero, we get the following result:
 
-{% latex 09 %}
+{% latex fig-09 %}
     \begin{aligned}
     &
     \text{Let } \frac{\partial S}{\partial a_1} = 0 \text{,}
@@ -99,13 +99,13 @@ Setting the derivative with respect to the second coefficient to zero, we get th
 
 Rearranging the equation and solving for the coefficient:
 
-{% latex 10 %}
+{% latex fig-10 %}
     a_1 = \frac{\sum{x_i y_i} - a_0 \sum{x_i}}{\sum{x_i^2}}
 {% endlatex %}
 
 Each one of the coefficients is given in terms of the other. Since there are two equations and two unknowns, you can plug one into the other to derive the final outcome. Another way to do this might be to treat the results as a system of linear equations arranged as follows:
 
-{% latex 11 %}
+{% latex fig-11 %}
     \begin{aligned}
     \textstyle (n) a_0 + (\sum{x_i^{\phantom{1}}}) a_1
     &=
@@ -119,7 +119,7 @@ Each one of the coefficients is given in terms of the other. Since there are two
 
 The coefficients can then be found by solving the following matrix equation:
 
-{% latex 12 %}
+{% latex fig-12 %}
     \left[\begin{array}{lll}
     a_0 \\[1em]
     a_1 \\
@@ -142,7 +142,7 @@ This method is perhaps a cleaner approach. It can also work well for model funct
 
 Now let's assume the errors are normally distributed. That is to say, the observed values are normally distributed around the model. The probability density function for the normal distribution looks like this:
 
-{% latex 13 %}
+{% latex fig-13 %}
     f(y \mid \hat{y}, \sigma)
     =
     \frac{1}{\sigma \sqrt{2 \pi}} \exp \left[- \frac{(y - \hat{y})^2}{2 \sigma^2} \right]
@@ -150,7 +150,7 @@ Now let's assume the errors are normally distributed. That is to say, the observ
 
 Here we treat our model as the mean. We also consider the standard deviation, depicted by sigma, which measures the spread of the data around the mean. Given our observed data points, we want to figure out what the most likely values are for the mean and standard deviation. For a single data point alone, the likelihood function for a given mean and standard deviation is:
 
-{% latex 14 %}
+{% latex fig-14 %}
     L(\hat{y}, \sigma \mid y)
     =
     f(y \mid \hat{y}, \sigma)
@@ -158,7 +158,7 @@ Here we treat our model as the mean. We also consider the standard deviation, de
 
 The likelihood is equal to the probability density. For all data points combined, the likelihood function for a given mean and standard deviation is equal to the product of the density at each individual data point:
 
-{% latex 15 %}
+{% latex fig-15 %}
     L(\hat{y}, \sigma \mid y_1, y_2, \dots, y_n)
     =
     \prod_{i = 1}^{n}{f(y_i \mid \hat{y}_i, \sigma)}
@@ -166,7 +166,7 @@ The likelihood is equal to the probability density. For all data points combined
 
 At this point, we just need to find the mean and standard deviation values that maximize the likelihood function. Similar to what we did in the previous section, we can find the maximum by taking the partial derivative of the likelihood function with respect to each of the coefficients, setting the derivative to zero, and then solving for the coefficients. This might be easier to do if we first take the natural logarithm of the likelihood function:
 
-{% latex 16 %}
+{% latex fig-16 %}
     \begin{aligned}
     \ln{L}
     &=
@@ -196,7 +196,7 @@ At this point, we just need to find the mean and standard deviation values that 
 
 Since we're interested in finding the coefficients of the model function, we can replace the mean parameter with the body of the model function and treat the likelihood function as a function of the coefficients:
 
-{% latex 17 %}
+{% latex fig-17 %}
     \ln{L(a_0, a_1, \sigma)}
     =
     - n \ln{(\sigma)}
@@ -206,7 +206,7 @@ Since we're interested in finding the coefficients of the model function, we can
 
 Let's call this the log-likelihood function. Since the natural logarithm function is monotonically increasing function, we can maximize the log-likelihood function and get the same result we would get if we maximized the original likelihood function. Here are the partial derivatives of the log-likelihood function with respect to each of the coefficients:
 
-{% latex 18 %}
+{% latex fig-18 %}
     \begin{aligned}
     \frac{\partial \ln{L}}{\partial a_0}
     &=
@@ -220,7 +220,7 @@ Let's call this the log-likelihood function. Since the natural logarithm functio
 
 Setting the derivative with respect to the first coefficient to zero, we get the following result:
 
-{% latex 19 %}
+{% latex fig-19 %}
     \begin{aligned}
     &
     \text{Let } \frac{\partial \ln{L}}{\partial a_0} = 0 \text{,}
@@ -236,13 +236,13 @@ Setting the derivative with respect to the first coefficient to zero, we get the
 
 Rearranging the equation and solving for the coefficient:
 
-{% latex 20 %}
+{% latex fig-20 %}
     a_0 = \frac{\sum{y_i} - a_1 \sum{x_i}}{n}
 {% endlatex %}
 
 Setting the derivative with respect to the second coefficient to zero, we get the following result:
 
-{% latex 21 %}
+{% latex fig-21 %}
     \begin{aligned}
     &
     \text{Let } \frac{\partial \ln{L}}{\partial a_1} = 0 \text{,}
@@ -258,13 +258,13 @@ Setting the derivative with respect to the second coefficient to zero, we get th
 
 Rearranging the equation and solving for the coefficient:
 
-{% latex 22 %}
+{% latex fig-22 %}
     a_1 = \frac{\sum{x_i y_i} - a_0 \sum{x_i}}{\sum{x_i^2}}
 {% endlatex %}
 
 As you can see, we get at the same results we got from using the method of least squares to estimate the coefficients. For completeness, the same procedure can be used to find the standard deviation:
 
-{% latex 23 %}
+{% latex fig-23 %}
     \begin{aligned}
     \frac{\partial \ln{L}}{\partial \sigma}
     &=
@@ -275,7 +275,7 @@ As you can see, we get at the same results we got from using the method of least
 
 Setting the derivative to zero, we get the following result for the standard deviation:
 
-{% latex 24 %}
+{% latex fig-24 %}
     \begin{aligned}
     &
     \text{Let } \frac{\partial \ln{L}}{\partial \sigma} = 0 \text{,}
@@ -291,7 +291,7 @@ Setting the derivative to zero, we get the following result for the standard dev
 
 Rearranging the equation and solving for sigma:
 
-{% latex 25 %}
+{% latex fig-25 %}
     \sigma = \sqrt{\frac{1}{n} \textstyle \sum{(y_i - a_0 - a_1 x_i)^2}}
 {% endlatex %}
 
