@@ -352,6 +352,21 @@ svg
         }
     }
 
+    .fig-chart
+    {
+        $aspect-ratio: 16 / 9;
+        padding-top: 100% / $aspect-ratio;
+        position: relative;
+
+        > img
+        {
+            max-height: 100%;
+            max-width: 100%;
+            position: absolute;
+            top: 0;
+        }
+    }
+
     .fig-latex
     {
         overflow-x: auto;
@@ -369,21 +384,6 @@ svg
             margin: 0 auto;
             max-width: 100%;
             object-fit: cover;
-        }
-    }
-
-    .fig-chart
-    {
-        $aspect-ratio: 16 / 9;
-        padding-top: 100% / $aspect-ratio;
-        position: relative;
-
-        > img
-        {
-            max-height: 100%;
-            max-width: 100%;
-            position: absolute;
-            top: 0;
         }
     }
 }
