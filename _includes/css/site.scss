@@ -346,9 +346,17 @@ svg
 
         > img
         {
-            background: $shade90;
-            box-shadow: 0 0 0 1px $rgbback inset;
+            animation: placeholder 1s ease forwards;
             display: block;
+        }
+
+        @keyframes placeholder
+        {
+            to
+            {
+                background: $shade90;
+                box-shadow: 0 0 0 1px $rgbback inset;
+            }
         }
     }
 
