@@ -377,7 +377,8 @@ svg
         }
     }
 
-    .fig-pic-l
+    .fig-pic-l,
+    .fig-pic-r
     {
         > img
         {
@@ -659,6 +660,12 @@ svg
         {
             float: left;
             margin: 0 24px 0 0;
+        }
+
+        .fig-pic-r > img
+        {
+            float: right;
+            margin: 0 0 0 24px;
         }
     }
 
