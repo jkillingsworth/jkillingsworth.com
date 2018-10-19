@@ -44,7 +44,7 @@ module Jekyll
             w = capture_px(xml, "width")
             h = capture_px(xml, "height")
 
-            opening = "<figure class=\"equation\">"
+            opening = "<figure class=\"fig-latex\">"
             content = "<img width=\"#{w}\" height=\"#{h}\" alt=\"Figure #{figno.to_i}\" src=\".#{post.url}#{name}\" />"
             closing = "</figure>"
 

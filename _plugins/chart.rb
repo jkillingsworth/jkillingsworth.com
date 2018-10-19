@@ -29,7 +29,7 @@ module Jekyll
 
             aspect_ratio = 100 / (w.to_f / h.to_f)
 
-            opening = "<figure class=\"fullwide\" style=\"padding-top: #{aspect_ratio}%;\">"
+            opening = "<figure class=\"fig-chart\" style=\"padding-top: #{aspect_ratio}%;\">"
             content = "<img width=\"#{w}\" height=\"#{h}\" alt=\"Figure #{figno.to_i}\" src=\".#{post.url}#{name}\" />"
             closing = "</figure>"
 
