@@ -42,7 +42,7 @@ $indent-width: 16px;
     }
 }
 
-@mixin font-prominent
+@mixin font-headlines
 {
     $font-fallback: "Verdana", sans-serif;
     $font-webfonts: "Open Sans";
@@ -56,7 +56,7 @@ $indent-width: 16px;
     }
 }
 
-@mixin font-technical
+@mixin font-monospace
 {
     $font-fallback: "Consolas", "Monaco", monospace;
 
@@ -99,7 +99,7 @@ body
 
 header, nav, h1, h2
 {
-    @include font-prominent();
+    @include font-headlines();
 
     a
     {
@@ -121,7 +121,7 @@ a:hover
 
 strong
 {
-    @include font-prominent();
+    @include font-headlines();
 }
 
 svg
@@ -422,7 +422,7 @@ svg
 
 .content .oldpost
 {
-    @include font-prominent();
+    @include font-headlines();
     margin: 24px 0;
     text-align: center;
 
@@ -453,7 +453,7 @@ svg
 
     ul > li time
     {
-        @include font-technical();
+        @include font-monospace();
         font-size: 10pt;
     }
 }
@@ -463,7 +463,7 @@ svg
     label,
     input[type="submit"]
     {
-        @include font-prominent();
+        @include font-headlines();
         cursor: pointer;
         display: block;
         margin: 16px 0;
@@ -478,7 +478,7 @@ svg
     input[type="email"],
     textarea
     {
-        @include font-technical();
+        @include font-monospace();
         display: block;
         line-height: 1.25;
         padding: 4px;
