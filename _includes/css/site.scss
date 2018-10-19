@@ -745,6 +745,18 @@ svg
             margin: 0 $indent-width;
         }
 
+        .fig-pic-l > img
+        {
+            float: left;
+            margin: 0 24px 0 0;
+        }
+
+        .fig-pic-r > img
+        {
+            float: right;
+            margin: 0 0 0 24px;
+        }
+
         .archive
         {
             @include content-archive-li-wide();
