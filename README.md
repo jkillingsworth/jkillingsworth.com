@@ -4,7 +4,7 @@ This is the source code for my personal website.
 
 ## Toolchain
 
-The bulid the site, you need to install [Ruby](https://www.ruby-lang.org/) and use the [Jekyll](https://jekyllrb.com/) static site generator.
+The build the site, you need to install [Ruby](https://www.ruby-lang.org/) and use the [Jekyll](https://jekyllrb.com/) static site generator.
 
 #### Installation (Windows)
 
