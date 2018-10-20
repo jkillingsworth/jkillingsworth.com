@@ -20,11 +20,15 @@ Follow the instructions for installing [Jekyll on Windows](https://jekyllrb.com/
 
 2. Install the MSYS2 components when prompted. Use the default options.
 
-3. Install Jekyll and Bundler using the following command:
+3. Install the Bundler gem using the following command:
 
-       gem install jekyll bundler
+       gem install bundler
 
-   Use the following command to verify the latest version of Jekyll is installed:
+4. Install Jekyll and all dependencies using the following command:
+
+       bundle install
+
+5. Verify the latest version of Jekyll is installed using the following command:
 
        jekyll -v
 
@@ -34,21 +38,9 @@ Follow the instructions for installing [Jekyll on Windows](https://jekyllrb.com/
 
       bundle install
 
-* Install gems needed for an existing site into a local path:
-
-      bundle install --path=<name>
-
 * Update gems to the latest version:
 
       bundle update
-
-* Execute command in the context of a local path installation:
-
-      bundle exec <command>
-
-* Create a new blank site:
-
-      jekyll new <name> --blank
 
 * Build a site:
 
