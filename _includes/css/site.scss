@@ -586,49 +586,9 @@ svg
 
 //-------------------------------------------------------------------------------------------------
 
-@media only screen and (min-width: 600px)
+@mixin wide-content-layout($margin-percent)
 {
-    $margin-percent: 10;
     $indent-width: 40px;
-
-    body
-    {
-        max-width: $max-content-width;
-        width: 100% - (2 * $margin-percent);
-
-        > header
-        {
-            font-size: 30pt;
-        }
-    }
-
-    .navmenu
-    {
-        #toggle
-        {
-            display: none;
-        }
-
-        #toggle + label
-        {
-            display: none;
-        }
-
-        #toggle ~ ul
-        {
-            @include navmenu-toggle-show();
-        }
-
-        ul
-        {
-            flex-flow: row wrap;
-        }
-
-        ul > li a
-        {
-            padding: 4px 32px;
-        }
-    }
 
     .content
     {
@@ -671,6 +631,53 @@ svg
 
 //-------------------------------------------------------------------------------------------------
 
+@media only screen and (min-width: 600px)
+{
+    $margin-percent: 10;
+    @include wide-content-layout($margin-percent);
+
+    body
+    {
+        max-width: $max-content-width;
+        width: 100% - (2 * $margin-percent);
+
+        > header
+        {
+            font-size: 30pt;
+        }
+    }
+
+    .navmenu
+    {
+        #toggle
+        {
+            display: none;
+        }
+
+        #toggle + label
+        {
+            display: none;
+        }
+
+        #toggle ~ ul
+        {
+            @include navmenu-toggle-show();
+        }
+
+        ul
+        {
+            flex-flow: row wrap;
+        }
+
+        ul > li a
+        {
+            padding: 4px 32px;
+        }
+    }
+}
+
+//-------------------------------------------------------------------------------------------------
+
 @media only screen and (min-width: 1200px)
 {
     body
@@ -703,7 +710,8 @@ svg
 
 @media only print
 {
-    $indent-width: 40px;
+    $margin-percent: 0;
+    @include wide-content-layout($margin-percent);
 
     body
     {
@@ -719,44 +727,6 @@ svg
             margin: 0;
             padding: 4px 0;
             text-align: left;
-        }
-    }
-
-    .content
-    {
-        ul
-        {
-            padding-left: $indent-width;
-        }
-
-        figure
-        {
-            max-width: 100vw;
-        }
-
-        .fig-latex > img
-        {
-            margin: 0 $indent-width;
-        }
-
-        .fig-pic-l > img
-        {
-            float: left;
-            margin: 0 24px 0 0;
-        }
-
-        .fig-pic-r > img
-        {
-            float: right;
-            margin: 0 0 0 24px;
-        }
-    }
-
-    .content .archive
-    {
-        ul > li time
-        {
-            display: inline;
         }
     }
 
