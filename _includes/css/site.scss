@@ -119,6 +119,11 @@ a:hover
     text-decoration: underline;
 }
 
+code
+{
+    @include font-monospace();
+}
+
 strong
 {
     @include font-headlines();
