@@ -9,7 +9,7 @@ module Jekyll
         end
 
         def write(dest)
-            if path =~ /^.*\/fig-\d{2}-latex-[0-9a-f]{8}\.svg$/ then
+            if path =~ /^.*\/fig-\d{2}-latex-[0-9]{10}\.svg$/ then
                 dest_path = destination(dest)
 
                 return false if File.exist?(dest_path) && !modified?

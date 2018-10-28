@@ -12,23 +12,36 @@ module Jekyll
         def render(context)
             match = @input.match /^fig-(?<figno>\d{2})$/
             figno = match ? match["figno"] : "00"
-            latex = URI.encode(super.strip)
-            hash = Digest::SHA1.hexdigest(latex)
+            latex = super.strip.lines.map{ |s| s.strip.concat("\n") }.join
+            fingerprint = Digest::SHA1.hexdigest(latex)[0...8].to_i(16).to_s.rjust(10, "0")
             site = context.registers[:site]
             post = context.registers[:page]
             path = Assets.source_path(post)
-            file = File.join(path, "fig-#{figno}-latex-#{hash[0...8]}.svg")
+            file = File.join(path, "fig-#{figno}-latex-#{fingerprint}.svg")
             name = File.basename(file)
 
             if !Dir.exist?(path) then
                 Dir.mkdir(path)
             end
 
+            def gen_tmpfile(jobname, latex, tempdir)
+                Dir.chdir(tempdir) do
+                    File.write("#{jobname}.tex", latex)
+                    `latex --halt-on-error --interaction=nonstopmode #{jobname}.tex > stdout.log 2>> stderr.log`
+                    `dvisvgm #{jobname}.dvi --no-fonts --exact --zoom=1.333333 --prec=6 --verb=3 2>> stderr.log`
+                end
+            end
+
+            def gen_outfile(jobname, latex, outfile)
+                Dir.mktmpdir("#{jobname}-") do |tempdir|
+                    gen_tmpfile(jobname, latex, tempdir)
+                    File.rename("#{tempdir}/#{jobname}.svg", outfile)
+                end
+            end
+
             if !File.exist?(file) then
                 print "Generating #{file}..."
-                url = "https://latex.codecogs.com/svg.latex?#{latex}"
-                data = open(url, "r") { |f| f.read }
-                File.write(file, data)
+                gen_outfile("latextosvg", latex, file)
                 site.static_files << AssetFile.new(site, path, post.url, name)
                 print "done\n"
             end
@@ -36,7 +49,7 @@ module Jekyll
             def capture_px(xml, attribute)
                 value = xml.xpath("/xmlns:svg")[0][attribute]
                 value = value.to_s.sub("pt", "").to_f
-                value = value * 4 / 3
+                value = value * 96 / 72
                 value.round(0)
             end
 
