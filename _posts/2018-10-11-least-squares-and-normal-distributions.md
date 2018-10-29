@@ -316,7 +316,7 @@ Since we're interested in finding the coefficients of the model function, we can
     \end{document}
 {% endlatex %}
 
-Let's call this the log-likelihood function. Since the natural logarithm function is monotonically increasing function, we can maximize the log-likelihood function and get the same result we would get if we maximized the original likelihood function. Here are the partial derivatives of the log-likelihood function with respect to each of the coefficients:
+Let's call this the log-likelihood function. Since the natural logarithm function is a monotonically increasing function, we can maximize the log-likelihood function and get the same result we would get if we maximized the original likelihood function. Here are the partial derivatives of the log-likelihood function with respect to each of the coefficients:
 
 {% latex fig-18 %}
     \documentclass[varwidth]{standalone}
