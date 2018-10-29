@@ -40,10 +40,9 @@ module Jekyll
             end
 
             if !File.exist?(file) then
-                print "Generating #{file}..."
+                puts "LaTeX: ".rjust(20) + "#{file}"
                 gen_outfile("latextosvg", latex, file)
                 site.static_files << AssetFile.new(site, path, post.url, name)
-                print "done\n"
             end
 
             def capture_px(xml, attribute)
