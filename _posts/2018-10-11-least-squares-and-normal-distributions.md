@@ -21,7 +21,7 @@ Suppose we have a set of two-dimensional data points that we observed by measuri
     \end{document}
 {% endlatex %}
 
-Also suppose that the measuring device is inaccurate. The data we observed on one of the axes contains errors. Despite the errors, we know the correct readings fall somewhere on a line given by the following linear equation:
+Also suppose that the measuring device is inaccurate. The data we observed contain errors for values on the vertical axis. Despite the errors, we know the correct readings fall somewhere on a line given by the following linear equation:
 
 {% latex fig-02 %}
     \documentclass[varwidth]{standalone}
