@@ -353,6 +353,7 @@ svg
     {
         $aspect-ratio: 16 / 9;
         padding-top: 100% / $aspect-ratio;
+        page-break-inside: avoid;
         position: relative;
 
         > img
