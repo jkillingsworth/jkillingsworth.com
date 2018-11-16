@@ -55,3 +55,10 @@ copychart $post fig-33 lsrexp-WYNN-full.svg
 copychart $post fig-34 lsrexp-WYNN-zoom.svg
 copychart $post fig-35 lsrexp-HEAR-full.svg
 copychart $post fig-36 lsrexp-HEAR-zoom.svg
+
+post="2018-11-15-normal-and-laplace-distributions"
+
+copychart $post fig-16 log-likelihood-laplace-e.svg
+copychart $post fig-17 log-likelihood-laplace-o.svg
+copychart $post fig-21 distributions-lin.svg
+copychart $post fig-22 distributions-log.svg
