@@ -302,7 +302,7 @@ The normal distribution and the Laplace distribution are both symmetrical. The d
 
 {% chart fig-21-distributions-lin.svg %}
 
-Both density functions have the same basic shape. The density plot of the Laplace distribution, however, is taller and skinnier in the middle. It also has fatter tails that the normal distribution. I think those fat tails are worth taking a closer look at. Here is the same chart with the density plotted on a logarithmic scale:
+Both density functions have the same basic shape. The density plot of the Laplace distribution, however, is taller and skinnier in the middle. It also has fatter tails than the normal distribution. I think those fat tails are worth taking a closer look at. Here is the same chart with the density plotted on a logarithmic scale:
 
 {% chart fig-22-distributions-log.svg %}
 
