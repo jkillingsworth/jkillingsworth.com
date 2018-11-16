@@ -4,7 +4,9 @@ copychart () {
     postname=$1
     prefixno=$2
     filename=$3
-    cp _src/$postname/build/$filename _assets/$postname/$prefixno-$filename
+    src=_src/$postname/build
+    dst=_assets/$postname
+    mkdir -p $dst && cp $src/$filename $dst/$prefixno-$filename
 }
 
 post="2018-04-23-fixed-fractions-and-fair-games"
