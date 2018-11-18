@@ -62,3 +62,8 @@ copychart $post fig-16 log-likelihood-laplace-e.svg
 copychart $post fig-17 log-likelihood-laplace-o.svg
 copychart $post fig-21 distributions-lin.svg
 copychart $post fig-22 distributions-log.svg
+
+post="2018-11-18-distributions-on-a-logarithmic-scale"
+
+copychart $post fig-23 distributions-lin.svg
+copychart $post fig-24 distributions-log.svg
