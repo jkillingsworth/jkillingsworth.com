@@ -83,7 +83,7 @@ While there are multiple techniques for computing the binomial coefficient, the 
     \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
-    \binom{n}{k} = \frac{n!}{k!(n - k)}
+    \binom{n}{k} = \frac{n!}{k!(n - k)!}
     \end{displaymath}
     \end{document}
 {% endlatex %}
