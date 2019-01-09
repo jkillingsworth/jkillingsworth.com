@@ -3,7 +3,7 @@ layout: post
 title: Linear and Log Scale Distributions
 ---
 
-In my previous post titled *Fixed Fractions and Fair Games*, I explored the properties of two different betting strategies applied to a repeated coin toss game. The focus was on the expected value for each of the two betting strategies. In this post, I take a deeper look at the distribution of possible outcomes after a large number of plays.
+In my previous post titled [*Fixed Fractions and Fair Games*]({% post_url 2018-04-23-fixed-fractions-and-fair-games %}), I explored the properties of two different betting strategies applied to a repeated coin toss game. The focus was on the expected value for each of the two betting strategies. In this post, I take a deeper look at the distribution of possible outcomes after a large number of plays.
 
 <!--excerpt-->
 

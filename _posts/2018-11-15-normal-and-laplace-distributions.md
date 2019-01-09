@@ -92,7 +92,7 @@ Setting the partial derivative to zero and solving for the standard deviation, w
     \end{document}
 {% endlatex %}
 
-If you want to see a more detailed breakdown of the steps above, you can reference my post titled *Least Squares and Normal Distributions*. As I mentioned in that post, the maximum likelihood estimator for the standard deviation can give an estimate that is too low for small sample sizes. If using a limited sample size, it might be a good idea to apply [Bessel's correction](https://en.wikipedia.org/wiki/Bessel%27s_correction) to get a more accurate estimate.
+If you want to see a more detailed breakdown of the steps above, you can reference my post titled [*Least Squares and Normal Distributions*]({% post_url 2018-10-11-least-squares-and-normal-distributions %}). As I mentioned in that post, the maximum likelihood estimator for the standard deviation can give an estimate that is too low for small sample sizes. If using a limited sample size, it might be a good idea to apply [Bessel's correction](https://en.wikipedia.org/wiki/Bessel%27s_correction) to get a more accurate estimate.
 
 ## The Laplace Distribution
 
