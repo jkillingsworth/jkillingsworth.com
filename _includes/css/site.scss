@@ -22,6 +22,7 @@ $shade90: mix($rgbback, $rgbfore, 90);
 $border-upper: 3px solid $shade50;
 $border-lower: 1px solid $shade80;
 $border-inner: 1px solid $shade90;
+$border-table: 1px solid $rgbfore;
 
 $max-overall-width: 1200px;
 $max-content-width: 720px;
@@ -375,6 +376,33 @@ svg
         }
     }
 
+    .fig-table
+    {
+        overflow-x: auto;
+
+        table
+        {
+            border-collapse: collapse;
+            margin: 0 $indent-width;
+        }
+
+        th
+        {
+            font-weight: normal;
+        }
+
+        th span
+        {
+            display: inline-block;
+        }
+
+        td, th
+        {
+            border: $border-table;
+            padding: 4px 16px;
+        }
+    }
+
     .fig-pic-l,
     .fig-pic-r
     {
@@ -609,6 +637,11 @@ svg
         }
 
         .fig-latex > img
+        {
+            margin: 0 $indent-width;
+        }
+
+        .fig-table > table
         {
             margin: 0 $indent-width;
         }
