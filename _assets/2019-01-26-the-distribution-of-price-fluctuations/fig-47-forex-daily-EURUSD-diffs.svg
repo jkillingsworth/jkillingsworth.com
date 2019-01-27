@@ -1,0 +1,1503 @@
+<?xml version="1.0" encoding="utf-8"  standalone="no"?>
+<svg 
+ width="720" height="405"
+ viewBox="0 0 720 405"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+
+<title>Gnuplot</title>
+<desc>Produced by GNUPLOT 5.2 patchlevel 5 </desc>
+
+<g id="gnuplot_canvas">
+
+<rect x="0" y="0" width="720" height="405" fill="#ffffff"/>
+<defs>
+
+	<circle id='gpDot' r='0.5' stroke-width='0.5' stroke='currentColor'/>
+	<path id='gpPt0' stroke-width='0.222' stroke='currentColor' d='M-1,0 h2 M0,-1 v2'/>
+	<path id='gpPt1' stroke-width='0.222' stroke='currentColor' d='M-1,-1 L1,1 M1,-1 L-1,1'/>
+	<path id='gpPt2' stroke-width='0.222' stroke='currentColor' d='M-1,0 L1,0 M0,-1 L0,1 M-1,-1 L1,1 M-1,1 L1,-1'/>
+	<rect id='gpPt3' stroke-width='0.222' stroke='currentColor' x='-1' y='-1' width='2' height='2'/>
+	<rect id='gpPt4' stroke-width='0.222' stroke='currentColor' fill='currentColor' x='-1' y='-1' width='2' height='2'/>
+	<circle id='gpPt5' stroke-width='0.222' stroke='currentColor' cx='0' cy='0' r='1'/>
+	<use xlink:href='#gpPt5' id='gpPt6' fill='currentColor' stroke='none'/>
+	<path id='gpPt7' stroke-width='0.222' stroke='currentColor' d='M0,-1.33 L-1.33,0.67 L1.33,0.67 z'/>
+	<use xlink:href='#gpPt7' id='gpPt8' fill='currentColor' stroke='none'/>
+	<use xlink:href='#gpPt7' id='gpPt9' stroke='currentColor' transform='rotate(180)'/>
+	<use xlink:href='#gpPt9' id='gpPt10' fill='currentColor' stroke='none'/>
+	<use xlink:href='#gpPt3' id='gpPt11' stroke='currentColor' transform='rotate(45)'/>
+	<use xlink:href='#gpPt11' id='gpPt12' fill='currentColor' stroke='none'/>
+	<path id='gpPt13' stroke-width='0.222' stroke='currentColor' d='M0,1.330 L1.265,0.411 L0.782,-1.067 L-0.782,-1.076 L-1.265,0.411 z'/>
+	<use xlink:href='#gpPt13' id='gpPt14' fill='currentColor' stroke='none'/>
+	<filter id='textbox' filterUnits='objectBoundingBox' x='0' y='0' height='1' width='1'>
+	  <feFlood flood-color='#FFFFFF' flood-opacity='1' result='bgnd'/>
+	  <feComposite in='SourceGraphic' in2='bgnd' operator='atop'/>
+	</filter>
+	<filter id='greybox' filterUnits='objectBoundingBox' x='0' y='0' height='1' width='1'>
+	  <feFlood flood-color='lightgrey' flood-opacity='1' result='grey'/>
+	  <feComposite in='SourceGraphic' in2='grey' operator='atop'/>
+	</filter>
+</defs>
+<g fill="none" color="#FFFFFF" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.2,347.4 L695.0,347.4  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.2,347.4 M695.0,347.4  '/>	<g transform="translate(71.9,351.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Monaco, monospace" >-0.03</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.2,300.4 L695.0,300.4  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.2,300.4 M695.0,300.4  '/>	<g transform="translate(71.9,304.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Monaco, monospace" >-0.02</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.2,253.3 L695.0,253.3  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.2,253.3 M695.0,253.3  '/>	<g transform="translate(71.9,257.2)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Monaco, monospace" >-0.01</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.2,206.3 L695.0,206.3  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.2,206.3 M695.0,206.3  '/>	<g transform="translate(71.9,210.2)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 0.00</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.2,159.2 L695.0,159.2  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.2,159.2 M695.0,159.2  '/>	<g transform="translate(71.9,163.1)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 0.01</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.2,112.2 L695.0,112.2  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.2,112.2 M695.0,112.2  '/>	<g transform="translate(71.9,116.1)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 0.02</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.2,65.1 L695.0,65.1  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.2,65.1 M695.0,65.1  '/>	<g transform="translate(71.9,69.0)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 0.03</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.2,18.1 L695.0,18.1  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.2,18.1 M695.0,18.1  '/>	<g transform="translate(71.9,22.0)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 0.04</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.2,347.4 L80.2,18.1  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.2,347.4 M80.2,18.1  '/>	<g transform="translate(80.2,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 0</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M141.7,347.4 L141.7,45.1 M141.7,27.1 L141.7,18.1  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M141.7,347.4 M141.7,18.1  '/>	<g transform="translate(141.7,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 500</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M203.2,347.4 L203.2,45.1 M203.2,27.1 L203.2,18.1  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M203.2,347.4 M203.2,18.1  '/>	<g transform="translate(203.2,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 1000</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M264.6,347.4 L264.6,18.1  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M264.6,347.4 M264.6,18.1  '/>	<g transform="translate(264.6,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 1500</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M326.1,347.4 L326.1,18.1  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M326.1,347.4 M326.1,18.1  '/>	<g transform="translate(326.1,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 2000</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M387.6,347.4 L387.6,18.1  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M387.6,347.4 M387.6,18.1  '/>	<g transform="translate(387.6,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 2500</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M449.1,347.4 L449.1,18.1  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M449.1,347.4 M449.1,18.1  '/>	<g transform="translate(449.1,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 3000</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M510.6,347.4 L510.6,18.1  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M510.6,347.4 M510.6,18.1  '/>	<g transform="translate(510.6,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 3500</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M572.0,347.4 L572.0,18.1  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M572.0,347.4 M572.0,18.1  '/>	<g transform="translate(572.0,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 4000</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M633.5,347.4 L633.5,18.1  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M633.5,347.4 M633.5,18.1  '/>	<g transform="translate(633.5,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 4500</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M695.0,347.4 L695.0,18.1  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M695.0,347.4 M695.0,18.1  '/>	<g transform="translate(695.0,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Monaco, monospace" > 5000</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.2,18.1 L80.2,347.4 L695.0,347.4 L695.0,18.1 L80.2,18.1 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g transform="translate(16.3,182.8) rotate(270)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Monaco, monospace" >Price Differences (Log Scale)</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g transform="translate(387.6,396.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Monaco, monospace" >Time (Days)</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(128, 128, 128)'  d='M88.5,45.1 L88.5,27.1 L246.9,27.1 L246.9,45.1 L88.5,45.1 Z  '/></g>
+	<g id="gnuplot_plot_1" ><title>EUR/USD (Daily)</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(128, 128, 128)'  d='M80.2,206.3 L80.2,301.3 M80.3,206.3 L80.3,176.6 M80.4,206.3 L80.4,213.0 M80.6,206.3 L80.6,246.1
+		M80.7,206.3 L80.7,195.6 M80.8,206.3 L80.8,263.4 M80.9,206.3 L80.9,194.9 M81.1,206.3 L81.1,142.0
+		M81.2,206.3 L81.2,195.1 M81.3,206.3 L81.3,169.5 M81.4,206.3 L81.4,141.3 M81.6,206.3 L81.6,209.0
+		M81.7,206.3 L81.7,179.5 M81.8,206.3 L81.8,229.7 M81.9,206.3 L81.9,206.8 M82.0,206.3 L82.0,237.0
+		M82.2,206.3 L82.2,148.9 M82.3,206.3 L82.3,231.3 M82.4,206.3 L82.4,208.5 M82.5,206.3 L82.5,227.1
+		M82.7,206.3 L82.7,201.9 M82.8,206.3 L82.8,238.7 M82.9,206.3 L82.9,229.5 M83.0,206.3 L83.0,196.3
+		M83.2,206.3 L83.2,241.9 M83.3,206.3 L83.3,205.2 M83.4,206.3 L83.4,241.0 M83.5,206.3 L83.5,199.5
+		M83.6,206.3 L83.6,132.2 M83.8,206.3 L83.8,181.5 M83.9,206.3 L83.9,196.9 M84.0,206.3 L84.0,129.5
+		M84.1,206.3 L84.1,170.2 M84.3,206.3 L84.3,158.3 M84.4,206.3 L84.4,243.0 M84.5,206.3 L84.5,152.6
+		M84.6,206.3 L84.6,215.8 M84.7,206.3 L84.7,236.0 M84.9,206.3 L84.9,241.0 M85.0,206.3 L85.0,190.7
+		M85.1,206.3 L85.1,227.7 M85.2,206.3 L85.2,134.8 M85.4,206.3 L85.4,170.9 M85.5,206.3 L85.5,216.8
+		M85.6,206.3 L85.6,208.9 M85.7,206.3 L85.7,99.0 M85.9,206.3 L85.9,194.4 M86.0,206.3 L86.0,158.7
+		M86.1,206.3 L86.1,207.8 M86.2,206.3 L86.2,184.5 M86.3,206.3 L86.3,203.7 M86.5,206.3 L86.5,213.9
+		M86.6,206.3 L86.6,148.9 M86.7,206.3 L86.7,196.8 M86.8,206.3 L86.8,171.4 M87.0,206.3 L87.0,302.0
+		M87.1,206.3 L87.1,102.7 M87.2,206.3 L87.2,174.2 M87.3,206.3 L87.3,237.8 M87.5,206.3 L87.5,238.6
+		M87.6,206.3 L87.6,228.3 M87.7,206.3 L87.7,148.0 M87.8,206.3 L87.8,203.3 M87.9,206.3 L87.9,251.5
+		M88.1,206.3 L88.1,214.3 M88.2,206.3 L88.2,241.4 M88.3,206.3 L88.3,155.2 M88.4,206.3 L88.4,258.4
+		M88.6,206.3 L88.6,185.2 M88.7,206.3 L88.7,202.8 M88.8,206.3 L88.8,288.2 M88.9,206.3 L88.9,213.9
+		M89.1,206.3 L89.1,191.0 M89.2,206.3 L89.2,235.9 M89.3,206.3 L89.3,163.4 M89.4,206.3 L89.4,171.9
+		M89.5,206.3 L89.5,165.6 M89.7,206.3 L89.7,241.4 M89.8,206.3 L89.8,185.7 M89.9,206.3 L89.9,250.1
+		M90.0,206.3 L90.0,203.7 M90.2,206.3 L90.2,270.9 M90.3,206.3 L90.3,165.4 M90.4,206.3 L90.4,179.4
+		M90.5,206.3 L90.5,263.2 M90.7,206.3 L90.7,214.5 M90.8,206.3 L90.8,284.3 M90.9,206.3 L90.9,151.4
+		M91.0,206.3 L91.0,169.3 M91.1,206.3 L91.1,262.8 M91.3,206.3 L91.3,216.6 M91.4,206.3 L91.4,223.4
+		M91.5,206.3 L91.5,134.5 M91.6,206.3 L91.6,243.3 M91.8,206.3 L91.8,182.1 M91.9,206.3 L91.9,171.0
+		M92.0,206.3 L92.0,162.1 M92.1,206.3 L92.1,194.7 M92.3,206.3 L92.3,227.0 M92.4,206.3 L92.4,189.6
+		M92.5,206.3 L92.5,230.0 M92.6,206.3 L92.6,192.1 M92.7,206.3 L92.7,199.7 M92.9,206.3 L92.9,229.5
+		M93.0,206.3 L93.0,277.3 M93.1,206.3 L93.1,229.0 M93.2,206.3 L93.2,253.1 M93.4,206.3 L93.4,230.9
+		M93.5,206.3 L93.5,194.2 M93.6,206.3 L93.6,151.6 M93.7,206.3 L93.7,274.1 M93.8,206.3 L93.8,247.4
+		M94.0,206.3 L94.0,200.4 M94.1,206.3 L94.1,169.9 M94.2,206.3 L94.2,221.5 M94.3,206.3 L94.3,242.8
+		M94.5,206.3 L94.5,227.0 M94.6,206.3 L94.6,225.0 M94.7,206.3 L94.7,201.5 M94.8,206.3 L94.8,120.9
+		M95.0,206.3 L95.0,178.5 M95.1,206.3 L95.1,231.4 M95.2,206.3 L95.2,172.8 M95.3,206.3 L95.3,229.8
+		M95.4,206.3 L95.4,261.6 M95.6,206.3 L95.6,211.6 M95.7,206.3 L95.7,179.3 M95.8,206.3 L95.8,222.7
+		M95.9,206.3 L95.9,221.1 M96.1,206.3 L96.1,226.0 M96.2,206.3 L96.2,193.0 M96.3,206.3 L96.3,158.6
+		M96.4,206.3 L96.4,152.9 M96.6,206.3 L96.6,240.7 M96.7,206.3 L96.7,222.0 M96.8,206.3 L96.8,195.8
+		M96.9,206.3 L96.9,167.1 M97.0,206.3 L97.0,270.7 M97.2,206.3 L97.2,224.8 M97.3,206.3 L97.3,185.7
+		M97.4,206.3 L97.4,200.5 M97.5,206.3 L97.5,223.7 M97.7,206.3 L97.7,181.5 M97.8,206.3 L97.8,227.4
+		M97.9,206.3 L97.9,243.9 M98.0,206.3 L98.0,198.8 M98.2,206.3 L98.2,222.8 M98.3,206.3 L98.3,235.2
+		M98.4,206.3 L98.4,214.9 M98.5,206.3 L98.5,190.2 M98.6,206.3 L98.6,171.6 M98.8,206.3 L98.8,212.7
+		M98.9,206.3 L98.9,223.9 M99.0,206.3 L99.0,221.3 M99.1,206.3 L99.1,269.5 M99.3,206.3 L99.3,254.9
+		M99.4,206.3 L99.4,204.6 M99.5,206.3 L99.5,194.2 M99.6,206.3 L99.6,200.8 M99.8,206.3 L99.8,228.2
+		M99.9,206.3 L99.9,200.2 M100.0,206.3 L100.0,265.4 M100.1,206.3 L100.1,197.9 M100.2,206.3 L100.2,216.3
+		M100.4,206.3 L100.4,169.1 M100.5,206.3 L100.5,231.2 M100.6,206.3 L100.6,193.0 M100.7,206.3 L100.7,202.4
+		M100.9,206.3 L100.9,247.4 M101.0,206.3 L101.0,174.0 M101.1,206.3 L101.1,186.4 M101.2,206.3 L101.2,153.6
+		M101.3,206.3 L101.3,212.8 M101.5,206.3 L101.5,209.0 M101.6,206.3 L101.6,244.7 M101.7,206.3 L101.7,203.5
+		M101.8,206.3 L101.8,202.4 M102.0,206.3 L102.0,202.4 M102.1,206.3 L102.1,182.7 M102.2,206.3 L102.2,189.3
+		M102.3,206.3 L102.3,221.6 M102.5,206.3 L102.5,292.9 M102.6,206.3 L102.6,181.3 M102.7,206.3 L102.7,222.4
+		M102.8,206.3 L102.8,195.7 M102.9,206.3 L102.9,218.5 M103.1,206.3 L103.1,261.1 M103.2,206.3 L103.2,144.8
+		M103.3,206.3 L103.3,205.7 M103.4,206.3 L103.4,165.9 M103.6,206.3 L103.6,180.5 M103.7,206.3 L103.7,239.2
+		M103.8,206.3 L103.8,203.5 M103.9,206.3 L103.9,200.8 M104.1,206.3 L104.1,184.3 M104.2,206.3 L104.2,133.4
+		M104.3,206.3 L104.3,211.7 M104.4,206.3 L104.4,205.2 M104.5,206.3 L104.5,222.5 M104.7,206.3 L104.7,170.1
+		M104.8,206.3 L104.8,180.0 M104.9,206.3 L104.9,217.5 M105.0,206.3 L105.0,216.5 M105.2,206.3 L105.2,213.3
+		M105.3,206.3 L105.3,204.7 M105.4,206.3 L105.4,174.1 M105.5,206.3 L105.5,196.7 M105.7,206.3 L105.7,199.9
+		M105.8,206.3 L105.8,218.0 M105.9,206.3 L105.9,231.4 M106.0,206.3 L106.0,188.6 M106.1,206.3 L106.1,143.1
+		M106.3,206.3 L106.3,201.5 M106.4,206.3 L106.4,183.2 M106.5,206.3 L106.5,180.7 M106.6,206.3 L106.6,155.5
+		M106.8,206.3 L106.8,197.0 M106.9,206.3 L106.9,190.3 M107.0,206.3 L107.0,224.8 M107.1,206.3 L107.1,209.4
+		M107.3,206.3 L107.3,199.1 M107.4,206.3 L107.4,202.2 M107.5,206.3 L107.5,217.1 M107.6,206.3 L107.6,214.5
+		M107.7,206.3 L107.7,211.4 M107.9,206.3 L107.9,208.3 M108.0,206.3 L108.0,169.7 M108.1,206.3 L108.1,234.6
+		M108.2,206.3 L108.2,227.5 M108.4,206.3 L108.4,321.2 M108.5,206.3 L108.5,202.0 M108.6,206.3 L108.6,161.4
+		M108.7,206.3 L108.7,154.5 M108.8,206.3 L108.8,230.8 M109.0,206.3 L109.0,131.1 M109.1,206.3 L109.1,246.6
+		M109.2,206.3 L109.2,180.9 M109.3,206.3 L109.3,158.0 M109.5,206.3 L109.5,190.5 M109.6,206.3 L109.6,194.6
+		M109.7,206.3 L109.7,189.0 M109.8,206.3 L109.8,228.1 M110.0,206.3 L110.0,271.3 M110.1,206.3 L110.1,189.8
+		M110.2,206.3 L110.2,173.0 M110.3,206.3 L110.3,203.2 M110.4,206.3 L110.4,236.4 M110.6,206.3 L110.6,242.8
+		M110.7,206.3 L110.7,172.3 M110.8,206.3 L110.8,197.6 M110.9,206.3 L110.9,237.6 M111.1,206.3 L111.1,190.8
+		M111.2,206.3 L111.2,194.5 M111.3,206.3 L111.3,193.5 M111.4,206.3 L111.4,241.7 M111.6,206.3 L111.6,220.7
+		M111.7,206.3 L111.7,245.7  '/>	<path stroke='rgb(128, 128, 128)'  d='M111.8,206.3 L111.8,176.7 M111.9,206.3 L111.9,208.3 M112.0,206.3 L112.0,205.8 M112.2,206.3 L112.2,235.9
+		M112.3,206.3 L112.3,199.5 M112.4,206.3 L112.4,232.4 M112.5,206.3 L112.5,242.5 M112.7,206.3 L112.7,214.7
+		M112.8,206.3 L112.8,191.5 M112.9,206.3 L112.9,204.2 M113.0,206.3 L113.0,216.3 M113.2,206.3 L113.2,145.0
+		M113.3,206.3 L113.3,199.0 M113.4,206.3 L113.4,232.3 M113.5,206.3 L113.5,187.0 M113.6,206.3 L113.6,213.0
+		M113.8,206.3 L113.8,232.4 M113.9,206.3 L113.9,206.8 M114.0,206.3 L114.0,217.8 M114.1,206.3 L114.1,217.8
+		M114.3,206.3 L114.3,201.0 M114.4,206.3 L114.4,201.5 M114.5,206.3 L114.5,278.3 M114.6,206.3 L114.6,195.6
+		M114.8,206.3 L114.8,215.9 M114.9,206.3 L114.9,189.8 M115.0,206.3 L115.0,232.9 M115.1,206.3 L115.1,189.2
+		M115.2,206.3 L115.2,224.4 M115.4,206.3 L115.4,213.8 M115.5,206.3 L115.5,208.4 M115.6,206.3 L115.6,190.2
+		M115.7,206.3 L115.7,199.3 M115.9,206.3 L115.9,174.9 M116.0,206.3 L116.0,199.4 M116.1,206.3 L116.1,168.8
+		M116.2,206.3 L116.2,230.0 M116.4,206.3 L116.4,212.6 M116.5,206.3 L116.5,226.4 M116.6,206.3 L116.6,161.9
+		M116.7,206.3 L116.7,235.3 M116.8,206.3 L116.8,207.3 M117.0,206.3 L117.0,194.6 M117.1,206.3 L117.1,171.6
+		M117.2,206.3 L117.2,231.5 M117.3,206.3 L117.3,149.2 M117.5,206.3 L117.5,214.6 M117.6,206.3 L117.6,205.7
+		M117.7,206.3 L117.7,218.8 M117.8,206.3 L117.8,207.8 M117.9,206.3 L117.9,275.3 M118.1,206.3 L118.1,260.2
+		M118.2,206.3 L118.2,207.3 M118.3,206.3 L118.3,194.5 M118.4,206.3 L118.4,184.9 M118.6,206.3 L118.6,199.9
+		M118.7,206.3 L118.7,168.1 M118.8,206.3 L118.8,216.8 M118.9,206.3 L118.9,130.2 M119.1,206.3 L119.1,224.5
+		M119.2,206.3 L119.2,232.5 M119.3,206.3 L119.3,217.3 M119.4,206.3 L119.4,210.5 M119.5,206.3 L119.5,215.8
+		M119.7,206.3 L119.7,202.0 M119.8,206.3 L119.8,201.5 M119.9,206.3 L119.9,195.2 M120.0,206.3 L120.0,259.2
+		M120.2,206.3 L120.2,215.3 M120.3,206.3 L120.3,213.7 M120.4,206.3 L120.4,189.2 M120.5,206.3 L120.5,211.6
+		M120.7,206.3 L120.7,194.0 M120.8,206.3 L120.8,249.5 M120.9,206.3 L120.9,211.6 M121.0,206.3 L121.0,270.0
+		M121.1,206.3 L121.1,226.4 M121.3,206.3 L121.3,187.7 M121.4,206.3 L121.4,222.6 M121.5,206.3 L121.5,225.4
+		M121.6,206.3 L121.6,187.1 M121.8,206.3 L121.8,159.5 M121.9,206.3 L121.9,222.0 M122.0,206.3 L122.0,199.2
+		M122.1,206.3 L122.1,194.4 M122.3,206.3 L122.3,192.2 M122.4,206.3 L122.4,188.5 M122.5,206.3 L122.5,209.0
+		M122.6,206.3 L122.6,231.6 M122.7,206.3 L122.7,193.9 M122.9,206.3 L122.9,213.3 M123.0,206.3 L123.0,216.0
+		M123.1,206.3 L123.1,177.7 M123.2,206.3 L123.2,236.4 M123.4,206.3 L123.4,214.9 M123.5,206.3 L123.5,169.1
+		M123.6,206.3 L123.6,243.0 M123.7,206.3 L123.7,232.3 M123.9,206.3 L123.9,198.1 M124.0,206.3 L124.0,188.4
+		M124.1,206.3 L124.1,227.4 M124.2,206.3 L124.2,184.0 M124.3,206.3 L124.3,192.8 M124.5,206.3 L124.5,182.0
+		M124.6,206.3 L124.6,166.7 M124.7,206.3 L124.7,258.8 M124.8,206.3 L124.8,195.5 M125.0,206.3 L125.0,203.6
+		M125.1,206.3 L125.1,204.1 M125.2,206.3 L125.2,175.2 M125.3,206.3 M125.4,206.3 L125.4,208.9 M125.6,206.3
+		L125.6,201.5 M125.7,206.3 L125.7,198.8 M125.8,206.3 L125.8,218.5 M125.9,206.3 L125.9,234.1 M126.1,206.3
+		L126.1,203.1 M126.2,206.3 L126.2,208.4 M126.3,206.3 L126.3,228.3 M126.4,206.3 L126.4,219.2 M126.6,206.3
+		L126.6,199.8 M126.7,206.3 L126.7,158.5 M126.8,206.3 L126.8,213.8 M126.9,206.3 L126.9,195.6 M127.0,206.3
+		L127.0,223.4 M127.2,206.3 L127.2,199.3 M127.3,206.3 L127.3,233.6 M127.4,206.3 L127.4,171.4 M127.5,206.3
+		L127.5,206.8 M127.7,206.3 L127.7,192.9 M127.8,206.3 L127.8,225.5 M127.9,206.3 L127.9,202.0 M128.0,206.3
+		L128.0,196.7 M128.2,206.3 L128.2,167.0 M128.3,206.3 L128.3,202.0 M128.4,206.3 L128.4,198.3 M128.5,206.3
+		L128.5,216.8 M128.6,206.3 L128.6,212.1 M128.8,206.3 L128.8,188.3 M128.9,206.3 L128.9,174.7 M129.0,206.3
+		L129.0,186.9 M129.1,206.3 L129.1,196.4 M129.3,206.3 L129.3,220.9 M129.4,206.3 L129.4,180.2 M129.5,206.3
+		L129.5,221.4 M129.6,206.3 L129.6,134.9 M129.8,206.3 M129.9,206.3 L129.9,214.5 M130.0,206.3 L130.0,256.4
+		M130.1,206.3 L130.1,189.2 M130.2,206.3 L130.2,180.5 M130.4,206.3 L130.4,215.5 M130.5,206.3 L130.5,255.5
+		M130.6,206.3 L130.6,159.6 M130.7,206.3 L130.7,203.2 M130.9,206.3 L130.9,157.5 M131.0,206.3 L131.0,201.7
+		M131.1,206.3 L131.1,218.0 M131.2,206.3 L131.2,175.7 M131.4,206.3 L131.4,229.2 M131.5,206.3 L131.5,207.8
+		M131.6,206.3 L131.6,207.3 M131.7,206.3 L131.7,164.6 M131.8,206.3 L131.8,169.0 M132.0,206.3 L132.0,195.2
+		M132.1,206.3 L132.1,238.5 M132.2,206.3 L132.2,180.1 M132.3,206.3 L132.3,184.7 M132.5,206.3 L132.5,219.8
+		M132.6,206.3 L132.6,173.8 M132.7,206.3 L132.7,213.7 M132.8,206.3 L132.8,210.3 M132.9,206.3 L132.9,188.4
+		M133.1,206.3 L133.1,216.7 M133.2,206.3 L133.2,221.2 M133.3,206.3 L133.3,188.8 M133.4,206.3 L133.4,213.7
+		M133.6,206.3 L133.6,170.5 M133.7,206.3 L133.7,180.1 M133.8,206.3 L133.8,170.5 M133.9,206.3 L133.9,174.6
+		M134.1,206.3 L134.1,169.1 M134.2,206.3 L134.2,208.2 M134.3,206.3 L134.3,164.1 M134.4,206.3 L134.4,198.6
+		M134.5,206.3 L134.5,188.2 M134.7,206.3 L134.7,228.1 M134.8,206.3 L134.8,223.5 M134.9,206.3 L134.9,222.6
+		M135.0,206.3 L135.0,218.8 M135.2,206.3 L135.2,226.5 M135.3,206.3 L135.3,137.2 M135.4,206.3 L135.4,175.4
+		M135.5,206.3 L135.5,233.3 M135.7,206.3 L135.7,195.3 M135.8,206.3 L135.8,208.2 M135.9,206.3 L135.9,135.1
+		M136.0,206.3 L136.0,195.5 M136.1,206.3 L136.1,198.8 M136.3,206.3 L136.3,205.3 M136.4,206.3 L136.4,189.1
+		M136.5,206.3 L136.5,235.6 M136.6,206.3 L136.6,304.0 M136.8,206.3 L136.8,158.8 M136.9,206.3 L136.9,181.3
+		M137.0,206.3 L137.0,275.8 M137.1,206.3 L137.1,236.9 M137.3,206.3 L137.3,188.1 M137.4,206.3 L137.4,241.8
+		M137.5,206.3 L137.5,173.6 M137.6,206.3 L137.6,192.4 M137.7,206.3 L137.7,233.1 M137.9,206.3 L137.9,284.1
+		M138.0,206.3 L138.0,160.7 M138.1,206.3 L138.1,247.5 M138.2,206.3 L138.2,183.9 M138.4,206.3 L138.4,165.7
+		M138.5,206.3 L138.5,194.3 M138.6,206.3 L138.6,202.9 M138.7,206.3 L138.7,198.6 M138.9,206.3 L138.9,205.3
+		M139.0,206.3 L139.0,239.9 M139.1,206.3 L139.1,195.7 M139.2,206.3 L139.2,203.4 M139.3,206.3 L139.3,252.1
+		M139.5,206.3 L139.5,197.5 M139.6,206.3 L139.6,204.8 M139.7,206.3 L139.7,153.8 M139.8,206.3 L139.8,220.7
+		M140.0,206.3 L140.0,189.5 M140.1,206.3 L140.1,215.4 M140.2,206.3 L140.2,191.9 M140.3,206.3 L140.3,151.2
+		M140.5,206.3 L140.5,230.9 M140.6,206.3 L140.6,196.8 M140.7,206.3 L140.7,264.4 M140.8,206.3 L140.8,217.3
+		M140.9,206.3 L140.9,224.6 M141.1,206.3 L141.1,206.8 M141.2,206.3 L141.2,175.5 M141.3,206.3 L141.3,248.7
+		M141.4,206.3 L141.4,212.6 M141.6,206.3 L141.6,206.8 M141.7,206.3 L141.7,180.7 M141.8,206.3 L141.8,166.0
+		M141.9,206.3 L141.9,226.4 M142.0,206.3 L142.0,219.7 M142.2,206.3 L142.2,189.0 M142.3,206.3 L142.3,230.3
+		M142.4,206.3 L142.4,200.5 M142.5,206.3 L142.5,196.7 M142.7,206.3 L142.7,173.7 M142.8,206.3 L142.8,213.0
+		M142.9,206.3 L142.9,206.8 M143.0,206.3 L143.0,197.2 M143.2,206.3 L143.2,240.3 M143.3,206.3 L143.3,194.3
+		M143.4,206.3 L143.4,229.8  '/>	<path stroke='rgb(128, 128, 128)'  d='M143.5,206.3 L143.5,143.6 M143.6,206.3 L143.6,225.8 M143.8,206.3 L143.8,202.0 M143.9,206.3 L143.9,208.2
+		M144.0,206.3 L144.0,235.5 M144.1,206.3 L144.1,201.0 M144.3,206.3 L144.3,253.5 M144.4,206.3 L144.4,207.2
+		M144.5,206.3 L144.5,195.6 M144.6,206.3 L144.6,183.1 M144.8,206.3 L144.8,216.4 M144.9,206.3 L144.9,202.9
+		M145.0,206.3 L145.0,209.2 M145.1,206.3 L145.1,170.3 M145.2,206.3 L145.2,203.4 M145.4,206.3 L145.4,207.2
+		M145.5,206.3 L145.5,184.8 M145.6,206.3 L145.6,171.7 M145.7,206.3 L145.7,200.1 M145.9,206.3 L145.9,196.8
+		M146.0,206.3 L146.0,192.2 M146.1,206.3 L146.1,175.9 M146.2,206.3 L146.2,187.7 M146.4,206.3 L146.4,221.2
+		M146.5,206.3 L146.5,198.8 M146.6,206.3 L146.6,230.1 M146.7,206.3 L146.7,210.0 M146.8,206.3 L146.8,190.4
+		M147.0,206.3 L147.0,210.5 M147.1,206.3 L147.1,229.7 M147.2,206.3 L147.2,213.3 M147.3,206.3 L147.3,210.5
+		M147.5,206.3 L147.5,222.8 M147.6,206.3 L147.6,235.6 M147.7,206.3 L147.7,200.1 M147.8,206.3 L147.8,216.7
+		M148.0,206.3 L148.0,185.4 M148.1,206.3 L148.1,207.2 M148.2,206.3 L148.2,192.1 M148.3,206.3 L148.3,214.3
+		M148.4,206.3 L148.4,186.9 M148.6,206.3 L148.6,203.0 M148.7,206.3 L148.7,164.1 M148.8,206.3 L148.8,203.9
+		M148.9,206.3 L148.9,210.9 M149.1,206.3 L149.1,210.0 M149.2,206.3 L149.2,157.1 M149.3,206.3 L149.3,188.8
+		M149.4,206.3 L149.4,207.2 M149.5,206.3 L149.5,178.7 M149.7,206.3 L149.7,216.3 M149.8,206.3 L149.8,203.5
+		M149.9,206.3 L149.9,205.4 M150.0,206.3 L150.0,211.8 M150.2,206.3 L150.2,186.6 M150.3,206.3 L150.3,204.9
+		M150.4,206.3 L150.4,175.3 M150.5,206.3 L150.5,174.6 M150.7,206.3 L150.7,189.2 M150.8,206.3 L150.8,197.7
+		M150.9,206.3 L150.9,209.9 M151.0,206.3 L151.0,264.5 M151.1,206.3 L151.1,181.4 M151.3,206.3 L151.3,180.6
+		M151.4,206.3 L151.4,234.2 M151.5,206.3 L151.5,171.6 M151.6,206.3 L151.6,207.6 M151.8,206.3 L151.8,162.1
+		M151.9,206.3 L151.9,222.3 M152.0,206.3 L152.0,197.4 M152.1,206.3 L152.1,215.6 M152.3,206.3 L152.3,175.6
+		M152.4,206.3 L152.4,185.5 M152.5,206.3 L152.5,197.9 M152.6,206.3 L152.6,190.9 M152.7,206.3 M152.9,206.3
+		L152.9,187.9 M153.0,206.3 L153.0,171.4 M153.1,206.3 L153.1,200.6 M153.2,206.3 L153.2,221.0 M153.4,206.3
+		L153.4,201.1 M153.5,206.3 L153.5,218.5 M153.6,206.3 L153.6,226.8 M153.7,206.3 L153.7,203.6 M153.9,206.3
+		L153.9,158.0 M154.0,206.3 L154.0,236.2 M154.1,206.3 L154.1,193.2 M154.2,206.3 L154.2,207.1 M154.3,206.3
+		L154.3,243.8 M154.5,206.3 L154.5,211.5 M154.6,206.3 L154.6,212.4 M154.7,206.3 L154.7,154.3 M154.8,206.3
+		L154.8,225.8 M155.0,206.3 L155.0,232.1 M155.1,206.3 L155.1,227.8 M155.2,206.3 L155.2,175.1 M155.3,206.3
+		L155.3,177.1 M155.5,206.3 L155.5,231.6 M155.6,206.3 L155.6,194.9 M155.7,206.3 L155.7,217.2 M155.8,206.3
+		L155.8,195.8 M155.9,206.3 L155.9,215.9 M156.1,206.3 L156.1,191.4 M156.2,206.3 L156.2,170.3 M156.3,206.3
+		L156.3,210.2 M156.4,206.3 L156.4,164.5 M156.6,206.3 L156.6,206.7 M156.7,206.3 L156.7,190.4 M156.8,206.3
+		L156.8,190.5 M156.9,206.3 L156.9,212.2 M157.1,206.3 L157.1,219.1 M157.2,206.3 L157.2,290.4 M157.3,206.3
+		L157.3,234.2 M157.4,206.3 L157.4,252.5 M157.5,206.3 L157.5,209.4 M157.7,206.3 L157.7,236.0 M157.8,206.3
+		L157.8,184.1 M157.9,206.3 L157.9,243.2 M158.0,206.3 L158.0,155.6 M158.2,206.3 L158.2,202.7 M158.3,206.3
+		L158.3,192.6 M158.4,206.3 L158.4,207.2 M158.5,206.3 L158.5,163.7 M158.6,206.3 L158.6,155.5 M158.8,206.3
+		L158.8,209.3 M158.9,206.3 L158.9,263.2 M159.0,206.3 L159.0,218.1 M159.1,206.3 L159.1,207.6 M159.3,206.3
+		L159.3,238.8 M159.4,206.3 L159.4,180.3 M159.5,206.3 L159.5,184.4 M159.6,206.3 L159.6,193.2 M159.8,206.3
+		L159.8,224.2 M159.9,206.3 L159.9,195.3 M160.0,206.3 L160.0,190.1 M160.1,206.3 L160.1,164.7 M160.2,206.3
+		L160.2,217.5 M160.4,206.3 L160.4,207.6 M160.5,206.3 L160.5,213.2 M160.6,206.3 L160.6,160.6 M160.7,206.3
+		L160.7,210.1 M160.9,206.3 L160.9,179.3 M161.0,206.3 L161.0,207.6 M161.1,206.3 L161.1,223.8 M161.2,206.3
+		L161.2,169.6 M161.4,206.3 L161.4,160.2 M161.5,206.3 L161.5,184.4 M161.6,206.3 L161.6,207.1 M161.7,206.3
+		L161.7,184.1 M161.8,206.3 L161.8,148.6 M162.0,206.3 L162.0,225.7 M162.1,206.3 L162.1,160.6 M162.2,206.3
+		L162.2,202.6 M162.3,206.3 L162.3,185.8 M162.5,206.3 L162.5,217.7 M162.6,206.3 L162.6,212.4 M162.7,206.3
+		L162.7,253.1 M162.8,206.3 L162.8,121.1 M163.0,206.3 L163.0,186.0 M163.1,206.3 L163.1,168.8 M163.2,206.3
+		L163.2,244.1 M163.3,206.3 L163.3,183.7 M163.4,206.3 L163.4,150.3 M163.6,206.3 L163.6,191.6 M163.7,206.3
+		L163.7,230.9 M163.8,206.3 L163.8,226.2 M163.9,206.3 L163.9,163.3 M164.1,206.3 L164.1,239.3 M164.2,206.3
+		L164.2,219.5 M164.3,206.3 L164.3,207.9 M164.4,206.3 L164.4,247.7 M164.6,206.3 L164.6,127.0 M164.7,206.3
+		L164.7,264.6 M164.8,206.3 L164.8,189.0 M164.9,206.3 L164.9,232.4 M165.0,206.3 L165.0,174.2 M165.2,206.3
+		L165.2,203.9 M165.3,206.3 L165.3,163.3 M165.4,206.3 L165.4,226.5 M165.5,206.3 L165.5,214.2 M165.7,206.3
+		L165.7,250.7 M165.8,206.3 L165.8,197.4 M165.9,206.3 L165.9,257.6 M166.0,206.3 L166.0,219.7 M166.1,206.3
+		L166.1,223.4 M166.3,206.3 L166.3,194.0 M166.4,206.3 L166.4,252.6 M166.5,206.3 L166.5,209.2 M166.6,206.3
+		L166.6,164.8 M166.8,206.3 L166.8,188.7 M166.9,206.3 L166.9,220.9 M167.0,206.3 L167.0,223.4 M167.1,206.3
+		L167.1,204.2 M167.3,206.3 L167.3,276.8 M167.4,206.3 L167.4,213.3 M167.5,206.3 L167.5,190.5 M167.6,206.3
+		L167.6,186.4 M167.7,206.3 L167.7,238.2 M167.9,206.3 L167.9,218.8 M168.0,206.3 L168.0,244.8 M168.1,206.3
+		L168.1,196.6 M168.2,206.3 L168.2,205.9 M168.4,206.3 L168.4,174.9 M168.5,206.3 L168.5,188.0 M168.6,206.3
+		L168.6,207.5 M168.7,206.3 L168.7,143.6 M168.9,206.3 L168.9,212.8 M169.0,206.3 L169.0,188.7 M169.1,206.3
+		L169.1,209.5 M169.2,206.3 L169.2,221.4 M169.3,206.3 L169.3,249.6 M169.5,206.3 L169.5,255.0 M169.6,206.3
+		L169.6,190.0 M169.7,206.3 L169.7,177.2 M169.8,206.3 L169.8,206.7 M170.0,206.3 L170.0,207.5 M170.1,206.3
+		L170.1,195.1 M170.2,206.3 L170.2,239.1 M170.3,206.3 L170.3,178.9 M170.5,206.3 L170.5,227.9 M170.6,206.3
+		L170.6,205.9 M170.7,206.3 L170.7,232.6 M170.8,206.3 L170.8,202.5 M170.9,206.3 L170.9,249.9 M171.1,206.3
+		L171.1,211.8 M171.2,206.3 L171.2,213.0 M171.3,206.3 L171.3,289.9 M171.4,206.3 L171.4,224.8 M171.6,206.3
+		L171.6,207.1 M171.7,206.3 L171.7,204.5 M171.8,206.3 L171.8,209.3 M171.9,206.3 L171.9,210.6 M172.1,206.3
+		L172.1,158.0 M172.2,206.3 L172.2,213.1 M172.3,206.3 L172.3,273.3 M172.4,206.3 L172.4,203.7 M172.5,206.3
+		L172.5,156.1 M172.7,206.3 L172.7,129.9 M172.8,206.3 L172.8,224.5 M172.9,206.3 L172.9,140.0 M173.0,206.3
+		L173.0,218.0 M173.2,206.3 L173.2,204.6 M173.3,206.3 L173.3,169.0 M173.4,206.3 L173.4,208.8 M173.5,206.3
+		L173.5,254.0 M173.6,206.3 L173.6,164.8 M173.8,206.3 L173.8,215.9 M173.9,206.3 L173.9,145.6 M174.0,206.3
+		L174.0,170.1 M174.1,206.3 L174.1,211.6 M174.3,206.3 L174.3,200.5 M174.4,206.3 L174.4,204.2 M174.5,206.3
+		L174.5,212.4 M174.6,206.3 L174.6,159.7 M174.8,206.3 L174.8,172.3 M174.9,206.3 L174.9,190.6 M175.0,206.3
+		L175.0,212.3  '/>	<path stroke='rgb(128, 128, 128)'  d='M175.1,206.3 L175.1,252.8 M175.2,206.3 L175.2,203.0 M175.4,206.3 L175.4,128.1 M175.5,206.3 L175.5,189.5
+		M175.6,206.3 L175.6,241.4 M175.7,206.3 L175.7,182.3 M175.9,206.3 L175.9,243.5 M176.0,206.3 L176.0,198.2
+		M176.1,206.3 L176.1,246.6 M176.2,206.3 L176.2,217.6 M176.4,206.3 L176.4,175.5 M176.5,206.3 L176.5,219.6
+		M176.6,206.3 L176.6,195.0 M176.7,206.3 L176.7,146.5 M176.8,206.3 L176.8,205.5 M177.0,206.3 L177.0,217.4
+		M177.1,206.3 L177.1,226.7 M177.2,206.3 L177.2,232.0 M177.3,206.3 L177.3,209.9 M177.5,206.3 L177.5,223.2
+		M177.6,206.3 L177.6,223.3 M177.7,206.3 L177.7,253.6 M177.8,206.3 L177.8,194.4 M178.0,206.3 L178.0,226.4
+		M178.1,206.3 L178.1,221.1 M178.2,206.3 L178.2,156.6 M178.3,206.3 L178.3,221.0 M178.4,206.3 L178.4,200.1
+		M178.6,206.3 L178.6,157.1 M178.7,206.3 L178.7,165.6 M178.8,206.3 L178.8,187.1 M178.9,206.3 L178.9,217.9
+		M179.1,206.3 L179.1,120.2 M179.2,206.3 L179.2,234.3 M179.3,206.3 L179.3,200.3 M179.4,206.3 L179.4,203.5
+		M179.6,206.3 L179.6,265.9 M179.7,206.3 L179.7,195.5 M179.8,206.3 L179.8,154.7 M179.9,206.3 L179.9,211.8
+		M180.0,206.3 L180.0,175.6 M180.2,206.3 L180.2,212.6 M180.3,206.3 L180.3,157.4 M180.4,206.3 L180.4,198.5
+		M180.5,206.3 L180.5,217.5 M180.7,206.3 L180.7,175.2 M180.8,206.3 L180.8,183.9 M180.9,206.3 L180.9,196.3
+		M181.0,206.3 L181.0,221.7 M181.2,206.3 L181.2,201.3 M181.3,206.3 L181.3,186.7 M181.4,206.3 L181.4,195.2
+		M181.5,206.3 L181.5,194.0 M181.6,206.3 L181.6,181.2 M181.8,206.3 L181.8,199.8 M181.9,206.3 L181.9,217.7
+		M182.0,206.3 L182.0,198.7 M182.1,206.3 L182.1,213.1 M182.3,206.3 L182.3,185.4 M182.4,206.3 L182.4,204.8
+		M182.5,206.3 L182.5,215.4 M182.6,206.3 L182.6,181.7 M182.7,206.3 L182.7,184.8 M182.9,206.3 L182.9,189.4
+		M183.0,206.3 L183.0,217.9 M183.1,206.3 L183.1,195.4 M183.2,206.3 L183.2,173.9 M183.4,206.3 L183.4,187.8
+		M183.5,206.3 L183.5,244.5 M183.6,206.3 L183.6,152.5 M183.7,206.3 L183.7,190.1 M183.9,206.3 L183.9,235.4
+		M184.0,206.3 L184.0,193.0 M184.1,206.3 L184.1,252.2 M184.2,206.3 L184.2,227.9 M184.3,206.3 L184.3,279.3
+		M184.5,206.3 L184.5,221.9 M184.6,206.3 L184.6,116.9 M184.7,206.3 L184.7,189.5 M184.8,206.3 L184.8,169.6
+		M185.0,206.3 L185.0,264.3 M185.1,206.3 L185.1,247.6 M185.2,206.3 L185.2,140.0 M185.3,206.3 L185.3,290.0
+		M185.5,206.3 L185.5,211.6 M185.6,206.3 L185.6,180.9 M185.7,206.3 L185.7,219.5 M185.8,206.3 L185.8,166.4
+		M185.9,206.3 L185.9,205.9 M186.1,206.3 M186.2,206.3 L186.2,147.4 M186.3,206.3 L186.3,209.2 M186.4,206.3
+		L186.4,212.2 M186.6,206.3 L186.6,152.8 M186.7,206.3 L186.7,214.3 M186.8,206.3 L186.8,229.5 M186.9,206.3
+		L186.9,197.8 M187.1,206.3 L187.1,172.8 M187.2,206.3 L187.2,261.1 M187.3,206.3 L187.3,196.3 M187.4,206.3
+		L187.4,280.8 M187.5,206.3 L187.5,190.9 M187.7,206.3 L187.7,167.5 M187.8,206.3 L187.8,275.1 M187.9,206.3
+		L187.9,228.9 M188.0,206.3 L188.0,186.3 M188.2,206.3 L188.2,216.1 M188.3,206.3 L188.3,299.3 M188.4,206.3
+		L188.4,217.5 M188.5,206.3 L188.5,203.2 M188.7,206.3 L188.7,140.0 M188.8,206.3 L188.8,196.4 M188.9,206.3
+		L188.9,233.7 M189.0,206.3 L189.0,241.5 M189.1,206.3 L189.1,162.2 M189.3,206.3 L189.3,255.7 M189.4,206.3
+		L189.4,187.1 M189.5,206.3 M189.6,206.3 L189.6,220.9 M189.8,206.3 L189.8,145.5 M189.9,206.3 L189.9,244.8
+		M190.0,206.3 L190.0,184.1 M190.1,206.3 L190.1,205.9 M190.2,206.3 L190.2,294.7 M190.4,206.3 L190.4,198.9
+		M190.5,206.3 L190.5,207.8 M190.6,206.3 L190.6,195.8 M190.7,206.3 L190.7,197.4 M190.9,206.3 L190.9,154.8
+		M191.0,206.3 L191.0,189.1 M191.1,206.3 L191.1,294.3 M191.2,206.3 L191.2,257.4 M191.4,206.3 L191.4,153.6
+		M191.5,206.3 L191.5,194.3 M191.6,206.3 L191.6,239.6 M191.7,206.3 L191.7,200.4 M191.8,206.3 L191.8,216.8
+		M192.0,206.3 L192.0,257.6 M192.1,206.3 L192.1,198.4 M192.2,206.3 L192.2,200.0 M192.3,206.3 L192.3,198.0
+		M192.5,206.3 L192.5,203.1 M192.6,206.3 L192.6,269.0 M192.7,206.3 L192.7,215.0 M192.8,206.3 L192.8,166.2
+		M193.0,206.3 L193.0,237.9 M193.1,206.3 L193.1,199.9 M193.2,206.3 L193.2,180.9 M193.3,206.3 L193.3,240.3
+		M193.4,206.3 L193.4,157.2 M193.6,206.3 L193.6,198.4 M193.7,206.3 L193.7,225.6 M193.8,206.3 L193.8,144.4
+		M193.9,206.3 L193.9,174.1 M194.1,206.3 L194.1,245.1 M194.2,206.3 L194.2,278.9 M194.3,206.3 L194.3,224.5
+		M194.4,206.3 L194.4,197.9 M194.6,206.3 L194.6,189.2 M194.7,206.3 L194.7,239.2 M194.8,206.3 L194.8,182.8
+		M194.9,206.3 L194.9,157.4 M195.0,206.3 L195.0,231.8 M195.2,206.3 L195.2,178.4 M195.3,206.3 L195.3,227.1
+		M195.4,206.3 L195.4,180.8 M195.5,206.3 L195.5,217.6 M195.7,206.3 L195.7,167.6 M195.8,206.3 L195.8,200.4
+		M195.9,206.3 L195.9,144.9 M196.0,206.3 L196.0,228.2 M196.2,206.3 L196.2,212.1 M196.3,206.3 L196.3,193.9
+		M196.4,206.3 L196.4,208.2 M196.5,206.3 L196.5,208.2 M196.6,206.3 L196.6,178.2 M196.8,206.3 L196.8,198.2
+		M196.9,206.3 L196.9,225.8 M197.0,206.3 L197.0,291.1 M197.1,206.3 L197.1,182.5 M197.3,206.3 L197.3,243.0
+		M197.4,206.3 L197.4,185.9 M197.5,206.3 L197.5,167.8 M197.6,206.3 L197.6,265.5 M197.7,206.3 L197.7,184.8
+		M197.9,206.3 L197.9,176.7 M198.0,206.3 L198.0,217.5 M198.1,206.3 L198.1,211.7 M198.2,206.3 L198.2,211.3
+		M198.4,206.3 L198.4,172.1 M198.5,206.3 L198.5,213.6 M198.6,206.3 L198.6,193.5 M198.7,206.3 L198.7,247.0
+		M198.9,206.3 L198.9,169.8 M199.0,206.3 L199.0,207.4 M199.1,206.3 L199.1,147.9 M199.2,206.3 L199.2,216.6
+		M199.3,206.3 L199.3,211.6 M199.5,206.3 L199.5,173.4 M199.6,206.3 L199.6,197.5 M199.7,206.3 L199.7,198.3
+		M199.8,206.3 L199.8,209.7 M200.0,206.3 L200.0,232.5 M200.1,206.3 L200.1,187.6 M200.2,206.3 L200.2,216.9
+		M200.3,206.3 L200.3,171.0 M200.5,206.3 L200.5,208.9 M200.6,206.3 L200.6,250.3 M200.7,206.3 L200.7,225.4
+		M200.8,206.3 L200.8,214.7 M200.9,206.3 L200.9,267.7 M201.1,206.3 L201.1,190.0 M201.2,206.3 L201.2,238.6
+		M201.3,206.3 L201.3,206.7 M201.4,206.3 L201.4,211.7 M201.6,206.3 L201.6,217.6 M201.7,206.3 L201.7,203.1
+		M201.8,206.3 L201.8,192.6 M201.9,206.3 L201.9,204.3 M202.1,206.3 L202.1,205.9 M202.2,206.3 L202.2,119.7
+		M202.3,206.3 L202.3,211.6 M202.4,206.3 L202.4,220.1 M202.5,206.3 L202.5,211.7 M202.7,206.3 L202.7,195.5
+		M202.8,206.3 L202.8,157.3 M202.9,206.3 L202.9,213.9 M203.0,206.3 M203.2,206.3 L203.2,214.7 M203.3,206.3
+		L203.3,192.9 M203.4,206.3 L203.4,229.5 M203.5,206.3 L203.5,273.3 M203.7,206.3 L203.7,226.1 M203.8,206.3
+		L203.8,205.9 M203.9,206.3 L203.9,198.1 M204.0,206.3 L204.0,241.0 M204.1,206.3 L204.1,194.1 M204.3,206.3
+		L204.3,155.4 M204.4,206.3 L204.4,198.9 M204.5,206.3 L204.5,215.2 M204.6,206.3 L204.6,250.5 M204.8,206.3
+		L204.8,203.9 M204.9,206.3 L204.9,190.7 M205.0,206.3 L205.0,175.7 M205.1,206.3 L205.1,184.7 M205.3,206.3
+		L205.3,195.1 M205.4,206.3 L205.4,209.3 M205.5,206.3 L205.5,207.0 M205.6,206.3 L205.6,247.1 M205.7,206.3
+		L205.7,193.1 M205.9,206.3 L205.9,210.5 M206.0,206.3 L206.0,209.4 M206.1,206.3 L206.1,144.8 M206.2,206.3
+		L206.2,230.0 M206.4,206.3 L206.4,204.4 M206.5,206.3 L206.5,204.0 M206.6,206.3 L206.6,198.2 M206.7,206.3
+		L206.7,195.6  '/>	<path stroke='rgb(128, 128, 128)'  d='M206.8,206.3 L206.8,203.2 M207.0,206.3 L207.0,168.3 M207.1,206.3 L207.1,215.4 M207.2,206.3 L207.2,252.4
+		M207.3,206.3 L207.3,197.5 M207.5,206.3 L207.5,220.1 M207.6,206.3 L207.6,197.8 M207.7,206.3 L207.7,162.9
+		M207.8,206.3 L207.8,217.3 M208.0,206.3 L208.0,229.9 M208.1,206.3 L208.1,198.3 M208.2,206.3 L208.2,190.3
+		M208.3,206.3 L208.3,171.1 M208.4,206.3 L208.4,201.0 M208.6,206.3 L208.6,197.2 M208.7,206.3 L208.7,182.6
+		M208.8,206.3 L208.8,193.6 M208.9,206.3 L208.9,178.4 M209.1,206.3 L209.1,165.3 M209.2,206.3 L209.2,224.7
+		M209.3,206.3 L209.3,224.4 M209.4,206.3 L209.4,189.3 M209.6,206.3 L209.6,191.2 M209.7,206.3 L209.7,219.5
+		M209.8,206.3 L209.8,209.2 M209.9,206.3 L209.9,175.7 M210.0,206.3 L210.0,189.1 M210.2,206.3 L210.2,179.7
+		M210.3,206.3 L210.3,216.5 M210.4,206.3 L210.4,212.5 M210.5,206.3 L210.5,209.6 M210.7,206.3 L210.7,202.3
+		M210.8,206.3 L210.8,177.2 M210.9,206.3 L210.9,219.3 M211.0,206.3 L211.0,202.6 M211.2,206.3 L211.2,178.8
+		M211.3,206.3 L211.3,232.0 M211.4,206.3 L211.4,185.6 M211.5,206.3 L211.5,196.5 M211.6,206.3 L211.6,191.1
+		M211.8,206.3 L211.8,170.5 M211.9,206.3 L211.9,174.6 M212.0,206.3 L212.0,199.2 M212.1,206.3 L212.1,213.0
+		M212.3,206.3 L212.3,203.8 M212.4,206.3 L212.4,184.0 M212.5,206.3 L212.5,234.2 M212.6,206.3 L212.6,139.0
+		M212.8,206.3 L212.8,225.2 M212.9,206.3 L212.9,200.0 M213.0,206.3 L213.0,235.8 M213.1,206.3 L213.1,216.2
+		M213.2,206.3 L213.2,231.8 M213.4,206.3 L213.4,180.8 M213.5,206.3 L213.5,211.6 M213.6,206.3 L213.6,168.6
+		M213.7,206.3 L213.7,262.1 M213.9,206.3 L213.9,183.6 M214.0,206.3 L214.0,175.6 M214.1,206.3 L214.1,215.8
+		M214.2,206.3 L214.2,198.9 M214.3,206.3 L214.3,163.2 M214.5,206.3 L214.5,201.4 M214.6,206.3 L214.6,176.1
+		M214.7,206.3 L214.7,207.0 M214.8,206.3 L214.8,208.3 M215.0,206.3 L215.0,195.6 M215.1,206.3 L215.1,234.7
+		M215.2,206.3 L215.2,236.2 M215.3,206.3 L215.3,274.5 M215.5,206.3 L215.5,211.2 M215.6,206.3 L215.6,236.9
+		M215.7,206.3 L215.7,250.0 M215.8,206.3 L215.8,197.3 M215.9,206.3 L215.9,195.1 M216.1,206.3 L216.1,154.9
+		M216.2,206.3 L216.2,219.1 M216.3,206.3 L216.3,244.5 M216.4,206.3 L216.4,222.1 M216.6,206.3 L216.6,221.4
+		M216.7,206.3 L216.7,211.7 M216.8,206.3 L216.8,221.5 M216.9,206.3 L216.9,178.1 M217.1,206.3 L217.1,201.2
+		M217.2,206.3 L217.2,237.4 M217.3,206.3 L217.3,166.5 M217.4,206.3 L217.4,220.0 M217.5,206.3 L217.5,208.4
+		M217.7,206.3 L217.7,207.4 M217.8,206.3 L217.8,203.0 M217.9,206.3 L217.9,213.1 M218.0,206.3 L218.0,225.5
+		M218.2,206.3 L218.2,242.0 M218.3,206.3 L218.3,249.2 M218.4,206.3 L218.4,203.7 M218.5,206.3 L218.5,188.6
+		M218.7,206.3 L218.7,182.1 M218.8,206.3 L218.8,210.3 M218.9,206.3 L218.9,166.9 M219.0,206.3 L219.0,188.2
+		M219.1,206.3 L219.1,203.7 M219.3,206.3 L219.3,192.6 M219.4,206.3 L219.4,207.4 M219.5,206.3 L219.5,207.0
+		M219.6,206.3 L219.6,136.9 M219.8,206.3 L219.8,223.7 M219.9,206.3 L219.9,211.6 M220.0,206.3 L220.0,188.1
+		M220.1,206.3 L220.1,214.1 M220.3,206.3 L220.3,220.2 M220.4,206.3 L220.4,224.5 M220.5,206.3 L220.5,215.6
+		M220.6,206.3 L220.6,159.8 M220.7,206.3 L220.7,215.9 M220.9,206.3 L220.9,159.5 M221.0,206.3 L221.0,189.4
+		M221.1,206.3 L221.1,197.1 M221.2,206.3 L221.2,193.0 M221.4,206.3 L221.4,237.1 M221.5,206.3 L221.5,227.1
+		M221.6,206.3 L221.6,167.5 M221.7,206.3 L221.7,220.7 M221.8,206.3 L221.8,224.6 M222.0,206.3 L222.0,266.0
+		M222.1,206.3 L222.1,233.2 M222.2,206.3 L222.2,241.7 M222.3,206.3 L222.3,222.6 M222.5,206.3 L222.5,199.7
+		M222.6,206.3 L222.6,228.1 M222.7,206.3 L222.7,196.8 M222.8,206.3 L222.8,209.2 M223.0,206.3 L223.0,188.5
+		M223.1,206.3 L223.1,226.6 M223.2,206.3 L223.2,227.5 M223.3,206.3 L223.3,205.2 M223.4,206.3 L223.4,199.7
+		M223.6,206.3 L223.6,214.0 M223.7,206.3 L223.7,180.0 M223.8,206.3 L223.8,188.8 M223.9,206.3 L223.9,225.2
+		M224.1,206.3 L224.1,205.2 M224.2,206.3 L224.2,250.2 M224.3,206.3 L224.3,170.0 M224.4,206.3 L224.4,160.9
+		M224.6,206.3 L224.6,195.1 M224.7,206.3 L224.7,195.5 M224.8,206.3 L224.8,219.6 M224.9,206.3 L224.9,200.1
+		M225.0,206.3 L225.0,234.1 M225.2,206.3 M225.3,206.3 L225.3,230.2 M225.4,206.3 L225.4,213.6 M225.5,206.3
+		L225.5,218.0 M225.7,206.3 L225.7,213.2 M225.8,206.3 L225.8,198.2 M225.9,206.3 L225.9,177.5 M226.0,206.3
+		L226.0,204.8 M226.2,206.3 L226.2,250.4 M226.3,206.3 L226.3,197.5 M226.4,206.3 L226.4,200.4 M226.5,206.3
+		L226.5,232.3 M226.6,206.3 L226.6,253.2 M226.8,206.3 L226.8,227.5 M226.9,206.3 L226.9,201.8 M227.0,206.3
+		L227.0,215.6 M227.1,206.3 L227.1,181.3 M227.3,206.3 L227.3,220.4 M227.4,206.3 L227.4,238.0 M227.5,206.3
+		L227.5,199.5 M227.6,206.3 L227.6,203.3 M227.8,206.3 L227.8,197.7 M227.9,206.3 L227.9,239.2 M228.0,206.3
+		L228.0,183.8 M228.1,206.3 L228.1,243.1 M228.2,206.3 L228.2,270.1 M228.4,206.3 L228.4,247.0 M228.5,206.3
+		L228.5,176.7 M228.6,206.3 L228.6,225.1 M228.7,206.3 L228.7,194.4 M228.9,206.3 L228.9,197.5 M229.0,206.3
+		L229.0,224.7 M229.1,206.3 L229.1,209.3 M229.2,206.3 L229.2,243.0 M229.4,206.3 L229.4,212.9 M229.5,206.3
+		L229.5,239.4 M229.6,206.3 L229.6,170.0 M229.7,206.3 L229.7,214.0 M229.8,206.3 L229.8,136.0 M230.0,206.3
+		L230.0,257.1 M230.1,206.3 L230.1,197.4 M230.2,206.3 L230.2,224.1 M230.3,206.3 L230.3,244.8 M230.5,206.3
+		L230.5,184.8 M230.6,206.3 L230.6,174.5 M230.7,206.3 L230.7,246.3 M230.8,206.3 L230.8,203.5 M230.9,206.3
+		L230.9,197.7 M231.1,206.3 L231.1,266.2 M231.2,206.3 L231.2,223.2 M231.3,206.3 L231.3,198.8 M231.4,206.3
+		L231.4,200.0 M231.6,206.3 L231.6,199.6 M231.7,206.3 L231.7,196.0 M231.8,206.3 L231.8,168.3 M231.9,206.3
+		L231.9,141.6 M232.1,206.3 L232.1,268.2 M232.2,206.3 L232.2,205.5 M232.3,206.3 L232.3,221.9 M232.4,206.3
+		L232.4,193.4 M232.5,206.3 L232.5,223.1 M232.7,206.3 L232.7,159.6 M232.8,206.3 L232.8,200.1 M232.9,206.3
+		L232.9,248.6 M233.0,206.3 L233.0,203.5 M233.2,206.3 L233.2,222.7 M233.3,206.3 L233.3,191.0 M233.4,206.3
+		L233.4,181.4 M233.5,206.3 L233.5,208.6 M233.7,206.3 L233.7,186.5 M233.8,206.3 L233.8,197.0 M233.9,206.3
+		L233.9,153.3 M234.0,206.3 L234.0,186.5 M234.1,206.3 L234.1,210.5 M234.3,206.3 L234.3,216.9 M234.4,206.3
+		L234.4,196.0 M234.5,206.3 L234.5,201.3 M234.6,206.3 L234.6,176.0 M234.8,206.3 L234.8,217.2 M234.9,206.3
+		L234.9,232.8 M235.0,206.3 L235.0,211.2 M235.1,206.3 L235.1,236.1 M235.3,206.3 L235.3,245.1 M235.4,206.3
+		L235.4,211.3 M235.5,206.3 L235.5,183.1 M235.6,206.3 L235.6,203.6 M235.7,206.3 L235.7,191.3 M235.9,206.3
+		L235.9,195.2 M236.0,206.3 L236.0,211.2 M236.1,206.3 L236.1,230.1 M236.2,206.3 L236.2,208.2 M236.4,206.3
+		L236.4,159.1 M236.5,206.3 L236.5,149.1 M236.6,206.3 L236.6,187.5 M236.7,206.3 L236.7,205.5 M236.9,206.3
+		L236.9,235.2 M237.0,206.3 L237.0,227.8 M237.1,206.3 L237.1,210.8 M237.2,206.3 L237.2,200.2 M237.3,206.3
+		L237.3,257.7 M237.5,206.3 L237.5,210.1 M237.6,206.3 L237.6,201.3 M237.7,206.3 L237.7,229.3 M237.8,206.3
+		L237.8,200.9 M238.0,206.3 L238.0,244.5 M238.1,206.3 L238.1,213.6 M238.2,206.3 L238.2,165.3 M238.3,206.3
+		L238.3,235.6  '/>	<path stroke='rgb(128, 128, 128)'  d='M238.4,206.3 L238.4,245.2 M238.6,206.3 L238.6,198.1 M238.7,206.3 L238.7,226.2 M238.8,206.3 L238.8,196.5
+		M238.9,206.3 L238.9,209.4 M239.1,206.3 L239.1,212.9 M239.2,206.3 L239.2,245.6 M239.3,206.3 M239.4,206.3
+		L239.4,179.1 M239.6,206.3 L239.6,130.7 M239.7,206.3 L239.7,228.3 M239.8,206.3 L239.8,228.1 M239.9,206.3
+		L239.9,236.8 M240.0,206.3 L240.0,191.4 M240.2,206.3 L240.2,207.1 M240.3,206.3 L240.3,181.7 M240.4,206.3
+		L240.4,232.4 M240.5,206.3 L240.5,228.2 M240.7,206.3 L240.7,195.7 M240.8,206.3 L240.8,196.1 M240.9,206.3
+		L240.9,233.0 M241.0,206.3 L241.0,195.3 M241.2,206.3 L241.2,155.9 M241.3,206.3 L241.3,225.7 M241.4,206.3
+		L241.4,174.8 M241.5,206.3 L241.5,235.4 M241.6,206.3 L241.6,233.7 M241.8,206.3 L241.8,196.5 M241.9,206.3
+		L241.9,184.4 M242.0,206.3 L242.0,257.2 M242.1,206.3 L242.1,253.8 M242.3,206.3 L242.3,214.6 M242.4,206.3
+		L242.4,216.6 M242.5,206.3 L242.5,211.9 M242.6,206.3 L242.6,238.4 M242.8,206.3 L242.8,197.4 M242.9,206.3
+		L242.9,215.1 M243.0,206.3 L243.0,192.2 M243.1,206.3 L243.1,218.7 M243.2,206.3 L243.2,178.6 M243.4,206.3
+		L243.4,203.1 M243.5,206.3 L243.5,221.9 M243.6,206.3 L243.6,170.3 M243.7,206.3 L243.7,203.5 M243.9,206.3
+		L243.9,221.0 M244.0,206.3 L244.0,233.1 M244.1,206.3 L244.1,144.8 M244.2,206.3 L244.2,239.3 M244.4,206.3
+		L244.4,204.3 M244.5,206.3 L244.5,226.7 M244.6,206.3 L244.6,219.1 M244.7,206.3 L244.7,173.4 M244.8,206.3
+		M245.0,206.3 L245.0,234.7 M245.1,206.3 L245.1,171.1 M245.2,206.3 L245.2,203.1 M245.3,206.3 L245.3,155.6
+		M245.5,206.3 L245.5,203.9 M245.6,206.3 L245.6,186.6 M245.7,206.3 L245.7,221.2 M245.8,206.3 L245.8,188.2
+		M246.0,206.3 L246.0,207.4 M246.1,206.3 L246.1,261.8 M246.2,206.3 L246.2,218.2 M246.3,206.3 L246.3,193.6
+		M246.4,206.3 L246.4,208.7 M246.6,206.3 L246.6,212.6 M246.7,206.3 L246.7,214.2 M246.8,206.3 L246.8,204.3
+		M246.9,206.3 L246.9,203.5 M247.1,206.3 L247.1,209.5 M247.2,206.3 L247.2,209.5 M247.3,206.3 L247.3,131.7
+		M247.4,206.3 L247.4,165.7 M247.5,206.3 L247.5,209.4 M247.7,206.3 L247.7,186.9 M247.8,206.3 L247.8,233.0
+		M247.9,206.3 L247.9,215.6 M248.0,206.3 L248.0,181.8 M248.2,206.3 L248.2,242.1 M248.3,206.3 L248.3,167.0
+		M248.4,206.3 L248.4,212.1 M248.5,206.3 L248.5,212.1 M248.7,206.3 L248.7,203.2 M248.8,206.3 L248.8,212.9
+		M248.9,206.3 L248.9,190.7 M249.0,206.3 L249.0,142.0 M249.1,206.3 L249.1,215.1 M249.3,206.3 L249.3,222.4
+		M249.4,206.3 L249.4,219.7 M249.5,206.3 L249.5,245.4 M249.6,206.3 L249.6,211.7 M249.8,206.3 L249.8,179.9
+		M249.9,206.3 L249.9,241.6 M250.0,206.3 L250.0,195.8 M250.1,206.3 L250.1,233.2 M250.3,206.3 L250.3,229.0
+		M250.4,206.3 L250.4,201.2 M250.5,206.3 L250.5,213.0 M250.6,206.3 L250.6,199.6 M250.7,206.3 L250.7,234.6
+		M250.9,206.3 L250.9,210.2 M251.0,206.3 L251.0,199.2 M251.1,206.3 L251.1,216.6 M251.2,206.3 L251.2,200.3
+		M251.4,206.3 L251.4,195.6 M251.5,206.3 L251.5,203.5 M251.6,206.3 L251.6,216.5 M251.7,206.3 L251.7,207.5
+		M251.9,206.3 L251.9,201.9 M252.0,206.3 L252.0,223.7 M252.1,206.3 L252.1,217.8 M252.2,206.3 L252.2,177.0
+		M252.3,206.3 L252.3,208.2 M252.5,206.3 L252.5,159.5 M252.6,206.3 L252.6,207.8 M252.7,206.3 L252.7,212.9
+		M252.8,206.3 L252.8,256.7 M253.0,206.3 L253.0,190.5 M253.1,206.3 L253.1,213.4 M253.2,206.3 L253.2,203.9
+		M253.3,206.3 L253.3,188.9 M253.5,206.3 L253.5,185.5 M253.6,206.3 L253.6,183.6 M253.7,206.3 L253.7,163.2
+		M253.8,206.3 L253.8,200.1 M253.9,206.3 L253.9,217.9 M254.1,206.3 L254.1,234.6 M254.2,206.3 L254.2,213.3
+		M254.3,206.3 L254.3,248.1 M254.4,206.3 L254.4,181.6 M254.6,206.3 L254.6,213.3 M254.7,206.3 L254.7,212.5
+		M254.8,206.3 L254.8,195.3 M254.9,206.3 L254.9,153.4 M255.0,206.3 L255.0,221.4 M255.2,206.3 L255.2,202.4
+		M255.3,206.3 L255.3,157.3 M255.4,206.3 L255.4,192.1 M255.5,206.3 L255.5,235.8 M255.7,206.3 L255.7,251.5
+		M255.8,206.3 L255.8,202.8 M255.9,206.3 L255.9,195.4 M256.0,206.3 L256.0,220.2 M256.2,206.3 L256.2,204.3
+		M256.3,206.3 L256.3,205.1 M256.4,206.3 L256.4,150.7 M256.5,206.3 L256.5,165.4 M256.6,206.3 L256.6,200.9
+		M256.8,206.3 L256.8,229.1 M256.9,206.3 L256.9,195.2 M257.0,206.3 L257.0,192.2 M257.1,206.3 L257.1,188.8
+		M257.3,206.3 L257.3,199.8 M257.4,206.3 L257.4,173.9 M257.5,206.3 L257.5,175.2 M257.6,206.3 L257.6,222.7
+		M257.8,206.3 L257.8,190.2 M257.9,206.3 L257.9,199.9 M258.0,206.3 L258.0,184.0 M258.1,206.3 L258.1,191.8
+		M258.2,206.3 L258.2,218.1 M258.4,206.3 L258.4,183.7 M258.5,206.3 L258.5,196.7 M258.6,206.3 L258.6,187.9
+		M258.7,206.3 L258.7,172.3 M258.9,206.3 L258.9,254.6 M259.0,206.3 L259.0,182.8 M259.1,206.3 L259.1,255.2
+		M259.2,206.3 L259.2,157.7 M259.4,206.3 L259.4,238.2 M259.5,206.3 L259.5,173.2 M259.6,206.3 L259.6,225.0
+		M259.7,206.3 L259.7,225.0 M259.8,206.3 L259.8,182.7 M260.0,206.3 L260.0,242.0 M260.1,206.3 L260.1,198.1
+		M260.2,206.3 L260.2,160.0 M260.3,206.3 L260.3,228.6 M260.5,206.3 L260.5,207.4 M260.6,206.3 L260.6,165.3
+		M260.7,206.3 L260.7,212.8 M260.8,206.3 L260.8,237.7 M261.0,206.3 L261.0,213.6 M261.1,206.3 L261.1,260.6
+		M261.2,206.3 L261.2,210.0 M261.3,206.3 L261.3,229.0 M261.4,206.3 L261.4,219.4 M261.6,206.3 L261.6,183.8
+		M261.7,206.3 L261.7,196.9 M261.8,206.3 L261.8,203.7 M261.9,206.3 L261.9,229.4 M262.1,206.3 L262.1,204.8
+		M262.2,206.3 L262.2,174.2 M262.3,206.3 L262.3,242.1 M262.4,206.3 L262.4,228.4 M262.5,206.3 L262.5,178.1
+		M262.7,206.3 L262.7,208.1 M262.8,206.3 L262.8,219.0 M262.9,206.3 L262.9,160.7 M263.0,206.3 L263.0,161.2
+		M263.2,206.3 L263.2,205.5 M263.3,206.3 L263.3,208.1 M263.4,206.3 L263.4,231.4 M263.5,206.3 L263.5,185.2
+		M263.7,206.3 L263.7,192.7 M263.8,206.3 L263.8,234.6 M263.9,206.3 L263.9,194.8 M264.0,206.3 L264.0,230.7
+		M264.1,206.3 L264.1,209.2 M264.3,206.3 L264.3,224.1 M264.4,206.3 L264.4,252.6 M264.5,206.3 L264.5,213.0
+		M264.6,206.3 L264.6,172.5 M264.8,206.3 L264.8,193.2 M264.9,206.3 L264.9,181.0 M265.0,206.3 L265.0,228.9
+		M265.1,206.3 L265.1,226.8 M265.3,206.3 L265.3,155.3 M265.4,206.3 L265.4,215.2 M265.5,206.3 L265.5,185.9
+		M265.6,206.3 L265.6,199.3 M265.7,206.3 L265.7,185.7 M265.9,206.3 L265.9,218.8 M266.0,206.3 L266.0,201.5
+		M266.1,206.3 L266.1,178.1 M266.2,206.3 L266.2,229.3 M266.4,206.3 L266.4,204.1 M266.5,206.3 L266.5,190.9
+		M266.6,206.3 L266.6,231.9 M266.7,206.3 L266.7,232.8 M266.9,206.3 L266.9,205.9 M267.0,206.3 L267.0,183.4
+		M267.1,206.3 L267.1,186.1 M267.2,206.3 L267.2,211.0 M267.3,206.3 L267.3,207.4 M267.5,206.3 L267.5,183.2
+		M267.6,206.3 L267.6,235.9 M267.7,206.3 L267.7,213.3 M267.8,206.3 L267.8,214.7 M268.0,206.3 L268.0,210.7
+		M268.1,206.3 L268.1,194.1 M268.2,206.3 L268.2,189.7 M268.3,206.3 L268.3,203.3 M268.5,206.3 L268.5,217.6
+		M268.6,206.3 L268.6,195.6 M268.7,206.3 L268.7,197.1 M268.8,206.3 L268.8,222.0 M268.9,206.3 L268.9,211.0
+		M269.1,206.3 L269.1,232.4 M269.2,206.3 L269.2,227.0 M269.3,206.3 L269.3,197.4 M269.4,206.3 L269.4,213.3
+		M269.6,206.3 L269.6,200.0 M269.7,206.3 L269.7,197.0 M269.8,206.3 L269.8,229.6 M269.9,206.3 L269.9,191.1
+		M270.1,206.3 L270.1,217.8  '/>	<path stroke='rgb(128, 128, 128)'  d='M270.2,206.3 L270.2,200.3 M270.3,206.3 L270.3,171.5 M270.4,206.3 L270.4,205.5 M270.5,206.3 L270.5,219.9
+		M270.7,206.3 L270.7,229.6 M270.8,206.3 L270.8,199.6 M270.9,206.3 L270.9,208.5 M271.0,206.3 L271.0,214.1
+		M271.2,206.3 L271.2,182.2 M271.3,206.3 L271.3,210.7 M271.4,206.3 L271.4,210.7 M271.5,206.3 L271.5,216.3
+		M271.6,206.3 L271.6,239.4 M271.8,206.3 L271.8,208.5 M271.9,206.3 L271.9,228.0 M272.0,206.3 L272.0,211.5
+		M272.1,206.3 L272.1,191.3 M272.3,206.3 L272.3,224.7 M272.4,206.3 L272.4,198.8 M272.5,206.3 L272.5,204.4
+		M272.6,206.3 L272.6,208.5 M272.8,206.3 L272.8,171.9 M272.9,206.3 L272.9,209.3 M273.0,206.3 L273.0,230.6
+		M273.1,206.3 L273.1,205.1 M273.2,206.3 L273.2,186.5 M273.4,206.3 L273.4,175.8 M273.5,206.3 L273.5,187.0
+		M273.6,206.3 L273.6,212.2 M273.7,206.3 L273.7,192.2 M273.9,206.3 L273.9,208.5 M274.0,206.3 L274.0,197.8
+		M274.1,206.3 L274.1,228.8 M274.2,206.3 L274.2,204.4 M274.4,206.3 L274.4,187.8 M274.5,206.3 L274.5,212.2
+		M274.6,206.3 L274.6,179.8 M274.7,206.3 L274.7,202.2 M274.8,206.3 L274.8,219.1 M275.0,206.3 L275.0,204.4
+		M275.1,206.3 L275.1,200.0 M275.2,206.3 L275.2,218.0 M275.3,206.3 L275.3,194.9 M275.5,206.3 L275.5,209.9
+		M275.6,206.3 L275.6,196.7 M275.7,206.3 L275.7,169.8 M275.8,206.3 L275.8,204.5 M276.0,206.3 L276.0,153.2
+		M276.1,206.3 L276.1,192.6 M276.2,206.3 L276.2,182.3 M276.3,206.3 L276.3,222.7 M276.4,206.3 L276.4,174.9
+		M276.6,206.3 L276.6,172.3 M276.7,206.3 L276.7,205.6 M276.8,206.3 L276.8,214.0 M276.9,206.3 L276.9,217.9
+		M277.1,206.3 L277.1,205.2 M277.2,206.3 L277.2,236.8 M277.3,206.3 L277.3,193.5 M277.4,206.3 L277.4,189.6
+		M277.6,206.3 L277.6,231.8 M277.7,206.3 L277.7,230.5 M277.8,206.3 L277.8,228.9 M277.9,206.3 L277.9,200.9
+		M278.0,206.3 L278.0,169.8 M278.2,206.3 L278.2,215.5 M278.3,206.3 L278.3,204.8 M278.4,206.3 L278.4,223.8
+		M278.5,206.3 L278.5,209.1 M278.7,206.3 L278.7,214.5 M278.8,206.3 L278.8,199.8 M278.9,206.3 L278.9,194.4
+		M279.0,206.3 L279.0,188.4 M279.1,206.3 L279.1,205.6 M279.3,206.3 L279.3,179.6 M279.4,206.3 L279.4,243.6
+		M279.5,206.3 L279.5,237.1 M279.6,206.3 L279.6,235.1 M279.8,206.3 L279.8,199.0 M279.9,206.3 L279.9,215.0
+		M280.0,206.3 L280.0,228.8 M280.1,206.3 L280.1,222.7 M280.3,206.3 L280.3,194.6 M280.4,206.3 L280.4,201.9
+		M280.5,206.3 L280.5,212.8 M280.6,206.3 L280.6,199.0 M280.7,206.3 L280.7,197.2 M280.9,206.3 L280.9,207.0
+		M281.0,206.3 L281.0,210.6 M281.1,206.3 L281.1,178.4 M281.2,206.3 L281.2,226.5 M281.4,206.3 L281.4,220.4
+		M281.5,206.3 L281.5,212.1 M281.6,206.3 L281.6,191.0 M281.7,206.3 L281.7,201.9 M281.9,206.3 L281.9,183.1
+		M282.0,206.3 L282.0,210.6 M282.1,206.3 L282.1,228.0 M282.2,206.3 L282.2,218.3 M282.3,206.3 L282.3,186.3
+		M282.5,206.3 L282.5,195.8 M282.6,206.3 L282.6,196.2 M282.7,206.3 L282.7,218.9 M282.8,206.3 L282.8,220.4
+		M283.0,206.3 L283.0,180.6 M283.1,206.3 L283.1,173.2 M283.2,206.3 L283.2,202.3 M283.3,206.3 L283.3,207.3
+		M283.5,206.3 L283.5,199.8 M283.6,206.3 L283.6,212.7 M283.7,206.3 L283.7,205.6 M283.8,206.3 L283.8,211.3
+		M283.9,206.3 L283.9,192.0 M284.1,206.3 L284.1,198.1 M284.2,206.3 L284.2,188.1 M284.3,206.3 L284.3,211.2
+		M284.4,206.3 L284.4,220.2 M284.6,206.3 L284.6,204.5 M284.7,206.3 L284.7,243.1 M284.8,206.3 L284.8,192.3
+		M284.9,206.3 L284.9,188.7 M285.1,206.3 L285.1,222.7 M285.2,206.3 L285.2,212.0 M285.3,206.3 L285.3,179.4
+		M285.4,206.3 L285.4,204.1 M285.5,206.3 L285.5,195.9 M285.7,206.3 L285.7,201.6 M285.8,206.3 L285.8,178.6
+		M285.9,206.3 L285.9,210.9 M286.0,206.3 L286.0,201.0 M286.2,206.3 L286.2,184.1 M286.3,206.3 L286.3,223.9
+		M286.4,206.3 L286.4,222.9 M286.5,206.3 L286.5,189.7 M286.6,206.3 L286.6,199.2 M286.8,206.3 L286.8,219.3
+		M286.9,206.3 L286.9,200.3 M287.0,206.3 L287.0,198.5 M287.1,206.3 L287.1,201.7 M287.3,206.3 L287.3,218.6
+		M287.4,206.3 L287.4,192.9 M287.5,206.3 L287.5,184.9 M287.6,206.3 L287.6,224.2 M287.8,206.3 L287.8,215.1
+		M287.9,206.3 L287.9,176.1 M288.0,206.3 L288.0,209.4 M288.1,206.3 L288.1,188.4 M288.2,206.3 L288.2,190.2
+		M288.4,206.3 L288.4,203.8 M288.5,206.3 L288.5,195.2 M288.6,206.3 L288.6,192.4 M288.7,206.3 L288.7,204.5
+		M288.9,206.3 L288.9,214.2 M289.0,206.3 L289.0,210.4 M289.1,206.3 L289.1,185.5 M289.2,206.3 L289.2,205.9
+		M289.4,206.3 L289.4,218.4 M289.5,206.3 L289.5,190.0 M289.6,206.3 L289.6,207.3 M289.7,206.3 L289.7,220.8
+		M289.8,206.3 L289.8,210.4 M290.0,206.3 L290.0,220.8 M290.1,206.3 L290.1,192.4 M290.2,206.3 L290.2,202.5
+		M290.3,206.3 L290.3,226.4 M290.5,206.3 L290.5,211.8 M290.6,206.3 L290.6,223.0 M290.7,206.3 L290.7,191.3
+		M290.8,206.3 L290.8,198.3 M291.0,206.3 L291.0,190.7 M291.1,206.3 L291.1,232.3 M291.2,206.3 L291.2,213.6
+		M291.3,206.3 L291.3,201.4 M291.4,206.3 L291.4,220.2 M291.6,206.3 L291.6,213.6 M291.7,206.3 L291.7,201.7
+		M291.8,206.3 L291.8,217.5 M291.9,206.3 L291.9,201.4 M292.1,206.3 L292.1,203.1 M292.2,206.3 L292.2,207.3
+		M292.3,206.3 L292.3,212.9 M292.4,206.3 L292.4,197.9 M292.6,206.3 L292.6,208.0 M292.7,206.3 L292.7,192.0
+		M292.8,206.3 L292.8,194.1 M292.9,206.3 L292.9,213.6 M293.0,206.3 L293.0,230.7 M293.2,206.3 L293.2,227.7
+		M293.3,206.3 L293.3,211.2 M293.4,206.3 L293.4,226.0 M293.5,206.3 L293.5,203.4 M293.7,206.3 L293.7,205.6
+		M293.8,206.3 L293.8,179.5 M293.9,206.3 L293.9,196.8 M294.0,206.3 L294.0,202.1 M294.2,206.3 L294.2,214.7
+		M294.3,206.3 L294.3,211.5 M294.4,206.3 L294.4,177.5 M294.5,206.3 L294.5,209.1 M294.6,206.3 L294.6,209.1
+		M294.8,206.3 L294.8,206.6 M294.9,206.3 L294.9,207.3 M295.0,206.3 L295.0,174.6 M295.1,206.3 L295.1,177.5
+		M295.3,206.3 L295.3,211.8 M295.4,206.3 L295.4,204.9 M295.5,206.3 L295.5,211.1 M295.6,206.3 L295.6,196.3
+		M295.7,206.3 L295.7,206.6 M295.9,206.3 L295.9,165.0 M296.0,206.3 L296.0,207.0 M296.1,206.3 L296.1,191.2
+		M296.2,206.3 L296.2,208.3 M296.4,206.3 L296.4,210.0 M296.5,206.3 L296.5,202.9 M296.6,206.3 L296.6,199.1
+		M296.7,206.3 L296.7,205.9 M296.9,206.3 L296.9,198.1 M297.0,206.3 L297.0,213.1 M297.1,206.3 L297.1,200.8
+		M297.2,206.3 L297.2,241.1 M297.3,206.3 L297.3,197.7 M297.5,206.3 L297.5,245.1 M297.6,206.3 L297.6,184.6
+		M297.7,206.3 L297.7,210.7 M297.8,206.3 L297.8,212.1 M298.0,206.3 L298.0,193.9 M298.1,206.3 L298.1,182.0
+		M298.2,206.3 L298.2,199.4 M298.3,206.3 L298.3,225.8 M298.5,206.3 L298.5,185.4 M298.6,206.3 L298.6,247.4
+		M298.7,206.3 L298.7,201.1 M298.8,206.3 L298.8,233.8 M298.9,206.3 L298.9,233.7 M299.1,206.3 L299.1,238.4
+		M299.2,206.3 L299.2,211.2 M299.3,206.3 L299.3,189.5 M299.4,206.3 L299.4,207.0 M299.6,206.3 L299.6,209.1
+		M299.7,206.3 L299.7,179.1 M299.8,206.3 L299.8,199.0 M299.9,206.3 L299.9,168.3 M300.1,206.3 L300.1,217.6
+		M300.2,206.3 L300.2,220.4 M300.3,206.3 L300.3,180.7 M300.4,206.3 L300.4,221.1 M300.5,206.3 L300.5,207.3
+		M300.7,206.3 L300.7,208.3 M300.8,206.3 L300.8,212.5 M300.9,206.3 L300.9,190.4 M301.0,206.3 L301.0,192.5
+		M301.2,206.3 L301.2,179.9 M301.3,206.3 L301.3,193.0 M301.4,206.3 L301.4,196.1 M301.5,206.3 L301.5,182.9
+		M301.7,206.3 L301.7,220.2  '/>	<path stroke='rgb(128, 128, 128)'  d='M301.8,206.3 L301.8,202.9 M301.9,206.3 L301.9,211.4 M302.0,206.3 L302.0,164.7 M302.1,206.3 L302.1,211.3
+		M302.3,206.3 L302.3,173.0 M302.4,206.3 L302.4,198.3 M302.5,206.3 L302.5,210.3 M302.6,206.3 L302.6,182.9
+		M302.8,206.3 L302.8,211.9 M302.9,206.3 L302.9,201.3 M303.0,206.3 L303.0,166.5 M303.1,206.3 L303.1,217.2
+		M303.2,206.3 L303.2,234.5 M303.4,206.3 L303.4,225.3 M303.5,206.3 L303.5,191.6 M303.6,206.3 M303.7,206.3
+		L303.7,232.6 M303.9,206.3 L303.9,190.2 M304.0,206.3 L304.0,193.9 M304.1,206.3 L304.1,186.4 M304.2,206.3
+		L304.2,213.6 M304.4,206.3 L304.4,195.3 M304.5,206.3 L304.5,219.2 M304.6,206.3 L304.6,192.0 M304.7,206.3
+		L304.7,183.5 M304.8,206.3 L304.8,200.0 M305.0,206.3 L305.0,248.9 M305.1,206.3 L305.1,178.1 M305.2,206.3
+		L305.2,204.6 M305.3,206.3 L305.3,184.6 M305.5,206.3 L305.5,186.0 M305.6,206.3 L305.6,196.8 M305.7,206.3
+		L305.7,200.4 M305.8,206.3 L305.8,193.9 M306.0,206.3 L306.0,224.8 M306.1,206.3 L306.1,180.2 M306.2,206.3
+		L306.2,217.0 M306.3,206.3 L306.3,177.4 M306.4,206.3 L306.4,181.1 M306.6,206.3 L306.6,193.1 M306.7,206.3
+		L306.7,206.0 M306.8,206.3 L306.8,253.3 M306.9,206.3 L306.9,183.0 M307.1,206.3 L307.1,191.5 M307.2,206.3
+		L307.2,218.2 M307.3,206.3 L307.3,190.2 M307.4,206.3 L307.4,205.3 M307.6,206.3 L307.6,151.7 M307.7,206.3
+		L307.7,199.3 M307.8,206.3 L307.8,208.8 M307.9,206.3 L307.9,211.0 M308.0,206.3 L308.0,195.2 M308.2,206.3
+		L308.2,218.6 M308.3,206.3 L308.3,203.7 M308.4,206.3 L308.4,236.8 M308.5,206.3 L308.5,241.8 M308.7,206.3
+		L308.7,195.4 M308.8,206.3 L308.8,175.6 M308.9,206.3 L308.9,255.3 M309.0,206.3 L309.0,197.9 M309.2,206.3
+		L309.2,199.5 M309.3,206.3 L309.3,188.6 M309.4,206.3 L309.4,224.5 M309.5,206.3 L309.5,189.3 M309.6,206.3
+		L309.6,230.3 M309.8,206.3 L309.8,272.0 M309.9,206.3 L309.9,216.4 M310.0,206.3 L310.0,200.4 M310.1,206.3
+		L310.1,218.0 M310.3,206.3 L310.3,222.7 M310.4,206.3 L310.4,191.2 M310.5,206.3 L310.5,200.7 M310.6,206.3
+		L310.6,203.7 M310.8,206.3 L310.8,177.9 M310.9,206.3 L310.9,162.3 M311.0,206.3 L311.0,178.1 M311.1,206.3
+		L311.1,247.4 M311.2,206.3 L311.2,204.3 M311.4,206.3 L311.4,163.9 M311.5,206.3 L311.5,198.0 M311.6,206.3
+		L311.6,198.6 M311.7,206.3 L311.7,230.9 M311.9,206.3 L311.9,202.8 M312.0,206.3 L312.0,222.0 M312.1,206.3
+		L312.1,159.3 M312.2,206.3 L312.2,215.2 M312.3,206.3 L312.3,178.0 M312.5,206.3 L312.5,225.6 M312.6,206.3
+		L312.6,255.5 M312.7,206.3 L312.7,209.5 M312.8,206.3 L312.8,213.0 M313.0,206.3 L313.0,260.3 M313.1,206.3
+		L313.1,149.7 M313.2,206.3 L313.2,205.6 M313.3,206.3 L313.3,165.6 M313.5,206.3 L313.5,231.8 M313.6,206.3
+		L313.6,172.4 M313.7,206.3 L313.7,208.5 M313.8,206.3 L313.8,179.3 M313.9,206.3 L313.9,206.9 M314.1,206.3
+		L314.1,223.4 M314.2,206.3 L314.2,199.0 M314.3,206.3 L314.3,264.7 M314.4,206.3 L314.4,210.8 M314.6,206.3
+		L314.6,255.1 M314.7,206.3 L314.7,197.2 M314.8,206.3 L314.8,202.7 M314.9,206.3 L314.9,186.9 M315.1,206.3
+		L315.1,209.2 M315.2,206.3 L315.2,184.7 M315.3,206.3 L315.3,192.8 M315.4,206.3 L315.4,214.0 M315.5,206.3
+		L315.5,182.9 M315.7,206.3 L315.7,211.7 M315.8,206.3 L315.8,174.7 M315.9,206.3 L315.9,201.8 M316.0,206.3
+		L316.0,204.4 M316.2,206.3 L316.2,161.1 M316.3,206.3 L316.3,159.4 M316.4,206.3 L316.4,183.3 M316.5,206.3
+		L316.5,208.4 M316.7,206.3 L316.7,201.6 M316.8,206.3 L316.8,202.9 M316.9,206.3 L316.9,191.8 M317.0,206.3
+		L317.0,167.9 M317.1,206.3 L317.1,218.5 M317.3,206.3 L317.3,205.0 M317.4,206.3 L317.4,210.6 M317.5,206.3
+		L317.5,138.4 M317.6,206.3 L317.6,187.0 M317.8,206.3 L317.8,191.5 M317.9,206.3 L317.9,188.9 M318.0,206.3
+		L318.0,239.6 M318.1,206.3 L318.1,198.7 M318.3,206.3 L318.3,271.4 M318.4,206.3 L318.4,205.7 M318.5,206.3
+		L318.5,206.6 M318.6,206.3 L318.6,140.3 M318.7,206.3 L318.7,147.7 M318.9,206.3 L318.9,226.5 M319.0,206.3
+		L319.0,200.9 M319.1,206.3 L319.1,216.1 M319.2,206.3 L319.2,249.1 M319.4,206.3 L319.4,184.9 M319.5,206.3
+		L319.5,208.7 M319.6,206.3 L319.6,189.8 M319.7,206.3 L319.7,216.1 M319.8,206.3 L319.8,206.6 M320.0,206.3
+		L320.0,166.9 M320.1,206.3 L320.1,233.7 M320.2,206.3 L320.2,187.5 M320.3,206.3 L320.3,197.4 M320.5,206.3
+		L320.5,220.3 M320.6,206.3 L320.6,160.9 M320.7,206.3 L320.7,220.8 M320.8,206.3 L320.8,229.1 M321.0,206.3
+		L321.0,179.3 M321.1,206.3 L321.1,180.0 M321.2,206.3 L321.2,239.3 M321.3,206.3 L321.3,267.7 M321.4,206.3
+		L321.4,221.0 M321.6,206.3 L321.6,199.1 M321.7,206.3 L321.7,232.8 M321.8,206.3 L321.8,190.3 M321.9,206.3
+		L321.9,251.7 M322.1,206.3 L322.1,219.7 M322.2,206.3 L322.2,184.1 M322.3,206.3 L322.3,196.0 M322.4,206.3
+		L322.4,247.6 M322.6,206.3 L322.6,203.8 M322.7,206.3 L322.7,182.8 M322.8,206.3 L322.8,187.8 M322.9,206.3
+		L322.9,228.1 M323.0,206.3 L323.0,202.9 M323.2,206.3 L323.2,217.2 M323.3,206.3 L323.3,166.2 M323.4,206.3
+		L323.4,226.6 M323.5,206.3 L323.5,163.1 M323.7,206.3 L323.7,202.1 M323.8,206.3 L323.8,189.2 M323.9,206.3
+		L323.9,194.3 M324.0,206.3 L324.0,203.6 M324.2,206.3 L324.2,235.0 M324.3,206.3 L324.3,215.0 M324.4,206.3
+		L324.4,247.3 M324.5,206.3 L324.5,193.2 M324.6,206.3 L324.6,210.8 M324.8,206.3 L324.8,238.5 M324.9,206.3
+		L324.9,208.7 M325.0,206.3 L325.0,158.6 M325.1,206.3 L325.1,147.8 M325.3,206.3 L325.3,247.0 M325.4,206.3
+		L325.4,262.9 M325.5,206.3 L325.5,175.3 M325.6,206.3 L325.6,238.7 M325.8,206.3 L325.8,227.3 M325.9,206.3
+		L325.9,179.7 M326.0,206.3 L326.0,194.7 M326.1,206.3 L326.1,200.5 M326.2,206.3 L326.2,213.2 M326.4,206.3
+		L326.4,174.2 M326.5,206.3 L326.5,234.7 M326.6,206.3 L326.6,189.3 M326.7,206.3 L326.7,177.7 M326.9,206.3
+		L326.9,180.5 M327.0,206.3 L327.0,193.4 M327.1,206.3 L327.1,217.9 M327.2,206.3 L327.2,194.3 M327.3,206.3
+		L327.3,177.8 M327.5,206.3 L327.5,264.1 M327.6,206.3 L327.6,203.9 M327.7,206.3 L327.7,200.6 M327.8,206.3
+		L327.8,223.1 M328.0,206.3 L328.0,185.3 M328.1,206.3 L328.1,192.2 M328.2,206.3 L328.2,160.9 M328.3,206.3
+		L328.3,216.0 M328.5,206.3 L328.5,204.2 M328.6,206.3 L328.6,233.6 M328.7,206.3 L328.7,194.7 M328.8,206.3
+		L328.8,209.8 M328.9,206.3 L328.9,183.2 M329.1,206.3 L329.1,246.0 M329.2,206.3 L329.2,238.0 M329.3,206.3
+		L329.3,208.7 M329.4,206.3 L329.4,196.7 M329.6,206.3 L329.6,197.6 M329.7,206.3 L329.7,252.5 M329.8,206.3
+		L329.8,208.4 M329.9,206.3 L329.9,199.9 M330.1,206.3 L330.1,216.2 M330.2,206.3 L330.2,203.6 M330.3,206.3
+		L330.3,243.6 M330.4,206.3 L330.4,217.6 M330.5,206.3 L330.5,233.5 M330.7,206.3 L330.7,305.2 M330.8,206.3
+		L330.8,241.8 M330.9,206.3 L330.9,199.6 M331.0,206.3 L331.0,203.4 M331.2,206.3 L331.2,244.6 M331.3,206.3
+		L331.3,242.6 M331.4,206.3 L331.4,209.2 M331.5,206.3 L331.5,173.7 M331.7,206.3 L331.7,218.1 M331.8,206.3
+		L331.8,157.7 M331.9,206.3 L331.9,239.9 M332.0,206.3 L332.0,218.4 M332.1,206.3 L332.1,241.5 M332.3,206.3
+		L332.3,183.5 M332.4,206.3 L332.4,211.4 M332.5,206.3 L332.5,214.6 M332.6,206.3 L332.6,233.0 M332.8,206.3
+		L332.8,229.5 M332.9,206.3 L332.9,214.4 M333.0,206.3 L333.0,287.8 M333.1,206.3 L333.1,200.3 M333.3,206.3
+		L333.3,252.3  '/>	<path stroke='rgb(128, 128, 128)'  d='M333.4,206.3 L333.4,212.6 M333.5,206.3 L333.5,253.2 M333.6,206.3 L333.6,188.1 M333.7,206.3 L333.7,138.6
+		M333.9,206.3 L333.9,185.5 M334.0,206.3 L334.0,266.3 M334.1,206.3 L334.1,132.8 M334.2,206.3 M334.4,206.3
+		L334.4,160.2 M334.5,206.3 L334.5,99.2 M334.6,206.3 L334.6,247.5 M334.7,206.3 L334.7,223.6 M334.9,206.3
+		L334.9,206.0 M335.0,206.3 L335.0,210.8 M335.1,206.3 L335.1,266.9 M335.2,206.3 L335.2,304.9 M335.3,206.3
+		L335.3,242.7 M335.5,206.3 L335.5,276.0 M335.6,206.3 L335.6,212.4 M335.7,206.3 L335.7,308.8 M335.8,206.3
+		L335.8,157.3 M336.0,206.3 L336.0,204.2 M336.1,206.3 L336.1,218.7 M336.2,206.3 L336.2,277.0 M336.3,206.3
+		L336.3,135.5 M336.4,206.3 L336.4,199.4 M336.6,206.3 L336.6,260.1 M336.7,206.3 L336.7,199.3 M336.8,206.3
+		L336.8,230.4 M336.9,206.3 L336.9,235.1 M337.1,206.3 L337.1,304.7 M337.2,206.3 L337.2,291.0 M337.3,206.3
+		L337.3,152.3 M337.4,206.3 L337.4,333.9 M337.6,206.3 L337.6,242.2 M337.7,206.3 L337.7,111.5 M337.8,206.3
+		L337.8,137.9 M337.9,206.3 L337.9,244.9 M338.0,206.3 L338.0,254.4 M338.2,206.3 L338.2,238.9 M338.3,206.3
+		L338.3,83.2 M338.4,206.3 L338.4,213.2 M338.5,206.3 L338.5,296.1 M338.7,206.3 L338.7,204.8 M338.8,206.3
+		L338.8,195.9 M338.9,206.3 L338.9,289.7 M339.0,206.3 L339.0,212.7 M339.2,206.3 L339.2,103.9 M339.3,206.3
+		L339.3,271.9 M339.4,206.3 L339.4,195.8 M339.5,206.3 L339.5,204.4 M339.6,206.3 L339.6,251.2 M339.8,206.3
+		L339.8,231.5 M339.9,206.3 L339.9,155.9 M340.0,206.3 L340.0,73.2 M340.1,206.3 L340.1,168.3 M340.3,206.3
+		L340.3,268.3 M340.4,206.3 L340.4,196.8 M340.5,206.3 L340.5,283.8 M340.6,206.3 L340.6,240.1 M340.8,206.3
+		L340.8,163.5 M340.9,206.3 L340.9,206.6 M341.0,206.3 L341.0,181.9 M341.1,206.3 L341.1,230.3 M341.2,206.3
+		L341.2,116.5 M341.4,206.3 L341.4,219.0 M341.5,206.3 L341.5,173.3 M341.6,206.3 L341.6,85.7 M341.7,206.3
+		L341.7,201.3 M341.9,206.3 L341.9,96.0 M342.0,206.3 L342.0,95.2 M342.1,206.3 L342.1,72.2 M342.2,206.3
+		L342.2,261.7 M342.4,206.3 L342.4,320.9 M342.5,206.3 L342.5,196.8 M342.6,206.3 L342.6,209.3 M342.7,206.3
+		L342.7,178.3 M342.8,206.3 L342.8,200.6 M343.0,206.3 M343.1,206.3 L343.1,240.6 M343.2,206.3 L343.2,161.5
+		M343.3,206.3 L343.3,235.1 M343.5,206.3 L343.5,187.1 M343.6,206.3 L343.6,244.0 M343.7,206.3 L343.7,304.3
+		M343.8,206.3 L343.8,247.9 M343.9,206.3 L343.9,159.5 M344.1,206.3 L344.1,185.6 M344.2,206.3 L344.2,289.7
+		M344.3,206.3 L344.3,237.5 M344.4,206.3 L344.4,272.9 M344.6,206.3 L344.6,204.1 M344.7,206.3 L344.7,231.3
+		M344.8,206.3 L344.8,154.2 M344.9,206.3 L344.9,277.4 M345.1,206.3 L345.1,265.7 M345.2,206.3 L345.2,161.6
+		M345.3,206.3 L345.3,216.4 M345.4,206.3 L345.4,221.5 M345.5,206.3 L345.5,124.2 M345.7,206.3 L345.7,213.4
+		M345.8,206.3 L345.8,206.6 M345.9,206.3 L345.9,283.4 M346.0,206.3 L346.0,258.1 M346.2,206.3 L346.2,204.4
+		M346.3,206.3 L346.3,125.1 M346.4,206.3 L346.4,275.3 M346.5,206.3 L346.5,228.7 M346.7,206.3 L346.7,151.0
+		M346.8,206.3 L346.8,182.7 M346.9,206.3 L346.9,239.7 M347.0,206.3 L347.0,207.7 M347.1,206.3 L347.1,222.0
+		M347.3,206.3 L347.3,207.4 M347.4,206.3 L347.4,225.3 M347.5,206.3 L347.5,290.8 M347.6,206.3 L347.6,225.8
+		M347.8,206.3 L347.8,152.1 M347.9,206.3 L347.9,150.2 M348.0,206.3 L348.0,233.1 M348.1,206.3 L348.1,172.5
+		M348.3,206.3 L348.3,250.8 M348.4,206.3 L348.4,201.1 M348.5,206.3 L348.5,230.3 M348.6,206.3 L348.6,241.7
+		M348.7,206.3 L348.7,213.0 M348.9,206.3 L348.9,170.4 M349.0,206.3 L349.0,248.8 M349.1,206.3 L349.1,167.0
+		M349.2,206.3 L349.2,223.0 M349.4,206.3 L349.4,176.9 M349.5,206.3 L349.5,145.4 M349.6,206.3 L349.6,181.4
+		M349.7,206.3 L349.7,201.2 M349.9,206.3 L349.9,189.6 M350.0,206.3 L350.0,192.1 M350.1,206.3 L350.1,30.3
+		M350.2,206.3 L350.2,151.9 M350.3,206.3 L350.3,236.0 M350.5,206.3 L350.5,192.1 M350.6,206.3 L350.6,258.0
+		M350.7,206.3 L350.7,169.7 M350.8,206.3 L350.8,223.3 M351.0,206.3 L351.0,290.8 M351.1,206.3 L351.1,237.2
+		M351.2,206.3 L351.2,190.6 M351.3,206.3 L351.3,210.2 M351.4,206.3 L351.4,123.5 M351.6,206.3 L351.6,201.0
+		M351.7,206.3 L351.7,235.3 M351.8,206.3 L351.8,253.9 M351.9,206.3 L351.9,205.9 M352.1,206.3 L352.1,242.9
+		M352.2,206.3 L352.2,197.3 M352.3,206.3 L352.3,142.8 M352.4,206.3 L352.4,242.0 M352.6,206.3 L352.6,224.4
+		M352.7,206.3 L352.7,220.5 M352.8,206.3 L352.8,254.0 M352.9,206.3 L352.9,249.4 M353.0,206.3 L353.0,198.6
+		M353.2,206.3 L353.2,184.9 M353.3,206.3 L353.3,159.1 M353.4,206.3 L353.4,167.4 M353.5,206.3 L353.5,287.3
+		M353.7,206.3 L353.7,163.5 M353.8,206.3 L353.8,164.2 M353.9,206.3 L353.9,216.9 M354.0,206.3 L354.0,188.9
+		M354.2,206.3 L354.2,156.6 M354.3,206.3 L354.3,242.5 M354.4,206.3 L354.4,204.5 M354.5,206.3 L354.5,179.5
+		M354.6,206.3 L354.6,119.9 M354.8,206.3 L354.8,228.1 M354.9,206.3 L354.9,182.8 M355.0,206.3 L355.0,223.9
+		M355.1,206.3 L355.1,192.1 M355.3,206.3 L355.3,254.8 M355.4,206.3 L355.4,186.1 M355.5,206.3 L355.5,180.7
+		M355.6,206.3 L355.6,143.2 M355.8,206.3 L355.8,175.7 M355.9,206.3 L355.9,175.9 M356.0,206.3 L356.0,198.2
+		M356.1,206.3 L356.1,216.0 M356.2,206.3 L356.2,257.0 M356.4,206.3 L356.4,173.4 M356.5,206.3 L356.5,132.2
+		M356.6,206.3 L356.6,207.3 M356.7,206.3 L356.7,154.7 M356.9,206.3 L356.9,262.2 M357.0,206.3 L357.0,193.6
+		M357.1,206.3 L357.1,277.5 M357.2,206.3 L357.2,229.2 M357.4,206.3 L357.4,145.0 M357.5,206.3 L357.5,243.2
+		M357.6,206.3 L357.6,163.7 M357.7,206.3 L357.7,232.7 M357.8,206.3 L357.8,284.5 M358.0,206.3 L358.0,189.2
+		M358.1,206.3 L358.1,170.7 M358.2,206.3 L358.2,218.8 M358.3,206.3 L358.3,195.8 M358.5,206.3 L358.5,232.0
+		M358.6,206.3 L358.6,133.2 M358.7,206.3 L358.7,254.0 M358.8,206.3 L358.8,184.7 M359.0,206.3 L359.0,186.1
+		M359.1,206.3 L359.1,199.9 M359.2,206.3 L359.2,220.7 M359.3,206.3 L359.3,166.5 M359.4,206.3 L359.4,275.9
+		M359.6,206.3 L359.6,186.7 M359.7,206.3 L359.7,215.7 M359.8,206.3 L359.8,225.2 M359.9,206.3 L359.9,220.8
+		M360.1,206.3 L360.1,155.7 M360.2,206.3 L360.2,236.6 M360.3,206.3 L360.3,190.1 M360.4,206.3 L360.4,210.0
+		M360.5,206.3 L360.5,162.4 M360.7,206.3 L360.7,193.3 M360.8,206.3 L360.8,221.6 M360.9,206.3 L360.9,162.1
+		M361.0,206.3 L361.0,211.9 M361.2,206.3 L361.2,207.6 M361.3,206.3 L361.3,222.2 M361.4,206.3 L361.4,190.7
+		M361.5,206.3 L361.5,194.4 M361.7,206.3 L361.7,229.5 M361.8,206.3 L361.8,253.3 M361.9,206.3 L361.9,195.2
+		M362.0,206.3 L362.0,144.5 M362.1,206.3 L362.1,151.8 M362.3,206.3 L362.3,212.8 M362.4,206.3 L362.4,200.1
+		M362.5,206.3 L362.5,226.9 M362.6,206.3 L362.6,261.7 M362.8,206.3 L362.8,219.6 M362.9,206.3 L362.9,205.3
+		M363.0,206.3 L363.0,188.3 M363.1,206.3 L363.1,181.2 M363.3,206.3 L363.3,230.7 M363.4,206.3 L363.4,248.5
+		M363.5,206.3 L363.5,187.3 M363.6,206.3 L363.6,173.1 M363.7,206.3 L363.7,202.0 M363.9,206.3 L363.9,183.2
+		M364.0,206.3 L364.0,213.2 M364.1,206.3 L364.1,204.6 M364.2,206.3 L364.2,225.7 M364.4,206.3 L364.4,171.1
+		M364.5,206.3 L364.5,221.0 M364.6,206.3 L364.6,196.7 M364.7,206.3 L364.7,244.8 M364.9,206.3 L364.9,191.4
+		M365.0,206.3 L365.0,207.3  '/>	<path stroke='rgb(128, 128, 128)'  d='M365.1,206.3 L365.1,194.4 M365.2,206.3 L365.2,192.8 M365.3,206.3 L365.3,155.3 M365.5,206.3 L365.5,180.7
+		M365.6,206.3 L365.6,203.4 M365.7,206.3 L365.7,210.1 M365.8,206.3 L365.8,186.3 M366.0,206.3 L366.0,196.3
+		M366.1,206.3 L366.1,189.9 M366.2,206.3 L366.2,196.4 M366.3,206.3 L366.3,214.3 M366.5,206.3 L366.5,218.8
+		M366.6,206.3 L366.6,170.2 M366.7,206.3 L366.7,231.8 M366.8,206.3 L366.8,222.0 M366.9,206.3 L366.9,196.3
+		M367.1,206.3 L367.1,229.7 M367.2,206.3 L367.2,218.5 M367.3,206.3 L367.3,188.9 M367.4,206.3 L367.4,238.2
+		M367.6,206.3 L367.6,194.6 M367.7,206.3 L367.7,182.1 M367.8,206.3 L367.8,182.2 M367.9,206.3 L367.9,218.8
+		M368.0,206.3 L368.0,170.8 M368.2,206.3 L368.2,228.3 M368.3,206.3 L368.3,190.0 M368.4,206.3 L368.4,181.5
+		M368.5,206.3 L368.5,180.7 M368.7,206.3 L368.7,206.0 M368.8,206.3 L368.8,216.0 M368.9,206.3 L368.9,184.9
+		M369.0,206.3 L369.0,217.6 M369.2,206.3 L369.2,184.6 M369.3,206.3 L369.3,199.4 M369.4,206.3 L369.4,212.5
+		M369.5,206.3 L369.5,251.3 M369.6,206.3 L369.6,223.7 M369.8,206.3 L369.8,235.3 M369.9,206.3 L369.9,168.4
+		M370.0,206.3 L370.0,240.3 M370.1,206.3 L370.1,192.2 M370.3,206.3 L370.3,223.8 M370.4,206.3 L370.4,161.4
+		M370.5,206.3 L370.5,202.5 M370.6,206.3 L370.6,215.1 M370.8,206.3 L370.8,158.0 M370.9,206.3 L370.9,209.1
+		M371.0,206.3 L371.0,207.8 M371.1,206.3 L371.1,249.8 M371.2,206.3 L371.2,187.0 M371.4,206.3 L371.4,186.4
+		M371.5,206.3 L371.5,235.3 M371.6,206.3 L371.6,179.2 M371.7,206.3 L371.7,219.2 M371.9,206.3 L371.9,226.2
+		M372.0,206.3 L372.0,173.8 M372.1,206.3 L372.1,206.9 M372.2,206.3 L372.2,150.9 M372.4,206.3 L372.4,244.0
+		M372.5,206.3 L372.5,216.6 M372.6,206.3 L372.6,199.1 M372.7,206.3 L372.7,182.5 M372.8,206.3 L372.8,219.1
+		M373.0,206.3 L373.0,202.8 M373.1,206.3 L373.1,267.6 M373.2,206.3 L373.2,216.7 M373.3,206.3 L373.3,245.5
+		M373.5,206.3 L373.5,198.9 M373.6,206.3 L373.6,204.0 M373.7,206.3 L373.7,240.6 M373.8,206.3 L373.8,195.7
+		M374.0,206.3 L374.0,246.2 M374.1,206.3 M374.2,206.3 L374.2,269.2 M374.3,206.3 L374.3,204.6 M374.4,206.3
+		L374.4,228.3 M374.6,206.3 L374.6,215.8 M374.7,206.3 L374.7,178.0 M374.8,206.3 L374.8,193.2 M374.9,206.3
+		L374.9,205.3 M375.1,206.3 L375.1,206.6 M375.2,206.3 L375.2,214.5 M375.3,206.3 L375.3,210.9 M375.4,206.3
+		L375.4,210.9 M375.5,206.3 L375.5,203.0 M375.7,206.3 L375.7,181.4 M375.8,206.3 L375.8,221.6 M375.9,206.3
+		L375.9,190.6 M376.0,206.3 L376.0,239.4 M376.2,206.3 L376.2,174.5 M376.3,206.3 L376.3,170.8 M376.4,206.3
+		L376.4,216.3 M376.5,206.3 L376.5,198.2 M376.7,206.3 L376.7,209.2 M376.8,206.3 L376.8,244.1 M376.9,206.3
+		L376.9,206.6 M377.0,206.3 L377.0,238.8 M377.1,206.3 L377.1,267.6 M377.3,206.3 L377.3,211.9 M377.4,206.3
+		L377.4,189.3 M377.5,206.3 L377.5,201.9 M377.6,206.3 L377.6,231.3 M377.8,206.3 L377.8,223.7 M377.9,206.3
+		L377.9,223.1 M378.0,206.3 L378.0,242.8 M378.1,206.3 L378.1,183.2 M378.3,206.3 L378.3,195.5 M378.4,206.3
+		L378.4,228.9 M378.5,206.3 L378.5,263.8 M378.6,206.3 L378.6,222.8 M378.7,206.3 L378.7,217.3 M378.9,206.3
+		L378.9,155.9 M379.0,206.3 L379.0,225.4 M379.1,206.3 L379.1,222.0 M379.2,206.3 L379.2,226.9 M379.4,206.3
+		L379.4,218.7 M379.5,206.3 L379.5,147.8 M379.6,206.3 L379.6,261.3 M379.7,206.3 L379.7,235.1 M379.9,206.3
+		L379.9,175.4 M380.0,206.3 L380.0,211.5 M380.1,206.3 L380.1,237.2 M380.2,206.3 L380.2,194.8 M380.3,206.3
+		L380.3,202.8 M380.5,206.3 L380.5,180.0 M380.6,206.3 L380.6,228.8 M380.7,206.3 L380.7,187.9 M380.8,206.3
+		L380.8,178.4 M381.0,206.3 L381.0,246.3 M381.1,206.3 L381.1,191.4 M381.2,206.3 L381.2,202.8 M381.3,206.3
+		L381.3,217.7 M381.5,206.3 L381.5,185.6 M381.6,206.3 L381.6,199.4 M381.7,206.3 L381.7,176.1 M381.8,206.3
+		L381.8,237.8 M381.9,206.3 L381.9,173.4 M382.1,206.3 L382.1,218.6 M382.2,206.3 L382.2,251.4 M382.3,206.3
+		L382.3,232.3 M382.4,206.3 L382.4,193.4 M382.6,206.3 L382.6,231.7 M382.7,206.3 L382.7,266.6 M382.8,206.3
+		L382.8,219.0 M382.9,206.3 L382.9,163.3 M383.1,206.3 L383.1,182.5 M383.2,206.3 L383.2,226.9 M383.3,206.3
+		L383.3,174.8 M383.4,206.3 L383.4,185.4 M383.5,206.3 L383.5,228.5 M383.7,206.3 L383.7,213.2 M383.8,206.3
+		L383.8,237.1 M383.9,206.3 L383.9,226.7 M384.0,206.3 L384.0,198.9 M384.2,206.3 L384.2,156.5 M384.3,206.3
+		L384.3,176.7 M384.4,206.3 L384.4,195.6 M384.5,206.3 L384.5,194.2 M384.6,206.3 L384.6,230.1 M384.8,206.3
+		L384.8,233.7 M384.9,206.3 L384.9,211.1 M385.0,206.3 L385.0,223.0 M385.1,206.3 L385.1,225.2 M385.3,206.3
+		L385.3,241.2 M385.4,206.3 L385.4,172.1 M385.5,206.3 L385.5,203.8 M385.6,206.3 L385.6,286.3 M385.8,206.3
+		L385.8,192.0 M385.9,206.3 L385.9,193.1 M386.0,206.3 L386.0,189.3 M386.1,206.3 L386.1,242.9 M386.2,206.3
+		L386.2,284.7 M386.4,206.3 L386.4,262.1 M386.5,206.3 L386.5,274.7 M386.6,206.3 L386.6,161.4 M386.7,206.3
+		L386.7,193.7 M386.9,206.3 L386.9,262.9 M387.0,206.3 L387.0,207.8 M387.1,206.3 L387.1,245.9 M387.2,206.3
+		L387.2,268.7 M387.4,206.3 L387.4,191.1 M387.5,206.3 L387.5,292.4 M387.6,206.3 L387.6,110.3 M387.7,206.3
+		L387.7,191.2 M387.8,206.3 L387.8,166.4 M388.0,206.3 L388.0,291.2 M388.1,206.3 L388.1,196.4 M388.2,206.3
+		L388.2,288.4 M388.3,206.3 L388.3,131.0 M388.5,206.3 L388.5,233.8 M388.6,206.3 L388.6,196.3 M388.7,206.3
+		L388.7,243.9 M388.8,206.3 L388.8,192.4 M389.0,206.3 L389.0,237.5 M389.1,206.3 L389.1,283.5 M389.2,206.3
+		L389.2,226.0 M389.3,206.3 L389.3,187.4 M389.4,206.3 L389.4,198.4 M389.6,206.3 L389.6,158.6 M389.7,206.3
+		L389.7,204.3 M389.8,206.3 L389.8,166.8 M389.9,206.3 L389.9,163.3 M390.1,206.3 L390.1,215.4 M390.2,206.3
+		L390.2,177.3 M390.3,206.3 L390.3,202.5 M390.4,206.3 L390.4,234.1 M390.6,206.3 L390.6,223.5 M390.7,206.3
+		L390.7,190.6 M390.8,206.3 L390.8,199.4 M390.9,206.3 L390.9,188.8 M391.0,206.3 L391.0,241.8 M391.2,206.3
+		L391.2,242.4 M391.3,206.3 L391.3,188.2 M391.4,206.3 L391.4,99.4 M391.5,206.3 L391.5,193.1 M391.7,206.3
+		L391.7,211.1 M391.8,206.3 L391.8,173.4 M391.9,206.3 L391.9,204.4 M392.0,206.3 L392.0,184.3 M392.1,206.3
+		L392.1,224.1 M392.3,206.3 L392.3,226.8 M392.4,206.3 L392.4,154.2 M392.5,206.3 L392.5,200.7 M392.6,206.3
+		L392.6,135.5 M392.8,206.3 L392.8,208.1 M392.9,206.3 L392.9,199.4 M393.0,206.3 L393.0,227.4 M393.1,206.3
+		L393.1,256.2 M393.3,206.3 L393.3,158.2 M393.4,206.3 L393.4,200.1 M393.5,206.3 L393.5,175.4 M393.6,206.3
+		L393.6,201.6 M393.7,206.3 L393.7,211.0 M393.9,206.3 L393.9,172.3 M394.0,206.3 L394.0,217.4 M394.1,206.3
+		L394.1,161.4 M394.2,206.3 L394.2,188.5 M394.4,206.3 L394.4,231.6 M394.5,206.3 L394.5,195.6 M394.6,206.3
+		L394.6,172.5 M394.7,206.3 L394.7,225.4 M394.9,206.3 L394.9,224.1 M395.0,206.3 L395.0,325.6 M395.1,206.3
+		L395.1,213.2 M395.2,206.3 L395.2,233.9 M395.3,206.3 L395.3,180.5 M395.5,206.3 L395.5,185.0 M395.6,206.3
+		L395.6,216.1 M395.7,206.3 L395.7,219.5 M395.8,206.3 L395.8,247.2 M396.0,206.3 L396.0,227.1 M396.1,206.3
+		L396.1,213.3 M396.2,206.3 L396.2,194.4 M396.3,206.3 L396.3,186.2 M396.5,206.3 L396.5,189.7 M396.6,206.3
+		L396.6,242.5  '/>	<path stroke='rgb(128, 128, 128)'  d='M396.7,206.3 L396.7,197.0 M396.8,206.3 L396.8,163.8 M396.9,206.3 L396.9,198.2 M397.1,206.3 L397.1,180.7
+		M397.2,206.3 L397.2,213.9 M397.3,206.3 L397.3,276.6 M397.4,206.3 L397.4,191.5 M397.6,206.3 L397.6,215.5
+		M397.7,206.3 L397.7,216.3 M397.8,206.3 L397.8,130.0 M397.9,206.3 L397.9,167.0 M398.1,206.3 L398.1,197.9
+		M398.2,206.3 L398.2,182.8 M398.3,206.3 L398.3,213.1 M398.4,206.3 L398.4,203.7 M398.5,206.3 L398.5,139.4
+		M398.7,206.3 L398.7,153.3 M398.8,206.3 L398.8,236.2 M398.9,206.3 L398.9,146.2 M399.0,206.3 L399.0,222.0
+		M399.2,206.3 L399.2,156.1 M399.3,206.3 L399.3,193.5 M399.4,206.3 L399.4,204.2 M399.5,206.3 L399.5,149.7
+		M399.7,206.3 L399.7,247.0 M399.8,206.3 L399.8,150.5 M399.9,206.3 L399.9,176.1 M400.0,206.3 L400.0,208.0
+		M400.1,206.3 L400.1,199.5 M400.3,206.3 L400.3,225.5 M400.4,206.3 L400.4,195.4 M400.5,206.3 L400.5,191.4
+		M400.6,206.3 L400.6,165.3 M400.8,206.3 L400.8,241.1 M400.9,206.3 L400.9,215.7 M401.0,206.3 L401.0,277.6
+		M401.1,206.3 L401.1,132.6 M401.2,206.3 L401.2,217.4 M401.4,206.3 L401.4,195.8 M401.5,206.3 M401.6,206.3
+		L401.6,238.7 M401.7,206.3 L401.7,235.2 M401.9,206.3 L401.9,152.9 M402.0,206.3 L402.0,201.5 M402.1,206.3
+		L402.1,222.8 M402.2,206.3 L402.2,160.8 M402.4,206.3 L402.4,173.2 M402.5,206.3 L402.5,177.4 M402.6,206.3
+		L402.6,268.2 M402.7,206.3 L402.7,243.3 M402.8,206.3 L402.8,256.9 M403.0,206.3 L403.0,202.5 M403.1,206.3
+		L403.1,246.0 M403.2,206.3 L403.2,198.0 M403.3,206.3 L403.3,242.8 M403.5,206.3 L403.5,239.3 M403.6,206.3
+		L403.6,192.7 M403.7,206.3 L403.7,167.5 M403.8,206.3 L403.8,196.6 M404.0,206.3 L404.0,220.4 M404.1,206.3
+		L404.1,297.6 M404.2,206.3 L404.2,217.9 M404.3,206.3 L404.3,196.8 M404.4,206.3 L404.4,248.4 M404.6,206.3
+		L404.6,244.8 M404.7,206.3 L404.7,259.6 M404.8,206.3 L404.8,151.5 M404.9,206.3 L404.9,180.2 M405.1,206.3
+		L405.1,133.8 M405.2,206.3 L405.2,244.7 M405.3,206.3 L405.3,222.2 M405.4,206.3 L405.4,206.6 M405.6,206.3
+		L405.6,214.1 M405.7,206.3 L405.7,211.6 M405.8,206.3 L405.8,147.2 M405.9,206.3 L405.9,210.8 M406.0,206.3
+		L406.0,264.7 M406.2,206.3 L406.2,195.6 M406.3,206.3 L406.3,225.5 M406.4,206.3 L406.4,227.4 M406.5,206.3
+		L406.5,216.3 M406.7,206.3 L406.7,207.0 M406.8,206.3 L406.8,200.9 M406.9,206.3 L406.9,203.4 M407.0,206.3
+		L407.0,191.2 M407.2,206.3 L407.2,223.8 M407.3,206.3 L407.3,167.0 M407.4,206.3 L407.4,183.9 M407.5,206.3
+		L407.5,171.7 M407.6,206.3 L407.6,215.1 M407.8,206.3 L407.8,225.0 M407.9,206.3 L407.9,262.5 M408.0,206.3
+		L408.0,259.2 M408.1,206.3 L408.1,241.5 M408.3,206.3 L408.3,190.3 M408.4,206.3 L408.4,197.6 M408.5,206.3
+		L408.5,148.2 M408.6,206.3 L408.6,125.0 M408.7,206.3 L408.7,198.2 M408.9,206.3 L408.9,239.1 M409.0,206.3
+		L409.0,173.5 M409.1,206.3 L409.1,175.8 M409.2,206.3 L409.2,207.0 M409.4,206.3 L409.4,154.9 M409.5,206.3
+		L409.5,199.7 M409.6,206.3 L409.6,191.5 M409.7,206.3 L409.7,195.6 M409.9,206.3 L409.9,199.4 M410.0,206.3
+		L410.0,248.6 M410.1,206.3 L410.1,177.7 M410.2,206.3 L410.2,159.4 M410.3,206.3 L410.3,213.4 M410.5,206.3
+		L410.5,267.3 M410.6,206.3 L410.6,222.9 M410.7,206.3 L410.7,205.9 M410.8,206.3 L410.8,192.1 M411.0,206.3
+		L411.0,168.8 M411.1,206.3 L411.1,252.4 M411.2,206.3 L411.2,224.3 M411.3,206.3 L411.3,227.8 M411.5,206.3
+		M411.6,206.3 L411.6,177.1 M411.7,206.3 L411.7,193.1 M411.8,206.3 L411.8,176.6 M411.9,206.3 L411.9,212.8
+		M412.1,206.3 L412.1,214.2 M412.2,206.3 L412.2,174.3 M412.3,206.3 L412.3,187.5 M412.4,206.3 L412.4,223.7
+		M412.6,206.3 L412.6,187.1 M412.7,206.3 L412.7,215.8 M412.8,206.3 L412.8,175.6 M412.9,206.3 L412.9,172.5
+		M413.1,206.3 L413.1,199.5 M413.2,206.3 L413.2,212.3 M413.3,206.3 L413.3,227.9 M413.4,206.3 L413.4,205.3
+		M413.5,206.3 L413.5,243.6 M413.7,206.3 L413.7,170.9 M413.8,206.3 L413.8,176.2 M413.9,206.3 L413.9,204.3
+		M414.0,206.3 L414.0,229.5 M414.2,206.3 L414.2,176.3 M414.3,206.3 L414.3,151.5 M414.4,206.3 L414.4,193.7
+		M414.5,206.3 L414.5,213.9 M414.7,206.3 L414.7,240.2 M414.8,206.3 L414.8,180.6 M414.9,206.3 L414.9,234.6
+		M415.0,206.3 L415.0,207.3 M415.1,206.3 L415.1,197.3 M415.3,206.3 L415.3,200.6 M415.4,206.3 L415.4,192.0
+		M415.5,206.3 L415.5,185.7 M415.6,206.3 L415.6,209.9 M415.8,206.3 M415.9,206.3 L415.9,170.0 M416.0,206.3
+		L416.0,215.5 M416.1,206.3 L416.1,148.4 M416.2,206.3 L416.2,221.9 M416.4,206.3 L416.4,191.3 M416.5,206.3
+		L416.5,218.3 M416.6,206.3 L416.6,191.3 M416.7,206.3 L416.7,224.8 M416.9,206.3 L416.9,273.3 M417.0,206.3
+		L417.0,170.0 M417.1,206.3 L417.1,145.6 M417.2,206.3 L417.2,195.9 M417.4,206.3 L417.4,204.3 M417.5,206.3
+		L417.5,199.8 M417.6,206.3 L417.6,185.0 M417.7,206.3 L417.7,166.0 M417.8,206.3 L417.8,189.4 M418.0,206.3
+		L418.0,211.0 M418.1,206.3 L418.1,202.1 M418.2,206.3 L418.2,206.6 M418.3,206.3 L418.3,204.4 M418.5,206.3
+		L418.5,297.9 M418.6,206.3 L418.6,278.0 M418.7,206.3 L418.7,196.1 M418.8,206.3 L418.8,187.6 M419.0,206.3
+		L419.0,275.3 M419.1,206.3 L419.1,192.4 M419.2,206.3 L419.2,249.7 M419.3,206.3 L419.3,189.6 M419.4,206.3
+		L419.4,181.1 M419.6,206.3 L419.6,201.6 M419.7,206.3 L419.7,187.2 M419.8,206.3 L419.8,256.5 M419.9,206.3
+		L419.9,243.6 M420.1,206.3 L420.1,186.9 M420.2,206.3 L420.2,213.6 M420.3,206.3 L420.3,188.6 M420.4,206.3
+		L420.4,147.7 M420.6,206.3 L420.6,214.2 M420.7,206.3 L420.7,170.8 M420.8,206.3 L420.8,227.2 M420.9,206.3
+		L420.9,153.7 M421.0,206.3 L421.0,159.4 M421.2,206.3 L421.2,225.0 M421.3,206.3 L421.3,171.5 M421.4,206.3
+		L421.4,241.0 M421.5,206.3 L421.5,227.3 M421.7,206.3 L421.7,260.7 M421.8,206.3 L421.8,183.7 M421.9,206.3
+		L421.9,197.5 M422.0,206.3 L422.0,297.7 M422.2,206.3 L422.2,190.4 M422.3,206.3 L422.3,177.2 M422.4,206.3
+		L422.4,203.6 M422.5,206.3 L422.5,175.8 M422.6,206.3 L422.6,227.6 M422.8,206.3 L422.8,230.6 M422.9,206.3
+		L422.9,231.4 M423.0,206.3 L423.0,173.2 M423.1,206.3 L423.1,179.7 M423.3,206.3 L423.3,185.0 M423.4,206.3
+		L423.4,187.1 M423.5,206.3 L423.5,195.9 M423.6,206.3 L423.6,200.8 M423.8,206.3 L423.8,244.9 M423.9,206.3
+		L423.9,240.7 M424.0,206.3 L424.0,192.2 M424.1,206.3 L424.1,237.5 M424.2,206.3 L424.2,279.1 M424.4,206.3
+		L424.4,232.5 M424.5,206.3 L424.5,117.5 M424.6,206.3 L424.6,235.1 M424.7,206.3 L424.7,205.3 M424.9,206.3
+		L424.9,221.6 M425.0,206.3 L425.0,189.6 M425.1,206.3 L425.1,184.1 M425.2,206.3 L425.2,141.2 M425.3,206.3
+		L425.3,227.2 M425.5,206.3 L425.5,198.7 M425.6,206.3 L425.6,162.6 M425.7,206.3 L425.7,252.9 M425.8,206.3
+		L425.8,219.7 M426.0,206.3 L426.0,183.0 M426.1,206.3 L426.1,253.9 M426.2,206.3 L426.2,227.4 M426.3,206.3
+		L426.3,150.2 M426.5,206.3 L426.5,294.9 M426.6,206.3 L426.6,144.3 M426.7,206.3 L426.7,243.7 M426.8,206.3
+		L426.8,131.8 M426.9,206.3 L426.9,281.7 M427.1,206.3 L427.1,181.4 M427.2,206.3 L427.2,203.6 M427.3,206.3
+		L427.3,139.7 M427.4,206.3 L427.4,222.3 M427.6,206.3 L427.6,198.1 M427.7,206.3 L427.7,239.7 M427.8,206.3
+		L427.8,183.0 M427.9,206.3 L427.9,218.7 M428.1,206.3 L428.1,180.5 M428.2,206.3 L428.2,215.1 M428.3,206.3
+		L428.3,217.7  '/>	<path stroke='rgb(128, 128, 128)'  d='M428.4,206.3 L428.4,165.2 M428.5,206.3 L428.5,201.4 M428.7,206.3 L428.7,231.0 M428.8,206.3 L428.8,225.2
+		M428.9,206.3 L428.9,245.4 M429.0,206.3 L429.0,223.8 M429.2,206.3 L429.2,243.8 M429.3,206.3 L429.3,237.1
+		M429.4,206.3 L429.4,175.5 M429.5,206.3 L429.5,276.9 M429.7,206.3 L429.7,284.2 M429.8,206.3 L429.8,205.2
+		M429.9,206.3 L429.9,199.4 M430.0,206.3 L430.0,185.0 M430.1,206.3 L430.1,158.2 M430.3,206.3 L430.3,236.9
+		M430.4,206.3 L430.4,246.3 M430.5,206.3 L430.5,197.3 M430.6,206.3 L430.6,246.3 M430.8,206.3 L430.8,250.1
+		M430.9,206.3 L430.9,192.3 M431.0,206.3 L431.0,197.2 M431.1,206.3 L431.1,184.4 M431.3,206.3 L431.3,228.1
+		M431.4,206.3 L431.4,186.8 M431.5,206.3 L431.5,274.3 M431.6,206.3 L431.6,278.2 M431.7,206.3 L431.7,151.6
+		M431.9,206.3 L431.9,202.0 M432.0,206.3 L432.0,178.9 M432.1,206.3 L432.1,224.2 M432.2,206.3 L432.2,115.7
+		M432.4,206.3 L432.4,202.5 M432.5,206.3 L432.5,161.3 M432.6,206.3 L432.6,209.3 M432.7,206.3 L432.7,170.2
+		M432.8,206.3 L432.8,254.3 M433.0,206.3 M433.1,206.3 L433.1,197.7 M433.2,206.3 L433.2,200.8 M433.3,206.3
+		L433.3,166.5 M433.5,206.3 L433.5,193.4 M433.6,206.3 L433.6,213.4 M433.7,206.3 L433.7,211.3 M433.8,206.3
+		L433.8,109.4 M434.0,206.3 L434.0,218.6 M434.1,206.3 L434.1,303.4 M434.2,206.3 L434.2,261.3 M434.3,206.3
+		L434.3,188.8 M434.4,206.3 L434.4,184.1 M434.6,206.3 L434.6,214.1 M434.7,206.3 L434.7,211.1 M434.8,206.3
+		L434.8,186.8 M434.9,206.3 L434.9,306.3 M435.1,206.3 L435.1,184.8 M435.2,206.3 L435.2,157.1 M435.3,206.3
+		L435.3,245.1 M435.4,206.3 L435.4,239.9 M435.6,206.3 L435.6,231.4 M435.7,206.3 L435.7,208.7 M435.8,206.3
+		L435.8,183.6 M435.9,206.3 L435.9,216.7 M436.0,206.3 L436.0,201.4 M436.2,206.3 L436.2,264.4 M436.3,206.3
+		L436.3,204.5 M436.4,206.3 L436.4,245.6 M436.5,206.3 L436.5,176.9 M436.7,206.3 L436.7,206.6 M436.8,206.3
+		L436.8,160.9 M436.9,206.3 L436.9,200.7 M437.0,206.3 L437.0,230.4 M437.2,206.3 L437.2,204.2 M437.3,206.3
+		L437.3,205.6 M437.4,206.3 L437.4,202.4 M437.5,206.3 L437.5,230.5 M437.6,206.3 L437.6,191.5 M437.8,206.3
+		L437.8,276.0 M437.9,206.3 L437.9,260.8 M438.0,206.3 L438.0,225.4 M438.1,206.3 L438.1,194.3 M438.3,206.3
+		L438.3,196.9 M438.4,206.3 L438.4,222.2 M438.5,206.3 L438.5,176.0 M438.6,206.3 L438.6,218.9 M438.8,206.3
+		L438.8,205.6 M438.9,206.3 L438.9,207.4 M439.0,206.3 L439.0,201.6 M439.1,206.3 L439.1,202.3 M439.2,206.3
+		L439.2,252.9 M439.4,206.3 L439.4,199.4 M439.5,206.3 L439.5,207.4 M439.6,206.3 L439.6,215.0 M439.7,206.3
+		L439.7,163.5 M439.9,206.3 L439.9,244.6 M440.0,206.3 L440.0,262.9 M440.1,206.3 L440.1,233.2 M440.2,206.3
+		L440.2,188.2 M440.3,206.3 L440.3,202.6 M440.5,206.3 L440.5,231.4 M440.6,206.3 L440.6,167.2 M440.7,206.3
+		L440.7,258.0 M440.8,206.3 L440.8,208.9 M441.0,206.3 L441.0,180.7 M441.1,206.3 L441.1,159.6 M441.2,206.3
+		L441.2,167.7 M441.3,206.3 L441.3,220.4 M441.5,206.3 L441.5,174.7 M441.6,206.3 L441.6,199.4 M441.7,206.3
+		L441.7,181.1 M441.8,206.3 L441.8,205.6 M441.9,206.3 L441.9,167.3 M442.1,206.3 L442.1,233.0 M442.2,206.3
+		L442.2,228.2 M442.3,206.3 L442.3,178.7 M442.4,206.3 L442.4,211.3 M442.6,206.3 L442.6,201.6 M442.7,206.3
+		L442.7,215.2 M442.8,206.3 L442.8,160.3 M442.9,206.3 L442.9,207.0 M443.1,206.3 L443.1,196.7 M443.2,206.3
+		L443.2,237.9 M443.3,206.3 L443.3,210.2 M443.4,206.3 L443.4,225.9 M443.5,206.3 L443.5,229.3 M443.7,206.3
+		L443.7,182.2 M443.8,206.3 L443.8,202.7 M443.9,206.3 L443.9,171.7 M444.0,206.3 L444.0,208.0 M444.2,206.3
+		L444.2,200.9 M444.3,206.3 L444.3,163.5 M444.4,206.3 L444.4,179.3 M444.5,206.3 L444.5,224.1 M444.7,206.3
+		L444.7,183.5 M444.8,206.3 L444.8,255.1 M444.9,206.3 L444.9,210.5 M445.0,206.3 L445.0,245.7 M445.1,206.3
+		L445.1,200.6 M445.3,206.3 L445.3,243.1 M445.4,206.3 L445.4,193.7 M445.5,206.3 L445.5,161.4 M445.6,206.3
+		L445.6,261.2 M445.8,206.3 L445.8,196.6 M445.9,206.3 L445.9,230.7 M446.0,206.3 L446.0,225.0 M446.1,206.3
+		L446.1,188.2 M446.3,206.3 L446.3,171.1 M446.4,206.3 L446.4,184.5 M446.5,206.3 L446.5,210.9 M446.6,206.3
+		L446.6,210.5 M446.7,206.3 L446.7,211.6 M446.9,206.3 L446.9,180.7 M447.0,206.3 L447.0,174.8 M447.1,206.3
+		L447.1,219.7 M447.2,206.3 L447.2,208.0 M447.4,206.3 L447.4,211.9 M447.5,206.3 L447.5,192.1 M447.6,206.3
+		L447.6,214.0 M447.7,206.3 L447.7,235.0 M447.9,206.3 L447.9,240.5 M448.0,206.3 L448.0,234.6 M448.1,206.3
+		L448.1,193.7 M448.2,206.3 L448.2,201.2 M448.3,206.3 L448.3,216.3 M448.5,206.3 L448.5,195.9 M448.6,206.3
+		L448.6,180.1 M448.7,206.3 L448.7,245.0 M448.8,206.3 L448.8,185.5 M449.0,206.3 L449.0,208.4 M449.1,206.3
+		L449.1,209.5 M449.2,206.3 L449.2,200.5 M449.3,206.3 L449.3,175.6 M449.4,206.3 L449.4,229.5 M449.6,206.3
+		L449.6,192.3 M449.7,206.3 L449.7,195.9 M449.8,206.3 L449.8,218.0 M449.9,206.3 L449.9,183.1 M450.1,206.3
+		L450.1,211.2 M450.2,206.3 L450.2,207.3 M450.3,206.3 L450.3,236.2 M450.4,206.3 L450.4,207.3 M450.6,206.3
+		L450.6,231.0 M450.7,206.3 L450.7,215.3 M450.8,206.3 L450.8,227.2 M450.9,206.3 L450.9,230.6 M451.0,206.3
+		L451.0,206.6 M451.2,206.3 L451.2,210.6 M451.3,206.3 L451.3,240.6 M451.4,206.3 L451.4,239.4 M451.5,206.3
+		L451.5,213.3 M451.7,206.3 L451.7,218.5 M451.8,206.3 L451.8,171.2 M451.9,206.3 L451.9,195.2 M452.0,206.3
+		L452.0,254.3 M452.2,206.3 L452.2,240.5 M452.3,206.3 L452.3,225.4 M452.4,206.3 L452.4,214.9 M452.5,206.3
+		L452.5,196.1 M452.6,206.3 L452.6,226.6 M452.8,206.3 L452.8,250.9 M452.9,206.3 L452.9,209.3 M453.0,206.3
+		L453.0,178.6 M453.1,206.3 L453.1,182.5 M453.3,206.3 L453.3,223.2 M453.4,206.3 L453.4,158.9 M453.5,206.3
+		L453.5,211.5 M453.6,206.3 L453.6,228.0 M453.8,206.3 L453.8,221.0 M453.9,206.3 L453.9,191.6 M454.0,206.3
+		L454.0,183.8 M454.1,206.3 L454.1,182.7 M454.2,206.3 L454.2,202.9 M454.4,206.3 L454.4,228.7 M454.5,206.3
+		L454.5,165.3 M454.6,206.3 L454.6,201.1 M454.7,206.3 L454.7,263.7 M454.9,206.3 L454.9,197.3 M455.0,206.3
+		L455.0,232.2 M455.1,206.3 L455.1,210.0 M455.2,206.3 L455.2,216.1 M455.4,206.3 L455.4,215.3 M455.5,206.3
+		L455.5,124.2 M455.6,206.3 L455.6,234.6 M455.7,206.3 L455.7,198.4 M455.8,206.3 L455.8,235.8 M456.0,206.3
+		L456.0,257.6 M456.1,206.3 L456.1,247.8 M456.2,206.3 L456.2,194.0 M456.3,206.3 L456.3,230.0 M456.5,206.3
+		L456.5,210.5 M456.6,206.3 L456.6,221.7 M456.7,206.3 L456.7,189.7 M456.8,206.3 L456.8,196.3 M456.9,206.3
+		L456.9,199.4 M457.1,206.3 L457.1,209.7 M457.2,206.3 L457.2,207.4 M457.3,206.3 L457.3,252.9 M457.4,206.3
+		L457.4,222.2 M457.6,206.3 L457.6,226.9 M457.7,206.3 L457.7,171.7 M457.8,206.3 L457.8,156.6 M457.9,206.3
+		L457.9,189.8 M458.1,206.3 L458.1,231.2 M458.2,206.3 L458.2,190.6 M458.3,206.3 L458.3,232.7 M458.4,206.3
+		L458.4,223.6 M458.5,206.3 L458.5,128.5 M458.7,206.3 L458.7,201.0 M458.8,206.3 L458.8,207.4 M458.9,206.3
+		L458.9,218.8 M459.0,206.3 L459.0,230.3 M459.2,206.3 L459.2,211.2 M459.3,206.3 L459.3,189.5 M459.4,206.3
+		L459.4,211.6 M459.5,206.3 L459.5,218.5 M459.7,206.3 L459.7,179.5 M459.8,206.3 L459.8,219.6 M459.9,206.3
+		L459.9,197.1  '/>	<path stroke='rgb(128, 128, 128)'  d='M460.0,206.3 L460.0,158.9 M460.1,206.3 L460.1,184.1 M460.3,206.3 L460.3,193.1 M460.4,206.3 L460.4,225.8
+		M460.5,206.3 L460.5,212.3 M460.6,206.3 L460.6,180.7 M460.8,206.3 L460.8,220.1 M460.9,206.3 L460.9,215.7
+		M461.0,206.3 L461.0,178.5 M461.1,206.3 L461.1,202.5 M461.3,206.3 L461.3,214.5 M461.4,206.3 L461.4,192.8
+		M461.5,206.3 L461.5,194.7 M461.6,206.3 L461.6,138.2 M461.7,206.3 L461.7,227.2 M461.9,206.3 L461.9,172.1
+		M462.0,206.3 L462.0,189.1 M462.1,206.3 L462.1,174.6 M462.2,206.3 L462.2,151.5 M462.4,206.3 L462.4,215.2
+		M462.5,206.3 L462.5,230.7 M462.6,206.3 L462.6,205.9 M462.7,206.3 L462.7,235.6 M462.9,206.3 L462.9,203.7
+		M463.0,206.3 L463.0,221.5 M463.1,206.3 L463.1,215.4 M463.2,206.3 L463.2,218.0 M463.3,206.3 L463.3,191.3
+		M463.5,206.3 L463.5,226.7 M463.6,206.3 L463.6,195.7 M463.7,206.3 L463.7,195.7 M463.8,206.3 L463.8,208.5
+		M464.0,206.3 L464.0,167.1 M464.1,206.3 L464.1,201.9 M464.2,206.3 L464.2,229.4 M464.3,206.3 L464.3,236.5
+		M464.5,206.3 L464.5,218.0 M464.6,206.3 L464.6,176.7 M464.7,206.3 L464.7,198.3 M464.8,206.3 L464.8,210.3
+		M464.9,206.3 L464.9,150.3 M465.1,206.3 L465.1,199.8 M465.2,206.3 L465.2,223.5 M465.3,206.3 L465.3,222.5
+		M465.4,206.3 L465.4,191.5 M465.6,206.3 L465.6,234.8 M465.7,206.3 L465.7,212.1 M465.8,206.3 L465.8,216.4
+		M465.9,206.3 L465.9,208.1 M466.0,206.3 L466.0,218.7 M466.2,206.3 L466.2,184.1 M466.3,206.3 L466.3,208.8
+		M466.4,206.3 L466.4,212.1 M466.5,206.3 L466.5,242.0 M466.7,206.3 L466.7,223.5 M466.8,206.3 L466.8,199.7
+		M466.9,206.3 L466.9,221.7 M467.0,206.3 L467.0,215.5 M467.2,206.3 L467.2,219.6 M467.3,206.3 L467.3,206.6
+		M467.4,206.3 L467.4,208.1 M467.5,206.3 L467.5,194.4 M467.6,206.3 L467.6,190.0 M467.8,206.3 L467.8,220.7
+		M467.9,206.3 L467.9,179.0 M468.0,206.3 L468.0,205.5 M468.1,206.3 L468.1,201.5 M468.3,206.3 L468.3,185.8
+		M468.4,206.3 L468.4,173.2 M468.5,206.3 L468.5,208.1 M468.6,206.3 L468.6,216.4 M468.8,206.3 L468.8,203.0
+		M468.9,206.3 L468.9,196.8 M469.0,206.3 L469.0,203.7 M469.1,206.3 L469.1,182.4 M469.2,206.3 L469.2,190.4
+		M469.4,206.3 L469.4,217.4 M469.5,206.3 L469.5,240.6 M469.6,206.3 L469.6,223.0 M469.7,206.3 L469.7,200.1
+		M469.9,206.3 L469.9,182.7 M470.0,206.3 L470.0,181.7 M470.1,206.3 L470.1,205.2 M470.2,206.3 L470.2,176.1
+		M470.4,206.3 L470.4,205.9 M470.5,206.3 L470.5,182.7 M470.6,206.3 L470.6,207.0 M470.7,206.3 L470.7,199.9
+		M470.8,206.3 L470.8,226.2 M471.0,206.3 L471.0,207.0 M471.1,206.3 L471.1,207.7 M471.2,206.3 L471.2,191.7
+		M471.3,206.3 L471.3,201.6 M471.5,206.3 L471.5,212.7 M471.6,206.3 L471.6,215.2 M471.7,206.3 L471.7,203.4
+		M471.8,206.3 L471.8,212.0 M472.0,206.3 L472.0,255.1 M472.1,206.3 L472.1,199.8 M472.2,206.3 L472.2,188.3
+		M472.3,206.3 L472.3,219.2 M472.4,206.3 L472.4,212.4 M472.6,206.3 L472.6,133.4 M472.7,206.3 L472.7,179.8
+		M472.8,206.3 L472.8,191.8 M472.9,206.3 L472.9,234.1 M473.1,206.3 L473.1,212.3 M473.2,206.3 L473.2,174.5
+		M473.3,206.3 L473.3,228.8 M473.4,206.3 L473.4,207.0 M473.5,206.3 L473.5,202.7 M473.7,206.3 L473.7,207.3
+		M473.8,206.3 L473.8,186.2 M473.9,206.3 L473.9,177.5 M474.0,206.3 L474.0,208.4 M474.2,206.3 L474.2,192.7
+		M474.3,206.3 L474.3,180.5 M474.4,206.3 L474.4,202.1 M474.5,206.3 L474.5,184.5 M474.7,206.3 L474.7,251.7
+		M474.8,206.3 L474.8,180.9 M474.9,206.3 L474.9,227.1 M475.0,206.3 L475.0,250.0 M475.1,206.3 L475.1,217.5
+		M475.3,206.3 L475.3,193.3 M475.4,206.3 L475.4,188.4 M475.5,206.3 L475.5,207.3 M475.6,206.3 L475.6,237.2
+		M475.8,206.3 L475.8,207.7 M475.9,206.3 L475.9,208.4 M476.0,206.3 L476.0,194.0 M476.1,206.3 L476.1,242.6
+		M476.3,206.3 L476.3,240.0 M476.4,206.3 L476.4,206.6 M476.5,206.3 L476.5,252.5 M476.6,206.3 L476.6,204.8
+		M476.7,206.3 L476.7,180.1 M476.9,206.3 L476.9,234.7 M477.0,206.3 L477.0,219.3 M477.1,206.3 L477.1,204.5
+		M477.2,206.3 L477.2,197.2 M477.4,206.3 L477.4,236.7 M477.5,206.3 L477.5,155.4 M477.6,206.3 L477.6,244.5
+		M477.7,206.3 L477.7,190.4 M477.9,206.3 L477.9,213.9 M478.0,206.3 L478.0,230.5 M478.1,206.3 L478.1,190.0
+		M478.2,206.3 L478.2,179.6 M478.3,206.3 L478.3,248.6 M478.5,206.3 L478.5,240.2 M478.6,206.3 L478.6,178.9
+		M478.7,206.3 L478.7,223.8 M478.8,206.3 L478.8,171.7 M479.0,206.3 L479.0,258.4 M479.1,206.3 L479.1,202.6
+		M479.2,206.3 L479.2,235.3 M479.3,206.3 L479.3,192.3 M479.5,206.3 L479.5,204.4 M479.6,206.3 L479.6,197.8
+		M479.7,206.3 L479.7,214.0 M479.8,206.3 L479.8,198.6 M479.9,206.3 L479.9,173.4 M480.1,206.3 L480.1,185.6
+		M480.2,206.3 L480.2,196.1 M480.3,206.3 L480.3,183.9 M480.4,206.3 L480.4,210.2 M480.6,206.3 L480.6,192.3
+		M480.7,206.3 M480.8,206.3 L480.8,228.6 M480.9,206.3 L480.9,158.6 M481.0,206.3 L481.0,257.6 M481.2,206.3
+		L481.2,200.9 M481.3,206.3 L481.3,205.2 M481.4,206.3 L481.4,203.4 M481.5,206.3 L481.5,228.3 M481.7,206.3
+		L481.7,201.9 M481.8,206.3 L481.8,207.4 M481.9,206.3 L481.9,199.0 M482.0,206.3 L482.0,183.2 M482.2,206.3
+		L482.2,180.1 M482.3,206.3 L482.3,199.8 M482.4,206.3 L482.4,250.0 M482.5,206.3 L482.5,187.6 M482.6,206.3
+		L482.6,221.0 M482.8,206.3 L482.8,204.5 M482.9,206.3 L482.9,177.9 M483.0,206.3 L483.0,246.9 M483.1,206.3
+		L483.1,225.1 M483.3,206.3 L483.3,210.3 M483.4,206.3 L483.4,224.4 M483.5,206.3 L483.5,224.9 M483.6,206.3
+		L483.6,205.2 M483.8,206.3 L483.8,222.7 M483.9,206.3 L483.9,189.8 M484.0,206.3 L484.0,198.2 M484.1,206.3
+		L484.1,225.6 M484.2,206.3 L484.2,177.1 M484.4,206.3 M484.5,206.3 L484.5,204.5 M484.6,206.3 L484.6,237.3
+		M484.7,206.3 L484.7,174.5 M484.9,206.3 L484.9,167.9 M485.0,206.3 L485.0,225.1 M485.1,206.3 L485.1,178.8
+		M485.2,206.3 L485.2,202.0 M485.4,206.3 L485.4,202.3 M485.5,206.3 L485.5,154.1 M485.6,206.3 L485.6,214.1
+		M485.7,206.3 L485.7,192.1 M485.8,206.3 L485.8,186.4 M486.0,206.3 L486.0,197.1 M486.1,206.3 L486.1,194.3
+		M486.2,206.3 L486.2,215.8 M486.3,206.3 L486.3,199.9 M486.5,206.3 L486.5,195.4 M486.6,206.3 L486.6,241.2
+		M486.7,206.3 L486.7,230.7 M486.8,206.3 L486.8,245.9 M487.0,206.3 L487.0,203.8 M487.1,206.3 L487.1,221.0
+		M487.2,206.3 L487.2,233.0 M487.3,206.3 L487.3,195.4 M487.4,206.3 L487.4,212.4 M487.6,206.3 L487.6,191.5
+		M487.7,206.3 L487.7,234.8 M487.8,206.3 L487.8,196.5 M487.9,206.3 L487.9,241.5 M488.1,206.3 L488.1,237.3
+		M488.2,206.3 L488.2,200.8 M488.3,206.3 L488.3,226.8 M488.4,206.3 L488.4,119.9 M488.6,206.3 L488.6,180.7
+		M488.7,206.3 L488.7,217.8 M488.8,206.3 L488.8,204.8 M488.9,206.3 L488.9,175.8 M489.0,206.3 L489.0,216.7
+		M489.2,206.3 L489.2,210.2 M489.3,206.3 L489.3,196.2 M489.4,206.3 L489.4,190.2 M489.5,206.3 L489.5,192.7
+		M489.7,206.3 L489.7,215.5 M489.8,206.3 L489.8,178.2 M489.9,206.3 M490.0,206.3 L490.0,211.6 M490.1,206.3
+		L490.1,205.2 M490.3,206.3 L490.3,194.6 M490.4,206.3 L490.4,237.2 M490.5,206.3 L490.5,182.5 M490.6,206.3
+		L490.6,211.6 M490.8,206.3 L490.8,190.0 M490.9,206.3 L490.9,196.0 M491.0,206.3 L491.0,190.8 M491.1,206.3
+		L491.1,222.1 M491.3,206.3 L491.3,219.3 M491.4,206.3 L491.4,219.7 M491.5,206.3 L491.5,207.3 M491.6,206.3
+		L491.6,173.4  '/>	<path stroke='rgb(128, 128, 128)'  d='M491.7,206.3 L491.7,214.0 M491.9,206.3 L491.9,203.8 M492.0,206.3 L492.0,177.4 M492.1,206.3 L492.1,227.7
+		M492.2,206.3 L492.2,206.6 M492.4,206.3 L492.4,197.1 M492.5,206.3 L492.5,210.5 M492.6,206.3 L492.6,199.2
+		M492.7,206.3 L492.7,223.9 M492.9,206.3 L492.9,242.4 M493.0,206.3 L493.0,213.0 M493.1,206.3 L493.1,214.8
+		M493.2,206.3 L493.2,216.6 M493.3,206.3 L493.3,193.1 M493.5,206.3 L493.5,236.7 M493.6,206.3 L493.6,184.8
+		M493.7,206.3 L493.7,179.6 M493.8,206.3 L493.8,201.7 M494.0,206.3 L494.0,190.3 M494.1,206.3 L494.1,210.5
+		M494.2,206.3 L494.2,209.1 M494.3,206.3 L494.3,190.4 M494.5,206.3 L494.5,198.5 M494.6,206.3 L494.6,153.7
+		M494.7,206.3 L494.7,199.0 M494.8,206.3 L494.8,208.4 M494.9,206.3 L494.9,216.4 M495.1,206.3 L495.1,214.6
+		M495.2,206.3 L495.2,188.1 M495.3,206.3 L495.3,218.5 M495.4,206.3 L495.4,193.7 M495.6,206.3 M495.7,206.3
+		M495.8,206.3 L495.8,185.8 M495.9,206.3 L495.9,192.4 M496.1,206.3 L496.1,228.8 M496.2,206.3 L496.2,199.3
+		M496.3,206.3 L496.3,207.3 M496.4,206.3 L496.4,224.0 M496.5,206.3 L496.5,205.2 M496.7,206.3 L496.7,199.3
+		M496.8,206.3 L496.8,201.8 M496.9,206.3 L496.9,218.1 M497.0,206.3 L497.0,202.1 M497.2,206.3 L497.2,158.9
+		M497.3,206.3 L497.3,203.2 M497.4,206.3 L497.4,208.3 M497.5,206.3 L497.5,171.7 M497.6,206.3 L497.6,207.0
+		M497.8,206.3 L497.8,198.1 M497.9,206.3 L497.9,204.9 M498.0,206.3 L498.0,212.4 M498.1,206.3 L498.1,219.6
+		M498.3,206.3 L498.3,209.4 M498.4,206.3 L498.4,258.3 M498.5,206.3 L498.5,241.0 M498.6,206.3 L498.6,196.5
+		M498.8,206.3 L498.8,220.2 M498.9,206.3 L498.9,193.0 M499.0,206.3 L499.0,238.8 M499.1,206.3 L499.1,223.8
+		M499.2,206.3 L499.2,193.6 M499.4,206.3 L499.4,196.1 M499.5,206.3 L499.5,188.1 M499.6,206.3 L499.6,216.4
+		M499.7,206.3 L499.7,193.0 M499.9,206.3 L499.9,202.8 M500.0,206.3 L500.0,194.8 M500.1,206.3 L500.1,240.8
+		M500.2,206.3 L500.2,191.9 M500.4,206.3 L500.4,179.5 M500.5,206.3 L500.5,220.5 M500.6,206.3 L500.6,186.8
+		M500.7,206.3 L500.7,203.8 M500.8,206.3 L500.8,197.6 M501.0,206.3 L501.0,212.5 M501.1,206.3 L501.1,221.9
+		M501.2,206.3 L501.2,189.6 M501.3,206.3 L501.3,205.2 M501.5,206.3 L501.5,180.7 M501.6,206.3 L501.6,193.2
+		M501.7,206.3 L501.7,194.6 M501.8,206.3 L501.8,198.4 M502.0,206.3 L502.0,198.1 M502.1,206.3 L502.1,217.5
+		M502.2,206.3 L502.2,210.4 M502.3,206.3 L502.3,199.4 M502.4,206.3 L502.4,203.9 M502.6,206.3 L502.6,234.7
+		M502.7,206.3 L502.7,214.5 M502.8,206.3 L502.8,203.5 M502.9,206.3 L502.9,197.0 M503.1,206.3 L503.1,212.1
+		M503.2,206.3 L503.2,205.9 M503.3,206.3 L503.3,202.8 M503.4,206.3 L503.4,186.7 M503.6,206.3 L503.6,187.1
+		M503.7,206.3 L503.7,227.1 M503.8,206.3 L503.8,202.5 M503.9,206.3 L503.9,234.4 M504.0,206.3 L504.0,235.3
+		M504.2,206.3 L504.2,192.1 M504.3,206.3 L504.3,210.8 M504.4,206.3 L504.4,220.5 M504.5,206.3 L504.5,195.2
+		M504.7,206.3 L504.7,184.5 M504.8,206.3 L504.8,205.2 M504.9,206.3 L504.9,203.9 M505.0,206.3 L505.0,231.4
+		M505.1,206.3 L505.1,201.4 M505.3,206.3 L505.3,234.7 M505.4,206.3 L505.4,201.4 M505.5,206.3 L505.5,203.5
+		M505.6,206.3 L505.6,211.1 M505.8,206.3 L505.8,154.5 M505.9,206.3 L505.9,212.1 M506.0,206.3 L506.0,208.0
+		M506.1,206.3 L506.1,208.0 M506.3,206.3 L506.3,208.3 M506.4,206.3 L506.4,243.6 M506.5,206.3 L506.5,229.6
+		M506.6,206.3 L506.6,192.7 M506.7,206.3 L506.7,209.1 M506.9,206.3 L506.9,201.8 M507.0,206.3 L507.0,186.2
+		M507.1,206.3 L507.1,191.8 M507.2,206.3 L507.2,201.8 M507.4,206.3 L507.4,208.7 M507.5,206.3 L507.5,221.8
+		M507.6,206.3 L507.6,176.6 M507.7,206.3 L507.7,201.8 M507.9,206.3 L507.9,201.1 M508.0,206.3 L508.0,188.8
+		M508.1,206.3 L508.1,214.5 M508.2,206.3 L508.2,211.8 M508.3,206.3 L508.3,199.8 M508.5,206.3 L508.5,207.0
+		M508.6,206.3 L508.6,202.8 M508.7,206.3 L508.7,226.2 M508.8,206.3 L508.8,198.4 M509.0,206.3 L509.0,176.2
+		M509.1,206.3 L509.1,227.8 M509.2,206.3 L509.2,204.2 M509.3,206.3 L509.3,209.0 M509.5,206.3 L509.5,163.0
+		M509.6,206.3 L509.6,201.5 M509.7,206.3 L509.7,205.3 M509.8,206.3 L509.8,212.4 M509.9,206.3 L509.9,192.0
+		M510.1,206.3 L510.1,216.4 M510.2,206.3 L510.2,192.4 M510.3,206.3 L510.3,202.9 M510.4,206.3 L510.4,202.2
+		M510.6,206.3 L510.6,246.3 M510.7,206.3 L510.7,218.5 M510.8,206.3 L510.8,201.5 M510.9,206.3 L510.9,191.3
+		M511.1,206.3 L511.1,210.7 M511.2,206.3 L511.2,219.9 M511.3,206.3 L511.3,221.3 M511.4,206.3 L511.4,203.5
+		M511.5,206.3 L511.5,197.7 M511.7,206.3 L511.7,199.4 M511.8,206.3 L511.8,216.2 M511.9,206.3 L511.9,222.7
+		M512.0,206.3 L512.0,209.7 M512.2,206.3 L512.2,194.3 M512.3,206.3 L512.3,188.2 M512.4,206.3 L512.4,186.2
+		M512.5,206.3 L512.5,194.7 M512.7,206.3 L512.7,207.3 M512.8,206.3 L512.8,228.7 M512.9,206.3 L512.9,208.3
+		M513.0,206.3 L513.0,205.3 M513.1,206.3 L513.1,207.0 M513.3,206.3 L513.3,208.0 M513.4,206.3 L513.4,211.4
+		M513.5,206.3 L513.5,202.2 M513.6,206.3 L513.6,202.5 M513.8,206.3 L513.8,201.2 M513.9,206.3 M514.0,206.3
+		L514.0,200.2 M514.1,206.3 L514.1,218.9 M514.2,206.3 L514.2,188.9 M514.4,206.3 L514.4,204.9 M514.5,206.3
+		L514.5,205.6 M514.6,206.3 L514.6,204.6 M514.7,206.3 L514.7,189.4 M514.9,206.3 L514.9,211.0 M515.0,206.3
+		L515.0,230.3 M515.1,206.3 L515.1,236.3 M515.2,206.3 L515.2,203.9 M515.4,206.3 L515.4,224.8 M515.5,206.3
+		L515.5,203.2 M515.6,206.3 L515.6,207.3 M515.7,206.3 L515.7,212.5 M515.8,206.3 L515.8,201.1 M516.0,206.3
+		L516.0,209.4 M516.1,206.3 L516.1,211.1 M516.2,206.3 L516.2,215.9 M516.3,206.3 L516.3,216.3 M516.5,206.3
+		L516.5,200.8 M516.6,206.3 L516.6,209.7 M516.7,206.3 L516.7,220.4 M516.8,206.3 L516.8,203.2 M517.0,206.3
+		L517.0,194.9 M517.1,206.3 L517.1,219.1 M517.2,206.3 L517.2,196.2 M517.3,206.3 L517.3,215.3 M517.4,206.3
+		L517.4,184.5 M517.6,206.3 L517.6,213.9 M517.7,206.3 L517.7,223.2 M517.8,206.3 L517.8,222.2 M517.9,206.3
+		L517.9,210.4 M518.1,206.3 L518.1,201.1 M518.2,206.3 L518.2,209.7 M518.3,206.3 L518.3,194.8 M518.4,206.3
+		L518.4,215.6 M518.6,206.3 L518.6,191.0 M518.7,206.3 L518.7,200.4 M518.8,206.3 L518.8,208.3 M518.9,206.3
+		L518.9,204.9 M519.0,206.3 L519.0,206.6 M519.2,206.3 L519.2,196.9 M519.3,206.3 L519.3,212.5 M519.4,206.3
+		L519.4,194.2 M519.5,206.3 L519.5,190.8 M519.7,206.3 L519.7,210.7 M519.8,206.3 L519.8,213.8 M519.9,206.3
+		L519.9,222.8 M520.0,206.3 L520.0,210.8 M520.2,206.3 L520.2,202.8 M520.3,206.3 L520.3,204.5 M520.4,206.3
+		L520.4,196.3 M520.5,206.3 L520.5,218.0 M520.6,206.3 L520.6,206.6 M520.8,206.3 L520.8,201.4 M520.9,206.3
+		L520.9,223.9 M521.0,206.3 L521.0,221.2 M521.1,206.3 L521.1,205.9 M521.3,206.3 L521.3,207.0 M521.4,206.3
+		L521.4,206.6 M521.5,206.3 L521.5,226.1 M521.6,206.3 L521.6,207.3 M521.7,206.3 L521.7,206.6 M521.9,206.3
+		L521.9,216.1 M522.0,206.3 L522.0,204.2 M522.1,206.3 L522.1,217.1 M522.2,206.3 L522.2,211.5 M522.4,206.3
+		L522.4,208.7 M522.5,206.3 L522.5,191.2 M522.6,206.3 L522.6,209.1 M522.7,206.3 L522.7,224.2 M522.9,206.3
+		L522.9,202.1 M523.0,206.3 L523.0,214.0 M523.1,206.3 L523.1,189.0 M523.2,206.3 L523.2,215.4 M523.3,206.3
+		L523.3,212.3  '/>	<path stroke='rgb(128, 128, 128)'  d='M523.5,206.3 L523.5,207.7 M523.6,206.3 M523.7,206.3 L523.7,194.0 M523.8,206.3 L523.8,219.3 M524.0,206.3
+		L524.0,221.4 M524.1,206.3 L524.1,227.5 M524.2,206.3 L524.2,197.8 M524.3,206.3 L524.3,219.4 M524.5,206.3
+		L524.5,226.2 M524.6,206.3 L524.6,213.8 M524.7,206.3 L524.7,197.0 M524.8,206.3 L524.8,210.2 M524.9,206.3
+		L524.9,224.1 M525.1,206.3 L525.1,208.1 M525.2,206.3 L525.2,204.8 M525.3,206.3 L525.3,200.5 M525.4,206.3
+		L525.4,282.7 M525.6,206.3 L525.6,200.8 M525.7,206.3 L525.7,225.9 M525.8,206.3 L525.8,190.6 M525.9,206.3
+		L525.9,215.0 M526.1,206.3 L526.1,203.4 M526.2,206.3 L526.2,192.8 M526.3,206.3 L526.3,214.3 M526.4,206.3
+		L526.4,199.7 M526.5,206.3 L526.5,247.5 M526.7,206.3 L526.7,180.3 M526.8,206.3 L526.8,237.7 M526.9,206.3
+		L526.9,200.0 M527.0,206.3 L527.0,205.5 M527.2,206.3 L527.2,232.3 M527.3,206.3 L527.3,215.9 M527.4,206.3
+		L527.4,231.4 M527.5,206.3 L527.5,204.4 M527.7,206.3 L527.7,227.8 M527.8,206.3 L527.8,210.7 M527.9,206.3
+		L527.9,186.9 M528.0,206.3 L528.0,265.3 M528.1,206.3 L528.1,153.9 M528.3,206.3 L528.3,201.8 M528.4,206.3
+		L528.4,181.8 M528.5,206.3 L528.5,221.4 M528.6,206.3 L528.6,229.3 M528.8,206.3 L528.8,164.4 M528.9,206.3
+		L528.9,236.6 M529.0,206.3 L529.0,147.5 M529.1,206.3 L529.1,212.1 M529.2,206.3 L529.2,222.1 M529.4,206.3
+		L529.4,193.0 M529.5,206.3 L529.5,237.3 M529.6,206.3 L529.6,231.1 M529.7,206.3 L529.7,205.5 M529.9,206.3
+		L529.9,197.4 M530.0,206.3 L530.0,196.3 M530.1,206.3 L530.1,192.6 M530.2,206.3 L530.2,242.2 M530.4,206.3
+		L530.4,214.5 M530.5,206.3 L530.5,241.1 M530.6,206.3 L530.6,221.7 M530.7,206.3 L530.7,181.8 M530.8,206.3
+		L530.8,228.8 M531.0,206.3 L531.0,247.9 M531.1,206.3 L531.1,176.3 M531.2,206.3 L531.2,203.3 M531.3,206.3
+		L531.3,220.6 M531.5,206.3 L531.5,187.8 M531.6,206.3 L531.6,223.3 M531.7,206.3 L531.7,188.5 M531.8,206.3
+		L531.8,188.6 M532.0,206.3 L532.0,203.6 M532.1,206.3 L532.1,210.4 M532.2,206.3 L532.2,232.3 M532.3,206.3
+		L532.3,175.4 M532.4,206.3 L532.4,201.0 M532.6,206.3 L532.6,207.4 M532.7,206.3 L532.7,263.6 M532.8,206.3
+		L532.8,213.5 M532.9,206.3 L532.9,180.9 M533.1,206.3 L533.1,193.1 M533.2,206.3 L533.2,193.5 M533.3,206.3
+		L533.3,224.7 M533.4,206.3 L533.4,208.9 M533.6,206.3 L533.6,208.2 M533.7,206.3 L533.7,196.5 M533.8,206.3
+		L533.8,240.0 M533.9,206.3 L533.9,235.2 M534.0,206.3 L534.0,179.2 M534.2,206.3 L534.2,241.8 M534.3,206.3
+		L534.3,206.7 M534.4,206.3 L534.4,194.0 M534.5,206.3 L534.5,182.7 M534.7,206.3 L534.7,180.9 M534.8,206.3
+		L534.8,221.0 M534.9,206.3 L534.9,185.8 M535.0,206.3 L535.0,200.6 M535.2,206.3 L535.2,217.6 M535.3,206.3
+		L535.3,181.4 M535.4,206.3 L535.4,274.8 M535.5,206.3 L535.5,222.7 M535.6,206.3 L535.6,229.7 M535.8,206.3
+		L535.8,205.9 M535.9,206.3 L535.9,209.0 M536.0,206.3 L536.0,203.6 M536.1,206.3 L536.1,227.5 M536.3,206.3
+		L536.3,197.0 M536.4,206.3 L536.4,194.7 M536.5,206.3 L536.5,223.6 M536.6,206.3 L536.6,207.4 M536.8,206.3
+		L536.8,214.8 M536.9,206.3 L536.9,229.5 M537.0,206.3 L537.0,203.9 M537.1,206.3 L537.1,247.3 M537.2,206.3
+		L537.2,226.7 M537.4,206.3 L537.4,211.4 M537.5,206.3 L537.5,230.0 M537.6,206.3 L537.6,221.4 M537.7,206.3
+		L537.7,223.8 M537.9,206.3 L537.9,188.0 M538.0,206.3 L538.0,194.4 M538.1,206.3 L538.1,221.0 M538.2,206.3
+		L538.2,227.4 M538.3,206.3 L538.3,201.5 M538.5,206.3 L538.5,271.0 M538.6,206.3 L538.6,229.8 M538.7,206.3
+		L538.7,208.3 M538.8,206.3 L538.8,190.0 M539.0,206.3 L539.0,226.6 M539.1,206.3 L539.1,181.9 M539.2,206.3
+		L539.2,306.6 M539.3,206.3 L539.3,275.5 M539.5,206.3 L539.5,232.0 M539.6,206.3 L539.6,166.8 M539.7,206.3
+		L539.7,150.1 M539.8,206.3 L539.8,245.7 M539.9,206.3 L539.9,184.6 M540.1,206.3 L540.1,223.7 M540.2,206.3
+		L540.2,201.7 M540.3,206.3 L540.3,200.0 M540.4,206.3 L540.4,196.7 M540.6,206.3 L540.6,153.0 M540.7,206.3
+		L540.7,259.9 M540.8,206.3 L540.8,147.7 M540.9,206.3 L540.9,275.2 M541.1,206.3 L541.1,205.0 M541.2,206.3
+		L541.2,201.3 M541.3,206.3 L541.3,209.6 M541.4,206.3 L541.4,200.9 M541.5,206.3 L541.5,176.5 M541.7,206.3
+		L541.7,215.8 M541.8,206.3 L541.8,199.2 M541.9,206.3 L541.9,205.0 M542.0,206.3 L542.0,228.2 M542.2,206.3
+		L542.2,179.8 M542.3,206.3 L542.3,209.2 M542.4,206.3 L542.4,222.8 M542.5,206.3 L542.5,199.2 M542.7,206.3
+		L542.7,208.3 M542.8,206.3 L542.8,203.8 M542.9,206.3 L542.9,224.5 M543.0,206.3 L543.0,204.6 M543.1,206.3
+		L543.1,196.3 M543.3,206.3 L543.3,277.2 M543.4,206.3 L543.4,209.6 M543.5,206.3 L543.5,205.9 M543.6,206.3
+		L543.6,208.8 M543.8,206.3 L543.8,207.1 M543.9,206.3 L543.9,205.9 M544.0,206.3 L544.0,248.5 M544.1,206.3
+		L544.1,227.1 M544.3,206.3 L544.3,286.3 M544.4,206.3 L544.4,205.4 M544.5,206.3 L544.5,210.2 M544.6,206.3
+		L544.6,202.4 M544.7,206.3 L544.7,276.6 M544.9,206.3 L544.9,266.1 M545.0,206.3 L545.0,174.7 M545.1,206.3
+		L545.1,260.6 M545.2,206.3 M545.4,206.3 L545.4,206.7 M545.5,206.3 L545.5,174.6 M545.6,206.3 L545.6,195.6
+		M545.7,206.3 L545.7,106.1 M545.8,206.3 L545.8,273.7 M546.0,206.3 L546.0,143.2 M546.1,206.3 L546.1,194.5
+		M546.2,206.3 L546.2,154.9 M546.3,206.3 L546.3,225.6 M546.5,206.3 L546.5,184.3 M546.6,206.3 L546.6,242.9
+		M546.7,206.3 L546.7,199.8 M546.8,206.3 L546.8,209.7 M547.0,206.3 L547.0,231.0 M547.1,206.3 L547.1,245.5
+		M547.2,206.3 L547.2,192.7 M547.3,206.3 L547.3,160.2 M547.4,206.3 L547.4,168.8 M547.6,206.3 L547.6,189.6
+		M547.7,206.3 L547.7,236.7 M547.8,206.3 L547.8,252.5 M547.9,206.3 L547.9,224.1 M548.1,206.3 L548.1,258.9
+		M548.2,206.3 L548.2,235.5 M548.3,206.3 L548.3,199.6 M548.4,206.3 L548.4,223.6 M548.6,206.3 L548.6,171.7
+		M548.7,206.3 L548.7,195.2 M548.8,206.3 L548.8,169.4 M548.9,206.3 L548.9,186.6 M549.0,206.3 L549.0,211.1
+		M549.2,206.3 L549.2,230.7 M549.3,206.3 L549.3,206.7 M549.4,206.3 L549.4,214.2 M549.5,206.3 L549.5,164.3
+		M549.7,206.3 L549.7,182.4 M549.8,206.3 L549.8,208.4 M549.9,206.3 L549.9,201.9 M550.0,206.3 L550.0,163.2
+		M550.2,206.3 L550.2,145.4 M550.3,206.3 L550.3,167.1 M550.4,206.3 L550.4,212.6 M550.5,206.3 L550.5,210.9
+		M550.6,206.3 L550.6,223.1 M550.8,206.3 L550.8,191.5 M550.9,206.3 L550.9,138.2 M551.0,206.3 L551.0,250.0
+		M551.1,206.3 L551.1,225.6 M551.3,206.3 L551.3,204.2 M551.4,206.3 L551.4,226.9 M551.5,206.3 L551.5,178.1
+		M551.6,206.3 L551.6,148.7 M551.8,206.3 L551.8,185.6 M551.9,206.3 L551.9,190.2 M552.0,206.3 L552.0,207.1
+		M552.1,206.3 L552.1,258.4 M552.2,206.3 L552.2,276.6 M552.4,206.3 L552.4,227.8 M552.5,206.3 L552.5,200.8
+		M552.6,206.3 L552.6,251.4 M552.7,206.3 M552.9,206.3 L552.9,217.0 M553.0,206.3 L553.0,245.9 M553.1,206.3
+		L553.1,198.1 M553.2,206.3 L553.2,178.3 M553.4,206.3 L553.4,196.8 M553.5,206.3 L553.5,216.1 M553.6,206.3
+		L553.6,223.5 M553.7,206.3 L553.7,111.2 M553.8,206.3 L553.8,158.4 M554.0,206.3 L554.0,232.2 M554.1,206.3
+		L554.1,246.8 M554.2,206.3 L554.2,205.8 M554.3,206.3 M554.5,206.3 L554.5,134.4 M554.6,206.3 L554.6,208.8
+		M554.7,206.3 L554.7,185.0 M554.8,206.3 L554.8,241.7 M554.9,206.3 L554.9,198.7 M555.1,206.3 L555.1,219.7
+		M555.2,206.3 L555.2,184.9  '/>	<path stroke='rgb(128, 128, 128)'  d='M555.3,206.3 L555.3,218.4 M555.4,206.3 L555.4,167.1 M555.6,206.3 L555.6,193.4 M555.7,206.3 L555.7,215.4
+		M555.8,206.3 L555.8,202.1 M555.9,206.3 L555.9,213.7 M556.1,206.3 L556.1,277.7 M556.2,206.3 L556.2,192.0
+		M556.3,206.3 L556.3,208.0 M556.4,206.3 L556.4,222.7 M556.5,206.3 L556.5,205.0 M556.7,206.3 L556.7,280.6
+		M556.8,206.3 L556.8,110.5 M556.9,206.3 L556.9,242.9 M557.0,206.3 L557.0,242.3 M557.2,206.3 L557.2,187.1
+		M557.3,206.3 L557.3,195.3 M557.4,206.3 L557.4,245.8 M557.5,206.3 L557.5,192.6 M557.7,206.3 L557.7,227.6
+		M557.8,206.3 L557.8,176.0 M557.9,206.3 L557.9,208.4 M558.0,206.3 L558.0,171.6 M558.1,206.3 L558.1,219.8
+		M558.3,206.3 L558.3,254.3 M558.4,206.3 L558.4,204.1 M558.5,206.3 L558.5,229.0 M558.6,206.3 L558.6,240.7
+		M558.8,206.3 L558.8,228.4 M558.9,206.3 L558.9,201.5 M559.0,206.3 L559.0,210.6 M559.1,206.3 L559.1,160.0
+		M559.3,206.3 L559.3,208.9 M559.4,206.3 L559.4,183.1 M559.5,206.3 L559.5,208.0 M559.6,206.3 L559.6,208.4
+		M559.7,206.3 L559.7,158.9 M559.9,206.3 L559.9,216.5 M560.0,206.3 L560.0,237.4 M560.1,206.3 L560.1,231.2
+		M560.2,206.3 L560.2,185.2 M560.4,206.3 L560.4,208.4 M560.5,206.3 L560.5,215.7 M560.6,206.3 L560.6,233.8
+		M560.7,206.3 L560.7,200.7 M560.9,206.3 L560.9,195.9 M561.0,206.3 L561.0,190.8 M561.1,206.3 L561.1,205.0
+		M561.2,206.3 L561.2,183.6 M561.3,206.3 L561.3,195.2 M561.5,206.3 L561.5,159.2 M561.6,206.3 L561.6,207.1
+		M561.7,206.3 L561.7,227.0 M561.8,206.3 L561.8,205.8 M562.0,206.3 L562.0,218.6 M562.1,206.3 L562.1,228.0
+		M562.2,206.3 L562.2,168.0 M562.3,206.3 L562.3,156.6 M562.4,206.3 L562.4,143.5 M562.6,206.3 L562.6,203.4
+		M562.7,206.3 L562.7,122.0 M562.8,206.3 L562.8,233.9 M562.9,206.3 L562.9,285.3 M563.1,206.3 L563.1,246.3
+		M563.2,206.3 L563.2,231.9 M563.3,206.3 L563.3,199.1 M563.4,206.3 L563.4,197.5 M563.6,206.3 L563.6,172.8
+		M563.7,206.3 L563.7,238.4 M563.8,206.3 L563.8,248.8 M563.9,206.3 L563.9,194.0 M564.0,206.3 L564.0,208.0
+		M564.2,206.3 L564.2,195.3 M564.3,206.3 L564.3,191.1 M564.4,206.3 L564.4,201.7 M564.5,206.3 L564.5,177.4
+		M564.7,206.3 L564.7,184.7 M564.8,206.3 L564.8,204.2 M564.9,206.3 L564.9,220.4 M565.0,206.3 L565.0,222.5
+		M565.2,206.3 L565.2,197.5 M565.3,206.3 L565.3,155.7 M565.4,206.3 L565.4,250.2 M565.5,206.3 L565.5,212.1
+		M565.6,206.3 L565.6,251.5 M565.8,206.3 L565.8,229.5 M565.9,206.3 L565.9,183.1 M566.0,206.3 L566.0,210.1
+		M566.1,206.3 L566.1,200.0 M566.3,206.3 M566.4,206.3 L566.4,188.6 M566.5,206.3 L566.5,197.5 M566.6,206.3
+		L566.6,241.1 M566.8,206.3 L566.8,198.3 M566.9,206.3 L566.9,199.5 M567.0,206.3 L567.0,202.9 M567.1,206.3
+		L567.1,216.3 M567.2,206.3 L567.2,175.3 M567.4,206.3 L567.4,218.0 M567.5,206.3 L567.5,184.6 M567.6,206.3
+		L567.6,178.9 M567.7,206.3 L567.7,203.4 M567.9,206.3 L567.9,208.8 M568.0,206.3 L568.0,193.4 M568.1,206.3
+		L568.1,170.5 M568.2,206.3 L568.2,246.6 M568.4,206.3 L568.4,218.3 M568.5,206.3 L568.5,204.6 M568.6,206.3
+		L568.6,216.2 M568.7,206.3 L568.7,195.9 M568.8,206.3 L568.8,210.8 M569.0,206.3 L569.0,304.8 M569.1,206.3
+		L569.1,245.0 M569.2,206.3 L569.2,205.0 M569.3,206.3 L569.3,205.8 M569.5,206.3 L569.5,189.2 M569.6,206.3
+		L569.6,215.6 M569.7,206.3 L569.7,252.1 M569.8,206.3 L569.8,181.8 M569.9,206.3 L569.9,196.0 M570.1,206.3
+		L570.1,197.3 M570.2,206.3 L570.2,214.4 M570.3,206.3 L570.3,228.1 M570.4,206.3 L570.4,247.2 M570.6,206.3
+		L570.6,199.8 M570.7,206.3 L570.7,269.8 M570.8,206.3 L570.8,208.9 M570.9,206.3 L570.9,194.9 M571.1,206.3
+		L571.1,221.6 M571.2,206.3 L571.2,190.1 M571.3,206.3 L571.3,184.9 M571.4,206.3 L571.4,221.5 M571.5,206.3
+		L571.5,222.0 M571.7,206.3 L571.7,229.6 M571.8,206.3 L571.8,222.6 M571.9,206.3 L571.9,200.1 M572.0,206.3
+		L572.0,175.9 M572.2,206.3 L572.2,244.6 M572.3,206.3 L572.3,205.8 M572.4,206.3 L572.4,210.3 M572.5,206.3
+		L572.5,201.4 M572.7,206.3 L572.7,216.9 M572.8,206.3 L572.8,213.8 M572.9,206.3 L572.9,213.8 M573.0,206.3
+		L573.0,204.1 M573.1,206.3 L573.1,215.6 M573.3,206.3 L573.3,182.7 M573.4,206.3 L573.4,213.4 M573.5,206.3
+		L573.5,66.9 M573.6,206.3 L573.6,225.7 M573.8,206.3 L573.8,209.3 M573.9,206.3 L573.9,224.9 M574.0,206.3
+		L574.0,179.4 M574.1,206.3 L574.1,153.5 M574.3,206.3 L574.3,239.3 M574.4,206.3 L574.4,186.5 M574.5,206.3
+		L574.5,212.3 M574.6,206.3 L574.6,194.7 M574.7,206.3 L574.7,234.6 M574.9,206.3 L574.9,224.4 M575.0,206.3
+		L575.0,231.0 M575.1,206.3 L575.1,193.7 M575.2,206.3 L575.2,209.3 M575.4,206.3 L575.4,183.8 M575.5,206.3
+		L575.5,188.2 M575.6,206.3 L575.6,226.5 M575.7,206.3 L575.7,179.2 M575.9,206.3 L575.9,203.3 M576.0,206.3
+		L576.0,211.0 M576.1,206.3 L576.1,200.7 M576.2,206.3 L576.2,229.0 M576.3,206.3 L576.3,205.0 M576.5,206.3
+		L576.5,235.2 M576.6,206.3 M576.7,206.3 L576.7,202.4 M576.8,206.3 L576.8,222.8 M577.0,206.3 L577.0,239.8
+		M577.1,206.3 L577.1,196.7 M577.2,206.3 L577.2,142.5 M577.3,206.3 L577.3,207.1 M577.5,206.3 L577.5,195.5
+		M577.6,206.3 L577.6,241.7 M577.7,206.3 L577.7,212.8 M577.8,206.3 L577.8,191.1 M577.9,206.3 L577.9,215.4
+		M578.1,206.3 L578.1,183.4 M578.2,206.3 L578.2,208.0 M578.3,206.3 L578.3,214.5 M578.4,206.3 L578.4,197.6
+		M578.6,206.3 L578.6,214.5 M578.7,206.3 L578.7,215.4 M578.8,206.3 L578.8,240.1 M578.9,206.3 M579.0,206.3
+		L579.0,181.9 M579.2,206.3 L579.2,199.3 M579.3,206.3 L579.3,190.3 M579.4,206.3 L579.4,190.8 M579.5,206.3
+		L579.5,254.3 M579.7,206.3 L579.7,205.4 M579.8,206.3 L579.8,180.3 M579.9,206.3 L579.9,191.2 M580.0,206.3
+		L580.0,139.1 M580.2,206.3 L580.2,156.0 M580.3,206.3 L580.3,226.5 M580.4,206.3 L580.4,209.2 M580.5,206.3
+		L580.5,183.5 M580.6,206.3 L580.6,169.5 M580.8,206.3 L580.8,210.0 M580.9,206.3 L580.9,191.7 M581.0,206.3
+		L581.0,230.9 M581.1,206.3 L581.1,213.0 M581.3,206.3 L581.3,237.8 M581.4,206.3 L581.4,217.7 M581.5,206.3
+		L581.5,209.2 M581.6,206.3 L581.6,214.7 M581.8,206.3 L581.8,199.1 M581.9,206.3 L581.9,210.5 M582.0,206.3
+		L582.0,244.1 M582.1,206.3 L582.1,209.7 M582.2,206.3 L582.2,207.6 M582.4,206.3 L582.4,204.6 M582.5,206.3
+		L582.5,244.4 M582.6,206.3 L582.6,212.3 M582.7,206.3 L582.7,220.5 M582.9,206.3 L582.9,214.1 M583.0,206.3
+		L583.0,205.0 M583.1,206.3 L583.1,171.8 M583.2,206.3 L583.2,182.7 M583.4,206.3 L583.4,211.4 M583.5,206.3
+		L583.5,196.9 M583.6,206.3 L583.6,210.1 M583.7,206.3 L583.7,210.1 M583.8,206.3 L583.8,128.6 M584.0,206.3
+		L584.0,217.6 M584.1,206.3 L584.1,201.2 M584.2,206.3 L584.2,232.0 M584.3,206.3 L584.3,205.0 M584.5,206.3
+		L584.5,160.3 M584.6,206.3 L584.6,164.5 M584.7,206.3 L584.7,225.4 M584.8,206.3 L584.8,204.6 M585.0,206.3
+		L585.0,220.5 M585.1,206.3 L585.1,215.9 M585.2,206.3 L585.2,220.6 M585.3,206.3 L585.3,208.4 M585.4,206.3
+		L585.4,212.2 M585.6,206.3 L585.6,207.5 M585.7,206.3 L585.7,190.7 M585.8,206.3 L585.8,168.2 M585.9,206.3
+		L585.9,188.0 M586.1,206.3 L586.1,187.2 M586.2,206.3 L586.2,199.7 M586.3,206.3 L586.3,207.1 M586.4,206.3
+		L586.4,207.9 M586.5,206.3 L586.5,208.3 M586.7,206.3 L586.7,200.9 M586.8,206.3 L586.8,216.2 M586.9,206.3
+		L586.9,196.8  '/>	<path stroke='rgb(128, 128, 128)'  d='M587.0,206.3 L587.0,202.1 M587.2,206.3 L587.2,204.2 M587.3,206.3 L587.3,216.2 M587.4,206.3 L587.4,250.7
+		M587.5,206.3 L587.5,213.4 M587.7,206.3 L587.7,192.9 M587.8,206.3 L587.8,200.4 M587.9,206.3 L587.9,185.9
+		M588.0,206.3 L588.0,229.5 M588.1,206.3 L588.1,211.7 M588.3,206.3 L588.3,236.8 M588.4,206.3 L588.4,200.0
+		M588.5,206.3 L588.5,190.8 M588.6,206.3 L588.6,192.9 M588.8,206.3 L588.8,194.6 M588.9,206.3 L588.9,195.5
+		M589.0,206.3 L589.0,167.1 M589.1,206.3 L589.1,203.8 M589.3,206.3 L589.3,176.8 M589.4,206.3 L589.4,217.3
+		M589.5,206.3 L589.5,210.4 M589.6,206.3 L589.6,241.6 M589.7,206.3 L589.7,207.9 M589.9,206.3 L589.9,201.7
+		M590.0,206.3 L590.0,212.0 M590.1,206.3 L590.1,211.6 M590.2,206.3 L590.2,210.8 M590.4,206.3 L590.4,185.2
+		M590.5,206.3 L590.5,224.8 M590.6,206.3 L590.6,236.6 M590.7,206.3 L590.7,202.1 M590.9,206.3 L590.9,206.7
+		M591.0,206.3 L591.0,206.7 M591.1,206.3 L591.1,243.8 M591.2,206.3 L591.2,215.1 M591.3,206.3 L591.3,199.1
+		M591.5,206.3 L591.5,207.5 M591.6,206.3 M591.7,206.3 L591.7,238.3 M591.8,206.3 L591.8,199.5 M592.0,206.3
+		L592.0,190.7 M592.1,206.3 L592.1,241.7 M592.2,206.3 L592.2,205.4 M592.3,206.3 L592.3,193.2 M592.5,206.3
+		L592.5,210.5 M592.6,206.3 L592.6,184.3 M592.7,206.3 L592.7,219.7 M592.8,206.3 L592.8,118.1 M592.9,206.3
+		L592.9,209.6 M593.1,206.3 M593.2,206.3 M593.3,206.3 L593.3,187.7 M593.4,206.3 L593.4,241.9 M593.6,206.3
+		L593.6,233.8 M593.7,206.3 L593.7,205.9 M593.8,206.3 L593.8,189.2 M593.9,206.3 L593.9,240.1 M594.0,206.3
+		L594.0,184.1 M594.2,206.3 L594.2,219.2 M594.3,206.3 L594.3,186.2 M594.4,206.3 L594.4,188.4 M594.5,206.3
+		L594.5,209.2 M594.7,206.3 L594.7,230.0 M594.8,206.3 L594.8,175.9 M594.9,206.3 L594.9,188.0 M595.0,206.3
+		L595.0,315.0 M595.2,206.3 L595.2,224.9 M595.3,206.3 L595.3,232.3 M595.4,206.3 L595.4,179.4 M595.5,206.3
+		L595.5,185.1 M595.6,206.3 L595.6,216.4 M595.8,206.3 L595.8,191.0 M595.9,206.3 L595.9,208.8 M596.0,206.3
+		L596.0,199.5 M596.1,206.3 L596.1,241.9 M596.3,206.3 L596.3,192.3 M596.4,206.3 L596.4,220.7 M596.5,206.3
+		L596.5,211.0 M596.6,206.3 L596.6,205.8 M596.8,206.3 L596.8,202.0 M596.9,206.3 L596.9,205.0 M597.0,206.3
+		L597.0,191.4 M597.1,206.3 L597.1,199.9 M597.2,206.3 L597.2,243.2 M597.4,206.3 L597.4,192.6 M597.5,206.3
+		L597.5,199.5 M597.6,206.3 L597.6,230.1 M597.7,206.3 L597.7,209.7 M597.9,206.3 L597.9,199.4 M598.0,206.3
+		L598.0,228.1 M598.1,206.3 L598.1,208.0 M598.2,206.3 L598.2,196.8 M598.4,206.3 L598.4,208.0 M598.5,206.3
+		L598.5,176.8 M598.6,206.3 L598.6,197.8 M598.7,206.3 L598.7,165.3 M598.8,206.3 L598.8,208.0 M599.0,206.3
+		L599.0,208.4 M599.1,206.3 L599.1,184.0 M599.2,206.3 L599.2,235.7 M599.3,206.3 L599.3,215.1 M599.5,206.3
+		L599.5,226.2 M599.6,206.3 L599.6,202.0 M599.7,206.3 L599.7,209.2 M599.8,206.3 L599.8,193.1 M600.0,206.3
+		L600.0,176.7 M600.1,206.3 L600.1,225.7 M600.2,206.3 L600.2,196.6 M600.3,206.3 L600.3,206.7 M600.4,206.3
+		L600.4,196.2 M600.6,206.3 L600.6,167.7 M600.7,206.3 L600.7,198.8 M600.8,206.3 L600.8,185.5 M600.9,206.3
+		L600.9,214.6 M601.1,206.3 L601.1,210.8 M601.2,206.3 L601.2,203.8 M601.3,206.3 L601.3,213.3 M601.4,206.3
+		L601.4,222.5 M601.6,206.3 L601.6,197.5 M601.7,206.3 L601.7,243.9 M601.8,206.3 M601.9,206.3 L601.9,209.6
+		M602.0,206.3 L602.0,223.1 M602.2,206.3 L602.2,200.4 M602.3,206.3 L602.3,192.0 M602.4,206.3 L602.4,224.4
+		M602.5,206.3 L602.5,204.2 M602.7,206.3 L602.7,210.1 M602.8,206.3 L602.8,165.9 M602.9,206.3 L602.9,207.1
+		M603.0,206.3 L603.0,197.1 M603.1,206.3 L603.1,222.6 M603.3,206.3 L603.3,201.7 M603.4,206.3 L603.4,205.4
+		M603.5,206.3 L603.5,216.3 M603.6,206.3 L603.6,194.1 M603.8,206.3 L603.8,204.2 M603.9,206.3 L603.9,244.5
+		M604.0,206.3 L604.0,205.8 M604.1,206.3 L604.1,197.8 M604.3,206.3 L604.3,216.8 M604.4,206.3 L604.4,190.7
+		M604.5,206.3 L604.5,197.9 M604.6,206.3 L604.6,199.6 M604.7,206.3 L604.7,202.9 M604.9,206.3 L604.9,198.7
+		M605.0,206.3 L605.0,220.9 M605.1,206.3 M605.2,206.3 L605.2,203.8 M605.4,206.3 L605.4,199.1 M605.5,206.3
+		L605.5,208.4 M605.6,206.3 L605.6,215.1 M605.7,206.3 L605.7,210.0 M605.9,206.3 L605.9,205.9 M606.0,206.3
+		L606.0,231.5 M606.1,206.3 L606.1,183.5 M606.2,206.3 L606.2,209.6 M606.3,206.3 L606.3,228.2 M606.5,206.3
+		L606.5,240.6 M606.6,206.3 L606.6,225.9 M606.7,206.3 L606.7,188.8 M606.8,206.3 L606.8,243.9 M607.0,206.3
+		L607.0,204.1 M607.1,206.3 L607.1,193.0 M607.2,206.3 L607.2,216.5 M607.3,206.3 M607.5,206.3 L607.5,227.7
+		M607.6,206.3 L607.6,225.2 M607.7,206.3 L607.7,208.9 M607.8,206.3 L607.8,209.3 M607.9,206.3 L607.9,198.1
+		M608.1,206.3 L608.1,198.5 M608.2,206.3 L608.2,211.9 M608.3,206.3 L608.3,169.3 M608.4,206.3 L608.4,207.6
+		M608.6,206.3 L608.6,208.8 M608.7,206.3 L608.7,170.4 M608.8,206.3 L608.8,188.4 M608.9,206.3 L608.9,203.7
+		M609.1,206.3 L609.1,188.9 M609.2,206.3 L609.2,232.1 M609.3,206.3 L609.3,223.7 M609.4,206.3 L609.4,219.1
+		M609.5,206.3 L609.5,246.6 M609.7,206.3 L609.7,220.9 M609.8,206.3 L609.8,220.6 M609.9,206.3 L609.9,212.3
+		M610.0,206.3 L610.0,247.3 M610.2,206.3 L610.2,215.0 M610.3,206.3 L610.3,216.4 M610.4,206.3 L610.4,239.4
+		M610.5,206.3 L610.5,224.9 M610.6,206.3 L610.6,204.9 M610.8,206.3 L610.8,186.8 M610.9,206.3 L610.9,208.0
+		M611.0,206.3 L611.0,240.0 M611.1,206.3 L611.1,204.0 M611.3,206.3 L611.3,191.6 M611.4,206.3 L611.4,205.8
+		M611.5,206.3 L611.5,202.7 M611.6,206.3 L611.6,199.6 M611.8,206.3 L611.8,190.8 M611.9,206.3 L611.9,229.3
+		M612.0,206.3 L612.0,178.4 M612.1,206.3 L612.1,205.4 M612.2,206.3 L612.2,263.1 M612.4,206.3 L612.4,106.8
+		M612.5,206.3 L612.5,223.8 M612.6,206.3 L612.6,189.2 M612.7,206.3 L612.7,269.7 M612.9,206.3 L612.9,230.7
+		M613.0,206.3 L613.0,211.6 M613.1,206.3 L613.1,165.0 M613.2,206.3 L613.2,212.5 M613.4,206.3 L613.4,249.4
+		M613.5,206.3 L613.5,254.8 M613.6,206.3 L613.6,193.2 M613.7,206.3 L613.7,207.2 M613.8,206.3 L613.8,226.6
+		M614.0,206.3 L614.0,211.7 M614.1,206.3 L614.1,189.5 M614.2,206.3 L614.2,202.7 M614.3,206.3 L614.3,201.3
+		M614.5,206.3 L614.5,202.7 M614.6,206.3 L614.6,205.8 M614.7,206.3 L614.7,204.5 M614.8,206.3 L614.8,224.7
+		M615.0,206.3 L615.0,172.5 M615.1,206.3 L615.1,196.0 M615.2,206.3 L615.2,205.4 M615.3,206.3 L615.3,231.4
+		M615.4,206.3 L615.4,230.2 M615.6,206.3 L615.6,171.1 M615.7,206.3 L615.7,155.0 M615.8,206.3 L615.8,237.4
+		M615.9,206.3 L615.9,205.8 M616.1,206.3 L616.1,183.5 M616.2,206.3 L616.2,218.7 M616.3,206.3 L616.3,194.3
+		M616.4,206.3 L616.4,193.4 M616.6,206.3 L616.6,193.9 M616.7,206.3 L616.7,214.7 M616.8,206.3 L616.8,216.0
+		M616.9,206.3 L616.9,156.8 M617.0,206.3 L617.0,240.2 M617.2,206.3 L617.2,195.7 M617.3,206.3 L617.3,188.2
+		M617.4,206.3 L617.4,204.5 M617.5,206.3 L617.5,176.0 M617.7,206.3 L617.7,224.2 M617.8,206.3 L617.8,197.9
+		M617.9,206.3 L617.9,237.0 M618.0,206.3 L618.0,198.3 M618.2,206.3 L618.2,199.2 M618.3,206.3 L618.3,212.0
+		M618.4,206.3 L618.4,165.1 M618.5,206.3 L618.5,218.5 M618.6,206.3 L618.6,208.5 M618.8,206.3 L618.8,198.4
+		M618.9,206.3 L618.9,205.0  '/>	<path stroke='rgb(128, 128, 128)'  d='M619.0,206.3 L619.0,221.6 M619.1,206.3 L619.1,236.1 M619.3,206.3 L619.3,199.7 M619.4,206.3 L619.4,224.8
+		M619.5,206.3 L619.5,213.3 M619.6,206.3 L619.6,209.4 M619.7,206.3 L619.7,222.2 M619.9,206.3 L619.9,213.8
+		M620.0,206.3 L620.0,199.6 M620.1,206.3 L620.1,172.6 M620.2,206.3 L620.2,230.6 M620.4,206.3 L620.4,203.2
+		M620.5,206.3 L620.5,208.9 M620.6,206.3 L620.6,241.4 M620.7,206.3 L620.7,196.9 M620.9,206.3 L620.9,196.9
+		M621.0,206.3 L621.0,217.8 M621.1,206.3 L621.1,202.7 M621.2,206.3 L621.2,194.3 M621.3,206.3 L621.3,212.1
+		M621.5,206.3 L621.5,216.1 M621.6,206.3 L621.6,225.9 M621.7,206.3 L621.7,156.8 M621.8,206.3 L621.8,210.3
+		M622.0,206.3 L622.0,218.7 M622.1,206.3 L622.1,212.5 M622.2,206.3 L622.2,217.9 M622.3,206.3 L622.3,190.7
+		M622.5,206.3 L622.5,164.6 M622.6,206.3 L622.6,202.3 M622.7,206.3 L622.7,218.2 M622.8,206.3 L622.8,225.3
+		M622.9,206.3 L622.9,152.9 M623.1,206.3 L623.1,188.3 M623.2,206.3 L623.2,222.5 M623.3,206.3 L623.3,203.2
+		M623.4,206.3 L623.4,209.3 M623.6,206.3 L623.6,172.2 M623.7,206.3 L623.7,214.1 M623.8,206.3 L623.8,211.5
+		M623.9,206.3 L623.9,200.6 M624.1,206.3 L624.1,183.7 M624.2,206.3 L624.2,198.5 M624.3,206.3 L624.3,228.4
+		M624.4,206.3 L624.4,227.6 M624.5,206.3 L624.5,241.8 M624.7,206.3 L624.7,215.5 M624.8,206.3 L624.8,202.7
+		M624.9,206.3 L624.9,208.0 M625.0,206.3 L625.0,201.0 M625.2,206.3 L625.2,210.7 M625.3,206.3 L625.3,217.7
+		M625.4,206.3 L625.4,229.8 M625.5,206.3 L625.5,211.6 M625.7,206.3 L625.7,197.4 M625.8,206.3 L625.8,203.6
+		M625.9,206.3 L625.9,178.4 M626.0,206.3 L626.0,228.8 M626.1,206.3 L626.1,208.0 M626.3,206.3 L626.3,209.8
+		M626.4,206.3 L626.4,189.9 M626.5,206.3 L626.5,167.5 M626.6,206.3 L626.6,212.9 M626.8,206.3 M626.9,206.3
+		L626.9,201.4 M627.0,206.3 L627.0,137.0 M627.1,206.3 L627.1,213.2 M627.2,206.3 L627.2,179.5 M627.4,206.3
+		L627.4,215.8 M627.5,206.3 L627.5,222.7 M627.6,206.3 L627.6,196.3 M627.7,206.3 L627.7,202.4 M627.9,206.3
+		L627.9,202.8 M628.0,206.3 L628.0,197.2 M628.1,206.3 L628.1,224.4 M628.2,206.3 L628.2,167.1 M628.4,206.3
+		L628.4,199.9 M628.5,206.3 L628.5,207.1 M628.6,206.3 L628.6,235.5 M628.7,206.3 L628.7,224.8 M628.8,206.3
+		L628.8,213.2 M629.0,206.3 L629.0,207.6 M629.1,206.3 L629.1,179.1 M629.2,206.3 L629.2,206.7 M629.3,206.3
+		L629.3,182.2 M629.5,206.3 L629.5,157.7 M629.6,206.3 L629.6,178.4 M629.7,206.3 L629.7,228.7 M629.8,206.3
+		L629.8,165.8 M630.0,206.3 L630.0,205.4 M630.1,206.3 L630.1,192.9 M630.2,206.3 L630.2,227.7 M630.3,206.3
+		L630.3,193.7 M630.4,206.3 L630.4,208.0 M630.6,206.3 L630.6,221.4 M630.7,206.3 L630.7,204.2 M630.8,206.3
+		L630.8,224.4 M630.9,206.3 L630.9,191.9 M631.1,206.3 L631.1,178.6 M631.2,206.3 L631.2,214.6 M631.3,206.3
+		L631.3,181.2 M631.4,206.3 M631.6,206.3 L631.6,215.0 M631.7,206.3 L631.7,198.3 M631.8,206.3 L631.8,214.2
+		M631.9,206.3 L631.9,229.3 M632.0,206.3 L632.0,210.1 M632.2,206.3 L632.2,202.1 M632.3,206.3 L632.3,207.5
+		M632.4,206.3 L632.4,203.7 M632.5,206.3 L632.5,205.0 M632.7,206.3 L632.7,233.2 M632.8,206.3 L632.8,190.3
+		M632.9,206.3 L632.9,197.9 M633.0,206.3 L633.0,228.2 M633.2,206.3 L633.2,213.5 M633.3,206.3 L633.3,192.8
+		M633.4,206.3 L633.4,213.4 M633.5,206.3 L633.5,192.4 M633.6,206.3 L633.6,200.8 M633.8,206.3 L633.8,213.0
+		M633.9,206.3 L633.9,138.2 M634.0,206.3 L634.0,191.8 M634.1,206.3 L634.1,179.5 M634.3,206.3 L634.3,212.9
+		M634.4,206.3 L634.4,207.1 M634.5,206.3 L634.5,230.6 M634.6,206.3 L634.6,211.7 M634.7,206.3 M634.9,206.3
+		L634.9,177.8 M635.0,206.3 L635.0,216.2 M635.1,206.3 L635.1,205.4 M635.2,206.3 L635.2,207.5 M635.4,206.3
+		L635.4,176.2 M635.5,206.3 L635.5,228.5 M635.6,206.3 L635.6,214.5 M635.7,206.3 L635.7,179.5 M635.9,206.3
+		L635.9,202.6 M636.0,206.3 L636.0,203.4 M636.1,206.3 L636.1,176.4 M636.2,206.3 L636.2,215.6 M636.3,206.3
+		L636.3,165.6 M636.5,206.3 L636.5,193.3 M636.6,206.3 L636.6,201.0 M636.7,206.3 L636.7,220.4 M636.8,206.3
+		L636.8,202.6 M637.0,206.3 L637.0,170.9 M637.1,206.3 L637.1,226.4 M637.2,206.3 L637.2,179.4 M637.3,206.3
+		L637.3,202.7 M637.5,206.3 L637.5,178.0 M637.6,206.3 L637.6,216.6 M637.7,206.3 L637.7,188.0 M637.8,206.3
+		L637.8,196.0 M637.9,206.3 L637.9,248.0 M638.1,206.3 L638.1,200.7 M638.2,206.3 L638.2,203.9 M638.3,206.3
+		L638.3,219.5 M638.4,206.3 L638.4,204.7 M638.6,206.3 L638.6,205.1 M638.7,206.3 L638.7,183.1 M638.8,206.3
+		L638.8,207.1 M638.9,206.3 L638.9,223.8 M639.1,206.3 L639.1,222.7 M639.2,206.3 L639.2,189.9 M639.3,206.3
+		L639.3,226.7 M639.4,206.3 L639.4,193.1 M639.5,206.3 L639.5,208.7 M639.7,206.3 L639.7,184.3 M639.8,206.3
+		L639.8,224.2 M639.9,206.3 L639.9,187.5 M640.0,206.3 L640.0,209.5 M640.2,206.3 L640.2,158.3 M640.3,206.3
+		L640.3,195.2 M640.4,206.3 L640.4,200.0 M640.5,206.3 L640.5,203.9 M640.7,206.3 L640.7,237.0 M640.8,206.3
+		L640.8,199.6 M640.9,206.3 L640.9,228.4 M641.0,206.3 L641.0,197.9 M641.1,206.3 L641.1,198.4 M641.3,206.3
+		L641.3,197.2 M641.4,206.3 L641.4,204.7 M641.5,206.3 L641.5,169.3 M641.6,206.3 L641.6,200.0 M641.8,206.3
+		L641.8,212.5 M641.9,206.3 L641.9,228.6 M642.0,206.3 L642.0,202.3 M642.1,206.3 L642.1,237.4 M642.3,206.3
+		L642.3,196.0 M642.4,206.3 L642.4,197.2 M642.5,206.3 L642.5,205.9 M642.6,206.3 L642.6,201.2 M642.7,206.3
+		L642.7,191.3 M642.9,206.3 L642.9,247.6 M643.0,206.3 L643.0,185.7 M643.1,206.3 L643.1,202.3 M643.2,206.3
+		L643.2,217.7 M643.4,206.3 L643.4,232.8 M643.5,206.3 L643.5,232.5 M643.6,206.3 L643.6,225.1 M643.7,206.3
+		L643.7,190.7 M643.8,206.3 L643.8,193.5 M644.0,206.3 L644.0,207.1 M644.1,206.3 L644.1,235.4 M644.2,206.3
+		L644.2,204.7 M644.3,206.3 L644.3,198.7 M644.5,206.3 L644.5,226.7 M644.6,206.3 L644.6,199.9 M644.7,206.3
+		L644.7,201.1 M644.8,206.3 L644.8,205.5 M645.0,206.3 L645.0,178.3 M645.1,206.3 L645.1,185.6 M645.2,206.3
+		L645.2,217.4 M645.3,206.3 L645.3,212.2 M645.4,206.3 L645.4,211.4 M645.6,206.3 L645.6,212.3 M645.7,206.3
+		L645.7,215.9 M645.8,206.3 L645.8,195.9 M645.9,206.3 L645.9,185.2 M646.1,206.3 L646.1,231.8 M646.2,206.3
+		L646.2,214.7 M646.3,206.3 L646.3,211.5 M646.4,206.3 L646.4,200.3 M646.6,206.3 L646.6,185.9 M646.7,206.3
+		L646.7,274.5 M646.8,206.3 L646.8,222.1 M646.9,206.3 L646.9,210.7 M647.0,206.3 L647.0,186.8 M647.2,206.3
+		L647.2,203.8 M647.3,206.3 L647.3,218.8 M647.4,206.3 L647.4,190.5 M647.5,206.3 L647.5,227.3 M647.7,206.3
+		L647.7,202.2 M647.8,206.3 L647.8,208.7 M647.9,206.3 L647.9,212.8 M648.0,206.3 L648.0,205.9 M648.2,206.3
+		L648.2,186.4 M648.3,206.3 L648.3,198.2 M648.4,206.3 L648.4,208.7 M648.5,206.3 L648.5,203.4 M648.6,206.3
+		L648.6,152.5 M648.8,206.3 L648.8,217.8 M648.9,206.3 L648.9,205.5 M649.0,206.3 L649.0,199.9 M649.1,206.3
+		L649.1,215.1 M649.3,206.3 L649.3,219.1 M649.4,206.3 M649.5,206.3 L649.5,172.3 M649.6,206.3 L649.6,193.6
+		M649.8,206.3 L649.8,174.2 M649.9,206.3 L649.9,204.7 M650.0,206.3 L650.0,220.5 M650.1,206.3 L650.1,227.3
+		M650.2,206.3 L650.2,205.1 M650.4,206.3 L650.4,190.4 M650.5,206.3 L650.5,203.1 M650.6,206.3 L650.6,217.4
+		M650.7,206.3 L650.7,206.7  '/>	<path stroke='rgb(128, 128, 128)'  d='M650.9,206.3 L650.9,222.2 M651.0,206.3 L651.0,216.2 M651.1,206.3 L651.1,217.4 M651.2,206.3 L651.2,208.7
+		M651.3,206.3 M651.5,206.3 L651.5,204.7 M651.6,206.3 L651.6,221.1 M651.7,206.3 L651.7,170.3 M651.8,206.3
+		L651.8,230.6 M652.0,206.3 L652.0,212.7 M652.1,206.3 L652.1,207.9 M652.2,206.3 L652.2,191.1 M652.3,206.3
+		L652.3,182.8 M652.5,206.3 L652.5,194.4 M652.6,206.3 L652.6,208.7 M652.7,206.3 L652.7,208.7 M652.8,206.3
+		L652.8,207.1 M652.9,206.3 L652.9,201.1 M653.1,206.3 L653.1,210.6 M653.2,206.3 L653.2,191.2 M653.3,206.3
+		L653.3,190.5 M653.4,206.3 L653.4,184.3 M653.6,206.3 L653.6,205.1 M653.7,206.3 L653.7,199.6 M653.8,206.3
+		L653.8,189.5 M653.9,206.3 L653.9,224.6 M654.1,206.3 L654.1,182.4 M654.2,206.3 L654.2,223.8 M654.3,206.3
+		L654.3,204.3 M654.4,206.3 L654.4,231.0 M654.5,206.3 L654.5,219.3 M654.7,206.3 L654.7,200.8 M654.8,206.3
+		L654.8,171.4 M654.9,206.3 L654.9,143.8 M655.0,206.3 L655.0,205.5 M655.2,206.3 L655.2,182.0 M655.3,206.3
+		L655.3,209.7 M655.4,206.3 L655.4,240.9 M655.5,206.3 L655.5,177.4 M655.7,206.3 L655.7,214.0 M655.8,206.3
+		L655.8,192.1 M655.9,206.3 L655.9,205.1 M656.0,206.3 L656.0,192.1 M656.1,206.3 L656.1,165.9 M656.3,206.3
+		L656.3,218.4 M656.4,206.3 L656.4,186.9 M656.5,206.3 L656.5,208.9 M656.6,206.3 L656.6,218.8 M656.8,206.3
+		L656.8,197.9 M656.9,206.3 L656.9,203.2 M657.0,206.3 L657.0,171.2 M657.1,206.3 L657.1,224.4 M657.3,206.3
+		L657.3,216.1 M657.4,206.3 L657.4,227.5 M657.5,206.3 L657.5,204.4 M657.6,206.3 L657.6,254.8 M657.7,206.3
+		L657.7,208.6 M657.9,206.3 L657.9,204.7 M658.0,206.3 L658.0,205.9 M658.1,206.3 L658.1,191.3 M658.2,206.3
+		L658.2,183.7 M658.4,206.3 L658.4,166.8 M658.5,206.3 L658.5,188.9 M658.6,206.3 L658.6,239.9 M658.7,206.3
+		L658.7,205.1 M658.8,206.3 L658.8,209.3 M659.0,206.3 L659.0,234.0 M659.1,206.3 L659.1,228.4 M659.2,206.3
+		L659.2,185.2 M659.3,206.3 L659.3,220.0 M659.5,206.3 L659.5,208.6 M659.6,206.3 L659.6,197.1 M659.7,206.3
+		L659.7,235.8 M659.8,206.3 L659.8,222.8 M660.0,206.3 L660.0,174.7 M660.1,206.3 L660.1,189.8 M660.2,206.3
+		L660.2,195.2 M660.3,206.3 L660.3,210.8 M660.4,206.3 L660.4,173.2 M660.6,206.3 L660.6,210.4 M660.7,206.3
+		L660.7,243.2 M660.8,206.3 L660.8,209.3 M660.9,206.3 M661.1,206.3 L661.1,204.4 M661.2,206.3 L661.2,197.5
+		M661.3,206.3 L661.3,183.8 M661.4,206.3 L661.4,215.4 M661.6,206.3 L661.6,229.9 M661.7,206.3 L661.7,214.3
+		M661.8,206.3 M661.9,206.3 L661.9,187.2 M662.0,206.3 L662.0,240.7 M662.2,206.3 L662.2,169.2 M662.3,206.3
+		L662.3,215.0 M662.4,206.3 L662.4,193.7 M662.5,206.3 L662.5,200.6 M662.7,206.3 L662.7,174.4 M662.8,206.3
+		L662.8,223.3 M662.9,206.3 L662.9,243.2 M663.0,206.3 L663.0,208.6 M663.2,206.3 L663.2,198.6 M663.3,206.3
+		L663.3,208.6 M663.4,206.3 L663.4,212.4 M663.5,206.3 L663.5,217.4 M663.6,206.3 L663.6,201.3 M663.8,206.3
+		L663.8,222.0 M663.9,206.3 L663.9,191.3 M664.0,206.3 L664.0,209.7 M664.1,206.3 L664.1,188.3 M664.3,206.3
+		L664.3,192.9 M664.4,206.3 L664.4,200.9 M664.5,206.3 L664.5,221.9 M664.6,206.3 L664.6,206.7 M664.8,206.3
+		M664.9,206.3 L664.9,186.1 M665.0,206.3 L665.0,209.7 M665.1,206.3 L665.1,203.6 M665.2,206.3 L665.2,220.4
+		M665.4,206.3 L665.4,227.7 M665.5,206.3 L665.5,209.0 M665.6,206.3 L665.6,232.8 M665.7,206.3 L665.7,197.4
+		M665.9,206.3 L665.9,230.9 M666.0,206.3 L666.0,231.5 M666.1,206.3 L666.1,198.1 M666.2,206.3 L666.2,207.8
+		M666.4,206.3 L666.4,221.8 M666.5,206.3 L666.5,242.2 M666.6,206.3 L666.6,220.0 M666.7,206.3 L666.7,193.7
+		M666.8,206.3 L666.8,216.9 M667.0,206.3 L667.0,205.9 M667.1,206.3 L667.1,221.2 M667.2,206.3 L667.2,230.8
+		M667.3,206.3 L667.3,209.0 M667.5,206.3 L667.5,180.5 M667.6,206.3 L667.6,196.8 M667.7,206.3 L667.7,204.3
+		M667.8,206.3 L667.8,213.8 M667.9,206.3 L667.9,249.9 M668.1,206.3 L668.1,207.5 M668.2,206.3 L668.2,213.4
+		M668.3,206.3 L668.3,217.0 M668.4,206.3 L668.4,207.9 M668.6,206.3 L668.6,194.7 M668.7,206.3 L668.7,211.5
+		M668.8,206.3 L668.8,237.5 M668.9,206.3 L668.9,199.4 M669.1,206.3 L669.1,234.9 M669.2,206.3 L669.2,190.5
+		M669.3,206.3 L669.3,231.7 M669.4,206.3 L669.4,240.8 M669.5,206.3 L669.5,156.4 M669.7,206.3 L669.7,189.8
+		M669.8,206.3 L669.8,224.8 M669.9,206.3 L669.9,205.1 M670.0,206.3 L670.0,191.4 M670.2,206.3 L670.2,197.8
+		M670.3,206.3 L670.3,181.5 M670.4,206.3 L670.4,200.3 M670.5,206.3 L670.5,217.8 M670.7,206.3 L670.7,205.1
+		M670.8,206.3 L670.8,204.7 M670.9,206.3 L670.9,217.9 M671.0,206.3 L671.0,185.1 M671.1,206.3 L671.1,293.6
+		M671.3,206.3 L671.3,195.3 M671.4,206.3 L671.4,211.9 M671.5,206.3 L671.5,195.7 M671.6,206.3 L671.6,219.7
+		M671.8,206.3 L671.8,210.7 M671.9,206.3 L671.9,193.3 M672.0,206.3 L672.0,188.1 M672.1,206.3 L672.1,200.2
+		M672.3,206.3 L672.3,193.0 M672.4,206.3 L672.4,227.2 M672.5,206.3 L672.5,242.8 M672.6,206.3 L672.6,204.6
+		M672.7,206.3 L672.7,157.7 M672.9,206.3 L672.9,210.3 M673.0,206.3 L673.0,220.4 M673.1,206.3 L673.1,198.2
+		M673.2,206.3 M673.4,206.3 L673.4,193.4 M673.5,206.3 L673.5,184.2 M673.6,206.3 L673.6,204.7 M673.7,206.3
+		L673.7,206.7 M673.9,206.3 L673.9,211.5 M674.0,206.3 L674.0,230.4 M674.1,206.3 L674.1,211.1 M674.2,206.3
+		L674.2,198.2 M674.3,206.3 L674.3,206.7 M674.5,206.3 L674.5,195.4 M674.6,206.3 L674.6,227.2 M674.7,206.3
+		L674.7,212.3 M674.8,206.3 L674.8,205.9 M675.0,206.3 L675.0,176.5 M675.1,206.3 L675.1,199.9 M675.2,206.3
+		L675.2,223.5 M675.3,206.3 L675.3,209.9 M675.4,206.3 L675.4,186.6 M675.6,206.3 L675.6,242.5 M675.7,206.3
+		L675.7,199.0 M675.8,206.3 L675.8,205.9 M675.9,206.3 L675.9,186.9 M676.1,206.3 L676.1,215.1 M676.2,206.3
+		L676.2,215.5 M676.3,206.3 L676.3,237.8 M676.4,206.3 L676.4,214.4 M676.6,206.3 L676.6,207.9 M676.7,206.3
+		L676.7,208.3 M676.8,206.3 L676.8,188.4 M676.9,206.3 L676.9,201.4 M677.0,206.3 L677.0,243.7 M677.2,206.3
+		L677.2,250.6 M677.3,206.3 L677.3,212.0 M677.4,206.3 L677.4,203.4 M677.5,206.3 L677.5,229.0 M677.7,206.3
+		L677.7,208.3 M677.8,206.3 L677.8,194.3 M677.9,206.3 L677.9,180.3 M678.0,206.3 L678.0,205.9 M678.2,206.3
+		L678.2,184.1 M678.3,206.3 L678.3,172.8 M678.4,206.3 L678.4,196.9 M678.5,206.3 L678.5,229.4 M678.6,206.3
+		L678.6,173.4 M678.8,206.3 L678.8,203.4 M678.9,206.3 L678.9,185.3 M679.0,206.3 L679.0,201.0 M679.1,206.3
+		L679.1,201.0 M679.3,206.3 L679.3,223.6 M679.4,206.3 L679.4,232.2 M679.5,206.3 L679.5,207.1 M679.6,206.3
+		L679.6,198.2 M679.8,206.3 L679.8,220.1 M679.9,206.3 L679.9,186.4 M680.0,206.3 L680.0,209.5 M680.1,206.3
+		L680.1,235.5 M680.2,206.3 L680.2,205.0 M680.4,206.3 L680.4,190.4 M680.5,206.3 L680.5,203.0 M680.6,206.3
+		L680.6,196.1 M680.7,206.3 L680.7,180.8 M680.9,206.3 L680.9,232.5 M681.0,206.3 M681.1,206.3 L681.1,188.1
+		M681.2,206.3 L681.2,202.6 M681.4,206.3 L681.4,209.5 M681.5,206.3 L681.5,162.9 M681.6,206.3 L681.6,219.1
+		M681.7,206.3 L681.7,206.7 M681.8,206.3 L681.8,204.7 M682.0,206.3 L682.0,199.9 M682.1,206.3 L682.1,213.1
+		M682.2,206.3 L682.2,252.1 M682.3,206.3 L682.3,220.4 M682.5,206.3 L682.5,204.6 M682.6,206.3 L682.6,218.0
+		M682.7,206.3 L682.7,216.4  '/>	<path stroke='rgb(128, 128, 128)'  d='M682.8,206.3 L682.8,233.2 M682.9,206.3 L682.9,193.2 M683.1,206.3 L683.1,203.4 M683.2,206.3 L683.2,205.5
+		M683.3,206.3 L683.3,219.8 M683.4,206.3 L683.4,205.0 M683.6,206.3 L683.6,189.5 M683.7,206.3 L683.7,183.5
+		M683.8,206.3 L683.8,219.7 M683.9,206.3 L683.9,209.5 M684.1,206.3 L684.1,192.9 M684.2,206.3 L684.2,210.3
+		M684.3,206.3 L684.3,237.7 M684.4,206.3 L684.4,223.5 M684.5,206.3 L684.5,182.5 M684.7,206.3 L684.7,207.1
+		M684.8,206.3 L684.8,225.1 M684.9,206.3 L684.9,204.6 M685.0,206.3 L685.0,235.1 M685.2,206.3 L685.2,216.6
+		M685.3,206.3 L685.3,195.5 M685.4,206.3 L685.4,205.0 M685.5,206.3 L685.5,218.7 M685.7,206.3 L685.7,218.7
+		M685.8,206.3 L685.8,217.1 M685.9,206.3 L685.9,170.2 M686.0,206.3 L686.0,213.3 M686.1,206.3 L686.1,204.6
+		M686.3,206.3 L686.3,199.3 M686.4,206.3 L686.4,201.7 M686.5,206.3 L686.5,201.7 M686.6,206.3 L686.6,233.5
+		M686.8,206.3 L686.8,219.1 M686.9,206.3 L686.9,212.9 M687.0,206.3 L687.0,247.2 M687.1,206.3 L687.1,172.8
+		M687.3,206.3 L687.3,200.4 M687.4,206.3 L687.4,202.1 M687.5,206.3 L687.5,167.0 M687.6,206.3 L687.6,207.1
+		M687.7,206.3 L687.7,191.5 M687.9,206.3 L687.9,241.3 M688.0,206.3 L688.0,199.2 M688.1,206.3 L688.1,198.4
+		M688.2,206.3 L688.2,233.6 M688.4,206.3 L688.4,207.5 M688.5,206.3 L688.5,207.9 M688.6,206.3 L688.6,221.2
+		M688.7,206.3 L688.7,175.5 M688.9,206.3 L688.9,198.0 M689.0,206.3 L689.0,234.9 M689.1,206.3 L689.1,200.9
+		M689.2,206.3 L689.2,197.1 M689.3,206.3 L689.3,211.7 M689.5,206.3 L689.5,203.8 M689.6,206.3 L689.6,193.9
+		M689.7,206.3 L689.7,201.3 M689.8,206.3 L689.8,202.6 M690.0,206.3 L690.0,226.1 M690.1,206.3 L690.1,219.1
+		M690.2,206.3 L690.2,184.7 M690.3,206.3 L690.3,212.1 M690.5,206.3 L690.5,227.0 M690.6,206.3 L690.6,207.1
+		M690.7,206.3 L690.7,188.8 M690.8,206.3 L690.8,196.7 M690.9,206.3 L690.9,202.1 M691.1,206.3 L691.1,178.2
+		M691.2,206.3 L691.2,239.7 M691.3,206.3 L691.3,205.9 M691.4,206.3 L691.4,193.0 M691.6,206.3 L691.6,203.8
+		M691.7,206.3 L691.7,227.4 M691.8,206.3 L691.8,175.7 M691.9,206.3 L691.9,200.9 M692.0,206.3 L692.0,207.5
+		M692.2,206.3 L692.2,195.2 M692.3,206.3 L692.3,208.3 M692.4,206.3 L692.4,257.4 M692.5,206.3 L692.5,183.1
+		M692.7,206.3 L692.7,205.9 M692.8,206.3 L692.8,202.1 M692.9,206.3 L692.9,177.1 M693.0,206.3 L693.0,220.6
+		M693.2,206.3 L693.2,162.1 M693.3,206.3 L693.3,227.1 M693.4,206.3 L693.4,219.8 M693.5,206.3 M693.6,206.3
+		L693.6,205.5 M693.8,206.3 L693.8,231.0 M693.9,206.3 L693.9,210.8 M694.0,206.3 L694.0,209.6 M694.1,206.3
+		L694.1,217.4 M694.3,206.3 L694.3,204.2 M694.4,206.3 L694.4,204.2 M694.5,206.3 L694.5,209.2 M694.6,206.3
+		L694.6,199.2 M694.8,206.3 L694.8,204.2  '/></g>
+	</g>
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = '#FFFFFF' points = '88.5,45.1 246.9,45.1 246.9,27.1 88.5,27.1 '/>
+	</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(128, 128, 128)'  d='M88.5,45.1 L88.5,27.1 L246.9,27.1 L246.9,45.1 L88.5,45.1 Z  '/></g>
+	<g id="gnuplot_plot_1" ><title>EUR/USD (Daily)</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g transform="translate(122.4,40.0)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="start">
+		<text><tspan font-family="Consolas, Monaco, monospace" >EUR/USD (Daily)</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(128, 128, 128)'  d='M96.8,36.1 L114.1,36.1  '/></g>
+	</g>
+<g fill="none" color="#FFFFFF" stroke="rgb(128, 128, 128)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.2,18.1 L80.2,347.4 L695.0,347.4 L695.0,18.1 L80.2,18.1 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+</g>
+</svg>
+
