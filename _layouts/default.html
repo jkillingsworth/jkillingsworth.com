@@ -44,7 +44,7 @@
     </ul>
   </nav>
   <main class="content">
-    {{ content | hyphenate | replace: '-­', '-' }}
+    {{ content | hyphenate | replace: '-­', '-' | replace: '&amp;am­p;', '&amp;' }}
   </main>
   <aside class="sidebar">
     <header>
