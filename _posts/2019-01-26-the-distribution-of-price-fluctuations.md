@@ -7,7 +7,7 @@ Are price fluctuations in the financial markets normally distributed? If I under
 
 <!--excerpt-->
 
-In the 1960s, Mandelbrot studied historical cotton prices and noticed that the distribution of price changes did not exhibit properties characteristic of a normal distribution. Thankfully, computer technology and the availability of historical price data have improved drastically since the 1960s. Doing this sort of analysis is much easier today than it was in the past. In this post, I set out to perform my own analysis of the distribution of price fluctuations across a variety of different markets.
+In the 1960s, Mandelbrot studied historical cotton prices and noticed the distribution of price changes did not exhibit properties characteristic of a normal distribution. Thankfully, computer technology and the availability of historical price data have improved drastically since the 1960s. Doing this sort of analysis is much easier today than it was in the past. In this post, I set out to perform my own analysis of the distribution of price fluctuations across a variety of different markets.
 
 ## Analyzing the Data
 
@@ -46,7 +46,7 @@ To get some broader insights regarding the behavior of price movements, I want t
 | `USO`                                   | Crude Oil
 {% endtable %}
 
-Each data set contains at least 10 years worth of end of day data. Using the same technique as before, we can plot the histogram of daily price fluctuations and overlay the fitted normal and Laplace density functions. Here are the charts:
+Each data set contains at least 10 years worth of data. Using the same technique as before, we can plot the histogram of daily price fluctuations and overlay the fitted normal and Laplace density functions. Here are the charts:
 
 {% chart fig-04-stocks-daily-DIA-probs.svg %}
 {% chart fig-05-stocks-daily-EEM-probs.svg %}
@@ -57,7 +57,7 @@ Each data set contains at least 10 years worth of end of day data. Using the sam
 {% chart fig-10-stocks-daily-UNG-probs.svg %}
 {% chart fig-11-stocks-daily-USO-probs.svg %}
 
-As you can see, the histogram seems to fit the Laplace distribution better than the normal distribution most of the time. But not always. There are some cases that appear to fit somewhere in between the normal distribution and the Laplace distribution. A cursory look at `UNG`, for example, might suggest that the variation is normally distributed.
+As you can see, the histogram seems to fit the Laplace distribution better than the normal distribution most of the time. But not always. There are some cases that appear to fit somewhere in between the normal distribution and the Laplace distribution. A cursory look at `UNG`, for example, might suggest the variation is normally distributed.
 
 ## Individual Stocks (Daily)
 
@@ -208,7 +208,7 @@ Notice in some of these charts there is a large spike in the concentration of pr
 
 ## Cryptocurrencies
 
-A number of different cryptocurrencies have emerged in the past few years. And some of them have made large price moves. Can we expect the price fluctuations of these digital assets to exhibit the same characteristics as stocks and currencies? Let's examine a few of the most popular ones:
+A number of different cryptocurrencies have emerged in the past few years. And some of them have made enormous price moves. Can we expect the price fluctuations of these digital assets to exhibit the same characteristics as stocks and currencies? Let's examine a few of the most popular ones:
 
 {% table %}
 | <span style="width: 4em;">Symbol</span> | <span style="width: 17em;">Digital Asset</span>
@@ -228,13 +228,13 @@ For all three of these data sets, the variation in daily price moves does not co
 
 ## Drawing Conclusions
 
-Can we draw any conclusions from this experiment? I think it's safe to say that prices fluctuations are not always normally distributed. In all data sets examined, the kurtosis is more leptokurtic than a normal distribution to some degree. But would it be appropriate to use a Laplace distribution to model price movements?
+Can we draw any conclusions from this experiment? I think it's safe to say prices fluctuations are not always normally distributed. In all data sets examined, the kurtosis is more leptokurtic than a normal distribution to some degree. But would it be appropriate to use a Laplace distribution to model price movements?
 
 Vance Harwood from *Six Figure Investing* wrote an interesting article asserting that the Laplace distribution should be used instead of the normal distribution to model stock price movements. You can read it here:
 
 * [*Predicting Stock Market Returns---Lose the Normal and Switch to Laplace*](https://sixfigureinvesting.com/2016/03/modeling-stock-market-returns-with-laplace-distribution-instead-of-normal/)
 
-His analysis includes a deeper study on the tails of the distribution. While he acknowledges that the observed data include a higher frequency of large moves than would be anticipated by the Laplace distribution, I agree with his assessment that the Laplace distribution is a better alternative compared to the normal distribution.
+His analysis includes a deeper study on the tails of the distribution. While he acknowledges the observed price data include a higher frequency of large moves than what would be expected from a Laplace distribution, I agree with his assessment that the Laplace distribution is a better alternative compared to the normal distribution.
 
 The *Business Forecasting* blog authored by Clive Jones includes a whole series of articles on the topic of price change distributions:
 
@@ -244,8 +244,8 @@ The *Business Forecasting* blog authored by Clive Jones includes a whole series 
 * [*Microsoft Stock Prices and the Laplace Distribution*](http://businessforecastblog.com/microsoft-stock-prices-and-the-laplace-distribution/)
 * [*Distributions of Stock Returns and Other Asset Prices*](http://businessforecastblog.com/distributions-of-stock-returns-and-other-asset-prices/)
 
-This series of articles cites plenty of evidence that favors the use of the Laplace distribution to model price movements. Nonetheless, as I have illustrated in this post, there are still some cases where the distribution does not exhibit the pointy peak shape characteristic of the Laplace distribution.
+This series cites plenty of evidence that favors the use of the Laplace distribution to model price movements. Nonetheless, as I have illustrated in this post, there are still some cases where the histogram does not exhibit the pointy shaped peak characteristic of the Laplace distribution.
 
-Based on his study of historical cotton prices, Mandelbrot claims that price fluctuations are best described by a family of [stable distributions](https://en.wikipedia.org/wiki/Stable_distribution). These distributions are more rounded at the peak than the Laplace distribution. I currently don't know enough about these types of probability distributions to draw my own conclusions, but I think it's an area worthy of further study.
+Based on his study of historical cotton prices, Mandelbrot claims that price fluctuations are best described by a family of [stable distributions](https://en.wikipedia.org/wiki/Stable_distribution). These distributions are more rounded at the peak than the Laplace distribution. I currently don't know enough about this class of probability distributions to draw my own conclusions, but I think it's an area worthy of further study.
 
-Another possibility is that the distribution of price fluctuations could take the form of a [generalized normal distribution](https://en.wikipedia.org/wiki/Generalized_normal_distribution). This is a family of distributions that can take the shape of a normal distribution, a Laplace distribution, or something in between depending on the value of a shape parameter. I think this might be another area worth further investigation.
+Another possibility is that the distribution of price fluctuations could take the form of a [generalized normal distribution](https://en.wikipedia.org/wiki/Generalized_normal_distribution). This is a family of distributions that can take the shape of a normal distribution, a Laplace distribution, or something else depending on the value of a shape parameter. I think this might be another area worth further investigation.
