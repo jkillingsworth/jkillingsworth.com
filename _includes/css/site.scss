@@ -478,7 +478,7 @@ svg
     ul > li time
     {
         @include font-monospace();
-        display: block;
+        display: none;
         font-size: 10pt;
     }
 }
