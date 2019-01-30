@@ -31,37 +31,19 @@ $indent-width: 16px;
 
 @mixin font-paragraph
 {
-    $font-fallback: "Georgia", serif;
-    $font-webfonts: "Lora";
-
-    font-family: $font-fallback;
+    font-family: "Lora", "Georgia", serif;
     font-weight: normal;
-
-    .webfonts &
-    {
-        font-family: $font-webfonts, $font-fallback;
-    }
 }
 
 @mixin font-headlines
 {
-    $font-fallback: "Verdana", sans-serif;
-    $font-webfonts: "Open Sans";
-
-    font-family: $font-fallback;
+    font-family: "Open Sans", "Verdana", sans-serif;
     font-weight: bold;
-
-    .webfonts &
-    {
-        font-family: $font-webfonts, $font-fallback;
-    }
 }
 
 @mixin font-monospace
 {
-    $font-fallback: "Consolas", "Monaco", monospace;
-
-    font-family: $font-fallback;
+    font-family: "Consolas", "Monaco", monospace;
     font-weight: normal;
 }
 
