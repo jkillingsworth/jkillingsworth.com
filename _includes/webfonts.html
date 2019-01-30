@@ -1,5 +1,5 @@
-{% assign webfont-url = "./static/fonts/fonts.css" %}
-<link rel="preload" href="{{ webfont-url }}" as="style" />
+{% assign webfonts-url = "./static/fonts/fonts.css" %}
+<link rel="preload" href="{{ webfonts-url }}" as="style" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" defer></script>
 <script>
   var activate = function () {
@@ -9,13 +9,13 @@
   if (sessionStorage.getItem("webfonts")) {
     var element = document.createElement("link");
     element.rel = "stylesheet";
-    element.href = "{{ webfont-url }}";
+    element.href = "{{ webfonts-url }}";
     element.media = "all";
     document.head.appendChild(element);
     activate();
   } else {
     WebFontConfig = {
-      custom: { families: ["Open Sans:n7", "Lora:n4,i4"], urls: ["{{ webfont-url }}"] },
+      custom: { families: ["Open Sans:n7", "Lora:n4,i4"], urls: ["{{ webfonts-url }}"] },
       active: activate
     };
   }
