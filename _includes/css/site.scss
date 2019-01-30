@@ -29,16 +29,16 @@ $max-content-width: 720px;
 $margin-percent: 5;
 $indent-width: 16px;
 
-@mixin font-paragraph
-{
-    font-family: "Lora", "Georgia", serif;
-    font-weight: normal;
-}
-
 @mixin font-headlines
 {
     font-family: "Open Sans", "Verdana", sans-serif;
     font-weight: bold;
+}
+
+@mixin font-paragraph
+{
+    font-family: "Lora", "Georgia", serif;
+    font-weight: normal;
 }
 
 @mixin font-monospace
