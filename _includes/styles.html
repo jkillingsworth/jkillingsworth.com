@@ -1,3 +1,7 @@
+{% capture css-fonts %}
+{% include css/fonts.scss %}
+{% endcapture %}
+
 {% capture css-normalize %}
 {% include css/normalize.css %}
 {% endcapture %}
@@ -7,6 +11,7 @@
 {% endcapture %}
 
 {{- "<style>" }}
+{{- css-fonts | scssify }}
 {{- css-normalize | scssify }}
 {{- css-site | scssify }}
 {{- "</style>" }}
