@@ -1,25 +1,4 @@
-{% assign webfonts-url = "./static/fonts/fonts.css" %}
 <link rel="preload" href="./static/fonts/open-sans-v15-latin-700.woff2" as="font" crossorigin />
 <link rel="preload" href="./static/fonts/lora-v12-latin-regular.woff2" as="font" crossorigin />
 <link rel="preload" href="./static/fonts/lora-v12-latin-italic.woff2" as="font" crossorigin />
-<link rel="preload" href="{{ webfonts-url }}" as="style" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" defer></script>
-<script>
-  var activate = function () {
-    document.documentElement.classList.add("webfonts");
-    sessionStorage.setItem("webfonts", true);
-  };
-  if (sessionStorage.getItem("webfonts")) {
-    var element = document.createElement("link");
-    element.rel = "stylesheet";
-    element.href = "{{ webfonts-url }}";
-    element.media = "all";
-    document.head.appendChild(element);
-    activate();
-  } else {
-    WebFontConfig = {
-      custom: { families: ["Open Sans:n7", "Lora:n4,i4"], urls: ["{{ webfonts-url }}"] },
-      active: activate
-    };
-  }
-</script>
+<link rel="stylesheet" href="./static/fonts/fonts.css" media="all" />

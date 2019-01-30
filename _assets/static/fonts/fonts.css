@@ -2,6 +2,7 @@
 /* open-sans-700 - latin */
 @font-face
 {
+    font-display: fallback;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
@@ -12,6 +13,7 @@
 /* lora-regular - latin */
 @font-face
 {
+    font-display: fallback;
     font-family: 'Lora';
     font-style: normal;
     font-weight: 400;
@@ -22,6 +24,7 @@
 /* lora-italic - latin */
 @font-face
 {
+    font-display: fallback;
     font-family: 'Lora';
     font-style: italic;
     font-weight: 400;
