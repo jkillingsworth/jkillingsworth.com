@@ -1,4 +1,4 @@
-{% assign webfont-url = "https://fonts.googleapis.com/css?family=Lora%7CLora:i%7COpen+Sans:b" %}
+{% assign webfont-url = "./static/fonts/fonts.css" %}
 <link rel="preload" href="{{ webfont-url }}" as="style" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" defer></script>
 <script>
@@ -14,6 +14,9 @@
     document.head.appendChild(element);
     activate();
   } else {
-    WebFontConfig = { google: { families: ["Lora", "Lora:i", "Open+Sans:b"] }, active: activate };
+    WebFontConfig = {
+      custom: { families: ["Open Sans:n7", "Lora:n4,i4"], urls: ["{{ webfont-url }}"] },
+      active: activate
+    };
   }
 </script>
