@@ -7,10 +7,9 @@
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}" />
   <base href="{{ site.baseurl }}/" />
   <link rel="canonical" href="{{ page.url | absolute_url }}" />
-  <link rel="icon" href="./static/favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="./static/favicon-256.jpg" sizes="256x256" />
-  {% include analytics.html %}
+  {% include favicons.html %}
   {% include webfonts.html %}
+  {% include analytics.html %}
   {% include styles.html %}
 </head>
 <body>
