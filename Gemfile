@@ -4,5 +4,6 @@ group :jekyll_plugins do
     gem "jekyll-hyphenate_filter"
 end
 
+gem "htmlcompressor"
 gem "jekyll"
 gem "wdm", ">= 0.1.1" if Gem.win_platform?
