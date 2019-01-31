@@ -10,13 +10,13 @@ The build the site, you need to install [Ruby](https://www.ruby-lang.org/) and u
 
 The following instructions are designed for installing the required tools on a Windows system. However, all of these tools are all available for other platforms as well.
 
-1. Download and run [RubyInstaller](https://rubyinstaller.org/downloads/) for Windows. See the instructions for installing [Jekyll on Windows](https://jekyllrb.com/docs/windows/#installation-via-rubyinstaller).
+1. Download and run [RubyInstaller](https://rubyinstaller.org/downloads/) for Windows. See the instructions for installing [Jekyll on Windows](https://jekyllrb.com/docs/installation/windows/#installation-via-rubyinstaller).
 
    *Note:* Avoid installing in a folder name that contains spaces (e.g. Program Files). Having spaces in the shebang interpreter path causes problems, even if you put quotes around it. See here for more details:
 
    https://lists.gnu.org/archive/html/bug-bash/2008-05/msg00051.html
 
-   *Optional:* Check the box to use UTF-8 as the default external encoding. See section titled [Encoding](https://jekyllrb.com/docs/windows/#encoding) in the instructions.
+   *Optional:* Check the box to use UTF-8 as the default external encoding. See section titled [Encoding](https://jekyllrb.com/docs/installation/windows/#encoding) in the instructions.
 
 2. Install the MSYS2 components when prompted. Use the default options.
 
