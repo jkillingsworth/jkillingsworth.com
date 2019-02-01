@@ -512,7 +512,6 @@ svg
 
 .content .comments
 {
-    border-top: $border-upper;
     margin: 24px 0 8px;
 
     header > h2
@@ -522,8 +521,27 @@ svg
 
     noscript
     {
+        @include font-monospace();
         display: block;
         margin: 24px 0;
+    }
+
+    a#comments
+    {
+        @include font-headlines();
+        background: $shade90;
+        color: inherit;
+        display: block;
+        margin: 24px 0;
+        padding: 4px 0;
+        text-align: center;
+    }
+
+    a#comments:hover,
+    a#comments:focus
+    {
+        background: $shade50;
+        color: $rgbback;
     }
 }
 

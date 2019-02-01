@@ -26,20 +26,30 @@ layout: default
   {% assign disqus_title = "Draft" %}
   {% assign disqus_identifier = "draft" %}
   {% endif %}
-  <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
       this.page.url = "{{ disqus_url }}";
       this.page.title = "{{ disqus_title }}";
       this.page.identifier = "{{ disqus_identifier }}";
     };
-    (function () {
+    function disqus_show() {
       var d = document, s = d.createElement("script");
       s.src = "https://jkillingsworth.disqus.com/embed.js";
       s.setAttribute("data-timestamp", +new Date());
       (d.head || d.body).appendChild(s);
-    })();
+    }
+    function anchor_blur() {
+      var a = document.getElementById("comments");
+      a.innerText = "Comments";
+      a.blur();
+    }
+    function disqus() {
+      disqus_show();
+      anchor_blur();
+    }
   </script>
+  <a id="comments" href="javascript:disqus();">Show comments</a>
+  <div id="disqus_thread"></div>
   <noscript>
     Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
   </noscript>
