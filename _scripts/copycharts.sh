@@ -23,11 +23,11 @@ copychart $post fig-19 fraction-add-log-med.svg
 post="2018-07-24-linear-and-log-scale-distributions"
 
 copychart $post fig-01 stochastic-constant-add-lin.svg
-copychart $post fig-07 exhaustive-constant-add-lin.svg
-copychart $post fig-10 exhaustive-fraction-add-lin.svg
-copychart $post fig-11 exhaustive-fraction-add-log.svg
-copychart $post fig-17 exhaustive-fraction-mul-lin.svg
-copychart $post fig-18 exhaustive-fraction-mul-log.svg
+copychart $post fig-06 exhaustive-constant-add-lin.svg
+copychart $post fig-08 exhaustive-fraction-add-lin.svg
+copychart $post fig-09 exhaustive-fraction-add-log.svg
+copychart $post fig-14 exhaustive-fraction-mul-lin.svg
+copychart $post fig-15 exhaustive-fraction-mul-log.svg
 
 post="2018-09-21-least-squares-moving-averages"
 
