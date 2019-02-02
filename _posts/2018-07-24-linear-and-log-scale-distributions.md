@@ -15,27 +15,13 @@ Suppose a gambler with $100 plays 200 rounds of the coin toss game, betting a fi
 
 The chart above looks like it roughly approximates a binomial distribution, with outcomes closer to the breakeven amount more likely than outcomes further away. We can also separate the outcomes into categories based on whether the result is a profit, a loss, or a breakeven amount:
 
-{% latex fig-02 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
-    \begin{document}
-    \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|l|l|}
-    \hline
-    \text{Outcome} & \text{Probability}
-    \\[0.25em]\hline
-    Profit         & 0.477
-    \\[0.25em]\hline
-    Loss           & 0.465
-    \\[0.25em]\hline
-    Breakeven      & 0.058
-    \\[0.25em]\hline
-    \end{array}
-    \end{displaymath}
-    \end{document}
-{% endlatex %}
+{% table %}
+| <span style="width: 5em;">Outcome</span> | <span style="width: 6em;">Probability</span>
+|:-----------------------------------------|:---
+| Profit                                   | 0.477
+| Loss                                     | 0.465
+| Breakeven                                | 0.058
+{% endtable %}
 
 While the simulated results might give us a pretty good approximation of the distribution of possible outcomes, there is a way to be more accurate.
 
@@ -111,27 +97,13 @@ If the gambler plays 200 rounds of the coin toss game, there is a total of 201 u
 
 This is the idealized form of the previous chart. Notice that the chart is symmetrical. The distribution of profitable outcomes to the right of $100 mirrors the distribution of losing outcomes to the left of $100. Grouping the results into profit, loss, and breakeven categories again, we get the following:
 
-{% latex fig-08 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
-    \begin{document}
-    \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|l|l|}
-    \hline
-    \text{Outcome} & \text{Probability}
-    \\[0.25em]\hline
-    Profit         & 0.472
-    \\[0.25em]\hline
-    Loss           & 0.472
-    \\[0.25em]\hline
-    Breakeven      & 0.056
-    \\[0.25em]\hline
-    \end{array}
-    \end{displaymath}
-    \end{document}
-{% endlatex %}
+{% table %}
+| <span style="width: 5em;">Outcome</span> | <span style="width: 6em;">Probability</span>
+|:-----------------------------------------|:---
+| Profit                                   | 0.472
+| Loss                                     | 0.472
+| Breakeven                                | 0.056
+{% endtable %}
 
 While the symmetry between the distribution of winning and losing outcomes may not be surprising when using a fixed constant bet size, can we expect the same property hold true if we use the fixed fraction bet size strategy instead? Let's find out.
 
@@ -159,25 +131,12 @@ In the fixed fraction case, the gambler's bankroll can never fall below zero. Th
 
 The outcomes are evenly distributed on a logarithmic scale, but the most likely outcomes are shifted to the left of the $100 breakeven amount. After playing 200 rounds, the gambler is far more likely to take a loss than to go home with a profit:
 
-{% latex fig-12 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
-    \begin{document}
-    \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|l|l|}
-    \hline
-    \text{Outcome} & \text{Probability}
-    \\[0.25em]\hline
-    Profit         & 0.069
-    \\[0.25em]\hline
-    Loss           & 0.931
-    \\[0.25em]\hline
-    \end{array}
-    \end{displaymath}
-    \end{document}
-{% endlatex %}
+{% table %}
+| <span style="width: 5em;">Outcome</span> | <span style="width: 6em;">Probability</span>
+|:-----------------------------------------|:---
+| Profit                                   | 0.069
+| Loss                                     | 0.931
+{% endtable %}
 
 The most likely outcomes, outcomes with 100 winning plays and 100 losing plays, result in the gambler's $100 bankroll being whittled down to less than $2 after playing 200 games. Using a fixed fraction betting strategy changes the dynamic of the game because the results compound in a multiplicative fashion instead of an additive fashion.
 
@@ -259,26 +218,12 @@ Of course, it makes more sense to plot this on a logarithmic chart:
 
 With the modified reward function for the fixed fraction betting strategy, the gambler now has an equal probability of getting a winning outcome as he does a losing outcome. The breakdown of profit, loss, and breakeven outcomes is now the same as that of the fixed constant betting strategy:
 
-{% latex fig-19 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
-    \begin{document}
-    \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|l|l|}
-    \hline
-    \text{Outcome} & \text{Probability}
-    \\[0.25em]\hline
-    Profit         & 0.472
-    \\[0.25em]\hline
-    Loss           & 0.472
-    \\[0.25em]\hline
-    Breakeven      & 0.056
-    \\[0.25em]\hline
-    \end{array}
-    \end{displaymath}
-    \end{document}
-{% endlatex %}
+{% table %}
+| <span style="width: 5em;">Outcome</span> | <span style="width: 6em;">Probability</span>
+|:-----------------------------------------|:---
+| Profit                                   | 0.472
+| Loss                                     | 0.472
+| Breakeven                                | 0.056
+{% endtable %}
 
 But while the distribution is balanced in terms of winning and losing outcomes, the payoff for a winning outcome always outweighs the payoff for a losing outcome---sometimes even by several orders of magnitude. I imagine an advantage player could easily find a way to profit from such a game.
