@@ -400,6 +400,24 @@ svg
             object-fit: cover;
         }
     }
+
+    .button
+    {
+        @include font-headlines();
+        background: $shade90;
+        color: inherit;
+        display: block;
+        margin: 24px 0;
+        padding: 4px 0;
+        text-align: center;
+
+        &:hover,
+        &:focus
+        {
+            background: $shade50;
+            color: $rgbback;
+        }
+    }
 }
 
 .content .message
@@ -435,28 +453,11 @@ svg
 
 .content .oldpost
 {
-    @include font-headlines();
     margin: 24px 0;
-    text-align: center;
 
     header > h1
     {
         display: none;
-    }
-
-    a
-    {
-        background: $shade90;
-        color: inherit;
-        display: block;
-        padding: 4px 0;
-    }
-
-    a:hover,
-    a:focus
-    {
-        background: $shade50;
-        color: $rgbback;
     }
 }
 
@@ -524,24 +525,6 @@ svg
         @include font-monospace();
         display: block;
         margin: 24px 0;
-    }
-
-    a#comments
-    {
-        @include font-headlines();
-        background: $shade90;
-        color: inherit;
-        display: block;
-        margin: 24px 0;
-        padding: 4px 0;
-        text-align: center;
-    }
-
-    a#comments:hover,
-    a#comments:focus
-    {
-        background: $shade50;
-        color: $rgbback;
     }
 }
 
