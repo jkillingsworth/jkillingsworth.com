@@ -41,6 +41,13 @@ $indent-width: 16px;
     font-weight: normal;
 }
 
+@mixin font-tabletext
+{
+    font-family: "Lora Tabular", "Lora", "Georgia", serif;
+    font-variant-numeric: tabular-nums;
+    font-weight: normal;
+}
+
 @mixin font-monospace
 {
     font-family: "Consolas", "Monaco", monospace;
@@ -369,6 +376,7 @@ svg
 
         table
         {
+            @include font-tabletext();
             border-collapse: collapse;
             margin: 0 $indent-width;
         }

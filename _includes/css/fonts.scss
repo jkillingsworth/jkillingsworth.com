@@ -1,4 +1,6 @@
 // https://google-webfonts-helper.herokuapp.com/fonts
+// https://everythingfonts.com/
+// http://www.glyphrstudio.com/
 
 @font-face
 {
@@ -31,4 +33,16 @@
     src: local("Lora Italic"), local("Lora-Italic"), //
     url(./static/fonts/lora-v12-latin-italic.woff2) format("woff2"), //
     url(./static/fonts/lora-v12-latin-italic.woff) format("woff");
+}
+
+@font-face
+{
+    font-display: fallback;
+    font-family: "Lora Tabular";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Lora Tabular Regular"), local("LoraTabular-Regular"), //
+    url(./static/fonts/lora-variant-tabular-nums.woff2) format("woff2"), //
+    url(./static/fonts/lora-variant-tabular-nums.woff) format("woff");
+    unicode-range: U+0030-0039;
 }
