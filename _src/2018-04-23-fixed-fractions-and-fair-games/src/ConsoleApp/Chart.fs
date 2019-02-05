@@ -71,7 +71,7 @@ let private render plot path (lower : float) (upper : float) data =
 
     let data =
         data
-        |> Array.mapi (fun i x -> sprintf "%3i %11f" i x)
+        |> Array.mapi (fun i x -> sprintf "%i %e" i x)
         |> String.concat "\n"
 
     let file = Path.GetFullPath(path)

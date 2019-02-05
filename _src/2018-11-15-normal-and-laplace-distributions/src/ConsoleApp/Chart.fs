@@ -141,7 +141,7 @@ let renderLikelihood path (lower, upper) data =
         |> Array.reduce (fun l r -> l + ", " + r)
 
     let mapping (x, y, p) =
-        sprintf "%i %f %i" x y (if p then 1 else 0)
+        sprintf "%i %e %i" x y (if p then 1 else 0)
 
     let data =
         data
@@ -154,7 +154,7 @@ let renderDistributionsLin path data =
 
     let data =
         data
-        |> Array.map (fun (x, n, l) -> sprintf "%f %f %f" x n l)
+        |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
         |> String.concat "\n"
 
     render plotDistributionsLin path [| data |]
@@ -163,7 +163,7 @@ let renderDistributionsLog path data =
 
     let data =
         data
-        |> Array.map (fun (x, n, l) -> sprintf "%f %f %f" x n l)
+        |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
         |> String.concat "\n"
 
     render plotDistributionsLog path [| data |]

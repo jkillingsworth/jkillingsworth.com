@@ -86,9 +86,9 @@ let private render plot path axis (ticker : string) data =
 
     let lower, upper, step = axis : (int * int * int)
 
-    let formatOption = function Some x -> sprintf "%f" x | None -> "''"
+    let formatOption = function Some x -> sprintf "%e" x | None -> "''"
     let formatData i (market, moving, fitted) =
-        sprintf "%i %f %s %s" i market (formatOption moving) (formatOption fitted)
+        sprintf "%i %e %s %s" i market (formatOption moving) (formatOption fitted)
 
     let data =
         data

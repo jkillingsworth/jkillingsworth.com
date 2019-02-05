@@ -134,7 +134,7 @@ let renderPrice path data =
 
     let data =
         data
-        |> Array.mapi (fun i x -> sprintf "%i %f" i x)
+        |> Array.mapi (fun i x -> sprintf "%i %e" i x)
         |> String.concat "\n"
 
     render plotPrice path [| data; label |]
@@ -148,7 +148,7 @@ let renderDiffs path data =
 
     let data =
         data
-        |> Array.mapi (fun i x -> sprintf "%i %f" i x)
+        |> Array.mapi (fun i x -> sprintf "%i %e" i x)
         |> String.concat "\n"
 
     render plotDiffs path [| data; label |]
@@ -164,7 +164,7 @@ let renderProbs path data =
 
     let xlabel = function
         | 0 -> "0"
-        | i -> sprintf "'%+iσ' %f" i (float i * σN)
+        | i -> sprintf "'%+iσ' %e" i (float i * σN)
 
     let xrange =
         [| -n .. +n |]
@@ -173,7 +173,7 @@ let renderProbs path data =
 
     let data =
         histogram
-        |> Array.map (fun (center, amount) -> sprintf "%f %f" center amount)
+        |> Array.map (fun (center, amount) -> sprintf "%e %e" center amount)
         |> String.concat "\n"
 
     render plotProbs path [| data; label; xwide; xrange; µN; σN; µL; bL |]

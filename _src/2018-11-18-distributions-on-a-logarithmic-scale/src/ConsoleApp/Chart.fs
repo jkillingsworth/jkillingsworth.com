@@ -93,7 +93,7 @@ let renderDistributionsLin path data =
 
     let data =
         data
-        |> Array.map (fun (x, n, l) -> sprintf "%f %f %f" x n l)
+        |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
         |> String.concat "\n"
 
     render plotDistributionsLin path [| data |]
@@ -102,7 +102,7 @@ let renderDistributionsLog path data =
 
     let data =
         data
-        |> Array.map (fun (x, n, l) -> sprintf "%f %f %f" x n l)
+        |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
         |> String.concat "\n"
 
     render plotDistributionsLog path [| data |]
