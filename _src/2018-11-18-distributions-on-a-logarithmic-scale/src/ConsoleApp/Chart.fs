@@ -2,6 +2,7 @@
 
 open System.Diagnostics
 open System.IO
+open System.Text
 
 //-------------------------------------------------------------------------------------------------
 
@@ -83,6 +84,7 @@ let private render plot path (args : obj[]) =
     proc.StartInfo.FileName <- "gnuplot.exe"
     proc.StartInfo.UseShellExecute <- false
     proc.StartInfo.RedirectStandardInput <- true
+    proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
     proc.Start() |> ignore
     proc.StandardInput.Write(plot, args |> Array.append [| file |])
     proc.StandardInput.Flush()

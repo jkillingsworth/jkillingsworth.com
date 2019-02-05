@@ -2,6 +2,7 @@
 
 open System.Diagnostics
 open System.IO
+open System.Text
 
 //-------------------------------------------------------------------------------------------------
 
@@ -99,6 +100,7 @@ let private render plot path axis (ticker : string) data =
     proc.StartInfo.FileName <- "gnuplot.exe"
     proc.StartInfo.UseShellExecute <- false
     proc.StartInfo.RedirectStandardInput <- true
+    proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
     proc.Start() |> ignore
     proc.StandardInput.Write(plot, file, data, lower, upper, step, ticker)
     proc.StandardInput.Flush()
