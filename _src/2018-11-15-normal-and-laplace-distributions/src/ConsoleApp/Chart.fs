@@ -15,7 +15,7 @@ $data << EOD
 {1}
 EOD
 
-set xlabel 'Location ({{/symbol m}})'
+set xlabel 'Location (µ)'
 set xtics scale 0.01, 0.01
 set xtics ({2})
 

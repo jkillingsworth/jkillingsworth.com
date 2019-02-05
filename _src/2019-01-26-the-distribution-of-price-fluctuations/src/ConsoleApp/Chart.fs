@@ -74,7 +74,7 @@ $data << EOD
 {1}
 EOD
 
-set xlabel 'Price Differences (Log Scale), {{/symbol s}} = {6:e3}'
+set xlabel 'Price Differences (Log Scale), σ = {6:e3}'
 set xtics scale 0.01, 0.01
 set xrange [-{3}:+{3}]
 set xtics ({4})
@@ -164,7 +164,7 @@ let renderProbs path data =
 
     let xlabel = function
         | 0 -> "0"
-        | i -> sprintf "'%+i{{/symbol s}}' %f" i (float i * σN)
+        | i -> sprintf "'%+iσ' %f" i (float i * σN)
 
     let xrange =
         [| -n .. +n |]
