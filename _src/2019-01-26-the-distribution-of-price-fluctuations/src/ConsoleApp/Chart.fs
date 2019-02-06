@@ -44,7 +44,7 @@ set format y '% 1.2f'
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
 
-set key box linecolor '#808080' samplen 1 opaque
+set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 
 set linetype 1 linecolor '#808080'
@@ -69,7 +69,7 @@ set format y '% 1.2f'
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
 
-set key box linecolor '#808080' samplen 1 opaque
+set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 
 set linetype 1 linecolor '#808080'
@@ -96,7 +96,7 @@ set format y '%5.0f'
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
 
-set key box linecolor '#808080' samplen 1 opaque
+set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 set key title '{1}' left width 6
 
