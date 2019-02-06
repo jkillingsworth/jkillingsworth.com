@@ -34,7 +34,7 @@ $data << EOD
 {0}
 EOD
 
-set xlabel 'Time in Days'
+set xlabel 'Time (Days)'
 set xtics scale 0.01, 0.01
 set xtics 200
 set xrange [0:2000]
@@ -50,7 +50,7 @@ set grid linestyle 1 linecolor '#e6e6e6'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title '{4} (Full)'
+set key title '{4} (Full)' left
 
 set linetype 1 linecolor '#00808080'
 set linetype 2 linecolor '#00ff0000'
@@ -68,7 +68,7 @@ $data << EOD
 {0}
 EOD
 
-set xlabel 'Time in Days'
+set xlabel 'Time (Days)'
 set xtics scale 0.01, 0.01
 set xtics 200
 set xrange [1800:2000]
@@ -84,7 +84,7 @@ set grid linestyle 1 linecolor '#e6e6e6'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title '{4} (Zoom)'
+set key title '{4} (Zoom)' left
 
 set linetype 1 linecolor '#00808080'
 set linetype 2 linecolor '#80ff0000'
