@@ -1,18 +1,37 @@
 ﻿module Chart
 
+open System
 open System.Diagnostics
 open System.IO
 open System.Text
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotLin = "
+let private preamble = "
 set terminal svg size 720 405 background 'white' font 'Consolas, Monaco, monospace'
 set encoding utf8
 set output '{0}'
+"
 
+let private render path template args =
+
+    let preamble = String.Format(preamble, Path.GetFullPath(path))
+    let template = String.Format(template, args)
+    let plot = preamble + template
+    use proc = new Process()
+    proc.StartInfo.FileName <- "gnuplot.exe"
+    proc.StartInfo.UseShellExecute <- false
+    proc.StartInfo.RedirectStandardInput <- true
+    proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
+    proc.Start() |> ignore
+    proc.StandardInput.Write(plot)
+    proc.StandardInput.Flush()
+
+//-------------------------------------------------------------------------------------------------
+
+let private plotLin = "
 $data << EOD
-{1}
+{0}
 EOD
 
 set xlabel 'Number of Plays'
@@ -22,7 +41,7 @@ set xtics 50
 set mxtics 2
 
 set ylabel 'Dollars'
-set yrange [{2}:{3}]
+set yrange [{1}:{2}]
 set ytics scale 0.01, 0.01
 set ytics 100
 set mytics 5
@@ -37,12 +56,8 @@ plot '$data' with lines lc '#ff0000' title 'Gambler''s Bankroll'
 //-------------------------------------------------------------------------------------------------
 
 let private plotLog = "
-set terminal svg size 720 405 background 'white' font 'Consolas, Monaco, monospace'
-set encoding utf8
-set output '{0}'
-
 $data << EOD
-{1}
+{0}
 EOD
 
 set xlabel 'Number of Plays'
@@ -52,7 +67,7 @@ set xtics 50
 set mxtics 2
 
 set ylabel 'Dollars'
-set yrange [{2}:{3}]
+set yrange [{1}:{2}]
 set ytics scale 0.01, 0.01
 set ytics 10
 set mytics 9
@@ -67,22 +82,14 @@ plot '$data' with lines lc '#ff0000' title 'Gambler''s Bankroll'
 
 //-------------------------------------------------------------------------------------------------
 
-let private render plot path (lower : float) (upper : float) data =
+let private renderChart plot path (lower : float) (upper : float) data =
 
     let data =
         data
         |> Array.mapi (fun i x -> sprintf "%i %e" i x)
         |> String.concat "\n"
 
-    let file = Path.GetFullPath(path)
-    use proc = new Process()
-    proc.StartInfo.FileName <- "gnuplot.exe"
-    proc.StartInfo.UseShellExecute <- false
-    proc.StartInfo.RedirectStandardInput <- true
-    proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
-    proc.Start() |> ignore
-    proc.StandardInput.Write(plot, file, data, lower, upper)
-    proc.StandardInput.Flush()
+    render path plot [| data; lower; upper |]
 
-let renderLin = render plotLin
-let renderLog = render plotLog
+let renderLin = renderChart plotLin
+let renderLog = renderChart plotLog

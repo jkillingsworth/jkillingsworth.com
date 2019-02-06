@@ -1,28 +1,47 @@
 ﻿module Chart
 
+open System
 open System.Diagnostics
 open System.IO
 open System.Text
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotLikelihood = "
+let private preamble = "
 set terminal svg size 720 405 background 'white' font 'Consolas, Monaco, monospace'
 set encoding utf8
 set output '{0}'
+"
 
+let private render path template args =
+
+    let preamble = String.Format(preamble, Path.GetFullPath(path))
+    let template = String.Format(template, args)
+    let plot = preamble + template
+    use proc = new Process()
+    proc.StartInfo.FileName <- "gnuplot.exe"
+    proc.StartInfo.UseShellExecute <- false
+    proc.StartInfo.RedirectStandardInput <- true
+    proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
+    proc.Start() |> ignore
+    proc.StandardInput.Write(plot)
+    proc.StandardInput.Flush()
+
+//-------------------------------------------------------------------------------------------------
+
+let private plotLikelihood = "
 $data << EOD
-{1}
+{0}
 EOD
 
 set xlabel 'Location (µ)'
 set xtics scale 0.01, 0.01
-set xtics ({2})
+set xtics ({1})
 
 set ylabel 'Likelihood'
 set ytics scale 0.01, 0.01
-set yrange [{3}:{4}]
-set ytics (' Max' {5})
+set yrange [{2}:{3}]
+set ytics (' Max' {4})
 
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -36,7 +55,7 @@ set linetype 2 pointtype 7 linecolor '#ff0000' pointsize 0.75
 
 etitle = 'Likelihood (n is even)'
 otitle = 'Likelihood (n is odd) '
-if ({6} == 0) {{ eotitle = etitle }} else {{ eotitle = otitle }}
+if ({5} == 0) {{ eotitle = etitle }} else {{ eotitle = otitle }}
 
 plot '$data' using 1:2 with lines title eotitle,\
      '$data' using 1:($3 != 0 ? $2 : 1/0) with points notitle
@@ -45,12 +64,8 @@ plot '$data' using 1:2 with lines title eotitle,\
 //-------------------------------------------------------------------------------------------------
 
 let private plotDistributionsLin = "
-set terminal svg size 720 405 background 'white' font 'Consolas, Monaco, monospace'
-set encoding utf8
-set output '{0}'
-
 $data << EOD
-{1}
+{0}
 EOD
 
 set xlabel 'x'
@@ -79,12 +94,8 @@ plot '$data' using 1:2 with lines title 'Normal',\
 //-------------------------------------------------------------------------------------------------
 
 let private plotDistributionsLog = "
-set terminal svg size 720 405 background 'white' font 'Consolas, Monaco, monospace'
-set encoding utf8
-set output '{0}'
-
 $data << EOD
-{1}
+{0}
 EOD
 
 set xlabel 'x'
@@ -112,18 +123,6 @@ plot '$data' using 1:2 with lines title 'Normal',\
 
 //-------------------------------------------------------------------------------------------------
 
-let private render plot path (args : obj[]) =
-
-    let file = Path.GetFullPath(path)
-    use proc = new Process()
-    proc.StartInfo.FileName <- "gnuplot.exe"
-    proc.StartInfo.UseShellExecute <- false
-    proc.StartInfo.RedirectStandardInput <- true
-    proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
-    proc.Start() |> ignore
-    proc.StandardInput.Write(plot, args |> Array.append [| file |])
-    proc.StandardInput.Flush()
-
 let renderLikelihood path (lower, upper) data =
 
     let points = data |> Array.filter (fun (_, _, p) -> p)
@@ -148,7 +147,7 @@ let renderLikelihood path (lower, upper) data =
         |> Array.map mapping
         |> String.concat "\n"
 
-    render plotLikelihood path [| data; xrange; lower; upper; ymax; (n % 2) |]
+    render path plotLikelihood [| data; xrange; lower; upper; ymax; (n % 2) |]
 
 let renderDistributionsLin path data =
 
@@ -157,7 +156,7 @@ let renderDistributionsLin path data =
         |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
         |> String.concat "\n"
 
-    render plotDistributionsLin path [| data |]
+    render path plotDistributionsLin [| data |]
 
 let renderDistributionsLog path data =
 
@@ -166,4 +165,4 @@ let renderDistributionsLog path data =
         |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
         |> String.concat "\n"
 
-    render plotDistributionsLog path [| data |]
+    render path plotDistributionsLog [| data |]

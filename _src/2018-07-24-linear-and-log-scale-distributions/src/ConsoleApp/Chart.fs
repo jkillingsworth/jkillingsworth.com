@@ -1,18 +1,37 @@
 ﻿module Chart
 
+open System
 open System.Diagnostics
 open System.IO
 open System.Text
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotLin = "
+let private preamble = "
 set terminal svg size 720 405 background 'white' font 'Consolas, Monaco, monospace'
 set encoding utf8
 set output '{0}'
+"
 
+let private render path template args =
+
+    let preamble = String.Format(preamble, Path.GetFullPath(path))
+    let template = String.Format(template, args)
+    let plot = preamble + template
+    use proc = new Process()
+    proc.StartInfo.FileName <- "gnuplot.exe"
+    proc.StartInfo.UseShellExecute <- false
+    proc.StartInfo.RedirectStandardInput <- true
+    proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
+    proc.Start() |> ignore
+    proc.StandardInput.Write(plot)
+    proc.StandardInput.Flush()
+
+//-------------------------------------------------------------------------------------------------
+
+let private plotLin = "
 $data << EOD
-{1}
+{0}
 EOD
 
 set xlabel 'Possible Outcome'
@@ -40,12 +59,8 @@ plot '$data' using (strcol(1) >= 100 ? $1 : 1/0):2 with impulses title 'Profit',
 //-------------------------------------------------------------------------------------------------
 
 let private plotLog = "
-set terminal svg size 720 405 background 'white' font 'Consolas, Monaco, monospace'
-set encoding utf8
-set output '{0}'
-
 $data << EOD
-{1}
+{0}
 EOD
 
 set xlabel 'Possible Outcome'
@@ -74,22 +89,14 @@ plot '$data' using (strcol(1) >= 100 ? $1 : 1/0):2 with impulses title 'Profit',
 
 //-------------------------------------------------------------------------------------------------
 
-let private render plot path data =
+let private renderChart plot path data =
 
     let data =
         data
         |> Array.map (fun x -> sprintf "%e %e" (fst x) (snd x))
         |> String.concat "\n"
 
-    let file = Path.GetFullPath(path)
-    use proc = new Process()
-    proc.StartInfo.FileName <- "gnuplot.exe"
-    proc.StartInfo.UseShellExecute <- false
-    proc.StartInfo.RedirectStandardInput <- true
-    proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
-    proc.Start() |> ignore
-    proc.StandardInput.Write(plot, file, data)
-    proc.StandardInput.Flush()
+    render path plot [| data |]
 
-let renderLin = render plotLin
-let renderLog = render plotLog
+let renderLin = renderChart plotLin
+let renderLog = renderChart plotLog

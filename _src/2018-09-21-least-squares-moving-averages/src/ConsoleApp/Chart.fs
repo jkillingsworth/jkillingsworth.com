@@ -1,18 +1,37 @@
 ﻿module Chart
 
+open System
 open System.Diagnostics
 open System.IO
 open System.Text
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotFull = "
+let private preamble = "
 set terminal svg size 720 405 background 'white' font 'Consolas, Monaco, monospace'
 set encoding utf8
 set output '{0}'
+"
 
+let private render path template args =
+
+    let preamble = String.Format(preamble, Path.GetFullPath(path))
+    let template = String.Format(template, args)
+    let plot = preamble + template
+    use proc = new Process()
+    proc.StartInfo.FileName <- "gnuplot.exe"
+    proc.StartInfo.UseShellExecute <- false
+    proc.StartInfo.RedirectStandardInput <- true
+    proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
+    proc.Start() |> ignore
+    proc.StandardInput.Write(plot)
+    proc.StandardInput.Flush()
+
+//-------------------------------------------------------------------------------------------------
+
+let private plotFull = "
 $data << EOD
-{1}
+{0}
 EOD
 
 set xlabel 'Time in Days'
@@ -22,8 +41,8 @@ set xrange [0:2000]
 
 set ylabel 'Price per Share'
 set ytics scale 0.01, 0.01
-set ytics {2}, {4}
-set yrange [{2}:{3}]
+set ytics {1}, {3}
+set yrange [{1}:{2}]
 set format y '%g'
 
 set grid xtics ytics mxtics mytics
@@ -31,7 +50,7 @@ set grid linestyle 1 linecolor '#e6e6e6'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title '{5} (Full)'
+set key title '{4} (Full)'
 
 set linetype 1 linecolor '#00808080'
 set linetype 2 linecolor '#00ff0000'
@@ -45,12 +64,8 @@ plot '$data' using 1:2 with lines title 'Market Price',\
 //-------------------------------------------------------------------------------------------------
 
 let private plotZoom = "
-set terminal svg size 720 405 background 'white' font 'Consolas, Monaco, monospace'
-set encoding utf8
-set output '{0}'
-
 $data << EOD
-{1}
+{0}
 EOD
 
 set xlabel 'Time in Days'
@@ -60,8 +75,8 @@ set xrange [1800:2000]
 
 set ylabel 'Price per Share'
 set ytics scale 0.01, 0.01
-set ytics {2}, {4}
-set yrange [{2}:{3}]
+set ytics {1}, {3}
+set yrange [{1}:{2}]
 set format y '%g'
 
 set grid xtics ytics mxtics mytics
@@ -69,7 +84,7 @@ set grid linestyle 1 linecolor '#e6e6e6'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title '{5} (Zoom)'
+set key title '{4} (Zoom)'
 
 set linetype 1 linecolor '#00808080'
 set linetype 2 linecolor '#80ff0000'
@@ -82,7 +97,7 @@ plot '$data' using 1:2 with lines title 'Market Price',\
 
 //-------------------------------------------------------------------------------------------------
 
-let private render plot path axis (ticker : string) data =
+let private renderChart plot path axis (ticker : string) data =
 
     let lower, upper, step = axis : (int * int * int)
 
@@ -95,15 +110,7 @@ let private render plot path axis (ticker : string) data =
         |> Array.mapi formatData
         |> String.concat "\n"
 
-    let file = Path.GetFullPath(path)
-    use proc = new Process()
-    proc.StartInfo.FileName <- "gnuplot.exe"
-    proc.StartInfo.UseShellExecute <- false
-    proc.StartInfo.RedirectStandardInput <- true
-    proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
-    proc.Start() |> ignore
-    proc.StandardInput.Write(plot, file, data, lower, upper, step, ticker)
-    proc.StandardInput.Flush()
+    render path plot [| data; lower; upper; step; ticker |]
 
-let renderFull = render plotFull
-let renderZoom = render plotZoom
+let renderFull = renderChart plotFull
+let renderZoom = renderChart plotZoom

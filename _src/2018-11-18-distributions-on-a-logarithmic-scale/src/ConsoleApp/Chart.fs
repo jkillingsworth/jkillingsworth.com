@@ -1,18 +1,37 @@
 ﻿module Chart
 
+open System
 open System.Diagnostics
 open System.IO
 open System.Text
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotDistributionsLin = "
+let private preamble = "
 set terminal svg size 720 405 background 'white' font 'Consolas, Monaco, monospace'
 set encoding utf8
 set output '{0}'
+"
 
+let private render path template args =
+
+    let preamble = String.Format(preamble, Path.GetFullPath(path))
+    let template = String.Format(template, args)
+    let plot = preamble + template
+    use proc = new Process()
+    proc.StartInfo.FileName <- "gnuplot.exe"
+    proc.StartInfo.UseShellExecute <- false
+    proc.StartInfo.RedirectStandardInput <- true
+    proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
+    proc.Start() |> ignore
+    proc.StandardInput.Write(plot)
+    proc.StandardInput.Flush()
+
+//-------------------------------------------------------------------------------------------------
+
+let private plotDistributionsLin = "
 $data << EOD
-{1}
+{0}
 EOD
 
 set xlabel 'x'
@@ -42,12 +61,8 @@ plot '$data' using 1:2 with lines title 'Log-Normal',\
 //-------------------------------------------------------------------------------------------------
 
 let private plotDistributionsLog = "
-set terminal svg size 720 405 background 'white' font 'Consolas, Monaco, monospace'
-set encoding utf8
-set output '{0}'
-
 $data << EOD
-{1}
+{0}
 EOD
 
 set xlabel 'x'
@@ -77,18 +92,6 @@ plot '$data' using 1:2 with lines title 'Log-Normal',\
 
 //-------------------------------------------------------------------------------------------------
 
-let private render plot path (args : obj[]) =
-
-    let file = Path.GetFullPath(path)
-    use proc = new Process()
-    proc.StartInfo.FileName <- "gnuplot.exe"
-    proc.StartInfo.UseShellExecute <- false
-    proc.StartInfo.RedirectStandardInput <- true
-    proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
-    proc.Start() |> ignore
-    proc.StandardInput.Write(plot, args |> Array.append [| file |])
-    proc.StandardInput.Flush()
-
 let renderDistributionsLin path data =
 
     let data =
@@ -96,7 +99,7 @@ let renderDistributionsLin path data =
         |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
         |> String.concat "\n"
 
-    render plotDistributionsLin path [| data |]
+    render path plotDistributionsLin [| data |]
 
 let renderDistributionsLog path data =
 
@@ -105,4 +108,4 @@ let renderDistributionsLog path data =
         |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
         |> String.concat "\n"
 
-    render plotDistributionsLog path [| data |]
+    render path plotDistributionsLog [| data |]

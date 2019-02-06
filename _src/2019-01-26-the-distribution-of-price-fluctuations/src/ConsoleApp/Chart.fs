@@ -7,13 +7,31 @@ open System.Text
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotPrice = "
+let private preamble = "
 set terminal svg size 720 405 background 'white' font 'Consolas, Monaco, monospace'
 set encoding utf8
 set output '{0}'
+"
 
+let private render path template args =
+
+    let preamble = String.Format(preamble, Path.GetFullPath(path))
+    let template = String.Format(template, args)
+    let plot = preamble + template
+    use proc = new Process()
+    proc.StartInfo.FileName <- "gnuplot.exe"
+    proc.StartInfo.UseShellExecute <- false
+    proc.StartInfo.RedirectStandardInput <- true
+    proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
+    proc.Start() |> ignore
+    proc.StandardInput.Write(plot)
+    proc.StandardInput.Flush()
+
+//-------------------------------------------------------------------------------------------------
+
+let private plotPrice = "
 $data << EOD
-{1}
+{0}
 EOD
 
 set xlabel 'Time (Days)'
@@ -31,18 +49,14 @@ set key top left reverse Left
 
 set linetype 1 linecolor '#808080'
 
-plot '$data' using 1:2 with lines title '{2}'
+plot '$data' using 1:2 with lines title '{1}'
 "
 
 //-------------------------------------------------------------------------------------------------
 
 let private plotDiffs = "
-set terminal svg size 720 405 background 'white' font 'Consolas, Monaco, monospace'
-set encoding utf8
-set output '{0}'
-
 $data << EOD
-{1}
+{0}
 EOD
 
 set xlabel 'Time (Days)'
@@ -60,24 +74,20 @@ set key top left reverse Left
 
 set linetype 1 linecolor '#808080'
 
-plot '$data' using 1:2 with impulses title '{2}'
+plot '$data' using 1:2 with impulses title '{1}'
 "
 
 //-------------------------------------------------------------------------------------------------
 
 let private plotProbs = "
-set terminal svg size 720 405 background 'white' font 'Consolas, Monaco, monospace'
-set encoding utf8
-set output '{0}'
-
 $data << EOD
-{1}
+{0}
 EOD
 
-set xlabel 'Price Differences (Log Scale), σ = {6:e3}'
+set xlabel 'Price Differences (Log Scale), σ = {5:e3}'
 set xtics scale 0.01, 0.01
-set xrange [-{3}:+{3}]
-set xtics ({4})
+set xrange [-{2}:+{2}]
+set xtics ({3})
 
 set ylabel 'Density'
 set ytics scale 0.01, 0.01
@@ -88,7 +98,7 @@ set grid linestyle 1 linecolor '#e6e6e6'
 
 set key box linecolor '#808080' samplen 1 opaque
 set key top left reverse Left
-set key title '{2}' left width 6
+set key title '{1}' left width 6
 
 set linetype 1 linewidth 1 linecolor '#c0c0c0'
 set linetype 2 linewidth 2 linecolor '#400000ff'
@@ -101,23 +111,11 @@ distributionN(x,µ,σ) = (1 / (σ * ((2 * pi) ** 0.5))) * exp(-0.5 * ((x - µ) /
 distributionL(x,µ,b) = (1 / (2 * b)) * exp(-abs(x - µ) / b)
 
 plot '$data' using 1:2 with boxes title 'Histogram',\
-     distributionN(x, {5}, {6}) title 'Normal',\
-     distributionL(x, {7}, {8}) title 'Laplace'
+     distributionN(x, {4}, {5}) title 'Normal',\
+     distributionL(x, {6}, {7}) title 'Laplace'
 "
 
 //-------------------------------------------------------------------------------------------------
-
-let private render plot path (args : obj[]) =
-
-    let file = Path.GetFullPath(path)
-    use proc = new Process()
-    proc.StartInfo.FileName <- "gnuplot.exe"
-    proc.StartInfo.UseShellExecute <- false
-    proc.StartInfo.RedirectStandardInput <- true
-    proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
-    proc.Start() |> ignore
-    proc.StandardInput.Write(plot, args |> Array.append [| file |])
-    proc.StandardInput.Flush()
 
 let private makeLabel (descriptor : string) =
     let items = descriptor.Split("-")
@@ -137,7 +135,7 @@ let renderPrice path data =
         |> Array.mapi (fun i x -> sprintf "%i %e" i x)
         |> String.concat "\n"
 
-    render plotPrice path [| data; label |]
+    render path plotPrice [| data; label |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -151,7 +149,7 @@ let renderDiffs path data =
         |> Array.mapi (fun i x -> sprintf "%i %e" i x)
         |> String.concat "\n"
 
-    render plotDiffs path [| data; label |]
+    render path plotDiffs [| data; label |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -176,4 +174,4 @@ let renderProbs path data =
         |> Array.map (fun (center, amount) -> sprintf "%e %e" center amount)
         |> String.concat "\n"
 
-    render plotProbs path [| data; label; xwide; xrange; µN; σN; µL; bL |]
+    render path plotProbs [| data; label; xwide; xrange; µN; σN; µL; bL |]
