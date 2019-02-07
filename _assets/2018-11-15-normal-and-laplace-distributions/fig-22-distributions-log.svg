@@ -7,11 +7,11 @@
 >
 
 <title>Gnuplot</title>
-<desc>Produced by GNUPLOT 5.2 patchlevel 5 </desc>
+<desc>Produced by GNUPLOT 5.2 patchlevel 6 </desc>
 
 <g id="gnuplot_canvas">
 
-<rect x="0" y="0" width="720" height="405" fill="#ffffff"/>
+<rect x="0" y="0" width="720" height="405" fill="none"/>
 <defs>
 
 	<circle id='gpDot' r='0.5' stroke-width='0.5' stroke='currentColor'/>
@@ -31,7 +31,7 @@
 	<path id='gpPt13' stroke-width='0.222' stroke='currentColor' d='M0,1.330 L1.265,0.411 L0.782,-1.067 L-0.782,-1.076 L-1.265,0.411 z'/>
 	<use xlink:href='#gpPt13' id='gpPt14' fill='currentColor' stroke='none'/>
 	<filter id='textbox' filterUnits='objectBoundingBox' x='0' y='0' height='1' width='1'>
-	  <feFlood flood-color='#FFFFFF' flood-opacity='1' result='bgnd'/>
+	  <feFlood flood-color='white' flood-opacity='1' result='bgnd'/>
 	  <feComposite in='SourceGraphic' in2='bgnd' operator='atop'/>
 	</filter>
 	<filter id='greybox' filterUnits='objectBoundingBox' x='0' y='0' height='1' width='1'>
@@ -39,15 +39,15 @@
 	  <feComposite in='SourceGraphic' in2='grey' operator='atop'/>
 	</filter>
 </defs>
-<g fill="none" color="#FFFFFF" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+<g fill="none" color="white" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M71.9,347.4 L695.0,347.4  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M71.9,347.4 M695.0,347.4  '/>	<g transform="translate(63.6,351.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Consolas, Monaco, monospace" > 10</tspan><tspan font-family="Consolas, Monaco, monospace"  font-size="9.6" dy="-6.00px">-5</tspan><tspan font-size="12.0" dy="6.00"></tspan></text>
+	<path stroke='black'  d='M71.9,347.4 M695.0,347.4  '/>	<g transform="translate(63.6,351.3)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 10</tspan><tspan font-family="Consolas, Menlo, monospace"  font-size="9.6" dy="-6.00px">-5</tspan><tspan font-size="12.0" dy="6.00"></tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -87,8 +87,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M71.9,281.5 L695.0,281.5  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M71.9,281.5 M695.0,281.5  '/>	<g transform="translate(63.6,285.4)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Consolas, Monaco, monospace" > 10</tspan><tspan font-family="Consolas, Monaco, monospace"  font-size="9.6" dy="-6.00px">-4</tspan><tspan font-size="12.0" dy="6.00"></tspan></text>
+	<path stroke='black'  d='M71.9,281.5 M695.0,281.5  '/>	<g transform="translate(63.6,285.4)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 10</tspan><tspan font-family="Consolas, Menlo, monospace"  font-size="9.6" dy="-6.00px">-4</tspan><tspan font-size="12.0" dy="6.00"></tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -128,8 +128,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M71.9,215.7 L695.0,215.7  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M71.9,215.7 M695.0,215.7  '/>	<g transform="translate(63.6,219.6)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Consolas, Monaco, monospace" > 10</tspan><tspan font-family="Consolas, Monaco, monospace"  font-size="9.6" dy="-6.00px">-3</tspan><tspan font-size="12.0" dy="6.00"></tspan></text>
+	<path stroke='black'  d='M71.9,215.7 M695.0,215.7  '/>	<g transform="translate(63.6,219.6)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 10</tspan><tspan font-family="Consolas, Menlo, monospace"  font-size="9.6" dy="-6.00px">-3</tspan><tspan font-size="12.0" dy="6.00"></tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -169,8 +169,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M71.9,149.8 L695.0,149.8  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M71.9,149.8 M695.0,149.8  '/>	<g transform="translate(63.6,153.7)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Consolas, Monaco, monospace" > 10</tspan><tspan font-family="Consolas, Monaco, monospace"  font-size="9.6" dy="-6.00px">-2</tspan><tspan font-size="12.0" dy="6.00"></tspan></text>
+	<path stroke='black'  d='M71.9,149.8 M695.0,149.8  '/>	<g transform="translate(63.6,153.7)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 10</tspan><tspan font-family="Consolas, Menlo, monospace"  font-size="9.6" dy="-6.00px">-2</tspan><tspan font-size="12.0" dy="6.00"></tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -210,8 +210,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M71.9,84.0 L695.0,84.0  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M71.9,84.0 M695.0,84.0  '/>	<g transform="translate(63.6,87.9)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Consolas, Monaco, monospace" > 10</tspan><tspan font-family="Consolas, Monaco, monospace"  font-size="9.6" dy="-6.00px">-1</tspan><tspan font-size="12.0" dy="6.00"></tspan></text>
+	<path stroke='black'  d='M71.9,84.0 M695.0,84.0  '/>	<g transform="translate(63.6,87.9)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 10</tspan><tspan font-family="Consolas, Menlo, monospace"  font-size="9.6" dy="-6.00px">-1</tspan><tspan font-size="12.0" dy="6.00"></tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -251,8 +251,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M71.9,18.1 L695.0,18.1  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M71.9,18.1 M695.0,18.1  '/>	<g transform="translate(63.6,22.0)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Consolas, Monaco, monospace" > 10</tspan><tspan font-family="Consolas, Monaco, monospace"  font-size="9.6" dy="-6.00px">+0</tspan><tspan font-size="12.0" dy="6.00"></tspan></text>
+	<path stroke='black'  d='M71.9,18.1 M695.0,18.1  '/>	<g transform="translate(63.6,22.0)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 10</tspan><tspan font-family="Consolas, Menlo, monospace"  font-size="9.6" dy="-6.00px">+0</tspan><tspan font-size="12.0" dy="6.00"></tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -260,8 +260,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M71.9,347.4 L71.9,18.1  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M71.9,347.4 M71.9,18.1  '/>	<g transform="translate(71.9,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Consolas, Monaco, monospace" >-5</tspan></text>
+	<path stroke='black'  d='M71.9,347.4 M71.9,18.1  '/>	<g transform="translate(71.9,369.3)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >-5</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -269,8 +269,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M134.2,347.4 L134.2,63.1 M134.2,27.1 L134.2,18.1  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M134.2,347.4 M134.2,18.1  '/>	<g transform="translate(134.2,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Consolas, Monaco, monospace" >-4</tspan></text>
+	<path stroke='black'  d='M134.2,347.4 M134.2,18.1  '/>	<g transform="translate(134.2,369.3)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >-4</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -278,8 +278,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M196.5,347.4 L196.5,18.1  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M196.5,347.4 M196.5,18.1  '/>	<g transform="translate(196.5,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Consolas, Monaco, monospace" >-3</tspan></text>
+	<path stroke='black'  d='M196.5,347.4 M196.5,18.1  '/>	<g transform="translate(196.5,369.3)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >-3</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -287,8 +287,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M258.8,347.4 L258.8,18.1  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M258.8,347.4 M258.8,18.1  '/>	<g transform="translate(258.8,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Consolas, Monaco, monospace" >-2</tspan></text>
+	<path stroke='black'  d='M258.8,347.4 M258.8,18.1  '/>	<g transform="translate(258.8,369.3)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >-2</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -296,8 +296,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M321.1,347.4 L321.1,18.1  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M321.1,347.4 M321.1,18.1  '/>	<g transform="translate(321.1,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Consolas, Monaco, monospace" >-1</tspan></text>
+	<path stroke='black'  d='M321.1,347.4 M321.1,18.1  '/>	<g transform="translate(321.1,369.3)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >-1</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -305,8 +305,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M383.5,347.4 L383.5,18.1  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M383.5,347.4 M383.5,18.1  '/>	<g transform="translate(383.5,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Consolas, Monaco, monospace" > 0</tspan></text>
+	<path stroke='black'  d='M383.5,347.4 M383.5,18.1  '/>	<g transform="translate(383.5,369.3)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 0</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -314,8 +314,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M445.8,347.4 L445.8,18.1  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M445.8,347.4 M445.8,18.1  '/>	<g transform="translate(445.8,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Consolas, Monaco, monospace" > 1</tspan></text>
+	<path stroke='black'  d='M445.8,347.4 M445.8,18.1  '/>	<g transform="translate(445.8,369.3)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 1</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -323,8 +323,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M508.1,347.4 L508.1,18.1  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M508.1,347.4 M508.1,18.1  '/>	<g transform="translate(508.1,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Consolas, Monaco, monospace" > 2</tspan></text>
+	<path stroke='black'  d='M508.1,347.4 M508.1,18.1  '/>	<g transform="translate(508.1,369.3)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 2</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -332,8 +332,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M570.4,347.4 L570.4,18.1  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M570.4,347.4 M570.4,18.1  '/>	<g transform="translate(570.4,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Consolas, Monaco, monospace" > 3</tspan></text>
+	<path stroke='black'  d='M570.4,347.4 M570.4,18.1  '/>	<g transform="translate(570.4,369.3)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 3</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -341,8 +341,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M632.7,347.4 L632.7,18.1  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M632.7,347.4 M632.7,18.1  '/>	<g transform="translate(632.7,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Consolas, Monaco, monospace" > 4</tspan></text>
+	<path stroke='black'  d='M632.7,347.4 M632.7,18.1  '/>	<g transform="translate(632.7,369.3)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 4</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -350,8 +350,8 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M695.0,347.4 L695.0,18.1  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M695.0,347.4 M695.0,18.1  '/>	<g transform="translate(695.0,369.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Consolas, Monaco, monospace" > 5</tspan></text>
+	<path stroke='black'  d='M695.0,347.4 M695.0,18.1  '/>	<g transform="translate(695.0,369.3)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 5</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -359,13 +359,13 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='black'  d='M71.9,18.1 L71.9,347.4 L695.0,347.4 L695.0,18.1 L71.9,18.1 Z  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(16.3,182.8) rotate(270)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Consolas, Monaco, monospace" >Probability Density</tspan></text>
+	<g transform="translate(16.3,182.8) rotate(270)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >Probability Density</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(383.4,396.3)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Consolas, Monaco, monospace" >x</tspan></text>
+	<g transform="translate(383.4,396.3)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >x</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -373,31 +373,32 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(128, 128, 128)'  d='M80.2,63.1 L80.2,27.1 L172.2,27.1 L172.2,63.1 L80.2,63.1 Z  '/></g>
 	<g id="gnuplot_plot_1" ><title>Normal</title>
-<g fill="none" color="#FFFFFF" stroke="rgb(128, 128, 128)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+<g fill="none" color="white" stroke="rgb(128, 128, 128)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(114.1,40.0)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Consolas, Monaco, monospace" >Normal</tspan></text>
+	<g transform="translate(114.1,40.0)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="start">
+		<text><tspan font-family="Consolas, Menlo, monospace" >Normal</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0, 255)'  d='M88.5,36.1 L105.8,36.1 M96.8,347.4 L103.1,334.0 L109.3,321.2 L115.5,308.5 L121.7,296.6 L128.0,284.9
-		L134.2,273.2 L140.4,261.9 L146.7,250.9 L152.9,240.2 L159.1,229.7 L165.4,219.6 L171.6,209.7 L177.8,200.1
-		L184.1,190.8 L190.3,181.8 L196.5,173.1 L202.8,164.7 L209.0,156.5 L215.2,148.6 L221.4,141.1 L227.7,133.8
-		L233.9,126.8 L240.1,120.0 L246.4,113.6 L252.6,107.5 L258.8,101.6 L265.1,96.0 L271.3,90.7 L277.5,85.7
-		L283.8,81.0 L290.0,76.6 L296.2,72.4 L302.4,68.6 L308.7,65.0 L314.9,61.7 L321.1,58.7 L327.4,56.0
-		L333.6,53.5 L339.8,51.4 L346.1,49.5 L352.3,48.0 L358.5,46.7 L364.8,45.7 L371.0,45.0 L377.2,44.5
-		L383.5,44.4 L389.7,44.5 L395.9,45.0 L402.1,45.7 L408.4,46.7 L414.6,48.0 L420.8,49.5 L427.1,51.4
-		L433.3,53.5 L439.5,56.0 L445.8,58.7 L452.0,61.7 L458.2,65.0 L464.5,68.6 L470.7,72.4 L476.9,76.6
-		L483.1,81.0 L489.4,85.7 L495.6,90.7 L501.8,96.0 L508.1,101.6 L514.3,107.5 L520.5,113.6 L526.8,120.0
-		L533.0,126.8 L539.2,133.8 L545.5,141.1 L551.7,148.6 L557.9,156.5 L564.1,164.7 L570.4,173.1 L576.6,181.8
-		L582.8,190.8 L589.1,200.1 L595.3,209.7 L601.5,219.6 L607.8,229.7 L614.0,240.2 L620.2,250.9 L626.5,261.9
-		L632.7,273.2 L638.9,284.9 L645.2,296.6 L651.4,308.5 L657.6,321.2 L663.8,334.0 L670.1,347.4  '/></g>
+	<path stroke='rgb(  0,   0, 255)'  d='M88.5,36.1 L105.8,36.1 M96.6,347.4 L96.8,347.0 L103.1,334.0 L109.3,321.3 L115.5,308.8 L121.7,296.7
+		L128.0,284.8 L134.2,273.2 L140.4,261.9 L146.7,250.9 L152.9,240.2 L159.1,229.7 L165.4,219.6 L171.6,209.7
+		L177.8,200.1 L184.1,190.8 L190.3,181.8 L196.5,173.1 L202.8,164.7 L209.0,156.5 L215.2,148.6 L221.4,141.1
+		L227.7,133.8 L233.9,126.8 L240.1,120.0 L246.4,113.6 L252.6,107.5 L258.8,101.6 L265.1,96.0 L271.3,90.7
+		L277.5,85.7 L283.8,81.0 L290.0,76.6 L296.2,72.4 L302.4,68.6 L308.7,65.0 L314.9,61.7 L321.1,58.7
+		L327.4,56.0 L333.6,53.5 L339.8,51.4 L346.1,49.5 L352.3,48.0 L358.5,46.7 L364.8,45.7 L371.0,45.0
+		L377.2,44.5 L383.5,44.4 L389.7,44.5 L395.9,45.0 L402.1,45.7 L408.4,46.7 L414.6,48.0 L420.8,49.5
+		L427.1,51.4 L433.3,53.5 L439.5,56.0 L445.8,58.7 L452.0,61.7 L458.2,65.0 L464.5,68.6 L470.7,72.4
+		L476.9,76.6 L483.1,81.0 L489.4,85.7 L495.6,90.7 L501.8,96.0 L508.1,101.6 L514.3,107.5 L520.5,113.6
+		L526.8,120.0 L533.0,126.8 L539.2,133.8 L545.5,141.1 L551.7,148.6 L557.9,156.5 L564.1,164.7 L570.4,173.1
+		L576.6,181.8 L582.8,190.8 L589.1,200.1 L595.3,209.7 L601.5,219.6 L607.8,229.7 L614.0,240.2 L620.2,250.9
+		L626.5,261.9 L632.7,273.2 L638.9,284.8 L645.2,296.7 L651.4,308.8 L657.6,321.3 L663.8,334.0 L670.1,347.0
+		L670.2,347.4  '/></g>
 	</g>
 	<g id="gnuplot_plot_2" ><title>Laplace</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(114.1,58.0)" stroke="none" fill="black" font-family="Consolas, Monaco, monospace" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Consolas, Monaco, monospace" >Laplace</tspan></text>
+	<g transform="translate(114.1,58.0)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="start">
+		<text><tspan font-family="Consolas, Menlo, monospace" >Laplace</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
