@@ -330,7 +330,8 @@ svg
 
         > img
         {
-            animation: placeholder 1s ease forwards;
+            animation: placeholder 1s ease 1s forwards;
+            background-clip: content-box;
             display: block;
         }
 
@@ -339,7 +340,6 @@ svg
             to
             {
                 background: $shade90;
-                box-shadow: 0 0 0 1px $rgbback inset;
             }
         }
     }
