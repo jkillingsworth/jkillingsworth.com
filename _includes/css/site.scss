@@ -374,24 +374,25 @@ svg
     {
         overflow-x: auto;
 
-        table
+        > table
         {
             @include font-tabletext();
             border-collapse: collapse;
             margin: 0 $indent-width;
         }
 
-        th
+        > table th
         {
             font-weight: normal;
         }
 
-        th span
+        > table th > span
         {
             display: inline-block;
         }
 
-        td, th
+        > table td,
+        > table th
         {
             border: $border-table;
             padding: 4px 16px;
