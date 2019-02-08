@@ -35,10 +35,10 @@ let output flag (dataset : Data.Dataset) =
     | Stats ->
         printfn "----------------------------------------"
         printfn "%s" dataset.Descriptor
-        printfn "µN = %+.10f" (fst criteriaN)
-        printfn "σN = %+.10f" (snd criteriaN)
-        printfn "µL = %+.10f" (fst criteriaL)
-        printfn "bL = %+.10f" (snd criteriaL)
+        printfn "µN = %+.3e" (fst criteriaN)
+        printfn "σN = %+.3e" (snd criteriaN)
+        printfn "µL = %+.3e" (fst criteriaL)
+        printfn "bL = %+.3e" (snd criteriaL)
         printfn ""
 
 //-------------------------------------------------------------------------------------------------
