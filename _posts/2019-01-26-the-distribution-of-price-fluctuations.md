@@ -37,13 +37,13 @@ To get some broader insights regarding the behavior of price movements, I want t
 | <span style="width: 4em;">Symbol</span> | <span style="width: 17em;">Underlying Asset</span>
 |:----------------------------------------|:---
 | `DIA`                                   | Dow Jones Industrial Average
-| `EEM`                                   | Emerging Markets
+| `EEM`                                   | Emerging markets
 | `GLD`                                   | Gold
-| `HYG`                                   | High Yield Corporate Bonds
-| `LQD`                                   | Investment Grade Corporate Bonds
-| `TLT`                                   | Long Term U.S. Treasury Bonds
-| `UNG`                                   | Natural Gas
-| `USO`                                   | Crude Oil
+| `HYG`                                   | High yield corporate bonds
+| `LQD`                                   | Investment grade corporate bonds
+| `TLT`                                   | Long term US Treasury bonds
+| `UNG`                                   | Natural gas
+| `USO`                                   | Crude oil
 {% endtable %}
 
 Each data set contains at least 10 years worth of data. Using the same technique as before, we can plot the histogram of daily price fluctuations and overlay the fitted normal and Laplace density functions. Here are the charts:
@@ -147,7 +147,7 @@ The intraday data appear to fit the Laplace distribution better than the normal 
 
 ## Foreign Exchange
 
-Do the exchange rates between different fiat currencies exhibit the same properties as the data sets studied above? Let's consider the exchange rate between the Euro and the U.S. Dollar. Here is a chart of the daily exchange rate values over a period of about 18 years:
+Do the exchange rates between different fiat currencies exhibit the same properties as the data sets studied above? Let's consider the exchange rate between the euro and the US dollar. Here is a chart of the daily exchange rate values over a period of about 18 years:
 
 {% chart fig-46-forex-daily-EURUSD-price.svg %}
 
@@ -168,14 +168,14 @@ To see if the pattern holds, let's take a look at the daily exchange rates of a 
 {% table %}
 | <span style="width: 4em;">Symbol</span> | <span style="width: 17em;">Currency Pair</span>
 |:----------------------------------------|:---
-| `USD/JPY`                               | U.S. Dollar / Japanese Yen
-| `USD/MXN`                               | U.S. Dollar / Mexican Peso
-| `USD/RUB`                               | U.S. Dollar / Russian Ruble
-| `USD/TRY`                               | U.S. Dollar / Turkish Lira
-| `USD/ZAR`                               | U.S. Dollar / South African Rand
-| `EUR/NOK`                               | Euro / Norwegian Krone
-| `EUR/SEK`                               | Euro / Swedish Krona
-| `EUR/TRY`                               | Euro / Turkish Lira
+| `USD/JPY`                               | US dollar / Japanese yen
+| `USD/MXN`                               | US dollar / Mexican peso
+| `USD/RUB`                               | US dollar / Russian ruble
+| `USD/TRY`                               | US dollar / Turkish lira
+| `USD/ZAR`                               | US dollar / South African rand
+| `EUR/NOK`                               | Euro / Norwegian krone
+| `EUR/SEK`                               | Euro / Swedish krona
+| `EUR/TRY`                               | Euro / Turkish lira
 {% endtable %}
 
 Here are the charts:
