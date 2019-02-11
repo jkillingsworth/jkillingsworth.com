@@ -137,3 +137,22 @@ copychart $post fig-64 forex-intraday-EURTRY-probs.svg
 copychart $post fig-65 crypto-daily-BTC-probs.svg
 copychart $post fig-66 crypto-daily-ETH-probs.svg
 copychart $post fig-67 crypto-daily-XRP-probs.svg
+
+post="2019-02-10-the-very-strange-chinese-yuan"
+
+copychart $post fig-01 forex-intraday-USDCNY-price-lin.svg
+copychart $post fig-02 forex-intraday-USDCNY-probs-lin.svg
+copychart $post fig-03 forex-intraday-USDCNY-probs-log.svg
+copychart $post fig-04 forex-intraday-USDCNH-price-lin.svg
+copychart $post fig-05 forex-intraday-USDCNH-probs-lin.svg
+copychart $post fig-06 forex-intraday-USDCNH-probs-log.svg
+copychart $post fig-07 forex-intraday-EURCNH-price-lin.svg
+copychart $post fig-08 forex-intraday-EURCNH-probs-lin.svg
+copychart $post fig-09 forex-intraday-EURCNH-probs-log.svg
+copychart $post fig-10 pair-synthetic-USDCNH-price-lin.svg
+copychart $post fig-11 pair-synthetic-USDCNH-probs-lin.svg
+copychart $post fig-12 pair-synthetic-USDCNH-probs-log.svg
+copychart $post fig-13 forex-daily-USDCNY-probs-lin.svg
+copychart $post fig-14 forex-daily-USDCNY-probs-log.svg
+copychart $post fig-15 forex-daily-USDCNH-probs-lin.svg
+copychart $post fig-16 forex-daily-USDCNH-probs-log.svg
