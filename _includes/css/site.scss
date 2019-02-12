@@ -458,6 +458,11 @@ svg
     {
         content: " \00bb";
     }
+
+    a:not(.readmore):not(:hover)
+    {
+        color: inherit;
+    }
 }
 
 .content .oldpost
