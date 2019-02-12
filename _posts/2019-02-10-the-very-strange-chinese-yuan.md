@@ -35,7 +35,7 @@ This one also looks odd to me. It has those same unnatural looking spikes, mostl
 {% chart fig-05-forex-intraday-USDCNH-probs-lin.svg %}
 {% chart fig-06-forex-intraday-USDCNH-probs-log.svg %}
 
-Indeed, this strange phenomenon exists for both the offshore rate and the onshore rate. I don't have a solid explanation for this. It might simply be an error or anomaly introduced by my data provider. But I suspect it's related to whatever mechanisms the central bankers are using to put floors and ceilings on the yuan's exchange rate. I have also observed this phenomenon in the US dollar exchange rate with the Hong Kong dollar and, to a lesser extent, the Taiwan dollar.
+Indeed, this strange phenomenon exists for both the offshore rate and the onshore rate. I don't have a solid explanation for this. It might simply be an error or anomaly introduced by my data provider. But I suspect it's related to whatever mechanisms the central bankers are using to put floors and ceilings on the yuan's exchange rate. I have also observed this phenomenon in the US dollar exchange rate against the Hong Kong dollar and, to a lesser extent, the Taiwan dollar.
 
 ## The Euro Exchange Rate
 
@@ -48,7 +48,7 @@ This data set covers the same 24 hour period as the US dollar offshore rate exam
 {% chart fig-08-forex-intraday-EURCNH-probs-lin.svg %}
 {% chart fig-09-forex-intraday-EURCNH-probs-log.svg %}
 
-The triple peak pattern is not present in this data set. I wasn't expecting this. Like many other data sets examined in my previous post, the distribution of price fluctuations for these data roughly approximates a Laplace distribution.
+The triple peak pattern is not present in this data set. I wasn't expecting this. Like the other data sets examined in my previous post, the distribution of price fluctuations for these data roughly approximates a Laplace distribution.
 
 ## Synthetic Exchange Rates
 
@@ -61,18 +61,18 @@ As expected, this chart looks very similar to the intraday chart of the offshore
 {% chart fig-11-pair-synthetic-USDCNH-probs-lin.svg %}
 {% chart fig-12-pair-synthetic-USDCNH-probs-log.svg %}
 
-The histogram based on the synthetic data does not show a trace of the triple peak pattern visible in the histogram based on the actual quoted values. Perhaps there is an arbitrage opportunity here worth exploring.
+The histogram based on the synthetic data doesn't show a trace of the triple peak pattern visible in the histogram based on the actual quoted values. Perhaps there might be an arbitrage opportunity here worth exploring.
 
 ## Daily Exchange Rates
 
-When analyzing the intraday exchange rates between the yuan and the dollar, we observed a triple peak pattern in the distribution of price fluctuations. Does this triple peak pattern manifest itself if we examine daily data instead of intraday day? Here is the analysis of the onshore exchange rate using daily data:
+When analyzing the intraday exchange rates between the Chinese yuan and the US dollar, we observed a triple peak pattern in the distribution of price fluctuations. Does this triple peak pattern manifest itself if we examine daily data instead of intraday day? Here is the analysis of the onshore exchange rate using daily data:
 
 {% chart fig-13-forex-daily-USDCNY-probs-lin.svg %}
 {% chart fig-14-forex-daily-USDCNY-probs-log.svg %}
 
-It does not exhibit the triple peak pattern characteristic of intraday prices. The histogram takes the shape of a Laplace distribution, which is the pattern we see with other data sets. Here is the analysis of the offshore exchange rate using daily data:
+It does not exhibit the triple peak pattern characteristic of intraday prices. The histogram takes the shape of a Laplace distribution, which is the common pattern we see in other data sets. Here is the analysis of the offshore exchange rate using daily data:
 
 {% chart fig-15-forex-daily-USDCNH-probs-lin.svg %}
 {% chart fig-16-forex-daily-USDCNH-probs-log.svg %}
 
-Again, we see the same thing. The histogram takes the approximate shape of a Laplace distribution. The daily price fluctuations of both the onshore and offshore exchange rates exhibit the same behavior we have come to expect from many other data sets. The triple peak phenomenon only seems to only manifest itself in smaller timeframes.
+Again, we see the same thing. The histogram takes the approximate shape of a Laplace distribution. The daily price fluctuations of both the onshore rates and the offshore rates exhibit the same behavior we have come to expect from many other data sets. The triple peak phenomenon only seems to manifest itself in smaller timeframes.
