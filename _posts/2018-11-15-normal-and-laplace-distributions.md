@@ -3,7 +3,7 @@ layout: post
 title: Normal and Laplace Distributions
 ---
 
-I'm interested in studying the Laplace distribution. I was once under the impression that price fluctuations in the financial markets were normally distributed. However, as I plan to show in a later post, stock prices seem to move up and down according to a Laplace distribution instead. Before analyzing any historical price data, I first want to lay some groundwork and compare the Laplace distribution to the normal distribution.
+I'm interested in studying the Laplace distribution. I was once under the impression that price fluctuations in the financial markets were normally distributed. However, as I plan to show in a [later post]({% post_url 2019-01-26-the-distribution-of-price-fluctuations %}), stock prices seem to move up and down according to a Laplace distribution instead. Before analyzing any historical price data, I first want to lay some groundwork and compare the Laplace distribution to the normal distribution.
 
 <!--excerpt-->
 
@@ -23,7 +23,7 @@ Suppose we have a continuous random variable whose possible values are distribut
     \end{document}
 {% endlatex %}
 
-If we have some samples of a random variable that we expect to have a normal distribution, we can estimate the parameters of the density function using the maximum likelihood method described in my previous posts. Since it's more convenient in this case, instead of maximizing the likelihood function, let's maximize the logarithm of the likelihood function:
+If we have some samples of a random variable that we expect to have a normal distribution, we can estimate the parameters of the density function using the maximum likelihood method described in some of my [previous posts]({% post_url 2018-10-11-least-squares-and-normal-distributions %}#maximum-likelihood-estimation). Since it's more convenient in this case, instead of maximizing the likelihood function, let's maximize the logarithm of the likelihood function:
 
 {% latex fig-02 %}
     \documentclass[varwidth]{standalone}

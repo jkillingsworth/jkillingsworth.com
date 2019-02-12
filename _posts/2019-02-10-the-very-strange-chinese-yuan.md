@@ -3,7 +3,7 @@ layout: post
 title: The Very Strange Chinese Yuan
 ---
 
-In my previous post, I explored the distribution of price fluctuations for a variety of different markets and time frames. Across all data sets, plotting the log returns in a histogram appears to roughly approximate the density function of a Laplace distribution. The intraday prices of the Chinese yuan, however, seem to exhibit a distinctly strange phenomenon.
+In my [previous post]({% post_url 2019-01-26-the-distribution-of-price-fluctuations %}), I explored the distribution of price fluctuations for a variety of different markets and time frames. Across all data sets, plotting the log returns in a histogram appears to roughly approximate the density function of a Laplace distribution. The intraday prices of the Chinese yuan, however, seem to exhibit a distinctly strange phenomenon.
 
 <!--excerpt-->
 
@@ -20,7 +20,7 @@ The chart above is based on one minute intraday data. This chart looks a bit odd
 {% chart fig-02-forex-intraday-USDCNY-probs-lin.svg %}
 {% chart fig-03-forex-intraday-USDCNY-probs-log.svg %}
 
-The two charts above show the same data; one plots the density on a linear scale and the other shows it on a logarithmic scale. Employing the same technique used in my previous post, the histogram is overlaid with the density functions of the fitted normal and Laplace distributions. Notice that neither one of these two fitted distributions seem to model the shape of the histogram.
+The two charts above show the same data; one plots the density on a linear scale and the other shows it on a logarithmic scale. Employing the same technique used in my [previous post]({% post_url 2019-01-26-the-distribution-of-price-fluctuations %}), the histogram is overlaid with the density functions of the fitted normal and Laplace distributions. Notice that neither one of these two fitted distributions seem to model the shape of the histogram.
 
 If you were to only look at the centermost third of the chart, it would seem like the distribution of price fluctuations might conform to that of a Laplace distribution just like the data sets examined previously. However, the outermost thirds of the chart tell a different story. There is an outsized cluster of large moves up and down.
 
@@ -48,7 +48,7 @@ This data set covers the same 24 hour period as the US dollar offshore rate exam
 {% chart fig-08-forex-intraday-EURCNH-probs-lin.svg %}
 {% chart fig-09-forex-intraday-EURCNH-probs-log.svg %}
 
-The triple peak pattern is not present in this data set. I wasn't expecting this. Like the other data sets examined in my previous post, the distribution of price fluctuations for these data roughly approximates a Laplace distribution.
+The triple peak pattern is not present in this data set. I wasn't expecting this. Like the other data sets examined in my [previous post]({% post_url 2019-01-26-the-distribution-of-price-fluctuations %}), the distribution of price fluctuations for these data roughly approximates a Laplace distribution.
 
 ## Synthetic Exchange Rates
 

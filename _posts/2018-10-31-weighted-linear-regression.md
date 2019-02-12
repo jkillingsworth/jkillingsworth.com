@@ -3,7 +3,7 @@ layout: post
 title: Weighted Linear Regression
 ---
 
-When doing a regression analysis, you might want to weight some data points more heavily than others. For example, when fitting a model to historic stock price data, you might want to assign more weight to recently observed price values. In this post, I demonstrate how to estimate the coefficients of a linear model using weighted least squares regression. As with the previous post, I also show an alternative derivation using the maximum likelihood method.
+When doing a regression analysis, you might want to weight some data points more heavily than others. For example, when fitting a model to historic stock price data, you might want to assign more weight to recently observed price values. In this post, I demonstrate how to estimate the coefficients of a linear model using weighted least squares regression. As with the [previous post]({% post_url 2018-10-11-least-squares-and-normal-distributions %}), I also show an alternative derivation using the maximum likelihood method.
 
 <!--excerpt-->
 
@@ -63,7 +63,7 @@ There is a unique weight associated with the error of each observation. Some val
     \end{document}
 {% endlatex %}
 
-Following the same approach we used in the previous post, we can estimate the coefficients of the model function by finding the values that minimize the weighted sum of squares. We take the partial derivative of the weighted sum of squares function with respect to each of the coefficients, set the derivative to zero, and then solve for the coefficient. Here are the derivatives with respect to each coefficient:
+Following the same approach we used in the [previous post]({% post_url 2018-10-11-least-squares-and-normal-distributions %}), we can estimate the coefficients of the model function by finding the values that minimize the weighted sum of squares. We take the partial derivative of the weighted sum of squares function with respect to each of the coefficients, set the derivative to zero, and then solve for the coefficient. Here are the derivatives with respect to each coefficient:
 
 {% latex fig-05 %}
     \documentclass[varwidth]{standalone}
@@ -149,11 +149,11 @@ Rearranging the equation and solving for the coefficient:
     \end{document}
 {% endlatex %}
 
-If you plug in the weights and the observed values, finding the coefficients is fairly straightforward. Notice that if all the weights are equal, the result is the same as the ordinary least squares method presented in the previous post.
+If you plug in the weights and the observed values, finding the coefficients is fairly straightforward. Notice that if all the weights are equal, the result is the same as the ordinary least squares method presented in the [previous post]({% post_url 2018-10-11-least-squares-and-normal-distributions %}).
 
 ## Maximum Likelihood Estimation
 
-Just like we did in the previous post, let's assume the errors are normally distributed around the model. Recall the probability density function for the normal distribution:
+Let's assume the errors are normally distributed around the model. Recall the probability density function for the normal distribution:
 
 {% latex fig-10 %}
     \documentclass[varwidth]{standalone}

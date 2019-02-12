@@ -191,7 +191,7 @@ The logarithmic equivalent is:
     \end{document}
 {% endlatex %}
 
-If we have a set of samples of a random variable that we know the have a log-normal distribution, the parameters of the distribution can be estimated using the maximum likelihood method outlined in my previous post. I'll skip the intermediate steps and jump straight to the results.
+If we have a set of samples of a random variable that we know the have a log-normal distribution, the parameters of the distribution can be estimated using the maximum likelihood method outlined in my [previous post]({% post_url 2018-11-15-normal-and-laplace-distributions %}#the-normal-distribution). I'll skip the intermediate steps and jump straight to the results.
 
 Here is the estimate for the mean:
 
@@ -249,7 +249,7 @@ The logarithmic equivalent is:
     \end{document}
 {% endlatex %}
 
-If we have a set of samples of a random variable that we know to have a log-Laplace distribution, the parameters can be estimated as before using the maximum likelihood method. You can see my previous post for full details. We first need to rank the samples in ascending order:
+If we have a set of samples of a random variable that we know to have a log-Laplace distribution, the parameters can be estimated as before using the maximum likelihood method. You can see my [previous post]({% post_url 2018-11-15-normal-and-laplace-distributions %}#the-laplace-distribution) for full details. We first need to rank the samples in ascending order:
 
 {% latex fig-19 %}
     \documentclass[varwidth]{standalone}

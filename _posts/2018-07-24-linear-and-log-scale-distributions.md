@@ -142,7 +142,7 @@ The most likely outcomes, outcomes with 100 winning plays and 100 losing plays, 
 
 ## Balancing the Reward Function
 
-As with the previous post, we assume the gambler always bets on heads. Recall the reward function we've been using so far for the fixed fraction betting strategy:
+As with the [previous post]({% post_url 2018-04-23-fixed-fractions-and-fair-games %}), we assume the gambler always bets on heads. Recall the reward function we've been using so far for the fixed fraction betting strategy:
 
 {% latex fig-10 %}
     \documentclass[varwidth]{standalone}
