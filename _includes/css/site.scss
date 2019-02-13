@@ -15,6 +15,7 @@ $rgbback: white;
 $rgbfore: black;
 $rgblink: blue;
 $rgbmark: yellow;
+$shade25: mix($rgbback, $rgbfore, 25);
 $shade50: mix($rgbback, $rgbfore, 50);
 $shade80: mix($rgbback, $rgbfore, 80);
 $shade90: mix($rgbback, $rgbfore, 90);
@@ -112,6 +113,9 @@ a:hover
 code
 {
     @include font-monospace();
+    color: $shade25;
+    font-size: 10.5pt;
+    font-weight: bold;
 }
 
 strong
