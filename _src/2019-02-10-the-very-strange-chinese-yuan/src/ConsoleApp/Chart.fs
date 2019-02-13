@@ -59,7 +59,7 @@ $data << EOD
 {0}
 EOD
 
-set xlabel 'Price Differences (Log Scale), σ = {5:e3}'
+set xlabel 'Price Differences (Log Values), σ = {5:e3}'
 set xtics scale 0.01, 0.01
 set xrange [-{2}:+{2}]
 set xtics ({3})
@@ -97,7 +97,7 @@ $data << EOD
 {0}
 EOD
 
-set xlabel 'Price Differences (Log Scale), σ = {5:e3}'
+set xlabel 'Price Differences (Log Values), σ = {5:e3}'
 set xtics scale 0.01, 0.01
 set xrange [-{2}:+{2}]
 set xtics ({3})

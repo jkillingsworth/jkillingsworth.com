@@ -37,7 +37,7 @@ EOD
 set xlabel 'Time (Days)'
 set xtics scale 0.01, 0.01
 
-set ylabel 'Market Price (Log Scale)'
+set ylabel 'Market Price (Log Values)'
 set ytics scale 0.01, 0.01
 set format y '% 1.2f'
 
@@ -62,7 +62,7 @@ EOD
 set xlabel 'Time (Days)'
 set xtics scale 0.01, 0.01
 
-set ylabel 'Price Differences (Log Scale)'
+set ylabel 'Price Differences (Log Values)'
 set ytics scale 0.01, 0.01
 set format y '% 1.2f'
 
@@ -84,7 +84,7 @@ $data << EOD
 {0}
 EOD
 
-set xlabel 'Price Differences (Log Scale), σ = {5:e3}'
+set xlabel 'Price Differences (Log Values), σ = {5:e3}'
 set xtics scale 0.01, 0.01
 set xrange [-{2}:+{2}]
 set xtics ({3})
