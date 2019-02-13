@@ -43,7 +43,7 @@
     </ul>
   </nav>
   <main class="content">
-    {{ content | hyphenate | replace: '-­', '-' | replace: '&amp;am­p;', '&amp;' }}
+    {{ content | hyphenate_and_fixup }}
   </main>
   <aside class="sidebar">
     <header>
@@ -52,7 +52,7 @@
     {% capture sidebar %}
     {% include sidebar.html %}
     {% endcapture %}
-    {{ sidebar | hyphenate | replace: '-­', '-' }}
+    {{ sidebar | hyphenate_and_fixup }}
   </aside>
   <footer>
     &copy; {{ site.time | date: "%Y" }} Jim Killingsworth. All rights reserved.
