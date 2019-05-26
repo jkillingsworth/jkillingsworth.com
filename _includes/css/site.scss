@@ -49,6 +49,12 @@ $indent-width: 16px;
     font-weight: normal;
 }
 
+@mixin font-greektext
+{
+    font-family: "Georgia", serif;
+    font-weight: normal;
+}
+
 @mixin font-monospace
 {
     font-family: "Consolas", "Menlo", monospace;
@@ -126,6 +132,11 @@ strong
 svg
 {
     fill: currentColor;
+}
+
+var
+{
+    @include font-greektext();
 }
 
 //-------------------------------------------------------------------------------------------------
