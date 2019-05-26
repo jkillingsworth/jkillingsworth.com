@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Data.fs" />
+    <Compile Include="Compute.fs" />
+    <Compile Include="Chart.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Chiron" Version="6.3.1" />
+    <PackageReference Include="MathNet.Numerics.FSharp" Version="4.7.0" />
+  </ItemGroup>
+
+</Project>
