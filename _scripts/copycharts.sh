@@ -156,3 +156,31 @@ copychart $post fig-13 forex-daily-USDCNY-probs-lin.svg
 copychart $post fig-14 forex-daily-USDCNY-probs-log.svg
 copychart $post fig-15 forex-daily-USDCNH-probs-lin.svg
 copychart $post fig-16 forex-daily-USDCNH-probs-log.svg
+
+post="2019-05-24-separating-signal-from-noise"
+
+copychart $post fig-01 stocks-daily-SPY-price.svg
+copychart $post fig-02 stocks-daily-SPY-noise.svg
+copychart $post fig-03 stocks-daily-SPY-probs-market.svg
+copychart $post fig-04 stocks-daily-SPY-probs-smooth.svg
+copychart $post fig-05 stocks-daily-SPY-probs-dither.svg
+copychart $post fig-06 stocks-intraday-SPY-price.svg
+copychart $post fig-07 stocks-intraday-SPY-noise.svg
+copychart $post fig-08 stocks-intraday-SPY-probs-market.svg
+copychart $post fig-09 stocks-intraday-SPY-probs-smooth.svg
+copychart $post fig-10 stocks-intraday-SPY-probs-dither.svg
+copychart $post fig-11 forex-daily-USDJPY-price.svg
+copychart $post fig-12 forex-daily-USDJPY-noise.svg
+copychart $post fig-13 forex-daily-USDJPY-probs-market.svg
+copychart $post fig-14 forex-daily-USDJPY-probs-smooth.svg
+copychart $post fig-15 forex-daily-USDJPY-probs-dither.svg
+copychart $post fig-16 forex-intraday-USDCNH-price.svg
+copychart $post fig-17 forex-intraday-USDCNH-noise.svg
+copychart $post fig-18 forex-intraday-USDCNH-probs-market.svg
+copychart $post fig-19 forex-intraday-USDCNH-probs-smooth.svg
+copychart $post fig-20 forex-intraday-USDCNH-probs-dither.svg
+copychart $post fig-21 crypto-daily-BTC-price.svg
+copychart $post fig-22 crypto-daily-BTC-noise.svg
+copychart $post fig-23 crypto-daily-BTC-probs-market.svg
+copychart $post fig-24 crypto-daily-BTC-probs-smooth.svg
+copychart $post fig-25 crypto-daily-BTC-probs-dither.svg
