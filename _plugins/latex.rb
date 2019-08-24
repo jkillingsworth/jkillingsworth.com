@@ -1,4 +1,4 @@
-require "open-uri"
+require "tmpdir"
 
 module Jekyll
 
