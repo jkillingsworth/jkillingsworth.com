@@ -184,3 +184,33 @@ copychart $post fig-22 crypto-daily-BTC-noise.svg
 copychart $post fig-23 crypto-daily-BTC-probs-market.svg
 copychart $post fig-24 crypto-daily-BTC-probs-smooth.svg
 copychart $post fig-25 crypto-daily-BTC-probs-dither.svg
+
+post="2019-09-14-estimating-the-weights-of-biased-coins"
+
+copychart $post fig-04 binomial-equal-biases.svg
+copychart $post fig-05 binomial-equal-pmfunc-simulated.svg
+copychart $post fig-06 binomial-equal-tosses-simulated.svg
+copychart $post fig-15 binomial-equal-pmfunc-evaluated.svg
+copychart $post fig-16 binomial-equal-tosses-evaluated.svg
+copychart $post fig-30 binomial-lower-biases.svg
+copychart $post fig-31 binomial-lower-pmfunc-evaluated.svg
+copychart $post fig-32 binomial-lower-tosses-evaluated.svg
+copychart $post fig-36 binomial-upper-biases.svg
+copychart $post fig-37 binomial-upper-pmfunc-evaluated.svg
+copychart $post fig-38 binomial-upper-tosses-evaluated.svg
+copychart $post fig-41 triangle-learn-pmfunc.svg
+copychart $post fig-42 triangle-learn-biases-lower.svg
+copychart $post fig-43 triangle-learn-biases-upper.svg
+copychart $post fig-45 triangle-learn-biases-estimated.svg
+copychart $post fig-47 exponential-05-pmfunc.svg
+copychart $post fig-48 exponential-05-biases-lower.svg
+copychart $post fig-49 exponential-05-biases-upper.svg
+copychart $post fig-50 exponential-05-biases-estimated.svg
+copychart $post fig-52 exponential-04-pmfunc.svg
+copychart $post fig-53 exponential-04-biases-lower.svg
+copychart $post fig-54 exponential-04-biases-upper.svg
+copychart $post fig-55 exponential-04-biases-estimated.svg
+copychart $post fig-57 exponential-03-pmfunc.svg
+copychart $post fig-58 exponential-03-biases-lower.svg
+copychart $post fig-59 exponential-03-biases-upper.svg
+copychart $post fig-60 exponential-03-biases-estimated.svg
