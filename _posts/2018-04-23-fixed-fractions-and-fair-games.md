@@ -14,10 +14,11 @@ Suppose the gambler wants to place bets on the outcome of a coin toss. Ignoring 
 {% latex fig-01 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
+    \usepackage{inconsolata}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    & \Omega = \{\ H,\ T\ \}
+    & \Omega = \{\ \texttt{H},\, \texttt{T}\ \}
     \\[1em]
     &
     \begin{aligned}
@@ -39,17 +40,18 @@ If we assume it's a fair coin, then each of the two outcomes has a 50% probabili
 {% latex fig-02 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
+    \usepackage{inconsolata}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
     \begin{array}{@{\rule{0em}{1.25em}}|l|l|}
     \hline
-    X & Pr(X)
+    X          & Pr(X)
     \\[0.25em]\hline
-    H & 0.5
+    \texttt{H} & 0.5
     \\[0.25em]\hline
-    T & 0.5
+    \texttt{T} & 0.5
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -77,13 +79,14 @@ Now let's define a reward function to determine the payoff for each round based 
 {% latex fig-04 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
+    \usepackage{inconsolata}
     \begin{document}
     \begin{displaymath}
     R(X) =
     \begin{dcases}
-    + bV_0 & \quad \text{if } X = H
+    + bV_0 & \quad \text{if } X = \texttt{H}
     \\
-    - bV_0 & \quad \text{if } X = T
+    - bV_0 & \quad \text{if } X = \texttt{T}
     \end{dcases}
     \end{displaymath}
     \end{document}
@@ -180,13 +183,14 @@ Like the previous example, we can define a reward function to determine the payo
 {% latex fig-13 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
+    \usepackage{inconsolata}
     \begin{document}
     \begin{displaymath}
     R(X) =
     \begin{dcases}
-    1 + b & \quad \text{if } X = H
+    1 + b & \quad \text{if } X = \texttt{H}
     \\
-    1 - b & \quad \text{if } X = T
+    1 - b & \quad \text{if } X = \texttt{T}
     \end{dcases}
     \end{displaymath}
     \end{document}
@@ -268,6 +272,7 @@ Let's suppose the gambler plays two rounds of the coin toss game and always bets
 {% latex fig-22 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
+    \usepackage{inconsolata}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -276,13 +281,13 @@ Let's suppose the gambler plays two rounds of the coin toss game and always bets
     \hline
     \text{Outcome} & \text{Value}
     \\[0.25em]\hline
-    HH & \$140
+    \texttt{HH}    & \$140
     \\[0.25em]\hline
-    HT & \$100
+    \texttt{HT}    & \$100
     \\[0.25em]\hline
-    TH & \$100
+    \texttt{TH}    & \$100
     \\[0.25em]\hline
-    TT & \$60
+    \texttt{TT}    & \$60
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -294,6 +299,7 @@ The average value of all possible outcomes in this case is $100, which is the br
 {% latex fig-23 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
+    \usepackage{inconsolata}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -302,13 +308,13 @@ The average value of all possible outcomes in this case is $100, which is the br
     \hline
     \text{Outcome} & \text{Value}
     \\[0.25em]\hline
-    HH & \$144
+    \texttt{HH}    & \$144
     \\[0.25em]\hline
-    HT & \$96
+    \texttt{HT}    & \$96
     \\[0.25em]\hline
-    TH & \$96
+    \texttt{TH}    & \$96
     \\[0.25em]\hline
-    TT & \$64
+    \texttt{TT}    & \$64
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
