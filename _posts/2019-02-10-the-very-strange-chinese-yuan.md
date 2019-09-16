@@ -15,7 +15,7 @@ The onshore exchange rate, according to my understanding, is determined by a ref
 
 {% chart fig-01-forex-intraday-USDCNY-price-lin.svg %}
 
-The chart above is based on one minute intraday data. This chart looks a bit odd to me. It seems to be sprinkled with unnatural spikes that quickly revert back to their previous values. The price doesn't zigzag the same way prices seem to move on other price charts. But this is just a subject observation. Let's look at a histogram of price differences from one minute to the next:
+The chart above is based on one minute intraday data. This chart looks a bit odd to me. It seems to be sprinkled with unnatural spikes that quickly revert back to their previous values. The price doesn't zigzag the same way prices seem to move on other price charts. But this is just a subjective observation. Let's look at a histogram of price differences from one minute to the next:
 
 {% chart fig-02-forex-intraday-USDCNY-probs-lin.svg %}
 {% chart fig-03-forex-intraday-USDCNY-probs-log.svg %}
