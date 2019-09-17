@@ -58,7 +58,7 @@ In this model, the coin in the zero state is always a fair coin. A fair coin wil
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|l|l|l|}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{4.5em}<{$}|>{$}wl{9.25em}<{$}|>{$}wl{9.25em}<{$}|}
     \hline
     \text{State} & \text{Probability of Heads} & \text{Probability of Tails}
     \\[0.25em]\hline
@@ -131,7 +131,7 @@ With four tosses of the coin, there are sixteen possible coin toss sequences and
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|l|l|>{$}wl{12em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{4em}<{$}|>{$}wl{7em}<{$}|>{$}wl{12em}<{$}|}
     \hline
     \text{Sequence} & \text{Terminal State} & \text{Probability}
     \\[0.25em]\hline
