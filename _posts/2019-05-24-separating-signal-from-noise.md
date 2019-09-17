@@ -27,7 +27,7 @@ As might be expected, based on a [previous study]({% post_url 2019-01-26-the-dis
 Looking at the dither component, the shape of histogram resembles that of a Laplace distribution about as neatly as the shape of the histogram for the market price does. The standard deviation is about the same as that of the market price data as well. To gain more insights, let's look at some concrete numbers concerning the analysis of these three data sets:
 
 {% table %}
-| <span style="width: 10em;">Location parameter</span> | <span style="width: 7em;">Normal (<var>&mu;</var>)</span>    | <span style="width: 7em;">Laplace (<var>&mu;</var>)</span>
+| <span style="width: 10em;">Location Parameter</span> | <span style="width: 7em;">Normal (<var>&mu;</var>)</span>    | <span style="width: 7em;">Laplace (<var>&mu;</var>)</span>
 |:-----------------------------------------------------|:-------------------------------------------------------------|:---
 | Market                                               | +2.754 &times; 10<sup>-4</sup>                               | +6.493 &times; 10<sup>-4</sup>
 | Smooth                                               | +2.488 &times; 10<sup>-4</sup>                               | +4.072 &times; 10<sup>-4</sup>
@@ -35,7 +35,7 @@ Looking at the dither component, the shape of histogram resembles that of a Lapl
 {% endtable %}
 
 {% table %}
-| <span style="width: 10em;">Scale parameter</span>    | <span style="width: 7em;">Normal (<var>&sigma;</var>)</span> | <span style="width: 7em;">Laplace (<var>b</var>)</span>
+| <span style="width: 10em;">Scale Parameter</span>    | <span style="width: 7em;">Normal (<var>&sigma;</var>)</span> | <span style="width: 7em;">Laplace (<var>b</var>)</span>
 |:-----------------------------------------------------|:-------------------------------------------------------------|:---
 | Market                                               | +1.213 &times; 10<sup>-2</sup>                               | +8.131 &times; 10<sup>-3</sup>
 | Smooth                                               | +1.411 &times; 10<sup>-3</sup>                               | +9.596 &times; 10<sup>-4</sup>
@@ -64,7 +64,7 @@ The intraday price series contains a couple of sudden price moves that are not t
 This histogram for market price data looks like it might approximate the shape of the Laplace density function, but it has a set of shoulders not present in the model function. The histogram for the smooth component has a shape that is even less well defined. But look at the shape of the histogram for the dither component---it looks like an almost ideal approximation of the Laplace density function. Let's take a look at the numbers:
 
 {% table %}
-| <span style="width: 10em;">Location parameter</span> | <span style="width: 7em;">Normal (<var>&mu;</var>)</span>    | <span style="width: 7em;">Laplace (<var>&mu;</var>)</span>
+| <span style="width: 10em;">Location Parameter</span> | <span style="width: 7em;">Normal (<var>&mu;</var>)</span>    | <span style="width: 7em;">Laplace (<var>&mu;</var>)</span>
 |:-----------------------------------------------------|:-------------------------------------------------------------|:---
 | Market                                               | +3.889 &times; 10<sup>-6</sup>                               | +0.000 &times; 10<sup>+0</sup>
 | Smooth                                               | +3.579 &times; 10<sup>-6</sup>                               | +2.765 &times; 10<sup>-6</sup>
@@ -72,7 +72,7 @@ This histogram for market price data looks like it might approximate the shape o
 {% endtable %}
 
 {% table %}
-| <span style="width: 10em;">Scale parameter</span>    | <span style="width: 7em;">Normal (<var>&sigma;</var>)</span> | <span style="width: 7em;">Laplace (<var>b</var>)</span>
+| <span style="width: 10em;">Scale Parameter</span>    | <span style="width: 7em;">Normal (<var>&sigma;</var>)</span> | <span style="width: 7em;">Laplace (<var>b</var>)</span>
 |:-----------------------------------------------------|:-------------------------------------------------------------|:---
 | Market                                               | +2.499 &times; 10<sup>-4</sup>                               | +1.374 &times; 10<sup>-4</sup>
 | Smooth                                               | +3.418 &times; 10<sup>-5</sup>                               | +2.333 &times; 10<sup>-5</sup>
@@ -97,7 +97,7 @@ The smooth component seems to track the market price fairly well most of the tim
 The shape of the histogram for both the market price data and the dither component closely resemble the shape of the Laplace density function. For the smooth component, the histogram has a general bell shape, but it looks like it might be a bit too sloppy and asymmetrical to properly characterize it as having the shape of a normal or a Laplace density function. Here are the numbers:
 
 {% table %}
-| <span style="width: 10em;">Location parameter</span> | <span style="width: 7em;">Normal (<var>&mu;</var>)</span>    | <span style="width: 7em;">Laplace (<var>&mu;</var>)</span>
+| <span style="width: 10em;">Location Parameter</span> | <span style="width: 7em;">Normal (<var>&mu;</var>)</span>    | <span style="width: 7em;">Laplace (<var>&mu;</var>)</span>
 |:-----------------------------------------------------|:-------------------------------------------------------------|:---
 | Market                                               | -1.153 &times; 10<sup>-5</sup>                               | +0.000 &times; 10<sup>+0</sup>
 | Smooth                                               | -2.138 &times; 10<sup>-5</sup>                               | -2.425 &times; 10<sup>-5</sup>
@@ -105,7 +105,7 @@ The shape of the histogram for both the market price data and the dither compone
 {% endtable %}
 
 {% table %}
-| <span style="width: 10em;">Scale parameter</span>    | <span style="width: 7em;">Normal (<var>&sigma;</var>)</span> | <span style="width: 7em;">Laplace (<var>b</var>)</span>
+| <span style="width: 10em;">Scale Parameter</span>    | <span style="width: 7em;">Normal (<var>&sigma;</var>)</span> | <span style="width: 7em;">Laplace (<var>b</var>)</span>
 |:-----------------------------------------------------|:-------------------------------------------------------------|:---
 | Market                                               | +6.169 &times; 10<sup>-3</sup>                               | +4.385 &times; 10<sup>-3</sup>
 | Smooth                                               | +8.839 &times; 10<sup>-4</sup>                               | +6.716 &times; 10<sup>-4</sup>
@@ -130,7 +130,7 @@ In my post titled [*The Very Strange Chinese Yuan*]({% post_url 2019-02-10-the-v
 The shape of the histogram for the market price data shows the triple peak pattern that is characteristic of intraday exchange rates between the yuan and dollar. The histogram for the smooth component exhibits a roughly bell shaped distribution with no indication of the triple peak pattern at all. The fitted density functions for the smooth component are both shifted to the left, which can be attributed to the downward trend visible in the price chart. The histogram for the dither component, on the other hand, clearly shows the triple peak pattern, indicating that this distinctive noise pattern is almost entirely removed from the price trend. Here are the parameter estimates for the density functions:
 
 {% table %}
-| <span style="width: 10em;">Location parameter</span> | <span style="width: 7em;">Normal (<var>&mu;</var>)</span>    | <span style="width: 7em;">Laplace (<var>&mu;</var>)</span>
+| <span style="width: 10em;">Location Parameter</span> | <span style="width: 7em;">Normal (<var>&mu;</var>)</span>    | <span style="width: 7em;">Laplace (<var>&mu;</var>)</span>
 |:-----------------------------------------------------|:-------------------------------------------------------------|:---
 | Market                                               | -2.133 &times; 10<sup>-6</sup>                               | +0.000 &times; 10<sup>+0</sup>
 | Smooth                                               | -2.374 &times; 10<sup>-6</sup>                               | -1.598 &times; 10<sup>-6</sup>
@@ -138,7 +138,7 @@ The shape of the histogram for the market price data shows the triple peak patte
 {% endtable %}
 
 {% table %}
-| <span style="width: 10em;">Scale parameter</span>    | <span style="width: 7em;">Normal (<var>&sigma;</var>)</span> | <span style="width: 7em;">Laplace (<var>b</var>)</span>
+| <span style="width: 10em;">Scale Parameter</span>    | <span style="width: 7em;">Normal (<var>&sigma;</var>)</span> | <span style="width: 7em;">Laplace (<var>b</var>)</span>
 |:-----------------------------------------------------|:-------------------------------------------------------------|:---
 | Market                                               | +1.894 &times; 10<sup>-4</sup>                               | +1.216 &times; 10<sup>-4</sup>
 | Smooth                                               | +6.481 &times; 10<sup>-5</sup>                               | +5.006 &times; 10<sup>-6</sup>
@@ -163,7 +163,7 @@ The price chart shows a fairly consistent multi-year trend followed by a distinc
 The histograms for both the market price and the dither component have a shape that resembles the Laplace density function. The histogram for the smooth component has a sloppy and irregular shape. Here are the numbers:
 
 {% table %}
-| <span style="width: 10em;">Location parameter</span> | <span style="width: 7em;">Normal (<var>&mu;</var>)</span>    | <span style="width: 7em;">Laplace (<var>&mu;</var>)</span>
+| <span style="width: 10em;">Location Parameter</span> | <span style="width: 7em;">Normal (<var>&mu;</var>)</span>    | <span style="width: 7em;">Laplace (<var>&mu;</var>)</span>
 |:-----------------------------------------------------|:-------------------------------------------------------------|:---
 | Market                                               | +1.285 &times; 10<sup>-3</sup>                               | +1.550 &times; 10<sup>-3</sup>
 | Smooth                                               | +1.214 &times; 10<sup>-3</sup>                               | +6.953 &times; 10<sup>-4</sup>
@@ -171,7 +171,7 @@ The histograms for both the market price and the dither component have a shape t
 {% endtable %}
 
 {% table %}
-| <span style="width: 10em;">Scale parameter</span>    | <span style="width: 7em;">Normal (<var>&sigma;</var>)</span> | <span style="width: 7em;">Laplace (<var>b</var>)</span>
+| <span style="width: 10em;">Scale Parameter</span>    | <span style="width: 7em;">Normal (<var>&sigma;</var>)</span> | <span style="width: 7em;">Laplace (<var>b</var>)</span>
 |:-----------------------------------------------------|:-------------------------------------------------------------|:---
 | Market                                               | +3.855 &times; 10<sup>-2</sup>                               | +2.476 &times; 10<sup>-2</sup>
 | Smooth                                               | +5.870 &times; 10<sup>-3</sup>                               | +4.548 &times; 10<sup>-3</sup>
