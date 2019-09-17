@@ -322,3 +322,5 @@ The average value of all possible outcomes in this case is $100, which is the br
 {% endlatex %}
 
 As with the fixed constant betting strategy, the average value of all possible outcomes is $100. The fixed fraction game is a fair game in this respect. Now look at the number of winning outcomes versus the number of losing outcomes. Only 25% of the outcomes are winners, while 75% of the outcomes result in a loss. The player is three times more likely to have a losing outcome than have a winning outcome, which is not a fair expectation at all. But while a losing outcome is more likely, the payoff of a winning outcome is large enough to offset the other three losing outcomes combined.
+
+{% accompanying_src_link %}

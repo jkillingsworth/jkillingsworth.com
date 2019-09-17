@@ -227,3 +227,5 @@ With the modified reward function for the fixed fraction betting strategy, the g
 {% endtable %}
 
 But while the distribution is balanced in terms of winning and losing outcomes, the payoff for a winning outcome always outweighs the payoff for a losing outcome---sometimes even by several orders of magnitude. I imagine an advantage player could easily find a way to profit from such a game.
+
+{% accompanying_src_link %}

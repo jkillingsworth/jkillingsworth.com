@@ -887,3 +887,5 @@ The above values were estimated starting with an initial guess of fairly weighte
 I want to explore this estimation technique in more depth. I would like to see what the estimated weights look like when the coin toss game is played with many coin tosses per round instead of just four. Perhaps this will be the topic of a later post.
 
 Also, I would also like to come up with a more meaningful cost function for the hill climbing algorithm, one that would give preference to valid values closer to the middle of the range of possible values. With the implementation presented in this post, there is a plateau of valid values that can be estimated. The value that it converges to is highly dependent on the initial guess. Having a better cost function would allow the algorithm to converge to the same solution regardless of the starting point. I'm not sure yet how to do this.
+
+{% accompanying_src_link %}

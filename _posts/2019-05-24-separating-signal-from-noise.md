@@ -187,3 +187,5 @@ I think the most obvious conclusion to draw from this experiment is that a smoot
 Another interesting observation in the data sets examined here is that the noise is not entirely random. There is a structure to it. There are undeniable up and down cycles. My initial thought is to apply Fourier analysis to extract a cyclical component from the residual noise. I am curious what the distribution characteristics of the residual noise would look like if it could be isolated from the cyclical component as well as the trend component. The up and down cycles are somewhat irregular, however, which might make a Fourier analysis difficult. I think this is something worth further investigation.
 
 The techniques used in this article rely on a least squares moving average to determine the smooth trend component of a price series. While the least squares moving average is great for tracking sustained price trends, the disadvantage is that it reacts slowly to sharp reversals in the trend. The slow reaction to trend reversals can produce artificially large spikes in the noise component. There might be better smoothing algorithms worth exploring.
+
+{% accompanying_src_link %}

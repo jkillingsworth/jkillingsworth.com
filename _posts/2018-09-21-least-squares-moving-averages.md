@@ -297,3 +297,5 @@ For ticker symbol `HEAR`:
 {% chart fig-36-lsrexp-HEAR-zoom.svg %}
 
 When performing the regression using the exponential model, the results look very similar to those found using the linear model. While exponential regression might provide a slightly better fit in cases where there is exponential growth or decay, the price tracking can still lag behind during reversals. As the charts for `HEAR` show, the moving average can even overshoot quite a bit in cases where there is a sharp reversal.
+
+{% accompanying_src_link %}

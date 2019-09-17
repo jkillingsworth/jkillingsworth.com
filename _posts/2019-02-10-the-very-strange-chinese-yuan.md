@@ -76,3 +76,5 @@ It does not exhibit the triple peak pattern characteristic of intraday prices. T
 {% chart fig-16-forex-daily-USDCNH-probs-log.svg %}
 
 Again, we see the same thing. The histogram takes the approximate shape of a Laplace distribution. The daily price fluctuations of both the onshore rates and the offshore rates exhibit the same behavior we have come to expect from many other data sets. The triple peak phenomenon only seems to manifest itself in smaller timeframes.
+
+{% accompanying_src_link %}

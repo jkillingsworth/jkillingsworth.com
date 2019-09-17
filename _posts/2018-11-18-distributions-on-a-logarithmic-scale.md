@@ -322,3 +322,5 @@ The flat top of the log-Laplace density function looks peculiar. I wasn't expect
 {% chart fig-24-distributions-log.svg %}
 
 Notice how the shape of the log-normal density function looks very much like the symmetrical shape of the regular normal distribution. This trait does not exist for the log-Laplace distribution, however. When plugging in smaller values for the scale parameter, the shape of the log-Laplace density function tends to have a closer resemblance to that of the regular Laplace distribution, but it doesn't exhibit the same symmetry.
+
+{% accompanying_src_link %}

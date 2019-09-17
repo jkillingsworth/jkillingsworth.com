@@ -307,3 +307,5 @@ Both density functions have the same basic shape. The density plot of the Laplac
 {% chart fig-22-distributions-log.svg %}
 
 Notice the difference in magnitude for values far from the middle. The probability of observing a value of a normally distributed random variable far from the mean is quite small. The probability of observing the same value, while still small, might be orders of magnitude greater if the random variable has a Laplace distribution.
+
+{% accompanying_src_link %}

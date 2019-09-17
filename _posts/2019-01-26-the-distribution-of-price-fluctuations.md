@@ -249,3 +249,5 @@ This series cites plenty of evidence that favors the use of the Laplace distribu
 Based on his study of historical cotton prices, Mandelbrot claims that price fluctuations are best described by a family of [stable distributions](https://en.wikipedia.org/wiki/Stable_distribution). These distributions are more rounded at the peak than the Laplace distribution. I currently don't know enough about this class of probability distributions to draw my own conclusions, but I think it's an area worthy of further study.
 
 Another possibility is that the distribution of price fluctuations could take the form of a [generalized normal distribution](https://en.wikipedia.org/wiki/Generalized_normal_distribution). This is a family of distributions that can take the shape of a normal distribution, a Laplace distribution, or something else depending on the value of a shape parameter. I think this might be another area worth further investigation.
+
+{% accompanying_src_link %}
