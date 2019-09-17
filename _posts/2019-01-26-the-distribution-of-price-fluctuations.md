@@ -36,7 +36,7 @@ To get some broader insights regarding the behavior of price movements, I want t
 {% table %}
 | <span style="width: 4em;">Symbol</span> | <span style="width: 17em;">Underlying Asset</span>
 |:----------------------------------------|:---
-| `DIA`                                   | Dow Jones Industrial Average
+| `DIA`                                   | Large cap domestic stocks
 | `EEM`                                   | Emerging markets
 | `GLD`                                   | Gold
 | `HYG`                                   | High yield corporate bonds
