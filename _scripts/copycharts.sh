@@ -214,3 +214,22 @@ copychart $post fig-57 exponential-03-pmfunc.svg
 copychart $post fig-58 exponential-03-biases-lower.svg
 copychart $post fig-59 exponential-03-biases-upper.svg
 copychart $post fig-60 exponential-03-biases-estimated.svg
+
+post="2019-11-14-hill-climbing-and-cost-functions"
+
+copychart $post fig-01 target-pmfunc.svg
+copychart $post fig-03 estimate-equal-05-begin-biases.svg
+copychart $post fig-11 estimate-equal-05-final-biases.svg
+copychart $post fig-12 target-pmfunc.svg
+copychart $post fig-13 estimate-slope-02-begin-biases.svg
+copychart $post fig-14 estimate-slope-02-final-biases.svg
+copychart $post fig-15 climb-hill-east.svg
+copychart $post fig-16 climb-hill-west.svg
+copychart $post fig-17 climb-plat-east.svg
+copychart $post fig-18 climb-plat-west.svg
+copychart $post fig-21 estimate-equal-05-final-biases.svg
+copychart $post fig-23 estimate-slope-02-final-biases.svg
+copychart $post fig-30 optimize-score-A-scores.svg
+copychart $post fig-32 optimize-score-A-biases.svg
+copychart $post fig-33 optimize-score-B-scores.svg
+copychart $post fig-35 optimize-score-B-biases.svg
