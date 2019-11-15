@@ -6,7 +6,7 @@ copychart () {
     filename=$3
     src=_src/$postname/build
     dst=_assets/$postname
-    mkdir -p $dst && cp $src/$filename $dst/$prefixno-$filename
+    mkdir -p $dst && cp -n $src/$filename $dst/$prefixno-$filename
 }
 
 post="2018-04-23-fixed-fractions-and-fair-games"
