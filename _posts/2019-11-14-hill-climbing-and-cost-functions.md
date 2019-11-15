@@ -400,3 +400,5 @@ The variation of the hill climbing algorithm presented here converges to a solut
 My goal is to find a way to combine the cost function used in the hill climbing algorithm with a scoring function that gives curvature to an otherwise flat plateau. This would allow the hill climbing algorithm to converge to a unique solution regardless of the initial guess. The plateau essentially becomes a ridge. My initial attempts at combining the cost function with a scoring function have resulted in a method that seems to find its way to the ridge, but then gets stuck when trying to ascend the ridge.
 
 Ultimately, I want to come up with a technique that finds a unique solution to the weighted coin toss game when there is a large number of coin tosses instead of just four. And I want to do so in a way that is computationally efficient. Variations of the hill climbing algorithm may or may not be the best approach. I plan to post more on this topic as I continue to explore new ideas.
+
+{% accompanying_src_link %}
