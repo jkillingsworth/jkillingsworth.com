@@ -714,21 +714,23 @@ Suppose we start with an initial guess of all fairly weighted coins. We can rand
         \\[1em]
         $
         \begin{aligned}
-        p_{i,\texttt{original}} & = p_i
+        d_{\mathrlap{\text{original}}\phantom{\text{proposed}}}
+        & =
+        r_j - (\text{calculate } r_j \text{ given } p_i)
         \\
-        p_{i,\texttt{proposed}} & = p_i + s
+        d_{\mathrlap{\text{proposed}}\phantom{\text{proposed}}}
+        & =
+        r_j - (\text{calculate } r_j \text{ given } p_i + s)
         \\
-        d_{\texttt{original}} & = r_j - (\text{calculate } r_j \text{ given } p_{i,\texttt{original}})
-        \\
-        d_{\texttt{proposed}} & = r_j - (\text{calculate } r_j \text{ given } p_{i,\texttt{proposed}})
-        \\
-        v_{\texttt{improved}} & = |d_{\texttt{proposed}}| < |d_{\texttt{original}}|
+        v_{\text{improved}}
+        & =
+        |d_{\text{proposed}}| < |d_{\text{original}}|
         \end{aligned}
         $
     };
     \node[decision] (step5) [below=0.25in of step4]
     {
-        $v_{\texttt{improved}}$
+        $v_{\text{improved}}$
     };
     \node[process]  (step6) [below=0.25in of step5]
     {
@@ -736,7 +738,7 @@ Suppose we start with an initial guess of all fairly weighted coins. We can rand
         \\[1em]
         $
         \begin{aligned}
-        p_i & \gets p_{i,\texttt{proposed}}
+        p_i & \gets p_i + s
         \end{aligned}
         $
     };
