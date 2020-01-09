@@ -629,9 +629,15 @@ var
 .content,
 .sidebar
 {
-    p
+    p:not(.nojustify)
     {
         text-align: justify;
+        word-spacing: -1px;
+    }
+
+    p, ul
+    {
+        line-height: 1.667;
     }
 }
 

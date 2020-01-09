@@ -8,9 +8,9 @@ module Jekyll
             link = "https://github.com/jkillingsworth/jkillingsworth.com/tree/master/_src/"
             link = link + post.id.gsub("/", "-").slice(1..-1)
 
-            opening = "<a href=\"#{link}\">"
+            opening = "<p class=\"nojustify\"><a href=\"#{link}\">"
             content = "Accompanying source code is available on GitHub."
-            closing = "</a>"
+            closing = "</a></p>"
 
             opening + content + closing
         end
