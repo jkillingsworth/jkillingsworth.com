@@ -15,7 +15,6 @@ $rgbback: white;
 $rgbfore: black;
 $rgblink: blue;
 $rgbmark: yellow;
-$shade25: mix($rgbback, $rgbfore, 25);
 $shade50: mix($rgbback, $rgbfore, 50);
 $shade80: mix($rgbback, $rgbfore, 80);
 $shade90: mix($rgbback, $rgbfore, 90);
@@ -57,7 +56,7 @@ $indent-width: 16px;
 
 @mixin font-monospace
 {
-    font-family: "Consolas", "Menlo", monospace;
+    font-family: "Roboto Mono", "Consolas", "Menlo", monospace;
     font-weight: normal;
 }
 
@@ -119,9 +118,7 @@ a:hover
 code
 {
     @include font-monospace();
-    color: $shade25;
-    font-size: 10.5pt;
-    font-weight: bold;
+    font-size: 10pt;
 }
 
 strong
@@ -522,7 +519,8 @@ var
     {
         @include font-monospace();
         display: block;
-        line-height: 1.25;
+        font-size: 10pt;
+        line-height: inherit;
         padding: 4px;
         width: 100%;
     }
@@ -553,6 +551,7 @@ var
     {
         @include font-monospace();
         display: block;
+        font-size: 10pt;
         margin: -12px 0 24px;
     }
 }

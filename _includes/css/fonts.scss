@@ -46,3 +46,14 @@
     url(./static/fonts/lora-variant-tabular-nums.woff) format("woff");
     unicode-range: U+0030-0039;
 }
+
+@font-face
+{
+    font-display: fallback;
+    font-family: "Roboto Mono";
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Mono'), local('RobotoMono-Regular'), //
+    url(./static/fonts/roboto-mono-v7-latin-regular.woff2) format("woff2"), //
+    url(./static/fonts/roboto-mono-v7-latin-regular.woff) format("woff");
+}
