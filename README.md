@@ -56,7 +56,11 @@ The following instructions are designed for installing the required tools on a W
 
       jekyll serve
 
-* Build and host a site with incremental rebuild:
+  To access the site from another device:
+
+      jekyll serve --host 0.0.0.0
+
+  To use incremental rebuild:
 
       jekyll serve --incremental
 
