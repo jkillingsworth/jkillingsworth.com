@@ -115,7 +115,7 @@ a:hover
     text-decoration: underline;
 }
 
-code
+abbr.ticker
 {
     @include font-monospace();
     font-size: 10pt;

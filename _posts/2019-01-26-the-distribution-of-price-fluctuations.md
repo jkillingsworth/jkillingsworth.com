@@ -11,7 +11,7 @@ In the 1960s, Mandelbrot studied historical cotton prices and noticed the distri
 
 ## Analyzing the Data
 
-The first set of data I want to look at are the daily closing prices of an S&P 500 index tracking fund. Specifically, I'm using the SPDR S&P 500 ETF. The ticker symbol is `SPY`. This is currently one of the most heavily traded instruments on the New York Stock Exchange. Below is a chart of the daily closing prices over the past 21 years:
+The first set of data I want to look at are the daily closing prices of an S&P 500 index tracking fund. Specifically, I'm using the SPDR S&P 500 ETF. The ticker symbol is <abbr class="ticker">SPY</abbr>. This is currently one of the most heavily traded instruments on the New York Stock Exchange. Below is a chart of the daily closing prices over the past 21 years:
 
 {% chart fig-01-stocks-daily-SPY-price.svg %}
 
@@ -36,14 +36,14 @@ To get some broader insights regarding the behavior of price movements, I want t
 {% table %}
 | <span style="width: 4em;">Symbol</span> | <span style="width: 17em;">Underlying Asset</span>
 |:----------------------------------------|:---
-| `DIA`                                   | Large cap domestic stocks
-| `EEM`                                   | Emerging markets
-| `GLD`                                   | Gold
-| `HYG`                                   | High yield corporate bonds
-| `LQD`                                   | Investment grade corporate bonds
-| `TLT`                                   | Long term US Treasury bonds
-| `UNG`                                   | Natural gas
-| `USO`                                   | Crude oil
+| <abbr class="ticker">DIA</abbr>         | Large cap domestic stocks
+| <abbr class="ticker">EEM</abbr>         | Emerging markets
+| <abbr class="ticker">GLD</abbr>         | Gold
+| <abbr class="ticker">HYG</abbr>         | High yield corporate bonds
+| <abbr class="ticker">LQD</abbr>         | Investment grade corporate bonds
+| <abbr class="ticker">TLT</abbr>         | Long term US Treasury bonds
+| <abbr class="ticker">UNG</abbr>         | Natural gas
+| <abbr class="ticker">USO</abbr>         | Crude oil
 {% endtable %}
 
 Each data set contains at least 10 years worth of data. Using the same technique as before, we can plot the histogram of daily price fluctuations and overlay the fitted normal and Laplace density functions. Here are the charts:
@@ -57,7 +57,7 @@ Each data set contains at least 10 years worth of data. Using the same technique
 {% chart fig-10-stocks-daily-UNG-probs.svg %}
 {% chart fig-11-stocks-daily-USO-probs.svg %}
 
-As you can see, the histogram seems to fit the Laplace distribution better than the normal distribution most of the time. But not always. There are some cases that appear to fit somewhere in between the normal distribution and the Laplace distribution. A cursory look at `UNG`, for example, might suggest the variation is normally distributed.
+As you can see, the histogram seems to fit the Laplace distribution better than the normal distribution most of the time. But not always. There are some cases that appear to fit somewhere in between the normal distribution and the Laplace distribution. A cursory look at <abbr class="ticker">UNG</abbr>, for example, might suggest the variation is normally distributed.
 
 ## Individual Stocks (Daily)
 
@@ -66,21 +66,21 @@ Instead of looking at broad stock market indexes, let's see what happens if we e
 {% table %}
 | <span style="width: 4em;">Symbol</span> | <span style="width: 17em;">Company Name</span>
 | :---------------------------------------|:---
-| `AMZN`                                  | Amazon.com, Inc.
-| `AZO`                                   | AutoZone, Inc.
-| `BLK`                                   | BlackRock, Inc.
-| `CAT`                                   | Caterpillar Inc.
-| `CMG`                                   | Chipotle Mexican Grill, Inc.
-| `FDX`                                   | FedEx Corporation
-| `GM`                                    | General Motors Company
-| `GOOG`                                  | Alphabet Inc.
-| `GWW`                                   | W.W. Grainger, Inc.
-| `HUM`                                   | Humana Inc.
-| `NFLX`                                  | Netflix, Inc.
-| `TSLA`                                  | Tesla, Inc.
-| `TWLO`                                  | Twilio Inc.
-| `ULTA`                                  | Ulta Beauty, Inc.
-| `UNH`                                   | UnitedHealth Group Incorporated
+| <abbr class="ticker">AMZN</abbr>        | Amazon.com, Inc.
+| <abbr class="ticker">AZO</abbr>         | AutoZone, Inc.
+| <abbr class="ticker">BLK</abbr>         | BlackRock, Inc.
+| <abbr class="ticker">CAT</abbr>         | Caterpillar Inc.
+| <abbr class="ticker">CMG</abbr>         | Chipotle Mexican Grill, Inc.
+| <abbr class="ticker">FDX</abbr>         | FedEx Corporation
+| <abbr class="ticker">GM</abbr>          | General Motors Company
+| <abbr class="ticker">GOOG</abbr>        | Alphabet Inc.
+| <abbr class="ticker">GWW</abbr>         | W.W. Grainger, Inc.
+| <abbr class="ticker">HUM</abbr>         | Humana Inc.
+| <abbr class="ticker">NFLX</abbr>        | Netflix, Inc.
+| <abbr class="ticker">TSLA</abbr>        | Tesla, Inc.
+| <abbr class="ticker">TWLO</abbr>        | Twilio Inc.
+| <abbr class="ticker">ULTA</abbr>        | Ulta Beauty, Inc.
+| <abbr class="ticker">UNH</abbr>         | UnitedHealth Group Incorporated
 {% endtable %}
 
 Here are the charts:
@@ -168,14 +168,14 @@ To see if the pattern holds, let's take a look at the daily exchange rates of a 
 {% table %}
 | <span style="width: 4em;">Symbol</span> | <span style="width: 17em;">Currency Pair</span>
 |:----------------------------------------|:---
-| `USD/JPY`                               | US dollar / Japanese yen
-| `USD/MXN`                               | US dollar / Mexican peso
-| `USD/RUB`                               | US dollar / Russian ruble
-| `USD/TRY`                               | US dollar / Turkish lira
-| `USD/ZAR`                               | US dollar / South African rand
-| `EUR/NOK`                               | Euro / Norwegian krone
-| `EUR/SEK`                               | Euro / Swedish krona
-| `EUR/TRY`                               | Euro / Turkish lira
+| <abbr class="ticker">USD/JPY</abbr>     | US dollar / Japanese yen
+| <abbr class="ticker">USD/MXN</abbr>     | US dollar / Mexican peso
+| <abbr class="ticker">USD/RUB</abbr>     | US dollar / Russian ruble
+| <abbr class="ticker">USD/TRY</abbr>     | US dollar / Turkish lira
+| <abbr class="ticker">USD/ZAR</abbr>     | US dollar / South African rand
+| <abbr class="ticker">EUR/NOK</abbr>     | Euro / Norwegian krone
+| <abbr class="ticker">EUR/SEK</abbr>     | Euro / Swedish krona
+| <abbr class="ticker">EUR/TRY</abbr>     | Euro / Turkish lira
 {% endtable %}
 
 Here are the charts:
@@ -213,9 +213,9 @@ A number of different cryptocurrencies have emerged in the past few years. And s
 {% table %}
 | <span style="width: 4em;">Symbol</span> | <span style="width: 17em;">Digital Asset</span>
 | :---------------------------------------|:---
-| `BTC`                                   | Bitcoin
-| `ETH`                                   | Ethereum
-| `XRP`                                   | Ripple
+| <abbr class="ticker">BTC</abbr>         | Bitcoin
+| <abbr class="ticker">ETH</abbr>         | Ethereum
+| <abbr class="ticker">XRP</abbr>         | Ripple
 {% endtable %}
 
 Here are the charts:
