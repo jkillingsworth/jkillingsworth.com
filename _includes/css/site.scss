@@ -342,17 +342,7 @@ var
 
         > img
         {
-            animation: placeholder 1s ease 1s forwards;
-            background-clip: content-box;
             display: block;
-        }
-
-        @keyframes placeholder
-        {
-            to
-            {
-                background: $shade90;
-            }
         }
     }
 
