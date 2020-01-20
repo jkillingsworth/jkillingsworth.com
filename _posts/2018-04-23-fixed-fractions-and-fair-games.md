@@ -14,7 +14,7 @@ Suppose the gambler wants to place bets on the outcome of a coin toss. Ignoring 
 {% latex fig-01 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
-    \usepackage{inconsolata}
+    \usepackage[scaled=0.75]{roboto-mono}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -40,7 +40,7 @@ If we assume it's a fair coin, then each of the two outcomes has a 50% probabili
 {% latex fig-02 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
-    \usepackage{inconsolata}
+    \usepackage[scaled=0.75]{roboto-mono}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -79,7 +79,7 @@ Now let's define a reward function to determine the payoff for each round based 
 {% latex fig-04 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
-    \usepackage{inconsolata}
+    \usepackage[scaled=0.75]{roboto-mono}
     \begin{document}
     \begin{displaymath}
     R(X) =
@@ -272,7 +272,7 @@ Let's suppose the gambler plays two rounds of the coin toss game and always bets
 {% latex fig-22 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
-    \usepackage{inconsolata}
+    \usepackage[scaled=0.75]{roboto-mono}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -299,7 +299,7 @@ The average value of all possible outcomes in this case is $100, which is the br
 {% latex fig-23 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
-    \usepackage{inconsolata}
+    \usepackage[scaled=0.75]{roboto-mono}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}

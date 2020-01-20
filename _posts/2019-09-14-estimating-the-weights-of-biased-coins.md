@@ -127,7 +127,7 @@ With four tosses of the coin, there are sixteen possible coin toss sequences and
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
     \usepackage{array}
-    \usepackage{inconsolata}
+    \usepackage[scaled=0.75]{roboto-mono}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
@@ -195,7 +195,7 @@ Since the model is symmetrical, the chance of ending up on any given positive te
 {% latex fig-09 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
-    \usepackage{inconsolata}
+    \usepackage[scaled=0.75]{roboto-mono}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
