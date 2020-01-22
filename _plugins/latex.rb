@@ -27,8 +27,10 @@ module Jekyll
             def gen_tmpfile(jobname, latex, tempdir)
                 Dir.chdir(tempdir) do
                     File.write("#{jobname}.tex", latex)
-                    `latex --halt-on-error --interaction=nonstopmode #{jobname}.tex > stdout.log 2>> stderr.log`
-                    `dvisvgm #{jobname}.dvi --no-fonts --exact --zoom=1.333333 --prec=6 --verb=3 2>> stderr.log`
+                    output = `latex --halt-on-error --interaction=nonstopmode #{jobname}.tex`
+                    if ($?.exitstatus != 0) then print output end
+                    output = `dvisvgm #{jobname}.dvi --no-fonts --exact --zoom=1.333333 --precision=6 --verbosity=3`
+                    if ($?.exitstatus != 0) then print output end
                 end
             end
 
