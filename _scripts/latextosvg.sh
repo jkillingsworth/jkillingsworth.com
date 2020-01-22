@@ -1,16 +1,26 @@
 #!/bin/bash
 
-jobname=latextosvg
-stdout=stdout.log
-stderr=stderr.log
+set -e
+
+if [ -z "${1}" ]; then
+    echo "Usage: ${0} TEXFILE [SVGFILE]"
+    exit 1
+fi
 
 tempdir=$(mktemp -d)
-pushd $tempdir > /dev/null
+texfile=$(realpath "${1}")
+svgfile=output.svg
+jobname=latextosvg
 
-cat > $jobname.tex
-ignore=$(latex --halt-on-error --interaction=nonstopmode $jobname.tex > $stdout 2> >(tee -a $stderr >&2))
-output=$(dvisvgm $jobname.dvi --no-fonts --exact --zoom=1.333 --verb=3 --stdout 2> >(tee -a $stderr >&2))
-echo $output
+if [ -n "${2}" ]; then svgfile="${2}"; fi
+
+pushd ${tempdir} > /dev/null
+
+cp "${texfile}" ${jobname}.tex
+latex --halt-on-error --interaction=nonstopmode ${jobname}.tex
+dvisvgm ${jobname}.dvi --no-fonts --exact --zoom=1.333333 --precision=6 --verbosity=7
 
 popd > /dev/null
-rm -rf $tempdir
+
+cp ${tempdir}/${jobname}.svg "${svgfile}"
+rm ${tempdir} -rf
