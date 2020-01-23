@@ -9,9 +9,15 @@ copychart () {
     postname=${1}
     prefixno=${2}
     filename=${3}
-    src=_src/${postname}/build
-    dst=_assets/${postname}
-    mkdir -p ${dst} && cp -n ${src}/${filename} ${dst}/${prefixno}-${filename}
+
+    srcpath=_src/${postname}/build
+    dstpath=_assets/${postname}
+    srcfile=${srcpath}/${filename}
+    dstfile=${dstpath}/${prefixno}-${filename}
+
+    if [ ! -f ${dstfile} ]; then
+        mkdir -p ${dstpath} && cp ${srcfile} ${dstfile}
+    fi
 }
 
 post="2018-04-23-fixed-fractions-and-fair-games"
