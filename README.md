@@ -62,11 +62,11 @@ The following instructions are designed for installing the required toolchain on
 
 #### Usage
 
-* Install gems needed for an existing site:
+* Update the bundler gem to the latest version:
 
-      bundle install
+      gem update bundler
 
-* Update gems to the latest version:
+* Update all gems in the Gemfile to the latest version:
 
       bundle update
 
@@ -78,7 +78,7 @@ The following instructions are designed for installing the required toolchain on
 
       jekyll serve
 
-  To access the site from another device:
+  To access the site from another device on the network:
 
       jekyll serve --host 0.0.0.0
 
