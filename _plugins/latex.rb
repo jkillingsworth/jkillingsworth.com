@@ -1,4 +1,4 @@
-require "tmpdir"
+require "open3"
 
 module Jekyll
 
@@ -24,26 +24,23 @@ module Jekyll
                 Dir.mkdir(path)
             end
 
-            def gen_tmpfile(jobname, latex, tempdir)
-                Dir.chdir(tempdir) do
-                    File.write("#{jobname}.tex", latex)
-                    output = `latex --halt-on-error --interaction=nonstopmode #{jobname}.tex`
-                    if ($?.exitstatus != 0) then print output end
-                    output = `dvisvgm #{jobname}.dvi --no-fonts --exact --zoom=1.333333 --precision=6 --verbosity=3`
-                    if ($?.exitstatus != 0) then print output end
-                end
+            def print_e(message)
+                color_error = "\e[1;31m"
+                color_reset = "\e[0m"
+                STDERR.print(color_error, message, color_reset)
             end
 
-            def gen_outfile(jobname, latex, outfile)
-                Dir.mktmpdir("#{jobname}-") do |tempdir|
-                    gen_tmpfile(jobname, latex, tempdir)
-                    File.rename("#{tempdir}/#{jobname}.svg", outfile)
+            def gen_outfile(latex, outfile)
+                stdout, stderr, status = Open3.capture3("bash ./tools/latextosvg.sh", :stdin_data=>latex)
+                print_e stderr
+                unless !status.success? then
+                    File.write(outfile, stdout)
                 end
             end
 
             if !File.exist?(file) then
                 puts "LaTeX: ".rjust(20) + "#{file}"
-                gen_outfile("latextosvg", latex, file)
+                gen_outfile(latex, file)
                 site.static_files << AssetFile.new(site, path, post.url, name)
             end
 

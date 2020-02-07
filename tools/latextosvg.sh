@@ -36,8 +36,8 @@ if [ -t -0 ] && [ -z "${1}" ]; then
     exit 1
 fi
 
-texfile_i=${1:-/dev/stdin}
-svgfile_o=${2:-/dev/stdout}
+texfile_i=${1:--}
+svgfile_o=${2}
 tempdir=$(mktemp -d)
 jobname="latextosvg"
 
@@ -85,5 +85,11 @@ case "${option_fonts}" in
 esac
 
 popd > /dev/null
-cp "${tempdir}/${jobname}.svg" "${svgfile_o}"
-rm "${tempdir}" -rf
+
+if [ -n "${svgfile_o}" ]; then
+    cat "${tempdir}/${jobname}.svg" > "${svgfile_o}"
+else
+    cat "${tempdir}/${jobname}.svg"
+fi
+
+rm -rf "${tempdir}"
