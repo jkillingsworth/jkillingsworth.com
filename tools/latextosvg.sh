@@ -63,6 +63,42 @@ convert_dvi_to_svg() {
     fi
 }
 
+do_autohint () {
+    fn_native=${1}
+    fn_hinted=${2}
+
+    clargs="--no-info"
+
+    set +e
+    ttfautohint ${clargs} ${fn_native} ${fn_hinted} 2> /dev/null
+    try_symbol_font=$?
+    set -e
+
+    if [ ${try_symbol_font} != 0 ]; then
+        ttfautohint ${clargs} --symbol ${fn_native} ${fn_hinted}
+    fi
+}
+
+autohint_the_fonts () {
+
+    pattern="(?<=src:url\(data:application/x-font-ttf;base64,)(.+?)(?=\) format\('truetype'\);)"
+    svgfile=$(< ${jobname}.svg)
+    ttfonts=$(grep -oP "${pattern}" <<< "${svgfile}")
+
+    for native in ${ttfonts}; do
+        fn_native="tt_native.ttf"
+        fn_hinted="tt_hinted.ttf"
+        base64 --decode <<< ${native} > ${fn_native}
+        do_autohint ${fn_native} ${fn_hinted}
+        hinted=$(base64 --wrap=0 ${fn_hinted})
+        svgfile=${svgfile/${native}/${hinted}}
+        rm ${fn_native}
+        rm ${fn_hinted}
+    done
+
+    echo -n "${svgfile}" > "${jobname}.svg"
+}
+
 tempdir=$(mktemp -d)
 
 cat "${1:--}" > "${tempdir}/${jobname}.tex"
@@ -77,6 +113,7 @@ case "${option_fonts}" in
     ttfonts )
         convert_tex_to_dvi
         convert_dvi_to_svg "--font-format=ttf"
+        autohint_the_fonts
         ;;
     * )
         echo -e "$(basename ${0}): invalid font option -- ${option_fonts}" 1>&2
