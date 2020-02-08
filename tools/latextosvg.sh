@@ -36,16 +36,13 @@ if [ -t -0 ] && [ -z "${1}" ]; then
     exit 1
 fi
 
-texfile_i=${1:--}
-svgfile_o=${2}
-tempdir=$(mktemp -d)
 jobname="latextosvg"
 
 convert_tex_to_dvi() {
 
     set +e
     clargs="--halt-on-error --interaction=nonstopmode"
-    output=$(latex ${clargs} --output-dir="${tempdir}" "${jobname}.tex")
+    output=$(latex ${clargs} --output-dir="$(pwd)" "${jobname}.tex")
     result=${?}
     set -e
 
@@ -66,7 +63,10 @@ convert_dvi_to_svg() {
     fi
 }
 
-cat "${texfile_i}" > "${tempdir}/${jobname}.tex"
+tempdir=$(mktemp -d)
+
+cat "${1:--}" > "${tempdir}/${jobname}.tex"
+
 pushd "${tempdir}" > /dev/null
 
 case "${option_fonts}" in
@@ -79,15 +79,15 @@ case "${option_fonts}" in
         convert_dvi_to_svg "--font-format=ttf"
         ;;
     * )
-        echo -e "$(basename ${0}): invalid font option -- ${option_fonts}\a" 1>&2
+        echo -e "$(basename ${0}): invalid font option -- ${option_fonts}" 1>&2
         exit 1
         ;;
 esac
 
 popd > /dev/null
 
-if [ -n "${svgfile_o}" ]; then
-    cat "${tempdir}/${jobname}.svg" > "${svgfile_o}"
+if [ -n "${2}" ]; then
+    cat "${tempdir}/${jobname}.svg" > "${2}"
 else
     cat "${tempdir}/${jobname}.svg"
 fi
