@@ -19,6 +19,7 @@ module Jekyll
             path = Assets.source_path(post)
             file = File.join(path, "fig-#{figno}-latex-#{fingerprint}.svg")
             name = File.basename(file)
+            opts = site.config["latextosvg"]
 
             if !Dir.exist?(path) then
                 Dir.mkdir(path)
@@ -30,8 +31,9 @@ module Jekyll
                 STDERR.print(color_error, message, color_reset)
             end
 
-            def gen_outfile(latex, outfile)
-                stdout, stderr, status = Open3.capture3("bash ./tools/latextosvg.sh", :stdin_data=>latex)
+            def gen_outfile(latex, opts, outfile)
+                fonts = opts["fonts"]
+                stdout, stderr, status = Open3.capture3("bash ./tools/latextosvg.sh -f #{fonts}", :stdin_data=>latex)
                 print_e stderr
                 unless !status.success? then
                     File.write(outfile, stdout)
@@ -40,7 +42,7 @@ module Jekyll
 
             if !File.exist?(file) then
                 puts "LaTeX: ".rjust(20) + "#{file}"
-                gen_outfile(latex, file)
+                gen_outfile(latex, opts, file)
                 site.static_files << AssetFile.new(site, path, post.url, name)
             end
 
