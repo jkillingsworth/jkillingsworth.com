@@ -36,6 +36,7 @@ if [ -t -0 ] && [ -z "${1}" ]; then
     exit 1
 fi
 
+basedir=$(realpath "${0}" | xargs -0 dirname)
 jobname="latextosvg"
 
 convert_tex_to_dvi() {
@@ -79,6 +80,13 @@ do_autohint () {
     fi
 }
 
+do_compress () {
+    fn_hinted=${1}
+    fn_output=${2}
+
+    "${basedir}/bin/fontpp" ${fn_hinted} ${fn_output}
+}
+
 autohint_the_fonts () {
 
     pattern="(?<=src:url\(data:application/x-font-ttf;base64,)(.+?)(?=\) format\('truetype'\);)"
@@ -88,12 +96,15 @@ autohint_the_fonts () {
     for native in ${ttfonts}; do
         fn_native="tt_native.ttf"
         fn_hinted="tt_hinted.ttf"
+        fn_output="tt_output.woff2"
         base64 --decode <<< ${native} > ${fn_native}
         do_autohint ${fn_native} ${fn_hinted}
-        hinted=$(base64 --wrap=0 ${fn_hinted})
-        svgfile=${svgfile/${native}/${hinted}}
+        do_compress ${fn_hinted} ${fn_output}
+        output=$(base64 --wrap=0 ${fn_output})
+        svgfile=${svgfile/${native}/${output}}
         rm ${fn_native}
         rm ${fn_hinted}
+        rm ${fn_output}
     done
 
     echo -n "${svgfile}" > "${jobname}.svg"
