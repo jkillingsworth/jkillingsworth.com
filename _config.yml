@@ -10,9 +10,9 @@ permalink: /:year/:month/:day/:title/
 url: https://jkillingsworth.com
 
 exclude:
-    - .vs/
-    - bin/
-    - src/
+    - .vs
+    - bin
+    - src
     - README.md
 
 include:
