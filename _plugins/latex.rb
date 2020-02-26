@@ -33,7 +33,7 @@ module Jekyll
 
             def gen_outfile(latex, opts, outfile)
                 fonts = opts["fonts"]
-                stdout, stderr, status = Open3.capture3("bash ./tools/latextosvg.sh -f #{fonts}", :stdin_data=>latex)
+                stdout, stderr, status = Open3.capture3("bash ./bin/latextosvg.sh -f #{fonts}", :stdin_data=>latex)
                 print_e stderr
                 unless !status.success? then
                     File.write(outfile, stdout)
