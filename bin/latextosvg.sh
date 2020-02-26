@@ -84,7 +84,7 @@ do_compress () {
     fn_hinted=${1}
     fn_output=${2}
 
-    "${basedir}/bin/fontpp" ${fn_hinted} ${fn_output}
+    "${basedir}/fontpp" ${fn_hinted} ${fn_output}
 }
 
 autohint_the_fonts () {
