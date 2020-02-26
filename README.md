@@ -36,11 +36,11 @@ The following instructions are designed for installing the required toolchain on
 
 5. Verify the latest version of Jekyll is installed using the following command:
 
-       bundle exec jekyll --version
+       ./bin/jekyll --version
 
 6. Verify that you can build and host the site on your local machine:
 
-       bundle exec jekyll serve
+       ./bin/jekyll serve
 
    Give it a few seconds to generate the output files. Navigate to the following URL using your favorite web browser:
 
@@ -70,21 +70,25 @@ The following instructions are designed for installing the required toolchain on
 
       bundle update
 
+* Regenerate the Jekyll binstub:
+
+      bundle binstubs jekyll --force
+
 * Build a site:
 
-      bundle exec jekyll build
+      ./bin/jekyll build
 
 * Build a site and host it on the local machine:
 
-      bundle exec jekyll serve
+      ./bin/jekyll serve
 
   To access the site from another device on the network:
 
-      bundle exec jekyll serve --host 0.0.0.0
+      ./bin/jekyll serve --host 0.0.0.0
 
   To use incremental rebuild:
 
-      bundle exec jekyll serve --incremental
+      ./bin/jekyll serve --incremental
 
 * Generate an SVG image from a LaTeX input file:
 

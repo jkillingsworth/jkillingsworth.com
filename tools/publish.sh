@@ -5,7 +5,7 @@ if [ ! -d _site ]; then
     exit 1
 fi
 
-JEKYLL_ENV=production bundle exec jekyll build
+JEKYLL_ENV=production ./bin/jekyll build
 
 pushd _site
 git update-ref -d HEAD
