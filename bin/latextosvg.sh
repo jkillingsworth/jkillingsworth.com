@@ -87,7 +87,7 @@ do_compress () {
     "${basedir}/fontpp" ${fn_hinted} ${fn_output}
 }
 
-autohint_the_fonts () {
+post_process_fonts () {
 
     pattern="(?<=src:url\(data:application/x-font-ttf;base64,)(.+?)(?=\) format\('truetype'\);)"
     svgfile=$(< ${jobname}.svg)
@@ -127,7 +127,7 @@ case "${option_fonts}" in
     ttfonts )
         convert_tex_to_dvi
         convert_dvi_to_svg "--font-format=ttf --bbox=0.5625bp"
-        autohint_the_fonts
+        post_process_fonts
         ;;
     * )
         echo -e "$(basename ${0}): invalid font option -- ${option_fonts}" 1>&2
