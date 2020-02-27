@@ -107,6 +107,9 @@ autohint_the_fonts () {
         rm ${fn_output}
     done
 
+    svgfile=${svgfile//"application/x-font-ttf"/"application/x-font-woff2"}
+    svgfile=${svgfile//"format('truetype')"/"format('woff2')"}
+
     echo -n "${svgfile}" > "${jobname}.svg"
 }
 
