@@ -14,13 +14,14 @@ static void report_error(const char* message)
 
 bool input_stream_init(FILE** stream, int argc, char** argv)
 {
-    if (argc < 2)
-    {
+    const int index = 1;
+
+    if (argc <= index) {
         report_error("No filename provided for input stream.");
         return false;
     }
 
-    *stream = fopen(argv[1], "rb");
+    *stream = fopen(argv[index], "rb");
 
     if (*stream == NULL) {
         report_error("Error opening input stream.");
@@ -47,13 +48,14 @@ void input_stream_free(FILE** stream)
 
 bool woff2_stream_init(FILE** stream, int argc, char** argv)
 {
-    if (argc < 3)
-    {
+    const int index = 2;
+
+    if (argc <= index) {
         report_error("No filename provided for output stream.");
         return false;
     }
 
-    *stream = fopen(argv[2], "wb");
+    *stream = fopen(argv[index], "wb");
 
     if (*stream == NULL) {
         report_error("Error opening output stream.");
