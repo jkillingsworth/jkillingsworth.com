@@ -110,7 +110,19 @@ post_process_fonts () {
     svgfile=${svgfile//"application/x-font-ttf"/"application/x-font-woff2"}
     svgfile=${svgfile//"format('truetype')"/"format('woff2')"}
 
-    echo -n "${svgfile}" > "${jobname}.svg"
+    upper_pattern="^(.|\n)+?(<\!\[CDATA\[)"
+    inner_pattern="(?<=<\!\[CDATA\[)(.|\n)+?(?=]]>)"
+    lower_pattern="(\n]]>)(.|\n)+?$"
+
+    upper=$(grep -oPz "${upper_pattern}" <<< "${svgfile}" | tr -d "\0")
+    inner=$(grep -oPz "${inner_pattern}" <<< "${svgfile}" | tr -d "\0" | sort)
+    lower=$(grep -oPz "${lower_pattern}" <<< "${svgfile}" | tr -d "\0")
+
+    svgfile="${upper}${inner}${lower}"
+
+    conversion=cat
+    case "$(uname -s)" in CYGWIN*|MSYS*|MINGW* ) conversion=unix2dos ;; esac
+    echo "${svgfile}" | ${conversion} > "${jobname}.svg"
 }
 
 tempdir=$(mktemp -d)
