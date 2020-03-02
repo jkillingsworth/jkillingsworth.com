@@ -64,19 +64,40 @@ convert_dvi_to_svg() {
     fi
 }
 
-do_autohint () {
+do_nulldate () {
     fn_native=${1}
+    fn_nodate=${2}
+
+    epoch_date="Thu Jan 01 00:00:00 1970"
+    nodate_xml=$(ttx -q -e -x FFTM --newline=LF -o - "${fn_native}")
+
+    pattern="<created value=\"(.+?)\"/>"
+    matched=$(grep -m1 -oP "${pattern}" <<< "${nodate_xml}")
+    nodate_xml=${nodate_xml/${matched}/"<created value=\"${epoch_date}\"/>"}
+
+    pattern="<modified value=\"(.+?)\"/>"
+    matched=$(grep -m1 -oP "${pattern}" <<< "${nodate_xml}")
+    nodate_xml=${nodate_xml/${matched}/"<modified value=\"${epoch_date}\"/>"}
+
+    fn_temp=nodate.xml
+    echo "${nodate_xml}" > ${fn_temp}
+    ttx -q -b --no-recalc-timestamp -o ${fn_nodate} ${fn_temp}
+    rm ${fn_temp}
+}
+
+do_autohint () {
+    fn_nodate=${1}
     fn_hinted=${2}
 
     clargs="--no-info"
 
     set +e
-    ttfautohint ${clargs} ${fn_native} ${fn_hinted} 2> /dev/null
+    ttfautohint ${clargs} ${fn_nodate} ${fn_hinted} 2> /dev/null
     try_symbol_font=$?
     set -e
 
     if [ ${try_symbol_font} != 0 ]; then
-        ttfautohint ${clargs} --symbol ${fn_native} ${fn_hinted}
+        ttfautohint ${clargs} --symbol ${fn_nodate} ${fn_hinted}
     fi
 }
 
@@ -95,14 +116,17 @@ post_process_fonts () {
 
     for native in ${ttfonts}; do
         fn_native="tt_native.ttf"
+        fn_nodate="tt_nodate.ttf"
         fn_hinted="tt_hinted.ttf"
         fn_output="tt_output.woff2"
         base64 --decode <<< ${native} > ${fn_native}
-        do_autohint ${fn_native} ${fn_hinted}
+        do_nulldate ${fn_native} ${fn_nodate}
+        do_autohint ${fn_nodate} ${fn_hinted}
         do_compress ${fn_hinted} ${fn_output}
         output=$(base64 --wrap=0 ${fn_output})
         svgfile=${svgfile/${native}/${output}}
         rm ${fn_native}
+        rm ${fn_nodate}
         rm ${fn_hinted}
         rm ${fn_output}
     done
