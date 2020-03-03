@@ -64,12 +64,28 @@ convert_dvi_to_svg() {
     fi
 }
 
-do_nulldate () {
+do_autohint () {
     fn_native=${1}
+    fn_hinted=${2}
+
+    clargs="--no-info"
+
+    set +e
+    ttfautohint ${clargs} ${fn_native} ${fn_hinted} 2> /dev/null
+    try_symbol_font=$?
+    set -e
+
+    if [ ${try_symbol_font} != 0 ]; then
+        ttfautohint ${clargs} --symbol ${fn_native} ${fn_hinted}
+    fi
+}
+
+do_nulldate () {
+    fn_hinted=${1}
     fn_nodate=${2}
 
     epoch_date="Thu Jan 01 00:00:00 1970"
-    nodate_xml=$(ttx -q -e -x FFTM --newline=LF -o - "${fn_native}")
+    nodate_xml=$(ttx -q -e -x FFTM --newline=LF -o - "${fn_hinted}")
 
     pattern="<created value=\"(.+?)\"/>"
     matched=$(grep -m1 -oP "${pattern}" <<< "${nodate_xml}")
@@ -85,27 +101,11 @@ do_nulldate () {
     rm ${fn_temp}
 }
 
-do_autohint () {
-    fn_nodate=${1}
-    fn_hinted=${2}
-
-    clargs="--no-info"
-
-    set +e
-    ttfautohint ${clargs} ${fn_nodate} ${fn_hinted} 2> /dev/null
-    try_symbol_font=$?
-    set -e
-
-    if [ ${try_symbol_font} != 0 ]; then
-        ttfautohint ${clargs} --symbol ${fn_nodate} ${fn_hinted}
-    fi
-}
-
 do_compress () {
-    fn_hinted=${1}
+    fn_nodate=${1}
     fn_output=${2}
 
-    "${basedir}/fontpp" ${fn_hinted} ${fn_output}
+    "${basedir}/fontpp" ${fn_nodate} ${fn_output}
 }
 
 post_process_fonts () {
@@ -116,18 +116,18 @@ post_process_fonts () {
 
     for native in ${ttfonts}; do
         fn_native="tt_native.ttf"
-        fn_nodate="tt_nodate.ttf"
         fn_hinted="tt_hinted.ttf"
+        fn_nodate="tt_nodate.ttf"
         fn_output="tt_output.woff2"
         base64 --decode <<< ${native} > ${fn_native}
-        do_nulldate ${fn_native} ${fn_nodate}
-        do_autohint ${fn_nodate} ${fn_hinted}
-        do_compress ${fn_hinted} ${fn_output}
+        do_autohint ${fn_native} ${fn_hinted}
+        do_nulldate ${fn_hinted} ${fn_nodate}
+        do_compress ${fn_nodate} ${fn_output}
         output=$(base64 --wrap=0 ${fn_output})
         svgfile=${svgfile/${native}/${output}}
         rm ${fn_native}
-        rm ${fn_nodate}
         rm ${fn_hinted}
+        rm ${fn_nodate}
         rm ${fn_output}
     done
 
