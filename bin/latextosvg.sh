@@ -84,22 +84,20 @@ do_nulldate () {
     fn_hinted=${1}
     fn_nodate=${2}
 
-    epoch_date="Thu Jan 01 00:00:00 1970"
-    nodate_xml=$(ttx -q -e -x FFTM --newline=LF -o - "${fn_hinted}")
+    start="<head>"
+    end="<\/head>"
+    pattern="<(created|modified) value=\"(.+?)\"\/>"
+    replace="<\1 value=\"Thu Jan 01 00:00:00 1970\"\/>"
+    ex_head="/${start}/,/${end}/ s/${pattern}/${replace}/"
 
-    pattern="<created value=\"(.+?)\"/>"
-    matched=$(grep -m1 -oP "${pattern}" <<< "${nodate_xml}")
-    nodate_xml=${nodate_xml/${matched}/"<created value=\"${epoch_date}\"/>"}
-
-    pattern="<modified value=\"(.+?)\"/>"
-    matched=$(grep -m1 -oP "${pattern}" <<< "${nodate_xml}")
-    nodate_xml=${nodate_xml/${matched}/"<modified value=\"${epoch_date}\"/>"}
-
-    start="<namerecord(.*?)>"
-    end="<\/namerecord>"
+    start="<name>"
+    end="<\/name>"
     pattern="FontForge 2.0 : (.*?) : [0-9]{1,2}-[0-9]{1,2}-[0-9]{4}"
     replace="FontForge 2.0 : \1 : 1-1-1970"
-    nodate_xml=$(sed -E "/${start}/,/${end}/ s/${pattern}/${replace}/" <<< "${nodate_xml}")
+    ex_name="/${start}/,/${end}/ s/${pattern}/${replace}/"
+
+    nodate_xml=$(ttx -q -e -x FFTM --newline=LF -o - "${fn_hinted}")
+    nodate_xml=$(sed -E -e "${ex_head}" -e "${ex_name}" <<< "${nodate_xml}")
 
     fn_temp=nodate.xml
     echo "${nodate_xml}" > ${fn_temp}
