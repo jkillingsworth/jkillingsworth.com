@@ -95,6 +95,12 @@ do_nulldate () {
     matched=$(grep -m1 -oP "${pattern}" <<< "${nodate_xml}")
     nodate_xml=${nodate_xml/${matched}/"<modified value=\"${epoch_date}\"/>"}
 
+    start="<namerecord(.*?)>"
+    end="<\/namerecord>"
+    pattern="FontForge 2.0 : (.*?) : [0-9]{1,2}-[0-9]{1,2}-[0-9]{4}"
+    replace="FontForge 2.0 : \1 : 1-1-1970"
+    nodate_xml=$(sed -E "/${start}/,/${end}/ s/${pattern}/${replace}/" <<< "${nodate_xml}")
+
     fn_temp=nodate.xml
     echo "${nodate_xml}" > ${fn_temp}
     ttx -q -b --no-recalc-timestamp -o ${fn_nodate} ${fn_temp}
