@@ -96,13 +96,11 @@ do_nulldate () {
     replace="FontForge 2.0 : \1 : 1-1-1970"
     ex_name="/${start}/,/${end}/ s/${pattern}/${replace}/"
 
-    nodate_xml=$(ttx -q -e -x FFTM --newline=LF -o - "${fn_hinted}")
-    nodate_xml=$(sed -E -e "${ex_head}" -e "${ex_name}" <<< "${nodate_xml}")
-
-    fn_temp=nodate.xml
-    echo "${nodate_xml}" > ${fn_temp}
-    ttx -q -b --no-recalc-timestamp -o ${fn_nodate} ${fn_temp}
-    rm ${fn_temp}
+    fn_original="ttx-original.xml"
+    fn_modified="ttx-modified.xml"
+    ttx -q -e -x FFTM --newline=LF -o "${fn_original}" "${fn_hinted}"
+    sed -E -e "${ex_head}" -e "${ex_name}" "${fn_original}" > "${fn_modified}"
+    ttx -q -b --no-recalc-timestamp -o ${fn_nodate} ${fn_modified}
 }
 
 do_compress () {
