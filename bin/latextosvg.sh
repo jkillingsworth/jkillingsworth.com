@@ -132,11 +132,11 @@ post_process_fonts()
     ttfonts=(${ttfonts})
 
     for i in ${!ttfonts[@]}; do
-        printf -v prefix "${jobname}-%02i" ${i}
-        fn_native="${prefix}-tt_native.ttf"
-        fn_hinted="${prefix}-tt_hinted.ttf"
-        fn_nodate="${prefix}-tt_nodate.ttf"
-        fn_output="${prefix}-tt_output.woff2"
+        printf -v prefix "ttfont-%02i" ${i}
+        fn_native="${prefix}-native.ttf"
+        fn_hinted="${prefix}-hinted.ttf"
+        fn_nodate="${prefix}-nodate.ttf"
+        fn_output="${prefix}-output.woff2"
         native="${ttfonts[${i}]}"
         base64 --decode <<< ${native} > ${fn_native}
         do_autohint ${fn_native} ${fn_hinted}
