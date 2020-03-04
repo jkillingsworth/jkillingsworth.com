@@ -102,9 +102,9 @@ do_nulldate()
 
     fn_original="${prefix}-ttx-original.xml"
     fn_modified="${prefix}-ttx-modified.xml"
-    ttx -q -e -x FFTM --newline=LF -o ${fn_original} ${fn_hinted}
+    ttx -qei -x FFTM --newline=LF -o ${fn_original} ${fn_hinted}
     sed -E -e "${ex_head}" -e "${ex_name}" ${fn_original} > ${fn_modified}
-    ttx -q -b --no-recalc-timestamp -o ${fn_nodate} ${fn_modified}
+    ttx -qb --no-recalc-timestamp -o ${fn_nodate} ${fn_modified}
 }
 
 do_compress()
