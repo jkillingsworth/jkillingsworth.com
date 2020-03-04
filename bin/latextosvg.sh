@@ -38,6 +38,7 @@ if [ -t -0 ] && [ -z "${1}" ]; then
 fi
 
 basedir=$(realpath "${0}" | xargs -0 dirname)
+tempdir=$(mktemp -d)
 jobname="latextosvg"
 
 convert_tex_to_dvi()
@@ -152,8 +153,6 @@ post_process_fonts()
     case "$(uname -s)" in CYGWIN*|MSYS*|MINGW* ) conversion=unix2dos ;; esac
     echo "${svgfile}" | ${conversion} > "${jobname}.svg"
 }
-
-tempdir=$(mktemp -d)
 
 cat "${1:--}" > "${tempdir}/${jobname}.tex"
 
