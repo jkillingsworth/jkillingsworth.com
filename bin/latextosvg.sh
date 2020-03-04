@@ -96,8 +96,8 @@ do_nulldate () {
     replace="FontForge 2.0 : \1 : 1-1-1970"
     ex_name="/${start}/,/${end}/ s/${pattern}/${replace}/"
 
-    fn_original="ttx-original.xml"
-    fn_modified="ttx-modified.xml"
+    fn_original="${prefix}-ttx-original.xml"
+    fn_modified="${prefix}-ttx-modified.xml"
     ttx -q -e -x FFTM --newline=LF -o "${fn_original}" "${fn_hinted}"
     sed -E -e "${ex_head}" -e "${ex_name}" "${fn_original}" > "${fn_modified}"
     ttx -q -b --no-recalc-timestamp -o ${fn_nodate} ${fn_modified}
@@ -115,22 +115,21 @@ post_process_fonts () {
     pattern="(?<=src:url\(data:application/x-font-ttf;base64,)(.+?)(?=\) format\('truetype'\);)"
     svgfile=$(< ${jobname}.svg)
     ttfonts=$(grep -oP "${pattern}" <<< "${svgfile}")
+    ttfonts=(${ttfonts})
 
-    for native in ${ttfonts}; do
-        fn_native="tt_native.ttf"
-        fn_hinted="tt_hinted.ttf"
-        fn_nodate="tt_nodate.ttf"
-        fn_output="tt_output.woff2"
+    for i in ${!ttfonts[@]}; do
+        printf -v prefix "${jobname}-%02i" ${i}
+        fn_native="${prefix}-tt_native.ttf"
+        fn_hinted="${prefix}-tt_hinted.ttf"
+        fn_nodate="${prefix}-tt_nodate.ttf"
+        fn_output="${prefix}-tt_output.woff2"
+        native="${ttfonts[${i}]}"
         base64 --decode <<< ${native} > ${fn_native}
         do_autohint ${fn_native} ${fn_hinted}
         do_nulldate ${fn_hinted} ${fn_nodate}
         do_compress ${fn_nodate} ${fn_output}
         output=$(base64 --wrap=0 ${fn_output})
         svgfile=${svgfile/${native}/${output}}
-        rm ${fn_native}
-        rm ${fn_hinted}
-        rm ${fn_nodate}
-        rm ${fn_output}
     done
 
     svgfile=${svgfile//"application/x-font-ttf"/"application/x-font-woff2"}
