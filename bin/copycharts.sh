@@ -5,7 +5,8 @@ if [ ! -d _site ]; then
     exit 1
 fi
 
-copychart () {
+copychart()
+{
     postname=${1}
     prefixno=${2}
     filename=${3}

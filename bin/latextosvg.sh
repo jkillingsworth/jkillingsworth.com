@@ -2,7 +2,8 @@
 
 set -e
 
-show_help() {
+show_help()
+{
     echo "Usage: $(basename ${0}) [OPTION]... [TEXFILE [SVGFILE]]"
 }
 
@@ -39,8 +40,8 @@ fi
 basedir=$(realpath "${0}" | xargs -0 dirname)
 jobname="latextosvg"
 
-convert_tex_to_dvi() {
-
+convert_tex_to_dvi()
+{
     set +e
     clargs="--halt-on-error --interaction=nonstopmode"
     output=$(latex ${clargs} --output-dir="$(pwd)" "${jobname}.tex")
@@ -53,8 +54,8 @@ convert_tex_to_dvi() {
     fi
 }
 
-convert_dvi_to_svg() {
-
+convert_dvi_to_svg()
+{
     clargs="${1} --exact --zoom=1.333333 --precision=6 --verbosity=3"
     output=$(dvisvgm ${clargs} "${jobname}.dvi" 2>&1)
 
@@ -64,7 +65,8 @@ convert_dvi_to_svg() {
     fi
 }
 
-do_autohint () {
+do_autohint()
+{
     fn_native=${1}
     fn_hinted=${2}
 
@@ -80,7 +82,8 @@ do_autohint () {
     fi
 }
 
-do_nulldate () {
+do_nulldate()
+{
     fn_hinted=${1}
     fn_nodate=${2}
 
@@ -103,15 +106,16 @@ do_nulldate () {
     ttx -q -b --no-recalc-timestamp -o ${fn_nodate} ${fn_modified}
 }
 
-do_compress () {
+do_compress()
+{
     fn_nodate=${1}
     fn_output=${2}
 
     "${basedir}/fontpp" ${fn_nodate} ${fn_output}
 }
 
-post_process_fonts () {
-
+post_process_fonts()
+{
     upper_pattern="^(.|\n)+?(<\!\[CDATA\[)"
     inner_pattern="(?<=<\!\[CDATA\[)(.|\n)+?(?=]]>)"
     lower_pattern="(\n]]>)(.|\n)+?$"
