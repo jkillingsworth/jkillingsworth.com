@@ -68,25 +68,25 @@ convert_dvi_to_svg()
 
 do_autohint()
 {
-    fn_native=${1}
-    fn_hinted=${2}
+    fn_previous=${1}
+    fn_autohint=${2}
 
     clargs="--no-info"
 
     set +e
-    ttfautohint ${clargs} ${fn_native} ${fn_hinted} 2> /dev/null
+    ttfautohint ${clargs} ${fn_previous} ${fn_autohint} 2> /dev/null
     try_symbol_font=$?
     set -e
 
     if [ ${try_symbol_font} != 0 ]; then
-        ttfautohint ${clargs} --symbol ${fn_native} ${fn_hinted}
+        ttfautohint ${clargs} --symbol ${fn_previous} ${fn_autohint}
     fi
 }
 
 do_nulldate()
 {
-    fn_hinted=${1}
-    fn_nodate=${2}
+    fn_previous=${1}
+    fn_nulldate=${2}
 
     start="<head>"
     end="<\/head>"
@@ -100,19 +100,55 @@ do_nulldate()
     replace="FontForge 2.0 : \1 : 1-1-1970"
     ex_name="/${start}/,/${end}/ s/${pattern}/${replace}/"
 
-    fn_original="${prefix}-ttx-original.xml"
-    fn_modified="${prefix}-ttx-modified.xml"
-    ttx -qei -x FFTM --newline=LF -o ${fn_original} ${fn_hinted}
-    sed -E -e "${ex_head}" -e "${ex_name}" ${fn_original} > ${fn_modified}
-    ttx -qb --no-recalc-timestamp -o ${fn_nodate} ${fn_modified}
+    fn_ttx_begin="${prefix}-ttx-begin.xml"
+    fn_ttx_final="${prefix}-ttx-final.xml"
+    ttx -qei -x FFTM --newline=LF -o ${fn_ttx_begin} ${fn_previous}
+    sed -E -e "${ex_head}" -e "${ex_name}" ${fn_ttx_begin} > ${fn_ttx_final}
+    ttx -qb --no-recalc-timestamp -o ${fn_nulldate} ${fn_ttx_final}
 }
 
 do_compress()
 {
-    fn_nodate=${1}
-    fn_output=${2}
+    fn_previous=${1}
+    fn_compress=${2}
 
-    "${basedir}"/fontpp ${fn_nodate} ${fn_output}
+    "${basedir}"/fontpp ${fn_previous} ${fn_compress}
+}
+
+ttfont_set_filenames()
+{
+    i=${1}
+
+    printf -v prefix "ttfont-%02i" ${i}
+    fn_original="${prefix}-original.txt"
+    fn_decoding="${prefix}-decoding.ttf"
+    fn_autohint="${prefix}-autohint.ttf"
+    fn_nulldate="${prefix}-nulldate.ttf"
+    fn_compress="${prefix}-compress.woff2"
+    fn_encoding="${prefix}-encoding.txt"
+}
+
+ttfont_process_fork()
+{
+    i=${1}
+    ttfont_set_filenames ${i}
+
+    echo "${ttfonts[${i}]}" > ${fn_original}
+    base64 --decode ${fn_original} > ${fn_decoding}
+    do_autohint ${fn_decoding} ${fn_autohint}
+    do_nulldate ${fn_autohint} ${fn_nulldate}
+    do_compress ${fn_nulldate} ${fn_compress}
+    base64 --wrap=0 ${fn_compress} > ${fn_encoding}
+}
+
+ttfont_process_join()
+{
+    i=${1}
+    ttfont_set_filenames ${i}
+
+    original=$(< ${fn_original})
+    encoding=$(< ${fn_encoding})
+    svgfile=${svgfile/${original}/${encoding}}
 }
 
 post_process_fonts()
@@ -131,43 +167,14 @@ post_process_fonts()
     ttfonts=$(grep -oP "${pattern}" <<< "${svgfile}")
     ttfonts=(${ttfonts})
 
-    process_ttfont_fork()
-    {
-        i=${1}
-
-        printf -v prefix "ttfont-%02i" ${i}
-        fn_native="${prefix}-native.ttf"
-        fn_hinted="${prefix}-hinted.ttf"
-        fn_nodate="${prefix}-nodate.ttf"
-        fn_output="${prefix}-output.woff2"
-        fn_encode="${prefix}-encode.txt"
-        native="${ttfonts[${i}]}"
-        base64 --decode <<< ${native} > ${fn_native}
-        do_autohint ${fn_native} ${fn_hinted}
-        do_nulldate ${fn_hinted} ${fn_nodate}
-        do_compress ${fn_nodate} ${fn_output}
-        base64 --wrap=0 ${fn_output} > ${fn_encode}
-    }
-
-    process_ttfont_join()
-    {
-        i=${1}
-
-        printf -v prefix "ttfont-%02i" ${i}
-        native="${ttfonts[${i}]}"
-        fn_encode="${prefix}-encode.txt"
-        output=$(< ${fn_encode})
-        svgfile=${svgfile/${native}/${output}}
-    }
-
     for i in ${!ttfonts[@]}; do
-        process_ttfont_fork ${i} &
+        ttfont_process_fork ${i} &
     done
 
     wait
 
     for i in ${!ttfonts[@]}; do
-        process_ttfont_join ${i}
+        ttfont_process_join ${i}
     done
 
     svgfile=${svgfile//"application/x-font-ttf"/"application/x-font-woff2"}
