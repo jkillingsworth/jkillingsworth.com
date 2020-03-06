@@ -131,19 +131,43 @@ post_process_fonts()
     ttfonts=$(grep -oP "${pattern}" <<< "${svgfile}")
     ttfonts=(${ttfonts})
 
-    for i in ${!ttfonts[@]}; do
+    process_ttfont_fork()
+    {
+        i=${1}
+
         printf -v prefix "ttfont-%02i" ${i}
         fn_native="${prefix}-native.ttf"
         fn_hinted="${prefix}-hinted.ttf"
         fn_nodate="${prefix}-nodate.ttf"
         fn_output="${prefix}-output.woff2"
+        fn_encode="${prefix}-encode.txt"
         native="${ttfonts[${i}]}"
         base64 --decode <<< ${native} > ${fn_native}
         do_autohint ${fn_native} ${fn_hinted}
         do_nulldate ${fn_hinted} ${fn_nodate}
         do_compress ${fn_nodate} ${fn_output}
-        output=$(base64 --wrap=0 ${fn_output})
+        base64 --wrap=0 ${fn_output} > ${fn_encode}
+    }
+
+    process_ttfont_join()
+    {
+        i=${1}
+
+        printf -v prefix "ttfont-%02i" ${i}
+        native="${ttfonts[${i}]}"
+        fn_encode="${prefix}-encode.txt"
+        output=$(< ${fn_encode})
         svgfile=${svgfile/${native}/${output}}
+    }
+
+    for i in ${!ttfonts[@]}; do
+        process_ttfont_fork ${i} &
+    done
+
+    wait
+
+    for i in ${!ttfonts[@]}; do
+        process_ttfont_join ${i}
     done
 
     svgfile=${svgfile//"application/x-font-ttf"/"application/x-font-woff2"}
