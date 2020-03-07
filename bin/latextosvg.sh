@@ -72,11 +72,11 @@ do_nulldate()
     replace="FontForge 2.0 : \1 : 1-1-1970"
     ex_name="/${start}/,/${end}/ s/${pattern}/${replace}/"
 
-    fn_ttx_begin="${prefix}-ttx-begin.xml"
-    fn_ttx_final="${prefix}-ttx-final.xml"
-    ttx -qei -x FFTM --newline=LF -o ${fn_ttx_begin} ${fn_previous}
-    sed -E -e "${ex_head}" -e "${ex_name}" ${fn_ttx_begin} > ${fn_ttx_final}
-    ttx -qb --no-recalc-timestamp -o ${fn_nulldate} ${fn_ttx_final}
+    fn_begin="${prefix}-ttx-begin.xml"
+    fn_final="${prefix}-ttx-final.xml"
+    ttx -qei -x FFTM --newline=LF -o ${fn_begin} ${fn_previous}
+    sed -E "${ex_head};${ex_name}" ${fn_begin} > ${fn_final}
+    ttx -qb --no-recalc-timestamp -o ${fn_nulldate} ${fn_final}
 }
 
 do_compress()
@@ -165,7 +165,7 @@ do_post_processing()
     replace="format\('woff2'\)"
     ex_format="s/${pattern}/${replace}/"
 
-    svgfile=$(sed -E -e "${ex_urltag}" -e "${ex_medium}" -e "${ex_format}" <<< ${svgfile})
+    svgfile=$(sed -E "${ex_urltag};${ex_medium};${ex_format}" <<< ${svgfile})
 
     conversion=cat
     case "$(uname -s)" in CYGWIN*|MSYS*|MINGW* ) conversion=unix2dos ;; esac
