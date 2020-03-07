@@ -127,7 +127,7 @@ ttfont_process_join()
 
 #--------------------------------------------------------------------------------------------------
 
-post_process_fonts()
+do_post_processing()
 {
     upper_pattern="^(.|\n)+?(<\!\[CDATA\[)"
     inner_pattern="(?<=<\!\[CDATA\[)(.|\n)+?(?=]]>)"
@@ -153,6 +153,10 @@ post_process_fonts()
         ttfont_process_join ${i}
     done
 
+    pattern="<!-- (.*?) -->"
+    replace="<!-- jkillingsworth.com -->"
+    ex_urltag="2 s/${pattern}/${replace}/"
+
     pattern="application\/x-font-ttf"
     replace="application\/x-font-woff2"
     ex_medium="s/${pattern}/${replace}/"
@@ -161,7 +165,7 @@ post_process_fonts()
     replace="format\('woff2'\)"
     ex_format="s/${pattern}/${replace}/"
 
-    svgfile=$(sed -E -e "${ex_medium}" -e "${ex_format}" <<< ${svgfile})
+    svgfile=$(sed -E -e "${ex_urltag}" -e "${ex_medium}" -e "${ex_format}" <<< ${svgfile})
 
     conversion=cat
     case "$(uname -s)" in CYGWIN*|MSYS*|MINGW* ) conversion=unix2dos ;; esac
@@ -218,7 +222,7 @@ case "${option_fonts}" in
     ttfonts )
         convert_tex_to_dvi
         convert_dvi_to_svg "--font-format=ttf --bbox=0.5625bp"
-        post_process_fonts
+        do_post_processing
         ;;
     * )
         echo -e "$(basename ${0}): invalid font option -- ${option_fonts}" 1>&2
