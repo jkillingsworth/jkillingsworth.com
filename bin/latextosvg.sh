@@ -9,40 +9,6 @@ show_help()
     echo "Usage: $(basename ${0}) [OPTION]... [TEXFILE [SVGFILE]]"
 }
 
-option_fonts=nofonts
-
-options=$(getopt -n "${0}" -o f: -l fonts:,help -- "${@}")
-
-eval set -- "${options}"
-
-while true; do case "${1}" in
-    -f | --fonts )
-        option_fonts="${2}"
-        shift 2
-        ;;
-    --help )
-        show_help
-        exit 0
-        ;;
-    -- )
-        shift 1
-        break
-        ;;
-    * )
-        echo -e "$(basename ${0}): unhandled case -- ${1}\a" 1>&2
-        exit 1
-        ;;
-esac done
-
-if [ -t -0 ] && [ -z "${1}" ]; then
-    show_help
-    exit 1
-fi
-
-basedir=$(realpath "${0}" | xargs -0 dirname)
-tempdir=$(mktemp -d)
-jobname="latextosvg"
-
 #--------------------------------------------------------------------------------------------------
 
 convert_tex_to_dvi()
@@ -196,6 +162,42 @@ post_process_fonts()
 }
 
 #--------------------------------------------------------------------------------------------------
+
+option_fonts=nofonts
+
+options=$(getopt -n "${0}" -o f: -l fonts:,help -- "${@}")
+
+eval set -- "${options}"
+
+while true; do case "${1}" in
+    -f | --fonts )
+        option_fonts="${2}"
+        shift 2
+        ;;
+    --help )
+        show_help
+        exit 0
+        ;;
+    -- )
+        shift 1
+        break
+        ;;
+    * )
+        echo -e "$(basename ${0}): unhandled case -- ${1}\a" 1>&2
+        exit 1
+        ;;
+esac done
+
+if [ -t -0 ] && [ -z "${1}" ]; then
+    show_help
+    exit 1
+fi
+
+#--------------------------------------------------------------------------------------------------
+
+basedir=$(realpath "${0}" | xargs -0 dirname)
+tempdir=$(mktemp -d)
+jobname="latextosvg"
 
 cat "${1:--}" > "${tempdir}/${jobname}.tex"
 
