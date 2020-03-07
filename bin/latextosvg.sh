@@ -155,7 +155,7 @@ do_post_processing()
 
     pattern="<!-- (.*?) -->"
     replace="<!-- jkillingsworth.com -->"
-    ex_urltag="2 s/${pattern}/${replace}/"
+    ex_domain="2 s/${pattern}/${replace}/"
 
     pattern="application\/x-font-ttf"
     replace="application\/x-font-woff2"
@@ -165,7 +165,7 @@ do_post_processing()
     replace="format\('woff2'\)"
     ex_format="s/${pattern}/${replace}/"
 
-    svgfile=$(sed -E "${ex_urltag};${ex_medium};${ex_format}" <<< ${svgfile})
+    svgfile=$(sed -E "${ex_domain};${ex_medium};${ex_format}" <<< ${svgfile})
 
     conversion=cat
     case "$(uname -s)" in CYGWIN*|MSYS*|MINGW* ) conversion=unix2dos ;; esac
