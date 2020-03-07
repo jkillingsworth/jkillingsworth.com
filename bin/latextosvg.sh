@@ -2,6 +2,8 @@
 
 set -e
 
+#--------------------------------------------------------------------------------------------------
+
 show_help()
 {
     echo "Usage: $(basename ${0}) [OPTION]... [TEXFILE [SVGFILE]]"
@@ -41,6 +43,8 @@ basedir=$(realpath "${0}" | xargs -0 dirname)
 tempdir=$(mktemp -d)
 jobname="latextosvg"
 
+#--------------------------------------------------------------------------------------------------
+
 convert_tex_to_dvi()
 {
     set +e
@@ -65,6 +69,8 @@ convert_dvi_to_svg()
         exit 1
     fi
 }
+
+#--------------------------------------------------------------------------------------------------
 
 do_autohint()
 {
@@ -115,6 +121,8 @@ do_compress()
     "${basedir}"/fontpp ${fn_previous} ${fn_compress}
 }
 
+#--------------------------------------------------------------------------------------------------
+
 ttfont_set_filenames()
 {
     i=${1}
@@ -151,6 +159,8 @@ ttfont_process_join()
     svgfile=${svgfile/${original}/${encoding}}
 }
 
+#--------------------------------------------------------------------------------------------------
+
 post_process_fonts()
 {
     upper_pattern="^(.|\n)+?(<\!\[CDATA\[)"
@@ -184,6 +194,8 @@ post_process_fonts()
     case "$(uname -s)" in CYGWIN*|MSYS*|MINGW* ) conversion=unix2dos ;; esac
     echo "${svgfile}" | ${conversion} > "${jobname}.svg"
 }
+
+#--------------------------------------------------------------------------------------------------
 
 cat "${1:--}" > "${tempdir}/${jobname}.tex"
 
