@@ -153,8 +153,15 @@ post_process_fonts()
         ttfont_process_join ${i}
     done
 
-    svgfile=${svgfile//"application/x-font-ttf"/"application/x-font-woff2"}
-    svgfile=${svgfile//"format('truetype')"/"format('woff2')"}
+    pattern="application\/x-font-ttf"
+    replace="application\/x-font-woff2"
+    ex_medium="s/${pattern}/${replace}/"
+
+    pattern="format\('truetype'\)"
+    replace="format\('woff2'\)"
+    ex_format="s/${pattern}/${replace}/"
+
+    svgfile=$(sed -E -e "${ex_medium}" -e "${ex_format}" <<< ${svgfile})
 
     conversion=cat
     case "$(uname -s)" in CYGWIN*|MSYS*|MINGW* ) conversion=unix2dos ;; esac
