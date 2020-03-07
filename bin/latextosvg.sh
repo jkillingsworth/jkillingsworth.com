@@ -84,7 +84,7 @@ do_compress()
     fn_previous=${1}
     fn_compress=${2}
 
-    "${basedir}"/fontpp ${fn_previous} ${fn_compress}
+    "${basedir}"/bin/fontpp ${fn_previous} ${fn_compress}
 }
 
 #--------------------------------------------------------------------------------------------------
@@ -206,7 +206,7 @@ fi
 
 #--------------------------------------------------------------------------------------------------
 
-basedir=$(realpath "${0}" | xargs -0 dirname)
+basedir=$(realpath "${0}" | xargs -0 dirname | xargs -0 dirname)
 tempdir=$(mktemp -d)
 jobname="latextosvg"
 
