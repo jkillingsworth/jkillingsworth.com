@@ -41,10 +41,13 @@ $(OBJ):
 $(BIN):
 	mkdir $(BIN)
 
+$(OBJ)/errio.o: errio.c errio.h
+	$(BUILDOBJ)
+
 $(OBJ)/inout.o: inout.c inout.h types.h
 	$(BUILDOBJ)
 
-$(OBJ)/woff2.o: woff2.cpp types.h woff2.h
+$(OBJ)/woff2.o: woff2.cpp errio.h types.h woff2.h
 	$(BUILDOBJ)
 
 $(OBJ)/main.o: main.c inout.h types.h woff2.h
