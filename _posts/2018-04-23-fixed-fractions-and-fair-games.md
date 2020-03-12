@@ -183,7 +183,7 @@ Like the previous example, we can define a reward function to determine the payo
 {% latex fig-13 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
-    \usepackage{inconsolata}
+    \usepackage[scaled=0.75]{roboto-mono}
     \begin{document}
     \begin{displaymath}
     R(X) =

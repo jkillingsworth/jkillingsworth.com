@@ -147,13 +147,14 @@ As with the [previous post]({% post_url 2018-04-23-fixed-fractions-and-fair-game
 {% latex fig-10 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
+    \usepackage[scaled=0.75]{roboto-mono}
     \begin{document}
     \begin{displaymath}
     R(X) =
     \begin{dcases}
-    1 + b & \quad \text{if } X = H
+    1 + b & \quad \text{if } X = \texttt{H}
     \\
-    1 - b & \quad \text{if } X = T
+    1 - b & \quad \text{if } X = \texttt{T}
     \end{dcases}
     \end{displaymath}
     \end{document}
@@ -166,10 +167,11 @@ How can the reward function for the fixed fraction betting strategy be modified 
 {% latex fig-11 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
+    \usepackage[scaled=0.75]{roboto-mono}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \log{R(H)} & = -{\log{R(T)}}
+    \log{R(\texttt{H})} & = -{\log{R(\texttt{T})}}
     \\[1em]
                & = -{\log{(1 - b)}}
     \\[1em]
@@ -184,13 +186,14 @@ Taking the exponent of both sides, we can get the reward function for the winnin
 {% latex fig-12 %}
     \documentclass[varwidth]{standalone}
     \usepackage{mathtools}
+    \usepackage[scaled=0.75]{roboto-mono}
     \begin{document}
     \begin{displaymath}
     R(X) =
     \begin{dcases}
-    (1 - b)^{-1}     & \quad \text{if } X = H
+    (1 - b)^{-1}     & \quad \text{if } X = \texttt{H}
     \\
-    \phantom{(}1 - b & \quad \text{if } X = T
+    \phantom{(}1 - b & \quad \text{if } X = \texttt{T}
     \end{dcases}
     \end{displaymath}
     \end{document}
