@@ -1,9 +1,8 @@
 #!/bin/bash
 
-if [ ! -d _site ]; then
-    echo "You need to run this from the project root directory."
-    exit 1
-fi
+set -e
+
+#--------------------------------------------------------------------------------------------------
 
 copychart()
 {
@@ -20,6 +19,12 @@ copychart()
         mkdir -p ${dstpath} && cp ${srcfile} ${dstfile}
     fi
 }
+
+#--------------------------------------------------------------------------------------------------
+
+basedir=$(realpath "${0}" | xargs -0 dirname | xargs -0 dirname)
+
+cd "${basedir}"
 
 post="2018-04-23-fixed-fractions-and-fair-games"
 

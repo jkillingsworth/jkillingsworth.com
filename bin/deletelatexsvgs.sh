@@ -1,8 +1,11 @@
 #!/bin/bash
 
-if [ ! -d _site ]; then
-    echo "You need to run this from the project root directory."
-    exit 1
-fi
+set -e
+
+#--------------------------------------------------------------------------------------------------
+
+basedir=$(realpath "${0}" | xargs -0 dirname | xargs -0 dirname)
+
+cd "${basedir}"
 
 find ./_assets -type f -name fig-*-latex-*.svg -delete
