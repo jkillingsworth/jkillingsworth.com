@@ -22,7 +22,7 @@ copychart()
 
 #--------------------------------------------------------------------------------------------------
 
-basedir=$(realpath "${0}" | xargs -0 dirname | xargs -0 dirname)
+basedir=$(dirname "${0}" | xargs -I% realpath %/..)
 
 cd "${basedir}"
 
