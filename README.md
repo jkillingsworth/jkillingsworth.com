@@ -2,6 +2,14 @@
 
 This is the source repository for my personal website.
 
+## Repository
+
+You can clone the repository with the `--shallow-exclude` option to exclude the `gh-pages` branch:
+
+    git clone https://github.com/jkillingsworth/jkillingsworth.com.git --shallow-exclude=gh-pages
+
+The `gh-pages` branch is where the rendered files for the live website are stored.
+
 ## Toolchain
 
 The build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) and use the [Jekyll](https://jekyllrb.com/) static site generator. Optionally, you may need to install some additional tools if you want to recreate the [LaTeX](https://www.latex-project.org/) output or compile the source code used to generate the charts and data that appear in some of the blog posts.
