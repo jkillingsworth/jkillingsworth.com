@@ -10,7 +10,7 @@ copychart()
     prefixno=${2}
     filename=${3}
 
-    srcpath=_src/${postname}/build
+    srcpath=src/${postname}/build
     dstpath=_assets/${postname}
     srcfile=${srcpath}/${filename}
     dstfile=${dstpath}/${prefixno}-${filename}
