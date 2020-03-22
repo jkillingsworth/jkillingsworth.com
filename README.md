@@ -2,19 +2,9 @@
 
 This is the source repository for my personal website.
 
-## Repository
-
-You can clone the repository with the `--shallow-exclude` option to exclude the `gh-pages` branch:
-
-    git clone https://github.com/jkillingsworth/jkillingsworth.com.git --shallow-exclude=gh-pages
-
-The `gh-pages` branch is where the rendered files for the live website are stored.
-
-## Toolchain
+## Setup
 
 The build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) and use the [Jekyll](https://jekyllrb.com/) static site generator. Several additional packages are also required. The following instructions are designed for installing the required toolchain on a 64-bit Windows system. These tools are available on other platforms as well.
-
-#### Installation
 
 1. Download and run the [MSYS2](https://www.msys2.org/) installer. Follow the installation instructions documented on the website. Make sure you update all the core system packages before proceeding:
 
@@ -36,19 +26,25 @@ The build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) an
 
    Run the above commands from the MSYS2 shell in the `MSYS` environment. After installing the prerequisite packages, switch to running the MSYS2 shell in the `MINGW64` environment from this point forward.
 
-3. Install the Bundler gem using the following command:
+3. Clone the repository using the `--shallow-exclude` option to exclude the `gh-pages` branch:
+
+       git clone https://github.com/jkillingsworth/jkillingsworth.com.git --shallow-exclude=gh-pages
+
+   The `gh-pages` branch is where the rendered files for the live website are stored.
+
+4. Install the Bundler gem using the following command:
 
        gem install bundler
 
-4. Install Jekyll and all dependencies using the following command:
+5. Install Jekyll and all dependencies using the following command:
 
        bundle install
 
-5. Verify the latest version of Jekyll is installed using the following command:
+6. Verify the latest version of Jekyll is installed using the following command:
 
        ./bin/jekyll --version
 
-6. Verify that you can build and host the site on your local machine:
+7. Verify that you can build and host the site on your local machine:
 
        ./bin/jekyll serve
 
@@ -58,13 +54,13 @@ The build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) an
 
    You should now be able to see a local copy of the website in your browser.
 
-7. *Optional.* Install [TeX Live](https://www.tug.org/texlive/) if you want to recreate the LaTeX output. Follow the instructions in the documentation. Make sure your `PATH` environment variable includes the directory containing the `latex` and `dvisvgm` executables. Be aware that your MSYS2 environment may not automatically inherit the directories contained in the Windows `PATH` environment variable. I prefer to launch the MSYS2 shell with the following variable set:
+8. *Optional.* Install [TeX Live](https://www.tug.org/texlive/) if you want to recreate the LaTeX output. Follow the instructions in the documentation. Make sure your `PATH` environment variable includes the directory containing the `latex` and `dvisvgm` executables. Be aware that your MSYS2 environment may not automatically inherit the directories contained in the Windows `PATH` environment variable. I prefer to launch the MSYS2 shell with the following variable set:
 
        MSYS2_PATH_TYPE=inherit
 
    This will cause the `PATH` environment variable in your MSYS2 shell to inherit the directories contained in the Windows `PATH` environment variable. You can [consult the wiki](https://github.com/msys2/msys2/wiki/MSYS2-introduction#path) or inspect the [launcher script](https://github.com/msys2/MSYS2-packages/blob/master/filesystem/msys2_shell.cmd) for more insights.
 
-#### Usage
+## Usage
 
 * Update the bundler gem to the latest version:
 
