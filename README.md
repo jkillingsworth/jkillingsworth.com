@@ -12,11 +12,9 @@ The `gh-pages` branch is where the rendered files for the live website are store
 
 ## Toolchain
 
-The build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) and use the [Jekyll](https://jekyllrb.com/) static site generator. Optionally, you may need to install some additional tools if you want to recreate the [LaTeX](https://www.latex-project.org/) output or compile the source code used to generate the charts and data that appear in some of the blog posts.
+The build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) and use the [Jekyll](https://jekyllrb.com/) static site generator. Several additional packages are also required. The following instructions are designed for installing the required toolchain on a 64-bit Windows system. These tools are available on other platforms as well.
 
 #### Installation
-
-The following instructions are designed for installing the required toolchain on a Windows system. However, all of these tools are all available on most Unix-like platforms as well.
 
 1. Download and run the [MSYS2](https://www.msys2.org/) installer. Follow the installation instructions documented on the website. Make sure you update all the core system packages before proceeding:
 
@@ -26,13 +24,17 @@ The following instructions are designed for installing the required toolchain on
 
 2. Use the package manager to install the prerequisite packages from the MSYS2 command prompt:
 
-       pacman -S make
-       pacman -S mingw-w64-x86_64-toolchain
+       pacman -S base-devel
+       pacman -S git
+       pacman -S mingw-w64-x86_64-gnuplot
+       pacman -S mingw-w64-x86_64-python-fonttools
+       pacman -S mingw-w64-x86_64-python-setuptools
        pacman -S mingw-w64-x86_64-ruby
+       pacman -S mingw-w64-x86_64-toolchain
+       pacman -S mingw-w64-x86_64-ttfautohint
+       pacman -S mingw-w64-x86_64-woff2
 
-   *Note:* The build tools are necessary because some of the Ruby gems installed in the following steps contain native components that are built from source upon installation.
-
-   *Note:* You should run the MSYS2 shell in the `MINGW64` environment from this point forward.
+   Run the above commands from the MSYS2 shell in the `MSYS` environment. After installing the prerequisite packages, switch to running the MSYS2 shell in the `MINGW64` environment from this point forward.
 
 3. Install the Bundler gem using the following command:
 
@@ -56,17 +58,11 @@ The following instructions are designed for installing the required toolchain on
 
    You should now be able to see a local copy of the website in your browser.
 
-7. *Optional.* Install the [Git](https://git-scm.com/) package of you want to use Git from within the MSYS2 environment:
-
-       pacman -S git
-
-8. *Optional.* Install [TeX Live](https://www.tug.org/texlive/) if you want to recreate the LaTeX output. Follow the instructions in the documentation. Make sure your `PATH` environment variable includes the directory containing the `latex` and `dvisvgm` executables. Be aware that your MSYS2 environment may not automatically inherit the directories contained in the Windows `PATH` environment variable. I prefer to launch the MSYS2 shell with the following variable set:
+7. *Optional.* Install [TeX Live](https://www.tug.org/texlive/) if you want to recreate the LaTeX output. Follow the instructions in the documentation. Make sure your `PATH` environment variable includes the directory containing the `latex` and `dvisvgm` executables. Be aware that your MSYS2 environment may not automatically inherit the directories contained in the Windows `PATH` environment variable. I prefer to launch the MSYS2 shell with the following variable set:
 
        MSYS2_PATH_TYPE=inherit
 
    This will cause the `PATH` environment variable in your MSYS2 shell to inherit the directories contained in the Windows `PATH` environment variable. You can [consult the wiki](https://github.com/msys2/msys2/wiki/MSYS2-introduction#path) or inspect the [launcher script](https://github.com/msys2/MSYS2-packages/blob/master/filesystem/msys2_shell.cmd) for more insights.
-
-9. *Optional.* Install [Gnuplot](http://www.gnuplot.info/) if you want to recreate the charts. When running the installer, check the option to add the application directory to your `PATH` environment variable. You will also need a build environment capable of building and running the [F#](https://fsharp.org/) code that generates the data displayed in the charts. You can use [Visual Studio](https://visualstudio.microsoft.com/) for this.
 
 #### Usage
 
