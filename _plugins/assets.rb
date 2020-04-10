@@ -27,19 +27,20 @@ module Jekyll
         end
 
         def generate(site)
-            output_path = File.join("/", STATIC_DIR)
-            path = File.join(ASSETS_DIR, STATIC_DIR)
-            dirs = Pathname(path).each_filename.to_a.count
-            Dir[path + "/**/*"].each do |file|
+            base = File.join(ASSETS_DIR, STATIC_DIR)
+            path = STATIC_DIR
+            dirs = Pathname(base).each_filename.to_a.count
+            Dir[base + "/**/*"].each do |file|
                 next if File.directory? file
                 name = Pathname(file).each_filename.to_a.drop(dirs).join("/")
-                site.static_files << AssetFile.new(site, path, output_path, name)
+                site.static_files << AssetFile.new(site, base, path, name)
             end
             site.posts.docs.each do |post|
-                path = Assets.source_path(post)
-                Dir[path + "/*"].each do |file|
+                base = Assets.source_path(post)
+                path = post.url
+                Dir[base + "/*"].each do |file|
                     name = File.basename(file)
-                    site.static_files << AssetFile.new(site, path, post.url, name)
+                    site.static_files << AssetFile.new(site, base, path, name)
                 end
             end
         end
