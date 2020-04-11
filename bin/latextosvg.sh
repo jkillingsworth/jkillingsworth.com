@@ -154,7 +154,7 @@ do_post_processing()
     done
 
     pattern="<!-- (.*?) -->"
-    replace="<!-- jkillingsworth.com -->"
+    replace="<!-- \1 (modified) -->"
     ex_domain="2 s/${pattern}/${replace}/"
 
     pattern="application\/x-font-ttf"
