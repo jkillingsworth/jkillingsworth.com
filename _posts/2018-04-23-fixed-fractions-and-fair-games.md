@@ -12,9 +12,6 @@ A gambler has a $100 bankroll. He's feeling lucky and he wants to make some bets
 Suppose the gambler wants to place bets on the outcome of a coin toss. Ignoring the small possibility of the coin landing on its edge, there are only two possible outcomes: heads or tails. We can model a repeated coin toss game using the following notation:
 
 {% latex fig-01 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage[scaled=0.75]{roboto-mono}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -38,10 +35,6 @@ Suppose the gambler wants to place bets on the outcome of a coin toss. Ignoring 
 If we assume it's a fair coin, then each of the two outcomes has a 50% probability of occurring for each toss of the coin:
 
 {% latex fig-02 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage[scaled=0.75]{roboto-mono}
-    \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
@@ -65,8 +58,6 @@ The gambler needs to decide how much to bet on each play. If he bets his entire 
 Using the fixed constant bet size strategy, the gambler must choose a specific amount he wants to wager on each play. Suppose the gambler wants to bet $20 on each round. We can model this as 20% of the gambler's initial bankroll:
 
 {% latex fig-03 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     b = 0.2
@@ -77,9 +68,6 @@ Using the fixed constant bet size strategy, the gambler must choose a specific a
 Now let's define a reward function to determine the payoff for each round based on the outcome of the coin toss:
 
 {% latex fig-04 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage[scaled=0.75]{roboto-mono}
     \begin{document}
     \begin{displaymath}
     R(X) =
@@ -95,8 +83,6 @@ Now let's define a reward function to determine the payoff for each round based 
 The gambler gains $20 if the coin lands on heads; he loses $20 if the coin lands on tails. Is this a fair game? The answer might seem obvious, but let's make some empirical observations just to be sure. We can use the reward function above in the following equation to compute the gambler's holdings for a series of coin tosses:
 
 {% latex fig-05 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     V_n = V_0 + \sum_{i = 1}^{n} R(X_i)
@@ -119,8 +105,6 @@ The value appears to have a steady mean of $100, suggesting that this is indeed 
 The median value straddles the breakeven value of $100, lending further evidence that this is in fact a fair game. But can we determine the expected outcome analytically? Consider the arithmetic mean as the number of plays approaches infinity:
 
 {% latex fig-09 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     A = \lim_{n \to \infty} \left[ V_0 + \frac{1}{n} \sum_{i = 1}^{n} R(X_i) \right]
@@ -131,8 +115,6 @@ The median value straddles the breakeven value of $100, lending further evidence
 If we know the probability of each outcome of a coin toss, then we can use the law of large numbers to determine the number of winning games and losing games for a large number of plays. Let's use the following notation:
 
 {% latex fig-10 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -147,8 +129,6 @@ If we know the probability of each outcome of a coin toss, then we can use the l
 Instead of taking the limit as the number of plays approaches infinity, we can compute the arithmetic mean using the number of winning and losing games based on the expected behavior of a coin toss. As demonstrated below, the arithmetic mean is equal to the gambler's initial bankroll; a result that corresponds to the empirical observations derived from the simulations:
 
 {% latex fig-11 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -169,8 +149,6 @@ While this is certainly a fair game, look closely at the result of the repeated 
 Using the fixed fraction bet size strategy, the gambler chooses a fixed percentage of his bankroll to wager on each play. Suppose the gambler wants to bet 20% on each round:
 
 {% latex fig-12 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     b = 0.2
@@ -181,9 +159,6 @@ Using the fixed fraction bet size strategy, the gambler chooses a fixed percenta
 Like the previous example, we can define a reward function to determine the payoff for each round based on the outcome of the coin toss:
 
 {% latex fig-13 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage[scaled=0.75]{roboto-mono}
     \begin{document}
     \begin{displaymath}
     R(X) =
@@ -199,8 +174,6 @@ Like the previous example, we can define a reward function to determine the payo
 In this case, the reward function returns a multiplier that gets applied to the gambler's bankroll after each round. The following shows how to apply the reward function for a series of coin toss games:
 
 {% latex fig-14 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     V_n = V_0 \prod_{i = 1}^{n} R(X_i)
@@ -231,8 +204,6 @@ Unlike the previous example, the median value decays steadily downward, graduall
 So is this a fair game or not? The mean value suggest that it might be, but the median value suggests otherwise. What if we take an analytical approach? Since the fixed fraction betting strategy is multiplicative instead of additive, let's consider the geometric mean instead of the arithmetic mean:
 
 {% latex fig-20 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     G = \lim_{n \to \infty} \left[ V_0 \left( \prod_{i = 1}^{n} R(X_i) \right)^\frac{1}{n} \right]
@@ -243,8 +214,6 @@ So is this a fair game or not? The mean value suggest that it might be, but the 
 Using the law of large numbers, we can apply the expected number of winning and losing games as we did before in the previous example. The following calculation provides an explanation for the median values observed in the simulation results:
 
 {% latex fig-21 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -270,10 +239,6 @@ What exactly does it mean for a gambling game to be a fair game with a breakeven
 Let's suppose the gambler plays two rounds of the coin toss game and always bets on heads. There are four possible outcomes, each with an equal probability of occurring. If the gambler chooses the fixed constant betting strategy, the value of the gambler's stake after each possible outcome is shown below:
 
 {% latex fig-22 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage[scaled=0.75]{roboto-mono}
-    \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
@@ -297,10 +262,6 @@ Let's suppose the gambler plays two rounds of the coin toss game and always bets
 The average value of all possible outcomes in this case is $100, which is the breakeven amount. Also notice that there are an equal number of winning games as there are losing games. Both aspects are indicative of a fair game. If the gambler chooses the fixed fraction betting strategy, the results are a bit different:
 
 {% latex fig-23 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage[scaled=0.75]{roboto-mono}
-    \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}

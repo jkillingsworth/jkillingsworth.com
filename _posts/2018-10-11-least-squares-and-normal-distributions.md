@@ -12,8 +12,6 @@ The method of least squares estimates the coefficients of a model function by mi
 Suppose we have a set of two-dimensional data points that we observed by measuring some kind of phenomenon:
 
 {% latex fig-01 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \{\ (x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)\ \}
@@ -24,8 +22,6 @@ Suppose we have a set of two-dimensional data points that we observed by measuri
 Also suppose that the measuring device is inaccurate. The data we observed contain errors for values on the vertical axis. Despite the errors, we know the correct readings fall somewhere on a line given by the following linear equation:
 
 {% latex fig-02 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \hat{y} = a_0 + a_1 x
@@ -36,8 +32,6 @@ Also suppose that the measuring device is inaccurate. The data we observed conta
 For each data point, we can compute the error as the difference between the observed value and the correct value according to the model function:
 
 {% latex fig-03 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \varepsilon_i = y_i - \hat{y}_i
@@ -48,8 +42,6 @@ For each data point, we can compute the error as the difference between the obse
 The errors can be positive or negative. Taking the square of each error always yields a positive number. We can define the sum of the squared errors like this:
 
 {% latex fig-04 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -66,8 +58,6 @@ The errors can be positive or negative. Taking the square of each error always y
 Since the coefficients are unknown variables, we can treat the sum of the squared errors as a function of the coefficients:
 
 {% latex fig-05 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     S(a_0, a_1) = {\textstyle\sum{(y_i - a_0 - a_1 x_i)^2}}
@@ -78,8 +68,6 @@ Since the coefficients are unknown variables, we can treat the sum of the square
 To estimate the coefficients of the model function using the least squares method, we need to figure out what values for the coefficients give us the smallest value for the sum of the squared errors. We can find the minimum by first taking the partial derivative of the sum of squares function with respect to each of the coefficients, setting the derivative to zero, and then solving for the coefficient. Here are the derivatives with respect to each coefficient:
 
 {% latex fig-06 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -98,8 +86,6 @@ To estimate the coefficients of the model function using the least squares metho
 Setting the derivative with respect to the first coefficient to zero, we get the following result:
 
 {% latex fig-07 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -119,8 +105,6 @@ Setting the derivative with respect to the first coefficient to zero, we get the
 Rearranging the equation and solving for the coefficient:
 
 {% latex fig-08 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     a_0 = \frac{\sum{y_i} - a_1 \sum{x_i}}{n}
@@ -131,8 +115,6 @@ Rearranging the equation and solving for the coefficient:
 Setting the derivative with respect to the second coefficient to zero, we get the following result:
 
 {% latex fig-09 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -152,8 +134,6 @@ Setting the derivative with respect to the second coefficient to zero, we get th
 Rearranging the equation and solving for the coefficient:
 
 {% latex fig-10 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     a_1 = \frac{\sum{x_i y_i} - a_0 \sum{x_i}}{\sum{x_i^2}}
@@ -164,8 +144,6 @@ Rearranging the equation and solving for the coefficient:
 Each one of the coefficients is given in terms of the other. Since there are two equations and two unknowns, you can plug one into the other to derive the final outcome. Another way to do this might be to treat the results as a system of linear equations arranged as follows:
 
 {% latex fig-11 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -184,9 +162,6 @@ Each one of the coefficients is given in terms of the other. Since there are two
 The coefficients can then be found by solving the following matrix equation:
 
 {% latex fig-12 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage{array}
     \setlength{\arraycolsep}{0.5em}
     \begin{document}
     \begin{displaymath}
@@ -224,8 +199,6 @@ This method is perhaps a cleaner approach. It can also work well for model funct
 Now let's assume the errors are normally distributed. That is to say, the observed values are normally distributed around the model. The probability density function for the normal distribution looks like this:
 
 {% latex fig-13 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     f(y \mid \hat{y}, \sigma)
@@ -238,8 +211,6 @@ Now let's assume the errors are normally distributed. That is to say, the observ
 Here we treat our model as the mean. We also consider the standard deviation, depicted by sigma, which measures the spread of the data around the mean. Given our observed data points, we want to figure out what the most likely values are for the mean and standard deviation. For a single data point alone, the likelihood function for a given mean and standard deviation is:
 
 {% latex fig-14 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     L(\hat{y}, \sigma \mid y)
@@ -252,8 +223,6 @@ Here we treat our model as the mean. We also consider the standard deviation, de
 The likelihood is equal to the probability density. For all data points combined, the likelihood function for a given mean and standard deviation is equal to the product of the density at each individual data point:
 
 {% latex fig-15 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     L(\hat{y}, \sigma \mid y_1, y_2, \dots, y_n)
@@ -266,8 +235,6 @@ The likelihood is equal to the probability density. For all data points combined
 At this point, we just need to find the mean and standard deviation values that maximize the likelihood function. Similar to what we did in the previous section, we can find the maximum by taking the partial derivative of the likelihood function with respect to each of the coefficients, setting the derivative to zero, and then solving for the coefficients. This might be easier to do if we first take the natural logarithm of the likelihood function:
 
 {% latex fig-16 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -302,8 +269,6 @@ At this point, we just need to find the mean and standard deviation values that 
 Since we're interested in finding the coefficients of the model function, we can replace the mean parameter with the body of the model function and treat the likelihood function as a function of the coefficients:
 
 {% latex fig-17 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \ln{L(a_0, a_1, \sigma)}
@@ -319,8 +284,6 @@ Since we're interested in finding the coefficients of the model function, we can
 Let's call this the log-likelihood function. Since the natural logarithm function is a monotonically increasing function, we can maximize the log-likelihood function and get the same result we would get if we maximized the original likelihood function. Here are the partial derivatives of the log-likelihood function with respect to each of the coefficients:
 
 {% latex fig-18 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -339,8 +302,6 @@ Let's call this the log-likelihood function. Since the natural logarithm functio
 Setting the derivative with respect to the first coefficient to zero, we get the following result:
 
 {% latex fig-19 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -360,8 +321,6 @@ Setting the derivative with respect to the first coefficient to zero, we get the
 Rearranging the equation and solving for the coefficient:
 
 {% latex fig-20 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     a_0 = \frac{\sum{y_i} - a_1 \sum{x_i}}{n}
@@ -372,8 +331,6 @@ Rearranging the equation and solving for the coefficient:
 Setting the derivative with respect to the second coefficient to zero, we get the following result:
 
 {% latex fig-21 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -393,8 +350,6 @@ Setting the derivative with respect to the second coefficient to zero, we get th
 Rearranging the equation and solving for the coefficient:
 
 {% latex fig-22 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     a_1 = \frac{\sum{x_i y_i} - a_0 \sum{x_i}}{\sum{x_i^2}}
@@ -405,8 +360,6 @@ Rearranging the equation and solving for the coefficient:
 As you can see, we get at the same results we got from using the method of least squares to estimate the coefficients. For completeness, the same procedure can be used to find the standard deviation:
 
 {% latex fig-23 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \frac{\partial \ln{L}}{\partial \sigma}
@@ -421,8 +374,6 @@ As you can see, we get at the same results we got from using the method of least
 Setting the derivative to zero, we get the following result for the standard deviation:
 
 {% latex fig-24 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -442,8 +393,6 @@ Setting the derivative to zero, we get the following result for the standard dev
 Rearranging the equation and solving for sigma:
 
 {% latex fig-25 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \sigma = \textstyle \sqrt{\dfrac{1}{n} \sum{(y_i - a_0 - a_1 x_i)^2}}

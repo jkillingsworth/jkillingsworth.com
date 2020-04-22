@@ -10,8 +10,6 @@ Consider an at-the-money call option with a strike price of $50. The underlying 
 The intrinsic value of the option at the time of expiration is a function of two things: the strike price of the option contract and the market price of the underlying asset when the option expires. You can compute the value of the option at expiration using this equation:
 
 {% latex fig-01 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -43,9 +41,6 @@ Since the market price of the underlying can fluctuate over time, the price of t
 Let's say the seller of the option contract predicts the price of the underlying will be trading at $40 per share at expiration. The buyer, on the other hand, speculates that the underlying will be trading at $60 per share at expiration. Using the formula above, we can compute the intrinsic value of the option at each of the anticipated outcomes:
 
 {% latex fig-02 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
@@ -65,9 +60,6 @@ Let's say the seller of the option contract predicts the price of the underlying
 The seller reasons that offering the option at any price greater than zero would be to his advantage since, according to his prediction, the option will expire worthless. The buyer figures that purchasing the option at any price below $10 is an opportunity for profit. The two traders decide that the fairest price can be obtained by taking the average value of the option for the two predicted outcomes:
 
 {% latex fig-03 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage{amsfonts}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -86,8 +78,6 @@ In valuing the option, the two traders effectively give equal weight to the prob
 In a more realistic scenario, there might be many possible outcomes. Some outcomes might have a higher probability of occurring than others. Consider another example with the following set of possible outcomes:
 
 {% latex fig-04 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     X = \{\ \$20,\ \$30,\ \$40,\ \$50,\ \$60,\ \$70,\ \$80\ \}
@@ -98,9 +88,6 @@ In a more realistic scenario, there might be many possible outcomes. Some outcom
 Using the formula above again, we can compute the intrinsic value of the option at each of the possible outcomes:
 
 {% latex fig-05 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
@@ -130,9 +117,6 @@ Using the formula above again, we can compute the intrinsic value of the option 
 Now let's assume the probability of each outcome is this:
 
 {% latex fig-06 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
@@ -162,9 +146,6 @@ Now let's assume the probability of each outcome is this:
 We can compute the expected value of the option as a weighted average:
 
 {% latex fig-07 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage{amsfonts}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -183,9 +164,6 @@ This approach lets us to model a prediction as a probability mass function acros
 In real markets, prices don't always snap neatly to $10 increments. Tick sizes can be as small as a penny or even smaller. It might be better to model a price prediction as a continuous probability distribution. Let's consider a set of possible outcomes that can span across a continuous range of values:
 
 {% latex fig-08 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage{amsfonts}
     \begin{document}
     \begin{displaymath}
     X = \{\ x \in \mathbb{R}\ |\ x \geq 0\ \}
@@ -196,8 +174,6 @@ In real markets, prices don't always snap neatly to $10 increments. Tick sizes c
 Prices can't fall below zero, so the range of possible values has a lower bound at zero. As before, some outcomes might have a higher probability of occurring than others. The cumulative distribution function is the probability that, when the option expires, the price of the underlying is less than or equal to a given value:
 
 {% latex fig-09 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     F(x) = Pr(S_T \leq x)
@@ -208,8 +184,6 @@ Prices can't fall below zero, so the range of possible values has a lower bound 
 From probability theory, we know that the probability density function is just the derivative of the cumulative distribution function:
 
 {% latex fig-10 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     f(x) = \frac{d}{dx} F(x)
@@ -220,9 +194,6 @@ From probability theory, we know that the probability density function is just t
 If we can come up with a probability density function that models our prediction, we can compute the expected value of the option by integrating over the range of possible outcomes:
 
 {% latex fig-11 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage{amsfonts}
     \begin{document}
     \begin{displaymath}
     \mathbb{E}[V(S_T)] = \int_{0}^{\infty} V(x)f(x)\,dx
@@ -233,8 +204,6 @@ If we can come up with a probability density function that models our prediction
 Here the lower limit is zero because the price of the underlying can never fall below zero. The upper limit approaches infinity if the density function is unbounded. If using a bounded density function, you can set the limits accordingly. Let's look at a concrete example. Suppose we model our prediction as a simple triangular distribution:
 
 {% latex fig-12 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -254,9 +223,6 @@ Here the lower limit is zero because the price of the underlying can never fall 
 Since the probability density is zero for all values outside the range spanning from $20 to $80, we can ignore values outside of this range. Furthermore, since we're only considering at-the-money call options with a strike price of $50 in this context, we know the intrinsic value of the option upon expiration is always zero if the underlying is trading below $50. Plugging in the density function and simplifying:
 
 {% latex fig-13 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage{amsfonts}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}

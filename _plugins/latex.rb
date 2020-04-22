@@ -4,6 +4,18 @@ module Jekyll
 
     class LatexBlock < Liquid::Block
 
+        @@latex_upper = '
+            \documentclass[varwidth]{standalone}
+            \usepackage{mathtools}
+            \usepackage{amsfonts}
+            \usepackage{array}
+            \usepackage[scaled=0.75]{roboto-mono}
+            '
+
+        def process_latex(items)
+            items.map{ |s| s.strip.lines }.flatten.map{ |s| s.strip.concat("\n") }.join
+        end
+
         def initialize(name, input, tokens)
             super
             @input = input.strip
@@ -12,8 +24,9 @@ module Jekyll
         def render(context)
             match = @input.match /^fig-(?<figno>\d{2})$/
             figno = match ? match["figno"] : "00"
-            latex = super.strip.lines.map{ |s| s.strip.concat("\n") }.join
-            fingerprint = Digest::SHA1.hexdigest(latex)[0...8].to_i(16).to_s.rjust(10, "0")
+            latex = process_latex([@@latex_upper, super])
+            latex_inner = process_latex([super])
+            fingerprint = Digest::SHA1.hexdigest(latex_inner)[0...8].to_i(16).to_s.rjust(10, "0")
             site = context.registers[:site]
             post = context.registers[:page]
             path = Assets.source_path(post)

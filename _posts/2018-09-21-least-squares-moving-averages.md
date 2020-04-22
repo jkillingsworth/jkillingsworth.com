@@ -12,8 +12,6 @@ Moving averages are often overlaid on stock price charts to give a smooth repres
 Let's consider the simple moving average first so that we can use it as a basis for comparison. For each day, the moving average value is computed by taking the average of all past closing prices within a given lookback period. The lookback window shifts forward by one after each new day closes. The following equation illustrates how to compute the simple moving average value at a given point in time:
 
 {% latex fig-01 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -35,8 +33,6 @@ Let's consider the simple moving average first so that we can use it as a basis 
 For the purpose of brevity, the equation above can be represented using the following shorthand notation:
 
 {% latex fig-02 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \hat{y} = \frac{\sum y_i}{n}
@@ -70,8 +66,6 @@ The moving averages are nice and smooth in all three cases, but they fail to acc
 Instead of fitting a constant function to the observed data points, we can instead fit a linear function to the data. A linear model takes the following form:
 
 {% latex fig-09 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \hat{y} = a_0 + a_1 x
@@ -82,8 +76,6 @@ Instead of fitting a constant function to the observed data points, we can inste
 While there are many techniques that can be used to approximate the coefficients, we'll use the method of least squares in this post. You can compute the coefficients using the following formulas:
 
 {% latex fig-10 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -119,8 +111,6 @@ The linear least squares moving average tracks the price much better than the si
 We might be able to track reversals better by fitting a parabola to the observed price data. A parabolic model takes the form of a second order polynomial:
 
 {% latex fig-17 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \hat{y} = a_0 + a_1 x + a_2 x^2
@@ -131,9 +121,6 @@ We might be able to track reversals better by fitting a parabola to the observed
 The least squares coefficients can be found by solving the following matrix equation:
 
 {% latex fig-18 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage{array}
     \setlength{\arraycolsep}{0.5em}
     \begin{document}
     \begin{displaymath}
@@ -196,8 +183,6 @@ Notice that the fitted line for <abbr class="ticker">WYNN</abbr> tracks the reve
 One of my objectives in this study is to quantitatively recognize and measure sustained trends. If prices are rising or falling by a relatively constant percentage each day, the growth or decay in value is not linear; it is exponential. In this case, it would be appropriate to perform the regression using an exponential model function:
 
 {% latex fig-25 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \hat{y} = p (1 + r)^x
@@ -208,8 +193,6 @@ One of my objectives in this study is to quantitatively recognize and measure su
 We can estimate the coefficients of the model function using the linear regression technique described previously. To do this, we first need to transform the exponential model above into the form of a linear model:
 
 {% latex fig-26 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \hat{y}' = a_0 + a_1 x
@@ -220,8 +203,6 @@ We can estimate the coefficients of the model function using the linear regressi
 The exponential model can be transformed into the linear form by taking the logarithm of both sides:
 
 {% latex fig-27 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \ln{\hat{y}} = \ln{p} + x \ln{(1 + r)}
@@ -232,8 +213,6 @@ The exponential model can be transformed into the linear form by taking the loga
 The following equations illustrate how the parts of the transformed exponential model map to the linear model:
 
 {% latex fig-28 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -250,8 +229,6 @@ The following equations illustrate how the parts of the transformed exponential 
 The following formulas can then be used to calculate the coefficients for the linear model. These formulas are similar to those defined earlier in the section on linear regression:
 
 {% latex fig-29 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -266,8 +243,6 @@ The following formulas can then be used to calculate the coefficients for the li
 Once the coefficients for the linear model are know, we can use the values to compute the coefficients for the exponential model:
 
 {% latex fig-30 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}

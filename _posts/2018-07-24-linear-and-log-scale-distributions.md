@@ -30,8 +30,6 @@ While the simulated results might give us a pretty good approximation of the dis
 Regardless of which betting strategy the gambler uses, the outcome of the repeated coin toss game depends on the total number of winning and losing plays. The order of winners and losers doesn't matter. For the fixed constant betting strategy, the following formula can be used to compute the final outcome based on the number of winning and losing games:
 
 {% latex fig-02 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     V_n = W(+bV_0) + L(-bV_0)
@@ -42,8 +40,6 @@ Regardless of which betting strategy the gambler uses, the outcome of the repeat
 Since there are only two possible outcomes for each toss of the coin, the distribution of possible outcomes in a repeated coin toss game can be modeled as a binomial distribution. We can use the following probability mass function to compute the probability of each outcome based on the number of winning rounds relative to the total number of plays:
 
 {% latex fig-03 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -65,8 +61,6 @@ Since there are only two possible outcomes for each toss of the coin, the distri
 While there are multiple techniques for computing the binomial coefficient, the formula using factorials seems to be the most common:
 
 {% latex fig-04 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \binom{n}{k} = \frac{n!}{k!(n - k)!}
@@ -77,8 +71,6 @@ While there are multiple techniques for computing the binomial coefficient, the 
 However, I prefer to use the following alternative method when using a computer to perform the calculations:
 
 {% latex fig-05 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     \binom{n}{k} =
@@ -112,8 +104,6 @@ While the symmetry between the distribution of winning and losing outcomes may n
 To generate the equivalent probability distribution chart for the fixed fraction betting strategy, we need to compute the final outcomes differently. In this case, we use the following formula to determine the final outcome based on the number of winning and losing plays:
 
 {% latex fig-07 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     V_n = V_0 \bigg[ (1 + b)^W (1 - b)^L \bigg]
@@ -145,9 +135,6 @@ The most likely outcomes, outcomes with 100 winning plays and 100 losing plays, 
 As with the [previous post]({% post_url 2018-04-23-fixed-fractions-and-fair-games %}), we assume the gambler always bets on heads. Recall the reward function we've been using so far for the fixed fraction betting strategy:
 
 {% latex fig-10 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage[scaled=0.75]{roboto-mono}
     \begin{document}
     \begin{displaymath}
     R(X) =
@@ -165,9 +152,6 @@ With this reward function, for any given round of the coin toss game, the value 
 How can the reward function for the fixed fraction betting strategy be modified to give a balanced distribution of winning and losing outcomes? Instead of having a reward function in which the winning and losing amounts are the same, we need to come up with a reward function in which the multiplier applied to the gambler's bankroll for a winning play has the same magnitude as the multiplier used for a losing play. But the multipliers must have an equal magnitude on a logarithmic scale instead of a linear scale. Holding the gambler's risk of loss constant, we can define the reward function for the winning case in terms of the reward function applied for the losing case using the following equation:
 
 {% latex fig-11 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage[scaled=0.75]{roboto-mono}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -184,9 +168,6 @@ How can the reward function for the fixed fraction betting strategy be modified 
 Taking the exponent of both sides, we can get the reward function for the winning case. Putting both the winning and losing reward functions together, we now have a balanced reward function that looks like this:
 
 {% latex fig-12 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
-    \usepackage[scaled=0.75]{roboto-mono}
     \begin{document}
     \begin{displaymath}
     R(X) =
@@ -202,8 +183,6 @@ Taking the exponent of both sides, we can get the reward function for the winnin
 The reward multiplier that gets applied to the gambler's bankroll when the coin lands on heads is the multiplicative inverse of the multiplier used when the coin lands on tails. With the balanced reward function, the formula to compute the final outcome based on the number of winning and losing plays becomes:
 
 {% latex fig-13 %}
-    \documentclass[varwidth]{standalone}
-    \usepackage{mathtools}
     \begin{document}
     \begin{displaymath}
     V_n = V_0 \bigg[ (1 - b)^{L - W} \bigg]
