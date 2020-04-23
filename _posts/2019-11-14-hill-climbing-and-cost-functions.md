@@ -100,6 +100,7 @@ This does not match our target values, so we know that our initial guess is not 
 Our objective is to revise the estimate to minimize the value of the cost function. Lower values indicate a more favorable estimate. A zero value is the most ideal. Incrementing each one of the estimated weights by a small step size, in both the positive and negative direction, there are six possible revisions we can make to our initial estimate:
 
 {% latex fig-08 %}
+    \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}

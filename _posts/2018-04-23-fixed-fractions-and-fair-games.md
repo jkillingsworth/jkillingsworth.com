@@ -35,6 +35,7 @@ Suppose the gambler wants to place bets on the outcome of a coin toss. Ignoring 
 If we assume it's a fair coin, then each of the two outcomes has a 50% probability of occurring for each toss of the coin:
 
 {% latex fig-02 %}
+    \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
@@ -239,6 +240,7 @@ What exactly does it mean for a gambling game to be a fair game with a breakeven
 Let's suppose the gambler plays two rounds of the coin toss game and always bets on heads. There are four possible outcomes, each with an equal probability of occurring. If the gambler chooses the fixed constant betting strategy, the value of the gambler's stake after each possible outcome is shown below:
 
 {% latex fig-22 %}
+    \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
@@ -262,6 +264,7 @@ Let's suppose the gambler plays two rounds of the coin toss game and always bets
 The average value of all possible outcomes in this case is $100, which is the breakeven amount. Also notice that there are an equal number of winning games as there are losing games. Both aspects are indicative of a fair game. If the gambler chooses the fixed fraction betting strategy, the results are a bit different:
 
 {% latex fig-23 %}
+    \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}

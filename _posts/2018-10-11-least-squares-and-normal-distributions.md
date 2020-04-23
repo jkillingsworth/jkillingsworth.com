@@ -162,6 +162,7 @@ Each one of the coefficients is given in terms of the other. Since there are two
 The coefficients can then be found by solving the following matrix equation:
 
 {% latex fig-12 %}
+    \usepackage{array}
     \setlength{\arraycolsep}{0.5em}
     \begin{document}
     \begin{displaymath}

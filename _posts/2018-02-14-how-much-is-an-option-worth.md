@@ -41,6 +41,7 @@ Since the market price of the underlying can fluctuate over time, the price of t
 Let's say the seller of the option contract predicts the price of the underlying will be trading at $40 per share at expiration. The buyer, on the other hand, speculates that the underlying will be trading at $60 per share at expiration. Using the formula above, we can compute the intrinsic value of the option at each of the anticipated outcomes:
 
 {% latex fig-02 %}
+    \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
@@ -88,6 +89,7 @@ In a more realistic scenario, there might be many possible outcomes. Some outcom
 Using the formula above again, we can compute the intrinsic value of the option at each of the possible outcomes:
 
 {% latex fig-05 %}
+    \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
@@ -117,6 +119,7 @@ Using the formula above again, we can compute the intrinsic value of the option 
 Now let's assume the probability of each outcome is this:
 
 {% latex fig-06 %}
+    \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}

@@ -50,6 +50,7 @@ The aforementioned coin toss game can be modeled as a Markov chain. The game sta
 In this model, the coin in the zero state is always a fair coin. A fair coin will land on heads 50% of the time and tails 50% of the time. Additionally, this model is also symmetrical. The biased coins in the negative states are weighted inversely to the biased coins in the corresponding positive states. The diagram above can alternately be depicted as follows:
 
 {% latex fig-02 %}
+    \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
@@ -117,6 +118,7 @@ The values are all roughly the same, indicating that all possible coin toss sequ
 With four tosses of the coin, there are sixteen possible coin toss sequences and five unique terminal states. The following table lists every possible coin toss sequence along with its terminal state and a formula for the probability of each combination:
 
 {% latex fig-07 %}
+    \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}

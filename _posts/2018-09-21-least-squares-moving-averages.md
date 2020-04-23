@@ -121,6 +121,7 @@ We might be able to track reversals better by fitting a parabola to the observed
 The least squares coefficients can be found by solving the following matrix equation:
 
 {% latex fig-18 %}
+    \usepackage{array}
     \setlength{\arraycolsep}{0.5em}
     \begin{document}
     \begin{displaymath}

@@ -8,7 +8,6 @@ module Jekyll
             \documentclass[varwidth]{standalone}
             \usepackage{mathtools}
             \usepackage{amsfonts}
-            \usepackage{array}
             \usepackage[scaled=0.75]{roboto-mono}
             '
 
