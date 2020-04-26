@@ -6,6 +6,7 @@ module Jekyll
 
         @@latex_upper = '
             \documentclass[varwidth]{standalone}
+            \usepackage[charter]{mathdesign}
             \usepackage{mathtools}
             \usepackage{amsfonts}
             \usepackage[scaled=0.75]{roboto-mono}
