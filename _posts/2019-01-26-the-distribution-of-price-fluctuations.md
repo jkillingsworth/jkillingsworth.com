@@ -33,7 +33,7 @@ So are the price fluctuations normally distributed? Eyeballing the chart above, 
 
 To get some broader insights regarding the behavior of price movements, I want to take a look at some more exchange traded funds with a few different underlying asset types. Let's examine the daily closing prices for the following ETFs:
 
-{% latex fig-91 %}
+{% latex fig-04 %}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -65,14 +65,14 @@ To get some broader insights regarding the behavior of price movements, I want t
 
 Each data set contains at least 10 years worth of data. Using the same technique as before, we can plot the histogram of daily price fluctuations and overlay the fitted normal and Laplace density functions. Here are the charts:
 
-{% chart fig-04-stocks-daily-DIA-probs.svg %}
-{% chart fig-05-stocks-daily-EEM-probs.svg %}
-{% chart fig-06-stocks-daily-GLD-probs.svg %}
-{% chart fig-07-stocks-daily-HYG-probs.svg %}
-{% chart fig-08-stocks-daily-LQD-probs.svg %}
-{% chart fig-09-stocks-daily-TLT-probs.svg %}
-{% chart fig-10-stocks-daily-UNG-probs.svg %}
-{% chart fig-11-stocks-daily-USO-probs.svg %}
+{% chart fig-05-stocks-daily-DIA-probs.svg %}
+{% chart fig-06-stocks-daily-EEM-probs.svg %}
+{% chart fig-07-stocks-daily-GLD-probs.svg %}
+{% chart fig-08-stocks-daily-HYG-probs.svg %}
+{% chart fig-09-stocks-daily-LQD-probs.svg %}
+{% chart fig-10-stocks-daily-TLT-probs.svg %}
+{% chart fig-11-stocks-daily-UNG-probs.svg %}
+{% chart fig-12-stocks-daily-USO-probs.svg %}
 
 As you can see, the histogram seems to fit the Laplace distribution better than the normal distribution most of the time. But not always. There are some cases that appear to fit somewhere in between the normal distribution and the Laplace distribution. A cursory look at <abbr class="ticker">UNG</abbr>, for example, might suggest the variation is normally distributed.
 
@@ -80,7 +80,7 @@ As you can see, the histogram seems to fit the Laplace distribution better than 
 
 Instead of looking at broad stock market indexes, let's see what happens if we examine individual stocks. Let's consider the daily closing prices for the following stocks:
 
-{% latex fig-92 %}
+{% latex fig-13%}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -126,21 +126,21 @@ Instead of looking at broad stock market indexes, let's see what happens if we e
 
 Here are the charts:
 
-{% chart fig-12-stocks-daily-AMZN-probs.svg %}
-{% chart fig-13-stocks-daily-AZO-probs.svg %}
-{% chart fig-14-stocks-daily-BLK-probs.svg %}
-{% chart fig-15-stocks-daily-CAT-probs.svg %}
-{% chart fig-16-stocks-daily-CMG-probs.svg %}
-{% chart fig-17-stocks-daily-FDX-probs.svg %}
-{% chart fig-18-stocks-daily-GM-probs.svg %}
-{% chart fig-19-stocks-daily-GOOG-probs.svg %}
-{% chart fig-20-stocks-daily-GWW-probs.svg %}
-{% chart fig-21-stocks-daily-HUM-probs.svg %}
-{% chart fig-22-stocks-daily-NFLX-probs.svg %}
-{% chart fig-23-stocks-daily-TSLA-probs.svg %}
-{% chart fig-24-stocks-daily-TWLO-probs.svg %}
-{% chart fig-25-stocks-daily-ULTA-probs.svg %}
-{% chart fig-26-stocks-daily-UNH-probs.svg %}
+{% chart fig-14-stocks-daily-AMZN-probs.svg %}
+{% chart fig-15-stocks-daily-AZO-probs.svg %}
+{% chart fig-16-stocks-daily-BLK-probs.svg %}
+{% chart fig-17-stocks-daily-CAT-probs.svg %}
+{% chart fig-18-stocks-daily-CMG-probs.svg %}
+{% chart fig-19-stocks-daily-FDX-probs.svg %}
+{% chart fig-20-stocks-daily-GM-probs.svg %}
+{% chart fig-21-stocks-daily-GOOG-probs.svg %}
+{% chart fig-22-stocks-daily-GWW-probs.svg %}
+{% chart fig-23-stocks-daily-HUM-probs.svg %}
+{% chart fig-24-stocks-daily-NFLX-probs.svg %}
+{% chart fig-25-stocks-daily-TSLA-probs.svg %}
+{% chart fig-26-stocks-daily-TWLO-probs.svg %}
+{% chart fig-27-stocks-daily-ULTA-probs.svg %}
+{% chart fig-28-stocks-daily-UNH-probs.svg %}
 
 Subjectively, it seems like the Laplace distribution is a better overall fit.
 
@@ -148,21 +148,21 @@ Subjectively, it seems like the Laplace distribution is a better overall fit.
 
 What happens if we study intraday stock prices instead of daily closing prices? Let's perform the analysis on the same set of stocks using one minute price data instead of end of day prices. Here are the charts:
 
-{% chart fig-27-stocks-intraday-AMZN-probs.svg %}
-{% chart fig-28-stocks-intraday-AZO-probs.svg %}
-{% chart fig-29-stocks-intraday-BLK-probs.svg %}
-{% chart fig-30-stocks-intraday-CAT-probs.svg %}
-{% chart fig-31-stocks-intraday-CMG-probs.svg %}
-{% chart fig-32-stocks-intraday-FDX-probs.svg %}
-{% chart fig-33-stocks-intraday-GM-probs.svg %}
-{% chart fig-34-stocks-intraday-GOOG-probs.svg %}
-{% chart fig-35-stocks-intraday-GWW-probs.svg %}
-{% chart fig-36-stocks-intraday-HUM-probs.svg %}
-{% chart fig-37-stocks-intraday-NFLX-probs.svg %}
-{% chart fig-38-stocks-intraday-TSLA-probs.svg %}
-{% chart fig-39-stocks-intraday-TWLO-probs.svg %}
-{% chart fig-40-stocks-intraday-ULTA-probs.svg %}
-{% chart fig-41-stocks-intraday-UNH-probs.svg %}
+{% chart fig-29-stocks-intraday-AMZN-probs.svg %}
+{% chart fig-30-stocks-intraday-AZO-probs.svg %}
+{% chart fig-31-stocks-intraday-BLK-probs.svg %}
+{% chart fig-32-stocks-intraday-CAT-probs.svg %}
+{% chart fig-33-stocks-intraday-CMG-probs.svg %}
+{% chart fig-34-stocks-intraday-FDX-probs.svg %}
+{% chart fig-35-stocks-intraday-GM-probs.svg %}
+{% chart fig-36-stocks-intraday-GOOG-probs.svg %}
+{% chart fig-37-stocks-intraday-GWW-probs.svg %}
+{% chart fig-38-stocks-intraday-HUM-probs.svg %}
+{% chart fig-39-stocks-intraday-NFLX-probs.svg %}
+{% chart fig-40-stocks-intraday-TSLA-probs.svg %}
+{% chart fig-41-stocks-intraday-TWLO-probs.svg %}
+{% chart fig-42-stocks-intraday-ULTA-probs.svg %}
+{% chart fig-43-stocks-intraday-UNH-probs.svg %}
 
 Each data set contains five days worth of data. Using intraday data instead of daily data doesn't seem to change the outcome with respect to the general shape of the distribution.
 
@@ -170,19 +170,19 @@ Each data set contains five days worth of data. Using intraday data instead of d
 
 I'm curious what happens if we apply this analysis to the values of the CBOE Volatility Index. This index is a measure of implied volatility based on the market price of S&P 500 options. While not a tradable instrument in its own right, there are tradable derivatives based on this index. Here is a chart of daily closing values covering a span of about 19 years:
 
-{% chart fig-42-stocks-daily-VIX-price.svg %}
+{% chart fig-44-stocks-daily-VIX-price.svg %}
 
 Consistent with the other data sets used in this post, the "price" values on this chart are the logarithmic values of the volatility index, not the actual index values. The VIX is a quoted in percentage points, so the use of logarithmic values may or may not be the best approach here, depending on how one might go about trading volatility derivatives. I suspect that studying the behavior of volatility instruments might warrant some special consideration, but that's beyond the scope of the post. For our purposes here, let's treat the index the way we would any other tradable instrument. The daily "price" differences look like this:
 
-{% chart fig-43-stocks-daily-VIX-diffs.svg %}
+{% chart fig-45-stocks-daily-VIX-diffs.svg %}
 
 The variance seems to be a bit more consistent than that of the price differences of the S&P 500 ETF shown earlier. What does the histogram look like? Not much different than the individual stocks and ETFs examined earlier:
 
-{% chart fig-44-stocks-daily-VIX-probs.svg %}
+{% chart fig-46-stocks-daily-VIX-probs.svg %}
 
 It looks like the changes in implied volatility vary from one day to the next according to a distribution that might be somewhere between a normal distribution and a Laplace distribution. Here is a histogram of five days worth of one minute intraday values:
 
-{% chart fig-45-stocks-intraday-VIX-probs.svg %}
+{% chart fig-47-stocks-intraday-VIX-probs.svg %}
 
 The intraday data appear to fit the Laplace distribution better than the normal distribution. I was expecting the values of the volatility index to have different characteristics than values from the other data sets, but that doesn't seem to be the case.
 
@@ -190,15 +190,15 @@ The intraday data appear to fit the Laplace distribution better than the normal 
 
 Do the exchange rates between different fiat currencies exhibit the same properties as the data sets studied above? Let's consider the exchange rate between the euro and the US dollar. Here is a chart of the daily exchange rate values over a period of about 18 years:
 
-{% chart fig-46-forex-daily-EURUSD-price.svg %}
+{% chart fig-48-forex-daily-EURUSD-price.svg %}
 
 As before, we're using the logarithmic values here instead of the real values. Here is a plot of the daily differences in logarithmic exchange rate values:
 
-{% chart fig-47-forex-daily-EURUSD-diffs.svg %}
+{% chart fig-49-forex-daily-EURUSD-diffs.svg %}
 
 There does seem to be some heteroskedasticity, but it's not as pronounced as what we saw with the S&P 500 ETF. Here is the histogram:
 
-{% chart fig-48-forex-daily-EURUSD-probs.svg %}
+{% chart fig-50-forex-daily-EURUSD-probs.svg %}
 
 Here we see a familiar pattern. It takes the shape roughly of a Laplace distribution.
 
@@ -206,7 +206,7 @@ Here we see a familiar pattern. It takes the shape roughly of a Laplace distribu
 
 To see if the pattern holds, let's take a look at the daily exchange rates of a few more currency pairs. Here is the list:
 
-{% latex fig-93 %}
+{% latex fig-51 %}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -238,14 +238,14 @@ To see if the pattern holds, let's take a look at the daily exchange rates of a 
 
 Here are the charts:
 
-{% chart fig-49-forex-daily-USDJPY-probs.svg %}
-{% chart fig-50-forex-daily-USDMXN-probs.svg %}
-{% chart fig-51-forex-daily-USDRUB-probs.svg %}
-{% chart fig-52-forex-daily-USDTRY-probs.svg %}
-{% chart fig-53-forex-daily-USDZAR-probs.svg %}
-{% chart fig-54-forex-daily-EURNOK-probs.svg %}
-{% chart fig-55-forex-daily-EURSEK-probs.svg %}
-{% chart fig-56-forex-daily-EURTRY-probs.svg %}
+{% chart fig-52-forex-daily-USDJPY-probs.svg %}
+{% chart fig-53-forex-daily-USDMXN-probs.svg %}
+{% chart fig-54-forex-daily-USDRUB-probs.svg %}
+{% chart fig-55-forex-daily-USDTRY-probs.svg %}
+{% chart fig-56-forex-daily-USDZAR-probs.svg %}
+{% chart fig-57-forex-daily-EURNOK-probs.svg %}
+{% chart fig-58-forex-daily-EURSEK-probs.svg %}
+{% chart fig-59-forex-daily-EURTRY-probs.svg %}
 
 And here we see the familiar pattern once again.
 
@@ -253,14 +253,14 @@ And here we see the familiar pattern once again.
 
 For the same currency pairs as above, let's examine the distribution of price fluctuations for one minute intraday data over a span of 24 hours:
 
-{% chart fig-57-forex-intraday-USDJPY-probs.svg %}
-{% chart fig-58-forex-intraday-USDMXN-probs.svg %}
-{% chart fig-59-forex-intraday-USDRUB-probs.svg %}
-{% chart fig-60-forex-intraday-USDTRY-probs.svg %}
-{% chart fig-61-forex-intraday-USDZAR-probs.svg %}
-{% chart fig-62-forex-intraday-EURNOK-probs.svg %}
-{% chart fig-63-forex-intraday-EURSEK-probs.svg %}
-{% chart fig-64-forex-intraday-EURTRY-probs.svg %}
+{% chart fig-60-forex-intraday-USDJPY-probs.svg %}
+{% chart fig-61-forex-intraday-USDMXN-probs.svg %}
+{% chart fig-62-forex-intraday-USDRUB-probs.svg %}
+{% chart fig-63-forex-intraday-USDTRY-probs.svg %}
+{% chart fig-64-forex-intraday-USDZAR-probs.svg %}
+{% chart fig-65-forex-intraday-EURNOK-probs.svg %}
+{% chart fig-66-forex-intraday-EURSEK-probs.svg %}
+{% chart fig-67-forex-intraday-EURTRY-probs.svg %}
 
 Notice in some of these charts there is a large spike in the concentration of price changes at or around zero. I suspect this is because there are certain times of day where these instruments are thinly traded and don't move very much.
 
@@ -268,7 +268,7 @@ Notice in some of these charts there is a large spike in the concentration of pr
 
 A number of different cryptocurrencies have emerged in the past few years. And some of them have made enormous price moves. Can we expect the price fluctuations of these digital assets to exhibit the same characteristics as stocks and currencies? Let's examine a few of the most popular ones:
 
-{% latex fig-94 %}
+{% latex fig-68 %}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -290,9 +290,9 @@ A number of different cryptocurrencies have emerged in the past few years. And s
 
 Here are the charts:
 
-{% chart fig-65-crypto-daily-BTC-probs.svg %}
-{% chart fig-66-crypto-daily-ETH-probs.svg %}
-{% chart fig-67-crypto-daily-XRP-probs.svg %}
+{% chart fig-69-crypto-daily-BTC-probs.svg %}
+{% chart fig-70-crypto-daily-ETH-probs.svg %}
+{% chart fig-71-crypto-daily-XRP-probs.svg %}
 
 For all three of these data sets, the variation in daily price moves does not conform to the normal distribution. In fact, the distribution of price movements seems to be even more clustered around the center than would be expected for a Laplace distribution.
 

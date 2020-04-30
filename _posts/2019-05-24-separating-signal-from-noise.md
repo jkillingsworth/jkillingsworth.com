@@ -26,7 +26,7 @@ As might be expected, based on a [previous study]({% post_url 2019-01-26-the-dis
 
 Looking at the dither component, the shape of histogram resembles that of a Laplace distribution about as neatly as the shape of the histogram for the market price does. The standard deviation is about the same as that of the market price data as well. To gain more insights, let's look at some concrete numbers concerning the analysis of these three data sets:
 
-{% latex fig-91 %}
+{% latex fig-06 %}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -70,18 +70,18 @@ The scale parameter values for both density functions are roughly the same for b
 
 The next set of data I want to look at is a series of intraday prices of the same S&P 500 index tracking fund evaluated previously. This data set contains one minute intraday data covering a single trading day. The charts below show the market price along with the smooth trend component and the dither noise component:
 
-{% chart fig-06-stocks-intraday-SPY-price.svg %}
-{% chart fig-07-stocks-intraday-SPY-noise.svg %}
+{% chart fig-07-stocks-intraday-SPY-price.svg %}
+{% chart fig-08-stocks-intraday-SPY-noise.svg %}
 
 The intraday price series contains a couple of sudden price moves that are not tracked very well by the least squares moving average. This results in large spikes on the noise chart. Let's take a look at the histogram for the market price data series and compare it to that of the separate smooth and dither components:
 
-{% chart fig-08-stocks-intraday-SPY-probs-market.svg %}
-{% chart fig-09-stocks-intraday-SPY-probs-smooth.svg %}
-{% chart fig-10-stocks-intraday-SPY-probs-dither.svg %}
+{% chart fig-09-stocks-intraday-SPY-probs-market.svg %}
+{% chart fig-10-stocks-intraday-SPY-probs-smooth.svg %}
+{% chart fig-11-stocks-intraday-SPY-probs-dither.svg %}
 
 This histogram for market price data looks like it might approximate the shape of the Laplace density function, but it has a set of shoulders not present in the model function. The histogram for the smooth component has a shape that is even less well defined. But look at the shape of the histogram for the dither component---it looks like an almost ideal approximation of the Laplace density function. Let's take a look at the numbers:
 
-{% latex fig-92 %}
+{% latex fig-12 %}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -121,18 +121,18 @@ The location and scale parameters fitted to the normal density function follow t
 
 Now let's take a look at the daily exchange rate between the US dollar and the Japanese yen. This data set covers a range of about 18 years. Here are the charts:
 
-{% chart fig-11-forex-daily-USDJPY-price.svg %}
-{% chart fig-12-forex-daily-USDJPY-noise.svg %}
+{% chart fig-13-forex-daily-USDJPY-price.svg %}
+{% chart fig-14-forex-daily-USDJPY-noise.svg %}
 
 The smooth component seems to track the market price fairly well most of the time, but there does appear to be some noticeable lag following reversals. The dither component seems to oscillate up and down in cycles. Here are the histograms:
 
-{% chart fig-13-forex-daily-USDJPY-probs-market.svg %}
-{% chart fig-14-forex-daily-USDJPY-probs-smooth.svg %}
-{% chart fig-15-forex-daily-USDJPY-probs-dither.svg %}
+{% chart fig-15-forex-daily-USDJPY-probs-market.svg %}
+{% chart fig-16-forex-daily-USDJPY-probs-smooth.svg %}
+{% chart fig-17-forex-daily-USDJPY-probs-dither.svg %}
 
 The shape of the histogram for both the market price data and the dither component closely resemble the shape of the Laplace density function. For the smooth component, the histogram has a general bell shape, but it looks like it might be a bit too sloppy and asymmetrical to properly characterize it as having the shape of a normal or a Laplace density function. Here are the numbers:
 
-{% latex fig-93 %}
+{% latex fig-18 %}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -172,18 +172,18 @@ The pattern here is very similar to that of the previous data set. These results
 
 The next data set is a series of intraday exchange rates between the Chinese yuan and the US dollar covering a period of approximately 24 hours. Each data point is one minute apart. Here are the charts showing the intraday market prices along with the separated smooth and dither components:
 
-{% chart fig-16-forex-intraday-USDCNH-price.svg %}
-{% chart fig-17-forex-intraday-USDCNH-noise.svg %}
+{% chart fig-19-forex-intraday-USDCNH-price.svg %}
+{% chart fig-20-forex-intraday-USDCNH-noise.svg %}
 
 In my post titled [*The Very Strange Chinese Yuan*]({% post_url 2019-02-10-the-very-strange-chinese-yuan %}), I examined a different set of intraday exchange rates between the Chinese yuan and the US dollar. In that post, I demonstrated a peculiar triple peak pattern in the distribution of price movements. We can observe the same phenomenon in this data set as well:
 
-{% chart fig-18-forex-intraday-USDCNH-probs-market.svg %}
-{% chart fig-19-forex-intraday-USDCNH-probs-smooth.svg %}
-{% chart fig-20-forex-intraday-USDCNH-probs-dither.svg %}
+{% chart fig-21-forex-intraday-USDCNH-probs-market.svg %}
+{% chart fig-22-forex-intraday-USDCNH-probs-smooth.svg %}
+{% chart fig-23-forex-intraday-USDCNH-probs-dither.svg %}
 
 The shape of the histogram for the market price data shows the triple peak pattern that is characteristic of intraday exchange rates between the yuan and dollar. The histogram for the smooth component exhibits a roughly bell shaped distribution with no indication of the triple peak pattern at all. The fitted density functions for the smooth component are both shifted to the left, which can be attributed to the downward trend visible in the price chart. The histogram for the dither component, on the other hand, clearly shows the triple peak pattern, indicating that this distinctive noise pattern is almost entirely removed from the price trend. Here are the parameter estimates for the density functions:
 
-{% latex fig-94 %}
+{% latex fig-24 %}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -223,18 +223,18 @@ Again, we see a pattern here similar to that of the previous data sets. For the 
 
 The final set of data I want to examine are the daily Bitcoin prices covering a period of about five years. Here are the charts:
 
-{% chart fig-21-crypto-daily-BTC-price.svg %}
-{% chart fig-22-crypto-daily-BTC-noise.svg %}
+{% chart fig-25-crypto-daily-BTC-price.svg %}
+{% chart fig-26-crypto-daily-BTC-noise.svg %}
 
 The price chart shows a fairly consistent multi-year trend followed by a distinct reversal. The noise chart exhibits what appears to be a cyclical pattern, although the periods don't seem to be evenly spaced. Here are the histograms:
 
-{% chart fig-23-crypto-daily-BTC-probs-market.svg %}
-{% chart fig-24-crypto-daily-BTC-probs-smooth.svg %}
-{% chart fig-25-crypto-daily-BTC-probs-dither.svg %}
+{% chart fig-27-crypto-daily-BTC-probs-market.svg %}
+{% chart fig-28-crypto-daily-BTC-probs-smooth.svg %}
+{% chart fig-29-crypto-daily-BTC-probs-dither.svg %}
 
 The histograms for both the market price and the dither component have a shape that resembles the Laplace density function. The histogram for the smooth component has a sloppy and irregular shape. Here are the numbers:
 
-{% latex fig-95 %}
+{% latex fig-30 %}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
