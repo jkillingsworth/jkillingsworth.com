@@ -33,18 +33,35 @@ So are the price fluctuations normally distributed? Eyeballing the chart above, 
 
 To get some broader insights regarding the behavior of price movements, I want to take a look at some more exchange traded funds with a few different underlying asset types. Let's examine the daily closing prices for the following ETFs:
 
-{% table %}
-| <span style="width: 4em;">Symbol</span> | <span style="width: 17em;">Underlying Asset</span>
-|:----------------------------------------|:---
-| <abbr class="ticker">DIA</abbr>         | Large cap domestic stocks
-| <abbr class="ticker">EEM</abbr>         | Emerging markets
-| <abbr class="ticker">GLD</abbr>         | Gold
-| <abbr class="ticker">HYG</abbr>         | High yield corporate bonds
-| <abbr class="ticker">LQD</abbr>         | Investment grade corporate bonds
-| <abbr class="ticker">TLT</abbr>         | Long term US Treasury bonds
-| <abbr class="ticker">UNG</abbr>         | Natural gas
-| <abbr class="ticker">USO</abbr>         | Crude oil
-{% endtable %}
+{% latex fig-91 %}
+    \usepackage{array}
+    \setlength{\arraycolsep}{1em}
+    \begin{document}
+    \begin{displaymath}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{4em}<{$}|>{$}wl{15em}<{$}|}
+    \hline
+    \text{Symbol}    & \text{Underlying Asset}
+    \\[0.25em]\hline
+    \texttt{DIA}     & \text{Large cap domestic stocks}
+    \\[0.25em]\hline
+    \texttt{EEM}     & \text{Emerging markets}
+    \\[0.25em]\hline
+    \texttt{GLD}     & \text{Gold}
+    \\[0.25em]\hline
+    \texttt{HYG}     & \text{High yield corporate bonds}
+    \\[0.25em]\hline
+    \texttt{LQD}     & \text{Investment grade corporate bonds}
+    \\[0.25em]\hline
+    \texttt{TLT}     & \text{Long term US Treasury bonds}
+    \\[0.25em]\hline
+    \texttt{UNG}     & \text{Natural gas}
+    \\[0.25em]\hline
+    \texttt{USO}     & \text{Crude oil}
+    \\[0.25em]\hline
+    \end{array}
+    \end{displaymath}
+    \end{document}
+{% endlatex %}
 
 Each data set contains at least 10 years worth of data. Using the same technique as before, we can plot the histogram of daily price fluctuations and overlay the fitted normal and Laplace density functions. Here are the charts:
 
@@ -63,25 +80,49 @@ As you can see, the histogram seems to fit the Laplace distribution better than 
 
 Instead of looking at broad stock market indexes, let's see what happens if we examine individual stocks. Let's consider the daily closing prices for the following stocks:
 
-{% table %}
-| <span style="width: 4em;">Symbol</span> | <span style="width: 17em;">Company Name</span>
-| :---------------------------------------|:---
-| <abbr class="ticker">AMZN</abbr>        | Amazon.com, Inc.
-| <abbr class="ticker">AZO</abbr>         | AutoZone, Inc.
-| <abbr class="ticker">BLK</abbr>         | BlackRock, Inc.
-| <abbr class="ticker">CAT</abbr>         | Caterpillar Inc.
-| <abbr class="ticker">CMG</abbr>         | Chipotle Mexican Grill, Inc.
-| <abbr class="ticker">FDX</abbr>         | FedEx Corporation
-| <abbr class="ticker">GM</abbr>          | General Motors Company
-| <abbr class="ticker">GOOG</abbr>        | Alphabet Inc.
-| <abbr class="ticker">GWW</abbr>         | W.W. Grainger, Inc.
-| <abbr class="ticker">HUM</abbr>         | Humana Inc.
-| <abbr class="ticker">NFLX</abbr>        | Netflix, Inc.
-| <abbr class="ticker">TSLA</abbr>        | Tesla, Inc.
-| <abbr class="ticker">TWLO</abbr>        | Twilio Inc.
-| <abbr class="ticker">ULTA</abbr>        | Ulta Beauty, Inc.
-| <abbr class="ticker">UNH</abbr>         | UnitedHealth Group Incorporated
-{% endtable %}
+{% latex fig-92 %}
+    \usepackage{array}
+    \setlength{\arraycolsep}{1em}
+    \begin{document}
+    \begin{displaymath}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{4em}<{$}|>{$}wl{15em}<{$}|}
+    \hline
+    \text{Symbol}    & \text{Underlying Asset}
+    \\[0.25em]\hline
+    \texttt{AMZN}    & \text{Amazon.com, Inc.}
+    \\[0.25em]\hline
+    \texttt{AZO}     & \text{AutoZone, Inc.}
+    \\[0.25em]\hline
+    \texttt{BLK}     & \text{BlackRock, Inc.}
+    \\[0.25em]\hline
+    \texttt{CAT}     & \text{Caterpillar Inc.}
+    \\[0.25em]\hline
+    \texttt{CMG}     & \text{Chipotle Mexican Grill, Inc.}
+    \\[0.25em]\hline
+    \texttt{FDX}     & \text{FedEx Corporation}
+    \\[0.25em]\hline
+    \texttt{GM}      & \text{General Motors Company}
+    \\[0.25em]\hline
+    \texttt{GOOG}    & \text{Alphabet Inc.}
+    \\[0.25em]\hline
+    \texttt{GWW}     & \text{W.W. Grainger, Inc.}
+    \\[0.25em]\hline
+    \texttt{HUM}     & \text{Humana Inc.}
+    \\[0.25em]\hline
+    \texttt{NFLX}    & \text{Netflix, Inc.}
+    \\[0.25em]\hline
+    \texttt{TSLA}    & \text{Tesla, Inc.}
+    \\[0.25em]\hline
+    \texttt{TWLO}    & \text{Twilio Inc.}
+    \\[0.25em]\hline
+    \texttt{ULTA}    & \text{Ulta Beauty, Inc.}
+    \\[0.25em]\hline
+    \texttt{UNH}     & \text{UnitedHealth Group Incorporated}
+    \\[0.25em]\hline
+    \end{array}
+    \end{displaymath}
+    \end{document}
+{% endlatex %}
 
 Here are the charts:
 
@@ -165,18 +206,35 @@ Here we see a familiar pattern. It takes the shape roughly of a Laplace distribu
 
 To see if the pattern holds, let's take a look at the daily exchange rates of a few more currency pairs. Here is the list:
 
-{% table %}
-| <span style="width: 4em;">Symbol</span> | <span style="width: 17em;">Currency Pair</span>
-|:----------------------------------------|:---
-| <abbr class="ticker">USD/JPY</abbr>     | US dollar / Japanese yen
-| <abbr class="ticker">USD/MXN</abbr>     | US dollar / Mexican peso
-| <abbr class="ticker">USD/RUB</abbr>     | US dollar / Russian ruble
-| <abbr class="ticker">USD/TRY</abbr>     | US dollar / Turkish lira
-| <abbr class="ticker">USD/ZAR</abbr>     | US dollar / South African rand
-| <abbr class="ticker">EUR/NOK</abbr>     | Euro / Norwegian krone
-| <abbr class="ticker">EUR/SEK</abbr>     | Euro / Swedish krona
-| <abbr class="ticker">EUR/TRY</abbr>     | Euro / Turkish lira
-{% endtable %}
+{% latex fig-93 %}
+    \usepackage{array}
+    \setlength{\arraycolsep}{1em}
+    \begin{document}
+    \begin{displaymath}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{4em}<{$}|>{$}wl{15em}<{$}|}
+    \hline
+    \text{Symbol}    & \text{Underlying Asset}
+    \\[0.25em]\hline
+    \texttt{USD/JPY} & \text{US dollar / Japanese yen}
+    \\[0.25em]\hline
+    \texttt{USD/MXN} & \text{US dollar / Mexican peso}
+    \\[0.25em]\hline
+    \texttt{USD/RUB} & \text{US dollar / Russian ruble}
+    \\[0.25em]\hline
+    \texttt{USD/TRY} & \text{US dollar / Turkish lira}
+    \\[0.25em]\hline
+    \texttt{USD/ZAR} & \text{US dollar / South African rand}
+    \\[0.25em]\hline
+    \texttt{EUR/NOK} & \text{Euro / Norwegian krone}
+    \\[0.25em]\hline
+    \texttt{EUR/SEK} & \text{Euro / Swedish krona}
+    \\[0.25em]\hline
+    \texttt{EUR/TRY} & \text{Euro / Turkish lira}
+    \\[0.25em]\hline
+    \end{array}
+    \end{displaymath}
+    \end{document}
+{% endlatex %}
 
 Here are the charts:
 
@@ -210,13 +268,25 @@ Notice in some of these charts there is a large spike in the concentration of pr
 
 A number of different cryptocurrencies have emerged in the past few years. And some of them have made enormous price moves. Can we expect the price fluctuations of these digital assets to exhibit the same characteristics as stocks and currencies? Let's examine a few of the most popular ones:
 
-{% table %}
-| <span style="width: 4em;">Symbol</span> | <span style="width: 17em;">Digital Asset</span>
-| :---------------------------------------|:---
-| <abbr class="ticker">BTC</abbr>         | Bitcoin
-| <abbr class="ticker">ETH</abbr>         | Ethereum
-| <abbr class="ticker">XRP</abbr>         | Ripple
-{% endtable %}
+{% latex fig-94 %}
+    \usepackage{array}
+    \setlength{\arraycolsep}{1em}
+    \begin{document}
+    \begin{displaymath}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{4em}<{$}|>{$}wl{15em}<{$}|}
+    \hline
+    \text{Symbol}    & \text{Underlying Asset}
+    \\[0.25em]\hline
+    \texttt{BTC}     & \text{Bitcoin}
+    \\[0.25em]\hline
+    \texttt{ETH}     & \text{Ethereum}
+    \\[0.25em]\hline
+    \texttt{XRP}     & \text{Ripple}
+    \\[0.25em]\hline
+    \end{array}
+    \end{displaymath}
+    \end{document}
+{% endlatex %}
 
 Here are the charts:
 

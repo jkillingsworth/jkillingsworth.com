@@ -26,21 +26,39 @@ As might be expected, based on a [previous study]({% post_url 2019-01-26-the-dis
 
 Looking at the dither component, the shape of histogram resembles that of a Laplace distribution about as neatly as the shape of the histogram for the market price does. The standard deviation is about the same as that of the market price data as well. To gain more insights, let's look at some concrete numbers concerning the analysis of these three data sets:
 
-{% table %}
-| <span style="width: 10em;">Location Parameter</span> | <span style="width: 7em;">Normal (<var>&mu;</var>)</span>    | <span style="width: 7em;">Laplace (<var>&mu;</var>)</span>
-|:-----------------------------------------------------|:-------------------------------------------------------------|:---
-| Market                                               | +2.754 &times; 10<sup>-4</sup>                               | +6.493 &times; 10<sup>-4</sup>
-| Smooth                                               | +2.488 &times; 10<sup>-4</sup>                               | +4.072 &times; 10<sup>-4</sup>
-| Dither                                               | +1.921 &times; 10<sup>-5</sup>                               | +7.902 &times; 10<sup>-5</sup>
-{% endtable %}
-
-{% table %}
-| <span style="width: 10em;">Scale Parameter</span>    | <span style="width: 7em;">Normal (<var>&sigma;</var>)</span> | <span style="width: 7em;">Laplace (<var>b</var>)</span>
-|:-----------------------------------------------------|:-------------------------------------------------------------|:---
-| Market                                               | +1.213 &times; 10<sup>-2</sup>                               | +8.131 &times; 10<sup>-3</sup>
-| Smooth                                               | +1.411 &times; 10<sup>-3</sup>                               | +9.596 &times; 10<sup>-4</sup>
-| Dither                                               | +1.190 &times; 10<sup>-2</sup>                               | +7.987 &times; 10<sup>-3</sup>
-{% endtable %}
+{% latex fig-91 %}
+    \usepackage{array}
+    \setlength{\arraycolsep}{1em}
+    \begin{document}
+    \begin{displaymath}
+    \begin{aligned}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \hline
+    \text{Location Parameter} & \text{Normal ($\mu$)}    & \text{Laplace ($\mu$)}
+    \\[0.25em]\hline
+    \text{Market}             & +2.754 \times 10^{-4}    & +6.493 \times 10^{-4}
+    \\[0.25em]\hline
+    \text{Smooth}             & +2.488 \times 10^{-4}    & +4.072 \times 10^{-4}
+    \\[0.25em]\hline
+    \text{Dither}             & +1.921 \times 10^{-5}    & +7.902 \times 10^{-5}
+    \\[0.25em]\hline
+    \end{array}
+    \\[1em]
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \hline
+    \text{Scale Parameter}    & \text{Normal ($\sigma$)} & \text{Laplace ($b$)}
+    \\[0.25em]\hline
+    \text{Market}             & +1.213 \times 10^{-2}    & +8.131 \times 10^{-3}
+    \\[0.25em]\hline
+    \text{Smooth}             & +1.411 \times 10^{-3}    & +9.596 \times 10^{-4}
+    \\[0.25em]\hline
+    \text{Dither}             & +1.190 \times 10^{-2}    & +7.987 \times 10^{-3}
+    \\[0.25em]\hline
+    \end{array}
+    \end{aligned}
+    \end{displaymath}
+    \end{document}
+{% endlatex %}
 
 These values are the maximum likelihood estimates for each data set. The tables above show the estimated location and scale parameters for both the normal density function and the Laplace density function. My post titled [*Normal and Laplace Distributions*]({% post_url 2018-11-15-normal-and-laplace-distributions %}) provides the details on how these values are calculated.
 
@@ -63,21 +81,39 @@ The intraday price series contains a couple of sudden price moves that are not t
 
 This histogram for market price data looks like it might approximate the shape of the Laplace density function, but it has a set of shoulders not present in the model function. The histogram for the smooth component has a shape that is even less well defined. But look at the shape of the histogram for the dither component---it looks like an almost ideal approximation of the Laplace density function. Let's take a look at the numbers:
 
-{% table %}
-| <span style="width: 10em;">Location Parameter</span> | <span style="width: 7em;">Normal (<var>&mu;</var>)</span>    | <span style="width: 7em;">Laplace (<var>&mu;</var>)</span>
-|:-----------------------------------------------------|:-------------------------------------------------------------|:---
-| Market                                               | +3.889 &times; 10<sup>-6</sup>                               | +0.000 &times; 10<sup>+0</sup>
-| Smooth                                               | +3.579 &times; 10<sup>-6</sup>                               | +2.765 &times; 10<sup>-6</sup>
-| Dither                                               | +7.600 &times; 10<sup>-7</sup>                               | +1.407 &times; 10<sup>-6</sup>
-{% endtable %}
-
-{% table %}
-| <span style="width: 10em;">Scale Parameter</span>    | <span style="width: 7em;">Normal (<var>&sigma;</var>)</span> | <span style="width: 7em;">Laplace (<var>b</var>)</span>
-|:-----------------------------------------------------|:-------------------------------------------------------------|:---
-| Market                                               | +2.499 &times; 10<sup>-4</sup>                               | +1.374 &times; 10<sup>-4</sup>
-| Smooth                                               | +3.418 &times; 10<sup>-5</sup>                               | +2.333 &times; 10<sup>-5</sup>
-| Dither                                               | +2.535 &times; 10<sup>-4</sup>                               | +1.372 &times; 10<sup>-4</sup>
-{% endtable %}
+{% latex fig-92 %}
+    \usepackage{array}
+    \setlength{\arraycolsep}{1em}
+    \begin{document}
+    \begin{displaymath}
+    \begin{aligned}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \hline
+    \text{Location Parameter} & \text{Normal ($\mu$)}    & \text{Laplace ($\mu$)}
+    \\[0.25em]\hline
+    \text{Market}             & +3.889 \times 10^{-6}    & +0.000 \times 10^{+0}
+    \\[0.25em]\hline
+    \text{Smooth}             & +3.579 \times 10^{-6}    & +2.765 \times 10^{-6}
+    \\[0.25em]\hline
+    \text{Dither}             & +7.600 \times 10^{-7}    & +1.407 \times 10^{-6}
+    \\[0.25em]\hline
+    \end{array}
+    \\[1em]
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \hline
+    \text{Scale Parameter}    & \text{Normal ($\sigma$)} & \text{Laplace ($b$)}
+    \\[0.25em]\hline
+    \text{Market}             & +2.499 \times 10^{-4}    & +1.374 \times 10^{-4}
+    \\[0.25em]\hline
+    \text{Smooth}             & +3.418 \times 10^{-5}    & +2.333 \times 10^{-5}
+    \\[0.25em]\hline
+    \text{Dither}             & +2.535 \times 10^{-4}    & +1.372 \times 10^{-4}
+    \\[0.25em]\hline
+    \end{array}
+    \end{aligned}
+    \end{displaymath}
+    \end{document}
+{% endlatex %}
 
 The location and scale parameters fitted to the normal density function follow the same pattern we saw in the previous data set. The smooth component represents the trend and the dither component represents the noise. For the Laplace density function, this pattern also holds for the scale parameter but not for the location parameter. Interestingly, the location parameter fitted to the Laplace density function implies a sideways trend in the market price, but indicates and upward bias in both the smooth component and the dither component.
 
@@ -96,21 +132,39 @@ The smooth component seems to track the market price fairly well most of the tim
 
 The shape of the histogram for both the market price data and the dither component closely resemble the shape of the Laplace density function. For the smooth component, the histogram has a general bell shape, but it looks like it might be a bit too sloppy and asymmetrical to properly characterize it as having the shape of a normal or a Laplace density function. Here are the numbers:
 
-{% table %}
-| <span style="width: 10em;">Location Parameter</span> | <span style="width: 7em;">Normal (<var>&mu;</var>)</span>    | <span style="width: 7em;">Laplace (<var>&mu;</var>)</span>
-|:-----------------------------------------------------|:-------------------------------------------------------------|:---
-| Market                                               | -1.153 &times; 10<sup>-5</sup>                               | +0.000 &times; 10<sup>+0</sup>
-| Smooth                                               | -2.138 &times; 10<sup>-5</sup>                               | -2.425 &times; 10<sup>-5</sup>
-| Dither                                               | +5.110 &times; 10<sup>-6</sup>                               | +4.360 &times; 10<sup>-5</sup>
-{% endtable %}
-
-{% table %}
-| <span style="width: 10em;">Scale Parameter</span>    | <span style="width: 7em;">Normal (<var>&sigma;</var>)</span> | <span style="width: 7em;">Laplace (<var>b</var>)</span>
-|:-----------------------------------------------------|:-------------------------------------------------------------|:---
-| Market                                               | +6.169 &times; 10<sup>-3</sup>                               | +4.385 &times; 10<sup>-3</sup>
-| Smooth                                               | +8.839 &times; 10<sup>-4</sup>                               | +6.716 &times; 10<sup>-4</sup>
-| Dither                                               | +6.100 &times; 10<sup>-3</sup>                               | +4.343 &times; 10<sup>-3</sup>
-{% endtable %}
+{% latex fig-93 %}
+    \usepackage{array}
+    \setlength{\arraycolsep}{1em}
+    \begin{document}
+    \begin{displaymath}
+    \begin{aligned}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \hline
+    \text{Location Parameter} & \text{Normal ($\mu$)}    & \text{Laplace ($\mu$)}
+    \\[0.25em]\hline
+    \text{Market}             & -1.153 \times 10^{-5}    & +0.000 \times 10^{+0}
+    \\[0.25em]\hline
+    \text{Smooth}             & -2.138 \times 10^{-5}    & -2.425 \times 10^{-5}
+    \\[0.25em]\hline
+    \text{Dither}             & +5.110 \times 10^{-6}    & +4.360 \times 10^{-5}
+    \\[0.25em]\hline
+    \end{array}
+    \\[1em]
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \hline
+    \text{Scale Parameter}    & \text{Normal ($\sigma$)} & \text{Laplace ($b$)}
+    \\[0.25em]\hline
+    \text{Market}             & +6.169 \times 10^{-3}    & +4.385 \times 10^{-3}
+    \\[0.25em]\hline
+    \text{Smooth}             & +8.839 \times 10^{-4}    & +6.716 \times 10^{-4}
+    \\[0.25em]\hline
+    \text{Dither}             & +6.100 \times 10^{-3}    & +4.343 \times 10^{-3}
+    \\[0.25em]\hline
+    \end{array}
+    \end{aligned}
+    \end{displaymath}
+    \end{document}
+{% endlatex %}
 
 The pattern here is very similar to that of the previous data set. These results suggest that the smooth component captures the trend and the dither component captures the noise. As with the estimates computed for the previous section, the location parameters estimated for the Laplace distribution give confusing results.
 
@@ -129,21 +183,39 @@ In my post titled [*The Very Strange Chinese Yuan*]({% post_url 2019-02-10-the-v
 
 The shape of the histogram for the market price data shows the triple peak pattern that is characteristic of intraday exchange rates between the yuan and dollar. The histogram for the smooth component exhibits a roughly bell shaped distribution with no indication of the triple peak pattern at all. The fitted density functions for the smooth component are both shifted to the left, which can be attributed to the downward trend visible in the price chart. The histogram for the dither component, on the other hand, clearly shows the triple peak pattern, indicating that this distinctive noise pattern is almost entirely removed from the price trend. Here are the parameter estimates for the density functions:
 
-{% table %}
-| <span style="width: 10em;">Location Parameter</span> | <span style="width: 7em;">Normal (<var>&mu;</var>)</span>    | <span style="width: 7em;">Laplace (<var>&mu;</var>)</span>
-|:-----------------------------------------------------|:-------------------------------------------------------------|:---
-| Market                                               | -2.133 &times; 10<sup>-6</sup>                               | +0.000 &times; 10<sup>+0</sup>
-| Smooth                                               | -2.374 &times; 10<sup>-6</sup>                               | -1.598 &times; 10<sup>-6</sup>
-| Dither                                               | -3.132 &times; 10<sup>-7</sup>                               | -1.345 &times; 10<sup>-6</sup>
-{% endtable %}
-
-{% table %}
-| <span style="width: 10em;">Scale Parameter</span>    | <span style="width: 7em;">Normal (<var>&sigma;</var>)</span> | <span style="width: 7em;">Laplace (<var>b</var>)</span>
-|:-----------------------------------------------------|:-------------------------------------------------------------|:---
-| Market                                               | +1.894 &times; 10<sup>-4</sup>                               | +1.216 &times; 10<sup>-4</sup>
-| Smooth                                               | +6.481 &times; 10<sup>-5</sup>                               | +5.006 &times; 10<sup>-6</sup>
-| Dither                                               | +1.899 &times; 10<sup>-4</sup>                               | +1.223 &times; 10<sup>-4</sup>
-{% endtable %}
+{% latex fig-94 %}
+    \usepackage{array}
+    \setlength{\arraycolsep}{1em}
+    \begin{document}
+    \begin{displaymath}
+    \begin{aligned}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \hline
+    \text{Location Parameter} & \text{Normal ($\mu$)}    & \text{Laplace ($\mu$)}
+    \\[0.25em]\hline
+    \text{Market}             & -2.133 \times 10^{-6}    & +0.000 \times 10^{+0}
+    \\[0.25em]\hline
+    \text{Smooth}             & -2.374 \times 10^{-6}    & -1.598 \times 10^{-6}
+    \\[0.25em]\hline
+    \text{Dither}             & -3.132 \times 10^{-7}    & -1.345 \times 10^{-6}
+    \\[0.25em]\hline
+    \end{array}
+    \\[1em]
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \hline
+    \text{Scale Parameter}    & \text{Normal ($\sigma$)} & \text{Laplace ($b$)}
+    \\[0.25em]\hline
+    \text{Market}             & +1.894 \times 10^{-4}    & +1.216 \times 10^{-4}
+    \\[0.25em]\hline
+    \text{Smooth}             & +6.481 \times 10^{-5}    & +5.006 \times 10^{-6}
+    \\[0.25em]\hline
+    \text{Dither}             & +1.899 \times 10^{-4}    & +1.223 \times 10^{-4}
+    \\[0.25em]\hline
+    \end{array}
+    \end{aligned}
+    \end{displaymath}
+    \end{document}
+{% endlatex %}
 
 Again, we see a pattern here similar to that of the previous data sets. For the parameters fitted to the normal density function, the magnitude of the values give evidence that the smooth component represents the trend and the dither component represents the noise. We can see this mirrored in the scale parameter values fitted to the Laplace density function, but the fitted location parameter values are not as intuitive. For the Laplace density function, the location parameter fitted to the market price data is zero even though there is an obvious downward trend in the price chart.
 
@@ -162,21 +234,39 @@ The price chart shows a fairly consistent multi-year trend followed by a distinc
 
 The histograms for both the market price and the dither component have a shape that resembles the Laplace density function. The histogram for the smooth component has a sloppy and irregular shape. Here are the numbers:
 
-{% table %}
-| <span style="width: 10em;">Location Parameter</span> | <span style="width: 7em;">Normal (<var>&mu;</var>)</span>    | <span style="width: 7em;">Laplace (<var>&mu;</var>)</span>
-|:-----------------------------------------------------|:-------------------------------------------------------------|:---
-| Market                                               | +1.285 &times; 10<sup>-3</sup>                               | +1.550 &times; 10<sup>-3</sup>
-| Smooth                                               | +1.214 &times; 10<sup>-3</sup>                               | +6.953 &times; 10<sup>-4</sup>
-| Dither                                               | +3.659 &times; 10<sup>-4</sup>                               | +1.532 &times; 10<sup>-3</sup>
-{% endtable %}
-
-{% table %}
-| <span style="width: 10em;">Scale Parameter</span>    | <span style="width: 7em;">Normal (<var>&sigma;</var>)</span> | <span style="width: 7em;">Laplace (<var>b</var>)</span>
-|:-----------------------------------------------------|:-------------------------------------------------------------|:---
-| Market                                               | +3.855 &times; 10<sup>-2</sup>                               | +2.476 &times; 10<sup>-2</sup>
-| Smooth                                               | +5.870 &times; 10<sup>-3</sup>                               | +4.548 &times; 10<sup>-3</sup>
-| Dither                                               | +3.832 &times; 10<sup>-2</sup>                               | +2.477 &times; 10<sup>-2</sup>
-{% endtable %}
+{% latex fig-95 %}
+    \usepackage{array}
+    \setlength{\arraycolsep}{1em}
+    \begin{document}
+    \begin{displaymath}
+    \begin{aligned}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \hline
+    \text{Location Parameter} & \text{Normal ($\mu$)}    & \text{Laplace ($\mu$)}
+    \\[0.25em]\hline
+    \text{Market}             & +1.285 \times 10^{-3}    & +1.550 \times 10^{-3}
+    \\[0.25em]\hline
+    \text{Smooth}             & +1.214 \times 10^{-3}    & +6.953 \times 10^{-4}
+    \\[0.25em]\hline
+    \text{Dither}             & +3.659 \times 10^{-4}    & +1.532 \times 10^{-3}
+    \\[0.25em]\hline
+    \end{array}
+    \\[1em]
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \hline
+    \text{Scale Parameter}    & \text{Normal ($\sigma$)} & \text{Laplace ($b$)}
+    \\[0.25em]\hline
+    \text{Market}             & +3.855 \times 10^{-2}    & +2.476 \times 10^{-2}
+    \\[0.25em]\hline
+    \text{Smooth}             & +5.870 \times 10^{-3}    & +4.548 \times 10^{-3}
+    \\[0.25em]\hline
+    \text{Dither}             & +3.832 \times 10^{-2}    & +2.477 \times 10^{-2}
+    \\[0.25em]\hline
+    \end{array}
+    \end{aligned}
+    \end{displaymath}
+    \end{document}
+{% endlatex %}
 
 Not surprisingly, these results mirror what we've seen with the other data sets. The parameters fitted to the normal density function and the scale parameters fitted to the Laplace density function indicate that the smooth and dither components represent the trend and noise respectively. The location parameters estimated for the Laplace density function remain a bit more mysterious.
 
