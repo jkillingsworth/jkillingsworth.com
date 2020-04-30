@@ -38,18 +38,6 @@
 @font-face
 {
     font-display: swap;
-    font-family: "Lora Tabular";
-    font-style: normal;
-    font-weight: 400;
-    src: local("Lora Tabular Regular"), local("LoraTabular-Regular"), //
-    url(./static/fonts/lora-variant-tabular-nums.woff2) format("woff2"), //
-    url(./static/fonts/lora-variant-tabular-nums.woff) format("woff");
-    unicode-range: U+0030-0039;
-}
-
-@font-face
-{
-    font-display: swap;
     font-family: "Roboto Mono";
     font-style: normal;
     font-weight: 400;
