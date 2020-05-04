@@ -3,7 +3,7 @@ layout: post
 title: Separating Signal from Noise
 ---
 
-I want a experiment with modeling price changes over time as the combination of a smooth trend component overlaid with a random noise component. My goal is to examine the statistical properties of each constituent component and compare the results to the statistical properties of the undecomposed market price.
+I want to experiment with modeling price changes over time as the combination of a smooth trend component overlaid with a random noise component. My goal is to examine the statistical properties of each constituent component and compare the results to the statistical properties of the undecomposed market price.
 
 <!--excerpt-->
 
