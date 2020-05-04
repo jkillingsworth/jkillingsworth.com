@@ -28,7 +28,7 @@ convert_tex_to_dvi()
 convert_dvi_to_svg()
 {
     clargs="${1} --exact --zoom=1.333333 --precision=6 --verbosity=3"
-    output=$(dvisvgm ${clargs} "${jobname}.dvi" 2>&1)
+    output=$(dvisvgm ${clargs} --output="${jobname}.svg" "${jobname}.dvi" 2>&1)
 
     if [ -n "${output}" ]; then
         echo "${output}" 1>&2
