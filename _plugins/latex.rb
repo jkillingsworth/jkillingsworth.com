@@ -7,8 +7,8 @@ module Jekyll
         @@latex_upper = '
             \documentclass[varwidth]{standalone}
             \usepackage[charter]{mathdesign}
-            \usepackage{mathtools}
             \usepackage[scaled=0.75]{roboto-mono}
+            \usepackage{mathtools}
             '
 
         def process_latex(items)
