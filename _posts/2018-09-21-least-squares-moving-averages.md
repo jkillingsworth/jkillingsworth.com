@@ -44,17 +44,17 @@ You can think of this as a constant function for which we estimate the coefficie
 
 The charts below illustrate what the moving average looks like for three different stock price data sets. The moving averages are computed using a 200 day lookback window. The fitted line is plotted for the final lookback period.
 
-For ticker symbol <abbr class="ticker">MSFT</abbr>:
+For ticker symbol MSFT:
 
 {% chart fig-03-simple-MSFT-full.svg %}
 {% chart fig-04-simple-MSFT-zoom.svg %}
 
-For ticker symbol <abbr class="ticker">WYNN</abbr>:
+For ticker symbol WYNN:
 
 {% chart fig-05-simple-WYNN-full.svg %}
 {% chart fig-06-simple-WYNN-zoom.svg %}
 
-For ticker symbol <abbr class="ticker">HEAR</abbr>:
+For ticker symbol HEAR:
 
 {% chart fig-07-simple-HEAR-full.svg %}
 {% chart fig-08-simple-HEAR-zoom.svg %}
@@ -89,22 +89,22 @@ While there are many techniques that can be used to approximate the coefficients
 
 Like before, the charts below illustrate what the moving average looks like for the three different stock price data sets. In this case, the moving average values are calculated using least squares linear regression. The fitted line takes the form of a linear function.
 
-For ticker symbol <abbr class="ticker">MSFT</abbr>:
+For ticker symbol MSFT:
 
 {% chart fig-11-lsrlin-MSFT-full.svg %}
 {% chart fig-12-lsrlin-MSFT-zoom.svg %}
 
-For ticker symbol <abbr class="ticker">WYNN</abbr>:
+For ticker symbol WYNN:
 
 {% chart fig-13-lsrlin-WYNN-full.svg %}
 {% chart fig-14-lsrlin-WYNN-zoom.svg %}
 
-For ticker symbol <abbr class="ticker">HEAR</abbr>:
+For ticker symbol HEAR:
 
 {% chart fig-15-lsrlin-HEAR-full.svg %}
 {% chart fig-16-lsrlin-HEAR-zoom.svg %}
 
-The linear least squares moving average tracks the price much better than the simple moving average does, especially during periods when the price is trending up or down. If you look at the fitted line for <abbr class="ticker">MSFT</abbr>, you can see how it is almost a perfect fit. The linear model still seems to lag a little but during reversals, however.
+The linear least squares moving average tracks the price much better than the simple moving average does, especially during periods when the price is trending up or down. If you look at the fitted line for MSFT, you can see how it is almost a perfect fit. The linear model still seems to lag a little but during reversals, however.
 
 ## Polynomial Regression
 
@@ -162,22 +162,22 @@ While the matrix equation above is arranged specifically for finding the coeffic
 
 Using the same three stock price data sets as before, the charts below illustrate what the moving average looks like when applying least squares regression to a quadratic model. The fitted line takes the shape of a parabolic curve.
 
-For ticker symbol <abbr class="ticker">MSFT</abbr>:
+For ticker symbol MSFT:
 
 {% chart fig-19-lsrpol-MSFT-full.svg %}
 {% chart fig-20-lsrpol-MSFT-zoom.svg %}
 
-For ticker symbol <abbr class="ticker">WYNN</abbr>:
+For ticker symbol WYNN:
 
 {% chart fig-21-lsrpol-WYNN-full.svg %}
 {% chart fig-22-lsrpol-WYNN-zoom.svg %}
 
-For ticker symbol <abbr class="ticker">HEAR</abbr>:
+For ticker symbol HEAR:
 
 {% chart fig-23-lsrpol-HEAR-full.svg %}
 {% chart fig-24-lsrpol-HEAR-zoom.svg %}
 
-Notice that the fitted line for <abbr class="ticker">WYNN</abbr> tracks the reversal quite nicely. The moving average computed using second order polynomial regression appears to track the market prices much more tightly than the other methods. The drawback, however, is that the moving average is not quite as smooth.
+Notice that the fitted line for WYNN tracks the reversal quite nicely. The moving average computed using second order polynomial regression appears to track the market prices much more tightly than the other methods. The drawback, however, is that the moving average is not quite as smooth.
 
 ## Exponential Regression
 
@@ -257,21 +257,21 @@ Once the coefficients for the linear model are know, we can use the values to co
 
 Once again, the charts below illustrate what the moving average looks like for all three stock price data sets, this time using least squares regression with an exponential model. Note that the fitted line now takes the form of a rising or falling exponential curve.
 
-For ticker symbol <abbr class="ticker">MSFT</abbr>:
+For ticker symbol MSFT:
 
 {% chart fig-31-lsrexp-MSFT-full.svg %}
 {% chart fig-32-lsrexp-MSFT-zoom.svg %}
 
-For ticker symbol <abbr class="ticker">WYNN</abbr>:
+For ticker symbol WYNN:
 
 {% chart fig-33-lsrexp-WYNN-full.svg %}
 {% chart fig-34-lsrexp-WYNN-zoom.svg %}
 
-For ticker symbol <abbr class="ticker">HEAR</abbr>:
+For ticker symbol HEAR:
 
 {% chart fig-35-lsrexp-HEAR-full.svg %}
 {% chart fig-36-lsrexp-HEAR-zoom.svg %}
 
-When performing the regression using the exponential model, the results look very similar to those found using the linear model. While exponential regression might provide a slightly better fit in cases where there is exponential growth or decay, the price tracking can still lag behind during reversals. As the charts for <abbr class="ticker">HEAR</abbr> show, the moving average can even overshoot quite a bit in cases where there is a sharp reversal.
+When performing the regression using the exponential model, the results look very similar to those found using the linear model. While exponential regression might provide a slightly better fit in cases where there is exponential growth or decay, the price tracking can still lag behind during reversals. As the charts for HEAR show, the moving average can even overshoot quite a bit in cases where there is a sharp reversal.
 
 {% accompanying_src_link %}

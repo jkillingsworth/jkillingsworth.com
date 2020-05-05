@@ -11,7 +11,7 @@ In the 1960s, Mandelbrot studied historical cotton prices and noticed the distri
 
 ## Analyzing the Data
 
-The first set of data I want to look at are the daily closing prices of an S&P 500 index tracking fund. Specifically, I'm using the SPDR S&P 500 ETF. The ticker symbol is <abbr class="ticker">SPY</abbr>. This is currently one of the most heavily traded instruments on the New York Stock Exchange. Below is a chart of the daily closing prices over the past 21 years:
+The first set of data I want to look at are the daily closing prices of an S&P 500 index tracking fund. Specifically, I'm using the SPDR S&P 500 ETF. The ticker symbol is SPY. This is currently one of the most heavily traded instruments on the New York Stock Exchange. Below is a chart of the daily closing prices over the past 21 years:
 
 {% chart fig-01-stocks-daily-SPY-price.svg %}
 
@@ -74,7 +74,7 @@ Each data set contains at least 10 years worth of data. Using the same technique
 {% chart fig-11-stocks-daily-UNG-probs.svg %}
 {% chart fig-12-stocks-daily-USO-probs.svg %}
 
-As you can see, the histogram seems to fit the Laplace distribution better than the normal distribution most of the time. But not always. There are some cases that appear to fit somewhere in between the normal distribution and the Laplace distribution. A cursory look at <abbr class="ticker">UNG</abbr>, for example, might suggest the variation is normally distributed.
+As you can see, the histogram seems to fit the Laplace distribution better than the normal distribution most of the time. But not always. There are some cases that appear to fit somewhere in between the normal distribution and the Laplace distribution. A cursory look at UNG, for example, might suggest the variation is normally distributed.
 
 ## Individual Stocks (Daily)
 
