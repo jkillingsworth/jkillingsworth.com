@@ -233,7 +233,7 @@ We also need to determine the middle value:
     \begin{dcases}
     \frac{n}{2}     & \quad \text{if $n$ is even}
     \\[0.5em]
-    \frac{n + 1}{2} & \quad  \text{if $n$ is odd}
+    \frac{n + 1}{2} & \quad \text{if $n$ is odd}
     \end{dcases}
     \end{displaymath}
     \end{document}
