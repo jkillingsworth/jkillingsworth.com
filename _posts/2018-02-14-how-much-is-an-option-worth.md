@@ -125,7 +125,7 @@ Now let's assume the probability of each outcome is this:
     \begin{displaymath}
     \begin{array}{@{\rule{0em}{1.25em}}|l|>{$}wl{4em}<{$}|}
     \hline
-    S_T  & Pr(S_T)
+    S_T  & P(S_T)
     \\[0.25em]\hline
     \$20 & 0.05
     \\[0.25em]\hline
@@ -152,7 +152,7 @@ We can compute the expected value of the option as a weighted average:
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathbb{E}[V(S_T)] & = \sum_{x \in X}^{ } Pr(S_T = x)V(S_T = x)
+    \mathbb{E}[V(S_T)] & = \sum_{x \in X}^{ } P(S_T = x)V(S_T = x)
     \\[1em]
                        & = \$5
     \end{aligned}
@@ -179,7 +179,7 @@ Prices can't fall below zero, so the range of possible values has a lower bound 
 {% latex fig-09 %}
     \begin{document}
     \begin{displaymath}
-    F(x) = Pr(S_T \leq x)
+    F(x) = P(S_T \leq x)
     \end{displaymath}
     \end{document}
 {% endlatex %}

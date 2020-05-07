@@ -169,11 +169,11 @@ Keep in mind that the model is symmetrical. Let's use the following notation to 
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_0 & = Pr(S_{0})
+    r_0 & = P(S_{0})
     \\[1em]
-    r_2 & = Pr(S_{-2}) = Pr(S_{+2})
+    r_2 & = P(S_{-2}) = P(S_{+2})
     \\[1em]
-    r_4 & = Pr(S_{-4}) = Pr(S_{+4})
+    r_4 & = P(S_{-4}) = P(S_{+4})
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -185,16 +185,16 @@ Since the model is symmetrical, the chance of ending up on any given positive te
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_0 & = Pr(\texttt{TTHH}) + Pr(\texttt{THTH}) + Pr(\texttt{HTTH})
-          + Pr(\texttt{THHT}) + Pr(\texttt{HTHT}) + Pr(\texttt{HHTT})
+    r_0 & = P(\texttt{TTHH}) + P(\texttt{THTH}) + P(\texttt{HTTH})
+          + P(\texttt{THHT}) + P(\texttt{HTHT}) + P(\texttt{HHTT})
     \\[1em]
-    r_2 & = Pr(\texttt{TTTH}) + Pr(\texttt{TTHT}) + Pr(\texttt{THTT}) + Pr(\texttt{HTTT})
+    r_2 & = P(\texttt{TTTH}) + P(\texttt{TTHT}) + P(\texttt{THTT}) + P(\texttt{HTTT})
     \\
-        & = Pr(\texttt{THHH}) + Pr(\texttt{HTHH}) + Pr(\texttt{HHTH}) + Pr(\texttt{HHHT})
+        & = P(\texttt{THHH}) + P(\texttt{HTHH}) + P(\texttt{HHTH}) + P(\texttt{HHHT})
     \\[1em]
-    r_4 & = Pr(\texttt{TTTT})
+    r_4 & = P(\texttt{TTTT})
     \\
-        & = Pr(\texttt{HHHH})
+        & = P(\texttt{HHHH})
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -297,9 +297,9 @@ Let's introduce the following notation. We have seen a graphical illustration of
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    Pr(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, ..., n
+    P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, ..., n
     \\[1em]
-    f(k)      & = \binom{n}{k} = \frac{n!}{k!(n - k)!}
+    f(k)     & = \binom{n}{k} = \frac{n!}{k!(n - k)!}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -310,7 +310,7 @@ For succinctness, I am using an alternate zero based index to represent the term
 {% latex fig-18 %}
     \begin{document}
     \begin{displaymath}
-     Pr(S_t) = Pr(X = k), \quad t = 2k - n
+     P(S_t) = P(X = k), \quad t = 2k - n
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -331,11 +331,11 @@ Now recall the following from the previous section:
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_0 & = Pr(S_{0})
+    r_0 & = P(S_{0})
     \\[1em]
-    r_2 & = Pr(S_{-2}) = Pr(S_{+2})
+    r_2 & = P(S_{-2}) = P(S_{+2})
     \\[1em]
-    r_4 & = Pr(S_{-4}) = Pr(S_{+4})
+    r_4 & = P(S_{-4}) = P(S_{+4})
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -347,11 +347,11 @@ We can substitute the alternate notation and rewrite it like this:
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_0 & = Pr(X = 2)
+    r_0 & = P(X = 2)
     \\[1em]
-    r_2 & = Pr(X = 1) = Pr(X = 3)
+    r_2 & = P(X = 1) = P(X = 3)
     \\[1em]
-    r_4 & = Pr(X = 0) = Pr(X = 4)
+    r_4 & = P(X = 0) = P(X = 4)
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -543,9 +543,9 @@ What if the expected outcome is not a binomial distribution? Suppose we observe 
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    Pr(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, ..., n
+    P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, ..., n
     \\[1em]
-    f(k)      & = n + 2 - |2k - n|
+    f(k)     & = n + 2 - |2k - n|
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -731,9 +731,9 @@ Suppose we model the expected outcome as a discrete double exponential distribut
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    Pr(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, ..., n
+    P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, ..., n
     \\[1em]
-    f(k)      & = 0.5^{a}, \quad a = \frac{|2k - n| - n}{2}
+    f(k)     & = 0.5^{a}, \quad a = \frac{|2k - n| - n}{2}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -762,9 +762,9 @@ Suppose we model the expected outcome as a discrete double exponential distribut
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    Pr(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, ..., n
+    P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, ..., n
     \\[1em]
-    f(k)      & = 0.4^{a}, \quad a = \frac{|2k - n| - n}{2}
+    f(k)     & = 0.4^{a}, \quad a = \frac{|2k - n| - n}{2}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -793,9 +793,9 @@ Suppose we model the expected outcome as a discrete double exponential distribut
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    Pr(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, ..., n
+    P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, ..., n
     \\[1em]
-    f(k)      & = 0.3^{a}, \quad a = \frac{|2k - n| - n}{2}
+    f(k)     & = 0.3^{a}, \quad a = \frac{|2k - n| - n}{2}
     \end{aligned}
     \end{displaymath}
     \end{document}

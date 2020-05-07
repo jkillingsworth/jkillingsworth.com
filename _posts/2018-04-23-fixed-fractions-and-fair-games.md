@@ -41,7 +41,7 @@ If we assume it's a fair coin, then each of the two outcomes has a 50% probabili
     \begin{displaymath}
     \begin{array}{@{\rule{0em}{1.25em}}|l|l|}
     \hline
-    X          & Pr(X)
+    X          & P(X)
     \\[0.25em]\hline
     \texttt{H} & 0.5
     \\[0.25em]\hline

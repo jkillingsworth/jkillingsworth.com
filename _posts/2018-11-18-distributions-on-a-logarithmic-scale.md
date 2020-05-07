@@ -14,7 +14,7 @@ Suppose we have a continuous random variable. We can define the cumulative distr
 {% latex fig-01 %}
     \begin{document}
     \begin{displaymath}
-    F(x) = Pr(X \leq x)
+    F(x) = P(X \leq x)
     \end{displaymath}
     \end{document}
 {% endlatex %}

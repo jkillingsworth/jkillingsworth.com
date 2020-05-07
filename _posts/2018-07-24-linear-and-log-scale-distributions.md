@@ -55,7 +55,7 @@ Since there are only two possible outcomes for each toss of the coin, the distri
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    & Pr(W = k) = \binom{n}{k} p^k (1 - p)^{n - k}
+    & P(W = k) = \binom{n}{k} p^k (1 - p)^{n - k}
     \\[1em]
     &
     \begin{aligned}
