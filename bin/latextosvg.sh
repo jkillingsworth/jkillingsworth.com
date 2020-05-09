@@ -137,7 +137,7 @@ do_post_processing()
     inner=$(grep -oPz "${inner_pattern}" ${jobname}.svg | tr -d "\0" | sort)
     lower=$(grep -oPz "${lower_pattern}" ${jobname}.svg | tr -d "\0")
 
-    svgfile="${upper}${inner}${lower}"
+    printf -v svgfile "${upper}\n${inner}${lower}"
 
     pattern="(?<=src:url\(data:application/x-font-ttf;base64,)(.+?)(?=\) format\('truetype'\);)"
     ttfonts=$(grep -oP "${pattern}" <<< "${svgfile}")
