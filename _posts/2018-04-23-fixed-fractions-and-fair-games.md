@@ -39,7 +39,7 @@ If we assume it's a fair coin, then each of the two outcomes has a 50% probabili
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|l|l|}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{1em}<{$}|>{$}wl{3em}<{$}|}
     \hline
     X          & P(X)
     \\[0.25em]\hline
@@ -244,7 +244,7 @@ Let's suppose the gambler plays two rounds of the coin toss game and always bets
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|l|l|}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{4em}<{$}|>{$}wl{3em}<{$}|}
     \hline
     \text{Outcome} & \text{Value}
     \\[0.25em]\hline
@@ -259,7 +259,7 @@ Let's suppose the gambler plays two rounds of the coin toss game and always bets
     \end{array}
     \end{displaymath}
     \end{document}
-  {% endlatex %}
+{% endlatex %}
 
 The average value of all possible outcomes in this case is $100, which is the breakeven amount. Also notice that there are an equal number of winning games as there are losing games. Both aspects are indicative of a fair game. If the gambler chooses the fixed fraction betting strategy, the results are a bit different:
 
@@ -268,7 +268,7 @@ The average value of all possible outcomes in this case is $100, which is the br
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|l|l|}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{4em}<{$}|>{$}wl{3em}<{$}|}
     \hline
     \text{Outcome} & \text{Value}
     \\[0.25em]\hline

@@ -45,7 +45,7 @@ Let's say the seller of the option contract predicts the price of the underlying
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|l|>{$}wl{4em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{2em}<{$}|>{$}wl{3em}<{$}|}
     \hline
     S_T  & V(S_T)
     \\[0.25em]\hline
@@ -93,7 +93,7 @@ Using the formula above again, we can compute the intrinsic value of the option 
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|l|>{$}wl{4em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{2em}<{$}|>{$}wl{3em}<{$}|}
     \hline
     S_T  & V(S_T)
     \\[0.25em]\hline
@@ -123,7 +123,7 @@ Now let's assume the probability of each outcome is this:
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|l|>{$}wl{4em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{2em}<{$}|>{$}wl{3em}<{$}|}
     \hline
     S_T  & P(S_T)
     \\[0.25em]\hline

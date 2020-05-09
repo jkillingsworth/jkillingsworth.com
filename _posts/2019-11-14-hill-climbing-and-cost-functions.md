@@ -104,7 +104,7 @@ Our objective is to revise the estimate to minimize the value of the cost functi
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{6em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{8em}<{$}|>{$}wl{6em}<{$}|}
     \hline
     \text{Proposed Revision} & \text{Cost}
     \\[0.25em]\hline
