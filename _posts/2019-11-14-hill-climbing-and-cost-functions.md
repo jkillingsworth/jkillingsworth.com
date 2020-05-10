@@ -141,7 +141,7 @@ The proposed revision with the lowest value for the cost function is the move wi
     \end{document}
 {% endlatex %}
 
-Using this revised estimate as our new baseline, we can repeat this process again and again until none of the proposed revisions offers an improvement the value of the cost function associated with the previous estimate. After many iterations, we converge on the following values:
+Using this revised estimate as our new baseline, we can repeat this process again and again until none of the proposed revisions offers an improvement to the value of the cost function associated with the previous estimate. After many iterations, we converge on the following values:
 
 {% latex fig-10 %}
     \begin{document}
@@ -197,7 +197,7 @@ In this case, the topmost point reached by the hiker is located on the western r
 
 ## Scoring Values on the Plateau
 
-Here I want to consider two different scoring functions that can be used to rank values on the plateau of possible solutions for the weighted coin toss game. Each of these scoring functions could be used as a secondary cost function in cases where the primary cost function returns the most optimal value of zero.
+Here I want to consider two different scoring functions that can be used to rank the values on a plateau of possible solutions for the weighted coin toss game. Each of these scoring functions could be used as a secondary cost function in cases where the primary cost function returns the most optimal value of zero.
 
 The first scoring function I want to consider gives preference to weights that are nearest to the center of the range of possible weights:
 
