@@ -5,7 +5,7 @@ module Jekyll
 
         def render(context)
             post = context.registers[:page]
-            link = "https://github.com/jkillingsworth/jkillingsworth.com/tree/master/_src/"
+            link = "https://github.com/jkillingsworth/jkillingsworth.com/tree/master/src/"
             link = link + post.id.gsub("/", "-").slice(1..-1)
 
             opening = "<p class=\"nojustify\"><a href=\"#{link}\">"
