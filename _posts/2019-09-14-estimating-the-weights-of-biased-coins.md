@@ -310,7 +310,7 @@ For succinctness, I am using an alternate zero based index to represent the term
 {% latex fig-18 %}
     \begin{document}
     \begin{displaymath}
-     P(S_t) = P(X = k), \quad t = 2k - n
+    P(S_t) = P(X = k), \quad t = 2k - n
     \end{displaymath}
     \end{document}
 {% endlatex %}
