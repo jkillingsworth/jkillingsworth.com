@@ -122,7 +122,7 @@ With four tosses of the coin, there are sixteen possible coin toss sequences and
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{5em}<{$}|>{$}wl{7em}<{$}|>{$}wl{10em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{5em}<{$}|>{$}wl{7em}<{$}|>{$}wl{11em}<{$}|}
     \hline
     \text{Sequence} & \text{Terminal State} & \text{Probability}
     \\[0.25em]\hline
