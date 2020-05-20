@@ -239,7 +239,7 @@ Substituting the value above for the weight of the coin at the zero state and th
     \\[1em]
     r_2 & = 0.5\,\Big( p_1 \,+\, p_1\,p_2 \,-\, p_1^2\,p_2 \,-\, p_1\,p_2\,p_3 \Big)
     \\[1em]
-    r_4 & = 0.5\,\Big( p_1\,p_2\, p_3 \Big)
+    r_4 & = 0.5\,\Big( p_1\,p_2\,p_3 \Big)
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -399,7 +399,7 @@ However, this is not the only solution. As it turns out, there is an entire rang
     \\[1em]
     r_2 & = 0.5\,\Big( p_1 \,+\, p_1\,p_2 \,-\, p_1^2\,p_2 \,-\, p_1\,p_2\,p_3 \Big)
     \\[1em]
-    r_4 & = 0.5\,\Big( p_1\,p_2\, p_3 \Big)
+    r_4 & = 0.5\,\Big( p_1\,p_2\,p_3 \Big)
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -434,7 +434,7 @@ Any value for the weight of the biased coin in the +1 state can be used provided
 {% latex fig-27 %}
     \begin{document}
     \begin{displaymath}
-    p_2  = 1
+    p_2 = 1
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -486,7 +486,7 @@ Not all coin toss combinations are equal. Some have a higher probability of bein
 {% latex fig-33 %}
     \begin{document}
     \begin{displaymath}
-    p_3  = 1
+    p_3 = 1
     \end{displaymath}
     \end{document}
 {% endlatex %}

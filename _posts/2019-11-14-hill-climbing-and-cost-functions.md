@@ -61,7 +61,7 @@ Given this initial guess, we can calculate what the expectation of the coin toss
     \\[1em]
     r_2 & = 0.5\,\Big( p_1 \,+\, p_1\,p_2 \,-\, p_1^2\,p_2 \,-\, p_1\,p_2\,p_3 \Big)
     \\[1em]
-    r_4 & = 0.5\,\Big( p_1\,p_2\, p_3 \Big)
+    r_4 & = 0.5\,\Big( p_1\,p_2\,p_3 \Big)
     \end{aligned}
     \end{displaymath}
     \end{document}
