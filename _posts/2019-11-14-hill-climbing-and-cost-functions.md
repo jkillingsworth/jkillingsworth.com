@@ -204,7 +204,7 @@ The first scoring function I want to consider gives preference to weights that a
 {% latex fig-19 %}
     \begin{document}
     \begin{displaymath}
-    \mathrlap{S_a}\phantom{S_a} = (p_1 - 0.5)^2 + (p_2 - 0.5)^2 + (p_3 - 0.5)^2
+    \mathrlap{S_a}\phantom{S_b} = (p_1 - 0.5)^2 + (p_2 - 0.5)^2 + (p_3 - 0.5)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -214,7 +214,7 @@ The second scoring function I want to consider gives preference to weights that 
 {% latex fig-20 %}
     \begin{document}
     \begin{displaymath}
-    \mathrlap{S_b}\phantom{S_a} = (p_1 - 0.5)^2 + (p_2 - p_1)^2 + (p_3 - p_2)^2
+    \mathrlap{S_b}\phantom{S_b} = (p_1 - 0.5)^2 + (p_2 - p_1)^2 + (p_3 - p_2)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -229,9 +229,9 @@ Plugging these weights into the scoring functions:
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathrlap{S_a}\phantom{S_a} & = 0.11318897
+    \mathrlap{S_a}\phantom{S_b} & = 0.11318897
     \\
-    \mathrlap{S_b}\phantom{S_a} & = 0.11078978
+    \mathrlap{S_b}\phantom{S_b} & = 0.11078978
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -247,9 +247,9 @@ Plugging these weights into the scoring functions:
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathrlap{S_a}\phantom{S_a} & = 0.07284686
+    \mathrlap{S_a}\phantom{S_b} & = 0.07284686
     \\
-    \mathrlap{S_b}\phantom{S_a} & = 0.07980389
+    \mathrlap{S_b}\phantom{S_b} & = 0.07980389
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -326,7 +326,7 @@ The most optimal point can be found by taking the derivative of the scoring func
 {% latex fig-31 %}
     \begin{document}
     \begin{displaymath}
-    \frac{d\mathrlap{S_a}\phantom{S_a}}{dp_1} = 0, \quad p_1 \approx 0.4422
+    \frac{d\mathrlap{S_a}\phantom{S_b}}{dp_1} = 0, \quad p_1 \approx 0.4422
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -344,7 +344,7 @@ The most optimal point can be found by taking the derivative of the scoring func
 {% latex fig-34 %}
     \begin{document}
     \begin{displaymath}
-    \frac{d\mathrlap{S_b}\phantom{S_a}}{dp_1} = 0,  \quad p_1 \approx 0.4487
+    \frac{d\mathrlap{S_b}\phantom{S_b}}{dp_1} = 0, \quad p_1 \approx 0.4487
     \end{displaymath}
     \end{document}
 {% endlatex %}
