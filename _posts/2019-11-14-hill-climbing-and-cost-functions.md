@@ -89,7 +89,9 @@ This does not match our target values, so we know that our initial guess is not 
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    C & = (0.3750 - 0.4000)^2 + (0.2500 - 0.2000)^2 + (0.0625 - 0.1000)^2
+    C & = \Big( 0.3750 - 0.4000 \Big)^2
+        + \Big( 0.2500 - 0.2000 \Big)^2
+        + \Big( 0.0625 - 0.1000 \Big)^2
     \\[1em]
       & = 0.00453125
     \end{aligned}
@@ -204,7 +206,9 @@ The first scoring function I want to consider gives preference to weights that a
 {% latex fig-19 %}
     \begin{document}
     \begin{displaymath}
-    \mathrlap{S_a}\phantom{S_b} = (p_1 - 0.5)^2 + (p_2 - 0.5)^2 + (p_3 - 0.5)^2
+    \mathrlap{S_a}\phantom{S_b}
+    =
+    \Big( p_1 - 0.5 \Big)^2 + \Big( p_2 - 0.5 \Big)^2 + \Big( p_3 - 0.5 \Big)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -214,7 +218,9 @@ The second scoring function I want to consider gives preference to weights that 
 {% latex fig-20 %}
     \begin{document}
     \begin{displaymath}
-    \mathrlap{S_b}\phantom{S_b} = (p_1 - 0.5)^2 + (p_2 - p_1)^2 + (p_3 - p_2)^2
+    \mathrlap{S_b}\phantom{S_b}
+    =
+    \Big( p_1 - 0.5 \Big)^2 + \Big( p_2 - p_1 \Big)^2 + \Big( p_3 - p_2 \Big)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
