@@ -123,7 +123,12 @@ plot '$data' using 1:($3 == 0 ? $4 : 0):xtic(2) with boxes title '0 Heads, 4 Tai
      '$data' using 1:($3 == 2 ? $4 : 0):xtic(2) with boxes title '2 Heads, 2 Tails',\
      '$data' using 1:($3 == 3 ? $4 : 0):xtic(2) with boxes title '3 Heads, 1 Tails',\
      '$data' using 1:($3 == 4 ? $4 : 0):xtic(2) with boxes title '4 Heads, 0 Tails',\
-     '$data' using 1:(0.006):5 with labels notitle left rotate by 90 textcolor '#ffffff'
+     '$data' using 1:($5 == '0.00%' && $3 == 0 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#80b0e0',\
+     '$data' using 1:($5 == '0.00%' && $3 == 1 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#8098b0',\
+     '$data' using 1:($5 == '0.00%' && $3 == 2 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#808080',\
+     '$data' using 1:($5 == '0.00%' && $3 == 3 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#b08080',\
+     '$data' using 1:($5 == '0.00%' && $3 == 4 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#e08080',\
+     '$data' using 1:($5 != '0.00%' ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#ffffff'
 "
 
 //-------------------------------------------------------------------------------------------------

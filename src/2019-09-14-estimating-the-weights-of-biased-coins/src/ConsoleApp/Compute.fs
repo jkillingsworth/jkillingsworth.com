@@ -104,8 +104,12 @@ let private makeTosses p1 p2 p3 =
     let ps = [| 0.5; p1; p2; p3 |]
 
     let calculation (state, value) = function
-        | 'H' -> state + 1, value * ps.[abs state]
-        | 'T' -> state - 1, value * ps.[abs state]
+        | 'H' when state = 0 -> state + 1, value * ps.[abs state]
+        | 'H' when state > 0 -> state + 1, value * ps.[abs state]
+        | 'H' when state < 0 -> state + 1, value * (1.0 - ps.[abs state])
+        | 'T' when state = 0 -> state - 1, value * ps.[abs state]
+        | 'T' when state < 0 -> state - 1, value * ps.[abs state]
+        | 'T' when state > 0 -> state - 1, value * (1.0 - ps.[abs state])
         | _ -> failwith "Invalid flip."
 
     let calculate sequence =
