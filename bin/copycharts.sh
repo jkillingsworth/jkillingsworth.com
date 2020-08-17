@@ -250,3 +250,30 @@ copychart ${post} fig-30 optimize-score-A-scores.svg
 copychart ${post} fig-32 optimize-score-A-biases.svg
 copychart ${post} fig-33 optimize-score-B-scores.svg
 copychart ${post} fig-35 optimize-score-B-biases.svg
+
+post="2020-08-16-visualizing-the-climb-up-the-hill"
+
+copychart ${post} fig-10 target-pmfunc.svg
+copychart ${post} fig-13 surface-1.svg
+copychart ${post} fig-14 surface-2.svg
+copychart ${post} fig-15 heatmap-plateau.svg
+copychart ${post} fig-16 trace-calculated-1-begin-biases.svg
+copychart ${post} fig-17 trace-calculated-1-final-biases.svg
+copychart ${post} fig-18 trace-calculated-1-heatmap.svg
+copychart ${post} fig-19 trace-calculated-2-heatmap.svg
+copychart ${post} fig-20 trace-calculated-3-heatmap.svg
+copychart ${post} fig-21 trace-calculated-4-heatmap.svg
+copychart ${post} fig-22 trace-stochastic-1-begin-biases.svg
+copychart ${post} fig-23 trace-stochastic-1-final-biases.svg
+copychart ${post} fig-24 trace-stochastic-1-heatmap.svg
+copychart ${post} fig-25 trace-stochastic-2-heatmap.svg
+copychart ${post} fig-26 trace-stochastic-3-heatmap.svg
+copychart ${post} fig-27 trace-stochastic-4-heatmap.svg
+copychart ${post} fig-30 score-A-scores-overall.svg
+copychart ${post} fig-31 score-A-biases-optimum.svg
+copychart ${post} fig-32 score-A-heatmap-S.svg
+copychart ${post} fig-33 score-A-heatmap-C.svg
+copychart ${post} fig-36 score-B-scores-overall.svg
+copychart ${post} fig-37 score-B-biases-optimum.svg
+copychart ${post} fig-38 score-B-heatmap-S.svg
+copychart ${post} fig-39 score-B-heatmap-C.svg
