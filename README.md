@@ -10,7 +10,7 @@ The build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) an
 
        pacman -Syu
 
-   You can browse the [MSYS2 wiki page](https://github.com/msys2/msys2/wiki) for more information.
+   You can browse the [MSYS2 wiki page](https://www.msys2.org/wiki/Home/) for more information.
 
 2. Use the package manager to install the prerequisite packages from the MSYS2 command prompt:
 
@@ -58,7 +58,7 @@ The build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) an
 
        MSYS2_PATH_TYPE=inherit
 
-   This will cause the `PATH` environment variable in your MSYS2 shell to inherit the directories contained in the Windows `PATH` environment variable. You can [consult the wiki](https://github.com/msys2/msys2/wiki/MSYS2-introduction#path) or inspect the [launcher script](https://github.com/msys2/MSYS2-packages/blob/master/filesystem/msys2_shell.cmd) for more insights.
+   This will cause the `PATH` environment variable in your MSYS2 shell to inherit the directories contained in the Windows `PATH` environment variable. You can [consult the wiki](https://www.msys2.org/wiki/MSYS2-introduction/#path) or inspect the [launcher script](https://github.com/msys2/MSYS2-packages/blob/master/filesystem/msys2_shell.cmd) for more insights.
 
 ## Usage
 
