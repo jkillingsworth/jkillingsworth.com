@@ -58,6 +58,15 @@ plot '$data' using 1:2 with lines title 'Log-Normal',\
      '$data' using 1:3 with lines title 'Log-Laplace'
 "
 
+let renderDistributionsLin path data =
+
+    let data =
+        data
+        |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
+        |> String.concat "\n"
+
+    render path plotDistributionsLin [| data |]
+
 //-------------------------------------------------------------------------------------------------
 
 let private plotDistributionsLog = "
@@ -89,17 +98,6 @@ set linetype 2 linewidth 2 linecolor '#ff0000'
 plot '$data' using 1:2 with lines title 'Log-Normal',\
      '$data' using 1:3 with lines title 'Log-Laplace'
 "
-
-//-------------------------------------------------------------------------------------------------
-
-let renderDistributionsLin path data =
-
-    let data =
-        data
-        |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
-        |> String.concat "\n"
-
-    render path plotDistributionsLin [| data |]
 
 let renderDistributionsLog path data =
 

@@ -53,8 +53,6 @@ set key box lc '#808080' samplen 1
 plot '$data' with lines lc '#ff0000' title 'Gambler''s Bankroll'
 "
 
-//-------------------------------------------------------------------------------------------------
-
 let private plotLog = "
 $data << EOD
 {0}
@@ -79,8 +77,6 @@ set key box lc '#808080' samplen 1
 
 plot '$data' with lines lc '#ff0000' title 'Gambler''s Bankroll'
 "
-
-//-------------------------------------------------------------------------------------------------
 
 let private renderChart plot path (lower : float) (upper : float) data =
 

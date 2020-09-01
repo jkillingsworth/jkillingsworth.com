@@ -29,6 +29,11 @@ let private render path template args =
 
 //-------------------------------------------------------------------------------------------------
 
+let private percent x =
+    if Double.IsNaN(x) then "" else x.ToString("0.00%;-0.00%;0.00%")
+
+//-------------------------------------------------------------------------------------------------
+
 let private plotBiases = "
 $data << EOD
 {0}
@@ -59,6 +64,26 @@ plot '$data' using 1:2 with boxes title 'Coin Bias',\
      '$data' using 1:($3 != '0.00%' ? 1/0 : 0.04):3 with labels notitle center rotate by 0 textcolor '#607860'
 "
 
+let renderBiases path data =
+
+    let n = 4
+
+    let xtic = function
+        | 0 -> "0"
+        | i -> sprintf "'%+i' %i" i i
+
+    let xtics =
+        [| -(n - 1) .. 1 .. +(n - 1) |]
+        |> Array.map xtic
+        |> Array.reduce (fun l r -> l + ", " + r)
+
+    let data =
+        data
+        |> Array.mapi (fun i x -> sprintf "%i %e %s" (i - n) x (percent x))
+        |> String.concat "\n"
+
+    render path plotBiases [| data; n; xtics |]
+
 //-------------------------------------------------------------------------------------------------
 
 let private plotPmfunc = "
@@ -88,6 +113,26 @@ set style fill solid border linecolor '#ffffff'
 plot '$data' using 1:2 with boxes title 'Probability Mass',\
      '$data' using 1:(0.024):3 with labels notitle center rotate by 0 textcolor '#ffffff'
 "
+
+let renderPmfunc path data =
+
+    let n = 4
+
+    let xtic = function
+        | 0 -> "0"
+        | i -> sprintf "'%+i' %i" i i
+
+    let xtics =
+        [| -n .. 2 .. +n |]
+        |> Array.map xtic
+        |> Array.reduce (fun l r -> l + ", " + r)
+
+    let data =
+        data
+        |> Array.mapi (fun i x -> sprintf "%i %e %s" (2 * i - n) x (percent x))
+        |> String.concat "\n"
+
+    render path plotPmfunc [| data; n; xtics |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -130,57 +175,6 @@ plot '$data' using 1:($3 == 0 ? $4 : 0):xtic(2) with boxes title '0 Heads, 4 Tai
      '$data' using 1:($5 == '0.00%' && $3 == 4 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#e08080',\
      '$data' using 1:($5 != '0.00%' ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#ffffff'
 "
-
-//-------------------------------------------------------------------------------------------------
-
-let private percent x =
-    if Double.IsNaN(x) then "" else x.ToString("0.00%;-0.00%;0.00%")
-
-//-------------------------------------------------------------------------------------------------
-
-let renderBiases path data =
-
-    let n = 4
-
-    let xtic = function
-        | 0 -> "0"
-        | i -> sprintf "'%+i' %i" i i
-
-    let xtics =
-        [| -(n - 1) .. 1 .. +(n - 1) |]
-        |> Array.map xtic
-        |> Array.reduce (fun l r -> l + ", " + r)
-
-    let data =
-        data
-        |> Array.mapi (fun i x -> sprintf "%i %e %s" (i - n) x (percent x))
-        |> String.concat "\n"
-
-    render path plotBiases [| data; n; xtics |]
-
-//-------------------------------------------------------------------------------------------------
-
-let renderPmfunc path data =
-
-    let n = 4
-
-    let xtic = function
-        | 0 -> "0"
-        | i -> sprintf "'%+i' %i" i i
-
-    let xtics =
-        [| -n .. 2 .. +n |]
-        |> Array.map xtic
-        |> Array.reduce (fun l r -> l + ", " + r)
-
-    let data =
-        data
-        |> Array.mapi (fun i x -> sprintf "%i %e %s" (2 * i - n) x (percent x))
-        |> String.concat "\n"
-
-    render path plotPmfunc [| data; n; xtics |]
-
-//-------------------------------------------------------------------------------------------------
 
 let renderTosses path data =
 

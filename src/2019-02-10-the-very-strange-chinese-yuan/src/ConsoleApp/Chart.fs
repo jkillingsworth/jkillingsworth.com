@@ -29,6 +29,14 @@ let private render path template args =
 
 //-------------------------------------------------------------------------------------------------
 
+let private makeLabel (descriptor : string) =
+    let items = descriptor.Split("-")
+    let period (item : string) = Char.ToUpper(item.[0]).ToString() + item.Substring(1)
+    let symbol (item : string) = if (item.Length = 6) then item.Insert(3, "/") else item
+    sprintf "%-19s" <| sprintf "%s (%s)" (symbol items.[2]) (period items.[1])
+
+//-------------------------------------------------------------------------------------------------
+
 let private plotPriceLin = "
 $data << EOD
 {0}
@@ -51,6 +59,18 @@ set linetype 1 linecolor '#808080'
 
 plot '$data' using 1:2 with lines title '{1}'
 "
+
+let renderPriceLin path data =
+
+    let descriptor, data = data
+    let label = makeLabel descriptor
+
+    let data =
+        data
+        |> Array.mapi (fun i x -> sprintf "%i %e" i x)
+        |> String.concat "\n"
+
+    render path plotPriceLin [| data; label |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -90,8 +110,6 @@ plot '$data' using 1:2 with boxes title 'Histogram',\
      distributionL(x, {6}, {7}) title 'Laplace'
 "
 
-//-------------------------------------------------------------------------------------------------
-
 let private plotProbsLog = "
 $data << EOD
 {0}
@@ -129,31 +147,6 @@ plot '$data' using 1:2 with boxes title 'Histogram',\
      distributionN(x, {4}, {5}) title 'Normal',\
      distributionL(x, {6}, {7}) title 'Laplace'
 "
-
-//-------------------------------------------------------------------------------------------------
-
-
-let private makeLabel (descriptor : string) =
-    let items = descriptor.Split("-")
-    let period (item : string) = Char.ToUpper(item.[0]).ToString() + item.Substring(1)
-    let symbol (item : string) = if (item.Length = 6) then item.Insert(3, "/") else item
-    sprintf "%-19s" <| sprintf "%s (%s)" (symbol items.[2]) (period items.[1])
-
-//-------------------------------------------------------------------------------------------------
-
-let renderPriceLin path data =
-
-    let descriptor, data = data
-    let label = makeLabel descriptor
-
-    let data =
-        data
-        |> Array.mapi (fun i x -> sprintf "%i %e" i x)
-        |> String.concat "\n"
-
-    render path plotPriceLin [| data; label |]
-
-//-------------------------------------------------------------------------------------------------
 
 let private renderProbs plot path data =
 

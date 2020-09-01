@@ -61,8 +61,6 @@ plot '$data' using 1:2 with lines title 'Market Price',\
      '$data' using 1:4 with lines title 'Fitted Line'
 "
 
-//-------------------------------------------------------------------------------------------------
-
 let private plotZoom = "
 $data << EOD
 {0}
@@ -94,8 +92,6 @@ plot '$data' using 1:2 with lines title 'Market Price',\
      '$data' using 1:3 with lines title 'Moving Average',\
      '$data' using 1:4 with lines title 'Fitted Line'
 "
-
-//-------------------------------------------------------------------------------------------------
 
 let private renderChart plot path axis (ticker : string) data =
 

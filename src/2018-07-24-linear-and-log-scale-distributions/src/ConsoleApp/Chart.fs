@@ -56,8 +56,6 @@ plot '$data' using (strcol(1) >= 100 ? $1 : 1/0):2 with impulses title 'Profit',
      '$data' using (strcol(1) == 100 ? $1 : 1/0):2 with impulses title 'Breakeven'
 "
 
-//-------------------------------------------------------------------------------------------------
-
 let private plotLog = "
 $data << EOD
 {0}
@@ -86,8 +84,6 @@ plot '$data' using (strcol(1) >= 100 ? $1 : 1/0):2 with impulses title 'Profit',
      '$data' using (strcol(1) <= 100 ? $1 : 1/0):2 with impulses title 'Loss',\
      '$data' using (strcol(1) == 100 ? $1 : 1/0):2 with impulses title 'Breakeven'
 "
-
-//-------------------------------------------------------------------------------------------------
 
 let private renderChart plot path data =
 

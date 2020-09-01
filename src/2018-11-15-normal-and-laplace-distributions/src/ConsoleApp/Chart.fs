@@ -61,6 +61,32 @@ plot '$data' using 1:2 with lines title eotitle,\
      '$data' using 1:($3 != 0 ? $2 : 1/0) with points notitle
 "
 
+let renderLikelihood path (lower, upper) data =
+
+    let points = data |> Array.filter (fun (_, _, p) -> p)
+    let ymax = points |> Array.map (fun (_, y, _) -> y) |> Array.max
+    let n = points |> Array.length
+    let m = (n / 2) + (n % 2)
+
+    let xlabel i =
+        let offset = i - m + 1
+        if (offset = 0) then "x_m" else sprintf "x_{{m%+i}}" offset
+
+    let xrange =
+        points
+        |> Array.mapi (fun i (x, _, _) -> sprintf "'%s' %i" (xlabel i) x)
+        |> Array.reduce (fun l r -> l + ", " + r)
+
+    let mapping (x, y, p) =
+        sprintf "%i %e %i" x y (if p then 1 else 0)
+
+    let data =
+        data
+        |> Array.map mapping
+        |> String.concat "\n"
+
+    render path plotLikelihood [| data; xrange; lower; upper; ymax; (n % 2) |]
+
 //-------------------------------------------------------------------------------------------------
 
 let private plotDistributionsLin = "
@@ -91,6 +117,15 @@ plot '$data' using 1:2 with lines title 'Normal',\
      '$data' using 1:3 with lines title 'Laplace'
 "
 
+let renderDistributionsLin path data =
+
+    let data =
+        data
+        |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
+        |> String.concat "\n"
+
+    render path plotDistributionsLin [| data |]
+
 //-------------------------------------------------------------------------------------------------
 
 let private plotDistributionsLog = "
@@ -120,43 +155,6 @@ set linetype 2 linewidth 2 linecolor '#ff0000'
 plot '$data' using 1:2 with lines title 'Normal',\
      '$data' using 1:3 with lines title 'Laplace'
 "
-
-//-------------------------------------------------------------------------------------------------
-
-let renderLikelihood path (lower, upper) data =
-
-    let points = data |> Array.filter (fun (_, _, p) -> p)
-    let ymax = points |> Array.map (fun (_, y, _) -> y) |> Array.max
-    let n = points |> Array.length
-    let m = (n / 2) + (n % 2)
-
-    let xlabel i =
-        let offset = i - m + 1
-        if (offset = 0) then "x_m" else sprintf "x_{{m%+i}}" offset
-
-    let xrange =
-        points
-        |> Array.mapi (fun i (x, _, _) -> sprintf "'%s' %i" (xlabel i) x)
-        |> Array.reduce (fun l r -> l + ", " + r)
-
-    let mapping (x, y, p) =
-        sprintf "%i %e %i" x y (if p then 1 else 0)
-
-    let data =
-        data
-        |> Array.map mapping
-        |> String.concat "\n"
-
-    render path plotLikelihood [| data; xrange; lower; upper; ymax; (n % 2) |]
-
-let renderDistributionsLin path data =
-
-    let data =
-        data
-        |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
-        |> String.concat "\n"
-
-    render path plotDistributionsLin [| data |]
 
 let renderDistributionsLog path data =
 

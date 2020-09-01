@@ -29,6 +29,21 @@ let private render path template args =
 
 //-------------------------------------------------------------------------------------------------
 
+let private makeLabel (descriptor : string) =
+    let items = descriptor.Split("-")
+    let period (item : string) = Char.ToUpper(item.[0]).ToString() + item.Substring(1)
+    let symbol (item : string) = if (item.Length = 6) then item.Insert(3, "/") else item
+    sprintf "%-15s" <| sprintf "%s (%s)" (symbol items.[2]) (period items.[1])
+
+let private makeTunit (descriptor : string) =
+    let items = descriptor.Split("-")
+    match items.[1] with
+    | "intraday" -> "Minutes"
+    | "daily" -> "Days"
+    | _ -> failwith "Unrecognized time unit."
+
+//-------------------------------------------------------------------------------------------------
+
 let private plotPrice = "
 $data << EOD
 {0}
@@ -55,6 +70,20 @@ set linetype 2 linecolor '#ff0000'
 plot '$data' using 1:2 with lines title 'Market',\
      '$data' using 1:3 with lines title 'Smooth'
 "
+
+let renderPrice path data =
+
+    let descriptor, market, smooth, (priceLower, priceUpper) = data
+    let label = makeLabel descriptor
+    let tunit = makeTunit descriptor
+    let smooth = smooth |> Array.map (Option.defaultValue nan)
+
+    let data =
+        market
+        |> Array.mapi (fun i _ -> sprintf "%i %e %e" i market.[i] smooth.[i])
+        |> String.concat "\n"
+
+    render path plotPrice [| data; label; tunit; priceLower; priceUpper |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -83,6 +112,21 @@ set linetype 2 linecolor '#ff0000'
 plot '$data' using 1:2 with lines title 'Dither',\
      '$data' using 1:3 with lines notitle
 "
+
+let renderNoise path data =
+
+    let descriptor, dither = data
+    let label = makeLabel descriptor
+    let tunit = makeTunit descriptor
+    let dither = dither |> Array.map (Option.defaultValue nan)
+    let baseln = dither |> Array.map (fun x -> if Double.IsNaN(x) then nan else 0.0)
+
+    let data =
+        dither
+        |> Array.mapi (fun i _ -> sprintf "%i %e %e" i dither.[i] baseln.[i])
+        |> String.concat "\n"
+
+    render path plotNoise [| data; label; tunit |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -121,56 +165,6 @@ plot '$data' using 1:2 with boxes title 'Histogram',\
      distributionN(x, {5}, {6}) title 'Normal',\
      distributionL(x, {7}, {8}) title 'Laplace'
 "
-
-//-------------------------------------------------------------------------------------------------
-
-let private makeLabel (descriptor : string) =
-    let items = descriptor.Split("-")
-    let period (item : string) = Char.ToUpper(item.[0]).ToString() + item.Substring(1)
-    let symbol (item : string) = if (item.Length = 6) then item.Insert(3, "/") else item
-    sprintf "%-15s" <| sprintf "%s (%s)" (symbol items.[2]) (period items.[1])
-
-let private makeTunit (descriptor : string) =
-    let items = descriptor.Split("-")
-    match items.[1] with
-    | "intraday" -> "Minutes"
-    | "daily" -> "Days"
-    | _ -> failwith "Unrecognized time unit."
-
-//-------------------------------------------------------------------------------------------------
-
-let renderPrice path data =
-
-    let descriptor, market, smooth, (priceLower, priceUpper) = data
-    let label = makeLabel descriptor
-    let tunit = makeTunit descriptor
-    let smooth = smooth |> Array.map (Option.defaultValue nan)
-
-    let data =
-        market
-        |> Array.mapi (fun i _ -> sprintf "%i %e %e" i market.[i] smooth.[i])
-        |> String.concat "\n"
-
-    render path plotPrice [| data; label; tunit; priceLower; priceUpper |]
-
-//-------------------------------------------------------------------------------------------------
-
-let renderNoise path data =
-
-    let descriptor, dither = data
-    let label = makeLabel descriptor
-    let tunit = makeTunit descriptor
-    let dither = dither |> Array.map (Option.defaultValue nan)
-    let baseln = dither |> Array.map (fun x -> if Double.IsNaN(x) then nan else 0.0)
-
-    let data =
-        dither
-        |> Array.mapi (fun i _ -> sprintf "%i %e %e" i dither.[i] baseln.[i])
-        |> String.concat "\n"
-
-    render path plotNoise [| data; label; tunit |]
-
-//-------------------------------------------------------------------------------------------------
 
 let private renderProbs xlabel path data =
 
