@@ -158,10 +158,10 @@ let private flipTheCoin (biases : float[]) state random =
     let value = Sample.continuousUniform 0.0 1.0 random
     if (value < biases.[state]) then true else false
 
-let simulate iterations biases =
+let simulate seed iterations biases =
 
     let n = 4
-    let random = Random.SystemRandomSource(false)
+    let random = Random.SystemRandomSource(seed, false)
     let pmfunc = Array.zeroCreate<uint64> (n + 1)
     let tosses = Dictionary<string, uint64>()
 
@@ -216,9 +216,9 @@ let private adjust random fs rs ps _ =
     else
         psOriginal
 
-let estimate iterations (biases : float[]) (pmf : float[]) =
+let estimate seed iterations (biases : float[]) (pmf : float[]) =
 
-    let random = Random.SystemRandomSource(false)
+    let random = Random.SystemRandomSource(seed, false)
 
     let f0 = r0Calculation
     let f2 = r2Calculation

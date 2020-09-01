@@ -2,6 +2,7 @@
 
 //-------------------------------------------------------------------------------------------------
 
+let seed = 0
 let iterations = 1000000
 
 let path filename = "../../../" + filename
@@ -10,7 +11,7 @@ let path filename = "../../../" + filename
 
 let simulate name biases =
 
-    let result = biases |> Compute.simulate iterations
+    let result = biases |> Compute.simulate seed iterations
     let pmfunc = result |> fst
     let tosses = result |> snd
 
@@ -34,7 +35,7 @@ let estimate name pmfunc =
 
     let biasesLower = pmfunc |> Compute.biasesLower
     let biasesUpper = pmfunc |> Compute.biasesUpper
-    let biasesFinal = pmfunc |> Compute.estimate iterations biasesStart
+    let biasesFinal = pmfunc |> Compute.estimate seed iterations biasesStart
 
     pmfunc |> Chart.renderPmfunc (path name + "-pmfunc.svg")
     biasesLower |> Chart.renderBiases (path name + "-biases-lower.svg")
