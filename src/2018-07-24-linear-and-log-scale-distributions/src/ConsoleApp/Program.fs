@@ -23,9 +23,9 @@ samplesExhaustiveFractionMul |> Compute.percentProfitLossBreakeven v0 |> reportP
 
 let path filename = "../../../" + filename
 
-samplesStochasticConstantAdd |> Chart.renderLin (path "stochastic-constant-add-lin.svg")
-samplesExhaustiveConstantAdd |> Chart.renderLin (path "exhaustive-constant-add-lin.svg")
-samplesExhaustiveFractionAdd |> Chart.renderLin (path "exhaustive-fraction-add-lin.svg")
-samplesExhaustiveFractionAdd |> Chart.renderLog (path "exhaustive-fraction-add-log.svg")
-samplesExhaustiveFractionMul |> Chart.renderLin (path "exhaustive-fraction-mul-lin.svg")
-samplesExhaustiveFractionMul |> Chart.renderLog (path "exhaustive-fraction-mul-log.svg")
+samplesStochasticConstantAdd |> Chart.renderDistributionLin (path "stochastic-constant-add-lin.svg")
+samplesExhaustiveConstantAdd |> Chart.renderDistributionLin (path "exhaustive-constant-add-lin.svg")
+samplesExhaustiveFractionAdd |> Chart.renderDistributionLin (path "exhaustive-fraction-add-lin.svg")
+samplesExhaustiveFractionAdd |> Chart.renderDistributionLog (path "exhaustive-fraction-add-log.svg")
+samplesExhaustiveFractionMul |> Chart.renderDistributionLin (path "exhaustive-fraction-mul-lin.svg")
+samplesExhaustiveFractionMul |> Chart.renderDistributionLog (path "exhaustive-fraction-mul-log.svg")

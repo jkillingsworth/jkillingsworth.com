@@ -29,7 +29,7 @@ let private render path template args =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotLin = "
+let private plotBankroll = "
 $data << EOD
 {0}
 EOD
@@ -40,11 +40,22 @@ set xtics scale 0.01, 0.01
 set xtics 50
 set mxtics 2
 
-set ylabel 'Dollars'
-set yrange [{1}:{2}]
-set ytics scale 0.01, 0.01
-set ytics 100
-set mytics 5
+if ({1} == 1) {{
+    set ylabel 'Dollars'
+    set yrange [{2}:{3}]
+    set ytics scale 0.01, 0.01
+    set ytics 100
+    set mytics 5
+}}
+
+if ({1} == 2) {{
+    set ylabel 'Dollars'
+    set yrange [{2}:{3}]
+    set ytics scale 0.01, 0.01
+    set ytics 10
+    set mytics 9
+    set logscale y
+}}
 
 set grid xtics ytics mxtics mytics
 set grid ls 1 lc '#e6e6e6'
@@ -53,39 +64,14 @@ set key box lc '#808080' samplen 1
 plot '$data' with lines lc '#ff0000' title 'Gambler''s Bankroll'
 "
 
-let private plotLog = "
-$data << EOD
-{0}
-EOD
-
-set xlabel 'Number of Plays'
-set xrange [0:200]
-set xtics scale 0.01, 0.01
-set xtics 50
-set mxtics 2
-
-set ylabel 'Dollars'
-set yrange [{1}:{2}]
-set ytics scale 0.01, 0.01
-set ytics 10
-set mytics 9
-set logscale y
-
-set grid xtics ytics mxtics mytics
-set grid ls 1 lc '#e6e6e6'
-set key box lc '#808080' samplen 1
-
-plot '$data' with lines lc '#ff0000' title 'Gambler''s Bankroll'
-"
-
-let private renderChart plot path (lower : float) (upper : float) data =
+let private renderBankroll linlog path (lower : float) (upper : float) data =
 
     let data =
         data
         |> Array.mapi (fun i x -> sprintf "%i %e" i x)
         |> String.concat "\n"
 
-    render path plot [| data; lower; upper |]
+    render path plotBankroll [| data; linlog; lower; upper |]
 
-let renderLin = renderChart plotLin
-let renderLog = renderChart plotLog
+let renderBankrollLin = renderBankroll 1
+let renderBankrollLog = renderBankroll 2

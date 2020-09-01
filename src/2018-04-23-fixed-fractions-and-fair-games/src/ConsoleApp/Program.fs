@@ -26,22 +26,22 @@ let medFractionMul = Compute.aggregateMed n simsFractionMul
 
 let path filename = "../../../" + filename
 
-simConstantAdd |> Chart.renderLin (path "constant-add-lin-sim.svg") -100.0 300.0
-avgConstantAdd |> Chart.renderLin (path "constant-add-lin-avg.svg") -100.0 300.0
-medConstantAdd |> Chart.renderLin (path "constant-add-lin-med.svg") -100.0 300.0
+simConstantAdd |> Chart.renderBankrollLin (path "constant-add-lin-sim.svg") -100.0 300.0
+avgConstantAdd |> Chart.renderBankrollLin (path "constant-add-lin-avg.svg") -100.0 300.0
+medConstantAdd |> Chart.renderBankrollLin (path "constant-add-lin-med.svg") -100.0 300.0
 
-simFractionAdd |> Chart.renderLin (path "fraction-add-lin-sim.svg") -100.0 300.0
-avgFractionAdd |> Chart.renderLin (path "fraction-add-lin-avg.svg") -100.0 300.0
-medFractionAdd |> Chart.renderLin (path "fraction-add-lin-med.svg") -100.0 300.0
+simFractionAdd |> Chart.renderBankrollLin (path "fraction-add-lin-sim.svg") -100.0 300.0
+avgFractionAdd |> Chart.renderBankrollLin (path "fraction-add-lin-avg.svg") -100.0 300.0
+medFractionAdd |> Chart.renderBankrollLin (path "fraction-add-lin-med.svg") -100.0 300.0
 
-simFractionAdd |> Chart.renderLog (path "fraction-add-log-sim.svg")    0.1 300.0
-avgFractionAdd |> Chart.renderLog (path "fraction-add-log-avg.svg")    0.1 300.0
-medFractionAdd |> Chart.renderLog (path "fraction-add-log-med.svg")    0.1 300.0
+simFractionAdd |> Chart.renderBankrollLog (path "fraction-add-log-sim.svg")    0.1 300.0
+avgFractionAdd |> Chart.renderBankrollLog (path "fraction-add-log-avg.svg")    0.1 300.0
+medFractionAdd |> Chart.renderBankrollLog (path "fraction-add-log-med.svg")    0.1 300.0
 
-simFractionMul |> Chart.renderLin (path "fraction-mul-lin-sim.svg")    0.0 800.0
-avgFractionMul |> Chart.renderLin (path "fraction-mul-lin-avg.svg")    0.0 800.0
-medFractionMul |> Chart.renderLin (path "fraction-mul-lin-med.svg")    0.0 800.0
+simFractionMul |> Chart.renderBankrollLin (path "fraction-mul-lin-sim.svg")    0.0 800.0
+avgFractionMul |> Chart.renderBankrollLin (path "fraction-mul-lin-avg.svg")    0.0 800.0
+medFractionMul |> Chart.renderBankrollLin (path "fraction-mul-lin-med.svg")    0.0 800.0
 
-simFractionMul |> Chart.renderLog (path "fraction-mul-log-sim.svg")    1.0 900.0
-avgFractionMul |> Chart.renderLog (path "fraction-mul-log-avg.svg")    1.0 900.0
-medFractionMul |> Chart.renderLog (path "fraction-mul-log-med.svg")    1.0 900.0
+simFractionMul |> Chart.renderBankrollLog (path "fraction-mul-log-sim.svg")    1.0 900.0
+avgFractionMul |> Chart.renderBankrollLog (path "fraction-mul-log-avg.svg")    1.0 900.0
+medFractionMul |> Chart.renderBankrollLog (path "fraction-mul-log-med.svg")    1.0 900.0

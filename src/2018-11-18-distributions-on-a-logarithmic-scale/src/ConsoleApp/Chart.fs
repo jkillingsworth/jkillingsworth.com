@@ -29,15 +29,25 @@ let private render path template args =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotDistributionsLin = "
+let private plotDistributions = "
 $data << EOD
 {0}
 EOD
 
-set xlabel 'x'
-set xtics scale 0.01, 0.01
-set xtics 1
-set xrange [0:5]
+if ({1} == 1) {{
+    set xlabel 'x'
+    set xtics scale 0.01, 0.01
+    set xtics 1
+    set xrange [0:5]
+}}
+
+if ({1} == 2) {{
+    set xlabel 'x'
+    set xtics scale 0.01, 0.01
+    set xtics 0.1
+    set xrange [0.01:100]
+    set logscale x 10
+}}
 
 set ylabel 'Probability Density'
 set ytics scale 0.01, 0.01
@@ -58,52 +68,14 @@ plot '$data' using 1:2 with lines title 'Log-Normal',\
      '$data' using 1:3 with lines title 'Log-Laplace'
 "
 
-let renderDistributionsLin path data =
+let private renderDistributions linlog path data =
 
     let data =
         data
         |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
         |> String.concat "\n"
 
-    render path plotDistributionsLin [| data |]
+    render path plotDistributions [| data; linlog |]
 
-//-------------------------------------------------------------------------------------------------
-
-let private plotDistributionsLog = "
-$data << EOD
-{0}
-EOD
-
-set xlabel 'x'
-set xtics scale 0.01, 0.01
-set xtics 0.1
-set xrange [0.01:100]
-set logscale x 10
-
-set ylabel 'Probability Density'
-set ytics scale 0.01, 0.01
-set ytics 0.05
-set yrange [0:0.75]
-set format y '%.2f'
-
-set grid xtics ytics mxtics mytics
-set grid linestyle 1 linecolor '#e6e6e6'
-
-set key box linecolor '#808080' samplen 1
-set key top right reverse Left
-
-set linetype 1 linewidth 2 linecolor '#0000ff'
-set linetype 2 linewidth 2 linecolor '#ff0000'
-
-plot '$data' using 1:2 with lines title 'Log-Normal',\
-     '$data' using 1:3 with lines title 'Log-Laplace'
-"
-
-let renderDistributionsLog path data =
-
-    let data =
-        data
-        |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
-        |> String.concat "\n"
-
-    render path plotDistributionsLog [| data |]
+let renderDistributionsLin = renderDistributions 1
+let renderDistributionsLog = renderDistributions 2

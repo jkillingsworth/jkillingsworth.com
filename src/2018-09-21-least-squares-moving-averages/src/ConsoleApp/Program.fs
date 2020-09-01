@@ -17,7 +17,7 @@ let executeFull compute name ticker axis =
     ticker
     |> Data.getQuotes count final
     |> compute n
-    |> Chart.renderFull file axis ticker
+    |> Chart.renderPriceFull file axis ticker
 
 let executeZoom compute name ticker axis =
 
@@ -26,7 +26,7 @@ let executeZoom compute name ticker axis =
     ticker
     |> Data.getQuotes count final
     |> compute n
-    |> Chart.renderZoom file axis ticker
+    |> Chart.renderPriceZoom file axis ticker
 
 let execute compute name =
 
