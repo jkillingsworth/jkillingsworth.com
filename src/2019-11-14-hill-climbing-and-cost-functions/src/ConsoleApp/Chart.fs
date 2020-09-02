@@ -60,8 +60,8 @@ set linetype 1 linewidth 1 linecolor '#80a080'
 set style fill solid border linecolor '#ffffff'
 
 plot '$data' using 1:2 with boxes title 'Coin Bias',\
-     '$data' using 1:($3 == '0.00%' ? 0.04 : 1/0):3 with labels notitle center rotate by 0 textcolor '#607860',\
-     '$data' using 1:($3 != '0.00%' ? 0.04 : 1/0):3 with labels notitle center rotate by 0 textcolor '#ffffff'
+     '$data' using 1:($3 == '0.00%' ? 0.04 : 1/0):3 with labels notitle textcolor '#607860',\
+     '$data' using 1:($3 != '0.00%' ? 0.04 : 1/0):3 with labels notitle textcolor '#ffffff'
 "
 
 let renderBiases path data =
@@ -111,7 +111,7 @@ set linetype 1 linewidth 1 linecolor '#808080'
 set style fill solid border linecolor '#ffffff'
 
 plot '$data' using 1:2 with boxes title 'Probability Mass',\
-     '$data' using 1:(0.024):3 with labels notitle center rotate by 0 textcolor '#ffffff'
+     '$data' using 1:(0.024):3 with labels notitle textcolor '#ffffff'
 "
 
 let renderPmfunc path data =

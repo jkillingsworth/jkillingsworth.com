@@ -86,8 +86,8 @@ set linetype 1 linewidth 1 linecolor '#80a080'
 set style fill solid border linecolor '#ffffff'
 
 plot '$data' using 1:2 with boxes title 'Coin Bias',\
-     '$data' using 1:($3 == '0.00%' ? 0.04 : 1/0):3 with labels notitle center rotate by 0 textcolor '#607860',\
-     '$data' using 1:($3 != '0.00%' ? 0.04 : 1/0):3 with labels notitle center rotate by 0 textcolor '#ffffff'
+     '$data' using 1:($3 == '0.00%' ? 0.04 : 1/0):3 with labels notitle textcolor '#607860',\
+     '$data' using 1:($3 != '0.00%' ? 0.04 : 1/0):3 with labels notitle textcolor '#ffffff'
 "
 
 let renderBiases path data =
@@ -137,7 +137,7 @@ set linetype 1 linewidth 1 linecolor '#808080'
 set style fill solid border linecolor '#ffffff'
 
 plot '$data' using 1:2 with boxes title 'Probability Mass',\
-     '$data' using 1:(0.024):3 with labels notitle center rotate by 0 textcolor '#ffffff'
+     '$data' using 1:(0.024):3 with labels notitle textcolor '#ffffff'
 "
 
 let renderPmfunc path data =
@@ -192,11 +192,11 @@ plot '$data' using 1:($3 == 0 ? $4 : 0):xtic(2) with boxes title '0 Heads, 4 Tai
      '$data' using 1:($3 == 1 ? $4 : 0):xtic(2) with boxes title '1 Heads, 3 Tails',\
      '$data' using 1:($3 == 2 ? $4 : 0):xtic(2) with boxes title '2 Heads, 2 Tails',\
      '$data' using 1:($3 == 3 ? $4 : 0):xtic(2) with boxes title '3 Heads, 1 Tails',\
-     '$data' using 1:($5 == '0.00%' && $3 == 0 ? 0.012 : 1/0):5 with labels notitle center rotate by 0 textcolor '#80b0e0',\
-     '$data' using 1:($5 == '0.00%' && $3 == 1 ? 0.012 : 1/0):5 with labels notitle center rotate by 0 textcolor '#8098b0',\
-     '$data' using 1:($5 == '0.00%' && $3 == 2 ? 0.012 : 1/0):5 with labels notitle center rotate by 0 textcolor '#b08080',\
-     '$data' using 1:($5 == '0.00%' && $3 == 3 ? 0.012 : 1/0):5 with labels notitle center rotate by 0 textcolor '#e08080',\
-     '$data' using 1:($5 != '0.00%' ? 0.012 : 1/0):5 with labels notitle center rotate by 0 textcolor '#ffffff'
+     '$data' using 1:($5 == '0.00%' && $3 == 0 ? 0.012 : 1/0):5 with labels notitle textcolor '#80b0e0',\
+     '$data' using 1:($5 == '0.00%' && $3 == 1 ? 0.012 : 1/0):5 with labels notitle textcolor '#8098b0',\
+     '$data' using 1:($5 == '0.00%' && $3 == 2 ? 0.012 : 1/0):5 with labels notitle textcolor '#b08080',\
+     '$data' using 1:($5 == '0.00%' && $3 == 3 ? 0.012 : 1/0):5 with labels notitle textcolor '#e08080',\
+     '$data' using 1:($5 != '0.00%' ? 0.012 : 1/0):5 with labels notitle textcolor '#ffffff'
 "
 
 let renderTosses path data =
