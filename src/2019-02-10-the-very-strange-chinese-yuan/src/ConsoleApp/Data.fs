@@ -48,8 +48,8 @@ let private toSeries key = function
 
 //-------------------------------------------------------------------------------------------------
 
-let private fetchData (url : string) =
-    let request = WebRequest.CreateHttp(url)
+let private fetchData (url : Lazy<string>) =
+    let request = WebRequest.CreateHttp(url.Value)
     use response = request.GetResponse()
     use stream = response.GetResponseStream()
     use reader = new StreamReader(stream)
@@ -111,7 +111,7 @@ type ForexDaily(symbol) =
         symbol |> (+) "forex-daily-"
 
     override this.GetPrices() =
-        let url = createUrl symbol
+        let url = lazy createUrl symbol
         getPrices this.Descriptor url keySeries keyQuotes
 
 //-------------------------------------------------------------------------------------------------
@@ -134,7 +134,7 @@ type ForexIntraday(symbol) =
         symbol |> (+) "forex-intraday-"
 
     override this.GetPrices() =
-        let url = createUrl symbol
+        let url = lazy createUrl symbol
         getPrices this.Descriptor url keySeries keyQuotes
 
 //-------------------------------------------------------------------------------------------------
