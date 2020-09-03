@@ -298,7 +298,7 @@ For all three of these data sets, the variation in daily price moves does not co
 
 ## Drawing Conclusions
 
-Can we draw any conclusions from this experiment? I think it's safe to say prices fluctuations are not always normally distributed. In all data sets examined, the kurtosis is more leptokurtic than a normal distribution to some degree. But would it be appropriate to use a Laplace distribution to model price movements?
+Can we draw any conclusions from this experiment? I think it's safe to say price fluctuations are not always normally distributed. In all data sets examined, the kurtosis is more leptokurtic than a normal distribution to some degree. But would it be appropriate to use a Laplace distribution to model price movements?
 
 Vance Harwood from *Six Figure Investing* wrote an interesting article asserting that the Laplace distribution should be used instead of the normal distribution to model stock price movements. You can read it here:
 
