@@ -55,7 +55,7 @@ let private makeBiases p1 p2 p3 =
 
 let private biasesLimit (pmf : float[]) p1Limit =
     let r0 = pmf.[2]
-    let r4 = pmf.[0]
+    let r4 = pmf.[4]
     let p1 = p1Limit r0 r4
     let p2 = (1.0 - p1 - r0) / (p1 * (1.0 - p1))
     let p3 = (2.0 * r4 * (1.0 - p1)) / (1.0 - p1 - r0)

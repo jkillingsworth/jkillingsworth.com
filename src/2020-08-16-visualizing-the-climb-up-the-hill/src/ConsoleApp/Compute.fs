@@ -152,7 +152,6 @@ let heatmap (pmf : float[]) density =
 
     Array2D.init (densityX + 1) (densityY + 1) f
 
-
 let plateau (pmf : float[]) samples =
 
     let r1 = pmf.[2]
