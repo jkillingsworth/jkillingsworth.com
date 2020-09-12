@@ -277,3 +277,11 @@ copychart ${post} fig-36 score-B-scores-overall.svg
 copychart ${post} fig-37 score-B-biases-optimum.svg
 copychart ${post} fig-38 score-B-heatmap-S.svg
 copychart ${post} fig-39 score-B-heatmap-C.svg
+
+post="2020-09-12-minimizing-with-gradient-descent"
+
+copychart ${post} fig-07 target-pmfunc.svg
+copychart ${post} fig-12 trace-1-heatmap.svg
+copychart ${post} fig-13 trace-2-heatmap.svg
+copychart ${post} fig-14 trace-3-heatmap.svg
+copychart ${post} fig-15 trace-4-heatmap.svg
