@@ -62,13 +62,13 @@ The build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) an
 
 ## Usage
 
-* Update the bundler gem to the latest version:
-
-      gem update bundler
-
 * Update all gems in the Gemfile to the latest version:
 
       bundle update
+
+* Update bundler to the latest version:
+
+      bundle update --bundler
 
 * Regenerate the Jekyll binstub:
 
