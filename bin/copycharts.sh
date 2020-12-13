@@ -285,3 +285,17 @@ copychart ${post} fig-12 trace-1-heatmap.svg
 copychart ${post} fig-13 trace-2-heatmap.svg
 copychart ${post} fig-14 trace-3-heatmap.svg
 copychart ${post} fig-15 trace-4-heatmap.svg
+
+post="2020-12-12-equality-constraints-and-lagrange-multipliers"
+
+copychart ${post} fig-09 stepsize.svg
+copychart ${post} fig-10 target-pmfunc-3.svg
+copychart ${post} fig-15 trace-A-1-heatmap.svg
+copychart ${post} fig-16 trace-A-2-heatmap.svg
+copychart ${post} fig-17 trace-A-3-heatmap.svg
+copychart ${post} fig-18 trace-A-4-heatmap.svg
+copychart ${post} fig-21 trace-B-1-heatmap.svg
+copychart ${post} fig-22 trace-B-2-heatmap.svg
+copychart ${post} fig-23 trace-B-3-heatmap.svg
+copychart ${post} fig-24 trace-B-4-heatmap.svg
+copychart ${post} fig-26 target-pmfunc-4.svg
