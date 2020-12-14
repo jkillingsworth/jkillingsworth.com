@@ -43,7 +43,7 @@ Note the use of a parameter vector for the input. As you might expect, this is a
     \nabla C(\mathbf{p})
     =
     \left[
-    \begin{array}{ll}
+    \begin{array}{l}
     \dfrac{\partial C}{\partial p_1}
     \\[2em]
     \dfrac{\partial C}{\partial p_2}
@@ -126,7 +126,7 @@ Just like with the hill climbing algorithms used in the previous post, to apply 
     \phantom{\text{finish}}}
     =
     \left[
-    \begin{array}{ll}
+    \begin{array}{l}
     0.3500
     \\[1em]
     0.2000
@@ -145,7 +145,7 @@ Applying the gradient descent procedure using the above as the initial input, th
     \phantom{\text{finish}}}
     =
     \left[
-    \begin{array}{ll}
+    \begin{array}{l}
     0.6140
     \\[1em]
     0.5427

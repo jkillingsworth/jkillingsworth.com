@@ -167,7 +167,7 @@ The coefficients can then be found by solving the following matrix equation:
     \begin{document}
     \begin{displaymath}
     \left[
-    \begin{array}{ll}
+    \begin{array}{l}
     a_0
     \\[1em]
     a_1
@@ -183,7 +183,7 @@ The coefficients can then be found by solving the following matrix equation:
     \right]
     ^{-1}
     \left[
-    \begin{array}{ll}
+    \begin{array}{l}
     \sum{y_i^{ }}
     \\[1em]
     \sum{x_i^{\phantom{1}} y_i^{ }}

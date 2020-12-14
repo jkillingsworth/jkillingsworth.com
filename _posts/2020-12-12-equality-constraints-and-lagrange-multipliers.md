@@ -391,7 +391,7 @@ We can use the constraint functions above to create a Lagrangian function. Using
     \phantom{\text{finish}}}
     & =
     \left[
-    \begin{array}{ll}
+    \begin{array}{l}
     0.5000
     \\[1em]
     0.5000

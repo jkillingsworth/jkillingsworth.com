@@ -126,7 +126,7 @@ The least squares coefficients can be found by solving the following matrix equa
     \begin{document}
     \begin{displaymath}
     \left[
-    \begin{array}{lll}
+    \begin{array}{l}
     a_0
     \\[1em]
     a_1
@@ -146,7 +146,7 @@ The least squares coefficients can be found by solving the following matrix equa
     \right]
     ^{-1}
     \left[
-    \begin{array}{lll}
+    \begin{array}{l}
     \sum{y_i^{ }}
     \\[1em]
     \sum{x_i^{\phantom{1}} y_i^{ }}
