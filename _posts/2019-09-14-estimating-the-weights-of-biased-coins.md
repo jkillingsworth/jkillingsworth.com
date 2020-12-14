@@ -297,7 +297,7 @@ Let's introduce the following notation. We have seen a graphical illustration of
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, ..., n
+    P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, \dots, n
     \\[1em]
     f(k)     & = \binom{n}{k} = \frac{n!}{k!(n - k)!}
     \end{aligned}
@@ -543,7 +543,7 @@ What if the expected outcome is not a binomial distribution? Suppose we observe 
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, ..., n
+    P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, \dots, n
     \\[1em]
     f(k)     & = n + 2 - |2k - n|
     \end{aligned}
@@ -731,7 +731,7 @@ Suppose we model the expected outcome as a discrete double exponential distribut
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, ..., n
+    P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, \dots, n
     \\[1em]
     f(k)     & = 0.5^{a}, \quad a = \frac{|2k - n| - n}{2}
     \end{aligned}
@@ -762,7 +762,7 @@ Suppose we model the expected outcome as a discrete double exponential distribut
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, ..., n
+    P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, \dots, n
     \\[1em]
     f(k)     & = 0.4^{a}, \quad a = \frac{|2k - n| - n}{2}
     \end{aligned}
@@ -793,7 +793,7 @@ Suppose we model the expected outcome as a discrete double exponential distribut
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, ..., n
+    P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, \dots, n
     \\[1em]
     f(k)     & = 0.3^{a}, \quad a = \frac{|2k - n| - n}{2}
     \end{aligned}
