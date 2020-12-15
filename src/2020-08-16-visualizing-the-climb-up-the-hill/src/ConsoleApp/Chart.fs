@@ -238,7 +238,7 @@ if ({1} == 1) {{ set zrange [0:0.25] }}
 if ({1} == 2) {{ set zrange [0.25:0] }}
 set format z '%0.2f'
 
-set cblabel 'Cost'
+set cblabel offset 1 'Cost'
 set format cb '%0.2f'
 
 set pm3d
@@ -283,7 +283,7 @@ set ytics 0.2
 set yrange [0:1]
 set format y '%0.2f'
 
-set cblabel 'Cost'
+set cblabel offset 1 'Cost'
 set format cb '%0.2f'
 
 set key box linecolor '#808080' textcolor '#ffffff' samplen 1
@@ -343,7 +343,7 @@ set ytics 0.2
 set yrange [0:1]
 set format y '%0.2f'
 
-set cblabel 'Cost'
+set cblabel offset 1 'Cost'
 set format cb '%0.2f'
 
 set key box linecolor '#808080' textcolor '#ffffff' samplen 1
@@ -409,8 +409,8 @@ set ytics 0.2
 set yrange [0:1]
 set format y '%0.2f'
 
-if ({6} == 1) {{ set cblabel 'Score' }}
-if ({6} == 2) {{ set cblabel 'Cost' }}
+if ({6} == 1) {{ set cblabel offset 1 'Score' }}
+if ({6} == 2) {{ set cblabel offset 1 'Cost' }}
 set format cb '%0.2f'
 
 set key box linecolor '#808080' textcolor '#ffffff' samplen 1

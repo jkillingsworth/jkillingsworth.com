@@ -110,7 +110,7 @@ set ytics 0.2
 set yrange [0:1]
 set format y '%0.2f'
 
-set cblabel 'Cost \u00f7 10^{{1}}' offset 1
+set cblabel offset 1 'Cost \u00f7 10^{{1}}'
 set format cb '%0.2f'
 
 set key box linecolor '#808080' textcolor '#ffffff' samplen 1

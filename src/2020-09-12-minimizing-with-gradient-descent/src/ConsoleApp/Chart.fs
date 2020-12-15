@@ -143,7 +143,7 @@ set ytics 0.2
 set yrange [0:1]
 set format y '%0.2f'
 
-set cblabel 'Cost'
+set cblabel offset 1 'Cost'
 set format cb '%0.2f'
 
 set key box linecolor '#808080' textcolor '#ffffff' samplen 1
