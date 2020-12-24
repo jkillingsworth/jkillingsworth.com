@@ -4,7 +4,7 @@ layout: default
 
 <article>
   <header>
-    <h1>{{ page.title | escape }}</h1>
+    <h1>{{ page.title | smartify }}</h1>
   </header>
   {{ content }}
   {% assign date_robot = page.date | date: "%Y-%m-%d" %}
@@ -19,7 +19,7 @@ layout: default
   </header>
   {% if jekyll.environment == "production" %}
   {% assign disqus_url = page.url | absolute_url %}
-  {% assign disqus_title = page.title | escape %}
+  {% assign disqus_title = page.title | smartify %}
   {% assign disqus_identifier = page.url %}
   {% else %}
   {% assign disqus_url = site.url %}
