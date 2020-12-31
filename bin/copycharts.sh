@@ -299,3 +299,14 @@ copychart ${post} fig-22 trace-B-2-heatmap.svg
 copychart ${post} fig-23 trace-B-3-heatmap.svg
 copychart ${post} fig-24 trace-B-4-heatmap.svg
 copychart ${post} fig-26 target-pmfunc-4.svg
+
+post="2020-12-31-finding-the-roots-with-newtons-method"
+
+copychart ${post} fig-11 trace-A-1-heatmap.svg
+copychart ${post} fig-12 trace-A-2-heatmap.svg
+copychart ${post} fig-13 trace-A-3-heatmap.svg
+copychart ${post} fig-14 trace-A-4-heatmap.svg
+copychart ${post} fig-17 trace-B-1-heatmap.svg
+copychart ${post} fig-18 trace-B-2-heatmap.svg
+copychart ${post} fig-19 trace-B-3-heatmap.svg
+copychart ${post} fig-20 trace-B-4-heatmap.svg
