@@ -310,3 +310,22 @@ copychart ${post} fig-17 trace-B-1-heatmap.svg
 copychart ${post} fig-18 trace-B-2-heatmap.svg
 copychart ${post} fig-19 trace-B-3-heatmap.svg
 copychart ${post} fig-20 trace-B-4-heatmap.svg
+
+post="2021-01-29-visualizing-saddle-points-and-minimums"
+
+copychart ${post} fig-05 lagrange-heatmap-0.svg
+copychart ${post} fig-06 lagrange-surface-1.svg
+copychart ${post} fig-07 lagrange-surface-2.svg
+copychart ${post} fig-08 lagrange-surface-3.svg
+copychart ${post} fig-09 lagrange-heatmap-1.svg
+copychart ${post} fig-10 lagrange-profile-1.svg
+copychart ${post} fig-11 lagrange-heatmap-2.svg
+copychart ${post} fig-12 lagrange-profile-2.svg
+copychart ${post} fig-14 costfunc-heatmap-0.svg
+copychart ${post} fig-15 costfunc-surface-1.svg
+copychart ${post} fig-16 costfunc-surface-2.svg
+copychart ${post} fig-17 costfunc-surface-3.svg
+copychart ${post} fig-18 costfunc-heatmap-1.svg
+copychart ${post} fig-19 costfunc-profile-1.svg
+copychart ${post} fig-20 costfunc-heatmap-2.svg
+copychart ${post} fig-21 costfunc-profile-2.svg
