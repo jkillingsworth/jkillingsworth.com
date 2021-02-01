@@ -35,21 +35,21 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
+set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Time (Days)'
-set xtics scale 0.01, 0.01
-set xtics 200
 if ({5} == 1) {{ set xrange [0:2000] }}
 if ({5} == 2) {{ set xrange [1800:2000] }}
+set xtics 200
 
 set ylabel 'Price per Share'
-set ytics scale 0.01, 0.01
-set ytics {1}, {3}
 set yrange [{1}:{2}]
+set ytics {1}, {3}
 set format y '%g'
-
-set grid xtics ytics mxtics mytics
-set grid linestyle 1 linecolor '#e6e6e6'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left

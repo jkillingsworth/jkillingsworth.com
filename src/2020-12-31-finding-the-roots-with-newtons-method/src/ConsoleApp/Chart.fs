@@ -71,17 +71,17 @@ $final << EOD
 EOD
 
 set border linewidth 1.2
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Coin Bias (+1)'
-set xtics scale 0.01, 0.01
-set xtics 0.2
 set xrange [0:1]
+set xtics 0.2
 set format x '%0.2f'
 
 set ylabel 'Coin Bias (+2)'
-set ytics scale 0.01, 0.01
-set ytics 0.2
 set yrange [0:1]
+set ytics 0.2
 set format y '%0.2f'
 
 set cblabel offset 1 'Cost \u00f7 10^{{1}}'

@@ -50,17 +50,17 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
+set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Time ({2})'
-set xtics scale 0.01, 0.01
 
 set ylabel 'Price (Log Values)'
-set ytics scale 0.01, 0.01
 set yrange [{3}:{4}]
 set format y '%7.4f'
-
-set grid xtics ytics mxtics mytics
-set grid linestyle 1 linecolor '#e6e6e6'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
@@ -95,16 +95,16 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
+set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Time ({2})'
-set xtics scale 0.01, 0.01
 
 set ylabel 'Noise'
-set ytics scale 0.01, 0.01
 set format y '%7.4f'
-
-set grid xtics ytics mxtics mytics
-set grid linestyle 1 linecolor '#e6e6e6'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
@@ -140,18 +140,18 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
+set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel '{2}, σ = {6:e3}'
-set xtics scale 0.01, 0.01
 set xrange [-{3}:+{3}]
 set xtics ({4})
 
 set ylabel 'Density'
-set ytics scale 0.01, 0.01
 set format y '%7.0f'
-
-set grid xtics ytics mxtics mytics
-set grid linestyle 1 linecolor '#e6e6e6'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left

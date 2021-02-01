@@ -35,11 +35,15 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
+set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 if ({1} == 1) {{
     set xlabel 'Possible Outcome'
     set xrange [-900:1100]
-    set xtics scale 0.01, 0.01
     set xtics -900, 200
     set mxtics 2
 }}
@@ -47,7 +51,6 @@ if ({1} == 1) {{
 if ({1} == 2) {{
     set xlabel 'Possible Outcome'
     set xrange [0.001:+10000000]
-    set xtics scale 0.01, 0.01
     set xtics 0.001, 10
     set xtics add (0.001,0.01,0.1,1,10,100,'1K' 1000,'10K' 10000,'100K' 100000,'1M' 1000000,'10M' 10000000)
     set mxtics default
@@ -55,12 +58,10 @@ if ({1} == 2) {{
 }}
 
 set ylabel 'Probability'
-set ytics scale 0.01, 0.01
 set format y '%0.2f'
 
-set grid xtics ytics mxtics mytics
-set grid linestyle 1 linecolor '#e6e6e6'
 set key box linecolor '#808080' samplen 1
+
 set linetype 1 linewidth 5 linecolor '#00c000'
 set linetype 2 linewidth 5 linecolor '#ff0000'
 set linetype 3 linewidth 5 linecolor '#808080'

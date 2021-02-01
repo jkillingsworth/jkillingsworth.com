@@ -212,8 +212,9 @@ $slice << EOD
 EOD
 
 set border linewidth 1.2
-set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 

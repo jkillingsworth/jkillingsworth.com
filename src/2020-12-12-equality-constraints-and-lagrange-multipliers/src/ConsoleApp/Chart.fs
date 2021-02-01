@@ -99,17 +99,17 @@ $final << EOD
 EOD
 
 set border linewidth 1.2
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Coin Bias (+1)'
-set xtics scale 0.01, 0.01
-set xtics 0.2
 set xrange [0:1]
+set xtics 0.2
 set format x '%0.2f'
 
 set ylabel 'Coin Bias (+2)'
-set ytics scale 0.01, 0.01
-set ytics 0.2
 set yrange [0:1]
+set ytics 0.2
 set format y '%0.2f'
 
 set cblabel offset 1 'Cost \u00f7 10^{{1}}'
@@ -177,22 +177,21 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
+set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Iteration'
-set xtics scale 0.01, 0.01
 set xtics 10000
 set format x '%.0s%c'
 
 set ylabel 'Step Size \u00f7 10^{{-4}}'
-set ytics scale 0.01, 0.01
-set ytics 1
 set yrange [0.0:1.1]
+set ytics 1
 set mytics 10
 set format y '%.2f'
-
-set grid xtics mxtics
-set grid ytics mytics
-set grid linestyle 1 linecolor '#e6e6e6'
 
 set key box linecolor '#808080' samplen 1
 set key top right reverse Left
@@ -220,16 +219,17 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
-set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Possible Outcome'
-set xtics scale 0.01, 0.01
-set xtics ({2})
 set xrange [-{1}-2:+{1}+2]
+set xtics ({2})
 
 set ylabel 'Probability'
-set ytics scale 0.01, 0.01
 set yrange [0:0.6]
 set format y '%0.2f'
 

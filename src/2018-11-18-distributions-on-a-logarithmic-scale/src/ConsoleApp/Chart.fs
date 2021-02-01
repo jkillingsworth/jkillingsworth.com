@@ -35,30 +35,29 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
+set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 if ({1} == 1) {{
     set xlabel 'x'
-    set xtics scale 0.01, 0.01
-    set xtics 1
     set xrange [0:5]
+    set xtics 1
 }}
 
 if ({1} == 2) {{
     set xlabel 'x'
-    set xtics scale 0.01, 0.01
-    set xtics 0.1
     set xrange [0.01:100]
+    set xtics 0.1
     set logscale x 10
 }}
 
 set ylabel 'Probability Density'
-set ytics scale 0.01, 0.01
-set ytics 0.05
 set yrange [0:0.75]
+set ytics 0.05
 set format y '%.2f'
-
-set grid xtics ytics mxtics mytics
-set grid linestyle 1 linecolor '#e6e6e6'
 
 set key box linecolor '#808080' samplen 1
 set key top right reverse Left

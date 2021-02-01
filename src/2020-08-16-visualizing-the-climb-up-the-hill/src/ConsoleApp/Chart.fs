@@ -66,18 +66,19 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
-set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'State'
-set xtics scale 0.01, 0.01
-set xtics ({2})
 set xrange [-{1}:+{1}]
+set xtics ({2})
 
 set ylabel 'Probability of Heads'
-set ytics scale 0.01, 0.01
-set ytics 0.10
 set yrange [0:1]
+set ytics 0.10
 set format y '%0.2f'
 
 set key box linecolor '#808080' samplen 1
@@ -119,16 +120,17 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
-set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Possible Outcome'
-set xtics scale 0.01, 0.01
-set xtics ({2})
 set xrange [-{1}-2:+{1}+2]
+set xtics ({2})
 
 set ylabel 'Probability'
-set ytics scale 0.01, 0.01
 set yrange [0:0.6]
 set format y '%0.2f'
 
@@ -170,15 +172,16 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
-set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Sequence'
-set xtics scale 0.01, 0.01
 set xrange [-1:(2**{1})]
 
 set ylabel 'Probability'
-set ytics scale 0.01, 0.01
 set yrange [0:0.30]
 set format y '%0.2f'
 
@@ -226,17 +229,17 @@ $heatmap << EOD
 EOD
 
 set border linewidth 1.0
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Coin Bias (+1)'
-set xtics scale 0.01, 0.01
-set xtics 0.2
 set xrange [0:1]
+set xtics 0.2
 set format x '%0.1f'
 
 set ylabel 'Coin Bias (+2)'
-set ytics scale 0.01, 0.01
-set ytics 0.2
 set yrange [0:1]
+set ytics 0.2
 set format y '%0.1f'
 
 if ({1} == 1) {{ set zrange [0:0.25] }}
@@ -277,17 +280,17 @@ $plateau << EOD
 EOD
 
 set border linewidth 1.2
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Coin Bias (+1)'
-set xtics scale 0.01, 0.01
-set xtics 0.2
 set xrange [0:1]
+set xtics 0.2
 set format x '%0.2f'
 
 set ylabel 'Coin Bias (+2)'
-set ytics scale 0.01, 0.01
-set ytics 0.2
 set yrange [0:1]
+set ytics 0.2
 set format y '%0.2f'
 
 set cblabel offset 1 'Cost'
@@ -339,17 +342,17 @@ $final << EOD
 EOD
 
 set border linewidth 1.2
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Coin Bias (+1)'
-set xtics scale 0.01, 0.01
-set xtics 0.2
 set xrange [0:1]
+set xtics 0.2
 set format x '%0.2f'
 
 set ylabel 'Coin Bias (+2)'
-set ytics scale 0.01, 0.01
-set ytics 0.2
 set yrange [0:1]
+set ytics 0.2
 set format y '%0.2f'
 
 set cblabel offset 1 'Cost'
@@ -407,17 +410,17 @@ $optimum << EOD
 EOD
 
 set border linewidth 1.2
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Coin Bias (+1)'
-set xtics scale 0.01, 0.01
-set xtics 0.2
 set xrange [0:1]
+set xtics 0.2
 set format x '%0.2f'
 
 set ylabel 'Coin Bias (+2)'
-set ytics scale 0.01, 0.01
-set ytics 0.2
 set yrange [0:1]
+set ytics 0.2
 set format y '%0.2f'
 
 if ({6} == 1) {{ set cblabel offset 1 'Score' }}
@@ -472,17 +475,18 @@ $optima << EOD
 EOD
 
 set border linewidth 1.2
-set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Coin Bias (+1)'
-set xtics scale 0.01, 0.01
 set xrange [{3}:{4}]
 set xtics ({3}, {4}, {1})
 set format x '%0.4f'
 
 set ylabel 'Score'
-set ytics scale 0.01, 0.01
 set yrange [-0.05:0.8]
 set format y '%0.2f'
 

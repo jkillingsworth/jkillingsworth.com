@@ -40,18 +40,19 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
-set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'State'
-set xtics scale 0.01, 0.01
-set xtics ({2})
 set xrange [-{1}:+{1}]
+set xtics ({2})
 
 set ylabel 'Probability of Heads'
-set ytics scale 0.01, 0.01
-set ytics 0.10
 set yrange [0:1]
+set ytics 0.10
 set format y '%0.2f'
 
 set key box linecolor '#808080' samplen 1
@@ -93,16 +94,17 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
-set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Possible Outcome'
-set xtics scale 0.01, 0.01
-set xtics ({2})
 set xrange [-{1}-2:+{1}+2]
+set xtics ({2})
 
 set ylabel 'Probability'
-set ytics scale 0.01, 0.01
 set yrange [0:0.6]
 set format y '%0.2f'
 
@@ -144,15 +146,16 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
-set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Sequence'
-set xtics scale 0.01, 0.01
 set xrange [-1:(2**{1})]
 
 set ylabel 'Probability'
-set ytics scale 0.01, 0.01
 set yrange [0:0.20]
 set format y '%0.2f'
 

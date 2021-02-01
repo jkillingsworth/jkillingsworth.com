@@ -35,18 +35,18 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
+set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'Location (µ)'
-set xtics scale 0.01, 0.01
 set xtics ({1})
 
 set ylabel 'Likelihood'
-set ytics scale 0.01, 0.01
 set yrange [{2}:{3}]
 set ytics (' Max' {4})
-
-set grid xtics ytics mxtics mytics
-set grid linestyle 1 linecolor '#e6e6e6'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
@@ -97,29 +97,28 @@ $data << EOD
 EOD
 
 set border linewidth 1.2
+set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 
 set xlabel 'x'
-set xtics scale 0.01, 0.01
 set xtics 1
 
 if ({1} == 1) {{
     set ylabel 'Probability Density'
-    set ytics scale 0.01, 0.01
-    set ytics 0.05
     set yrange [0:0.55]
+    set ytics 0.05
     set format y '%.2f'
 }}
 
 if ({1} == 2) {{
     set ylabel 'Probability Density'
-    set ytics scale 0.01, 0.01
     set yrange [0.00001:1]
     set format y ' 10^{{%+L}}'
     set logscale y 10
 }}
-
-set grid xtics ytics mxtics mytics
-set grid linestyle 1 linecolor '#e6e6e6'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
