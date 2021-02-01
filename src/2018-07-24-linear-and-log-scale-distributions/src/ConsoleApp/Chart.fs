@@ -34,6 +34,8 @@ $data << EOD
 {0}
 EOD
 
+set border linewidth 1.2
+
 if ({1} == 1) {{
     set xlabel 'Possible Outcome'
     set xrange [-900:1100]

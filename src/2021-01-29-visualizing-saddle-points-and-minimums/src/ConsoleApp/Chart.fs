@@ -59,6 +59,7 @@ $slice << EOD
 {5}
 EOD
 
+set border linewidth 1.2
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
@@ -141,6 +142,7 @@ $heatmap << EOD
 {0}
 EOD
 
+set border linewidth 1.0
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
@@ -209,6 +211,7 @@ $slice << EOD
 {2}
 EOD
 
+set border linewidth 1.2
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
 set xtics scale 0.01, 0.01

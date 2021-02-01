@@ -70,6 +70,8 @@ $final << EOD
 {7}
 EOD
 
+set border linewidth 1.2
+
 set xlabel 'Coin Bias (+1)'
 set xtics scale 0.01, 0.01
 set xtics 0.2

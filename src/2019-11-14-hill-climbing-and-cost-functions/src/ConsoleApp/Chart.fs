@@ -39,6 +39,7 @@ $data << EOD
 {0}
 EOD
 
+set border linewidth 1.2
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
 
@@ -91,6 +92,7 @@ $data << EOD
 {0}
 EOD
 
+set border linewidth 1.2
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
 
@@ -141,6 +143,7 @@ $data << EOD
 {0}
 EOD
 
+set border linewidth 1.2
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
 
@@ -226,6 +229,8 @@ if ({0} == 2) {{ land(x) = plat(x); peak = 1.25 }}
 landprofile(x) = land(x) + 0.25 + ((rand(0) - 0.5) * 0.04)
 pathprofile(x) = land(x) + 0.25 + 0.125
 
+set border linewidth 1.2
+
 set xlabel 'Location'
 set xtics scale 0.01, 0.01
 set xrange [0.5:3.5]
@@ -291,6 +296,7 @@ $optima << EOD
 {1} {2} {2:f8}
 EOD
 
+set border linewidth 1.2
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
 

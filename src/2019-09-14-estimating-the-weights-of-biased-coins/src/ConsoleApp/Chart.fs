@@ -39,6 +39,7 @@ $data << EOD
 {0}
 EOD
 
+set border linewidth 1.2
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
 
@@ -91,6 +92,7 @@ $data << EOD
 {0}
 EOD
 
+set border linewidth 1.2
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
 
@@ -141,6 +143,7 @@ $data << EOD
 {0}
 EOD
 
+set border linewidth 1.2
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
 

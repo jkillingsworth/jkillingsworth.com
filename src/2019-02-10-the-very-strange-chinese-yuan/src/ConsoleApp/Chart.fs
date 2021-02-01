@@ -42,6 +42,8 @@ $data << EOD
 {0}
 EOD
 
+set border linewidth 1.2
+
 set xlabel 'Time (Minutes)'
 set xtics scale 0.01, 0.01
 
@@ -78,6 +80,8 @@ let private plotProbs = "
 $data << EOD
 {0}
 EOD
+
+set border linewidth 1.2
 
 set xlabel 'Price Differences (Log Values), σ = {6:e3}'
 set xtics scale 0.01, 0.01

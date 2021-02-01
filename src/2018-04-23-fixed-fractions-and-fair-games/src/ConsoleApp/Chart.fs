@@ -34,6 +34,8 @@ $data << EOD
 {0}
 EOD
 
+set border linewidth 1.2
+
 set xlabel 'Number of Plays'
 set xrange [0:200]
 set xtics scale 0.01, 0.01

@@ -34,6 +34,8 @@ $data << EOD
 {0}
 EOD
 
+set border linewidth 1.2
+
 set xlabel 'Location (µ)'
 set xtics scale 0.01, 0.01
 set xtics ({1})
@@ -93,6 +95,8 @@ let private plotDistributions = "
 $data << EOD
 {0}
 EOD
+
+set border linewidth 1.2
 
 set xlabel 'x'
 set xtics scale 0.01, 0.01

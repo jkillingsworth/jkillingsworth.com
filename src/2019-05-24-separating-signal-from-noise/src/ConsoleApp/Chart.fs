@@ -49,6 +49,8 @@ $data << EOD
 {0}
 EOD
 
+set border linewidth 1.2
+
 set xlabel 'Time ({2})'
 set xtics scale 0.01, 0.01
 
@@ -92,6 +94,8 @@ $data << EOD
 {0}
 EOD
 
+set border linewidth 1.2
+
 set xlabel 'Time ({2})'
 set xtics scale 0.01, 0.01
 
@@ -134,6 +138,8 @@ let private plotProbs = "
 $data << EOD
 {0}
 EOD
+
+set border linewidth 1.2
 
 set xlabel '{2}, σ = {6:e3}'
 set xtics scale 0.01, 0.01

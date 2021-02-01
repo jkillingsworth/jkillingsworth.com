@@ -65,6 +65,7 @@ $data << EOD
 {0}
 EOD
 
+set border linewidth 1.2
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
 
@@ -117,6 +118,7 @@ $data << EOD
 {0}
 EOD
 
+set border linewidth 1.2
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
 
@@ -167,6 +169,7 @@ $data << EOD
 {0}
 EOD
 
+set border linewidth 1.2
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
 
@@ -222,6 +225,8 @@ $heatmap << EOD
 {0}
 EOD
 
+set border linewidth 1.0
+
 set xlabel 'Coin Bias (+1)'
 set xtics scale 0.01, 0.01
 set xtics 0.2
@@ -270,6 +275,8 @@ EOD
 $plateau << EOD
 {1}
 EOD
+
+set border linewidth 1.2
 
 set xlabel 'Coin Bias (+1)'
 set xtics scale 0.01, 0.01
@@ -330,6 +337,8 @@ EOD
 $final << EOD
 {7}
 EOD
+
+set border linewidth 1.2
 
 set xlabel 'Coin Bias (+1)'
 set xtics scale 0.01, 0.01
@@ -397,6 +406,8 @@ $optimum << EOD
 {5}
 EOD
 
+set border linewidth 1.2
+
 set xlabel 'Coin Bias (+1)'
 set xtics scale 0.01, 0.01
 set xtics 0.2
@@ -460,6 +471,7 @@ $optima << EOD
 {1} {2} {2:f8}
 EOD
 
+set border linewidth 1.2
 set grid xtics ytics mxtics mytics
 set grid linestyle 1 linecolor '#e6e6e6'
 
