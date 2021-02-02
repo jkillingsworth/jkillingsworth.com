@@ -144,6 +144,7 @@ set linetype 3 linewidth 2 linecolor '#40ff0000'
 set style fill solid border linecolor '#808080'
 
 set samples 1000
+
 distributionN(x,µ,σ) = (1 / (σ * ((2 * pi) ** 0.5))) * exp(-0.5 * ((x - µ) / σ) ** 2)
 distributionL(x,µ,b) = (1 / (2 * b)) * exp(-abs(x - µ) / b)
 

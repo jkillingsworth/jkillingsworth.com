@@ -221,17 +221,6 @@ $platwest << EOD
 1.5 1.375 Finish
 EOD
 
-set samples 150
-
-hill(x) = (x > 1.0 && x < 3.0) ? 1 + cos(pi * x) : 0
-plat(x) = (x > 1.5 && x < 2.5) ? 1 : hill(x)
-
-if ({0} == 1) {{ land(x) = hill(x); peak = 2.25 }}
-if ({0} == 2) {{ land(x) = plat(x); peak = 1.25 }}
-
-landprofile(x) = land(x) + 0.25 + ((rand(0) - 0.5) * 0.04)
-pathprofile(x) = land(x) + 0.25 + 0.125
-
 set border linewidth 1.2
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
@@ -242,13 +231,25 @@ set xtics ('West' 0.8, 'East' 3.2)
 
 set ylabel 'Elevation'
 set yrange [0:2.75]
-set ytics ('Base' 0.25 0, 'Peak' peak)
+if ({0} == 1) {{ set ytics ('Base' 0.25 0, 'Peak' 2.25) }}
+if ({0} == 2) {{ set ytics ('Base' 0.25 0, 'Peak' 1.25) }}
 set ytics scale 1
 
 set linetype 1 linewidth 0 linecolor '#ff000000'
 set linetype 2 linewidth 0 linecolor '#e0e0e0'
 set linetype 3 linewidth 2 linecolor '#808080'
 set linetype 4 linewidth 2 linecolor '#ff0000' dashtype 2
+
+set samples 150
+
+hill(x) = (x > 1.0 && x < 3.0) ? 1 + cos(pi * x) : 0
+plat(x) = (x > 1.5 && x < 2.5) ? 1 : hill(x)
+
+if ({0} == 1) {{ land(x) = hill(x) }}
+if ({0} == 2) {{ land(x) = plat(x) }}
+
+landprofile(x) = land(x) + 0.25 + ((rand(0) - 0.5) * 0.04)
+pathprofile(x) = land(x) + 0.25 + 0.125
 
 seed = -1
 
