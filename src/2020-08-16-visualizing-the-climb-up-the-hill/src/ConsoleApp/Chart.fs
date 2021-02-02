@@ -254,8 +254,9 @@ set grid
 if ({1} == 1) {{ set view 30,30,1,1.8 }}
 if ({1} == 2) {{ set view 30,60,1,1.8 }}
 
-set key box linecolor '#808080' samplen 1 width -1
+set key box linecolor '#808080' samplen 1
 set key top left reverse Left
+set key width -1
 
 splot '$heatmap' using ($1/{2}):($2/{3}):3 matrix with lines title 'Surface Plot'
 "
@@ -296,8 +297,9 @@ set format y '%0.2f'
 set cblabel offset 1 'Cost'
 set format cb '%0.2f'
 
-set key box linecolor '#808080' textcolor '#ffffff' samplen 1
+set key box linecolor '#808080' samplen 1
 set key top left reverse Left
+set key textcolor '#ffffff'
 
 set linetype 1 linewidth 2 linecolor '#00ff00'
 
@@ -358,8 +360,9 @@ set format y '%0.2f'
 set cblabel offset 1 'Cost'
 set format cb '%0.2f'
 
-set key box linecolor '#808080' textcolor '#ffffff' samplen 1
+set key box linecolor '#808080' samplen 1
 set key top left reverse Left
+set key textcolor '#ffffff'
 
 set linetype 1 linewidth 2 linecolor '#00ff00'
 set linetype 2 linewidth 2 linecolor '#ffffff'
@@ -427,8 +430,9 @@ if ({6} == 1) {{ set cblabel offset 1 'Score' }}
 if ({6} == 2) {{ set cblabel offset 1 'Cost' }}
 set format cb '%0.2f'
 
-set key box linecolor '#808080' textcolor '#ffffff' samplen 1
+set key box linecolor '#808080' samplen 1
 set key top left reverse Left
+set key textcolor '#ffffff'
 
 if ({6} == 1) {{ set palette defined (0 '#000000', 10 '#202020', 50 '#606060', 100 '#c0c0c0') }}
 if ({6} == 2) {{ set palette rgb 7,5,15 }}

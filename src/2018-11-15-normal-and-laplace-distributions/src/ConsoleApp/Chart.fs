@@ -53,7 +53,7 @@ set key top left reverse Left
 set key width -2
 
 set linetype 1 linewidth 2 linecolor '#ff0000'
-set linetype 2 pointtype 7 linecolor '#ff0000' pointsize 0.75
+set linetype 2 linewidth 1 linecolor '#ff0000' pointtype 7 pointsize 0.75
 
 etitle = 'Likelihood (n is even)'
 otitle = 'Likelihood (n is odd) '

@@ -78,8 +78,9 @@ set cbrange [{3}:{4}]
 set cbtics add ('\u00A00.0' 0)
 set format cb '%+0.1f'
 
-set key box linecolor '#808080' textcolor '#ffffff' samplen 1
+set key box linecolor '#808080' samplen 1
 set key top left reverse Left
+set key textcolor '#ffffff'
 
 set linetype 4 linewidth 2 linecolor '#ffffff' dashtype 3
 
@@ -171,10 +172,11 @@ if ({5} == 1) {{ set view 30,30,1,1.8 }}
 if ({5} == 2) {{ set view 30,60,1,1.8 }}
 if ({5} == 3) {{ set view 60,60,1,1.2 }}
 
-set key box linecolor '#808080' samplen 1 width -1
+set key box linecolor '#808080' samplen 1
 set key top left reverse Left
+set key width -1
 
-set linetype 1 linecolor '#812581'
+set linetype 1 linewidth 1 linecolor '#812581'
 
 set palette defined\
 (\

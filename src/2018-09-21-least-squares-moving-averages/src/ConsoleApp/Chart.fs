@@ -57,15 +57,15 @@ if ({5} == 1) {{ set key title '{4} (Full)' left }}
 if ({5} == 2) {{ set key title '{4} (Zoom)' left }}
 
 if ({5} == 1) {{
-    set linetype 1 linecolor '#00808080'
-    set linetype 2 linecolor '#00ff0000'
-    set linetype 3 linecolor '#800000ff'
+    set linetype 1 linewidth 1 linecolor '#00808080'
+    set linetype 2 linewidth 1 linecolor '#00ff0000'
+    set linetype 3 linewidth 1 linecolor '#800000ff'
 }}
 
 if ({5} == 2) {{
-    set linetype 1 linecolor '#00808080'
-    set linetype 2 linecolor '#80ff0000'
-    set linetype 3 linecolor '#000000ff'
+    set linetype 1 linewidth 1 linecolor '#00808080'
+    set linetype 2 linewidth 1 linecolor '#80ff0000'
+    set linetype 3 linewidth 1 linecolor '#000000ff'
 }}
 
 plot '$data' using 1:2 with lines title 'Market Price',\

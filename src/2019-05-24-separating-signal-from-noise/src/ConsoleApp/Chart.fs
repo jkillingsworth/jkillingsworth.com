@@ -66,8 +66,8 @@ set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 set key title '{1}' left
 
-set linetype 1 linecolor '#808080'
-set linetype 2 linecolor '#ff0000'
+set linetype 1 linewidth 1 linecolor '#808080'
+set linetype 2 linewidth 1 linecolor '#ff0000'
 
 plot '$data' using 1:2 with lines title 'Market',\
      '$data' using 1:3 with lines title 'Smooth'
@@ -110,8 +110,8 @@ set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 set key title '{1}' left
 
-set linetype 1 linecolor '#808080'
-set linetype 2 linecolor '#ff0000'
+set linetype 1 linewidth 1 linecolor '#808080'
+set linetype 2 linewidth 1 linecolor '#ff0000'
 
 plot '$data' using 1:2 with lines title 'Dither',\
      '$data' using 1:3 with lines notitle
@@ -160,7 +160,6 @@ set key title '{1}' left width 6
 set linetype 1 linewidth 1 linecolor '#c0c0c0'
 set linetype 2 linewidth 2 linecolor '#400000ff'
 set linetype 3 linewidth 2 linecolor '#40ff0000'
-
 set style fill solid border linecolor '#808080'
 
 set samples 1000

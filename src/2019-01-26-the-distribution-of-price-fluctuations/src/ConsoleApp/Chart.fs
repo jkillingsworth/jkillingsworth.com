@@ -57,7 +57,7 @@ set format y '% 1.2f'
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 
-set linetype 1 linecolor '#808080'
+set linetype 1 linewidth 1 linecolor '#808080'
 
 plot '$data' using 1:2 with lines title '{1}'
 "
@@ -96,7 +96,7 @@ set format y '% 1.2f'
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 
-set linetype 1 linecolor '#808080'
+set linetype 1 linewidth 1 linecolor '#808080'
 
 plot '$data' using 1:2 with impulses title '{1}'
 "
@@ -141,7 +141,6 @@ set key title '{1}' left width 6
 set linetype 1 linewidth 1 linecolor '#c0c0c0'
 set linetype 2 linewidth 2 linecolor '#400000ff'
 set linetype 3 linewidth 2 linecolor '#40ff0000'
-
 set style fill solid border linecolor '#808080'
 
 set samples 1000

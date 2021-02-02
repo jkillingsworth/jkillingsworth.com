@@ -150,8 +150,9 @@ set format y '%0.2f'
 set cblabel offset 1 'Cost'
 set format cb '%0.2f'
 
-set key box linecolor '#808080' textcolor '#ffffff' samplen 1
+set key box linecolor '#808080' samplen 1
 set key top left reverse Left
+set key textcolor '#ffffff'
 
 set linetype 1 linewidth 2 linecolor '#00ff00'
 set linetype 2 linewidth 2 linecolor '#ffffff'

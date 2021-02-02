@@ -61,9 +61,12 @@ if ({1} == 2) {{
     set logscale y
 }}
 
-set key box lc '#808080' samplen 1
+set key box linecolor '#808080' samplen 1
+set key top right noreverse Right
 
-plot '$data' with lines lc '#ff0000' title 'Gambler''s Bankroll'
+set linetype 1 linewidth 1 linecolor '#ff0000'
+
+plot '$data' with lines title 'Gambler''s Bankroll'
 "
 
 let private renderBankroll linlog path (lower : float) (upper : float) data =

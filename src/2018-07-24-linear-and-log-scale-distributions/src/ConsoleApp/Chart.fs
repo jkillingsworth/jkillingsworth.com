@@ -61,6 +61,7 @@ set ylabel 'Probability'
 set format y '%0.2f'
 
 set key box linecolor '#808080' samplen 1
+set key top right noreverse Right
 
 set linetype 1 linewidth 5 linecolor '#00c000'
 set linetype 2 linewidth 5 linecolor '#ff0000'
