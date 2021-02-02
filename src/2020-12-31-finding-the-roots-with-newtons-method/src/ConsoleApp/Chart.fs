@@ -29,9 +29,6 @@ let private render path template args =
 
 //-------------------------------------------------------------------------------------------------
 
-let private percent x =
-    if Double.IsNaN(x) then "" else x.ToString("0.00%;-0.00%;0.00%")
-
 let private matrix (data : float[,]) densityX densityY =
 
     let createLine j =
