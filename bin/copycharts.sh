@@ -329,3 +329,14 @@ copychart ${post} fig-18 costfunc-heatmap-1.svg
 copychart ${post} fig-19 costfunc-profile-1.svg
 copychart ${post} fig-20 costfunc-heatmap-2.svg
 copychart ${post} fig-21 costfunc-profile-2.svg
+
+post="2021-02-25-generalizing-the-coin-toss-markov-model"
+
+copychart ${post} fig-27 pmfunc-exponent.svg
+copychart ${post} fig-28 biases-start-slope.svg
+copychart ${post} fig-32 biases-final-1.svg
+copychart ${post} fig-33 biases-final-2.svg
+copychart ${post} fig-35 pmfunc-triangle.svg
+copychart ${post} fig-36 biases-start-equal.svg
+copychart ${post} fig-39 biases-final-3.svg
+copychart ${post} fig-40 biases-final-4.svg
