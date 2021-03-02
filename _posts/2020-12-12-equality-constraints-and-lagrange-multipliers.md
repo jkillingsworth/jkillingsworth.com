@@ -3,7 +3,7 @@ layout: post
 title: Equality Constraints and Lagrange Multipliers
 ---
 
-My last few posts have centered around a weighted coin toss game in which the weights of a set of biased coins are determined based on a known target distribution. And while multiple solutions are possible, the inclusion of a scoring function allowed for a unique solution to be found. Until now, I was not sure how to include the scoring function in such a way that I could solve the problem numerically for an arbitrary number of coin tosses. In this post, I show how to use the method of Lagrange multipliers to minimize the scoring function while conforming to the constraints of the coin toss problem.
+My last few posts have centered around a weighted coin toss game in which the weights of a set of biased coins are determined based on a known target distribution. And while multiple solutions are possible, the inclusion of a scoring function allowed for a unique solution to be found. Until now, I was not sure how to include the scoring function in such a way that I could solve the problem numerically for an arbitrary number of coin tosses. In this post, I show how to use the [method of Lagrange multipliers](https://en.wikipedia.org/wiki/Lagrange_multiplier) to minimize the scoring function while conforming to the constraints of the coin toss problem.
 
 <!--excerpt-->
 
