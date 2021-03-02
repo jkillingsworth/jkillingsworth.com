@@ -61,7 +61,6 @@ In this model, there are five possible states that the system can be in and six 
 This transition matrix determines the probability of moving from one state to the next. This is a square matrix with a row and a column for each state. The rows represent the starting states, and the columns represent the subsequent states. We can also use a vector with five elements---one for each state---to represent the probability of being in each one of the states at a particular point in time. Since we always start in the zero state, the initial vector looks like this:
 
 {% latex fig-03 %}
-    \usepackage{array}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_0 =
@@ -95,7 +94,6 @@ We can compute the probability of being in each one of the five states after the
 After the first coin toss, there are two possible states that the system can be in. The cross product above works out to the following:
 
 {% latex fig-05 %}
-    \usepackage{array}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_1 =
@@ -129,7 +127,6 @@ Since there are two flips of the coin per round, we can compute the final outcom
 After the second coin toss, there are three possible states the system can be in. The cross product above works out to the following:
 
 {% latex fig-07 %}
-    \usepackage{array}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_2 =
@@ -216,7 +213,6 @@ In this model, there are seven possible states that the system can be in and a t
 This is a square matrix with seven rows and seven columns. We can also use a seven element vector to represent the likelihood of the system being in a particular state at a given point in time. The initial vector looks like this:
 
 {% latex fig-10 %}
-    \usepackage{array}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_0 =
@@ -254,7 +250,6 @@ We can multiply this vector by the transition matrix three times to determine wh
 After the third coin toss, there are four possible states that the system can be in. The cross product above works out to the following:
 
 {% latex fig-12 %}
-    \usepackage{array}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_3 =
@@ -429,7 +424,6 @@ Once we have a state transition matrix and the initial state vector, we can comp
 The final outcome tells us how likely it is for each state to be the final state of the system after a single round of the coin toss game. We can also represent the final outcome like this:
 
 {% latex fig-18 %}
-    \usepackage{array}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_n =
