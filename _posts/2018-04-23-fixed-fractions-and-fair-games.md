@@ -19,11 +19,11 @@ Suppose the gambler wants to place bets on the outcome of a coin toss. Ignoring 
     \\[1em]
     &
     \begin{aligned}
-    & X_i && \text{is a random variable on } \Omega \text{ representing the } i \text{th toss of the coin}
+    & X_i && \text{is a random variable on $\Omega$ representing the $i$th toss of the coin}
     \\
     & V_0 && \text{is the gambler's initial bankroll}
     \\
-    & V_n && \text{is the gambler's bankroll after } n \text{ plays}
+    & V_n && \text{is the gambler's bankroll after $n$ plays}
     \\
     & b   && \text{is a scaling factor that determines the bet size}
     \end{aligned}

@@ -654,11 +654,11 @@ Suppose we start with an initial guess of all fairly weighted coins. We can rand
         \begin{aligned}
         d_{\mathrlap{\text{original}}\phantom{\text{proposed}}}
         & =
-        r_j - (\text{calculate } r_j \text{ given } p_i)
+        r_j - (\text{calculate $r_j$ given $p_i$})
         \\
         d_{\mathrlap{\text{proposed}}\phantom{\text{proposed}}}
         & =
-        r_j - (\text{calculate } r_j \text{ given } p_i + s)
+        r_j - (\text{calculate $r_j$ given $p_i + s$})
         \\
         v_{\text{improved}}
         & =

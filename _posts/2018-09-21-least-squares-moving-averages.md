@@ -23,7 +23,7 @@ Let's consider the simple moving average first so that we can use it as a basis 
     \\
     & k && \text{is the point in time for which the value is being computed}
     \\
-    & s && \text{is the starting point, } s = k - n + 1
+    & s && \text{is the starting point, $s = k - n + 1$}
     \end{aligned}
     \end{aligned}
     \end{displaymath}
