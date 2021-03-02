@@ -85,7 +85,6 @@ This transition matrix determines the probability of moving from one state to th
 We can compute the probability of being in each one of the five states after the first coin toss by taking the cross product of the above vector and the state transition matrix:
 
 {% latex fig-04 %}
-    \usepackage{array}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_1 = \mathbf{v}_0 \times \mathbf{M}
@@ -120,7 +119,6 @@ After the first coin toss, there are two possible states that the system can be 
 Since there are two flips of the coin per round, we can compute the final outcome distribution by multiplying the vector above by the transition matrix one more time:
 
 {% latex fig-06 %}
-    \usepackage{array}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_2 = \mathbf{v}_1 \times \mathbf{M}
@@ -246,7 +244,6 @@ This is a square matrix with seven rows and seven columns. We can also use a sev
 We can multiply this vector by the transition matrix three times to determine where we might find the state of the system after three flips of the coin:
 
 {% latex fig-11 %}
-    \usepackage{array}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_3 = \mathbf{v}_0 \times \mathbf{M} \times \mathbf{M} \times \mathbf{M}
