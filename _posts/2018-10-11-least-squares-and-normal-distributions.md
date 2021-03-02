@@ -163,7 +163,6 @@ The coefficients can then be found by solving the following matrix equation:
 
 {% latex fig-12 %}
     \usepackage{array}
-    \setlength{\arraycolsep}{0.5em}
     \begin{document}
     \begin{displaymath}
     \left[

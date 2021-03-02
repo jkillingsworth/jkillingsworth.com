@@ -122,7 +122,6 @@ The least squares coefficients can be found by solving the following matrix equa
 
 {% latex fig-18 %}
     \usepackage{array}
-    \setlength{\arraycolsep}{0.5em}
     \begin{document}
     \begin{displaymath}
     \left[
