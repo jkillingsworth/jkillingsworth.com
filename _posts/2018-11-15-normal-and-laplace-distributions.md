@@ -205,7 +205,7 @@ Let's also choose a middle value that is about halfway between the first and las
     \begin{dcases}
     \frac{n}{2}     & \quad \text{if $n$ is even}
     \\[0.5em]
-    \frac{n + 1}{2} & \quad  \text{if $n$ is odd}
+    \frac{n + 1}{2} & \quad \text{if $n$ is odd}
     \end{dcases}
     \end{displaymath}
     \end{document}
