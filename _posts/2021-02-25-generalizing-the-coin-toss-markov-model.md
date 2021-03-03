@@ -621,15 +621,17 @@ Here are the number of iterations required for each scoring function:
 {% latex fig-34 %}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
+    \newcommand{\Sa}{\mathrlap{S_a}\phantom{S_b}}
+    \newcommand{\Sb}{\mathrlap{S_b}\phantom{S_b}}
     \begin{document}
     \begin{displaymath}
     \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{8em}<{$}|>{$}wr{5em}<{$}|}
     \hline
     \text{Scoring Function} & \text{Iterations}
     \\[0.25em]\hline
-    \mathrlap{S_a}\phantom{S_b}(\mathbf{p}) & \text{5}
+    \Sa(\mathbf{p})         & \text{5}
     \\[0.25em]\hline
-    \mathrlap{S_b}\phantom{S_b}(\mathbf{p}) & \text{5}
+    \Sb(\mathbf{p})         & \text{5}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -685,15 +687,17 @@ Here are the number of iterations required for each scoring function:
 {% latex fig-41 %}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
+    \newcommand{\Sa}{\mathrlap{S_a}\phantom{S_b}}
+    \newcommand{\Sb}{\mathrlap{S_b}\phantom{S_b}}
     \begin{document}
     \begin{displaymath}
     \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{8em}<{$}|>{$}wr{5em}<{$}|}
     \hline
     \text{Scoring Function} & \text{Iterations}
     \\[0.25em]\hline
-    \mathrlap{S_a}\phantom{S_b}(\mathbf{p}) & \text{201}
+    \Sa(\mathbf{p})         & \text{201}
     \\[0.25em]\hline
-    \mathrlap{S_b}\phantom{S_b}(\mathbf{p}) & \text{188}
+    \Sb(\mathbf{p})         & \text{188}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
