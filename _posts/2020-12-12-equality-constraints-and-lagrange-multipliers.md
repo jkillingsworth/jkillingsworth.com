@@ -634,23 +634,23 @@ Example with 3 coin tosses, scoring function A:
 {% latex fig-41 %}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
+    \newcommand{\methodA}{\text{Gradient descent}}
+    \newcommand{\methodB}{\text{Nelder--Mead}}
+    \newcommand{\methodC}{\text{Broyden--Fletcher--Goldfarb--Shanno}}
+    \newcommand{\methodD}{\text{Newton--Raphson}}
     \begin{document}
     \begin{displaymath}
     \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{16em}<{$}|>{$}wr{5em}<{$}|}
     \hline
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline
-    \text{Gradient descent}
-    & \text{33,243}
+    \methodA      & \text{33,243}
     \\[0.25em]\hline
-    \text{Nelder--Mead}
-    & \text{220}
+    \methodB      & \text{220}
     \\[0.25em]\hline
-    \text{Broyden--Fletcher--Goldfarb--Shanno}
-    & \text{14}
+    \methodC      & \text{14}
     \\[0.25em]\hline
-    \text{Newton--Raphson}
-    & \text{6}
+    \methodD      & \text{6}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -662,23 +662,23 @@ Example with 3 coin tosses, scoring function B:
 {% latex fig-42 %}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
+    \newcommand{\methodA}{\text{Gradient descent}}
+    \newcommand{\methodB}{\text{Nelder--Mead}}
+    \newcommand{\methodC}{\text{Broyden--Fletcher--Goldfarb--Shanno}}
+    \newcommand{\methodD}{\text{Newton--Raphson}}
     \begin{document}
     \begin{displaymath}
     \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{16em}<{$}|>{$}wr{5em}<{$}|}
     \hline
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline
-    \text{Gradient descent}
-    & \text{284,227}
+    \methodA      & \text{284,227}
     \\[0.25em]\hline
-    \text{Nelder--Mead}
-    & \text{233}
+    \methodB      & \text{233}
     \\[0.25em]\hline
-    \text{Broyden--Fletcher--Goldfarb--Shanno}
-    & \text{11}
+    \methodC      & \text{11}
     \\[0.25em]\hline
-    \text{Newton--Raphson}
-    & \text{5}
+    \methodD      & \text{5}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -690,23 +690,23 @@ Example with 4 coin tosses, scoring function A:
 {% latex fig-43 %}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
+    \newcommand{\methodA}{\text{Gradient descent}}
+    \newcommand{\methodB}{\text{Nelder--Mead}}
+    \newcommand{\methodC}{\text{Broyden--Fletcher--Goldfarb--Shanno}}
+    \newcommand{\methodD}{\text{Newton--Raphson}}
     \begin{document}
     \begin{displaymath}
     \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{16em}<{$}|>{$}wr{5em}<{$}|}
     \hline
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline
-    \text{Gradient descent}
-    & \text{72,805}
+    \methodA      & \text{72,805}
     \\[0.25em]\hline
-    \text{Nelder--Mead}
-    & \text{597}
+    \methodB      & \text{597}
     \\[0.25em]\hline
-    \text{Broyden--Fletcher--Goldfarb--Shanno}
-    & \text{32}
+    \methodC      & \text{32}
     \\[0.25em]\hline
-    \text{Newton--Raphson}
-    & \text{14}
+    \methodD      & \text{14}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -718,23 +718,23 @@ Example with 4 coin tosses, scoring function B:
 {% latex fig-44 %}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
+    \newcommand{\methodA}{\text{Gradient descent}}
+    \newcommand{\methodB}{\text{Nelder--Mead}}
+    \newcommand{\methodC}{\text{Broyden--Fletcher--Goldfarb--Shanno}}
+    \newcommand{\methodD}{\text{Newton--Raphson}}
     \begin{document}
     \begin{displaymath}
     \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{16em}<{$}|>{$}wr{5em}<{$}|}
     \hline
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline
-    \text{Gradient descent}
-    & \text{448,288}
+    \methodA      & \text{448,288}
     \\[0.25em]\hline
-    \text{Nelder--Mead}
-    & \text{546}
+    \methodB      & \text{546}
     \\[0.25em]\hline
-    \text{Broyden--Fletcher--Goldfarb--Shanno}
-    & \text{24}
+    \methodC      & \text{24}
     \\[0.25em]\hline
-    \text{Newton--Raphson}
-    & \text{9}
+    \methodD      & \text{9}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
