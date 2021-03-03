@@ -68,71 +68,58 @@ Now, if we take the gradient of the Lagrangian function and set it equal to the 
 It might even be too concise. But it makes sense if you expand the gradient and unfold it a bit. Here is the complete system of equations:
 
 {% latex fig-05 %}
+    \newcommand{\dL}{\partial \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})}
+    \newcommand{\lhsA}{\frac{\dL}{\partial p_1}}
+    \newcommand{\lhsB}{\frac{\dL}{\partial p_{n-1}}}
+    \newcommand{\lhsC}{\frac{\dL}{\partial \lambda_1}}
+    \newcommand{\lhsD}{\frac{\dL}{\partial \lambda_m}}
+    \newcommand{\rhsA}
+    {
+    \frac{\partial S(\mathbf{p})}{\partial p_1}
+    -
+    \sum_{i = 1}^{m}{\lambda_i \frac{\partial f_i(\mathbf{p})}{\partial p_1}}
+    }
+    \newcommand{\rhsB}
+    {
+    \frac{\partial S(\mathbf{p})}{\partial p_{n-1}}
+    -
+    \sum_{i = 1}^{m}{\lambda_i \frac{\partial f_i(\mathbf{p})}{\partial p_{n-1}}}
+    }
+    \newcommand{\rhsC}{0 - f_1(\mathbf{p})}
+    \newcommand{\rhsD}{0 - f_m(\mathbf{p})}
     \begin{document}
     \begin{displaymath}
     \nabla \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})
     =
     \left[
     \begin{array}{c}
-    \displaystyle
-    \vphantom
-    {
-    \frac{\partial S(\mathbf{p})}{\partial p_1}
-    -
-    \sum_{i = 1}^{m}{\lambda_i \frac{\partial f_i(\mathbf{p})}{\partial p_1}}
-    }
-    \frac{\partial \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})}{\partial p_1}
+    \displaystyle \vphantom{\rhsA} \lhsA
     \\[1em]
     \vdots
     \\[1em]
-    \displaystyle
-    \vphantom
-    {
-    \frac{\partial S(\mathbf{p})}{\partial p_1}
-    -
-    \sum_{i = 1}^{m}{\lambda_i \frac{\partial f_i(\mathbf{p})}{\partial p_1}}
-    }
-    \frac{\partial \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})}{\partial p_{n-1}}
+    \displaystyle \vphantom{\rhsB} \lhsB
     \\[2em]
-    \displaystyle
-    \frac{\partial \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})}{\partial \lambda_1}
+    \displaystyle \lhsC
     \\[1em]
     \vdots
     \\[1em]
-    \displaystyle
-    \frac{\partial \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})}{\partial \lambda_m}
+    \displaystyle \lhsD
     \end{array}
     \right]
     =
     \left[
     \begin{array}{c}
-    \displaystyle
-    \frac{\partial S(\mathbf{p})}{\partial p_1}
-    -
-    \sum_{i = 1}^{m}{\lambda_i \frac{\partial f_i(\mathbf{p})}{\partial p_1}}
+    \displaystyle \rhsA
     \\[1em]
     \vdots
     \\[1em]
-    \displaystyle
-    \frac{\partial S(\mathbf{p})}{\partial p_{n-1}}
-    -
-    \sum_{i = 1}^{m}{\lambda_i \frac{\partial f_i(\mathbf{p})}{\partial p_{n-1}}}
+    \displaystyle \rhsB
     \\[2em]
-    \displaystyle
-    \vphantom
-    {
-    \frac{\partial \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})}{\partial \lambda_1}
-    }
-    0 - f_1(\mathbf{p})
+    \displaystyle \vphantom{\lhsC} \rhsC
     \\[1em]
     \vdots
     \\[1em]
-    \displaystyle
-    \vphantom
-    {
-    \frac{\partial \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})}{\partial \lambda_m}
-    }
-    0 - f_m(\mathbf{p})
+    \displaystyle \vphantom{\lhsD} \rhsD
     \end{array}
     \right]
     =
