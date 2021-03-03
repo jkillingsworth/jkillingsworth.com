@@ -619,7 +619,6 @@ Here is the solution found using scoring function B:
 Here are the number of iterations required for each scoring function:
 
 {% latex fig-34 %}
-    \usepackage{siunitx}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -628,9 +627,9 @@ Here are the number of iterations required for each scoring function:
     \hline
     \text{Scoring Function} & \text{Iterations}
     \\[0.25em]\hline
-    \mathrlap{S_a}\phantom{S_b}(\mathbf{p}) & \num[group-separator={,}]{5}
+    \mathrlap{S_a}\phantom{S_b}(\mathbf{p}) & \text{5}
     \\[0.25em]\hline
-    \mathrlap{S_b}\phantom{S_b}(\mathbf{p}) & \num[group-separator={,}]{5}
+    \mathrlap{S_b}\phantom{S_b}(\mathbf{p}) & \text{5}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -684,7 +683,6 @@ Here is the solution found using scoring function B:
 Here are the number of iterations required for each scoring function:
 
 {% latex fig-41 %}
-    \usepackage{siunitx}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -693,9 +691,9 @@ Here are the number of iterations required for each scoring function:
     \hline
     \text{Scoring Function} & \text{Iterations}
     \\[0.25em]\hline
-    \mathrlap{S_a}\phantom{S_b}(\mathbf{p}) & \num[group-separator={,}]{201}
+    \mathrlap{S_a}\phantom{S_b}(\mathbf{p}) & \text{201}
     \\[0.25em]\hline
-    \mathrlap{S_b}\phantom{S_b}(\mathbf{p}) & \num[group-separator={,}]{188}
+    \mathrlap{S_b}\phantom{S_b}(\mathbf{p}) & \text{188}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}

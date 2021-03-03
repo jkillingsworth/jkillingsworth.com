@@ -195,7 +195,6 @@ Once we have the Lagrangian function, we can compute the gradient and use it to 
 Regardless of the starting point, the final value is always the same. This is what we expect. And this matches the solution found via other methods. Now check out the number of iterations required for each trace:
 
 {% latex fig-15 %}
-    \usepackage{siunitx}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -204,13 +203,13 @@ Regardless of the starting point, the final value is always the same. This is wh
     \hline
     \text{Trace} & \text{Iterations}
     \\[0.25em]\hline
-    1 & \num[group-separator={,}]{5}
+    1            & \text{5}
     \\[0.25em]\hline
-    2 & \num[group-separator={,}]{4}
+    2            & \text{4}
     \\[0.25em]\hline
-    3 & \num[group-separator={,}]{5}
+    3            & \text{5}
     \\[0.25em]\hline
-    4 & \num[group-separator={,}]{5}
+    4            & \text{5}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -243,7 +242,6 @@ Once we have the Lagrangian function, we can compute the gradient and use it to 
 Regardless of the starting point, the final value is always the same. This is what we expect. And this matches the solution found via other methods. Now check out the number of iterations required for each trace:
 
 {% latex fig-21 %}
-    \usepackage{siunitx}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -252,13 +250,13 @@ Regardless of the starting point, the final value is always the same. This is wh
     \hline
     \text{Trace} & \text{Iterations}
     \\[0.25em]\hline
-    1 & \num[group-separator={,}]{5}
+    1            & \text{5}
     \\[0.25em]\hline
-    2 & \num[group-separator={,}]{4}
+    2            & \text{4}
     \\[0.25em]\hline
-    3 & \num[group-separator={,}]{5}
+    3            & \text{5}
     \\[0.25em]\hline
-    4 & \num[group-separator={,}]{5}
+    4            & \text{5}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -404,7 +402,6 @@ Applying Newton's method, here is the result:
 As you can see, once again, we get the same results that we found in the previous post using gradient descent. Here are the number of iterations required using Newton's method:
 
 {% latex fig-27 %}
-    \usepackage{siunitx}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -413,9 +410,9 @@ As you can see, once again, we get the same results that we found in the previou
     \hline
     \text{Scoring Function} & \text{Iterations}
     \\[0.25em]\hline
-    \mathrlap{S_a}\phantom{S_b}(\mathbf{p}) & \num[group-separator={,}]{4}
+    \mathrlap{S_a}\phantom{S_b}(\mathbf{p}) & \text{4}
     \\[0.25em]\hline
-    \mathrlap{S_b}\phantom{S_b}(\mathbf{p}) & \num[group-separator={,}]{4}
+    \mathrlap{S_b}\phantom{S_b}(\mathbf{p}) & \text{4}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}

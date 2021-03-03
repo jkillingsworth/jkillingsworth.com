@@ -269,7 +269,6 @@ Not all dimensions are shown in these illustrations. The colors of the heatmap a
 Here is a breakdown of the number of iterations required for each trace:
 
 {% latex fig-19 %}
-    \usepackage{siunitx}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -278,13 +277,13 @@ Here is a breakdown of the number of iterations required for each trace:
     \hline
     \text{Trace} & \text{Iterations}
     \\[0.25em]\hline
-    1 & \num[group-separator={,}]{36357}
+    1            & \text{36,357}
     \\[0.25em]\hline
-    2 & \num[group-separator={,}]{51168}
+    2            & \text{51,168}
     \\[0.25em]\hline
-    3 & \num[group-separator={,}]{36357}
+    3            & \text{36,357}
     \\[0.25em]\hline
-    4 & \num[group-separator={,}]{36333}
+    4            & \text{36,333}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -319,7 +318,6 @@ Not all dimensions are shown in these illustrations. The colors of the heatmap a
 Here is a breakdown of the number of iterations required for each trace:
 
 {% latex fig-25 %}
-    \usepackage{siunitx}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -328,13 +326,13 @@ Here is a breakdown of the number of iterations required for each trace:
     \hline
     \text{Trace} & \text{Iterations}
     \\[0.25em]\hline
-    1 & \num[group-separator={,}]{284421}
+    1            & \text{284,421}
     \\[0.25em]\hline
-    2 & \num[group-separator={,}]{284421}
+    2            & \text{284,421}
     \\[0.25em]\hline
-    3 & \num[group-separator={,}]{284421}
+    3            & \text{284,421}
     \\[0.25em]\hline
-    4 & \num[group-separator={,}]{284433}
+    4            & \text{284,433}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -516,7 +514,6 @@ Applying the gradient descent method, here is the result:
 You can compare these results with the results found via a [different method]({% post_url 2019-11-14-hill-climbing-and-cost-functions %}#scoring-values-on-the-plateau) and see that they are the same. Here are the number of iterations required:
 
 {% latex fig-34 %}
-    \usepackage{siunitx}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -525,9 +522,9 @@ You can compare these results with the results found via a [different method]({%
     \hline
     \text{Scoring Function} & \text{Iterations}
     \\[0.25em]\hline
-    \mathrlap{S_a}\phantom{S_b}(\mathbf{p}) & \num[group-separator={,}]{75757}
+    \mathrlap{S_a}\phantom{S_b}(\mathbf{p}) & \text{75,757}
     \\[0.25em]\hline
-    \mathrlap{S_b}\phantom{S_b}(\mathbf{p}) & \num[group-separator={,}]{448690}
+    \mathrlap{S_b}\phantom{S_b}(\mathbf{p}) & \text{448,690}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -633,7 +630,6 @@ In the examples above, the gradient descent method requires tens of thousands of
 Example with 3 coin tosses, scoring function A:
 
 {% latex fig-41 %}
-    \usepackage{siunitx}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -643,16 +639,16 @@ Example with 3 coin tosses, scoring function A:
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline
     \text{Gradient descent}
-    & \num[group-separator={,}]{33243}
+    & \text{33,243}
     \\[0.25em]\hline
     \text{Nelder--Mead}
-    & \num[group-separator={,}]{220}
+    & \text{220}
     \\[0.25em]\hline
     \text{Broyden--Fletcher--Goldfarb--Shanno}
-    & \num[group-separator={,}]{14}
+    & \text{14}
     \\[0.25em]\hline
     \text{Newton--Raphson}
-    & \num[group-separator={,}]{6}
+    & \text{6}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -662,7 +658,6 @@ Example with 3 coin tosses, scoring function A:
 Example with 3 coin tosses, scoring function B:
 
 {% latex fig-42 %}
-    \usepackage{siunitx}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -672,16 +667,16 @@ Example with 3 coin tosses, scoring function B:
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline
     \text{Gradient descent}
-    & \num[group-separator={,}]{284227}
+    & \text{284,227}
     \\[0.25em]\hline
     \text{Nelder--Mead}
-    & \num[group-separator={,}]{233}
+    & \text{233}
     \\[0.25em]\hline
     \text{Broyden--Fletcher--Goldfarb--Shanno}
-    & \num[group-separator={,}]{11}
+    & \text{11}
     \\[0.25em]\hline
     \text{Newton--Raphson}
-    & \num[group-separator={,}]{5}
+    & \text{5}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -691,7 +686,6 @@ Example with 3 coin tosses, scoring function B:
 Example with 4 coin tosses, scoring function A:
 
 {% latex fig-43 %}
-    \usepackage{siunitx}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -701,16 +695,16 @@ Example with 4 coin tosses, scoring function A:
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline
     \text{Gradient descent}
-    & \num[group-separator={,}]{72805}
+    & \text{72,805}
     \\[0.25em]\hline
     \text{Nelder--Mead}
-    & \num[group-separator={,}]{597}
+    & \text{597}
     \\[0.25em]\hline
     \text{Broyden--Fletcher--Goldfarb--Shanno}
-    & \num[group-separator={,}]{32}
+    & \text{32}
     \\[0.25em]\hline
     \text{Newton--Raphson}
-    & \num[group-separator={,}]{14}
+    & \text{14}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -720,7 +714,6 @@ Example with 4 coin tosses, scoring function A:
 Example with 4 coin tosses, scoring function B:
 
 {% latex fig-44 %}
-    \usepackage{siunitx}
     \usepackage{array}
     \setlength{\arraycolsep}{1em}
     \begin{document}
@@ -730,16 +723,16 @@ Example with 4 coin tosses, scoring function B:
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline
     \text{Gradient descent}
-    & \num[group-separator={,}]{448288}
+    & \text{448,288}
     \\[0.25em]\hline
     \text{Nelder--Mead}
-    & \num[group-separator={,}]{546}
+    & \text{546}
     \\[0.25em]\hline
     \text{Broyden--Fletcher--Goldfarb--Shanno}
-    & \num[group-separator={,}]{24}
+    & \text{24}
     \\[0.25em]\hline
     \text{Newton--Raphson}
-    & \num[group-separator={,}]{9}
+    & \text{9}
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
