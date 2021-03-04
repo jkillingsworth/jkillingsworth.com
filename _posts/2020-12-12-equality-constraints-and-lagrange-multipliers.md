@@ -372,8 +372,8 @@ We can use the constraint functions above to create a Lagrangian function. Using
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathbf{p}_{\mathrlap{\text{start}}
-    \phantom{\text{finish}}}
+    \mathbf{p}
+    _{\mathrlap{\sscr{start}}\phantom{\sscr{finish}}}
     & =
     \left[
     \begin{array}{l}
@@ -385,8 +385,8 @@ We can use the constraint functions above to create a Lagrangian function. Using
     \end{array}
     \right]
     \\[1em]
-    \boldsymbol{\lambdaup}_{\mathrlap{\text{start}}
-    \phantom{\text{finish}}}
+    \boldsymbol{\lambdaup}
+    _{\mathrlap{\sscr{start}}\phantom{\sscr{finish}}}
     & =
     \left[
     \begin{array}{l}
@@ -420,8 +420,8 @@ Applying the gradient descent method, here is the result:
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathbf{p}_{\mathrlap{\text{finish}}
-    \phantom{\text{finish}}}
+    \mathbf{p}
+    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
     & =
     \left[
     \begin{array}{l}
@@ -433,8 +433,8 @@ Applying the gradient descent method, here is the result:
     \end{array}
     \right]
     \\[1em]
-    \boldsymbol{\lambdaup}_{\mathrlap{\text{finish}}
-    \phantom{\text{finish}}}
+    \boldsymbol{\lambdaup}
+    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
     & =
     \left[
     \begin{array}{l}
@@ -468,8 +468,8 @@ Applying the gradient descent method, here is the result:
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathbf{p}_{\mathrlap{\text{finish}}
-    \phantom{\text{finish}}}
+    \mathbf{p}
+    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
     & =
     \left[
     \begin{array}{l}
@@ -481,8 +481,8 @@ Applying the gradient descent method, here is the result:
     \end{array}
     \right]
     \\[1em]
-    \boldsymbol{\lambdaup}_{\mathrlap{\text{finish}}
-    \phantom{\text{finish}}}
+    \boldsymbol{\lambdaup}
+    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
     & =
     \left[
     \begin{array}{l}
@@ -531,7 +531,7 @@ Using the optimization technique illustrated in the examples above, the solution
     \begin{displaymath}
     \mathbf{p}^{*}
     =
-    \mathbf{p}_{\text{finish}}
+    \mathbf{p}_{\sscr{finish}}
     \end{displaymath}
     \end{document}
 {% endlatex %}

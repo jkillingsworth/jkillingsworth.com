@@ -76,7 +76,7 @@ This transition matrix determines the probability of moving from one state to th
     \\[1em]
     0
     \end{array}
-    \right]^{\mathrm{T}}
+    \right]^{\sscr{T}}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -109,7 +109,7 @@ After the first coin toss, there are two possible states that the system can be 
     \\[1em]
     0
     \end{array}
-    \right]^{\mathrm{T}}
+    \right]^{\sscr{T}}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -142,7 +142,7 @@ After the second coin toss, there are three possible states the system can be in
     \\[1em]
     p_0 \, p_1
     \end{array}
-    \right]^{\mathrm{T}}
+    \right]^{\sscr{T}}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -232,7 +232,7 @@ This is a square matrix with seven rows and seven columns. We can also use a sev
     \\[1em]
     0
     \end{array}
-    \right]^{\mathrm{T}}
+    \right]^{\sscr{T}}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -269,7 +269,7 @@ After the third coin toss, there are four possible states that the system can be
     \\[1em]
     p_0 \, p_1 \, p_2
     \end{array}
-    \right]^{\mathrm{T}}
+    \right]^{\sscr{T}}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -439,7 +439,7 @@ The final outcome tells us how likely it is for each state to be the final state
     \\[1em]
     P(S_{+n})
     \end{array}
-    \right]^{\mathrm{T}}
+    \right]^{\sscr{T}}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -468,11 +468,11 @@ The left-hand side of these equations represents the value of the known target d
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    & \mathrlap{R_{\mathrm{even}}}\phantom{R_{\mathrm{even}}}
+    & \mathrlap{R_{\sscr{even}}}\phantom{R_{\sscr{even}}}
     =
     \{\ 0, 2, 4, \dots, n \ \}
     \\
-    & \mathrlap{R_{\mathrm{odd}}}\phantom{R_{\mathrm{even}}}
+    & \mathrlap{R_{\sscr{odd}}}\phantom{R_{\sscr{even}}}
     =
     \{\ 1, 3, 5, \dots, n \ \}
     \end{aligned}
@@ -487,9 +487,9 @@ These two sets contain even and odd numbers, respectively. We can select one or 
     \begin{displaymath}
     R =
     \begin{dcases}
-    R_{\mathrm{even}} & \quad \text{if $n$ is even}
+    R_{\sscr{even}} & \quad \text{if $n$ is even}
     \\
-    R_{\mathrm{odd}}  & \quad \text{if $n$ is odd}
+    R_{\sscr{odd}}  & \quad \text{if $n$ is odd}
     \end{dcases}
     \end{displaymath}
     \end{document}

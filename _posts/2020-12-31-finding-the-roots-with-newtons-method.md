@@ -122,7 +122,7 @@ Since we are interested in the inverse of the Jacobian matrix, we need to consid
 {% latex fig-07 %}
     \begin{document}
     \begin{displaymath}
-    \mathbf{J} = \mathbf{U} \mathbf{\Sigma} \mathbf{V}^{T}
+    \mathbf{J} = \mathbf{U} \mathbf{\Sigma} \mathbf{V}^{\sscr{T}}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -132,7 +132,7 @@ This is the singular value decomposition of the Jacobian matrix. It is broken do
 {% latex fig-08 %}
     \begin{document}
     \begin{displaymath}
-    \mathbf{J}^{-1} = \mathbf{V} \mathbf{\Sigma}^{-1} \mathbf{U}^{T}
+    \mathbf{J}^{-1} = \mathbf{V} \mathbf{\Sigma}^{-1} \mathbf{U}^{\sscr{T}}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -273,8 +273,8 @@ Let's consider another example using a model of the coin toss game with four fli
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathbf{p}_{\mathrlap{\text{start}}
-    \phantom{\text{finish}}}
+    \mathbf{p}
+    _{\mathrlap{\sscr{start}}\phantom{\sscr{finish}}}
     & =
     \left[
     \begin{array}{l}
@@ -286,8 +286,8 @@ Let's consider another example using a model of the coin toss game with four fli
     \end{array}
     \right]
     \\[1em]
-    \boldsymbol{\lambdaup}_{\mathrlap{\text{start}}
-    \phantom{\text{finish}}}
+    \boldsymbol{\lambdaup}
+    _{\mathrlap{\sscr{start}}\phantom{\sscr{finish}}}
     & =
     \left[
     \begin{array}{l}
@@ -321,8 +321,8 @@ Applying Newton's method, here is the result:
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathbf{p}_{\mathrlap{\text{finish}}
-    \phantom{\text{finish}}}
+    \mathbf{p}
+    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
     & =
     \left[
     \begin{array}{l}
@@ -334,8 +334,8 @@ Applying Newton's method, here is the result:
     \end{array}
     \right]
     \\[1em]
-    \boldsymbol{\lambdaup}_{\mathrlap{\text{finish}}
-    \phantom{\text{finish}}}
+    \boldsymbol{\lambdaup}
+    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
     & =
     \left[
     \begin{array}{l}
@@ -369,8 +369,8 @@ Applying Newton's method, here is the result:
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathbf{p}_{\mathrlap{\text{finish}}
-    \phantom{\text{finish}}}
+    \mathbf{p}
+    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
     & =
     \left[
     \begin{array}{l}
@@ -382,8 +382,8 @@ Applying Newton's method, here is the result:
     \end{array}
     \right]
     \\[1em]
-    \boldsymbol{\lambdaup}_{\mathrlap{\text{finish}}
-    \phantom{\text{finish}}}
+    \boldsymbol{\lambdaup}
+    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
     & =
     \left[
     \begin{array}{l}

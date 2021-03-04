@@ -156,9 +156,9 @@ The bias of each coin must be between a minimum value of zero and a maximum valu
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathrlap{p_{1,\text{min}}}\phantom{p_{1,\text{max}}} & = 1 - 2 r_1
+    \mathrlap{p_{1,\sscr{min}}}\phantom{p_{1,\sscr{max}}} & = 1 - 2 r_1
     \\[1em]
-    \mathrlap{p_{2,\text{max}}}\phantom{p_{1,\text{max}}} & = 1
+    \mathrlap{p_{2,\sscr{max}}}\phantom{p_{1,\sscr{max}}} & = 1
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -170,9 +170,9 @@ The case above shows the minimum value for the weight of the coin in the +1 stat
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathrlap{p_{1,\text{max}}}\phantom{p_{1,\text{max}}} & = 1
+    \mathrlap{p_{1,\sscr{max}}}\phantom{p_{1,\sscr{max}}} & = 1
     \\[1em]
-    \mathrlap{p_{2,\text{min}}}\phantom{p_{1,\text{max}}} & = 1 - 2 r_1
+    \mathrlap{p_{2,\sscr{min}}}\phantom{p_{1,\sscr{max}}} & = 1 - 2 r_1
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -289,7 +289,7 @@ Keep in mind we only want to consider inputs in which the cost function evaluate
 {% latex fig-29 %}
     \begin{document}
     \begin{displaymath}
-    p_{1,\text{optimum}}
+    p_{1,\sscr{optimum}}
     =
     \operatorname*{argmin}_{p_1} \big\{\, \mathrlap{S_a}\phantom{S_b} \,|\, C = 0 \,\big\}
     \approx 0.5773
@@ -334,7 +334,7 @@ Keep in mind we only want to consider inputs in which the cost function evaluate
 {% latex fig-35 %}
     \begin{document}
     \begin{displaymath}
-    p_{1,\text{optimum}}
+    p_{1,\sscr{optimum}}
     =
     \operatorname*{argmin}_{p_1} \big\{\, \mathrlap{S_b}\phantom{S_b} \,|\, C = 0 \,\big\}
     \approx 0.5624

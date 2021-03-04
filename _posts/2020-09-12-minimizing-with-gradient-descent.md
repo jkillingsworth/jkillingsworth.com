@@ -122,8 +122,8 @@ Just like with the hill climbing algorithms used in the previous post, to apply 
 {% latex fig-10 %}
     \begin{document}
     \begin{displaymath}
-    \mathbf{p}_{\mathrlap{\text{start}}
-    \phantom{\text{finish}}}
+    \mathbf{p}
+    _{\mathrlap{\sscr{start}}\phantom{\sscr{finish}}}
     =
     \left[
     \begin{array}{l}
@@ -141,8 +141,8 @@ Applying the gradient descent procedure using the above as the initial input, th
 {% latex fig-11 %}
     \begin{document}
     \begin{displaymath}
-    \mathbf{p}_{\mathrlap{\text{finish}}
-    \phantom{\text{finish}}}
+    \mathbf{p}
+    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
     =
     \left[
     \begin{array}{l}

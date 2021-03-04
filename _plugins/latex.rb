@@ -10,6 +10,7 @@ module Jekyll
             \usepackage[scaled=0.75]{roboto-mono}
             \usepackage{mathtools}
             \usepackage{eucal}
+            \newcommand{\sscr}[1]{\text{#1}}
             '
 
         def process_latex(items)
