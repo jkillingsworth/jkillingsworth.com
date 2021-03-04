@@ -34,6 +34,58 @@ let private percent x =
 
 //-------------------------------------------------------------------------------------------------
 
+let private plotPmfunc = "
+$data << EOD
+{0}
+EOD
+
+set border linewidth 1.2
+set grid linestyle 1 linecolor '#e6e6e6'
+set grid xtics mxtics
+set grid ytics mytics
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
+
+set xlabel 'Possible Outcome'
+set xrange [-{1}-2:+{1}+2]
+set xtics ({2})
+
+set ylabel 'Probability'
+set yrange [0:0.6]
+set format y '%0.2f'
+
+set key box linecolor '#808080' samplen 1
+set key top left reverse Left
+
+set linetype 1 linewidth 1 linecolor '#808080'
+set style fill solid border linecolor '#ffffff'
+
+plot '$data' using 1:2 with boxes title 'Probability Mass',\
+     '$data' using 1:(0.024):3 with labels notitle textcolor '#ffffff'
+"
+
+let renderPmfunc path data =
+
+    let n = 4
+
+    let xtic = function
+        | 0 -> "0"
+        | i -> sprintf "'%+i' %i" i i
+
+    let xtics =
+        [| -n .. 2 .. +n |]
+        |> Array.map xtic
+        |> Array.reduce (fun l r -> l + ", " + r)
+
+    let data =
+        data
+        |> Array.mapi (fun i x -> sprintf "%i %e %s" (2 * i - n) x (percent x))
+        |> String.concat "\n"
+
+    render path plotPmfunc [| data; n; xtics |]
+
+//-------------------------------------------------------------------------------------------------
+
 let private plotBiases = "
 $data << EOD
 {0}
@@ -85,58 +137,6 @@ let renderBiases path data =
         |> String.concat "\n"
 
     render path plotBiases [| data; n; xtics |]
-
-//-------------------------------------------------------------------------------------------------
-
-let private plotPmfunc = "
-$data << EOD
-{0}
-EOD
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
-set xtics scale 0.01, 0.01
-set ytics scale 0.01, 0.01
-
-set xlabel 'Possible Outcome'
-set xrange [-{1}-2:+{1}+2]
-set xtics ({2})
-
-set ylabel 'Probability'
-set yrange [0:0.6]
-set format y '%0.2f'
-
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
-
-set linetype 1 linewidth 1 linecolor '#808080'
-set style fill solid border linecolor '#ffffff'
-
-plot '$data' using 1:2 with boxes title 'Probability Mass',\
-     '$data' using 1:(0.024):3 with labels notitle textcolor '#ffffff'
-"
-
-let renderPmfunc path data =
-
-    let n = 4
-
-    let xtic = function
-        | 0 -> "0"
-        | i -> sprintf "'%+i' %i" i i
-
-    let xtics =
-        [| -n .. 2 .. +n |]
-        |> Array.map xtic
-        |> Array.reduce (fun l r -> l + ", " + r)
-
-    let data =
-        data
-        |> Array.mapi (fun i x -> sprintf "%i %e %s" (2 * i - n) x (percent x))
-        |> String.concat "\n"
-
-    render path plotPmfunc [| data; n; xtics |]
 
 //-------------------------------------------------------------------------------------------------
 
