@@ -340,3 +340,37 @@ copychart ${post} fig-35 pmfunc-triangle.svg
 copychart ${post} fig-36 biases-start-equal.svg
 copychart ${post} fig-39 biases-final-3.svg
 copychart ${post} fig-40 biases-final-4.svg
+
+post="2021-03-24-approximating-the-target-distribution"
+
+copychart ${post} fig-01 evaluate-1-biases.svg
+copychart ${post} fig-02 evaluate-1-pmfunc.svg
+copychart ${post} fig-04 evaluate-2-biases.svg
+copychart ${post} fig-05 evaluate-2-pmfunc.svg
+copychart ${post} fig-06 evaluate-3-biases.svg
+copychart ${post} fig-07 evaluate-3-pmfunc.svg
+copychart ${post} fig-10 evaluate-4-biases.svg
+copychart ${post} fig-11 evaluate-4-pmfunc.svg
+copychart ${post} fig-12 evaluate-5-biases.svg
+copychart ${post} fig-13 evaluate-5-pmfunc.svg
+copychart ${post} fig-16 estimate-1-pmfunc-target.svg
+copychart ${post} fig-17 estimate-1-surface.svg
+copychart ${post} fig-18 estimate-1-trace-1.svg
+copychart ${post} fig-19 estimate-1-trace-2.svg
+copychart ${post} fig-20 estimate-1-trace-3.svg
+copychart ${post} fig-21 estimate-1-biases-fitted.svg
+copychart ${post} fig-22 estimate-1-pmfunc-fitted.svg
+copychart ${post} fig-24 estimate-2-pmfunc-target.svg
+copychart ${post} fig-25 estimate-2-surface.svg
+copychart ${post} fig-26 estimate-2-trace-1.svg
+copychart ${post} fig-27 estimate-2-trace-2.svg
+copychart ${post} fig-28 estimate-2-trace-3.svg
+copychart ${post} fig-29 estimate-2-biases-fitted.svg
+copychart ${post} fig-30 estimate-2-pmfunc-fitted.svg
+copychart ${post} fig-32 estimate-3-pmfunc-target.svg
+copychart ${post} fig-33 estimate-3-surface.svg
+copychart ${post} fig-34 estimate-3-trace-1.svg
+copychart ${post} fig-35 estimate-3-trace-2.svg
+copychart ${post} fig-36 estimate-3-trace-3.svg
+copychart ${post} fig-37 estimate-3-biases-fitted.svg
+copychart ${post} fig-38 estimate-3-pmfunc-fitted.svg
