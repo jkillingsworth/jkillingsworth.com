@@ -203,7 +203,6 @@ set yrange [0:1]
 set ytics 0.2
 set format y '%0.1f'
 
-zrange [0:0.25]
 set format z '%0.2f'
 
 set cblabel offset 1 'Error'
