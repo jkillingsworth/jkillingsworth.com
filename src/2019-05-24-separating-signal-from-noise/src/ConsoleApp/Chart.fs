@@ -45,9 +45,11 @@ let private makeTunit (descriptor : string) =
 //-------------------------------------------------------------------------------------------------
 
 let private plotPrice = "
-$data << EOD
+$data0 << EOD
 {0}
 EOD
+
+label = '{1}'; tunit = '{2}'; lower = {3}; upper = {4}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -56,43 +58,45 @@ set grid ytics mytics
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
-set xlabel 'Time ({2})'
+set xlabel sprintf('Time (%s)', tunit)
 
 set ylabel 'Price (Log Values)'
-set yrange [{3}:{4}]
+set yrange [lower:upper]
 set format y '%7.4f'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title '{1}' left
+set key title sprintf('%s', label) left
 
 set linetype 1 linewidth 1 linecolor '#808080'
 set linetype 2 linewidth 1 linecolor '#ff0000'
 
-plot '$data' using 1:2 with lines title 'Market',\
-     '$data' using 1:3 with lines title 'Smooth'
+plot $data0 using 1:2 with lines title 'Market',\
+     $data0 using 1:3 with lines title 'Smooth'
 "
 
 let renderPrice path data =
 
-    let descriptor, market, smooth, (priceLower, priceUpper) = data
+    let descriptor, market, smooth, (lower, upper) = data
     let label = makeLabel descriptor
     let tunit = makeTunit descriptor
     let smooth = smooth |> Array.map (Option.defaultValue nan)
 
-    let data =
+    let data0 =
         market
         |> Array.mapi (fun i _ -> sprintf "%i %e %e" i market.[i] smooth.[i])
         |> String.concat "\n"
 
-    render path plotPrice [| data; label; tunit; priceLower; priceUpper |]
+    render path plotPrice [| data0; label; tunit; lower; upper |]
 
 //-------------------------------------------------------------------------------------------------
 
 let private plotNoise = "
-$data << EOD
+$data0 << EOD
 {0}
 EOD
+
+label = '{1}'; tunit = '{2}'
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -101,20 +105,20 @@ set grid ytics mytics
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
-set xlabel 'Time ({2})'
+set xlabel sprintf('Time (%s)', tunit)
 
 set ylabel 'Noise'
 set format y '%7.4f'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title '{1}' left
+set key title sprintf('%s', label) left
 
 set linetype 1 linewidth 1 linecolor '#808080'
 set linetype 2 linewidth 1 linecolor '#ff0000'
 
-plot '$data' using 1:2 with lines title 'Dither',\
-     '$data' using 1:3 with lines notitle
+plot $data0 using 1:2 with lines title 'Dither',\
+     $data0 using 1:3 with lines notitle
 "
 
 let renderNoise path data =
@@ -125,19 +129,21 @@ let renderNoise path data =
     let dither = dither |> Array.map (Option.defaultValue nan)
     let baseln = dither |> Array.map (fun x -> if Double.IsNaN(x) then nan else 0.0)
 
-    let data =
+    let data0 =
         dither
         |> Array.mapi (fun i _ -> sprintf "%i %e %e" i dither.[i] baseln.[i])
         |> String.concat "\n"
 
-    render path plotNoise [| data; label; tunit |]
+    render path plotNoise [| data0; label; tunit |]
 
 //-------------------------------------------------------------------------------------------------
 
 let private plotProbs = "
-$data << EOD
+$data0 << EOD
 {0}
 EOD
+
+label = '{1}'; xlabel = '{2}'; sigmas = {3}; µN = {4}; σN = {5}; µL = {6}; bL = {7}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -146,16 +152,18 @@ set grid ytics mytics
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
-set xlabel '{2}, σ = {6:e3}'
-set xrange [-{3}:+{3}]
-set xtics ({4})
+set xlabel sprintf('%s, σ = %s', xlabel, gprintf('%0.3te%04T', σN))
+set xrange [-(sigmas * σN):+(sigmas * σN)]
+set xtics(0)
+set for [i=-sigmas:-1] xtics add (sprintf('%+iσ', i) sprintf('%e', i * σN))
+set for [i=+1:+sigmas] xtics add (sprintf('%+iσ', i) sprintf('%e', i * σN))
 
 set ylabel 'Density'
 set format y '%7.0f'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title '{1}' left width 6
+set key title sprintf('%s', label) left width 6
 
 set linetype 1 linewidth 1 linecolor '#c0c0c0'
 set linetype 2 linewidth 2 linecolor '#400000ff'
@@ -167,33 +175,22 @@ set samples 1000
 distributionN(x,µ,σ) = (1 / (σ * ((2 * pi) ** 0.5))) * exp(-0.5 * ((x - µ) / σ) ** 2)
 distributionL(x,µ,b) = (1 / (2 * b)) * exp(-abs(x - µ) / b)
 
-plot '$data' using 1:2 with boxes title 'Histogram',\
-     distributionN(x, {5}, {6}) title 'Normal',\
-     distributionL(x, {7}, {8}) title 'Laplace'
+plot $data0 using 1:2 with boxes title 'Histogram',\
+     distributionN(x, µN, σN) title 'Normal',\
+     distributionL(x, µL, bL) title 'Laplace'
 "
 
 let private renderProbs xlabel path data =
 
-    let descriptor, histogram, sigmas, (µN : float, σN : float), (µL : float, bL: float) = data
+    let descriptor, histogram, (sigmas : float), (µN : float, σN : float), (µL : float, bL: float) = data
     let label = makeLabel descriptor
-    let xwide = sigmas * σN : float
-    let n = int sigmas
 
-    let xtic = function
-        | 0 -> "0"
-        | i -> sprintf "'%+iσ' %e" i (float i * σN)
-
-    let xtics =
-        [| -n .. +n |]
-        |> Array.map xtic
-        |> Array.reduce (fun l r -> l + ", " + r)
-
-    let data =
+    let data0 =
         histogram
         |> Array.map (fun (center, amount) -> sprintf "%e %e" center amount)
         |> String.concat "\n"
 
-    render path plotProbs [| data; label; xlabel; xwide; xtics; µN; σN; µL; bL |]
+    render path plotProbs [| data0; label; xlabel; sigmas; µN; σN; µL; bL |]
 
 let renderProbsMarket = renderProbs "Market Price Differences"
 let renderProbsSmooth = renderProbs "Smooth Price Differences"

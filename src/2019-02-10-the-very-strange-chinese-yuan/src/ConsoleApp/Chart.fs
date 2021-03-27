@@ -38,9 +38,11 @@ let private makeLabel (descriptor : string) =
 //-------------------------------------------------------------------------------------------------
 
 let private plotPriceLin = "
-$data << EOD
+$data0 << EOD
 {0}
 EOD
+
+label = '{1}'
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -59,27 +61,29 @@ set key top left reverse Left
 
 set linetype 1 linewidth 1 linecolor '#808080'
 
-plot '$data' using 1:2 with lines title '{1}'
+plot $data0 using 1:2 with lines title sprintf('%s', label)
 "
 
 let renderPriceLin path data =
 
-    let descriptor, data = data
+    let descriptor, items = data
     let label = makeLabel descriptor
 
-    let data =
-        data
+    let data0 =
+        items
         |> Array.mapi (fun i x -> sprintf "%i %e" i x)
         |> String.concat "\n"
 
-    render path plotPriceLin [| data; label |]
+    render path plotPriceLin [| data0; label |]
 
 //-------------------------------------------------------------------------------------------------
 
 let private plotProbs = "
-$data << EOD
+$data0 << EOD
 {0}
 EOD
+
+label = '{1}'; style = {2}; sigmas = {3}; µN = {4}; σN = {5}; µL = {6}; bL = {7}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -88,16 +92,18 @@ set grid ytics mytics
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
-set xlabel 'Price Differences (Log Values), σ = {6:e3}'
-set xrange [-{2}:+{2}]
-set xtics ({3})
+set xlabel gprintf('Price Differences (Log Values), σ = %0.3te%04T', σN)
+set xrange [-(sigmas * σN):+(sigmas * σN)]
+set xtics(0)
+set for [i=-sigmas:-1] xtics add (sprintf('%+iσ', i) sprintf('%e', i * σN))
+set for [i=+1:+sigmas] xtics add (sprintf('%+iσ', i) sprintf('%e', i * σN))
 
-if ({4} == 1) {{
+if (style == 1) {{
     set ylabel 'Density'
     set format y '%5.0f'
 }}
 
-if ({4} == 2) {{
+if (style == 2) {{
     set ylabel 'Density'
     set yrange [1:]
     set format y '  10^{{%+L}}'
@@ -106,7 +112,7 @@ if ({4} == 2) {{
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title '{1}' left width 7
+set key title sprintf('%s', label) left width 7
 
 set linetype 1 linewidth 1 linecolor '#c0c0c0'
 set linetype 2 linewidth 2 linecolor '#400000ff'
@@ -118,33 +124,22 @@ set samples 1000
 distributionN(x,µ,σ) = (1 / (σ * ((2 * pi) ** 0.5))) * exp(-0.5 * ((x - µ) / σ) ** 2)
 distributionL(x,µ,b) = (1 / (2 * b)) * exp(-abs(x - µ) / b)
 
-plot '$data' using 1:2 with boxes title 'Histogram',\
-     distributionN(x, {5}, {6}) title 'Normal',\
-     distributionL(x, {7}, {8}) title 'Laplace'
+plot $data0 using 1:2 with boxes title 'Histogram',\
+     distributionN(x, µN, σN) title 'Normal',\
+     distributionL(x, µL, bL) title 'Laplace'
 "
 
-let private renderProbs linlog path data =
+let private renderProbs style path data =
 
-    let descriptor, histogram, sigmas, (µN : float, σN : float), (µL : float, bL: float) = data
+    let descriptor, histogram, (sigmas : float), (µN : float, σN : float), (µL : float, bL: float) = data
     let label = makeLabel descriptor
-    let xwide = sigmas * σN : float
-    let n = int sigmas
 
-    let xlabel = function
-        | 0 -> "0"
-        | i -> sprintf "'%+iσ' %e" i (float i * σN)
-
-    let xrange =
-        [| -n .. +n |]
-        |> Array.map xlabel
-        |> Array.reduce (fun l r -> l + ", " + r)
-
-    let data =
+    let data0 =
         histogram
         |> Array.map (fun (center, amount) -> sprintf "%e %e" center amount)
         |> String.concat "\n"
 
-    render path plotProbs [| data; label; xwide; xrange; linlog; µN; σN; µL; bL |]
+    render path plotProbs [| data0; label; style; sigmas; µN; σN; µL; bL |]
 
 let renderProbsLin = renderProbs 1
 let renderProbsLog = renderProbs 2

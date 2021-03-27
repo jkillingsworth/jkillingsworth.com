@@ -38,9 +38,11 @@ let private makeLabel (descriptor : string) =
 //-------------------------------------------------------------------------------------------------
 
 let private plotPrice = "
-$data << EOD
+$data0 << EOD
 {0}
 EOD
+
+label = '{1}'
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -59,27 +61,29 @@ set key top left reverse Left
 
 set linetype 1 linewidth 1 linecolor '#808080'
 
-plot '$data' using 1:2 with lines title '{1}'
+plot $data0 using 1:2 with lines title sprintf('%s', label)
 "
 
 let renderPrice path data =
 
-    let descriptor, data = data
+    let descriptor, items = data
     let label = makeLabel descriptor
 
-    let data =
-        data
+    let data0 =
+        items
         |> Array.mapi (fun i x -> sprintf "%i %e" i x)
         |> String.concat "\n"
 
-    render path plotPrice [| data; label |]
+    render path plotPrice [| data0; label |]
 
 //-------------------------------------------------------------------------------------------------
 
 let private plotDiffs = "
-$data << EOD
+$data0 << EOD
 {0}
 EOD
+
+label = '{1}'
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -98,27 +102,29 @@ set key top left reverse Left
 
 set linetype 1 linewidth 1 linecolor '#808080'
 
-plot '$data' using 1:2 with impulses title '{1}'
+plot $data0 using 1:2 with impulses title sprintf('%s', label)
 "
 
 let renderDiffs path data =
 
-    let descriptor, data = data
+    let descriptor, items = data
     let label = makeLabel descriptor
 
-    let data =
-        data
+    let data0 =
+        items
         |> Array.mapi (fun i x -> sprintf "%i %e" i x)
         |> String.concat "\n"
 
-    render path plotDiffs [| data; label |]
+    render path plotDiffs [| data0; label |]
 
 //-------------------------------------------------------------------------------------------------
 
 let private plotProbs = "
-$data << EOD
+$data0 << EOD
 {0}
 EOD
+
+label = '{1}'; sigmas = {2}; µN = {3}; σN = {4}; µL = {5}; bL = {6}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -127,16 +133,18 @@ set grid ytics mytics
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
-set xlabel 'Price Differences (Log Values), σ = {5:e3}'
-set xrange [-{2}:+{2}]
-set xtics ({3})
+set xlabel gprintf('Price Differences (Log Values), σ = %0.3te%04T', σN)
+set xrange [-(sigmas * σN):+(sigmas * σN)]
+set xtics(0)
+set for [i=-sigmas:-1] xtics add (sprintf('%+iσ', i) sprintf('%e', i * σN))
+set for [i=+1:+sigmas] xtics add (sprintf('%+iσ', i) sprintf('%e', i * σN))
 
 set ylabel 'Density'
 set format y '%5.0f'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title '{1}' left width 6
+set key title sprintf('%s', label) left width 6
 
 set linetype 1 linewidth 1 linecolor '#c0c0c0'
 set linetype 2 linewidth 2 linecolor '#400000ff'
@@ -148,30 +156,19 @@ set samples 1000
 distributionN(x,µ,σ) = (1 / (σ * ((2 * pi) ** 0.5))) * exp(-0.5 * ((x - µ) / σ) ** 2)
 distributionL(x,µ,b) = (1 / (2 * b)) * exp(-abs(x - µ) / b)
 
-plot '$data' using 1:2 with boxes title 'Histogram',\
-     distributionN(x, {4}, {5}) title 'Normal',\
-     distributionL(x, {6}, {7}) title 'Laplace'
+plot $data0 using 1:2 with boxes title 'Histogram',\
+     distributionN(x, µN, σN) title 'Normal',\
+     distributionL(x, µL, bL) title 'Laplace'
 "
 
 let renderProbs path data =
 
     let descriptor, histogram, sigmas, (µN, σN), (µL, bL) = data
     let label = makeLabel descriptor
-    let xwide = sigmas * σN : float
-    let n = int sigmas
 
-    let xlabel = function
-        | 0 -> "0"
-        | i -> sprintf "'%+iσ' %e" i (float i * σN)
-
-    let xrange =
-        [| -n .. +n |]
-        |> Array.map xlabel
-        |> Array.reduce (fun l r -> l + ", " + r)
-
-    let data =
+    let data0 =
         histogram
         |> Array.map (fun (center, amount) -> sprintf "%e %e" center amount)
         |> String.concat "\n"
 
-    render path plotProbs [| data; label; xwide; xrange; µN; σN; µL; bL |]
+    render path plotProbs [| data0; label; sigmas; µN; σN; µL; bL |]

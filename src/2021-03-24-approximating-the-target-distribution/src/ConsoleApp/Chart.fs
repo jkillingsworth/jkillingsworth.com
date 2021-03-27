@@ -29,14 +29,14 @@ let private render path template args =
 
 //-------------------------------------------------------------------------------------------------
 
-let private matrix (heatmap : float[,]) =
+let private matrix (items : float[,]) =
 
-    let densityX = (heatmap |> Array2D.length1) - 1
-    let densityY = (heatmap |> Array2D.length2) - 1
+    let densityX = (items |> Array2D.length1) - 1
+    let densityY = (items |> Array2D.length2) - 1
 
     let createLine j =
         { 0 .. densityX }
-        |> Seq.map (fun i -> heatmap.[i, j])
+        |> Seq.map (fun i -> items.[i, j])
         |> Seq.map (sprintf "%e")
         |> Seq.reduce (sprintf "%s %s")
 
@@ -155,7 +155,7 @@ if (style == 1) {{
     sa = n + n - 1
     plot $data0 using 1:2 with boxes title 'Coin Bias',\
          $data0 using 1:(p0=$2):(1/0) every ::s0::s0 with labels offset -0.5,-1.0 point ls 2 notitle,\
-         $data0 using 1:(pa=$2):('a') every ::sa::sa with labels offset -0.5,-1.0 point ls 3 tc '#ffffff' title sprintf('a = %.4f', pa),\
+         $data0 using 1:(pa=$2):('a') every ::sa::sa with labels offset -0.5,-1.0 point ls 3 textcolor '#ffffff' title sprintf('a = %0.4f', pa),\
          $data0 using 1:2 every ::s0::sa with lines notitle
 }}
 
@@ -163,8 +163,8 @@ if (style == 2) {{
     sa = n + 1
     sb = n + n - 1
     plot $data0 using 1:2 with boxes title 'Coin Bias',\
-         $data0 using 1:(pa=$2):('a') every ::sa::sa with labels offset -0.5,-1.0 point ls 2 tc '#ffffff' title sprintf('a = %.4f', pa),\
-         $data0 using 1:(pb=$2):('b') every ::sb::sb with labels offset -0.5,-1.0 point ls 3 tc '#ffffff' title sprintf('b = %.4f', pb),\
+         $data0 using 1:(pa=$2):('a') every ::sa::sa with labels offset -0.5,-1.0 point ls 2 textcolor '#ffffff' title sprintf('a = %0.4f', pa),\
+         $data0 using 1:(pb=$2):('b') every ::sb::sb with labels offset -0.5,-1.0 point ls 3 textcolor '#ffffff' title sprintf('b = %0.4f', pb),\
          $data0 using 1:2 every ::sa::sb with lines notitle
 }}
 "
@@ -231,9 +231,9 @@ set palette defined\
 8 '#fde725' \
 )
 
-stats $data0 nooutput
-densityX = STATS_columns - 1
-densityY = STATS_records - 1
+stats [][0:0] $data0 matrix using (0) nooutput
+densityX = STATS_size_x - 1
+densityY = STATS_size_y - 1
 
 splot $data0 using ($1/densityX):($2/densityY):3 matrix with lines title 'Surface Plot'
 "
@@ -263,7 +263,7 @@ $data3 << EOD
 {3}
 EOD
 
-n = {4}; tag = {5}
+n = {4}; tag = '{5}'
 
 set border linewidth 1.2
 set xtics scale 0.01, 0.01
@@ -303,12 +303,12 @@ set palette defined\
 8 '#fde725' \
 )
 
-stats $data0 nooutput
-densityX = STATS_columns - 1
-densityY = STATS_records - 1
+stats [][0:0] $data0 matrix using (0) nooutput
+densityX = STATS_size_x - 1
+densityY = STATS_size_y - 1
 
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
-     $data1 using 1:2 with lines title sprintf('Trace %i', tag),\
+     $data1 using 1:2 with lines title sprintf('Trace %s', tag),\
      $data2 using 1:2 with point ls 2 title 'Start',\
      $data3 using 1:2 with point ls 3 title 'Finish'
 "

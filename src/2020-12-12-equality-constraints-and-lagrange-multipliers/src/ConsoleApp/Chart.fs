@@ -32,11 +32,14 @@ let private render path template args =
 let private percent x =
     if Double.IsNaN(x) then "" else x.ToString("0.00%;-0.00%;0.00%")
 
-let private matrix (data : float[,]) densityX densityY =
+let private matrix (items : float[,]) =
+
+    let densityX = (items |> Array2D.length1) - 1
+    let densityY = (items |> Array2D.length2) - 1
 
     let createLine j =
         { 0 .. densityX }
-        |> Seq.map (fun i -> data.[i, j])
+        |> Seq.map (fun i -> items.[i, j])
         |> Seq.map (sprintf "%e")
         |> Seq.reduce (sprintf "%s %s")
 
@@ -78,9 +81,11 @@ let private downsample samples items =
 //-------------------------------------------------------------------------------------------------
 
 let private plotPmfunc = "
-$data << EOD
+$data0 << EOD
 {0}
 EOD
+
+n = {1}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -90,8 +95,10 @@ set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
 set xlabel 'Possible Outcome'
-set xrange [-{1}-2:+{1}+2]
-set xtics ({2})
+set xrange [-n-2:+n+2]
+if (n % 2 == 0) {{ set xtics (0) }} else {{ set xtics () }}
+set for [i=-n:-1:+2] xtics add (sprintf('%+i', i) i)
+set for [i=+n:+1:-2] xtics add (sprintf('%+i', i) i)
 
 set ylabel 'Probability'
 set yrange [0:0.6]
@@ -103,52 +110,45 @@ set key top left reverse Left
 set linetype 1 linewidth 1 linecolor '#808080'
 set style fill solid border linecolor '#ffffff'
 
-plot '$data' using 1:2 with boxes title 'Probability Mass',\
-     '$data' using 1:(0.024):3 with labels notitle textcolor '#ffffff'
+plot $data0 using 1:2 with boxes title 'Probability Mass',\
+     $data0 using 1:(0.024):3 with labels notitle textcolor '#ffffff'
 "
 
-let renderPmfunc path data =
+let renderPmfunc path pmfunc =
 
-    let n = data |> Array.length |> (+) -1
+    let n = (pmfunc |> Array.length) - 1
 
-    let xtic = function
-        | 0 -> "0"
-        | i -> sprintf "'%+i' %i" i i
-
-    let xtics =
-        [| -n .. 2 .. +n |]
-        |> Array.map xtic
-        |> Array.reduce (fun l r -> l + ", " + r)
-
-    let data =
-        data
+    let data0 =
+        pmfunc
         |> Array.mapi (fun i x -> sprintf "%i %e %s" (2 * i - n) x (percent x))
         |> String.concat "\n"
 
-    render path plotPmfunc [| data; n; xtics |]
+    render path plotPmfunc [| data0; n |]
 
 //-------------------------------------------------------------------------------------------------
 
 let private plotHeatmapTraces = "
-$heatmap << EOD
+$data0 << EOD
 {0}
 EOD
 
-$plateau << EOD
+$data1 << EOD
 {1}
 EOD
 
-$trace << EOD
-{5}
+$data2 << EOD
+{2}
 EOD
 
-$start << EOD
-{6}
+$data3 << EOD
+{3}
 EOD
 
-$final << EOD
-{7}
+$data4 << EOD
+{4}
 EOD
+
+tag = '{5}'
 
 set border linewidth 1.2
 set xtics scale 0.01, 0.01
@@ -173,6 +173,8 @@ set key textcolor '#ffffff'
 
 set linetype 1 linewidth 2 linecolor '#00ff00'
 set linetype 2 linewidth 2 linecolor '#ffffff'
+set linetype 3 pointtype 6 linecolor '#ffffff'
+set linetype 4 pointtype 7 linecolor '#ffffff'
 
 set palette defined\
 (\
@@ -187,45 +189,47 @@ set palette defined\
 8 '#fbfdbf' \
 )
 
-plot '$heatmap' using ($1/{2}):($2/{3}):($3/10) matrix with image pixels notitle,\
-     '$plateau' using 1:2 with lines title 'Plateau',\
-     '$trace' using 1:2 with lines title 'Trace {4}',\
-     '$start' with labels point pointtype 6 linecolor '#ffffff' title 'Start',\
-     '$final' with labels point pointtype 7 linecolor '#ffffff' title 'Finish'
+stats [][0:0] $data0 matrix using (0) nooutput
+densityX = STATS_size_x - 1
+densityY = STATS_size_y - 1
+
+plot $data0 using ($1/densityX):($2/densityY):($3/10) matrix with image pixels notitle,\
+     $data1 using 1:2 with lines title 'Plateau',\
+     $data2 using 1:2 with lines title sprintf('Trace %s', tag),\
+     $data3 using 1:2:3 with labels point ls 3 title 'Start',\
+     $data4 using 1:2:3 with labels point ls 4 title 'Finish'
 "
 
 let renderHeatmapTraces path heatmap plateau trace samples tag =
-
-    let densityX = (heatmap |> Array2D.length1) - 1
-    let densityY = (heatmap |> Array2D.length2) - 1
-    let heatmap = matrix heatmap densityX densityY
-
-    let plateau =
-        plateau
-        |> Array.map (fun (x, y) -> sprintf "%e %e" x y)
-        |> String.concat "\n"
-
-    let start = sprintf "%e %e" <|| (trace |> Array.head)
-    let final = sprintf "%e %e" <|| (trace |> Array.last)
 
     let magnitude basis value =
         let dx = fst value - fst basis
         let dy = snd value - snd basis
         sqrt <| (dx ** 2.0) + (dy ** 2.0)
 
-    let trace =
+    let data0 = matrix heatmap
+
+    let data1 =
+        plateau
+        |> Array.map (fun (x, y) -> sprintf "%e %e" x y)
+        |> String.concat "\n"
+
+    let data2 =
         trace
         |> mergesteps magnitude 0.0001
         |> downsample samples
         |> Array.map (fun (x, y) -> sprintf "%e %e" x y)
         |> String.concat "\n"
 
-    render path plotHeatmapTraces [| heatmap; plateau; densityX; densityY; tag; trace; start; final |]
+    let data3 = sprintf "%e %e" <|| (trace |> Array.head)
+    let data4 = sprintf "%e %e" <|| (trace |> Array.last)
+
+    render path plotHeatmapTraces [| data0; data1; data2; data3; data4; tag |]
 
 //-------------------------------------------------------------------------------------------------
 
 let private plotStepsize = "
-$data << EOD
+$data0 << EOD
 {0}
 EOD
 
@@ -238,28 +242,28 @@ set ytics scale 0.01, 0.01
 
 set xlabel 'Iteration'
 set xtics 10000
-set format x '%.0s%c'
+set format x '%0.0s%c'
 
 set ylabel 'Step Size \u00f7 10^{{-4}}'
 set yrange [0.0:1.1]
 set ytics 1
 set mytics 10
-set format y '%.2f'
+set format y '%0.2f'
 
 set key box linecolor '#808080' samplen 1
 set key top right reverse Left
 
 set linetype 1 linewidth 2 linecolor '#ff0000'
 
-plot '$data' using 1:($2/0.0001) with lines title 'Step Size'
+plot $data0 using 1:($2/0.0001) with lines title 'Step Size'
 "
 
-let renderStepsize path data samples =
+let renderStepsize path items samples =
 
-    let data =
-        data
+    let data0 =
+        items
         |> downsample samples
         |> Array.map (fun (x, y) -> sprintf "%i %e" x y)
         |> String.concat "\n"
 
-    render path plotStepsize [| data |]
+    render path plotStepsize [| data0 |]

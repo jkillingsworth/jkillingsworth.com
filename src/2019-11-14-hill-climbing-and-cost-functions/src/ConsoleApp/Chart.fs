@@ -35,9 +35,11 @@ let private percent x =
 //-------------------------------------------------------------------------------------------------
 
 let private plotPmfunc = "
-$data << EOD
+$data0 << EOD
 {0}
 EOD
+
+n = {1}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -47,8 +49,10 @@ set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
 set xlabel 'Possible Outcome'
-set xrange [-{1}-2:+{1}+2]
-set xtics ({2})
+set xrange [-n-2:+n+2]
+if (n % 2 == 0) {{ set xtics (0) }} else {{ set xtics () }}
+set for [i=-n:-1:+2] xtics add (sprintf('%+i', i) i)
+set for [i=+n:+1:-2] xtics add (sprintf('%+i', i) i)
 
 set ylabel 'Probability'
 set yrange [0:0.6]
@@ -60,36 +64,29 @@ set key top left reverse Left
 set linetype 1 linewidth 1 linecolor '#808080'
 set style fill solid border linecolor '#ffffff'
 
-plot '$data' using 1:2 with boxes title 'Probability Mass',\
-     '$data' using 1:(0.024):3 with labels notitle textcolor '#ffffff'
+plot $data0 using 1:2 with boxes title 'Probability Mass',\
+     $data0 using 1:(0.024):3 with labels notitle textcolor '#ffffff'
 "
 
-let renderPmfunc path data =
+let renderPmfunc path pmfunc =
 
     let n = 4
 
-    let xtic = function
-        | 0 -> "0"
-        | i -> sprintf "'%+i' %i" i i
-
-    let xtics =
-        [| -n .. 2 .. +n |]
-        |> Array.map xtic
-        |> Array.reduce (fun l r -> l + ", " + r)
-
-    let data =
-        data
+    let data0 =
+        pmfunc
         |> Array.mapi (fun i x -> sprintf "%i %e %s" (2 * i - n) x (percent x))
         |> String.concat "\n"
 
-    render path plotPmfunc [| data; n; xtics |]
+    render path plotPmfunc [| data0; n |]
 
 //-------------------------------------------------------------------------------------------------
 
 let private plotBiases = "
-$data << EOD
+$data0 << EOD
 {0}
 EOD
+
+n = {1}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -99,8 +96,10 @@ set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
 set xlabel 'State'
-set xrange [-{1}:+{1}]
-set xtics ({2})
+set xrange [-n:+n]
+set xtics (0)
+set for [i=-n+1:-1] xtics add (sprintf('%+i', i) i)
+set for [i=+1:+n-1] xtics add (sprintf('%+i', i) i)
 
 set ylabel 'Probability of Heads'
 set yrange [0:1]
@@ -113,37 +112,30 @@ set key top left reverse Left
 set linetype 1 linewidth 1 linecolor '#80a080'
 set style fill solid border linecolor '#ffffff'
 
-plot '$data' using 1:2 with boxes title 'Coin Bias',\
-     '$data' using 1:($3 == '0.00%' ? 0.04 : 1/0):3 with labels notitle textcolor '#607860',\
-     '$data' using 1:($3 != '0.00%' ? 0.04 : 1/0):3 with labels notitle textcolor '#ffffff'
+plot $data0 using 1:2 with boxes title 'Coin Bias',\
+     $data0 using 1:($3 == '0.00%' ? 0.04 : 1/0):3 with labels notitle textcolor '#607860',\
+     $data0 using 1:($3 != '0.00%' ? 0.04 : 1/0):3 with labels notitle textcolor '#ffffff'
 "
 
-let renderBiases path data =
+let renderBiases path biases =
 
     let n = 4
 
-    let xtic = function
-        | 0 -> "0"
-        | i -> sprintf "'%+i' %i" i i
-
-    let xtics =
-        [| -(n - 1) .. 1 .. +(n - 1) |]
-        |> Array.map xtic
-        |> Array.reduce (fun l r -> l + ", " + r)
-
-    let data =
-        data
+    let data0 =
+        biases
         |> Array.mapi (fun i x -> sprintf "%i %e %s" (i - n) x (percent x))
         |> String.concat "\n"
 
-    render path plotBiases [| data; n; xtics |]
+    render path plotBiases [| data0; n |]
 
 //-------------------------------------------------------------------------------------------------
 
 let private plotTosses = "
-$data << EOD
+$data0 << EOD
 {0}
 EOD
+
+n = {1}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -153,7 +145,7 @@ set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
 set xlabel 'Sequence'
-set xrange [-1:(2**{1})]
+set xrange [-1:(2**n)]
 
 set ylabel 'Probability'
 set yrange [0:0.20]
@@ -169,20 +161,20 @@ set linetype 4 linewidth 1 linecolor '#b08080'
 set linetype 5 linewidth 1 linecolor '#e08080'
 set style fill solid border linecolor '#ffffff'
 
-plot '$data' using 1:($3 == 0 ? $4 : 0):xtic(2) with boxes title '0 Heads, 4 Tails',\
-     '$data' using 1:($3 == 1 ? $4 : 0):xtic(2) with boxes title '1 Heads, 3 Tails',\
-     '$data' using 1:($3 == 2 ? $4 : 0):xtic(2) with boxes title '2 Heads, 2 Tails',\
-     '$data' using 1:($3 == 3 ? $4 : 0):xtic(2) with boxes title '3 Heads, 1 Tails',\
-     '$data' using 1:($3 == 4 ? $4 : 0):xtic(2) with boxes title '4 Heads, 0 Tails',\
-     '$data' using 1:($5 == '0.00%' && $3 == 0 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#80b0e0',\
-     '$data' using 1:($5 == '0.00%' && $3 == 1 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#8098b0',\
-     '$data' using 1:($5 == '0.00%' && $3 == 2 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#808080',\
-     '$data' using 1:($5 == '0.00%' && $3 == 3 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#b08080',\
-     '$data' using 1:($5 == '0.00%' && $3 == 4 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#e08080',\
-     '$data' using 1:($5 != '0.00%' ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#ffffff'
+plot $data0 using 1:($3 == 0 ? $4 : 0):xtic(2) with boxes title '0 Heads, 4 Tails',\
+     $data0 using 1:($3 == 1 ? $4 : 0):xtic(2) with boxes title '1 Heads, 3 Tails',\
+     $data0 using 1:($3 == 2 ? $4 : 0):xtic(2) with boxes title '2 Heads, 2 Tails',\
+     $data0 using 1:($3 == 3 ? $4 : 0):xtic(2) with boxes title '3 Heads, 1 Tails',\
+     $data0 using 1:($3 == 4 ? $4 : 0):xtic(2) with boxes title '4 Heads, 0 Tails',\
+     $data0 using 1:($5 == '0.00%' && $3 == 0 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#80b0e0',\
+     $data0 using 1:($5 == '0.00%' && $3 == 1 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#8098b0',\
+     $data0 using 1:($5 == '0.00%' && $3 == 2 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#808080',\
+     $data0 using 1:($5 == '0.00%' && $3 == 3 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#b08080',\
+     $data0 using 1:($5 == '0.00%' && $3 == 4 ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#e08080',\
+     $data0 using 1:($5 != '0.00%' ? 0.006 : 1/0):5 with labels notitle left rotate by 90 textcolor '#ffffff'
 "
 
-let renderTosses path data =
+let renderTosses path tosses =
 
     let n = 4
 
@@ -191,12 +183,12 @@ let renderTosses path data =
         |> Seq.filter (fun x -> x = 'H')
         |> Seq.length
 
-    let data =
-        data
+    let data0 =
+        tosses
         |> Array.mapi (fun i (s, r) -> sprintf "%i %s %i %e %s" i s (color s) r (percent r))
         |> String.concat "\n"
 
-    render path plotTosses [| data; n |]
+    render path plotTosses [| data0; n |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -221,6 +213,8 @@ $platwest << EOD
 1.5 1.375 Finish
 EOD
 
+landform = {0}; eastwest = {1}
+
 set border linewidth 1.2
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
@@ -231,8 +225,8 @@ set xtics ('West' 0.8, 'East' 3.2)
 
 set ylabel 'Elevation'
 set yrange [0:2.75]
-if ({0} == 1) {{ set ytics ('Base' 0.25 0, 'Peak' 2.25) }}
-if ({0} == 2) {{ set ytics ('Base' 0.25 0, 'Peak' 1.25) }}
+if (landform == 1) {{ set ytics ('Base' 0.25 0, 'Peak' 2.25) }}
+if (landform == 2) {{ set ytics ('Base' 0.25 0, 'Peak' 1.25) }}
 set ytics scale 1
 
 set linetype 1 linewidth 0 linecolor '#ff000000'
@@ -245,36 +239,36 @@ set samples 150
 hill(x) = (x > 1.0 && x < 3.0) ? 1 + cos(pi * x) : 0
 plat(x) = (x > 1.5 && x < 2.5) ? 1 : hill(x)
 
-if ({0} == 1) {{ land(x) = hill(x) }}
-if ({0} == 2) {{ land(x) = plat(x) }}
+if (landform == 1) {{ land(x) = hill(x) }}
+if (landform == 2) {{ land(x) = plat(x) }}
 
 landprofile(x) = land(x) + 0.25 + ((rand(0) - 0.5) * 0.04)
 pathprofile(x) = land(x) + 0.25 + 0.125
 
 seed = -1
 
-if ({0} == 1 && {1} == 1) {{
+if (landform == 1 && eastwest == 1) {{
     plot rand(seed) linetype 1 notitle, landprofile(x) linetype 2 notitle with filledcurve y=0,\
          rand(seed) linetype 1 notitle, landprofile(x) linetype 3 notitle,\
          [3:2.0] pathprofile(x) notitle linetype 4,\
          $hilleast with labels notitle point pointtype 7 offset 0,1
 }}
 
-if ({0} == 1 && {1} == 2) {{
+if (landform == 1 && eastwest == 2) {{
     plot rand(seed) linetype 1 notitle, landprofile(x) linetype 2 notitle with filledcurve y=0,\
          rand(seed) linetype 1 notitle, landprofile(x) linetype 3 notitle,\
          [1:2.0] pathprofile(x) notitle linetype 4,\
          $hillwest with labels notitle point pointtype 7 offset 0,1
 }}
 
-if ({0} == 2 && {1} == 1) {{
+if (landform == 2 && eastwest == 1) {{
     plot rand(seed) linetype 1 notitle, landprofile(x) linetype 2 notitle with filledcurve y=0,\
          rand(seed) linetype 1 notitle, landprofile(x) linetype 3 notitle,\
          [3:2.5] pathprofile(x) notitle linetype 4,\
          $plateast with labels notitle point pointtype 7 offset 0,1
 }}
 
-if ({0} == 2 && {1} == 2) {{
+if (landform == 2 && eastwest == 2) {{
     plot rand(seed) linetype 1 notitle, landprofile(x) linetype 2 notitle with filledcurve y=0,\
          rand(seed) linetype 1 notitle, landprofile(x) linetype 3 notitle,\
          [1:1.5] pathprofile(x) notitle linetype 4,\
@@ -294,13 +288,15 @@ let renderClimbPlatWest = renderClimb 2 2
 //-------------------------------------------------------------------------------------------------
 
 let private plotScores = "
-$scores << EOD
+$data0 << EOD
 {0}
 EOD
 
-$optima << EOD
+$optimum << EOD
 {1} {2} {2:f8}
 EOD
+
+p1 = {1}; score = {2}; lower = {3}; upper = {4}; tag = '{5}'
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -310,8 +306,8 @@ set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
 set xlabel 'Coin Bias (+1)'
-set xrange [{3}:{4}]
-set xtics ({3}, {4}, {1})
+set xrange [lower:upper]
+set xtics (lower, upper, p1)
 set format x '%0.4f'
 
 set ylabel 'Score'
@@ -323,15 +319,15 @@ set key top left reverse Left
 
 set linetype 1 linewidth 1 linecolor '#ff0000'
 
-plot '$scores' using 1:2 with lines title 'Score {5}',\
-     '$optima' with labels offset 0,1 point pointtype 2 title 'Optimum'
+plot $data0 using 1:2 with lines title sprintf('Score %s', tag),\
+     $optimum with labels offset 0,1 point pointtype 2 title 'Optimum'
 "
 
 let renderScores path scores (p1, score) (lower, upper) tag =
 
-    let scores =
+    let data0 =
         scores
-        |> Array.map (fun (x, y) -> sprintf "%e %e" x y)
+        |> Array.map (fun (p1, s) -> sprintf "%e %e" p1 s)
         |> String.concat "\n"
 
-    render path plotScores [| scores; p1; score; lower; upper; tag |]
+    render path plotScores [| data0; p1; score; lower; upper; tag |]

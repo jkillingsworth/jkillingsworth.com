@@ -29,11 +29,14 @@ let private render path template args =
 
 //-------------------------------------------------------------------------------------------------
 
-let private matrix (data : float[,]) densityX densityY =
+let private matrix (items : float[,]) =
+
+    let densityX = (items |> Array2D.length1) - 1
+    let densityY = (items |> Array2D.length2) - 1
 
     let createLine j =
         { 0 .. densityX }
-        |> Seq.map (fun i -> data.[i, j])
+        |> Seq.map (fun i -> items.[i, j])
         |> Seq.map (sprintf "%e")
         |> Seq.reduce (sprintf "%s %s")
 
@@ -47,17 +50,19 @@ let private matrix (data : float[,]) densityX densityY =
 //-------------------------------------------------------------------------------------------------
 
 let private plotHeatmap = "
-$heatmap << EOD
+$data0 << EOD
 {0}
+EOD
+
+$data1 << EOD
+{1}
 EOD
 
 $optimum << EOD
 0.5 0.0
 EOD
 
-$slice << EOD
-{5}
-EOD
+lower = {2}; upper = {3}; style = {4}
 
 set border linewidth 1.2
 set xtics scale 0.01, 0.01
@@ -74,7 +79,7 @@ set ytics -0.5, 0.2
 set format y '%+0.1f'
 
 set cblabel offset 1 'Value'
-set cbrange [{3}:{4}]
+set cbrange [lower:upper]
 set cbtics add ('\u00A00.0' 0)
 set format cb '%+0.1f'
 
@@ -82,6 +87,7 @@ set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 set key textcolor '#ffffff'
 
+set linetype 1 pointtype 7 linecolor '#ffffff'
 set linetype 4 linewidth 2 linecolor '#ffffff' dashtype 3
 
 set palette defined\
@@ -97,51 +103,57 @@ set palette defined\
 8 '#fbfdbf' \
 )
 
-n = {7}
+stats [][0:0] $data0 matrix using (0) nooutput
+densityX = STATS_size_x - 1
+densityY = STATS_size_y - 1
 
-if ({6} == 0) {{
-    plot '$heatmap' using ($1/{1}):($2/{2} - 0.5):3 matrix with image pixels notitle,\
-         '$optimum' with labels point pointtype 7 linecolor '#ffffff' title 'Optimum'
+if (style != 0) {{
+    stats [][0:0] $data1 using (0) nooutput
+    a = 0
+    b = STATS_records - 1
 }}
 
-if ({6} == 1) {{
-    plot '$heatmap' using ($1/{1}):($2/{2} - 0.5):3 matrix with image pixels notitle,\
-         '$optimum' with labels point pointtype 7 linecolor '#ffffff' title 'Optimum',\
-         '$slice' using 1:2:('A') every ::0::0 with labels offset +1.5,+1.3 nopoint textcolor '#ffffff' notitle,\
-         '$slice' using 1:2:('B') every ::n::n with labels offset -1.5,-1.3 nopoint textcolor '#ffffff' notitle,\
-         '$slice' using 1:2 with lines title 'Slice {6}'
+if (style == 0) {{
+    plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
+         $optimum with labels point ls 1 title 'Optimum'
 }}
 
-if ({6} == 2) {{
-    plot '$heatmap' using ($1/{1}):($2/{2} - 0.5):3 matrix with image pixels notitle,\
-         '$optimum' with labels point pointtype 7 linecolor '#ffffff' title 'Optimum',\
-         '$slice' using 1:2:('A') every ::0::0 with labels offset -1.0,-0.7 nopoint textcolor '#ffffff' notitle,\
-         '$slice' using 1:2:('B') every ::n::n with labels offset +1.0,+0.7 nopoint textcolor '#ffffff' notitle,\
-         '$slice' using 1:2 with lines title 'Slice {6}'
+if (style == 1) {{
+    plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
+         $optimum with labels point ls 1 title 'Optimum',\
+         $data1 using 1:2:('A') every ::a::a with labels offset +1.5,+1.3 nopoint textcolor '#ffffff' notitle,\
+         $data1 using 1:2:('B') every ::b::b with labels offset -1.5,-1.3 nopoint textcolor '#ffffff' notitle,\
+         $data1 using 1:2 with lines title sprintf('Slice %i', style)
+}}
+
+if (style == 2) {{
+    plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
+         $optimum with labels point ls 1 title 'Optimum',\
+         $data1 using 1:2:('A') every ::a::a with labels offset -1.0,-0.7 nopoint textcolor '#ffffff' notitle,\
+         $data1 using 1:2:('B') every ::b::b with labels offset +1.0,+0.7 nopoint textcolor '#ffffff' notitle,\
+         $data1 using 1:2 with lines title sprintf('Slice %i', style)
 }}
 "
 
-let renderHeatmap path heatmap (lower, upper) tag slice =
+let renderHeatmap path heatmap (lower, upper) style slice =
 
-    let densityX = (heatmap |> Array2D.length1) - 1
-    let densityY = (heatmap |> Array2D.length2) - 1
-    let heatmap = matrix heatmap densityX densityY
+    let data0 = matrix heatmap
 
-    let samples = (slice |> Array.length) - 1
-
-    let slice =
+    let data1 =
         slice
-        |> Array.map (fun (p, λ, v) -> sprintf "%e %e %e" p λ v)
+        |> Array.map (fun (p, λ, v) -> sprintf "%e %e" p λ)
         |> String.concat "\n"
 
-    render path plotHeatmap [| heatmap; densityX; densityY; lower; upper; slice; tag; samples |]
+    render path plotHeatmap [| data0; data1; lower; upper; style |]
 
 //-------------------------------------------------------------------------------------------------
 
 let private plotSurface = "
-$heatmap << EOD
+$data0 << EOD
 {0}
 EOD
+
+lower = {1}; upper = {2}; style = {3}
 
 set border linewidth 1.0
 set xtics scale 0.01, 0.01
@@ -157,20 +169,20 @@ set yrange [-0.5:+0.5]
 set ytics -0.5, 0.2
 set format y '%+0.1f'
 
-set zrange [{3}:{4}]
+set zrange [lower:upper]
 set ztics add ('\u00A00.0' 0)
 set format z '%+0.1f'
 
 set cblabel offset 1 'Value'
-set cbrange [{3}:{4}]
+set cbrange [lower:upper]
 set cbtics add ('\u00A00.0' 0)
 set format cb '%+0.1f'
 
 set pm3d
 set grid
-if ({5} == 1) {{ set view 30,30,1,1.8 }}
-if ({5} == 2) {{ set view 30,60,1,1.8 }}
-if ({5} == 3) {{ set view 60,60,1,1.2 }}
+if (style == 1) {{ set view 30,30,1,1.8 }}
+if (style == 2) {{ set view 30,60,1,1.8 }}
+if (style == 3) {{ set view 60,60,1,1.2 }}
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
@@ -191,27 +203,31 @@ set palette defined\
 8 '#fbfdbf' \
 )
 
-splot '$heatmap' using ($1/{1}):($2/{2} - 0.5):3 matrix with lines title 'Surface Plot'
+stats [][0:0] $data0 matrix using (0) nooutput
+densityX = STATS_size_x - 1
+densityY = STATS_size_y - 1
+
+splot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with lines title 'Surface Plot'
 "
 
-let renderSurface path data (lower, upper) style =
+let renderSurface path heatmap (lower, upper) style =
 
-    let densityX = (data |> Array2D.length1) - 1
-    let densityY = (data |> Array2D.length2) - 1
-    let heatmap = matrix data densityX densityY
+    let data0 = matrix heatmap
 
-    render path plotSurface [| heatmap; densityX; densityY; lower; upper; style |]
+    render path plotSurface [| data0; lower; upper; style |]
 
 //-------------------------------------------------------------------------------------------------
 
 let private plotProfile = "
+$data0 << EOD
+{0}
+EOD
+
 $optimum << EOD
 0.5 0.0
 EOD
 
-$slice << EOD
-{2}
-EOD
+lower = {1}; upper = {2}; style = {3}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -227,24 +243,25 @@ set xtics add ('A' 0, 'B' 1)
 set mxtics 5
 
 set ylabel 'Value'
-set yrange [{0}:{1}]
+set yrange [lower:upper]
 set ytics add ('\u00A00.0' 0)
 set format y '%+0.1f'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 
+set linetype 1 pointtype 7 linecolor '#b5367a'
 set linetype 2 linewidth 2 linecolor '#b5367a'
 
-plot '$optimum' with labels point pointtype 7 linecolor '#b5367a' title 'Optimum',\
-     '$slice' using ($0 / {4}):3 with lines title 'Slice {3}'
+plot $optimum with labels point ls 1 title 'Optimum',\
+     $data0 using 1:2 with lines title sprintf('Slice %i', style)
 "
 
-let renderProfile path samples (lower, upper) tag slice =
+let renderProfile path samples (lower, upper) style slice =
 
-    let slice =
+    let data0 =
         slice
-        |> Array.map (fun (p, λ, value) -> sprintf "%e %e %e" p λ value)
+        |> Array.mapi (fun i (p, λ, v) -> sprintf "%e %e" (float i / float samples) v)
         |> String.concat "\n"
 
-    render path plotProfile [| lower; upper; slice; tag; samples |]
+    render path plotProfile [| data0; lower; upper; style |]

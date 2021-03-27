@@ -30,9 +30,11 @@ let private render path template args =
 //-------------------------------------------------------------------------------------------------
 
 let private plotDistribution = "
-$data << EOD
+$data0 << EOD
 {0}
 EOD
+
+style = {1}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -41,18 +43,18 @@ set grid ytics mytics
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
-if ({1} == 1) {{
+if (style == 1) {{
     set xlabel 'Possible Outcome'
     set xrange [-900:1100]
     set xtics -900, 200
     set mxtics 2
 }}
 
-if ({1} == 2) {{
+if (style == 2) {{
     set xlabel 'Possible Outcome'
     set xrange [0.001:+10000000]
     set xtics 0.001, 10
-    set xtics add (0.001,0.01,0.1,1,10,100,'1K' 1000,'10K' 10000,'100K' 100000,'1M' 1000000,'10M' 10000000)
+    set xtics add (0.001, 0.01, 0.1, 1, 10, 100, '1K' 1000, '10K' 10000, '100K' 100000, '1M' 1000000, '10M' 10000000)
     set mxtics default
     set logscale x
 }}
@@ -67,19 +69,19 @@ set linetype 1 linewidth 5 linecolor '#00c000'
 set linetype 2 linewidth 5 linecolor '#ff0000'
 set linetype 3 linewidth 5 linecolor '#808080'
 
-plot '$data' using (strcol(1) >= 100 ? $1 : 1/0):2 with impulses title 'Profit',\
-     '$data' using (strcol(1) <= 100 ? $1 : 1/0):2 with impulses title 'Loss',\
-     '$data' using (strcol(1) == 100 ? $1 : 1/0):2 with impulses title 'Breakeven'
+plot $data0 using ($1 >= 100 ? $1 : 1/0):2 with impulses title 'Profit',\
+     $data0 using ($1 <= 100 ? $1 : 1/0):2 with impulses title 'Loss',\
+     $data0 using ($1 == 100 ? $1 : 1/0):2 with impulses title 'Breakeven'
 "
 
-let private renderDistribution linlog path data =
+let private renderDistribution style path items =
 
-    let data =
-        data
+    let data0 =
+        items
         |> Array.map (fun x -> sprintf "%e %e" (fst x) (snd x))
         |> String.concat "\n"
 
-    render path plotDistribution [| data; linlog |]
+    render path plotDistribution [| data0; style |]
 
 let renderDistributionLin = renderDistribution 1
 let renderDistributionLog = renderDistribution 2

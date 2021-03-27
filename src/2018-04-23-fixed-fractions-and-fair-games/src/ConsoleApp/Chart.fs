@@ -30,9 +30,11 @@ let private render path template args =
 //-------------------------------------------------------------------------------------------------
 
 let private plotBankroll = "
-$data << EOD
+$data0 << EOD
 {0}
 EOD
+
+style = {1}; lower = {2}; upper = {3}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -46,16 +48,16 @@ set xrange [0:200]
 set xtics 50
 set mxtics 2
 
-if ({1} == 1) {{
+if (style == 1) {{
     set ylabel 'Dollars'
-    set yrange [{2}:{3}]
+    set yrange [lower:upper]
     set ytics 100
     set mytics 5
 }}
 
-if ({1} == 2) {{
+if (style == 2) {{
     set ylabel 'Dollars'
-    set yrange [{2}:{3}]
+    set yrange [lower:upper]
     set ytics 10
     set mytics 9
     set logscale y
@@ -66,17 +68,17 @@ set key top right noreverse Right
 
 set linetype 1 linewidth 1 linecolor '#ff0000'
 
-plot '$data' with lines title 'Gambler''s Bankroll'
+plot $data0 with lines title 'Gambler''s Bankroll'
 "
 
-let private renderBankroll linlog path (lower : float) (upper : float) data =
+let private renderBankroll style path (lower : float) (upper : float) items =
 
-    let data =
-        data
+    let data0 =
+        items
         |> Array.mapi (fun i x -> sprintf "%i %e" i x)
         |> String.concat "\n"
 
-    render path plotBankroll [| data; linlog; lower; upper |]
+    render path plotBankroll [| data0; style; lower; upper |]
 
 let renderBankrollLin = renderBankroll 1
 let renderBankrollLog = renderBankroll 2

@@ -29,11 +29,14 @@ let private render path template args =
 
 //-------------------------------------------------------------------------------------------------
 
-let private matrix (data : float[,]) densityX densityY =
+let private matrix (items : float[,]) =
+
+    let densityX = (items |> Array2D.length1) - 1
+    let densityY = (items |> Array2D.length2) - 1
 
     let createLine j =
         { 0 .. densityX }
-        |> Seq.map (fun i -> data.[i, j])
+        |> Seq.map (fun i -> items.[i, j])
         |> Seq.map (sprintf "%e")
         |> Seq.reduce (sprintf "%s %s")
 
@@ -47,25 +50,27 @@ let private matrix (data : float[,]) densityX densityY =
 //-------------------------------------------------------------------------------------------------
 
 let private plotHeatmapTraces = "
-$heatmap << EOD
+$data0 << EOD
 {0}
 EOD
 
-$plateau << EOD
+$data1 << EOD
 {1}
 EOD
 
-$trace << EOD
-{5}
+$data2 << EOD
+{2}
 EOD
 
-$start << EOD
-{6}
+$data3 << EOD
+{3}
 EOD
 
-$final << EOD
-{7}
+$data4 << EOD
+{4}
 EOD
+
+tag = '{5}'
 
 set border linewidth 1.2
 set xtics scale 0.01, 0.01
@@ -90,6 +95,8 @@ set key textcolor '#ffffff'
 
 set linetype 1 linewidth 2 linecolor '#00ff00'
 set linetype 2 linewidth 2 linecolor '#ffffff'
+set linetype 3 pointtype 6 linecolor '#ffffff'
+set linetype 4 pointtype 7 linecolor '#ffffff'
 
 set palette defined\
 (\
@@ -104,30 +111,32 @@ set palette defined\
 8 '#fbfdbf' \
 )
 
-plot '$heatmap' using ($1/{2}):($2/{3}):($3/10) matrix with image pixels notitle,\
-     '$plateau' using 1:2 with lines title 'Plateau',\
-     '$trace' using 1:2 with lines title 'Trace {4}',\
-     '$start' with labels point pointtype 6 linecolor '#ffffff' title 'Start',\
-     '$final' with labels point pointtype 7 linecolor '#ffffff' title 'Finish'
+stats [][0:0] $data0 matrix using (0) nooutput
+densityX = STATS_size_x - 1
+densityY = STATS_size_y - 1
+
+plot $data0 using ($1/densityX):($2/densityY):($3/10) matrix with image pixels notitle,\
+     $data1 using 1:2 with lines title 'Plateau',\
+     $data2 using 1:2 with lines title sprintf('Trace %s', tag),\
+     $data3 using 1:2:3 with labels point ls 3 title 'Start',\
+     $data4 using 1:2:3 with labels point ls 4 title 'Finish'
 "
 
 let renderHeatmapTraces path heatmap plateau trace tag =
 
-    let densityX = (heatmap |> Array2D.length1) - 1
-    let densityY = (heatmap |> Array2D.length2) - 1
-    let heatmap = matrix heatmap densityX densityY
+    let data0 = matrix heatmap
 
-    let plateau =
+    let data1 =
         plateau
         |> Array.map (fun (x, y) -> sprintf "%e %e" x y)
         |> String.concat "\n"
 
-    let start = sprintf "%e %e" <|| (trace |> Array.head)
-    let final = sprintf "%e %e" <|| (trace |> Array.last)
-
-    let trace =
+    let data2 =
         trace
         |> Array.map (fun (x, y) -> sprintf "%e %e" x y)
         |> String.concat "\n"
 
-    render path plotHeatmapTraces [| heatmap; plateau; densityX; densityY; tag; trace; start; final |]
+    let data3 = sprintf "%e %e" <|| (trace |> Array.head)
+    let data4 = sprintf "%e %e" <|| (trace |> Array.last)
+
+    render path plotHeatmapTraces [| data0; data1; data2; data3; data4; tag |]
