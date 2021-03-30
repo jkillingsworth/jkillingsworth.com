@@ -58,11 +58,11 @@ $data1 << EOD
 {1}
 EOD
 
-$optimum << EOD
-0.5 0.0
+$data2 << EOD
+{2}
 EOD
 
-lower = {2}; upper = {3}; style = {4}
+lower = {3}; upper = {4}; style = {5}
 
 set border linewidth 1.2
 set xtics scale 0.01, 0.01
@@ -108,43 +108,45 @@ densityX = STATS_size_x - 1
 densityY = STATS_size_y - 1
 
 if (style != 0) {{
-    stats [][0:0] $data1 using (0) nooutput
+    stats [][0:0] $data2 using (0) nooutput
     a = 0
     b = STATS_records - 1
 }}
 
 if (style == 0) {{
     plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
-         $optimum with labels point ls 1 title 'Optimum'
+         $data1 using 1:2 with point ls 1 title 'Optimum'
 }}
 
 if (style == 1) {{
     plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
-         $optimum with labels point ls 1 title 'Optimum',\
-         $data1 using 1:2:('A') every ::a::a with labels offset +1.5,+1.3 nopoint textcolor '#ffffff' notitle,\
-         $data1 using 1:2:('B') every ::b::b with labels offset -1.5,-1.3 nopoint textcolor '#ffffff' notitle,\
-         $data1 using 1:2 with lines title sprintf('Slice %i', style)
+         $data1 using 1:2 with point ls 1 title 'Optimum',\
+         $data2 using 1:2:('A') every ::a::a with labels offset +1.5,+1.3 nopoint textcolor '#ffffff' notitle,\
+         $data2 using 1:2:('B') every ::b::b with labels offset -1.5,-1.3 nopoint textcolor '#ffffff' notitle,\
+         $data2 using 1:2 with lines title sprintf('Slice %i', style)
 }}
 
 if (style == 2) {{
     plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
-         $optimum with labels point ls 1 title 'Optimum',\
-         $data1 using 1:2:('A') every ::a::a with labels offset -1.0,-0.7 nopoint textcolor '#ffffff' notitle,\
-         $data1 using 1:2:('B') every ::b::b with labels offset +1.0,+0.7 nopoint textcolor '#ffffff' notitle,\
-         $data1 using 1:2 with lines title sprintf('Slice %i', style)
+         $data1 using 1:2 with point ls 1 title 'Optimum',\
+         $data2 using 1:2:('A') every ::a::a with labels offset -1.0,-0.7 nopoint textcolor '#ffffff' notitle,\
+         $data2 using 1:2:('B') every ::b::b with labels offset +1.0,+0.7 nopoint textcolor '#ffffff' notitle,\
+         $data2 using 1:2 with lines title sprintf('Slice %i', style)
 }}
 "
 
-let renderHeatmap path heatmap (lower, upper) style slice =
+let renderHeatmap path heatmap (lower, upper) style optimum slice =
 
     let data0 = matrix heatmap
 
-    let data1 =
+    let data1 = sprintf "%e %e" (fst optimum) (snd optimum)
+
+    let data2 =
         slice
         |> Array.map (fun (p, λ, v) -> sprintf "%e %e" p λ)
         |> String.concat "\n"
 
-    render path plotHeatmap [| data0; data1; lower; upper; style |]
+    render path plotHeatmap [| data0; data1; data2; lower; upper; style |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -223,11 +225,11 @@ $data0 << EOD
 {0}
 EOD
 
-$optimum << EOD
-0.5 0.0
+$data1 << EOD
+{1}
 EOD
 
-lower = {1}; upper = {2}; style = {3}
+lower = {2}; upper = {3}; style = {4}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -253,15 +255,17 @@ set key top left reverse Left
 set linetype 1 pointtype 7 linecolor '#b5367a'
 set linetype 2 linewidth 2 linecolor '#b5367a'
 
-plot $optimum with labels point ls 1 title 'Optimum',\
-     $data0 using 1:2 with lines title sprintf('Slice %i', style)
+plot $data0 using 1:2 with point ls 1 title 'Optimum',\
+     $data1 using 1:2 with lines title sprintf('Slice %i', style)
 "
 
-let renderProfile path samples (lower, upper) style slice =
+let renderProfile path samples (lower, upper) style optimum slice =
 
-    let data0 =
+    let data0 = sprintf "%e %e" (fst optimum) (snd optimum)
+
+    let data1 =
         slice
         |> Array.mapi (fun i (p, λ, v) -> sprintf "%e %e" (float i / float samples) v)
         |> String.concat "\n"
 
-    render path plotProfile [| data0; lower; upper; style |]
+    render path plotProfile [| data0; data1; lower; upper; style |]

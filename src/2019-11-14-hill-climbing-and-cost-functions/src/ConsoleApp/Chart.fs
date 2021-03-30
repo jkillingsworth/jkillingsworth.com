@@ -293,11 +293,11 @@ $data0 << EOD
 {0}
 EOD
 
-$optimum << EOD
-{1} {2} {2:f8}
+$data1 << EOD
+{1}
 EOD
 
-p1 = {1}; score = {2}; lower = {3}; upper = {4}; tag = '{5}'
+lower = {2}; upper = {3}; p1 = {4}; tag = '{5}'
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -319,9 +319,10 @@ set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 
 set linetype 1 linewidth 1 linecolor '#ff0000'
+set linetype 2 pointtype 2 linecolor '#000000'
 
 plot $data0 using 1:2 with lines title sprintf('Score %s', tag),\
-     $optimum with labels offset 0,1 point pointtype 2 title 'Optimum'
+     $data1 using 1:2:3 with labels offset 0,1 point ls 2 title 'Optimum'
 "
 
 let renderScores path scores (p1, score) (lower, upper) tag =
@@ -331,4 +332,6 @@ let renderScores path scores (p1, score) (lower, upper) tag =
         |> Array.map (fun (p1, s) -> sprintf "%e %e" p1 s)
         |> String.concat "\n"
 
-    render path plotScores [| data0; p1; score; lower; upper; tag |]
+    let data1 = sprintf "%e %e %0.8f" p1 score score
+
+    render path plotScores [| data0; data1; lower; upper; p1; tag |]
