@@ -233,6 +233,7 @@ set linetype 1 linewidth 0 linecolor '#ff000000'
 set linetype 2 linewidth 0 linecolor '#e0e0e0'
 set linetype 3 linewidth 2 linecolor '#808080'
 set linetype 4 linewidth 2 linecolor '#ff0000' dashtype 2
+set linetype 5 pointtype 7 linecolor '#000000'
 
 set samples 150
 
@@ -251,28 +252,28 @@ if (landform == 1 && eastwest == 1) {{
     plot rand(seed) linetype 1 notitle, landprofile(x) linetype 2 notitle with filledcurve y=0,\
          rand(seed) linetype 1 notitle, landprofile(x) linetype 3 notitle,\
          [3:2.0] pathprofile(x) notitle linetype 4,\
-         $hilleast with labels notitle point pointtype 7 offset 0,1
+         $hilleast with labels notitle point linetype 5 offset 0,1
 }}
 
 if (landform == 1 && eastwest == 2) {{
     plot rand(seed) linetype 1 notitle, landprofile(x) linetype 2 notitle with filledcurve y=0,\
          rand(seed) linetype 1 notitle, landprofile(x) linetype 3 notitle,\
          [1:2.0] pathprofile(x) notitle linetype 4,\
-         $hillwest with labels notitle point pointtype 7 offset 0,1
+         $hillwest with labels notitle point linetype 5 offset 0,1
 }}
 
 if (landform == 2 && eastwest == 1) {{
     plot rand(seed) linetype 1 notitle, landprofile(x) linetype 2 notitle with filledcurve y=0,\
          rand(seed) linetype 1 notitle, landprofile(x) linetype 3 notitle,\
          [3:2.5] pathprofile(x) notitle linetype 4,\
-         $plateast with labels notitle point pointtype 7 offset 0,1
+         $plateast with labels notitle point linetype 5 offset 0,1
 }}
 
 if (landform == 2 && eastwest == 2) {{
     plot rand(seed) linetype 1 notitle, landprofile(x) linetype 2 notitle with filledcurve y=0,\
          rand(seed) linetype 1 notitle, landprofile(x) linetype 3 notitle,\
          [1:1.5] pathprofile(x) notitle linetype 4,\
-         $platwest with labels notitle point pointtype 7 offset 0,1
+         $platwest with labels notitle point linetype 5 offset 0,1
 }}
 "
 
