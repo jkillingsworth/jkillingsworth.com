@@ -23,7 +23,7 @@ let executeTrace tag psStart =
 
     let psFinal, psTrace = Compute.estimate gradient psStart
     let traces = psTrace |> Array.map (fun x -> x.[0], x.[1])
-    Chart.renderHeatmapTraces (path name + "-heatmap.svg") heatmap plateau traces tag
+    Chart.renderHeatmapTraces (path name + "-heatmap.svg") heatmap plateau traces samples tag
 
     printfn "----------------------------------------"
     printfn "%s" name

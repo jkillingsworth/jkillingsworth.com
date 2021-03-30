@@ -389,9 +389,7 @@ plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle
      $data4 using 1:2:3 with labels point ls 4 title 'Finish'
 "
 
-let renderHeatmapTraces path heatmap plateau trace tag =
-
-    let samples = (plateau |> Array.length) - 1
+let renderHeatmapTraces path heatmap plateau trace samples tag =
 
     let data0 = matrix heatmap
 

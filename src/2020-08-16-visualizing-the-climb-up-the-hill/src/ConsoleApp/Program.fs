@@ -36,7 +36,7 @@ let executeTrace tag pmfunc biases category select =
     Chart.renderBiases (path name + "-final-biases.svg") biasesFinal
     Chart.renderPmfunc (path name + "-final-pmfunc.svg") pmfuncFinal
     Chart.renderTosses (path name + "-final-tosses.svg") tosses
-    Chart.renderHeatmapTraces (path name + "-heatmap.svg") heatmap plateau traces tag
+    Chart.renderHeatmapTraces (path name + "-heatmap.svg") heatmap plateau traces samples tag
 
     printfn "----------------------------------------"
     printfn "%s" name
