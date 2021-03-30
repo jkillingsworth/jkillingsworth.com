@@ -76,7 +76,10 @@ let private downsample samples items =
         | i when i = samples -> items |> Array.last
         | i -> compute i
 
-    compute |> Array.init (samples + 1)
+    if (samples <= Array.length items) then
+        compute |> Array.init (samples + 1)
+    else
+        items
 
 //-------------------------------------------------------------------------------------------------
 

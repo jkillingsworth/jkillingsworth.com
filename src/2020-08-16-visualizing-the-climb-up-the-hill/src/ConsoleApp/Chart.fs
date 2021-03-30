@@ -50,16 +50,22 @@ let private matrix (items : float[,]) =
 
     combinedRows
 
-let private downsampleEvaluate samples items = function
-    | i when i = samples -> items |> Array.last
-    | i ->
+let private downsample samples items =
+
+    let compute i =
         let count = items |> Array.length
         let ratio = float i / float samples
         let index = ratio * float count
         items.[index |> round |> int]
 
-let private downsample samples items =
-    downsampleEvaluate samples items |> Array.init (samples + 1)
+    let compute = function
+        | i when i = samples -> items |> Array.last
+        | i -> compute i
+
+    if (samples <= Array.length items) then
+        compute |> Array.init (samples + 1)
+    else
+        items
 
 //-------------------------------------------------------------------------------------------------
 
