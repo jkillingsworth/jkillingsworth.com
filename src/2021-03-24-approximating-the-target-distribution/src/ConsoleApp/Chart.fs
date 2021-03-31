@@ -154,8 +154,8 @@ if (style == 1) {{
     s0 = n
     sa = n + n - 1
     plot $data0 using 1:2 with boxes title 'Coin Bias',\
-         $data0 using 1:(p0=$2):(1/0) every ::s0::s0 with labels offset -0.5,-1.0 point ls 2 notitle,\
-         $data0 using 1:(pa=$2):('a') every ::sa::sa with labels offset -0.5,-1.0 point ls 3 textcolor '#ffffff' title sprintf('a = %0.4f', pa),\
+         $data0 using 1:(p0=$2):(1/0) every ::s0::s0 with labels offset -0.5,-1.0 point linetype 2 notitle,\
+         $data0 using 1:(pa=$2):('a') every ::sa::sa with labels offset -0.5,-1.0 point linetype 3 textcolor '#ffffff' title sprintf('a = %0.4f', pa),\
          $data0 using 1:2 every ::s0::sa with lines notitle
 }}
 
@@ -163,8 +163,8 @@ if (style == 2) {{
     sa = n + 1
     sb = n + n - 1
     plot $data0 using 1:2 with boxes title 'Coin Bias',\
-         $data0 using 1:(pa=$2):('a') every ::sa::sa with labels offset -0.5,-1.0 point ls 2 textcolor '#ffffff' title sprintf('a = %0.4f', pa),\
-         $data0 using 1:(pb=$2):('b') every ::sb::sb with labels offset -0.5,-1.0 point ls 3 textcolor '#ffffff' title sprintf('b = %0.4f', pb),\
+         $data0 using 1:(pa=$2):('a') every ::sa::sa with labels offset -0.5,-1.0 point linetype 2 textcolor '#ffffff' title sprintf('a = %0.4f', pa),\
+         $data0 using 1:(pb=$2):('b') every ::sb::sb with labels offset -0.5,-1.0 point linetype 3 textcolor '#ffffff' title sprintf('b = %0.4f', pb),\
          $data0 using 1:2 every ::sa::sb with lines notitle
 }}
 "
@@ -309,8 +309,8 @@ densityY = STATS_size_y - 1
 
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
      $data1 using 1:2 with lines title sprintf('Trace %s', tag),\
-     $data2 using 1:2 with points ls 2 title 'Start',\
-     $data3 using 1:2 with points ls 3 title 'Finish'
+     $data2 using 1:2 with points linetype 2 title 'Start',\
+     $data3 using 1:2 with points linetype 3 title 'Finish'
 "
 
 let renderHeatmap path heatmap n trace samples tag =

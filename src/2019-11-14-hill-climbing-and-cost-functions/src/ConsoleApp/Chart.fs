@@ -322,7 +322,7 @@ set linetype 1 linewidth 1 linecolor '#ff0000'
 set linetype 2 pointtype 2 linecolor '#000000'
 
 plot $data0 using 1:2 with lines title sprintf('Score %s', tag),\
-     $data1 using 1:2:3 with labels offset 0,1 point ls 2 title 'Optimum'
+     $data1 using 1:2:3 with labels offset 0,1 point linetype 2 title 'Optimum'
 "
 
 let renderScores path scores (p1, score) (lower, upper) tag =

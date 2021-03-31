@@ -385,8 +385,8 @@ densityY = STATS_size_y - 1
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
      $data1 using 1:2 with lines title 'Plateau',\
      $data2 using 1:2 with lines title sprintf('Trace %s', tag),\
-     $data3 using 1:2:3 with labels point ls 3 title 'Start',\
-     $data4 using 1:2:3 with labels point ls 4 title 'Finish'
+     $data3 using 1:2:3 with labels point linetype 3 title 'Start',\
+     $data4 using 1:2:3 with labels point linetype 4 title 'Finish'
 "
 
 let renderHeatmapTraces path heatmap plateau trace samples tag =
@@ -465,7 +465,7 @@ green(x) = (int((1 - x) * 240) << 24) + (int(255) << 8)
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
      for [i=0:0] $data1 using 1:2:(val=$3) every ::i-0::i+0 with lines linecolor rgb green(1.0) linewidth 2 title 'Plateau',\
      for [i=0:n] $data1 using 1:2:(val=$3) every ::i-1::i+1 with lines linecolor rgb green(val) linewidth 1.5 + val notitle,\
-     $data2 using 1:2:3 with labels point ls 2 title 'Optimum'
+     $data2 using 1:2:3 with labels point linetype 2 title 'Optimum'
 "
 
 let renderHeatmapScores path heatmap scores (p1, p2, score) style =
@@ -521,7 +521,7 @@ set linetype 1 linewidth 1 linecolor '#ff0000'
 set linetype 2 pointtype 2 linecolor '#000000'
 
 plot $data0 using 1:2 with lines title sprintf('Score %s', tag),\
-     $data1 using 1:2:3 with labels offset 0,1 point ls 2 title 'Optimum'
+     $data1 using 1:2:3 with labels offset 0,1 point linetype 2 title 'Optimum'
 "
 
 let renderScores path scores (p1, p2, score) tag =
