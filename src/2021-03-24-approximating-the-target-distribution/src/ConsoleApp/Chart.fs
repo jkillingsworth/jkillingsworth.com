@@ -309,8 +309,8 @@ densityY = STATS_size_y - 1
 
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
      $data1 using 1:2 with lines title sprintf('Trace %s', tag),\
-     $data2 using 1:2 with point ls 2 title 'Start',\
-     $data3 using 1:2 with point ls 3 title 'Finish'
+     $data2 using 1:2 with points ls 2 title 'Start',\
+     $data3 using 1:2 with points ls 3 title 'Finish'
 "
 
 let renderHeatmap path heatmap n trace samples tag =
