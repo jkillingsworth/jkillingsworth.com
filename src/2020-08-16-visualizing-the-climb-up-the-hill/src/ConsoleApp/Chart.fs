@@ -448,6 +448,7 @@ set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 set key textcolor '#ffffff'
 
+set linetype 1 linewidth 2 linecolor '#00ff00'
 set linetype 2 pointtype 7 linecolor '#ffffff'
 
 if (style == 1) {{ set palette defined (0 '#000000', 10 '#202020', 50 '#606060', 100 '#c0c0c0') }}
@@ -463,22 +464,22 @@ n = STATS_records - 1
 green(x) = (int((1 - x) * 240) << 24) + (int(255) << 8)
 
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
-     for [i=0:0] $data1 using 1:2:(val=$3) every ::i-0::i+0 with lines linecolor rgb green(1.0) linewidth 2 title 'Plateau',\
-     for [i=0:n] $data1 using 1:2:(val=$3) every ::i-1::i+1 with lines linecolor rgb green(val) linewidth 1.5 + val notitle,\
+     for [i=0:0] $data1 using 1:2:(mag=$3) every ::i-0::i+0 with lines linecolor rgb green(1.0) linewidth 2 title 'Plateau',\
+     for [i=0:n] $data1 using 1:2:(mag=$3) every ::i-1::i+1 with lines linecolor rgb green(mag) linewidth 1.5 + mag notitle,\
      $data2 using 1:2:3 with labels point linetype 2 title 'Optimum'
 "
 
 let renderHeatmapScores path heatmap scores (p1, p2, score) style =
 
-    let min = scores |> Array.map (fun (_, _, s) -> s) |> Array.min
-    let max = scores |> Array.map (fun (_, _, s) -> s) |> Array.max
-    let scale x = (max - x) / (max - min)
+    let min = scores |> Array.map (fun (p1, p2, s) -> s) |> Array.min
+    let max = scores |> Array.map (fun (p1, p2, s) -> s) |> Array.max
+    let mag x = (max - x) / (max - min)
 
     let data0 = matrix heatmap
 
     let data1 =
         scores
-        |> Array.map (fun (p1, p2, s) -> sprintf "%e %e %e" p1 p2 (scale s))
+        |> Array.map (fun (p1, p2, s) -> sprintf "%e %e %e" p1 p2 (mag s))
         |> String.concat "\n"
 
     let data2 = sprintf "%e %e" p1 p2
