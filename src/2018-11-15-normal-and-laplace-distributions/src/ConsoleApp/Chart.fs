@@ -38,7 +38,10 @@ $data1 << EOD
 {1}
 EOD
 
-lower = {2}; upper = {3}; ymax = {4}; n = {5}
+lower = {2}; upper = {3}; n = {4}
+
+stats $data1 using 1:2 nooutput
+ymax = STATS_max_y
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -70,9 +73,7 @@ plot $data0 using 1:2 with lines title eotitle,\
 
 let renderLikelihood path (lower, upper) items =
 
-    let points = items |> Array.filter (fun (_, _, p) -> p)
-    let ymax = points |> Array.map (fun (_, y, _) -> y) |> Array.max
-    let n = points |> Array.length
+    let n = items |> Array.filter (fun (x, y, p) -> p) |> Array.length
     let m = (n / 2) + (n % 2)
 
     let xtic i =
@@ -85,11 +86,12 @@ let renderLikelihood path (lower, upper) items =
         |> String.concat "\n"
 
     let data1 =
-        points
+        items
+        |> Array.filter (fun (x, y, p) -> p)
         |> Array.mapi (fun i (x, y, p) -> sprintf "%i %e %s" x y (xtic i))
         |> String.concat "\n"
 
-    render path plotLikelihood [| data0; data1; lower; upper; ymax; n |]
+    render path plotLikelihood [| data0; data1; lower; upper; n |]
 
 //-------------------------------------------------------------------------------------------------
 
