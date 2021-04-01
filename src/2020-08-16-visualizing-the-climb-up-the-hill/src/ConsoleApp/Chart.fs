@@ -458,7 +458,7 @@ set key textcolor '#ffffff'
 set linetype 1 linewidth 2 linecolor '#00ff00'
 set linetype 2 pointtype 7 linecolor '#ffffff'
 
-if (style == 1) {{ set palette defined (0 '#000000', 10 '#202020', 50 '#606060', 100 '#c0c0c0') }}
+if (style == 1) {{ set palette defined (0 '#000000', 1 '#c0c0c0') }}
 if (style == 2) {{ set palette rgb 7,5,15 }}
 
 green(x) = (int((1 - x) * 240) << 24) + (int(255) << 8)
