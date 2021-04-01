@@ -252,8 +252,8 @@ set format y '%+0.1f'
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 
-set linetype 1 pointtype 7 linecolor '#b5367a'
-set linetype 2 linewidth 2 linecolor '#b5367a'
+set linetype 1 pointtype 7 linecolor '#a000a0'
+set linetype 2 linewidth 2 linecolor '#a000a0'
 
 plot $data0 using 1:2 with points linetype 1 title 'Optimum',\
      $data1 using 1:2 with lines title sprintf('Slice %i', style)
