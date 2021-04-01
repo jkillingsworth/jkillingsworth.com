@@ -29,7 +29,7 @@ let private render path template args =
 
 //-------------------------------------------------------------------------------------------------
 
-let private makeLabel (descriptor : string) =
+let private makeTitle (descriptor : string) =
     let items = descriptor.Split("-")
     let period (item : string) = Char.ToUpper(item.[0]).ToString() + item.Substring(1)
     let symbol (item : string) = if (item.Length = 6) then item.Insert(3, "/") else item
@@ -49,7 +49,7 @@ $data0 << EOD
 {0}
 EOD
 
-label = '{1}'; tunit = '{2}'; lower = {3}; upper = {4}
+title = '{1}'; tunit = '{2}'; lower = {3}; upper = {4}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -66,7 +66,7 @@ set format y '%7.4f'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title sprintf('%s', label) left
+set key title sprintf('%s', title) left
 
 set linetype 1 linewidth 1 linecolor '#808080'
 set linetype 2 linewidth 1 linecolor '#ff0000'
@@ -78,7 +78,7 @@ plot $data0 using 1:2 with lines title 'Market',\
 let renderPrice path data =
 
     let descriptor, market, smooth, (lower, upper) = data
-    let label = makeLabel descriptor
+    let title = makeTitle descriptor
     let tunit = makeTunit descriptor
     let smooth = smooth |> Array.map (Option.defaultValue nan)
 
@@ -87,7 +87,7 @@ let renderPrice path data =
         |> Array.mapi (fun i _ -> sprintf "%i %e %e" i market.[i] smooth.[i])
         |> String.concat "\n"
 
-    render path plotPrice [| data0; label; tunit; lower; upper |]
+    render path plotPrice [| data0; title; tunit; lower; upper |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -96,7 +96,7 @@ $data0 << EOD
 {0}
 EOD
 
-label = '{1}'; tunit = '{2}'
+title = '{1}'; tunit = '{2}'
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -112,7 +112,7 @@ set format y '%7.4f'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title sprintf('%s', label) left
+set key title sprintf('%s', title) left
 
 set linetype 1 linewidth 1 linecolor '#808080'
 set linetype 2 linewidth 1 linecolor '#ff0000'
@@ -124,7 +124,7 @@ plot $data0 using 1:2 with lines title 'Dither',\
 let renderNoise path data =
 
     let descriptor, dither = data
-    let label = makeLabel descriptor
+    let title = makeTitle descriptor
     let tunit = makeTunit descriptor
     let dither = dither |> Array.map (Option.defaultValue nan)
     let baseln = dither |> Array.map (fun x -> if Double.IsNaN(x) then nan else 0.0)
@@ -134,7 +134,7 @@ let renderNoise path data =
         |> Array.mapi (fun i _ -> sprintf "%i %e %e" i dither.[i] baseln.[i])
         |> String.concat "\n"
 
-    render path plotNoise [| data0; label; tunit |]
+    render path plotNoise [| data0; title; tunit |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -143,7 +143,7 @@ $data0 << EOD
 {0}
 EOD
 
-label = '{1}'; xlabel = '{2}'; sigmas = {3}; µN = {4}; σN = {5}; µL = {6}; bL = {7}
+title = '{1}'; label = '{2}'; sigmas = {3}; µN = {4}; σN = {5}; µL = {6}; bL = {7}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -152,7 +152,7 @@ set grid ytics mytics
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
-set xlabel sprintf('%s, σ = %s', xlabel, gprintf('%0.3te%04T', σN))
+set xlabel sprintf('%s, σ = %s', label, gprintf('%0.3te%04T', σN))
 set xrange [-(sigmas * σN):+(sigmas * σN)]
 set xtics(0)
 set for [i=-sigmas:-1] xtics add (sprintf('%+iσ', i) sprintf('%e', i * σN))
@@ -163,7 +163,7 @@ set format y '%7.0f'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title sprintf('%s', label) left width 6
+set key title sprintf('%s', title) left width 6
 
 set linetype 1 linewidth 1 linecolor '#c0c0c0'
 set linetype 2 linewidth 2 linecolor '#400000ff'
@@ -180,17 +180,17 @@ plot $data0 using 1:2 with boxes title 'Histogram',\
      distributionL(x, µL, bL) title 'Laplace'
 "
 
-let private renderProbs xlabel path data =
+let private renderProbs label path data =
 
     let descriptor, histogram, (sigmas : float), (µN : float, σN : float), (µL : float, bL: float) = data
-    let label = makeLabel descriptor
+    let title = makeTitle descriptor
 
     let data0 =
         histogram
         |> Array.map (fun (center, amount) -> sprintf "%e %e" center amount)
         |> String.concat "\n"
 
-    render path plotProbs [| data0; label; xlabel; sigmas; µN; σN; µL; bL |]
+    render path plotProbs [| data0; title; label; sigmas; µN; σN; µL; bL |]
 
 let renderProbsMarket = renderProbs "Market Price Differences"
 let renderProbsSmooth = renderProbs "Smooth Price Differences"

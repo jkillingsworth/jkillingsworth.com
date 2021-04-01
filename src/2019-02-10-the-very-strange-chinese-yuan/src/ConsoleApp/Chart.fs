@@ -29,7 +29,7 @@ let private render path template args =
 
 //-------------------------------------------------------------------------------------------------
 
-let private makeLabel (descriptor : string) =
+let private makeTitle (descriptor : string) =
     let items = descriptor.Split("-")
     let period (item : string) = Char.ToUpper(item.[0]).ToString() + item.Substring(1)
     let symbol (item : string) = if (item.Length = 6) then item.Insert(3, "/") else item
@@ -42,7 +42,7 @@ $data0 << EOD
 {0}
 EOD
 
-label = '{1}'
+title = '{1}'
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -61,20 +61,20 @@ set key top left reverse Left
 
 set linetype 1 linewidth 1 linecolor '#808080'
 
-plot $data0 using 1:2 with lines title sprintf('%s', label)
+plot $data0 using 1:2 with lines title sprintf('%s', title)
 "
 
 let renderPriceLin path data =
 
     let descriptor, items = data
-    let label = makeLabel descriptor
+    let title = makeTitle descriptor
 
     let data0 =
         items
         |> Array.mapi (fun i x -> sprintf "%i %e" i x)
         |> String.concat "\n"
 
-    render path plotPriceLin [| data0; label |]
+    render path plotPriceLin [| data0; title |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -83,7 +83,7 @@ $data0 << EOD
 {0}
 EOD
 
-label = '{1}'; style = {2}; sigmas = {3}; µN = {4}; σN = {5}; µL = {6}; bL = {7}
+title = '{1}'; style = {2}; sigmas = {3}; µN = {4}; σN = {5}; µL = {6}; bL = {7}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -112,7 +112,7 @@ if (style == 2) {{
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title sprintf('%s', label) left width 7
+set key title sprintf('%s', title) left width 7
 
 set linetype 1 linewidth 1 linecolor '#c0c0c0'
 set linetype 2 linewidth 2 linecolor '#400000ff'
@@ -132,14 +132,14 @@ plot $data0 using 1:2 with boxes title 'Histogram',\
 let private renderProbs style path data =
 
     let descriptor, histogram, (sigmas : float), (µN : float, σN : float), (µL : float, bL: float) = data
-    let label = makeLabel descriptor
+    let title = makeTitle descriptor
 
     let data0 =
         histogram
         |> Array.map (fun (center, amount) -> sprintf "%e %e" center amount)
         |> String.concat "\n"
 
-    render path plotProbs [| data0; label; style; sigmas; µN; σN; µL; bL |]
+    render path plotProbs [| data0; title; style; sigmas; µN; σN; µL; bL |]
 
 let renderProbsLin = renderProbs 1
 let renderProbsLog = renderProbs 2

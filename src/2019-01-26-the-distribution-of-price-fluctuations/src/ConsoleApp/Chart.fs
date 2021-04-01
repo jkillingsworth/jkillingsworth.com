@@ -29,7 +29,7 @@ let private render path template args =
 
 //-------------------------------------------------------------------------------------------------
 
-let private makeLabel (descriptor : string) =
+let private makeTitle (descriptor : string) =
     let items = descriptor.Split("-")
     let period (item : string) = Char.ToUpper(item.[0]).ToString() + item.Substring(1)
     let symbol (item : string) = if (item.Length = 6) then item.Insert(3, "/") else item
@@ -42,7 +42,7 @@ $data0 << EOD
 {0}
 EOD
 
-label = '{1}'
+title = '{1}'
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -61,20 +61,20 @@ set key top left reverse Left
 
 set linetype 1 linewidth 1 linecolor '#808080'
 
-plot $data0 using 1:2 with lines title sprintf('%s', label)
+plot $data0 using 1:2 with lines title sprintf('%s', title)
 "
 
 let renderPrice path data =
 
     let descriptor, items = data
-    let label = makeLabel descriptor
+    let title = makeTitle descriptor
 
     let data0 =
         items
         |> Array.mapi (fun i x -> sprintf "%i %e" i x)
         |> String.concat "\n"
 
-    render path plotPrice [| data0; label |]
+    render path plotPrice [| data0; title |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -83,7 +83,7 @@ $data0 << EOD
 {0}
 EOD
 
-label = '{1}'
+title = '{1}'
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -102,20 +102,20 @@ set key top left reverse Left
 
 set linetype 1 linewidth 1 linecolor '#808080'
 
-plot $data0 using 1:2 with impulses title sprintf('%s', label)
+plot $data0 using 1:2 with impulses title sprintf('%s', title)
 "
 
 let renderDiffs path data =
 
     let descriptor, items = data
-    let label = makeLabel descriptor
+    let title = makeTitle descriptor
 
     let data0 =
         items
         |> Array.mapi (fun i x -> sprintf "%i %e" i x)
         |> String.concat "\n"
 
-    render path plotDiffs [| data0; label |]
+    render path plotDiffs [| data0; title |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -124,7 +124,7 @@ $data0 << EOD
 {0}
 EOD
 
-label = '{1}'; sigmas = {2}; µN = {3}; σN = {4}; µL = {5}; bL = {6}
+title = '{1}'; sigmas = {2}; µN = {3}; σN = {4}; µL = {5}; bL = {6}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -144,7 +144,7 @@ set format y '%5.0f'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title sprintf('%s', label) left width 6
+set key title sprintf('%s', title) left width 6
 
 set linetype 1 linewidth 1 linecolor '#c0c0c0'
 set linetype 2 linewidth 2 linecolor '#400000ff'
@@ -164,11 +164,11 @@ plot $data0 using 1:2 with boxes title 'Histogram',\
 let renderProbs path data =
 
     let descriptor, histogram, sigmas, (µN, σN), (µL, bL) = data
-    let label = makeLabel descriptor
+    let title = makeTitle descriptor
 
     let data0 =
         histogram
         |> Array.map (fun (center, amount) -> sprintf "%e %e" center amount)
         |> String.concat "\n"
 
-    render path plotProbs [| data0; label; sigmas; µN; σN; µL; bL |]
+    render path plotProbs [| data0; title; sigmas; µN; σN; µL; bL |]
