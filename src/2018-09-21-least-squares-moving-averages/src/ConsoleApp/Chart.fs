@@ -79,13 +79,13 @@ let private renderPrice style path axis (ticker : string) items =
 
     let lower, upper, step = axis : (int * int * int)
 
-    let formatOption = function Some x -> sprintf "%e" x | None -> "''"
-    let formatData i (market, moving, fitted) =
-        sprintf "%i %e %s %s" i market (formatOption moving) (formatOption fitted)
+    let option = Option.fold (fun _ x -> sprintf "%e" x) "''"
+    let format i (market, moving, fitted) =
+        sprintf "%i %e %s %s" i market (option moving) (option fitted)
 
     let data0 =
         items
-        |> Array.mapi formatData
+        |> Array.mapi format
         |> String.concat "\n"
 
     render path plotPrice [| data0; lower; upper; step; ticker; style |]
