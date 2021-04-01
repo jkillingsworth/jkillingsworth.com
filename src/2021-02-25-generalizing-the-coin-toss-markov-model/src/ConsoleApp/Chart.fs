@@ -55,7 +55,7 @@ set for [i=-n:-1:+2] xtics add (sprintf('%+i', i) i)
 set for [i=+n:+1:-2] xtics add (sprintf('%+i', i) i)
 
 set ylabel 'Probability'
-set yrange [0:0.6]
+set yrange [0:(n <= 4) ? 0.6 : 0.4]
 set format y '%0.2f'
 
 set key box linecolor '#808080' samplen 1
