@@ -139,6 +139,10 @@ EOD
 
 tag = '{5}'
 
+stats $data0 using 1:2 matrix nooutput prefix 'data0'
+densityX = data0_size_x - 1
+densityY = data0_size_y - 1
+
 set border linewidth 1.2
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
@@ -164,10 +168,6 @@ set linetype 1 linewidth 2 linecolor '#00ff00'
 set linetype 2 linewidth 2 linecolor '#ffffff'
 set linetype 3 pointtype 6 linecolor '#ffffff'
 set linetype 4 pointtype 7 linecolor '#ffffff'
-
-stats [][0:0] $data0 matrix using (0) nooutput
-densityX = STATS_size_x - 1
-densityY = STATS_size_y - 1
 
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
      $data1 using 1:2 with lines title 'Plateau',\

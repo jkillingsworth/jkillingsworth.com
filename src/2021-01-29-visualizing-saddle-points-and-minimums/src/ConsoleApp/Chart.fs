@@ -64,6 +64,16 @@ EOD
 
 lower = {3}; upper = {4}; style = {5}
 
+stats $data0 using 1:2 matrix nooutput prefix 'data0'
+densityX = data0_size_x - 1
+densityY = data0_size_y - 1
+
+if (style != 0) {{
+    stats $data2 using 1:2 nooutput prefix 'data2'
+    a = 0
+    b = data2_records - 1
+}}
+
 set border linewidth 1.2
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
@@ -102,16 +112,6 @@ set palette defined\
 7 '#fec287',\
 8 '#fbfdbf' \
 )
-
-stats [][0:0] $data0 matrix using (0) nooutput
-densityX = STATS_size_x - 1
-densityY = STATS_size_y - 1
-
-if (style != 0) {{
-    stats [][0:0] $data2 using (0) nooutput
-    a = 0
-    b = STATS_records - 1
-}}
 
 if (style == 0) {{
     plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
@@ -156,6 +156,10 @@ $data0 << EOD
 EOD
 
 lower = {1}; upper = {2}; style = {3}
+
+stats $data0 using 1:2 matrix nooutput prefix 'data0'
+densityX = data0_size_x - 1
+densityY = data0_size_y - 1
 
 set border linewidth 1.0
 set xtics scale 0.01, 0.01
@@ -204,10 +208,6 @@ set palette defined\
 7 '#fec287',\
 8 '#fbfdbf' \
 )
-
-stats [][0:0] $data0 matrix using (0) nooutput
-densityX = STATS_size_x - 1
-densityY = STATS_size_y - 1
 
 splot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with lines title 'Surface Plot'
 "

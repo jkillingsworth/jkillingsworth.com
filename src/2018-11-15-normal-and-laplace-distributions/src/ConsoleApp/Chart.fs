@@ -40,8 +40,8 @@ EOD
 
 lower = {2}; upper = {3}; n = {4}
 
-stats $data1 using 1:2 nooutput
-ymax = STATS_max_y
+stats $data1 using 1:2 nooutput prefix 'data1'
+ymax = data1_max_y
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'

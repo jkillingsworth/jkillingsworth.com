@@ -231,6 +231,10 @@ EOD
 
 style = {1}
 
+stats $data0 using 1:2 matrix nooutput prefix 'data0'
+densityX = data0_size_x - 1
+densityY = data0_size_y - 1
+
 set border linewidth 1.0
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
@@ -261,10 +265,6 @@ set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 set key width -1
 
-stats [][0:0] $data0 matrix using (0) nooutput
-densityX = STATS_size_x - 1
-densityY = STATS_size_y - 1
-
 splot $data0 using ($1/densityX):($2/densityY):3 matrix with lines title 'Surface Plot'
 "
 
@@ -284,6 +284,10 @@ EOD
 $data1 << EOD
 {1}
 EOD
+
+stats $data0 using 1:2 matrix nooutput prefix 'data0'
+densityX = data0_size_x - 1
+densityY = data0_size_y - 1
 
 set border linewidth 1.2
 set xtics scale 0.01, 0.01
@@ -307,10 +311,6 @@ set key top left reverse Left
 set key textcolor '#ffffff'
 
 set linetype 1 linewidth 2 linecolor '#00ff00'
-
-stats [][0:0] $data0 matrix using (0) nooutput
-densityX = STATS_size_x - 1
-densityY = STATS_size_y - 1
 
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
      $data1 using 1:2 with lines title 'Plateau'
@@ -352,6 +352,10 @@ EOD
 
 tag = '{5}'
 
+stats $data0 using 1:2 matrix nooutput prefix 'data0'
+densityX = data0_size_x - 1
+densityY = data0_size_y - 1
+
 set border linewidth 1.2
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
@@ -377,10 +381,6 @@ set linetype 1 linewidth 2 linecolor '#00ff00'
 set linetype 2 linewidth 2 linecolor '#ffffff'
 set linetype 3 pointtype 6 linecolor '#ffffff'
 set linetype 4 pointtype 7 linecolor '#ffffff'
-
-stats [][0:0] $data0 matrix using (0) nooutput
-densityX = STATS_size_x - 1
-densityY = STATS_size_y - 1
 
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
      $data1 using 1:2 with lines title 'Plateau',\
@@ -426,6 +426,13 @@ EOD
 
 style = {3}
 
+stats $data0 using 1:2 matrix nooutput prefix 'data0'
+densityX = data0_size_x - 1
+densityY = data0_size_y - 1
+
+stats $data1 using 1:2 nooutput prefix 'data1'
+n = data1_records - 1
+
 set border linewidth 1.2
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
@@ -453,13 +460,6 @@ set linetype 2 pointtype 7 linecolor '#ffffff'
 
 if (style == 1) {{ set palette defined (0 '#000000', 10 '#202020', 50 '#606060', 100 '#c0c0c0') }}
 if (style == 2) {{ set palette rgb 7,5,15 }}
-
-stats [][0:0] $data0 matrix using (0) nooutput
-densityX = STATS_size_x - 1
-densityY = STATS_size_y - 1
-
-stats [][0:0] $data1 using (0) nooutput
-n = STATS_records - 1
 
 green(x) = (int((1 - x) * 240) << 24) + (int(255) << 8)
 
