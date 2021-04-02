@@ -121,16 +121,16 @@ if (style == 0) {{
 if (style == 1) {{
     plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
          $data1 using 1:2 with points linetype 1 title 'Optimum',\
-         $data2 using 1:2:('A') every ::a::a with labels offset +1.5,+1.3 nopoint textcolor '#ffffff' notitle,\
-         $data2 using 1:2:('B') every ::b::b with labels offset -1.5,-1.3 nopoint textcolor '#ffffff' notitle,\
+         $data2 using 1:2:('A') every ::a::a with labels offset +1.5,+1.3 textcolor '#ffffff' notitle,\
+         $data2 using 1:2:('B') every ::b::b with labels offset -1.5,-1.3 textcolor '#ffffff' notitle,\
          $data2 using 1:2 with lines title sprintf('Slice %i', style)
 }}
 
 if (style == 2) {{
     plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
          $data1 using 1:2 with points linetype 1 title 'Optimum',\
-         $data2 using 1:2:('A') every ::a::a with labels offset -1.0,-0.7 nopoint textcolor '#ffffff' notitle,\
-         $data2 using 1:2:('B') every ::b::b with labels offset +1.0,+0.7 nopoint textcolor '#ffffff' notitle,\
+         $data2 using 1:2:('A') every ::a::a with labels offset -1.0,-0.7 textcolor '#ffffff' notitle,\
+         $data2 using 1:2:('B') every ::b::b with labels offset +1.0,+0.7 textcolor '#ffffff' notitle,\
          $data2 using 1:2 with lines title sprintf('Slice %i', style)
 }}
 "
