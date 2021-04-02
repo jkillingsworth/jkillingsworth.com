@@ -172,8 +172,8 @@ set linetype 4 pointtype 7 linecolor '#ffffff'
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
      $data1 using 1:2 with lines title 'Plateau',\
      $data2 using 1:2 with lines title sprintf('Trace %s', tag),\
-     $data3 using 1:2:3 with labels point linetype 3 title 'Start',\
-     $data4 using 1:2:3 with labels point linetype 4 title 'Finish'
+     $data3 using 1:2 with points linetype 3 title 'Start',\
+     $data4 using 1:2 with points linetype 4 title 'Finish'
 "
 
 let renderHeatmapTraces path heatmap plateau trace samples tag =
