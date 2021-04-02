@@ -180,8 +180,8 @@ let private h n m costfunc xs =
     |> (fun xs -> fs |> Array.map (fun fs -> evaluate n m fs xs))
     |> DenseMatrix.ofRowArrays
 
-let private toFunc (f : 'a -> 'b) =
-    Func<'a, 'b>(f)
+let private toFunc f =
+    Func<'T, 'U>(f)
 
 let private mapResultOutput (result : MinimizationResult) =
     let final = result.MinimizingPoint.ToArray()
