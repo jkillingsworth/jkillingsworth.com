@@ -68,7 +68,7 @@ set key top right noreverse Right
 
 set linetype 1 linewidth 1 linecolor '#ff0000'
 
-plot $data0 with lines title 'Gambler''s Bankroll'
+plot $data0 using 1:2 with lines title 'Gambler''s Bankroll'
 "
 
 let private renderBankroll style path lower upper items =

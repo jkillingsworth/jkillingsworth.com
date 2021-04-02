@@ -251,29 +251,29 @@ seed = -1
 if (landform == 1 && eastwest == 1) {{
     plot rand(seed) linetype 1 notitle, landprofile(x) linetype 2 notitle with filledcurves y=0,\
          rand(seed) linetype 1 notitle, landprofile(x) linetype 3 notitle,\
-         [3:2.0] pathprofile(x) notitle linetype 4,\
-         $hilleast with labels notitle point linetype 5 offset 0,1
+         [3:2.0] pathprofile(x) linetype 4 notitle,\
+         $hilleast using 1:2:3 with labels notitle point linetype 5 offset 0,1
 }}
 
 if (landform == 1 && eastwest == 2) {{
     plot rand(seed) linetype 1 notitle, landprofile(x) linetype 2 notitle with filledcurves y=0,\
          rand(seed) linetype 1 notitle, landprofile(x) linetype 3 notitle,\
-         [1:2.0] pathprofile(x) notitle linetype 4,\
-         $hillwest with labels notitle point linetype 5 offset 0,1
+         [1:2.0] pathprofile(x) linetype 4 notitle,\
+         $hillwest using 1:2:3 with labels notitle point linetype 5 offset 0,1
 }}
 
 if (landform == 2 && eastwest == 1) {{
     plot rand(seed) linetype 1 notitle, landprofile(x) linetype 2 notitle with filledcurves y=0,\
          rand(seed) linetype 1 notitle, landprofile(x) linetype 3 notitle,\
-         [3:2.5] pathprofile(x) notitle linetype 4,\
-         $plateast with labels notitle point linetype 5 offset 0,1
+         [3:2.5] pathprofile(x) linetype 4 notitle,\
+         $plateast using 1:2:3 with labels notitle point linetype 5 offset 0,1
 }}
 
 if (landform == 2 && eastwest == 2) {{
     plot rand(seed) linetype 1 notitle, landprofile(x) linetype 2 notitle with filledcurves y=0,\
          rand(seed) linetype 1 notitle, landprofile(x) linetype 3 notitle,\
-         [1:1.5] pathprofile(x) notitle linetype 4,\
-         $platwest with labels notitle point linetype 5 offset 0,1
+         [1:1.5] pathprofile(x) linetype 4 notitle,\
+         $platwest using 1:2:3 with labels notitle point linetype 5 offset 0,1
 }}
 "
 
