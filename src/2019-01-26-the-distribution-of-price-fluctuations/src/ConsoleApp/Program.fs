@@ -18,7 +18,7 @@ type OutputFlag =
 
 let output flag (dataset : Data.Dataset) =
     let descriptor = dataset.Descriptor
-    let prices : float[] = dataset.GetPrices()
+    let prices = dataset.GetPrices()
     let logprices = prices |> Array.map log
     let differences = logprices |> Compute.differences
     let criteriaN = differences |> Compute.fitDistributionN
