@@ -182,7 +182,7 @@ plot $data0 using 1:2 with boxes title 'Histogram',\
 
 let private renderProbs label path data =
 
-    let descriptor, histogram, (sigmas : float), (µN : float, σN : float), (µL : float, bL: float) = data
+    let descriptor, histogram, sigmas, (µN, σN), (µL, bL) = data
     let title = makeTitle descriptor
 
     let data0 =
@@ -192,6 +192,6 @@ let private renderProbs label path data =
 
     render path plotProbs [| data0; title; label; sigmas; µN; σN; µL; bL |]
 
-let renderProbsMarket = renderProbs "Market Price Differences"
-let renderProbsSmooth = renderProbs "Smooth Price Differences"
-let renderProbsDither = renderProbs "Dither Noise Differences"
+let renderProbsMarket path data = renderProbs "Market Price Differences" path data
+let renderProbsSmooth path data = renderProbs "Smooth Price Differences" path data
+let renderProbsDither path data = renderProbs "Dither Noise Differences" path data

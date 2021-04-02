@@ -71,7 +71,7 @@ set linetype 1 linewidth 1 linecolor '#ff0000'
 plot $data0 with lines title 'Gambler''s Bankroll'
 "
 
-let private renderBankroll style path (lower : float) (upper : float) items =
+let private renderBankroll style path lower upper items =
 
     let data0 =
         items
@@ -80,5 +80,5 @@ let private renderBankroll style path (lower : float) (upper : float) items =
 
     render path plotBankroll [| data0; style; lower; upper |]
 
-let renderBankrollLin = renderBankroll 1
-let renderBankrollLog = renderBankroll 2
+let renderBankrollLin lower upper items = renderBankroll 1 lower upper items
+let renderBankrollLog lower upper items = renderBankroll 2 lower upper items

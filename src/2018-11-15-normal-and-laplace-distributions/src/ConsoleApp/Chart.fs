@@ -145,5 +145,5 @@ let private renderDistributions style path items =
 
     render path plotDistributions [| data0; style |]
 
-let renderDistributionsLin = renderDistributions 1
-let renderDistributionsLog = renderDistributions 2
+let renderDistributionsLin path items = renderDistributions 1 path items
+let renderDistributionsLog path items = renderDistributions 2 path items

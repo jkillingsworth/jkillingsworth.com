@@ -281,10 +281,10 @@ let private renderClimb landform eastwest path =
 
     render path plotClimb [| landform; eastwest |]
 
-let renderClimbHillEast = renderClimb 1 1
-let renderClimbHillWest = renderClimb 1 2
-let renderClimbPlatEast = renderClimb 2 1
-let renderClimbPlatWest = renderClimb 2 2
+let renderClimbHillEast path = renderClimb 1 1 path
+let renderClimbHillWest path = renderClimb 1 2 path
+let renderClimbPlatEast path = renderClimb 2 1 path
+let renderClimbPlatWest path = renderClimb 2 2 path
 
 //-------------------------------------------------------------------------------------------------
 

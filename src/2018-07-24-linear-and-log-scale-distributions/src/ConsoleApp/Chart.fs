@@ -83,5 +83,5 @@ let private renderDistribution style path items =
 
     render path plotDistribution [| data0; style |]
 
-let renderDistributionLin = renderDistribution 1
-let renderDistributionLog = renderDistribution 2
+let renderDistributionLin path items = renderDistribution 1 path items
+let renderDistributionLog path items = renderDistribution 2 path items

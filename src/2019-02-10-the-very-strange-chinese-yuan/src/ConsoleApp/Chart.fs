@@ -131,7 +131,7 @@ plot $data0 using 1:2 with boxes title 'Histogram',\
 
 let private renderProbs style path data =
 
-    let descriptor, histogram, (sigmas : float), (µN : float, σN : float), (µL : float, bL: float) = data
+    let descriptor, histogram, sigmas, (µN, σN), (µL, bL) = data
     let title = makeTitle descriptor
 
     let data0 =
@@ -141,5 +141,5 @@ let private renderProbs style path data =
 
     render path plotProbs [| data0; title; style; sigmas; µN; σN; µL; bL |]
 
-let renderProbsLin = renderProbs 1
-let renderProbsLog = renderProbs 2
+let renderProbsLin path data = renderProbs 1 path data
+let renderProbsLog path data = renderProbs 2 path data

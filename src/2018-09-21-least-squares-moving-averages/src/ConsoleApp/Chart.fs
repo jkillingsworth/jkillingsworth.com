@@ -75,9 +75,9 @@ plot $data0 using 1:2 with lines title 'Market Price',\
      $data0 using 1:4 with lines title 'Fitted Line'
 "
 
-let private renderPrice style path axis (ticker : string) items =
+let private renderPrice style path axis ticker items =
 
-    let lower, upper, step = axis : (int * int * int)
+    let lower, upper, step = axis
 
     let option = Option.fold (fun _ x -> sprintf "%e" x) "''"
     let format i (market, moving, fitted) =
@@ -90,5 +90,5 @@ let private renderPrice style path axis (ticker : string) items =
 
     render path plotPrice [| data0; lower; upper; step; ticker; style |]
 
-let renderPriceFull = renderPrice 1
-let renderPriceZoom = renderPrice 2
+let renderPriceFull path axis ticker items = renderPrice 1 path axis ticker items
+let renderPriceZoom path axis ticker items = renderPrice 2 path axis ticker items
