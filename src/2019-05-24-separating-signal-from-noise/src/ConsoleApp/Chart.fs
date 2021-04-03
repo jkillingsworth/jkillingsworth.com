@@ -143,7 +143,7 @@ $data0 << EOD
 {0}
 EOD
 
-title = '{1}'; label = '{2}'; sigmas = {3}; µN = {4}; σN = {5}; µL = {6}; bL = {7}
+title = '{1}'; style = '{2}'; sigmas = {3}; µN = {4}; σN = {5}; µL = {6}; bL = {7}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -152,7 +152,9 @@ set grid ytics mytics
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
-set xlabel sprintf('%s, σ = %s', label, gprintf('%0.3te%04T', σN))
+if (style == 1) {{ set xlabel gprintf('Market Price Differences, σ = %0.3te%04T', σN) }}
+if (style == 2) {{ set xlabel gprintf('Smooth Price Differences, σ = %0.3te%04T', σN) }}
+if (style == 3) {{ set xlabel gprintf('Dither Noise Differences, σ = %0.3te%04T', σN) }}
 set xrange [-(sigmas * σN):+(sigmas * σN)]
 set xtics(0)
 set for [i=-sigmas:-1] xtics add (sprintf('%+iσ', i) sprintf('%e', i * σN))
@@ -180,7 +182,7 @@ plot $data0 using 1:2 with boxes title 'Histogram',\
      distributionL(x, µL, bL) title 'Laplace'
 "
 
-let private renderProbs label path data =
+let private renderProbs style path data =
 
     let descriptor, histogram, sigmas, (µN, σN), (µL, bL) = data
     let title = makeTitle descriptor
@@ -190,8 +192,8 @@ let private renderProbs label path data =
         |> Array.map (fun (center, amount) -> sprintf "%e %e" center amount)
         |> String.concat "\n"
 
-    render path plotProbs [| data0; title; label; sigmas; µN; σN; µL; bL |]
+    render path plotProbs [| data0; title; style; sigmas; µN; σN; µL; bL |]
 
-let renderProbsMarket path data = renderProbs "Market Price Differences" path data
-let renderProbsSmooth path data = renderProbs "Smooth Price Differences" path data
-let renderProbsDither path data = renderProbs "Dither Noise Differences" path data
+let renderProbsMarket path data = renderProbs 1 path data
+let renderProbsSmooth path data = renderProbs 2 path data
+let renderProbsDither path data = renderProbs 3 path data
