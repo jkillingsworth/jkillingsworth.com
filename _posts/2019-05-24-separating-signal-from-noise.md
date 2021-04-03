@@ -207,7 +207,7 @@ The shape of the histogram for the market price data shows the triple peak patte
     \\[0.25em]\hline
     \text{Market}             & +1.894 \times 10^{-4}    & +1.216 \times 10^{-4}
     \\[0.25em]\hline
-    \text{Smooth}             & +6.481 \times 10^{-5}    & +5.006 \times 10^{-6}
+    \text{Smooth}             & +6.481 \times 10^{-6}    & +5.006 \times 10^{-6}
     \\[0.25em]\hline
     \text{Dither}             & +1.899 \times 10^{-4}    & +1.223 \times 10^{-4}
     \\[0.25em]\hline
