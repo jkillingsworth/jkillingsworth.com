@@ -112,7 +112,7 @@ if (style == 2) {{
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title sprintf('%s', title) left width 7
+set key title sprintf('%s', title) left
 
 set linetype 1 linewidth 1 linecolor '#c0c0c0'
 set linetype 2 linewidth 2 linecolor '#400000ff'

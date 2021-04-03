@@ -33,7 +33,7 @@ let private makeTitle (descriptor : string) =
     let items = descriptor.Split("-")
     let period (item : string) = Char.ToUpper(item.[0]).ToString() + item.Substring(1)
     let symbol (item : string) = if (item.Length = 6) then item.Insert(3, "/") else item
-    sprintf "%-15s" <| sprintf "%s (%s)" (symbol items.[2]) (period items.[1])
+    sprintf "%-18s" <| sprintf "%s (%s)" (symbol items.[2]) (period items.[1])
 
 //-------------------------------------------------------------------------------------------------
 
@@ -144,7 +144,7 @@ set format y '%5.0f'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
-set key title sprintf('%s', title) left width 6
+set key title sprintf('%s', title) left
 
 set linetype 1 linewidth 1 linecolor '#c0c0c0'
 set linetype 2 linewidth 2 linecolor '#400000ff'
