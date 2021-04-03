@@ -49,6 +49,76 @@ let private matrix (items : float[,]) =
 
 //-------------------------------------------------------------------------------------------------
 
+let private plotSurface = "
+$data0 << EOD
+{0}
+EOD
+
+lower = {1}; upper = {2}; style = {3}
+
+stats $data0 using 1:2 matrix nooutput prefix 'data0'
+densityX = data0_size_x - 1
+densityY = data0_size_y - 1
+
+set border linewidth 1.0
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
+
+set xlabel 'Coin Bias (p)'
+set xrange [0.0:1.0]
+set xtics 0.0, 0.2
+set format x '%0.1f'
+
+set ylabel 'Lagrange Multiplier (λ)'
+set yrange [-0.5:+0.5]
+set ytics -0.5, 0.2
+set format y '%+0.1f'
+
+set zrange [lower:upper]
+set ztics add ('\u00A00.0' 0)
+set format z '%+0.1f'
+
+set cblabel offset 1 'Value'
+set cbrange [lower:upper]
+set cbtics add ('\u00A00.0' 0)
+set format cb '%+0.1f'
+
+set pm3d
+set grid
+if (style == 1) {{ set view 30,30,1,1.8 }}
+if (style == 2) {{ set view 30,60,1,1.8 }}
+if (style == 3) {{ set view 60,60,1,1.2 }}
+
+set key box linecolor '#808080' samplen 1
+set key top left reverse Left
+set key width -1
+
+set linetype 1 linewidth 1 linecolor '#812581'
+
+set palette defined\
+(\
+0 '#000004',\
+1 '#1c1044',\
+2 '#4f127b',\
+3 '#812581',\
+4 '#b5367a',\
+5 '#e55964',\
+6 '#fb8761',\
+7 '#fec287',\
+8 '#fbfdbf' \
+)
+
+splot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with lines title 'Surface Plot'
+"
+
+let renderSurface path heatmap (lower, upper) style =
+
+    let data0 = matrix heatmap
+
+    render path plotSurface [| data0; lower; upper; style |]
+
+//-------------------------------------------------------------------------------------------------
+
 let private plotHeatmap = "
 $data0 << EOD
 {0}
@@ -147,76 +217,6 @@ let renderHeatmap path heatmap (lower, upper) style optimum slice =
         |> String.concat "\n"
 
     render path plotHeatmap [| data0; data1; data2; lower; upper; style |]
-
-//-------------------------------------------------------------------------------------------------
-
-let private plotSurface = "
-$data0 << EOD
-{0}
-EOD
-
-lower = {1}; upper = {2}; style = {3}
-
-stats $data0 using 1:2 matrix nooutput prefix 'data0'
-densityX = data0_size_x - 1
-densityY = data0_size_y - 1
-
-set border linewidth 1.0
-set xtics scale 0.01, 0.01
-set ytics scale 0.01, 0.01
-
-set xlabel 'Coin Bias (p)'
-set xrange [0.0:1.0]
-set xtics 0.0, 0.2
-set format x '%0.1f'
-
-set ylabel 'Lagrange Multiplier (λ)'
-set yrange [-0.5:+0.5]
-set ytics -0.5, 0.2
-set format y '%+0.1f'
-
-set zrange [lower:upper]
-set ztics add ('\u00A00.0' 0)
-set format z '%+0.1f'
-
-set cblabel offset 1 'Value'
-set cbrange [lower:upper]
-set cbtics add ('\u00A00.0' 0)
-set format cb '%+0.1f'
-
-set pm3d
-set grid
-if (style == 1) {{ set view 30,30,1,1.8 }}
-if (style == 2) {{ set view 30,60,1,1.8 }}
-if (style == 3) {{ set view 60,60,1,1.2 }}
-
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
-set key width -1
-
-set linetype 1 linewidth 1 linecolor '#812581'
-
-set palette defined\
-(\
-0 '#000004',\
-1 '#1c1044',\
-2 '#4f127b',\
-3 '#812581',\
-4 '#b5367a',\
-5 '#e55964',\
-6 '#fb8761',\
-7 '#fec287',\
-8 '#fbfdbf' \
-)
-
-splot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with lines title 'Surface Plot'
-"
-
-let renderSurface path heatmap (lower, upper) style =
-
-    let data0 = matrix heatmap
-
-    render path plotSurface [| data0; lower; upper; style |]
 
 //-------------------------------------------------------------------------------------------------
 
