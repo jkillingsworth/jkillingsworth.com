@@ -37,13 +37,13 @@ let private matrix (items : float[,]) =
     let createLine j =
         { 0 .. densityX }
         |> Seq.map (fun i -> items.[i, j])
-        |> Seq.map (sprintf "%e")
-        |> Seq.reduce (sprintf "%s %s")
+        |> Seq.map (sprintf "%O")
+        |> String.concat "\t"
 
     let combinedRows =
         { 0 .. densityY }
         |> Seq.map createLine
-        |> Seq.reduce (sprintf "%s\n%s")
+        |> String.concat "\n"
 
     combinedRows
 
@@ -105,7 +105,7 @@ let renderPmfunc path pmfunc =
 
     let data0 =
         pmfunc
-        |> Array.mapi (fun i x -> sprintf "%i %e" (2 * i - n) x)
+        |> Array.mapi (fun i x -> sprintf "%O %O" (2 * i - n) x)
         |> String.concat "\n"
 
     render path plotPmfunc [| data0; n |]
@@ -175,7 +175,7 @@ let renderBiases path biases style =
 
     let data0 =
         biases
-        |> Array.mapi (fun i x -> sprintf "%i %e" (i - n) x)
+        |> Array.mapi (fun i x -> sprintf "%O %O" (i - n) x)
         |> String.concat "\n"
 
     render path plotBiases [| data0; n; style |]
@@ -320,10 +320,10 @@ let renderHeatmap path heatmap n trace samples tag =
     let data1 =
         trace
         |> downsample samples
-        |> Array.map (fun (x, y) -> sprintf "%e %e" x y)
+        |> Array.map (fun (x, y) -> sprintf "%O %O" x y)
         |> String.concat "\n"
 
-    let data2 = sprintf "%e %e" <|| (trace |> Array.head)
-    let data3 = sprintf "%e %e" <|| (trace |> Array.last)
+    let data2 = sprintf "%O %O" <|| (trace |> Array.head)
+    let data3 = sprintf "%O %O" <|| (trace |> Array.last)
 
     render path plotHeatmap [| data0; data1; data2; data3; n; tag |]

@@ -74,7 +74,7 @@ let renderPmfunc path pmfunc =
 
     let data0 =
         pmfunc
-        |> Array.mapi (fun i x -> sprintf "%i %e %s" (2 * i - n) x (percent x))
+        |> Array.mapi (fun i x -> sprintf "%O %O %s" (2 * i - n) x (percent x))
         |> String.concat "\n"
 
     render path plotPmfunc [| data0; n |]
@@ -123,7 +123,7 @@ let renderBiases path biases =
 
     let data0 =
         biases
-        |> Array.mapi (fun i x -> sprintf "%i %e %s" (i - n) x (percent x))
+        |> Array.mapi (fun i x -> sprintf "%O %O %s" (i - n) x (percent x))
         |> String.concat "\n"
 
     render path plotBiases [| data0; n |]
@@ -185,7 +185,7 @@ let renderTosses path tosses =
 
     let data0 =
         tosses
-        |> Array.mapi (fun i (s, r) -> sprintf "%i %s %i %e %s" i s (color s) r (percent r))
+        |> Array.mapi (fun i (s, r) -> sprintf "%O %s %O %O %s" i s (color s) r (percent r))
         |> String.concat "\n"
 
     render path plotTosses [| data0; n |]

@@ -40,13 +40,13 @@ let private matrix (items : float[,]) =
     let createLine j =
         { 0 .. densityX }
         |> Seq.map (fun i -> items.[i, j])
-        |> Seq.map (sprintf "%e")
-        |> Seq.reduce (sprintf "%s %s")
+        |> Seq.map (sprintf "%O")
+        |> String.concat "\t"
 
     let combinedRows =
         { 0 .. densityY }
         |> Seq.map createLine
-        |> Seq.reduce (sprintf "%s\n%s")
+        |> String.concat "\n"
 
     combinedRows
 
@@ -109,7 +109,7 @@ let renderPmfunc path pmfunc =
 
     let data0 =
         pmfunc
-        |> Array.mapi (fun i x -> sprintf "%i %e %s" (2 * i - n) x (percent x))
+        |> Array.mapi (fun i x -> sprintf "%O %O %s" (2 * i - n) x (percent x))
         |> String.concat "\n"
 
     render path plotPmfunc [| data0; n |]
@@ -158,7 +158,7 @@ let renderBiases path biases =
 
     let data0 =
         biases
-        |> Array.mapi (fun i x -> sprintf "%i %e %s" (i - n) x (percent x))
+        |> Array.mapi (fun i x -> sprintf "%O %O %s" (i - n) x (percent x))
         |> String.concat "\n"
 
     render path plotBiases [| data0; n |]
@@ -217,7 +217,7 @@ let renderTosses path tosses =
 
     let data0 =
         tosses
-        |> Array.mapi (fun i (s, r) -> sprintf "%i %s %i %e %s" i s (color s) r (percent r))
+        |> Array.mapi (fun i (s, r) -> sprintf "%O %s %O %O %s" i s (color s) r (percent r))
         |> String.concat "\n"
 
     render path plotTosses [| data0; n |]
@@ -322,7 +322,7 @@ let renderHeatmap path heatmap plateau =
 
     let data1 =
         plateau
-        |> Array.map (fun (x, y) -> sprintf "%e %e" x y)
+        |> Array.map (fun (x, y) -> sprintf "%O %O" x y)
         |> String.concat "\n"
 
     render path plotHeatmap [| data0; data1 |]
@@ -395,17 +395,17 @@ let renderHeatmapTraces path heatmap plateau trace samples tag =
 
     let data1 =
         plateau
-        |> Array.map (fun (x, y) -> sprintf "%e %e" x y)
+        |> Array.map (fun (x, y) -> sprintf "%O %O" x y)
         |> String.concat "\n"
 
     let data2 =
         trace
         |> downsample samples
-        |> Array.map (fun (x, y) -> sprintf "%e %e" x y)
+        |> Array.map (fun (x, y) -> sprintf "%O %O" x y)
         |> String.concat "\n"
 
-    let data3 = sprintf "%e %e" <|| (trace |> Array.head)
-    let data4 = sprintf "%e %e" <|| (trace |> Array.last)
+    let data3 = sprintf "%O %O" <|| (trace |> Array.head)
+    let data4 = sprintf "%O %O" <|| (trace |> Array.last)
 
     render path plotHeatmapTraces [| data0; data1; data2; data3; data4; tag |]
 
@@ -473,16 +473,16 @@ let renderHeatmapScores path heatmap scores (p1, p2, score) style =
 
     let min = scores |> Array.map (fun (p1, p2, s) -> s) |> Array.min
     let max = scores |> Array.map (fun (p1, p2, s) -> s) |> Array.max
-    let mag x = (max - x) / (max - min)
+    let mag (x : float) = (max - x) / (max - min)
 
     let data0 = matrix heatmap
 
     let data1 =
         scores
-        |> Array.map (fun (p1, p2, s) -> sprintf "%e %e %e" p1 p2 (mag s))
+        |> Array.map (fun (p1, p2, s) -> sprintf "%O %O %O" p1 p2 (mag s))
         |> String.concat "\n"
 
-    let data2 = sprintf "%e %e" p1 p2
+    let data2 = sprintf "%O %O" p1 p2
 
     render path plotHeatmapScores [| data0; data1; data2; style |]
 
@@ -533,9 +533,9 @@ let renderScores path scores (p1, p2, score) tag =
 
     let data0 =
         scores
-        |> Array.map (fun (p1, p2, s) -> sprintf "%e %e" p1 s)
+        |> Array.map (fun (p1, p2, s) -> sprintf "%O %O" p1 s)
         |> String.concat "\n"
 
-    let data1 = sprintf "%e %e %0.8f" p1 score score
+    let data1 = sprintf "%O %O %0.8f" p1 score score
 
     render path plotScores [| data0; data1; lower; upper; p1; tag |]

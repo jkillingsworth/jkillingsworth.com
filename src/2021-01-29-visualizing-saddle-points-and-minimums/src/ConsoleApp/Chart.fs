@@ -37,13 +37,13 @@ let private matrix (items : float[,]) =
     let createLine j =
         { 0 .. densityX }
         |> Seq.map (fun i -> items.[i, j])
-        |> Seq.map (sprintf "%e")
-        |> Seq.reduce (sprintf "%s %s")
+        |> Seq.map (sprintf "%O")
+        |> String.concat "\t"
 
     let combinedRows =
         { 0 .. densityY }
         |> Seq.map createLine
-        |> Seq.reduce (sprintf "%s\n%s")
+        |> String.concat "\n"
 
     combinedRows
 
@@ -209,11 +209,11 @@ let renderHeatmap path heatmap (lower, upper) style optimum slice =
 
     let data0 = matrix heatmap
 
-    let data1 = sprintf "%e %e" (fst optimum) (snd optimum)
+    let data1 = sprintf "%O %O" (fst optimum) (snd optimum)
 
     let data2 =
         slice
-        |> Array.map (fun (p, λ, v) -> sprintf "%e %e" p λ)
+        |> Array.map (fun (p, λ, v) -> sprintf "%O %O" p λ)
         |> String.concat "\n"
 
     render path plotHeatmap [| data0; data1; data2; lower; upper; style |]
@@ -261,11 +261,11 @@ plot $data0 using 1:2 with points linetype 1 title 'Optimum',\
 
 let renderProfile path samples (lower, upper) style optimum slice =
 
-    let data0 = sprintf "%e %e" (fst optimum) (snd optimum)
+    let data0 = sprintf "%O %O" (fst optimum) (snd optimum)
 
     let data1 =
         slice
-        |> Array.mapi (fun i (p, λ, v) -> sprintf "%e %e" (float i / float samples) v)
+        |> Array.mapi (fun i (p, λ, v) -> sprintf "%O %O" (float i / float samples) v)
         |> String.concat "\n"
 
     render path plotProfile [| data0; data1; lower; upper; style |]

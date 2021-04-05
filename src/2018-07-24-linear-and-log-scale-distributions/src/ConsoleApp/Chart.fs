@@ -69,16 +69,23 @@ set linetype 1 linewidth 5 linecolor '#00c000'
 set linetype 2 linewidth 5 linecolor '#ff0000'
 set linetype 3 linewidth 5 linecolor '#808080'
 
-plot $data0 using ($1 >= 100 ? $1 : 1/0):2 with impulses title 'Profit',\
-     $data0 using ($1 <= 100 ? $1 : 1/0):2 with impulses title 'Loss',\
-     $data0 using ($1 == 100 ? $1 : 1/0):2 with impulses title 'Breakeven'
+plot $data0 using ($3 == 1 ? $1 : 1/0):2 with impulses title 'Profit',\
+     $data0 using ($3 == 2 ? $1 : 1/0):2 with impulses title 'Loss',\
+     $data0 using ($3 == 3 ? $1 : 1/0):2 with impulses title 'Breakeven'
 "
 
 let private renderDistribution style path items =
 
+    let round (x : float) = Math.Round(x, 3)
+
+    let color = function
+        | x when round (fst x) > 100.0 -> 1
+        | x when round (fst x) < 100.0 -> 2
+        | _ -> 3
+
     let data0 =
         items
-        |> Array.map (fun x -> sprintf "%e %e" (fst x) (snd x))
+        |> Array.map (fun x -> sprintf "%O %O %O" (fst x) (snd x) (color x))
         |> String.concat "\n"
 
     render path plotDistribution [| data0; style |]

@@ -75,7 +75,7 @@ let private renderDistributions style path items =
 
     let data0 =
         items
-        |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
+        |> Array.map (fun (x, n, l) -> sprintf "%O %O %O" x n l)
         |> String.concat "\n"
 
     render path plotDistributions [| data0; style |]

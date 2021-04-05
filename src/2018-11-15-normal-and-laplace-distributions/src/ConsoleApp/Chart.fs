@@ -82,13 +82,13 @@ let renderLikelihood path (lower, upper) items =
 
     let data0 =
         items
-        |> Array.map (fun (x, y, p) -> sprintf "%i %e" x y)
+        |> Array.map (fun (x, y, p) -> sprintf "%O %O" x y)
         |> String.concat "\n"
 
     let data1 =
         items
         |> Array.filter (fun (x, y, p) -> p)
-        |> Array.mapi (fun i (x, y, p) -> sprintf "%i %e %s" x y (xtic i))
+        |> Array.mapi (fun i (x, y, p) -> sprintf "%O %O %s" x y (xtic i))
         |> String.concat "\n"
 
     render path plotLikelihood [| data0; data1; lower; upper; n |]
@@ -140,7 +140,7 @@ let private renderDistributions style path items =
 
     let data0 =
         items
-        |> Array.map (fun (x, n, l) -> sprintf "%e %e %e" x n l)
+        |> Array.map (fun (x, n, l) -> sprintf "%O %O %O" x n l)
         |> String.concat "\n"
 
     render path plotDistributions [| data0; style |]

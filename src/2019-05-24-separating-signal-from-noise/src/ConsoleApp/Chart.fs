@@ -84,7 +84,7 @@ let renderPrice path data =
 
     let data0 =
         market
-        |> Array.mapi (fun i _ -> sprintf "%i %e %e" i market.[i] smooth.[i])
+        |> Array.mapi (fun i _ -> sprintf "%O %O %O" i market.[i] smooth.[i])
         |> String.concat "\n"
 
     render path plotPrice [| data0; title; tunit; lower; upper |]
@@ -131,7 +131,7 @@ let renderNoise path data =
 
     let data0 =
         dither
-        |> Array.mapi (fun i _ -> sprintf "%i %e %e" i dither.[i] baseln.[i])
+        |> Array.mapi (fun i _ -> sprintf "%O %O %O" i dither.[i] baseln.[i])
         |> String.concat "\n"
 
     render path plotNoise [| data0; title; tunit |]
@@ -189,7 +189,7 @@ let private renderProbs style path data =
 
     let data0 =
         histogram
-        |> Array.map (fun (center, amount) -> sprintf "%e %e" center amount)
+        |> Array.map (fun (center, amount) -> sprintf "%O %O" center amount)
         |> String.concat "\n"
 
     render path plotProbs [| data0; title; style; sigmas; µN; σN; µL; bL |]

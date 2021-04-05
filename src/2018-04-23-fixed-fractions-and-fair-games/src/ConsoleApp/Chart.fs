@@ -75,7 +75,7 @@ let private renderBankroll style path lower upper items =
 
     let data0 =
         items
-        |> Array.mapi (fun i x -> sprintf "%i %e" i x)
+        |> Array.mapi (fun i x -> sprintf "%O %O" i x)
         |> String.concat "\n"
 
     render path plotBankroll [| data0; style; lower; upper |]
