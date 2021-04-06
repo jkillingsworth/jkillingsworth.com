@@ -95,8 +95,8 @@ set ytics scale 0.01, 0.01
 set xlabel gprintf('Price Differences (Log Values), σ = %0.3te%04T', σN)
 set xrange [-(sigmas * σN):+(sigmas * σN)]
 set xtics(0)
-set for [i=-sigmas:-1] xtics add (sprintf('%+iσ', i) sprintf('%e', i * σN))
-set for [i=+1:+sigmas] xtics add (sprintf('%+iσ', i) sprintf('%e', i * σN))
+set for [i=-sigmas:-1] xtics add (sprintf('%+iσ', i) i * σN)
+set for [i=+1:+sigmas] xtics add (sprintf('%+iσ', i) i * σN)
 
 if (style == 1) {{
     set ylabel 'Density'
