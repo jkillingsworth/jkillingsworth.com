@@ -28,9 +28,9 @@ let executeTrace tag psStart =
     printfn "----------------------------------------"
     printfn "%s" name
     printfn "cycles: %A" (psTrace.Length - 1)
-    printfn "p1:     %.4f" psFinal.[0]
-    printfn "p2:     %.4f" psFinal.[1]
-    printfn "cost:   %.8f" (costfunc psFinal)
+    printfn "p1:     %0.4f" psFinal.[0]
+    printfn "p2:     %0.4f" psFinal.[1]
+    printfn "cost:   %0.8f" (costfunc psFinal)
 
 //-------------------------------------------------------------------------------------------------
 

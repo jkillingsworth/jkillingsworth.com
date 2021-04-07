@@ -21,8 +21,8 @@ let pspair (x : float[]) = (x.[0], x.[1])
 
 let printValues n = function
     | i when i < (n - 1)
-        -> printfn "p%i:         % .10f" (i + 1)
-    | i -> printfn "λ%i:         %+.10f" (i + 2 - n)
+        -> printfn "p%i:         % 0.10f" (i + 1)
+    | i -> printfn "λ%i:         %+0.10f" (i + 2 - n)
 
 //-------------------------------------------------------------------------------------------------
 

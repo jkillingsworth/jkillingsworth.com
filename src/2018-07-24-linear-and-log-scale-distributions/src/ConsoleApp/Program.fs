@@ -15,7 +15,7 @@ let samplesExhaustiveConstantAdd = samplesExhaustive |> Compute.applyFixedConsta
 let samplesExhaustiveFractionAdd = samplesExhaustive |> Compute.applyFixedFractionAdd v0 b
 let samplesExhaustiveFractionMul = samplesExhaustive |> Compute.applyFixedFractionMul v0 b
 
-let reportPercents (gt, lt, eq) = printfn "Profit loss breakeven: %.3f %.3f %.3f" gt lt eq
+let reportPercents (gt, lt, eq) = printfn "Profit loss breakeven: %0.3f %0.3f %0.3f" gt lt eq
 samplesStochasticConstantAdd |> Compute.percentProfitLossBreakeven v0 |> reportPercents
 samplesExhaustiveConstantAdd |> Compute.percentProfitLossBreakeven v0 |> reportPercents
 samplesExhaustiveFractionAdd |> Compute.percentProfitLossBreakeven v0 |> reportPercents

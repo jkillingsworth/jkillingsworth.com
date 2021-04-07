@@ -39,7 +39,7 @@ let execute tag sf gamma pmfunc biases =
     Chart.renderBiases (path "biases-final-" + tag + ".svg") biasesFinal
 
     printfn "----------------------------------------"
-    printfn "method-NM-n%i-%A-%.1f-%s" n sf gamma tag
+    printfn "method-NM-n%i-%A-%0.1f-%s" n sf gamma tag
     printfn "iterations: %A" <| count
     Array.iteri (printValues n) final
 

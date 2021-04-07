@@ -21,10 +21,10 @@ let outputResult render descriptor name logvalues =
     dataProbs |> render (path descriptor + "-probs-" + name + ".svg")
     printfn "----------------------------------------"
     printfn "%s %s" descriptor name
-    printfn "µN = %+.3e" (fst criteriaN)
-    printfn "σN = %+.3e" (snd criteriaN)
-    printfn "µL = %+.3e" (fst criteriaL)
-    printfn "bL = %+.3e" (snd criteriaL)
+    printfn "µN = %+0.3e" (fst criteriaN)
+    printfn "σN = %+0.3e" (snd criteriaN)
+    printfn "µL = %+0.3e" (fst criteriaL)
+    printfn "bL = %+0.3e" (snd criteriaL)
     printfn ""
 
 let output priceRange (dataset : Data.Dataset) =

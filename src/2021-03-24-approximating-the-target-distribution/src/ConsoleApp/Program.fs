@@ -30,9 +30,9 @@ let executeTrace name pmfunc heatmap starts i =
     printfn "----------"
     printfn "trace-%i" i
     printfn "iterations: %A" count
-    printfn "final a: %.4f" (fst final)
-    printfn "final b: %.4f" (snd final)
-    printfn "error:   %.8f" error
+    printfn "final a: %0.4f" (fst final)
+    printfn "final b: %0.4f" (snd final)
+    printfn "error:   %0.8f" error
 
     final
 

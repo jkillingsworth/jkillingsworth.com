@@ -25,7 +25,7 @@ let runEstimate name pmfunc biases =
 
     printfn "----------------------------------------"
     printfn "%s" name
-    Array.iteri (printfn "cost %A: %.8f") rcosts
+    Array.iteri (printfn "cost %A: %0.8f") rcosts
     printfn "cycles: %A" cycles
     printfn "scoreA: %A" scoreA
     printfn "scoreB: %A" scoreB
