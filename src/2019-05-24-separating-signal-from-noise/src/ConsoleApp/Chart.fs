@@ -49,7 +49,11 @@ $data0 << EOD
 {0}
 EOD
 
-title = '{1}'; tunit = '{2}'; lower = {3}; upper = {4}
+$data1 << EOD
+{1}
+EOD
+
+title = '{2}'; tunit = '{3}'; lower = {4}; upper = {5}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -72,7 +76,7 @@ set linetype 1 linewidth 1 linecolor '#808080'
 set linetype 2 linewidth 1 linecolor '#ff0000'
 
 plot $data0 using 1:2 with lines title 'Market',\
-     $data0 using 1:3 with lines title 'Smooth'
+     $data1 using 1:2 with lines title 'Smooth'
 "
 
 let renderPrice path data =
@@ -80,14 +84,21 @@ let renderPrice path data =
     let descriptor, market, smooth, (lower, upper) = data
     let title = makeTitle descriptor
     let tunit = makeTunit descriptor
-    let smooth = smooth |> Array.map (Option.defaultValue nan)
+
+    let formatMarket = id
+    let formatSmooth = Option.defaultValue nan
 
     let data0 =
         market
-        |> Array.mapi (fun i _ -> sprintf "%O %O %O" i market.[i] smooth.[i])
+        |> Array.mapi (fun i x -> sprintf "%O %O" i (formatMarket x))
         |> String.concat "\n"
 
-    render path plotPrice [| data0; title; tunit; lower; upper |]
+    let data1 =
+        smooth
+        |> Array.mapi (fun i x -> sprintf "%O %O" i (formatSmooth x))
+        |> String.concat "\n"
+
+    render path plotPrice [| data0; data1; title; tunit; lower; upper |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -96,7 +107,11 @@ $data0 << EOD
 {0}
 EOD
 
-title = '{1}'; tunit = '{2}'
+$data1 << EOD
+{1}
+EOD
+
+title = '{2}'; tunit = '{3}'
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -118,7 +133,7 @@ set linetype 1 linewidth 1 linecolor '#808080'
 set linetype 2 linewidth 1 linecolor '#ff0000'
 
 plot $data0 using 1:2 with lines title 'Dither',\
-     $data0 using 1:3 with lines notitle
+     $data1 using 1:2 with lines notitle
 "
 
 let renderNoise path data =
@@ -126,15 +141,22 @@ let renderNoise path data =
     let descriptor, dither = data
     let title = makeTitle descriptor
     let tunit = makeTunit descriptor
-    let dither = dither |> Array.map (Option.defaultValue nan)
-    let baseln = dither |> Array.map (fun x -> if Double.IsNaN(x) then nan else 0.0)
+
+    let zeroval _ _ = 0.0
+    let formatValue = Option.defaultValue nan
+    let formatZeros = Option.fold zeroval nan
 
     let data0 =
         dither
-        |> Array.mapi (fun i _ -> sprintf "%O %O %O" i dither.[i] baseln.[i])
+        |> Array.mapi (fun i x -> sprintf "%O %O" i (formatValue x))
         |> String.concat "\n"
 
-    render path plotNoise [| data0; title; tunit |]
+    let data1 =
+        dither
+        |> Array.mapi (fun i x -> sprintf "%O %O" i (formatZeros x))
+        |> String.concat "\n"
+
+    render path plotNoise [| data0; data1; title; tunit |]
 
 //-------------------------------------------------------------------------------------------------
 
