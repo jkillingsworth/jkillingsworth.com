@@ -79,7 +79,7 @@ let private renderPrice style path axis ticker items =
 
     let lower, upper, step = axis
 
-    let option = Option.fold (fun _ x -> sprintf "%O" x) "''"
+    let option x = Option.defaultValue nan x
     let format i (market, moving, fitted) =
         sprintf "%O %O %O %O" i market (option moving) (option fitted)
 
