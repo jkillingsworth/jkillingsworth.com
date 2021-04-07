@@ -111,6 +111,8 @@ set ytics scale 0.01, 0.01
 
 set xlabel 'x'
 set xtics 1
+set xtics add ('0' 0)
+set format '%+0.0f'
 
 if (style == 1) {{
     set ylabel 'Probability Density'
