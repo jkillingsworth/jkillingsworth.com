@@ -60,7 +60,7 @@ if (style == 2) {{
     set yrange [lower:upper]
     set ytics 10
     set mytics 9
-    set logscale y
+    set logscale y 10
 }}
 
 set key box linecolor '#808080' samplen 1

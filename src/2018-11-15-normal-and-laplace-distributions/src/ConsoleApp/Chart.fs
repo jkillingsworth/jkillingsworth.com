@@ -122,7 +122,7 @@ if (style == 1) {{
 if (style == 2) {{
     set ylabel 'Probability Density'
     set yrange [0.00001:1]
-    set format y ' 10^{{%+L}}'
+    set format y ' 10^{{%+T}}'
     set logscale y 10
 }}
 

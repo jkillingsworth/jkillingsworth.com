@@ -54,7 +54,7 @@ set ytics scale 0.01, 0.01
 set xlabel 'Time (Days)'
 
 set ylabel 'Market Price (Log Values)'
-set format y '% 1.2f'
+set format y '%5.2f'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
@@ -95,7 +95,7 @@ set ytics scale 0.01, 0.01
 set xlabel 'Time (Days)'
 
 set ylabel 'Price Differences (Log Values)'
-set format y '% 1.2f'
+set format y '%5.2f'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left

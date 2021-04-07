@@ -54,7 +54,7 @@ set ytics scale 0.01, 0.01
 set xlabel 'Time (Minutes)'
 
 set ylabel 'Market Price'
-set format y '%1.3f'
+set format y '%5.3f'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
@@ -106,8 +106,8 @@ if (style == 1) {{
 if (style == 2) {{
     set ylabel 'Density'
     set yrange [1:]
-    set format y '  10^{{%+L}}'
-    set logscale y
+    set format y '  10^{{%+T}}'
+    set logscale y 10
 }}
 
 set key box linecolor '#808080' samplen 1

@@ -51,7 +51,7 @@ set xtics 200
 set ylabel 'Price per Share'
 set yrange [lower:upper]
 set ytics lower, step
-set format y '%g'
+set format y '%0.0f'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
