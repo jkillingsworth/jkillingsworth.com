@@ -195,10 +195,10 @@ set linetype 3 linewidth 1 linecolor '#b08080'
 set linetype 4 linewidth 1 linecolor '#e08080'
 set style fill solid border linecolor '#ffffff'
 
-plot $data0 using 1:($3 == 0 ? $4 : 0):xtic(2) with boxes title '0 Heads, 4 Tails',\
-     $data0 using 1:($3 == 1 ? $4 : 0):xtic(2) with boxes title '1 Heads, 3 Tails',\
-     $data0 using 1:($3 == 2 ? $4 : 0):xtic(2) with boxes title '2 Heads, 2 Tails',\
-     $data0 using 1:($3 == 3 ? $4 : 0):xtic(2) with boxes title '3 Heads, 1 Tails',\
+plot $data0 using 1:($3 == 0 ? $2 : 0):xtic(4) with boxes title '0 Heads, 4 Tails',\
+     $data0 using 1:($3 == 1 ? $2 : 0):xtic(4) with boxes title '1 Heads, 3 Tails',\
+     $data0 using 1:($3 == 2 ? $2 : 0):xtic(4) with boxes title '2 Heads, 2 Tails',\
+     $data0 using 1:($3 == 3 ? $2 : 0):xtic(4) with boxes title '3 Heads, 1 Tails',\
      $data0 using 1:($5 == '0.00%' && $3 == 0 ? 0.012 : 1/0):5 with labels notitle textcolor '#80b0e0',\
      $data0 using 1:($5 == '0.00%' && $3 == 1 ? 0.012 : 1/0):5 with labels notitle textcolor '#8098b0',\
      $data0 using 1:($5 == '0.00%' && $3 == 2 ? 0.012 : 1/0):5 with labels notitle textcolor '#b08080',\
@@ -217,7 +217,7 @@ let renderTosses path tosses =
 
     let data0 =
         tosses
-        |> Array.mapi (fun i (s, r) -> sprintf "%O %s %O %O %s" i s (color s) r (percent r))
+        |> Array.mapi (fun i (s, x) -> sprintf "%O %O %O %s %s" i x (color s) s (percent x))
         |> String.concat "\n"
 
     render path plotTosses [| data0; n |]
