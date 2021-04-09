@@ -66,17 +66,15 @@ let private mergesteps magnitude threshold items =
 
 let private downsample samples items =
 
+    let count = (items |> Array.length) - 1
+
     let compute i =
-        let count = items |> Array.length
         let ratio = float i / float samples
-        let index = ratio * float count
-        items.[index |> round |> int]
+        let value = ratio * float count
+        let index = value |> round |> int
+        items.[index]
 
-    let compute = function
-        | i when i = samples -> items |> Array.last
-        | i -> compute i
-
-    if (samples <= Array.length items) then
+    if (samples < count) then
         compute |> Array.init (samples + 1)
     else
         items
