@@ -181,27 +181,27 @@ set palette defined\
 )
 
 set linetype 1 pointtype 7 linecolor '#ffffff'
-set linetype 4 linewidth 2 linecolor '#ffffff' dashtype 3
+set linetype 2 linewidth 2 linecolor '#ffffff' dashtype 3
 
 if (style == 0) {{
     plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
-         $data1 using 1:2 with points linetype 1 title 'Optimum'
+         $data1 using 1:2 with points title 'Optimum'
 }}
 
 if (style == 1) {{
     plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
-         $data1 using 1:2 with points linetype 1 title 'Optimum',\
+         $data1 using 1:2 with points title 'Optimum',\
+         $data2 using 1:2 with lines title sprintf('Slice %i', style),\
          $data2 using 1:2:('A') every ::a::a with labels offset +1.5,+1.3 textcolor '#ffffff' notitle,\
-         $data2 using 1:2:('B') every ::b::b with labels offset -1.5,-1.3 textcolor '#ffffff' notitle,\
-         $data2 using 1:2 with lines title sprintf('Slice %i', style)
+         $data2 using 1:2:('B') every ::b::b with labels offset -1.5,-1.3 textcolor '#ffffff' notitle
 }}
 
 if (style == 2) {{
     plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
-         $data1 using 1:2 with points linetype 1 title 'Optimum',\
+         $data1 using 1:2 with points title 'Optimum',\
+         $data2 using 1:2 with lines title sprintf('Slice %i', style),\
          $data2 using 1:2:('A') every ::a::a with labels offset -1.0,-0.7 textcolor '#ffffff' notitle,\
-         $data2 using 1:2:('B') every ::b::b with labels offset +1.0,+0.7 textcolor '#ffffff' notitle,\
-         $data2 using 1:2 with lines title sprintf('Slice %i', style)
+         $data2 using 1:2:('B') every ::b::b with labels offset +1.0,+0.7 textcolor '#ffffff' notitle
 }}
 "
 
