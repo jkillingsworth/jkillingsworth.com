@@ -162,6 +162,8 @@ set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 set key textcolor '#ffffff'
 
+set palette rgb 7,5,15
+
 set linetype 1 linewidth 2 linecolor '#00ff00'
 set linetype 2 linewidth 2 linecolor '#ffffff'
 set linetype 3 pointtype 6 linecolor '#ffffff'

@@ -97,11 +97,6 @@ set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 set key textcolor '#ffffff'
 
-set linetype 1 linewidth 2 linecolor '#00ff00'
-set linetype 2 linewidth 2 linecolor '#ffffff'
-set linetype 3 pointtype 6 linecolor '#ffffff'
-set linetype 4 pointtype 7 linecolor '#ffffff'
-
 set palette defined\
 (\
 0 '#000004',\
@@ -114,6 +109,11 @@ set palette defined\
 7 '#fec287',\
 8 '#fbfdbf' \
 )
+
+set linetype 1 linewidth 2 linecolor '#00ff00'
+set linetype 2 linewidth 2 linecolor '#ffffff'
+set linetype 3 pointtype 6 linecolor '#ffffff'
+set linetype 4 pointtype 7 linecolor '#ffffff'
 
 plot $data0 using ($1/densityX):($2/densityY):($3/10) matrix with image pixels notitle,\
      $data1 using 1:2 with lines title 'Plateau',\

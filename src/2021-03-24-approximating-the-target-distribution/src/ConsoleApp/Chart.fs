@@ -192,6 +192,7 @@ densityX = data0_size_x - 1
 densityY = data0_size_y - 1
 
 set border linewidth 1.0
+set grid
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
@@ -210,15 +211,12 @@ set format z '%0.2f'
 set cblabel offset 1 'Error'
 set format cb '%0.2f'
 
-set pm3d
-set grid
-set view 30,30,1,1.8
-
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 set key width -1
 
-set linetype 1 linewidth 1 linecolor '#4021908d'
+set pm3d
+set view 30,30,1,1.8
 
 set palette defined\
 (\
@@ -232,6 +230,8 @@ set palette defined\
 7 '#aadc32',\
 8 '#fde725' \
 )
+
+set linetype 1 linewidth 1 linecolor '#4021908d'
 
 splot $data0 using ($1/densityX):($2/densityY):3 matrix with lines title 'Surface Plot'
 "
@@ -288,10 +288,6 @@ set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 set key textcolor '#ffffff'
 
-set linetype 1 linewidth 2 linecolor '#ffffff'
-set linetype 2 pointtype 6 linecolor '#ffffff'
-set linetype 3 pointtype 7 linecolor '#ffffff'
-
 set palette defined\
 (\
 0 '#440154',\
@@ -304,6 +300,10 @@ set palette defined\
 7 '#aadc32',\
 8 '#fde725' \
 )
+
+set linetype 1 linewidth 2 linecolor '#ffffff'
+set linetype 2 pointtype 6 linecolor '#ffffff'
+set linetype 3 pointtype 7 linecolor '#ffffff'
 
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
      $data1 using 1:2 with lines title sprintf('Trace %s', tag),\

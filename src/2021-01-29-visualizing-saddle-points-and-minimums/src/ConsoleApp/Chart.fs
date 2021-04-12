@@ -61,6 +61,7 @@ densityX = data0_size_x - 1
 densityY = data0_size_y - 1
 
 set border linewidth 1.0
+set grid
 set xtics scale 0.01, 0.01
 set ytics scale 0.01, 0.01
 
@@ -83,17 +84,14 @@ set cbrange [lower:upper]
 set cbtics add ('\u00A00.0' 0)
 set format cb '%+0.1f'
 
-set pm3d
-set grid
-if (style == 1) {{ set view 30,30,1,1.8 }}
-if (style == 2) {{ set view 30,60,1,1.8 }}
-if (style == 3) {{ set view 60,60,1,1.2 }}
-
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 set key width -1
 
-set linetype 1 linewidth 1 linecolor '#812581'
+set pm3d
+if (style == 1) {{ set view 30,30,1,1.8 }}
+if (style == 2) {{ set view 30,60,1,1.8 }}
+if (style == 3) {{ set view 60,60,1,1.2 }}
 
 set palette defined\
 (\
@@ -107,6 +105,8 @@ set palette defined\
 7 '#fec287',\
 8 '#fbfdbf' \
 )
+
+set linetype 1 linewidth 1 linecolor '#812581'
 
 splot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with lines title 'Surface Plot'
 "
@@ -167,9 +167,6 @@ set key box linecolor '#808080' samplen 1
 set key top left reverse Left
 set key textcolor '#ffffff'
 
-set linetype 1 pointtype 7 linecolor '#ffffff'
-set linetype 4 linewidth 2 linecolor '#ffffff' dashtype 3
-
 set palette defined\
 (\
 0 '#000004',\
@@ -182,6 +179,9 @@ set palette defined\
 7 '#fec287',\
 8 '#fbfdbf' \
 )
+
+set linetype 1 pointtype 7 linecolor '#ffffff'
+set linetype 4 linewidth 2 linecolor '#ffffff' dashtype 3
 
 if (style == 0) {{
     plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
