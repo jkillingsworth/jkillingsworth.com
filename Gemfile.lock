@@ -65,6 +65,7 @@ GEM
     text-hyphen (1.4.1)
     unicode-display_width (1.7.0)
     wdm (0.1.1)
+    webrick (1.7.0)
 
 PLATFORMS
   x64-mingw32
@@ -74,6 +75,7 @@ DEPENDENCIES
   jekyll
   jekyll-hyphenate_filter
   wdm (>= 0.1.1)
+  webrick
 
 BUNDLED WITH
    2.2.15
