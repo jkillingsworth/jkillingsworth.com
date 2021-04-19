@@ -6,5 +6,5 @@ end
 
 gem "htmlcompressor"
 gem "jekyll"
-gem "wdm", ">= 0.1.1" if Gem.win_platform?
+gem 'wdm', '~> 0.1.1', :install_if => Gem.win_platform?
 gem "webrick"
