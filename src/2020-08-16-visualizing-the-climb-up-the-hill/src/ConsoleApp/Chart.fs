@@ -13,19 +13,30 @@ set encoding utf8
 set output '{0}'
 "
 
+let private terminal = "
+exit
+"
+
 let private render path template args =
 
     let preamble = String.Format(preamble, Path.GetFullPath(path))
     let template = String.Format(template, args)
-    let plot = preamble + template
+    let plot = preamble + template + terminal
     use proc = new Process()
     proc.StartInfo.FileName <- "gnuplot.exe"
     proc.StartInfo.UseShellExecute <- false
     proc.StartInfo.RedirectStandardInput <- true
+    proc.StartInfo.RedirectStandardError <- true
     proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
+    proc.StartInfo.StandardErrorEncoding <- new UTF8Encoding()
     proc.Start() |> ignore
     proc.StandardInput.Write(plot)
     proc.StandardInput.Flush()
+    proc.WaitForExit()
+    let stderr = proc.StandardError.ReadToEnd()
+    Console.ForegroundColor <- ConsoleColor.Red
+    Console.Error.Write(stderr)
+    Console.ResetColor()
 
 //-------------------------------------------------------------------------------------------------
 
