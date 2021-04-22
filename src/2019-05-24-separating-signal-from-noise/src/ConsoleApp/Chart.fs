@@ -11,6 +11,9 @@ let private preamble = "
 set terminal svg size 720 405 font 'Consolas, Menlo, monospace'
 set encoding utf8
 set output '{0}'
+
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 "
 
 let private terminal = "
@@ -70,8 +73,6 @@ set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
 set grid xtics mxtics
 set grid ytics mytics
-set xtics scale 0.01, 0.01
-set ytics scale 0.01, 0.01
 
 set xlabel sprintf('Time (%s)', tunit)
 
@@ -128,8 +129,6 @@ set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
 set grid xtics mxtics
 set grid ytics mytics
-set xtics scale 0.01, 0.01
-set ytics scale 0.01, 0.01
 
 set xlabel sprintf('Time (%s)', tunit)
 
@@ -182,8 +181,6 @@ set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
 set grid xtics mxtics
 set grid ytics mytics
-set xtics scale 0.01, 0.01
-set ytics scale 0.01, 0.01
 
 if (style == 1) {{ set xlabel gprintf('Market Price Differences, σ = %0.3te%04T', σN) }}
 if (style == 2) {{ set xlabel gprintf('Smooth Price Differences, σ = %0.3te%04T', σN) }}

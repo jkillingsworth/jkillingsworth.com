@@ -11,6 +11,9 @@ let private preamble = "
 set terminal svg size 720 405 font 'Consolas, Menlo, monospace'
 set encoding utf8
 set output '{0}'
+
+set xtics scale 0.01, 0.01
+set ytics scale 0.01, 0.01
 "
 
 let private terminal = "
@@ -89,8 +92,6 @@ set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
 set grid xtics mxtics
 set grid ytics mytics
-set xtics scale 0.01, 0.01
-set ytics scale 0.01, 0.01
 
 set xlabel 'Possible Outcome'
 set xrange [-n-2:+n+2]
@@ -136,8 +137,6 @@ set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
 set grid xtics mxtics
 set grid ytics mytics
-set xtics scale 0.01, 0.01
-set ytics scale 0.01, 0.01
 
 set xlabel 'State'
 set xrange [-n:+n]
@@ -185,8 +184,6 @@ set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
 set grid xtics mxtics
 set grid ytics mytics
-set xtics scale 0.01, 0.01
-set ytics scale 0.01, 0.01
 
 set xlabel 'Sequence'
 set xrange [-1:(2**n)]
@@ -246,8 +243,6 @@ densityY = data0_size_y - 1
 
 set border linewidth 1.0
 set grid
-set xtics scale 0.01, 0.01
-set ytics scale 0.01, 0.01
 
 set xlabel 'Coin Bias (+1)'
 set xrange [0:1]
@@ -303,8 +298,6 @@ densityX = data0_size_x - 1
 densityY = data0_size_y - 1
 
 set border linewidth 1.2
-set xtics scale 0.01, 0.01
-set ytics scale 0.01, 0.01
 
 set xlabel 'Coin Bias (+1)'
 set xrange [0:1]
@@ -372,8 +365,6 @@ densityX = data0_size_x - 1
 densityY = data0_size_y - 1
 
 set border linewidth 1.2
-set xtics scale 0.01, 0.01
-set ytics scale 0.01, 0.01
 
 set xlabel 'Coin Bias (+1)'
 set xrange [0:1]
@@ -451,8 +442,6 @@ stats $data1 using 1:2 nooutput prefix 'data1'
 n = data1_records - 1
 
 set border linewidth 1.2
-set xtics scale 0.01, 0.01
-set ytics scale 0.01, 0.01
 
 set xlabel 'Coin Bias (+1)'
 set xrange [0:1]
@@ -520,8 +509,6 @@ set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
 set grid xtics mxtics
 set grid ytics mytics
-set xtics scale 0.01, 0.01
-set ytics scale 0.01, 0.01
 
 set xlabel 'Coin Bias (+1)'
 set xrange [lower:upper]
