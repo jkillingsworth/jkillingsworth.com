@@ -12,8 +12,8 @@ set terminal svg size 720 405 font 'Consolas, Menlo, monospace'
 set encoding utf8
 set output '{0}'
 
-set xtics scale 0.01, 0.01
-set ytics scale 0.01, 0.01
+set xtics scale 0, 0.0001
+set ytics scale 0, 0.0001
 "
 
 let private terminal = "
