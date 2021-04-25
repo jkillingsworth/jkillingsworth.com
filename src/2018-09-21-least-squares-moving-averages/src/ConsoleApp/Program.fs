@@ -1,14 +1,19 @@
 ﻿module Program
 
 open System
+open System.Text
+
+//-------------------------------------------------------------------------------------------------
+
+Console.OutputEncoding <- new UTF8Encoding()
+
+let path filename = "../../../" + filename
 
 //-------------------------------------------------------------------------------------------------
 
 let final = DateTime(2018, 09, 21)
 let count = 2000
 let n = 200
-
-let path filename = "../../../" + filename
 
 let executeFull compute name ticker axis =
 

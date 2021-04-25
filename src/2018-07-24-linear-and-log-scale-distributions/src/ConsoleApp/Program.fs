@@ -1,5 +1,14 @@
 ﻿module Program
 
+open System
+open System.Text
+
+//-------------------------------------------------------------------------------------------------
+
+Console.OutputEncoding <- new UTF8Encoding()
+
+let path filename = "../../../" + filename
+
 //-------------------------------------------------------------------------------------------------
 
 let v0 = 100.0
@@ -16,12 +25,11 @@ let samplesExhaustiveFractionAdd = samplesExhaustive |> Compute.applyFixedFracti
 let samplesExhaustiveFractionMul = samplesExhaustive |> Compute.applyFixedFractionMul v0 b
 
 let reportPercents (gt, lt, eq) = printfn "Profit loss breakeven: %0.3f %0.3f %0.3f" gt lt eq
+
 samplesStochasticConstantAdd |> Compute.percentProfitLossBreakeven v0 |> reportPercents
 samplesExhaustiveConstantAdd |> Compute.percentProfitLossBreakeven v0 |> reportPercents
 samplesExhaustiveFractionAdd |> Compute.percentProfitLossBreakeven v0 |> reportPercents
 samplesExhaustiveFractionMul |> Compute.percentProfitLossBreakeven v0 |> reportPercents
-
-let path filename = "../../../" + filename
 
 samplesStochasticConstantAdd |> Chart.renderDistributionLin (path "stochastic-constant-add-lin.svg")
 samplesExhaustiveConstantAdd |> Chart.renderDistributionLin (path "exhaustive-constant-add-lin.svg")

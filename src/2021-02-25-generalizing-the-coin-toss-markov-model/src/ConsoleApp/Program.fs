@@ -1,16 +1,19 @@
 ﻿module Program
 
 open System
+open System.Text
 
 //-------------------------------------------------------------------------------------------------
 
-let n = 10
+Console.OutputEncoding <- new UTF8Encoding()
 
 let path filename = "../../../" + filename
 
 //-------------------------------------------------------------------------------------------------
 
-Console.OutputEncoding <- Text.Encoding.UTF8
+let n = 10
+
+//-------------------------------------------------------------------------------------------------
 
 let printValues n = function
     | i when i < (n - 1)

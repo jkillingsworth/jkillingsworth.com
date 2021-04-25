@@ -1,5 +1,14 @@
 ﻿module Program
 
+open System
+open System.Text
+
+//-------------------------------------------------------------------------------------------------
+
+Console.OutputEncoding <- new UTF8Encoding()
+
+let path filename = "../../../" + filename
+
 //-------------------------------------------------------------------------------------------------
 
 let v0 = 100.0
@@ -23,8 +32,6 @@ let avgFractionMul = Compute.aggregateAvg n simsFractionMul
 let medConstantAdd = Compute.aggregateMed n simsConstantAdd
 let medFractionAdd = Compute.aggregateMed n simsFractionAdd
 let medFractionMul = Compute.aggregateMed n simsFractionMul
-
-let path filename = "../../../" + filename
 
 simConstantAdd |> Chart.renderBankrollLin (path "constant-add-lin-sim.svg") -100.0 300.0
 avgConstantAdd |> Chart.renderBankrollLin (path "constant-add-lin-avg.svg") -100.0 300.0

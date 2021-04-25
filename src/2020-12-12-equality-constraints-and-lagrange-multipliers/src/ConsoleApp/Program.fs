@@ -1,17 +1,20 @@
 ﻿module Program
 
 open System
+open System.Text
+
+//-------------------------------------------------------------------------------------------------
+
+Console.OutputEncoding <- new UTF8Encoding()
+
+let path filename = "../../../" + filename
 
 //-------------------------------------------------------------------------------------------------
 
 let density = (20, 20)
 let samples = 100
 
-let path filename = "../../../" + filename
-
 //-------------------------------------------------------------------------------------------------
-
-Console.OutputEncoding <- Text.Encoding.UTF8
 
 let sfname = function
     | Compute.Sa -> "A"
