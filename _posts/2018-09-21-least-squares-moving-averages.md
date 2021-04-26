@@ -79,7 +79,7 @@ While there are many techniques that can be used to approximate the coefficients
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    a_1 & = \frac{n \sum{x_i y_i} - \sum{x_i} \sum{y_i}}{n \sum{x_i^2} - (\sum{x_i})^2}
+    a_1 & = \frac{n \sum{x_i y_i} - \sum{x_i} \sum{y_i}}{n \sum{x_i^2} - \left(\sum{x_i}\right)^2}
     \\[1em]
     a_0 & = \frac{\sum{y_i} - a_1 \sum{x_i}}{n}
     \end{aligned}
@@ -231,7 +231,7 @@ The following formulas can then be used to calculate the coefficients for the li
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    a_1 & = \frac{n \sum{x_i y'_i} - \sum{x_i} \sum{y'_i}}{n \sum{x_i^2} - (\sum{x_i})^2}
+    a_1 & = \frac{n \sum{x_i y'_i} - \sum{x_i} \sum{y'_i}}{n \sum{x_i^2} - \left(\sum{x_i}\right)^2}
     \\[1em]
     a_0 & = \frac{\sum{y'_i} - a_1 \sum{x_i}}{n}
     \end{aligned}

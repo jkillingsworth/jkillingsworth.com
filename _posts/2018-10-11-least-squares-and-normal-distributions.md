@@ -147,11 +147,11 @@ Each one of the coefficients is given in terms of the other. Since there are two
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \textstyle (n) a_0 + (\sum{x_i^{\phantom{1}}}) a_1
+    \textstyle \left(n\right) a_0 + \left(\sum{x_i^{\phantom{1}}}\right) a_1
     & =
     \textstyle \sum{y_i}
     \\[1em]
-    \textstyle (\sum{x_i^{\phantom{1}}}) a_0 + (\sum{x_i^2}) a_1
+    \textstyle \left(\sum{x_i^{\phantom{1}}}\right) a_0 + \left(\sum{x_i^2}\right) a_1
     & =
     \textstyle \sum{x_i y_i}
     \end{aligned}
