@@ -374,3 +374,18 @@ copychart ${post} fig-35 estimate-3-trace-2.svg
 copychart ${post} fig-36 estimate-3-trace-3.svg
 copychart ${post} fig-37 estimate-3-biases-fitted.svg
 copychart ${post} fig-38 estimate-3-pmfunc-fitted.svg
+
+post="2021-05-24-approximations-with-polynomials"
+
+copychart ${post} fig-07 target-pmfunc.svg
+copychart ${post} fig-08 estimate-0-surface.svg
+copychart ${post} fig-09 estimate-1-heatmap.svg
+copychart ${post} fig-10 estimate-2-heatmap.svg
+copychart ${post} fig-11 estimate-3-heatmap.svg
+copychart ${post} fig-12 estimate-4-heatmap.svg
+copychart ${post} fig-13 estimate-5-biases-fitted.svg
+copychart ${post} fig-14 estimate-5-pmfunc-fitted.svg
+copychart ${post} fig-21 estimate-6-biases-fitted.svg
+copychart ${post} fig-22 estimate-6-pmfunc-fitted.svg
+copychart ${post} fig-26 estimate-7-biases-fitted.svg
+copychart ${post} fig-27 estimate-7-pmfunc-fitted.svg
