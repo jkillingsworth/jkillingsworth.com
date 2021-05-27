@@ -3,6 +3,10 @@ layout: post
 title: Approximating the Target Distribution
 ---
 
+<span style="background-color: yellow">
+*This post contains erroneous data. I will be making revisions soon.*
+</span>
+
 In previous studies of the weighted coin toss game, our focus was on finding a set of weights for the biased coins that would yield a given target distribution for the expected outcome. In this post, I want to explore a different approach. Instead of finding an exact solution, I want to try finding an approximate solution using a set of weights based on a parameterized formula. This might produce an approximate solution that is good enough for practical purposes while also being easier to compute for a model with a large number of coin toss events per round.
 
 <!--excerpt-->
