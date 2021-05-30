@@ -128,9 +128,9 @@ let private condenseOutcome (n, vector : Expression[]) =
 
 let private createFunctions (n, vector : Expression[]) =
 
-    let symbolMapping i = sprintf "p%i" (i + 1) |> Symbol
-    let symbols = Array.init (n - 1) symbolMapping
-    let combinedExecution fs xs = Array.map (fun f -> f xs) fs
+    let symbolMapping i = sprintf "p%i" i |> Symbol
+    let symbols = Array.init n symbolMapping
+    let combinedExecution fs ps = Array.map (fun f -> f ps) fs
 
     vector
     |> Array.map (Compile.expression symbols)
@@ -179,7 +179,7 @@ let estimateBiases n pmfunc (a, b) =
 
     let adjust (a, b) =
 
-        let step = 0.0001
+        let step = 0.00001
 
         let boundary = max 0.0 >> min 1.0
         let boundary (a, b) = (boundary a, boundary b)

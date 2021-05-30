@@ -162,7 +162,7 @@ Once we have found the optimal solution, we can then compute the sum of squared 
 {% latex fig-31 %}
     \begin{document}
     \begin{displaymath}
-    C = 0.00006087
+    C = 0.00000405
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -195,16 +195,16 @@ Once we have found the optimal solution, we can then compute the sum of squared 
 {% latex fig-39 %}
     \begin{document}
     \begin{displaymath}
-    C = 0.00377906
+    C = 0.00001164
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
-The approximation error is a nonzero value roughly two orders of magnitude larger than the one in the previous example. The shape of the approximate distribution somewhat resembles that of the target distribution, but it is noticeably different.
+Again, the approximation error is a nonzero value, so we don't have an exact match. Nonetheless, the error is still quite small, and the shape of the approximated distribution still looks quite similar to that of the target distribution. Like the previous example, the weights are quite similar to those found for the exponential distribution in the [previous post]({% post_url 2021-02-25-generalizing-the-coin-toss-markov-model %}#example-with-exponential-distribution).
 
 ## Possible Improvements
 
-In the last example above, the minimum value of the error function lies outside the range of possible values for the weights. Since all of the weights of the biased coins to the right of the initial state must fall somewhere on or between the two parameter values, the parameters are limited to values between zero and one. The optimal solution we found in the example is the minimum value that lies within this boundary, not the global minimum. We might be able to get a more accurate approximation by allowing the parameters to float outside the boundary. Taking this approach, we would have to cap the weights of the biased coins that would otherwise fall outside the range of valid values before computing the approximation error.
+In some cases, the minimum value of the error function might lie at a point outside the range of possible values for the weights. Since all of the weights of the biased coins to the right of the initial state must fall somewhere on or between the two parameter values, and since the parameters are limited to values between zero and one, we might not be able to find the best approximation using this approach. A more accurate approximation might be found by allowing the parameters to float outside the boundary. Taking this approach, we would have to cap the weights of the biased coins that would otherwise fall outside the range of valid values before computing the approximation error.
 
 Another thing that might improve the accuracy of the approximation would be to use some sort of curve instead of a straight line for the formula that determines the weights of the biased coins. I think this would require more than two parameters.
 
