@@ -3,10 +3,6 @@ layout: post
 title: Approximations with Polynomials
 ---
 
-<span style="background-color: yellow">
-*This post contains erroneous data. I will be making revisions soon.*
-</span>
-
 The [previous post]({% post_url 2021-03-24-approximating-the-target-distribution %}) demonstrated the use of biases derived from a simple line formula to find an approximate solution to the weighted coin toss problem. In this post, I want to expand on some of these ideas using various polynomial formulas to describe the weights of the biased coins. As this experiment demonstrates, higher order polynomials do yield better results as measured by the cost function. However, the optimal solutions approximated using these higher order polynomials are quite different from those found by other methods.
 
 <!--excerpt-->
