@@ -81,7 +81,7 @@ This transition matrix determines the probability of moving from one state to th
     \end{document}
 {% endlatex %}
 
-We can compute the probability of being in each one of the five states after the first coin toss by taking the cross product of the above vector and the state transition matrix:
+We can compute the probability of being in each one of the five states after the first coin toss by taking the product of the state vector and the state transition matrix:
 
 {% latex fig-04 %}
     \begin{document}
@@ -91,7 +91,7 @@ We can compute the probability of being in each one of the five states after the
     \end{document}
 {% endlatex %}
 
-After the first coin toss, there are two possible states that the system can be in. The cross product above works out to the following:
+After the first coin toss, there are two possible states that the system can be in. The product above works out to the following:
 
 {% latex fig-05 %}
     \begin{document}
@@ -124,7 +124,7 @@ Since there are two flips of the coin per round, we can compute the final outcom
     \end{document}
 {% endlatex %}
 
-After the second coin toss, there are three possible states the system can be in. The cross product above works out to the following:
+After the second coin toss, there are three possible states the system can be in. The product above works out to the following:
 
 {% latex fig-07 %}
     \begin{document}
@@ -247,7 +247,7 @@ We can multiply this vector by the transition matrix three times to determine wh
     \end{document}
 {% endlatex %}
 
-After the third coin toss, there are four possible states that the system can be in. The cross product above works out to the following:
+After the third coin toss, there are four possible states the system can be in. The product above works out to the following:
 
 {% latex fig-12 %}
     \begin{document}
