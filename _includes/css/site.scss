@@ -631,7 +631,7 @@ svg
 
 @media only screen and (min-width: 600px)
 {
-    $margin-percent: 10;
+    $margin-percent: 5;
     @include wide-content-layout($margin-percent);
 
     body
