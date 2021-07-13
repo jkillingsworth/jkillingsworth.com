@@ -389,3 +389,17 @@ copychart ${post} fig-21 estimate-5-biases-fitted.svg
 copychart ${post} fig-22 estimate-5-pmfunc-fitted.svg
 copychart ${post} fig-26 estimate-6-biases-fitted.svg
 copychart ${post} fig-27 estimate-6-pmfunc-fitted.svg
+
+post="2021-07-12-performance-tuning-for-the-coin-toss-model"
+
+copychart ${post} fig-34 flop-counts.svg
+copychart ${post} fig-46 estimate-n-10-1-heatmap.svg
+copychart ${post} fig-47 estimate-n-10-2-heatmap.svg
+copychart ${post} fig-48 estimate-n-10-3-heatmap.svg
+copychart ${post} fig-49 estimate-n-10-4-heatmap.svg
+copychart ${post} fig-51 target-pmfunc-n-20.svg
+copychart ${post} fig-52 estimate-n-20-5-biases-fitted.svg
+copychart ${post} fig-53 estimate-n-20-5-pmfunc-fitted.svg
+copychart ${post} fig-54 target-pmfunc-n-50.svg
+copychart ${post} fig-55 estimate-n-50-6-biases-fitted.svg
+copychart ${post} fig-56 estimate-n-50-6-pmfunc-fitted.svg
