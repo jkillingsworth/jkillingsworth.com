@@ -15,9 +15,9 @@ The aforementioned coin toss game can be modeled as a Markov chain. The game sta
 
 {% latex fig-01 %}
     \usepackage{tikz}
-    \usetikzlibrary{automata,arrows}
+    \usetikzlibrary{arrows,automata}
     \begin{document}
-    \begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=1.125in]
+    \begin{tikzpicture}[auto,>=stealth',shorten >=1bp,node distance=1.125in]
     \tikzset{every state/.style={minimum size=0.5in}}
     \node[state,initial right] (00)               {$S_0$};
     \node[state]               (+1) [above of=00] {$S_{+1}$};
@@ -584,9 +584,9 @@ Suppose we start with an initial guess of all fairly weighted coins. We can rand
 
 {% latex fig-44 %}
     \usepackage{tikz}
-    \usetikzlibrary{shapes,arrows,positioning}
+    \usetikzlibrary{arrows,positioning,shapes}
     \begin{document}
-    \begin{tikzpicture}[>=stealth',shorten >=1pt,auto,minimum height=0.375in,inner sep=0.125in]
+    \begin{tikzpicture}[auto,>=stealth',shorten >=1bp,minimum height=0.375in,inner sep=0.125in]
     \tikzstyle{terminal} = [draw,text width=1.0in,rectangle,rounded corners=0.1875in,align=center]
     \tikzstyle{process}  = [draw,text width=1.0in,rectangle]
     \tikzstyle{decision} = [draw,text width=0.5in,diamond,align=center]

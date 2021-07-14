@@ -13,9 +13,9 @@ The model of the coin toss game we'll use here is a simplified version. It uses 
 
 {% latex fig-01 %}
     \usepackage{tikz}
-    \usetikzlibrary{automata,arrows}
+    \usetikzlibrary{arrows,automata}
     \begin{document}
-    \begin{tikzpicture}[>=stealth',shorten >=1pt,auto,node distance=1.125in]
+    \begin{tikzpicture}[auto,>=stealth',shorten >=1bp,node distance=1.125in]
     \tikzset{every state/.style={minimum size=0.5in}}
     \node[state,initial right] (00)               {$S_0$};
     \node[state]               (+1) [above of=00] {$S_{+1}$};
