@@ -126,37 +126,37 @@ With four tosses of the coin, there are sixteen possible coin toss sequences and
     \hline
     \text{Sequence} & \text{Terminal State} & \text{Probability}
     \\[0.25em]\hline
-    \texttt{TTTT} & -4 & p_0 \, p_1 \, p_2 \, p_3
+    \texttt{HHHH} & +4 & p_0 \, p_1 \, p_2 \, p_3
     \\[0.25em]\hline
-    \texttt{TTTH} & -2 & p_0 \, p_1 \, p_2 \, (1 - p_3)
+    \texttt{HHHT} & +2 & p_0 \, p_1 \, p_2 \, (1 - p_3)
     \\[0.25em]\hline
-    \texttt{TTHT} & -2 & p_0 \, p_1 \, (1 - p_2) \, p_1
+    \texttt{HHTH} & +2 & p_0 \, p_1 \, (1 - p_2) \, p_1
     \\[0.25em]\hline
-    \texttt{THTT} & -2 & p_0 \, (1 - p_1) \, p_0 \, p_1
+    \texttt{HTHH} & +2 & p_0 \, (1 - p_1) \, p_0 \, p_1
     \\[0.25em]\hline
-    \texttt{HTTT} & -2 & p_0 \, (1 - p_1) \, p_0 \, p_1
+    \texttt{THHH} & +2 & p_0 \, (1 - p_1) \, p_0 \, p_1
     \\[0.25em]\hline
-    \texttt{TTHH} & \phantom{+}0 & p_0 \, p_1 \, (1 - p_2) \, (1 - p_1)
+    \texttt{HHTT} & \phantom{+}0 & p_0 \, p_1 \, (1 - p_2) \, (1 - p_1)
     \\[0.25em]\hline
-    \texttt{THTH} & \phantom{+}0 & p_0 \, (1 - p_1) \, p_0 \, (1 - p_1)
+    \texttt{HTHT} & \phantom{+}0 & p_0 \, (1 - p_1) \, p_0 \, (1 - p_1)
     \\[0.25em]\hline
     \texttt{HTTH} & \phantom{+}0 & p_0 \, (1 - p_1) \, p_0 \, (1 - p_1)
     \\[0.25em]\hline
     \texttt{THHT} & \phantom{+}0 & p_0 \, (1 - p_1) \, p_0 \, (1 - p_1)
     \\[0.25em]\hline
-    \texttt{HTHT} & \phantom{+}0 & p_0 \, (1 - p_1) \, p_0 \, (1 - p_1)
+    \texttt{THTH} & \phantom{+}0 & p_0 \, (1 - p_1) \, p_0 \, (1 - p_1)
     \\[0.25em]\hline
-    \texttt{HHTT} & \phantom{+}0 & p_0 \, p_1 \, (1 - p_2) \, (1 - p_1)
+    \texttt{TTHH} & \phantom{+}0 & p_0 \, p_1 \, (1 - p_2) \, (1 - p_1)
     \\[0.25em]\hline
-    \texttt{THHH} & +2 & p_0 \, (1 - p_1) \, p_0 \, p_1
+    \texttt{HTTT} & -2 & p_0 \, (1 - p_1) \, p_0 \, p_1
     \\[0.25em]\hline
-    \texttt{HTHH} & +2 & p_0 \, (1 - p_1) \, p_0 \, p_1
+    \texttt{THTT} & -2 & p_0 \, (1 - p_1) \, p_0 \, p_1
     \\[0.25em]\hline
-    \texttt{HHTH} & +2 & p_0 \, p_1 \, (1 - p_2) \, p_1
+    \texttt{TTHT} & -2 & p_0 \, p_1 \, (1 - p_2) \, p_1
     \\[0.25em]\hline
-    \texttt{HHHT} & +2 & p_0 \, p_1 \, p_2 \, (1 - p_3)
+    \texttt{TTTH} & -2 & p_0 \, p_1 \, p_2 \, (1 - p_3)
     \\[0.25em]\hline
-    \texttt{HHHH} & +4 & p_0 \, p_1 \, p_2 \, p_3
+    \texttt{TTTT} & -4 & p_0 \, p_1 \, p_2 \, p_3
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -185,16 +185,16 @@ Since the model is symmetrical, the chance of ending up on any given positive te
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_0 & = P(\texttt{TTHH}) + P(\texttt{THTH}) + P(\texttt{HTTH})
-          + P(\texttt{THHT}) + P(\texttt{HTHT}) + P(\texttt{HHTT})
+    r_0 & = P(\texttt{HHTT}) + P(\texttt{HTHT}) + P(\texttt{HTTH})
+          + P(\texttt{THHT}) + P(\texttt{THTH}) + P(\texttt{TTHH})
     \\[1em]
-    r_2 & = P(\texttt{TTTH}) + P(\texttt{TTHT}) + P(\texttt{THTT}) + P(\texttt{HTTT})
+    r_2 & = P(\texttt{HHHT}) + P(\texttt{HHTH}) + P(\texttt{HTHH}) + P(\texttt{THHH})
     \\
-        & = P(\texttt{THHH}) + P(\texttt{HTHH}) + P(\texttt{HHTH}) + P(\texttt{HHHT})
+        & = P(\texttt{HTTT}) + P(\texttt{THTT}) + P(\texttt{TTHT}) + P(\texttt{TTTH})
     \\[1em]
-    r_4 & = P(\texttt{TTTT})
+    r_4 & = P(\texttt{HHHH})
     \\
-        & = P(\texttt{HHHH})
+        & = P(\texttt{TTTT})
     \end{aligned}
     \end{displaymath}
     \end{document}

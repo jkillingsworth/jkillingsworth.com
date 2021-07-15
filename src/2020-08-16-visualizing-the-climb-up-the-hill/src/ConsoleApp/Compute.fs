@@ -59,20 +59,20 @@ let biasesExact p1 p2 =
 
 let private sequences =
     [|
-        "TTT"
-        "TTH"
-        "THT"
+        "HHH"
+        "HHT"
+        "HTH"
         "HTT"
         "THH"
-        "HTH"
-        "HHT"
-        "HHH"
+        "THT"
+        "TTH"
+        "TTT"
     |]
 
 let private sorter s =
-    let heads = s |> Seq.filter (fun x -> x = 'H') |> Seq.length
-    let flips = s |> Seq.rev |> Seq.toArray |> String
-    (heads, flips)
+    let major = s |> Seq.filter (fun x -> x = 'T') |> Seq.length
+    let minor = s
+    (major, minor)
 
 let private makeTosses p1 p2 =
 

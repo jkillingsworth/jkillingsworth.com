@@ -76,21 +76,21 @@ Since there are three coin tosses per round, with two possible outcomes for each
     \hline
     \text{Sequence} & \text{Terminal State} & \text{Probability}
     \\[0.25em]\hline
-    \texttt{TTT} & -3 & p_0 \, p_1 \, p_2
-    \\[0.25em]\hline
-    \texttt{TTH} & -1 & p_0 \, p_1 \, (1 - p_2)
-    \\[0.25em]\hline
-    \texttt{THT} & -1 & p_0 \, (1 - p_1) \, p_0
-    \\[0.25em]\hline
-    \texttt{HTT} & -1 & p_0 \, (1 - p_1) \, p_0
-    \\[0.25em]\hline
-    \texttt{THH} & +1 & p_0 \, (1 - p_1) \, p_0
-    \\[0.25em]\hline
-    \texttt{HTH} & +1 & p_0 \, (1 - p_1) \, p_0
+    \texttt{HHH} & +3 & p_0 \, p_1 \, p_2
     \\[0.25em]\hline
     \texttt{HHT} & +1 & p_0 \, p_1 \, (1 - p_2)
     \\[0.25em]\hline
-    \texttt{HHH} & +3 & p_0 \, p_1 \, p_2
+    \texttt{HTH} & +1 & p_0 \, (1 - p_1) \, p_0
+    \\[0.25em]\hline
+    \texttt{THH} & +1 & p_0 \, (1 - p_1) \, p_0
+    \\[0.25em]\hline
+    \texttt{HTT} & -1 & p_0 \, (1 - p_1) \, p_0
+    \\[0.25em]\hline
+    \texttt{THT} & -1 & p_0 \, (1 - p_1) \, p_0
+    \\[0.25em]\hline
+    \texttt{TTH} & -1 & p_0 \, p_1 \, (1 - p_2)
+    \\[0.25em]\hline
+    \texttt{TTT} & -3 & p_0 \, p_1 \, p_2
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}

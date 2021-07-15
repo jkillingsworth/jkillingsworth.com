@@ -76,28 +76,28 @@ let biasesEqual =
 
 let private sequences =
     [|
-        "TTTT"
-        "TTTH"
-        "TTHT"
-        "THTT"
-        "HTTT"
-        "TTHH"
-        "THTH"
-        "HTTH"
-        "THHT"
-        "HTHT"
-        "HHTT"
-        "THHH"
-        "HTHH"
-        "HHTH"
-        "HHHT"
         "HHHH"
+        "HHHT"
+        "HHTH"
+        "HHTT"
+        "HTHH"
+        "HTHT"
+        "HTTH"
+        "HTTT"
+        "THHH"
+        "THHT"
+        "THTH"
+        "THTT"
+        "TTHH"
+        "TTHT"
+        "TTTH"
+        "TTTT"
     |]
 
 let private sorter s =
-    let heads = s |> Seq.filter (fun x -> x = 'H') |> Seq.length
-    let flips = s |> Seq.rev |> Seq.toArray |> String
-    (heads, flips)
+    let major = s |> Seq.filter (fun x -> x = 'T') |> Seq.length
+    let minor = s
+    (major, minor)
 
 let private makeTosses p1 p2 p3 =
 

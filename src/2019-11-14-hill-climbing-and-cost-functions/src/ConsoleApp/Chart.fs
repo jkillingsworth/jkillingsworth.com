@@ -193,6 +193,7 @@ let renderTosses path tosses =
 
     let data0 =
         tosses
+        |> Array.rev
         |> Array.mapi (fun i (s, x) -> sprintf "%O %O %O %s %s" i x (color s) s (percent x))
         |> String.concat "\n"
 
