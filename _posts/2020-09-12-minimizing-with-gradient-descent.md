@@ -15,9 +15,9 @@ The gradient descent algorithm is a way of finding a local minimum of a differen
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_1 & = 0.5\,\Big( 1 - p_1\,p_2 \Big)
+    r_1 & = 0.5\,\big( 1 - p_1\,p_2 \big)
     \\[1em]
-    r_3 & = 0.5\,\Big( p_1\,p_2 \Big)
+    r_3 & = 0.5\,p_1\,p_2
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -30,7 +30,9 @@ The two equations above must hold true if we have a valid set of weights for a g
     \begin{displaymath}
     C(\mathbf{p})
     =
-    \Big[\, r_1 - 0.5\,(1 - p_1\,p_2) \,\Big]^2 + \Big[\, r_3 - 0.5\,(p_1\,p_2) \,\Big]^2
+    \Big[\, r_1 - 0.5\,\big( 1 - p_1\,p_2 \big) \,\Big]^2
+    +
+    \Big[\, r_3 - 0.5\,p_1\,p_2 \,\Big]^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -112,7 +114,9 @@ These values can be used to produce a concrete form of the cost function:
     \begin{displaymath}
     C(\mathbf{p})
     =
-    \Big[\, 0.3333 - 0.5\,(1 - p_1\,p_2) \,\Big]^2 + \Big[\, 0.1667 - 0.5\,(p_1\,p_2) \,\Big]^2
+    \Big[\, 0.3333 - 0.5\,\big( 1 - p_1\,p_2 \big) \,\Big]^2
+    +
+    \Big[\, 0.1667 - 0.5\,p_1\,p_2 \,\Big]^2
     \end{displaymath}
     \end{document}
 {% endlatex %}

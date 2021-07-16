@@ -591,7 +591,7 @@ Here is the definition of scoring function A:
     \begin{displaymath}
     \mathrlap{S_a}\phantom{S_b}(\mathbf{p})
     =
-    \sum_{i = 1}^{n - 1}{\Big( p_i - 0.5 \Big)^2}
+    \sum_{i = 1}^{n - 1}{\big( p_i - 0.5 \big)^2}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -603,7 +603,7 @@ Here is the definition of scoring function B:
     \begin{displaymath}
     \mathrlap{S_b}\phantom{S_b}(\mathbf{p})
     =
-    \sum_{i = 1}^{n - 1}{\Big( p_i - p_{i-1} \Big)^2}
+    \sum_{i = 1}^{n - 1}{\big( p_i - p_{i-1} \big)^2}
     \end{displaymath}
     \end{document}
 {% endlatex %}

@@ -40,7 +40,7 @@ The first coin toss is always a fair coin, by definition. Let's assume the proba
     \begin{displaymath}
     \mathcal{L}(p, \lambda)
     =
-    \Big( p - 0.5 \Big)^2 - \lambda \Big( 0.5 - p \Big)
+    \big( p - 0.5 \big)^2 - \lambda\mspace{1mu}\big( 0.5 - p \big)
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -52,7 +52,7 @@ Like we did previously, we can derive a cost function from the Lagrangian functi
     \begin{displaymath}
     C(p, \lambda)
     =
-    \Big( 2p - 1 + \lambda \Big)^2 + \Big( p - 0.5 \Big)^2
+    \big( 2p - 1 + \lambda \big)^2 + \big( p - 0.5 \big)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}

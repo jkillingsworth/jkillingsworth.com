@@ -132,9 +132,9 @@ Simplifying, these equations can be reduced to the following:
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_1 & = 0.5\,\Big( 1 - p_1\,p_2 \Big)
+    r_1 & = 0.5\,\big( 1 - p_1\,p_2 \big)
     \\[1em]
-    r_3 & = 0.5\,\Big( p_1\,p_2 \Big)
+    r_3 & = 0.5\,p_1\,p_2
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -207,7 +207,9 @@ Our cost function must compare the difference between the target distribution an
     \begin{displaymath}
     C(p_1, p_2)
     =
-    \Big[\, r_1 - 0.5\,(1 - p_1\,p_2) \,\Big]^2 + \Big[\, r_3 - 0.5\,(p_1\,p_2) \,\Big]^2
+    \Big[\, r_1 - 0.5\,\big( 1 - p_1\,p_2 \big) \,\Big]^2
+    +
+    \Big[\, r_3 - 0.5\,p_1\,p_2 \,\Big]^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -279,7 +281,7 @@ A scoring function can be used in addition to a cost function to constrain the v
     \begin{displaymath}
     \mathrlap{S_a}\phantom{S_b}(p_1, p_2)
     =
-    \Big( p_1 - 0.5 \Big)^2 + \Big( p_2 - 0.5 \Big)^2
+    \big( p_1 - 0.5 \big)^2 + \big( p_2 - 0.5 \big)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -324,7 +326,7 @@ The scoring function in the previous section is not the only one possible. Anoth
     \begin{displaymath}
     \mathrlap{S_b}\phantom{S_b}(p_1, p_2)
     =
-    \Big( p_1 - 0.5 \Big)^2 + \Big( p_2 - p_1 \Big)^2
+    \big( p_1 - 0.5 \big)^2 + \big( p_2 - p_1 \big)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}

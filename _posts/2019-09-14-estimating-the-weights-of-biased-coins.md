@@ -235,11 +235,11 @@ Substituting the value above for the weight of the coin at the zero state and th
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_0 & = \Big( 1 - p_1 \Big) \Big( 1 - p_1\,p_2 \Big)
+    r_0 & = \big( 1 - p_1 \big) \big( 1 - p_1\,p_2 \big)
     \\[1em]
-    r_2 & = 0.5\,\Big( p_1 \,+\, p_1\,p_2 \,-\, p_1^2\,p_2 \,-\, p_1\,p_2\,p_3 \Big)
+    r_2 & = 0.5\,p_1\mspace{1mu}\big( 1 \,+\, p_2 \,-\, p_1\,p_2 \,-\, p_2\,p_3 \big)
     \\[1em]
-    r_4 & = 0.5\,\Big( p_1\,p_2\,p_3 \Big)
+    r_4 & = 0.5\,p_1\,p_2\,p_3
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -395,11 +395,11 @@ However, this is not the only solution. As it turns out, there is an entire rang
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_0 & = \Big( 1 - p_1 \Big) \Big( 1 - p_1\,p_2 \Big)
+    r_0 & = \big( 1 - p_1 \big) \big( 1 - p_1\,p_2 \big)
     \\[1em]
-    r_2 & = 0.5\,\Big( p_1 \,+\, p_1\,p_2 \,-\, p_1^2\,p_2 \,-\, p_1\,p_2\,p_3 \Big)
+    r_2 & = 0.5\,p_1\mspace{1mu}\big( 1 \,+\, p_2 \,-\, p_1\,p_2 \,-\, p_2\,p_3 \big)
     \\[1em]
-    r_4 & = 0.5\,\Big( p_1\,p_2\,p_3 \Big)
+    r_4 & = 0.5\,p_1\,p_2\,p_3
     \end{aligned}
     \end{displaymath}
     \end{document}

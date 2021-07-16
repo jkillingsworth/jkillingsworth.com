@@ -206,9 +206,13 @@ Based on the model of the coin toss game with three flips per round, the followi
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    f_1(\mathbf{p}) & = r_1 - 0.5\,\Big( 1 - p_1\,p_2 \Big)
+    f_1(\mathbf{p})
+    & =
+    r_1 - 0.5\,\big( 1 - p_1\,p_2 \big)
     \\[1em]
-    f_2(\mathbf{p}) & = r_3 - 0.5\,\Big( p_1\,p_2 \Big)
+    f_2(\mathbf{p})
+    & =
+    r_3 - 0.5\,p_1\,p_2
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -222,8 +226,8 @@ Once we have the constraint functions, we can go ahead and incorporate them into
     \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})
     =
     S(\mathbf{p})
-    - \lambda_1 \left[ r_1 - 0.5\,\Big( 1 - p_1\,p_2 \Big) \right]
-    - \lambda_2 \left[ r_3 - 0.5\,\Big( p_1\,p_2 \Big) \right]
+    - \lambda_1\mspace{1mu}\Big[\, r_1 - 0.5\,\big( 1 - p_1\,p_2 \big) \,\Big]
+    - \lambda_2\mspace{1mu}\Big[\, r_3 - 0.5\,p_1\,p_2 \,\Big]
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -239,7 +243,7 @@ Using the two constraint functions defined for the coin toss game with three fli
     \begin{displaymath}
     \mathrlap{S_a}\phantom{S_b}(\mathbf{p})
     =
-    \Big( p_1 - 0.5 \Big)^2 + \Big( p_2 - 0.5 \Big)^2
+    \big( p_1 - 0.5 \big)^2 + \big( p_2 - 0.5 \big)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -288,7 +292,7 @@ Using the two constraint functions defined for the coin toss game with three fli
     \begin{displaymath}
     \mathrlap{S_b}\phantom{S_b}(\mathbf{p})
     =
-    \Big( p_1 - 0.5 \Big)^2 + \Big( p_2 - p_1 \Big)^2
+    \big( p_1 - 0.5 \big)^2 + \big( p_2 - p_1 \big)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -356,11 +360,17 @@ Based on the model of the coin toss game with four flips per round, the followin
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    f_1(\mathbf{p}) & = r_0 - \Big( 1 - p_1 \Big) \Big( 1 - p_1\,p_2 \Big)
+    f_1(\mathbf{p})
+    & =
+    r_0 - \big( 1 - p_1 \big) \big( 1 - p_1\,p_2 \big)
     \\[1em]
-    f_2(\mathbf{p}) & = r_2 - 0.5\,\Big( p_1 \,+\, p_1\,p_2 \,-\, p_1^2\,p_2 \,-\, p_1\,p_2\,p_3 \Big)
+    f_2(\mathbf{p})
+    & =
+    r_2 - 0.5\,p_1\mspace{1mu}\big( 1 \,+\, p_2 \,-\, p_1\,p_2 \,-\, p_2\,p_3 \big)
     \\[1em]
-    f_3(\mathbf{p}) & = r_4 - 0.5\,\Big( p_1\,p_2\,p_3 \Big)
+    f_3(\mathbf{p})
+    & =
+    r_4 - 0.5\,p_1\,p_2\,p_3
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -409,7 +419,7 @@ Now suppose we plug the following scoring function into our Lagrangian function:
     \begin{displaymath}
     \mathrlap{S_a}\phantom{S_b}(\mathbf{p})
     =
-    \Big( p_1 - 0.5 \Big)^2 + \Big( p_2 - 0.5 \Big)^2 + \Big( p_3 - 0.5 \Big)^2
+    \big( p_1 - 0.5 \big)^2 + \big( p_2 - 0.5 \big)^2 + \big( p_3 - 0.5 \big)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -457,7 +467,7 @@ Now suppose we plug the following scoring function into our Lagrangian function:
     \begin{displaymath}
     \mathrlap{S_b}\phantom{S_b}(\mathbf{p})
     =
-    \Big( p_1 - 0.5 \Big)^2 + \Big( p_2 - p_1 \Big)^2 + \Big( p_3 - p_2 \Big)^2
+    \big( p_1 - 0.5 \big)^2 + \big( p_2 - p_1 \big)^2 + \big( p_3 - p_2 \big)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -566,9 +576,13 @@ In the case of multiple constraints, the gradient vectors of each constraint at 
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    f_1(\mathbf{p}) & = 0.3333 - 0.5\,\Big( 1 - p_1\,p_2 \Big)
+    f_1(\mathbf{p})
+    & =
+    0.3333 - 0.5\,\big( 1 - p_1\,p_2 \big)
     \\[1em]
-    f_2(\mathbf{p}) & = 0.1667 - 0.5\,\Big( p_1\,p_2 \Big)
+    f_2(\mathbf{p})
+    & =
+    0.1667 - 0.5\,p_1\,p_2
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -590,11 +604,17 @@ Since it is not an independent equation, we can drop the second constraint entir
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    f_1(\mathbf{p}) & = 0.4000 - \Big( 1 - p_1 \Big) \Big( 1 - p_1\,p_2 \Big)
+    f_1(\mathbf{p})
+    & =
+    0.4000 - \big( 1 - p_1 \big) \big( 1 - p_1\,p_2 \big)
     \\[1em]
-    f_2(\mathbf{p}) & = 0.2000 - 0.5\,\Big( p_1 \,+\, p_1\,p_2 \,-\, p_1^2\,p_2 \,-\, p_1\,p_2\,p_3 \Big)
+    f_2(\mathbf{p})
+    & =
+    0.2000 - 0.5\,p_1\mspace{1mu}\big( 1 \,+\, p_2 \,-\, p_1\,p_2 \,-\, p_2\,p_3 \big)
     \\[1em]
-    f_3(\mathbf{p}) & = 0.1000 - 0.5\,\Big( p_1\,p_2\,p_3 \Big)
+    f_3(\mathbf{p})
+    & =
+    0.1000 - 0.5\,p_1\,p_2\,p_3
     \end{aligned}
     \end{displaymath}
     \end{document}

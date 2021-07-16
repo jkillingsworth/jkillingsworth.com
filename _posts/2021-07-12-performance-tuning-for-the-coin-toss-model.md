@@ -375,9 +375,9 @@ Now that we have arrays representing our state transition values and our initial
             $
             r_{k,i}
             \leftarrow
-            \left( p^{\sscr{heads}}_{i} \cdot r^{\sscr{heads}}_{j,i} \right)
+            \Big( p^{\sscr{heads}}_{i} \cdot r^{\sscr{heads}}_{j,i} \Big)
             +
-            \left( q^{\sscr{tails}}_{i} \cdot r^{\sscr{tails}}_{j,i} \right)
+            \Big( q^{\sscr{tails}}_{i} \cdot r^{\sscr{tails}}_{j,i} \Big)
             $\;
         }
         \BlankLine

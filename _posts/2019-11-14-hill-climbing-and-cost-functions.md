@@ -57,11 +57,11 @@ Given this initial guess, we can calculate what the expectation of the coin toss
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_0 & = \Big( 1 - p_1 \Big) \Big( 1 - p_1\,p_2 \Big)
+    r_0 & = \big( 1 - p_1 \big) \big( 1 - p_1\,p_2 \big)
     \\[1em]
-    r_2 & = 0.5\,\Big( p_1 \,+\, p_1\,p_2 \,-\, p_1^2\,p_2 \,-\, p_1\,p_2\,p_3 \Big)
+    r_2 & = 0.5\,p_1\mspace{1mu}\big( 1 \,+\, p_2 \,-\, p_1\,p_2 \,-\, p_2\,p_3 \big)
     \\[1em]
-    r_4 & = 0.5\,\Big( p_1\,p_2\,p_3 \Big)
+    r_4 & = 0.5\,p_1\,p_2\,p_3
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -89,9 +89,9 @@ This does not match our target values, so we know that our initial guess is not 
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    C & = \Big( 0.3750 - 0.4000 \Big)^2
-        + \Big( 0.2500 - 0.2000 \Big)^2
-        + \Big( 0.0625 - 0.1000 \Big)^2
+    C & = \big( 0.3750 - 0.4000 \big)^2
+        + \big( 0.2500 - 0.2000 \big)^2
+        + \big( 0.0625 - 0.1000 \big)^2
     \\[1em]
       & = 0.00453125
     \end{aligned}
@@ -208,7 +208,7 @@ The first scoring function I want to consider gives preference to weights that a
     \begin{displaymath}
     \mathrlap{S_a}\phantom{S_b}
     =
-    \Big( p_1 - 0.5 \Big)^2 + \Big( p_2 - 0.5 \Big)^2 + \Big( p_3 - 0.5 \Big)^2
+    \big( p_1 - 0.5 \big)^2 + \big( p_2 - 0.5 \big)^2 + \big( p_3 - 0.5 \big)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -220,7 +220,7 @@ The second scoring function I want to consider gives preference to weights that 
     \begin{displaymath}
     \mathrlap{S_b}\phantom{S_b}
     =
-    \Big( p_1 - 0.5 \Big)^2 + \Big( p_2 - p_1 \Big)^2 + \Big( p_3 - p_2 \Big)^2
+    \big( p_1 - 0.5 \big)^2 + \big( p_2 - p_1 \big)^2 + \big( p_3 - p_2 \big)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}

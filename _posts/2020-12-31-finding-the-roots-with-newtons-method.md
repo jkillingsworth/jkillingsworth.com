@@ -180,7 +180,7 @@ Using the same target distribution and constraint functions as we did with the [
     \begin{displaymath}
     \mathrlap{S_a}\phantom{S_b}(\mathbf{p})
     =
-    \Big( p_1 - 0.5 \Big)^2 + \Big( p_2 - 0.5 \Big)^2
+    \big( p_1 - 0.5 \big)^2 + \big( p_2 - 0.5 \big)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -227,7 +227,7 @@ Using the same target distribution and constraint functions as we did with the [
     \begin{displaymath}
     \mathrlap{S_b}\phantom{S_b}(\mathbf{p})
     =
-    \Big( p_1 - 0.5 \Big)^2 + \Big( p_2 - p_1 \Big)^2
+    \big( p_1 - 0.5 \big)^2 + \big( p_2 - p_1 \big)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -310,7 +310,7 @@ Now suppose we plug the following scoring function into our Lagrangian function:
     \begin{displaymath}
     \mathrlap{S_a}\phantom{S_b}(\mathbf{p})
     =
-    \Big( p_1 - 0.5 \Big)^2 + \Big( p_2 - 0.5 \Big)^2 + \Big( p_3 - 0.5 \Big)^2
+    \big( p_1 - 0.5 \big)^2 + \big( p_2 - 0.5 \big)^2 + \big( p_3 - 0.5 \big)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -358,7 +358,7 @@ Now suppose we plug the following scoring function into our Lagrangian function:
     \begin{displaymath}
     \mathrlap{S_b}\phantom{S_b}(\mathbf{p})
     =
-    \Big( p_1 - 0.5 \Big)^2 + \Big( p_2 - p_1 \Big)^2 + \Big( p_3 - p_2 \Big)^2
+    \big( p_1 - 0.5 \big)^2 + \big( p_2 - p_1 \big)^2 + \big( p_3 - p_2 \big)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}

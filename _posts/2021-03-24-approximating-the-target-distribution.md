@@ -19,7 +19,7 @@ In this case, we wind up with a binomial distribution for the distribution of ex
 {% latex fig-03 %}
     \begin{document}
     \begin{displaymath}
-    p_i = 0.5 + i \left( \frac{a - 0.5}{n - 1} \right)
+    p_i = 0.5 + i\mspace{1mu}\bigg( \frac{a - 0.5}{n - 1} \bigg)
     , \quad \forall i \in \{\, 0, \dots, n - 1 \,\}
     \end{displaymath}
     \end{document}
@@ -40,7 +40,7 @@ As you can see in the examples above, a single parameter can determine the shape
 {% latex fig-08 %}
     \begin{document}
     \begin{displaymath}
-    p_i = a + (i - 1) \left( \frac{b - a}{n - 2} \right)
+    p_i = a + (i - 1) \bigg( \frac{b - a}{n - 2} \bigg)
     , \quad \forall i \in \{\, 1, \dots, n - 1 \,\}
     \end{displaymath}
     \end{document}
@@ -90,7 +90,7 @@ This is fewer than the total number of possible outcomes. In our model, the dist
 {% latex fig-15 %}
     \begin{document}
     \begin{displaymath}
-    C = \sum_{i = 1}^{m} (r_{k,\sscr{target}} - r_{k,\sscr{approx}})^2, \quad
+    C = \sum_{i = 1}^{m} \big( r_{k,\sscr{target}} - r_{k,\sscr{approx}} \big)^2, \quad
     k =
     \begin{dcases}
     2i - 2 & \quad \text{if $n$ is even}
