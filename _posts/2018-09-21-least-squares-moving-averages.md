@@ -184,7 +184,7 @@ One of my objectives in this study is to quantitatively recognize and measure su
 {% latex fig-25 %}
     \begin{document}
     \begin{displaymath}
-    \hat{y} = p (1 + r)^x
+    \hat{y} = p \mspace{1mu} (1 + r)^x
     \end{displaymath}
     \end{document}
 {% endlatex %}

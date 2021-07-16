@@ -55,7 +55,7 @@ Since there are only two possible outcomes for each toss of the coin, the distri
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    & P(W = k) = \binom{n}{k} p^k (1 - p)^{n - k}
+    & P(W = k) = \binom{n}{k} \mspace{1mu} p^k \mspace{1mu} (1 - p)^{n - k}
     \\[1em]
     &
     \begin{aligned}
@@ -75,7 +75,7 @@ While there are multiple techniques for computing the binomial coefficient, the 
 {% latex fig-05 %}
     \begin{document}
     \begin{displaymath}
-    \binom{n}{k} = \frac{n!}{k!(n - k)!}
+    \binom{n}{k} = \frac{n!}{k!\mspace{1mu}(n - k)!}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -130,7 +130,7 @@ To generate the equivalent probability distribution chart for the fixed fraction
 {% latex fig-09 %}
     \begin{document}
     \begin{displaymath}
-    V_n = V_0 \bigg[ (1 + b)^W (1 - b)^L \bigg]
+    V_n = V_0 \, \bigg[ (1 + b)^W (1 - b)^L \bigg]
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -220,7 +220,7 @@ The reward multiplier that gets applied to the gambler's bankroll when the coin 
 {% latex fig-16 %}
     \begin{document}
     \begin{displaymath}
-    V_n = V_0 \bigg[ (1 - b)^{L - W} \bigg]
+    V_n = V_0 \, \bigg[ (1 - b)^{L - W} \bigg]
     \end{displaymath}
     \end{document}
 {% endlatex %}

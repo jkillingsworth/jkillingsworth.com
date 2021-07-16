@@ -152,7 +152,7 @@ We can compute the expected value of the option as a weighted average:
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathbb{E}[V(S_T)] & = \sum_{x \in X}^{ } P(S_T = x)V(S_T = x)
+    \mathbb{E}[V(S_T)] & = \sum_{x \in X} P(S_T = x) \mspace{1mu} V(S_T = x)
     \\[1em]
                        & = \$5
     \end{aligned}
@@ -199,7 +199,7 @@ If we can come up with a probability density function that models our prediction
 {% latex fig-11 %}
     \begin{document}
     \begin{displaymath}
-    \mathbb{E}[V(S_T)] = \int_{0}^{\infty} V(x)f(x)\,dx
+    \mathbb{E}[V(S_T)] = \int_{0}^{\infty} V(x) \mspace{1mu} f(x) \, dx
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -229,7 +229,7 @@ Since the probability density is zero for all values outside the range spanning 
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathbb{E}[V(S_T)] & = \int_{50}^{80} \frac{(x - 50)(80 - x)}{900}\,dx
+    \mathbb{E}[V(S_T)] & = \int_{50}^{80} \frac{(x - 50)(80 - x)}{900} \, dx
     \\[1em]
                        & = \$5
     \end{aligned}

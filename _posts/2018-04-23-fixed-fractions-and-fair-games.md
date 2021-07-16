@@ -218,9 +218,9 @@ Using the law of large numbers, we can apply the expected number of winning and 
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    G & = V_0 \bigg[ (1 + b)^W (1 - b)^L \bigg]^\frac{1}{n}
+    G & = V_0 \, \bigg[ (1 + b)^W (1 - b)^L \bigg]^\frac{1}{n}
     \\[1em]
-      & = V_0 \bigg[ (1 + b) (1 - b) \bigg]^\frac{1}{2}
+      & = V_0 \, \bigg[ (1 + b) (1 - b) \bigg]^\frac{1}{2}
     \\[1em]
       & = V_0 \sqrt{0.96}
     \end{aligned}
