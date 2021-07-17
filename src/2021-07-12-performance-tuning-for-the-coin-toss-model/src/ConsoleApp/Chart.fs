@@ -91,7 +91,7 @@ set grid xtics mxtics
 set grid ytics mytics
 
 set xlabel 'Possible Outcome'
-set xrange [-(n + 2):+(n + 2)]
+set xrange [-n-2:+n+2]
 if (n % 2 == 0) {{ set xtics ('0' 0) }} else {{ set xtics () }}
 if (n <= 10) {{
     set for [i=+n:+1:-2] xtics add (sprintf('%+i', i) i)
@@ -148,8 +148,8 @@ set xlabel 'State'
 set xrange [-n:+n]
 set xtics ('0' 0)
 if (n <= 10) {{
-    set for [i=+1:+(n - 1):+1] xtics add (sprintf('%+i', i) i)
-    set for [i=-1:-(n - 1):-1] xtics add (sprintf('%+i', i) i)
+    set for [i=+1:+n-1:+1] xtics add (sprintf('%+i', i) i)
+    set for [i=-1:-n+1:-1] xtics add (sprintf('%+i', i) i)
 }} else {{
     set xtics add -(n - 1), (n - 1), +(n - 1)
     set mxtics (n - 1)
