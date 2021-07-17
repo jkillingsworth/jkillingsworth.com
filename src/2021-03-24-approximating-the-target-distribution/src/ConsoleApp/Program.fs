@@ -34,7 +34,7 @@ let executeTrace name pmfunc heatmap starts i =
 
     Chart.renderHeatmap (path $"{name}-trace-{i}.svg") heatmap n trace samples i
 
-    printfn "----------"
+    printfn "----------------------------------------"
     printfn "trace-%i" i
     printfn "iterations: %A" count
     printfn "final a: %0.4f" (fst final)

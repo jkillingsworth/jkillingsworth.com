@@ -202,21 +202,6 @@ let private calculateSumSquaredError n pmfunc degree =
 
 //-------------------------------------------------------------------------------------------------
 
-let heatmap n density pmfunc degree =
-
-    let densityX = fst density
-    let densityY = snd density
-    let getError = calculateSumSquaredError n pmfunc degree
-
-    let f i j =
-        let p1 = float i / float densityX
-        let p2 = float j / float densityY
-        getError [| p1; p2 |]
-
-    Array2D.init (densityX + 1) (densityY + 1) f
-
-//-------------------------------------------------------------------------------------------------
-
 let estimateBiases n pmfunc degree start =
 
     let getError = calculateSumSquaredError n pmfunc degree
@@ -260,3 +245,18 @@ let evaluatePmfunc n biases =
     |> reshapeBiasesToPs n
     |> evaluations n
     |> reshapeRsToPmfunc n
+
+//-------------------------------------------------------------------------------------------------
+
+let heatmap n density pmfunc degree =
+
+    let densityX = fst density
+    let densityY = snd density
+    let getError = calculateSumSquaredError n pmfunc degree
+
+    let f i j =
+        let p1 = float i / float densityX
+        let p2 = float j / float densityY
+        getError [| p1; p2 |]
+
+    Array2D.init (densityX + 1) (densityY + 1) f
