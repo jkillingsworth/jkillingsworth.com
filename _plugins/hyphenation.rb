@@ -5,7 +5,7 @@ module Jekyll
 
     module HyphenationFilter
 
-        @@hyphenator = Text::Hyphen.new(language: "en_us", :left => 1, :right => 1)
+        @@hyphenator = Text::Hyphen.new(:language => "en_us", :left => 1, :right => 1)
 
         def process_fixups(content)
             content = content.gsub(/&amp;am(\u00ad?)p;/, "&amp;")

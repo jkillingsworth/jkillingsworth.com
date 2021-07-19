@@ -14,7 +14,7 @@ module Jekyll
             '
 
         def process_latex(items)
-            items.map{ |s| s.strip.lines }.flatten.map{ |s| s.strip.concat("\n") }.join
+            items.map { |s| s.strip.lines }.flatten.map { |s| s.strip.concat("\n") }.join
         end
 
         def initialize(name, input, tokens)
@@ -47,7 +47,7 @@ module Jekyll
 
             def gen_outfile(latex, opts, outfile)
                 fonts = opts["fonts"]
-                stdout, stderr, status = Open3.capture3("bash ./bin/latextosvg.sh -f #{fonts}", :stdin_data=>latex)
+                stdout, stderr, status = Open3.capture3("bash ./bin/latextosvg.sh -f #{fonts}", :stdin_data => latex)
                 print_e stderr
                 unless !status.success? then
                     File.write(outfile, stdout)
