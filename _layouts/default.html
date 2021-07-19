@@ -52,7 +52,7 @@
     {% capture sidebar %}
     {% include sidebar.html %}
     {% endcapture %}
-    {{ sidebar | hyphenate_and_fixup }}
+    {{ sidebar }}
   </aside>
   <footer>
     &copy; 2018&ndash;{{ site.time | date: "%Y" }} Jim Killingsworth. All rights reserved.
