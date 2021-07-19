@@ -7,12 +7,18 @@ module Jekyll
 
         @@hyphenator = Text::Hyphen.new(language: "en_us", :left => 2, :right => 2)
 
-        def hyphenate_and_fixup(content)
-            content = hyphenate(content)
+        def process_fixups(content)
             content = content.gsub(/&amp;am(\u00ad?)p;/, "&amp;")
             content = content.gsub(/\u002d\u00ad/, "\u002d")
             content = content.gsub(/\u2013\u00ad/, "\u2013")
             content = content.gsub(/\u2014\u00ad/, "\u2014")
+            content
+        end
+
+        def hyphenate_text(content)
+            content.split.each do |word|
+                content.sub!(word, @@hyphenator.visualize(word, "\u00ad"))
+            end
             content
         end
 
@@ -24,14 +30,7 @@ module Jekyll
                     node.content = hyphenate_text(node.to_s) if node.text?
                 end
             end
-            fragment.to_s
-        end
-
-        def hyphenate_text(text)
-            text.split.each do |word|
-                text.sub!(word, @@hyphenator.visualize(word, "\u00ad"))
-            end
-            text
+            process_fixups(fragment.to_s)
         end
     end
 end
