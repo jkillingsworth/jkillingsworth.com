@@ -9,8 +9,10 @@ module Jekyll
 
         def hyphenate_and_fixup(content)
             content = hyphenate(content)
-            content = content.gsub(/-\u00ad/, "-")
             content = content.gsub(/&amp;am(\u00ad?)p;/, "&amp;")
+            content = content.gsub(/\u002d\u00ad/, "\u002d")
+            content = content.gsub(/\u2013\u00ad/, "\u2013")
+            content = content.gsub(/\u2014\u00ad/, "\u2014")
             content
         end
 
