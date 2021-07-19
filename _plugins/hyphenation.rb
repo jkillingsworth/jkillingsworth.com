@@ -27,9 +27,7 @@ module Jekyll
 
         def hyphenate_text(text)
             text.split.each do |word|
-                regex = /#{Regexp.escape(word)}/
-                hyphenated_word = @@hyphenator.visualize(word, "\u00ad")
-                text.gsub!(regex, hyphenated_word)
+                text.sub!(word, @@hyphenator.visualize(word, "\u00ad"))
             end
             text
         end
