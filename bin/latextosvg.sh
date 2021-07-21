@@ -62,13 +62,13 @@ do_nulldate()
 
     start="<head>"
     end="<\/head>"
-    pattern="<(created|modified) value=\"(.+?)\"\/>"
+    pattern="<(created|modified) value=\"(.+)\"\/>"
     replace="<\1 value=\"Thu Jan 01 00:00:00 1970\"\/>"
     ex_head="/${start}/,/${end}/ s/${pattern}/${replace}/"
 
     start="<name>"
     end="<\/name>"
-    pattern="FontForge 2.0 : (.*?) : [0-9]{1,2}-[0-9]{1,2}-[0-9]{4}"
+    pattern="FontForge 2.0 : (.*) : [0-9]{1,2}-[0-9]{1,2}-[0-9]{4}"
     replace="FontForge 2.0 : \1 : 1-1-1970"
     ex_name="/${start}/,/${end}/ s/${pattern}/${replace}/"
 
@@ -129,9 +129,9 @@ ttfont_process_join()
 
 do_post_processing()
 {
-    upper_pattern="^(.|\n)+?(<\!\[CDATA\[)"
-    inner_pattern="(?<=<\!\[CDATA\[)(.|\n)+?(?=]]>)"
-    lower_pattern="(\n]]>)(.|\n)+?$"
+    upper_pattern="(?s)^(.+)(<\!\[CDATA\[)"
+    inner_pattern="(?s)(?<=<\!\[CDATA\[)(.+)(?=]]>)"
+    lower_pattern="(?s)(\n]]>)(.+)$"
 
     upper=$(grep -oPz "${upper_pattern}" ${jobname}.svg | tr -d "\0")
     inner=$(grep -oPz "${inner_pattern}" ${jobname}.svg | tr -d "\0" | sort)
@@ -139,7 +139,7 @@ do_post_processing()
 
     printf -v svgfile "${upper}\n${inner}${lower}"
 
-    pattern="(?<=src:url\(data:application/x-font-ttf;base64,)(.+?)(?=\) format\('truetype'\);)"
+    pattern="(?<=src:url\(data:application/x-font-ttf;base64,)(.+)(?=\) format\('truetype'\);)"
     ttfonts=$(grep -oP "${pattern}" <<< "${svgfile}")
     ttfonts=(${ttfonts})
 
@@ -153,7 +153,7 @@ do_post_processing()
         ttfont_process_join ${i}
     done
 
-    pattern="<!-- (.*?) -->"
+    pattern="<!-- (.*) -->"
     replace="<!-- \1 (modified) -->"
     ex_domain="2 s/${pattern}/${replace}/"
 
