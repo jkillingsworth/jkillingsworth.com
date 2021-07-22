@@ -46,7 +46,7 @@ In this model, every round starts in the zero state. The coin in the zero state 
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{5em}<{$}|>{$}wl{9em}<{$}|>{$}wl{9em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{5em}|wl{9em}|wl{9em}|}
     \hline
     \text{State} & \text{Probability of Heads} & \text{Probability of Tails}
     \\[0.25em]\hline
@@ -72,7 +72,7 @@ Since there are three coin tosses per round, with two possible outcomes for each
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{5em}<{$}|>{$}wl{7em}<{$}|>{$}wl{11em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{5em}|wl{7em}|wl{11em}|}
     \hline
     \text{Sequence} & \text{Terminal State} & \text{Probability}
     \\[0.25em]\hline

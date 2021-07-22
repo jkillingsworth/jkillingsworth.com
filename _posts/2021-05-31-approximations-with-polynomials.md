@@ -154,7 +154,7 @@ To rearrange these three equations to state the coefficients in terms of the thr
     \begin{document}
     \begin{displaymath}
     \left[
-    \newcolumntype{x}{>{$}wr{0.75em}<{$}}
+    \newcolumntype{x}{wr{0.75em}}
     \begin{array}{xxx@{\quad}|@{\quad}l}
     1 & 1 & 1 & p_1
     \\[1em]
@@ -174,7 +174,7 @@ From here, we can perform a series of elementary row operations to convert the m
     \begin{document}
     \begin{displaymath}
     \left[
-    \newcolumntype{x}{>{$}wr{0.75em}<{$}}
+    \newcolumntype{x}{wr{0.75em}}
     \begin{array}{xxx@{\quad}|@{\quad}l}
     1 & 0 & 0 & + 0.5 p_1 - 1.0 p_2 + 0.5 p_3
     \\[1em]

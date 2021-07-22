@@ -41,7 +41,7 @@ In this model, there are five possible states that the system can be in and six 
     \begin{displaymath}
     \mathbf{M} =
     \left[
-    \newcolumntype{x}{>{$}wl{2.75em}<{$}}
+    \newcolumntype{x}{wl{2.75em}}
     \begin{array}{xxxxl}
     0   & 0   & 0       & 0   & 0
     \\[1em]
@@ -189,7 +189,7 @@ In this model, there are seven possible states that the system can be in and a t
     \begin{displaymath}
     \mathbf{M} =
     \left[
-    \newcolumntype{x}{>{$}wl{2.75em}<{$}}
+    \newcolumntype{x}{wl{2.75em}}
     \begin{array}{xxxxxxl}
     0   & 0   & 0       & 0       & 0       & 0   & 0
     \\[1em]
@@ -625,7 +625,7 @@ Here are the number of iterations required for each scoring function:
     \newcommand{\Sb}{\mathrlap{S_b}\phantom{S_b}}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{8em}<{$}|>{$}wr{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{8em}|wr{5em}|}
     \hline
     \text{Scoring Function} & \text{Iterations}
     \\[0.25em]\hline
@@ -691,7 +691,7 @@ Here are the number of iterations required for each scoring function:
     \newcommand{\Sb}{\mathrlap{S_b}\phantom{S_b}}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{8em}<{$}|>{$}wr{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{8em}|wr{5em}|}
     \hline
     \text{Scoring Function} & \text{Iterations}
     \\[0.25em]\hline

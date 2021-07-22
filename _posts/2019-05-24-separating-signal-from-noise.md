@@ -32,7 +32,7 @@ Looking at the dither component, the shape of histogram resembles that of a Lapl
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Location Parameter} & \text{Normal ($\mu$)}    & \text{Laplace ($\mu$)}
     \\[0.25em]\hline
@@ -44,7 +44,7 @@ Looking at the dither component, the shape of histogram resembles that of a Lapl
     \\[0.25em]\hline
     \end{array}
     \\[1em]
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Scale Parameter}    & \text{Normal ($\sigma$)} & \text{Laplace ($b$)}
     \\[0.25em]\hline
@@ -87,7 +87,7 @@ This histogram for market price data looks like it might approximate the shape o
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Location Parameter} & \text{Normal ($\mu$)}    & \text{Laplace ($\mu$)}
     \\[0.25em]\hline
@@ -99,7 +99,7 @@ This histogram for market price data looks like it might approximate the shape o
     \\[0.25em]\hline
     \end{array}
     \\[1em]
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Scale Parameter}    & \text{Normal ($\sigma$)} & \text{Laplace ($b$)}
     \\[0.25em]\hline
@@ -138,7 +138,7 @@ The shape of the histogram for both the market price data and the dither compone
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Location Parameter} & \text{Normal ($\mu$)}    & \text{Laplace ($\mu$)}
     \\[0.25em]\hline
@@ -150,7 +150,7 @@ The shape of the histogram for both the market price data and the dither compone
     \\[0.25em]\hline
     \end{array}
     \\[1em]
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Scale Parameter}    & \text{Normal ($\sigma$)} & \text{Laplace ($b$)}
     \\[0.25em]\hline
@@ -189,7 +189,7 @@ The shape of the histogram for the market price data shows the triple peak patte
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Location Parameter} & \text{Normal ($\mu$)}    & \text{Laplace ($\mu$)}
     \\[0.25em]\hline
@@ -201,7 +201,7 @@ The shape of the histogram for the market price data shows the triple peak patte
     \\[0.25em]\hline
     \end{array}
     \\[1em]
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Scale Parameter}    & \text{Normal ($\sigma$)} & \text{Laplace ($b$)}
     \\[0.25em]\hline
@@ -240,7 +240,7 @@ The histograms for both the market price and the dither component have a shape t
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Location Parameter} & \text{Normal ($\mu$)}    & \text{Laplace ($\mu$)}
     \\[0.25em]\hline
@@ -252,7 +252,7 @@ The histograms for both the market price and the dither component have a shape t
     \\[0.25em]\hline
     \end{array}
     \\[1em]
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{9em}<{$}|>{$}wl{7em}<{$}|>{$}wl{7em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Scale Parameter}    & \text{Normal ($\sigma$)} & \text{Laplace ($b$)}
     \\[0.25em]\hline

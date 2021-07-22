@@ -20,7 +20,7 @@ The chart above looks like it roughly approximates a binomial distribution, with
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{5em}<{$}|>{$}wl{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{5em}|wl{5em}|}
     \hline
     \text{Outcome}   & \text{Probability}
     \\[0.25em]\hline
@@ -106,7 +106,7 @@ This is the idealized form of the previous chart. Notice that the chart is symme
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{5em}<{$}|>{$}wl{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{5em}|wl{5em}|}
     \hline
     \text{Outcome}   & \text{Probability}
     \\[0.25em]\hline
@@ -150,7 +150,7 @@ The outcomes are evenly distributed on a logarithmic scale, but the most likely 
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{5em}<{$}|>{$}wl{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{5em}|wl{5em}|}
     \hline
     \text{Outcome}   & \text{Probability}
     \\[0.25em]\hline
@@ -240,7 +240,7 @@ With the modified reward function for the fixed fraction betting strategy, the g
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{5em}<{$}|>{$}wl{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{5em}|wl{5em}|}
     \hline
     \text{Outcome}   & \text{Probability}
     \\[0.25em]\hline

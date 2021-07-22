@@ -38,7 +38,7 @@ To get some broader insights regarding the behavior of price movements, I want t
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{4em}<{$}|>{$}wl{15em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{4em}|wl{15em}|}
     \hline
     \text{Symbol}    & \text{Underlying Asset}
     \\[0.25em]\hline
@@ -85,7 +85,7 @@ Instead of looking at broad stock market indexes, let's see what happens if we e
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{4em}<{$}|>{$}wl{15em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{4em}|wl{15em}|}
     \hline
     \text{Symbol}    & \text{Underlying Asset}
     \\[0.25em]\hline
@@ -211,7 +211,7 @@ To see if the pattern holds, let's take a look at the daily exchange rates of a 
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{4em}<{$}|>{$}wl{15em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{4em}|wl{15em}|}
     \hline
     \text{Symbol}    & \text{Underlying Asset}
     \\[0.25em]\hline
@@ -273,7 +273,7 @@ A number of different cryptocurrencies have emerged in the past few years. And s
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{4em}<{$}|>{$}wl{15em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{4em}|wl{15em}|}
     \hline
     \text{Symbol}    & \text{Underlying Asset}
     \\[0.25em]\hline

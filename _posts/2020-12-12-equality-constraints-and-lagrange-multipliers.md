@@ -264,7 +264,7 @@ Here is a breakdown of the number of iterations required for each trace:
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{3em}<{$}|>{$}wr{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{3em}|wr{5em}|}
     \hline
     \text{Trace} & \text{Iterations}
     \\[0.25em]\hline
@@ -313,7 +313,7 @@ Here is a breakdown of the number of iterations required for each trace:
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{3em}<{$}|>{$}wr{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{3em}|wr{5em}|}
     \hline
     \text{Trace} & \text{Iterations}
     \\[0.25em]\hline
@@ -517,7 +517,7 @@ You can compare these results with the results found via a [different method]({%
     \newcommand{\Sb}{\mathrlap{S_b}\phantom{S_b}}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{8em}<{$}|>{$}wr{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{8em}|wr{5em}|}
     \hline
     \text{Scoring Function} & \text{Iterations}
     \\[0.25em]\hline
@@ -647,7 +647,7 @@ Example with 3 coin tosses, scoring function A:
     \newcommand{\methodD}{\text{Newton--Raphson}}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{16em}<{$}|>{$}wr{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{16em}|wr{5em}|}
     \hline
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline
@@ -675,7 +675,7 @@ Example with 3 coin tosses, scoring function B:
     \newcommand{\methodD}{\text{Newton--Raphson}}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{16em}<{$}|>{$}wr{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{16em}|wr{5em}|}
     \hline
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline
@@ -703,7 +703,7 @@ Example with 4 coin tosses, scoring function A:
     \newcommand{\methodD}{\text{Newton--Raphson}}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{16em}<{$}|>{$}wr{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{16em}|wr{5em}|}
     \hline
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline
@@ -731,7 +731,7 @@ Example with 4 coin tosses, scoring function B:
     \newcommand{\methodD}{\text{Newton--Raphson}}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{16em}<{$}|>{$}wr{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{16em}|wr{5em}|}
     \hline
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline

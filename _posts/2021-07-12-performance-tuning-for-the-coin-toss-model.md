@@ -802,9 +802,9 @@ The example we worked through in the computation method described above is small
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \newcolumntype{x}{>{$}wl{4.5em}<{$}}
-    \newcolumntype{y}{>{$}wr{7.0em}<{$}}
-    \newcolumntype{z}{>{$}wr{7.5em}<{$}}
+    \newcolumntype{x}{wl{4.5em}}
+    \newcolumntype{y}{wr{7.0em}}
+    \newcolumntype{z}{wr{7.5em}}
     \begin{array}{@{\rule{0em}{1.25em}}|x|y|y|z|}
     \hline
     \text{Iteration}
@@ -841,9 +841,9 @@ This tells us how many operations are required for a model with four coin toss e
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \newcolumntype{x}{>{$}wl{4.5em}<{$}}
-    \newcolumntype{y}{>{$}wr{7.0em}<{$}}
-    \newcolumntype{z}{>{$}wr{7.5em}<{$}}
+    \newcolumntype{x}{wl{4.5em}}
+    \newcolumntype{y}{wr{7.0em}}
+    \newcolumntype{z}{wr{7.5em}}
     \begin{array}{@{\rule{0em}{1.25em}}|x|y|y|z|}
     \hline
     \text{Iteration}
@@ -917,8 +917,8 @@ We can think of the row vector as a matrix with a single row. Let's start by fir
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \newcolumntype{x}{>{$}wl{7.5em}<{$}}
-    \newcolumntype{y}{>{$}wl{5.0em}<{$}}
+    \newcolumntype{x}{wl{7.5em}}
+    \newcolumntype{y}{wl{5.0em}}
     \begin{array}{@{\rule{0em}{1.25em}}|x|y|y|}
     \hline
     \text{Expression}
@@ -971,8 +971,8 @@ In this case, there are a total of four matrix operations. Each matrix operation
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \newcolumntype{x}{>{$}wl{7.5em}<{$}}
-    \newcolumntype{y}{>{$}wl{12.0em}<{$}}
+    \newcolumntype{x}{wl{7.5em}}
+    \newcolumntype{y}{wl{12.0em}}
     \begin{array}{@{\rule{0em}{1.25em}}|x|y|}
     \hline
     \text{Expression}
@@ -1027,8 +1027,8 @@ This is about two orders of magnitude more than the number of operations require
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \newcolumntype{x}{>{$}wl{7.5em}<{$}}
-    \newcolumntype{y}{>{$}wl{12.0em}<{$}}
+    \newcolumntype{x}{wl{7.5em}}
+    \newcolumntype{y}{wl{12.0em}}
     \begin{array}{@{\rule{0em}{1.25em}}|x|y|}
     \hline
     \text{Expression}
@@ -1091,7 +1091,7 @@ Suppose we have a set of algebraic formulas that we can use to compute the expec
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{5em}<{$}|>{$}wl{7em}<{$}|>{$}wl{11em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{5em}|wl{7em}|wl{11em}|}
     \hline
     \text{Sequence} & \text{Terminal State} & \text{Probability}
     \\[0.25em]\hline
@@ -1174,9 +1174,9 @@ You might want to stop here and check my work to make sure I did this correctly.
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \newcolumntype{x}{>{$}wl{4.5em}<{$}}
-    \newcolumntype{y}{>{$}wr{7.0em}<{$}}
-    \newcolumntype{z}{>{$}wr{7.5em}<{$}}
+    \newcolumntype{x}{wl{4.5em}}
+    \newcolumntype{y}{wr{7.0em}}
+    \newcolumntype{z}{wr{7.5em}}
     \begin{array}{@{\rule{0em}{1.25em}}|x|y|y|z|}
     \hline
     \text{Result}
@@ -1326,8 +1326,8 @@ Except for the last one, which drifts off into a local minimum, all paths finish
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \newcolumntype{x}{>{$}wl{3.0em}<{$}}
-    \newcolumntype{y}{>{$}wr{8.5em}<{$}}
+    \newcolumntype{x}{wl{3.0em}}
+    \newcolumntype{y}{wr{8.5em}}
     \begin{array}{@{\rule{0em}{1.25em}}|x|y|y|}
     \hline
     \text{Trace}

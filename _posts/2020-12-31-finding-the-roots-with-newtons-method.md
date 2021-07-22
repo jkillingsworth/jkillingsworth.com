@@ -148,7 +148,7 @@ In the [previous post]({% post_url 2020-12-12-equality-constraints-and-lagrange-
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{8em}<{$}|>{$}wl{12em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{8em}|wl{12em}|}
     \hline
     \text{Generic Notation} & \text{Coin Toss Game Notation}
     \\[0.25em]\hline
@@ -199,7 +199,7 @@ Regardless of the starting point, the final value is always the same. This is wh
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{3em}<{$}|>{$}wr{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{3em}|wr{5em}|}
     \hline
     \text{Trace} & \text{Iterations}
     \\[0.25em]\hline
@@ -246,7 +246,7 @@ Regardless of the starting point, the final value is always the same. This is wh
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{3em}<{$}|>{$}wr{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{3em}|wr{5em}|}
     \hline
     \text{Trace} & \text{Iterations}
     \\[0.25em]\hline
@@ -408,7 +408,7 @@ As you can see, once again, we get the same results that we found in the previou
     \newcommand{\Sb}{\mathrlap{S_b}\phantom{S_b}}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|>{$}wl{8em}<{$}|>{$}wr{5em}<{$}|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{8em}|wr{5em}|}
     \hline
     \text{Scoring Function} & \text{Iterations}
     \\[0.25em]\hline
