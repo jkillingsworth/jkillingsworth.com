@@ -802,10 +802,7 @@ The example we worked through in the computation method described above is small
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \newcolumntype{x}{wl{4.5em}}
-    \newcolumntype{y}{wr{7.0em}}
-    \newcolumntype{z}{wr{7.5em}}
-    \begin{array}{@{\rule{0em}{1.25em}}|x|y|y|z|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{4.5em}|wr{7em}|wr{7em}|wr{7.5em}|}
     \hline
     \text{Iteration}
     &
@@ -841,10 +838,7 @@ This tells us how many operations are required for a model with four coin toss e
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \newcolumntype{x}{wl{4.5em}}
-    \newcolumntype{y}{wr{7.0em}}
-    \newcolumntype{z}{wr{7.5em}}
-    \begin{array}{@{\rule{0em}{1.25em}}|x|y|y|z|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{4.5em}|wr{7em}|wr{7em}|wr{7.5em}|}
     \hline
     \text{Iteration}
     &
@@ -917,9 +911,7 @@ We can think of the row vector as a matrix with a single row. Let's start by fir
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \newcolumntype{x}{wl{7.5em}}
-    \newcolumntype{y}{wl{5.0em}}
-    \begin{array}{@{\rule{0em}{1.25em}}|x|y|y|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{7.5em}|wl{5em}|wl{5em}|}
     \hline
     \text{Expression}
     & \mathbf{M} \times \mathbf{M}
@@ -971,9 +963,7 @@ In this case, there are a total of four matrix operations. Each matrix operation
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \newcolumntype{x}{wl{7.5em}}
-    \newcolumntype{y}{wl{12.0em}}
-    \begin{array}{@{\rule{0em}{1.25em}}|x|y|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{7.5em}|wl{12em}|}
     \hline
     \text{Expression}
     & \mathbf{v}_0 \times (\mathbf{M} \times (\mathbf{M} \times (\mathbf{M} \times \mathbf{M})))
@@ -1027,9 +1017,7 @@ This is about two orders of magnitude more than the number of operations require
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \newcolumntype{x}{wl{7.5em}}
-    \newcolumntype{y}{wl{12.0em}}
-    \begin{array}{@{\rule{0em}{1.25em}}|x|y|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{7.5em}|wl{12em}|}
     \hline
     \text{Expression}
     & (((\mathbf{v}_0 \times \mathbf{M}) \times \mathbf{M}) \times \mathbf{M}) \times \mathbf{M}
@@ -1174,10 +1162,7 @@ You might want to stop here and check my work to make sure I did this correctly.
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \newcolumntype{x}{wl{4.5em}}
-    \newcolumntype{y}{wr{7.0em}}
-    \newcolumntype{z}{wr{7.5em}}
-    \begin{array}{@{\rule{0em}{1.25em}}|x|y|y|z|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{4.5em}|wr{7em}|wr{7em}|wr{7.5em}|}
     \hline
     \text{Result}
     &
@@ -1326,9 +1311,7 @@ Except for the last one, which drifts off into a local minimum, all paths finish
     \setlength{\arraycolsep}{1em}
     \begin{document}
     \begin{displaymath}
-    \newcolumntype{x}{wl{3.0em}}
-    \newcolumntype{y}{wr{8.5em}}
-    \begin{array}{@{\rule{0em}{1.25em}}|x|y|y|}
+    \begin{array}{@{\rule{0em}{1.25em}}|wl{3em}|wr{8.5em}|wr{8.5em}|}
     \hline
     \text{Trace}
     & \text{Iterations ($s_f$)}
