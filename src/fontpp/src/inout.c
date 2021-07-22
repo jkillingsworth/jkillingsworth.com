@@ -128,7 +128,7 @@ void input_buffer_free(struct buffer* buffer)
 
 bool woff2_buffer_init(struct buffer* buffer, size_t size)
 {
-    uint8_t* data = malloc(size);
+    uint8_t* data = calloc(1, size);
 
     if (data == NULL) {
         report_error("Error allocating output buffer");
