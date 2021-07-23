@@ -66,19 +66,23 @@ The build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) an
 
       bundle update
 
-* Update bundler to the latest version:
+  Update bundler to the latest version:
 
       bundle update --bundler
 
-* Regenerate the Jekyll binstub:
+  List gems with newer versions available:
+
+      bundle outdated --strict
+
+  Regenerate the Jekyll binstub:
 
       bundle binstubs jekyll --force
 
-* Build a site:
+* Build the site using Jekyll:
 
       ./bin/jekyll build
 
-* Build a site and host it on the local machine:
+  Build the site and host it on the local machine:
 
       ./bin/jekyll serve
 
@@ -96,7 +100,7 @@ The build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) an
 
   The above generates an intermediate DVI file. To generate the final SVG output:
 
-      dvisvgm <filename>.dvi --no-fonts --exact
+      dvisvgm --exact-bbox --font-format=ttf <filename>.dvi
 
 * Generate an SVG image from a Gnuplot input file:
 
