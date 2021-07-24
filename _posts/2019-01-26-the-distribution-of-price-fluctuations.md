@@ -308,11 +308,11 @@ His analysis includes a deeper study on the tails of the distribution. While he 
 
 The *Business Forecasting* blog authored by Clive Jones includes a whole series of articles on the topic of price change distributions:
 
-* [*The Distribution of Daily Stock Market Returns*](http://businessforecastblog.com/the-distribution-of-daily-stock-market-returns/)
-* [*The Laplace Distribution and Financial Returns*](http://businessforecastblog.com/the-laplace-distribution-and-financial-returns/)
-* [*The Nasdaq 100 Daily Returns and Laplace Distributed Errors*](http://businessforecastblog.com/the-nasdaq-100-daily-returns-and-laplace-distributed-errors/)
-* [*Microsoft Stock Prices and the Laplace Distribution*](http://businessforecastblog.com/microsoft-stock-prices-and-the-laplace-distribution/)
-* [*Distributions of Stock Returns and Other Asset Prices*](http://businessforecastblog.com/distributions-of-stock-returns-and-other-asset-prices/)
+* [*The Distribution of Daily Stock Market Returns*](https://businessforecastblog.com/the-distribution-of-daily-stock-market-returns/)
+* [*The Laplace Distribution and Financial Returns*](https://businessforecastblog.com/the-laplace-distribution-and-financial-returns/)
+* [*The Nasdaq 100 Daily Returns and Laplace Distributed Errors*](https://businessforecastblog.com/the-nasdaq-100-daily-returns-and-laplace-distributed-errors/)
+* [*Microsoft Stock Prices and the Laplace Distribution*](https://businessforecastblog.com/microsoft-stock-prices-and-the-laplace-distribution/)
+* [*Distributions of Stock Returns and Other Asset Prices*](https://businessforecastblog.com/distributions-of-stock-returns-and-other-asset-prices/)
 
 This series cites plenty of evidence that favors the use of the Laplace distribution to model price movements. Nonetheless, as I have illustrated in this post, there are still some cases where the histogram does not exhibit the pointy shaped peak characteristic of the Laplace distribution.
 
