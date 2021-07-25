@@ -29,19 +29,19 @@ $max-content-width: 720px;
 $margin-percent: 5;
 $indent-width: 16px;
 
-@mixin font-headlines
+@mixin font-headlines()
 {
     font-family: "Open Sans", "Verdana", sans-serif;
     font-weight: bold;
 }
 
-@mixin font-paragraph
+@mixin font-paragraph()
 {
     font-family: "Lora", "Georgia", serif;
     font-weight: normal;
 }
 
-@mixin font-monospace
+@mixin font-monospace()
 {
     font-family: "Roboto Mono", "Consolas", "Menlo", monospace;
     font-weight: normal;
@@ -114,13 +114,13 @@ svg
 
 //-------------------------------------------------------------------------------------------------
 
-@mixin navmenu-toggle-show
+@mixin navmenu-toggle-show()
 {
     height: auto;
     visibility: visible;
 }
 
-@mixin navmenu-toggle-hide
+@mixin navmenu-toggle-hide()
 {
     height: 0;
     visibility: hidden;
@@ -252,7 +252,7 @@ svg
 
 //-------------------------------------------------------------------------------------------------
 
-@mixin content-section-label
+@mixin content-section-label()
 {
     background: $rgbmark;
     display: inline-block;
@@ -579,7 +579,7 @@ svg
 
 //-------------------------------------------------------------------------------------------------
 
-@mixin wide-content-layout
+@mixin wide-content-layout()
 {
     $indent-width: 40px;
 
