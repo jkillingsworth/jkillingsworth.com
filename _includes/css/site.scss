@@ -62,7 +62,7 @@ body
 
     > *
     {
-        flex: 0 100%;
+        flex: 100%;
     }
 
     > header
@@ -673,6 +673,7 @@ svg
 {
     body
     {
+        column-gap: 60px;
         max-width: $max-overall-width;
 
         > header
@@ -683,12 +684,12 @@ svg
 
     .content
     {
-        flex: 0 60%;
+        flex: auto;
     }
 
     .sidebar
     {
-        flex: 0 35%;
+        flex: auto;
 
         section:first-of-type
         {
