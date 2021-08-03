@@ -66,7 +66,11 @@ The build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) an
 
       bundle update
 
-  Update bundler to the latest version:
+  Update the bundler gem to the latest version:
+
+      gem update bundler
+
+  Apply the latest version of bundler:
 
       bundle update --bundler
 
