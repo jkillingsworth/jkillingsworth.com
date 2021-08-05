@@ -1356,6 +1356,6 @@ Starting with a set of fair coins for the initial guess, we can apply the hill c
 {% chart fig-55-estimate-n-50-6-biases-fitted.svg %}
 {% chart fig-56-estimate-n-50-6-pmfunc-fitted.svg %}
 
-This is a pretty good approximation, but it is not the most optimal result that can be found with a cubic polynomial. When using fair coins for the initial guess, the hill climbing method takes a route that leads to a local minimum. Also, notice that the number of iterations required is two orders of magnitude more than the other examples in the last two sections. I have some ideas for improving this technique further, but I will save that discussion for another time.
+This is a pretty good approximation, but it is not the most optimal result that can be found with a cubic polynomial. When using fair coins for the initial guess, the hill climbing method takes a route that appears to lead to a local minimum. Also, notice that the number of iterations required is two orders of magnitude more than the other examples in the last two sections. I have some ideas for improving this technique further, but I will save that discussion for another time.
 
 {% accompanying_src_link %}
