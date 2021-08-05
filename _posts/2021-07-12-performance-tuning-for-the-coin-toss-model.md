@@ -808,13 +808,13 @@ The example we worked through in the computation method described above is small
     &
     \text{Operations ($+$)} & \text{Operations ($\times$)} & \text{Total Operations}
     \\[0.25em]\hline
-    k = 1 &  2 &  4 &  6
+    k = 1 &  2 &  5 &  7
     \\[0.25em]\hline
-    k = 2 &  3 &  6 &  9
+    k = 2 &  3 &  7 & 10
     \\[0.25em]\hline
-    k = 3 &  4 &  8 & 12
+    k = 3 &  4 &  9 & 13
     \\[0.25em]\hline
-    k = 4 &  5 & 10 & 15
+    k = 4 &  5 & 11 & 16
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -826,7 +826,7 @@ We can add up the total number of operations for each iteration of the outer loo
 {% latex fig-19 %}
     \begin{document}
     \begin{displaymath}
-    T_4 = 6 + 9 + 12 + 15
+    T_4 = 7 + 10 + 13 + 16
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -844,7 +844,7 @@ This tells us how many operations are required for a model with four coin toss e
     &
     \text{Operations ($+$)} & \text{Operations ($\times$)} & \text{Total Operations}
     \\[0.25em]\hline
-    k = n &  n + 1 & 2n + 2 & 3n + 3
+    k & k + 1 & 2k + 3 & 3k + 4
     \\[0.25em]\hline
     \end{array}
     \end{displaymath}
@@ -856,7 +856,7 @@ Now we need to add up the number of operations used in each iteration to get the
 {% latex fig-21 %}
     \begin{document}
     \begin{displaymath}
-    T_n = \sum_{k = 1}^{n}{(3k + 3)}
+    T_n = \sum_{k = 1}^{n}{(3k + 4)}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -876,7 +876,7 @@ This is the formula for the triangular number sequence. We can use this relation
 {% latex fig-23 %}
     \begin{document}
     \begin{displaymath}
-    T_n = \frac{3n^2 + 9n}{2}
+    T_n = \frac{3n^2 + 11n}{2}
     \end{displaymath}
     \end{document}
 {% endlatex %}

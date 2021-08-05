@@ -260,9 +260,9 @@ let heatmap n density pmfunc degree =
 
 //-------------------------------------------------------------------------------------------------
 
-let private flopsMatrixProductRA n = ((16L * pown n 4) + (4L * pown n 3) - (4L * pown n 2) - n)
-let private flopsMatrixProductLA n = (( 8L * pown n 3) + (6L * pown n 2) + n)
-let private flopsOptimizedMethod n = (( 3L * pown n 2) + (9L * n)) / 2L
+let private flopsMatrixProductRA n = ((16L * pown n 4) + ( 4L * pown n 3) - (4L * pown n 2) - n)
+let private flopsMatrixProductLA n = (( 8L * pown n 3) + ( 6L * pown n 2) + n)
+let private flopsOptimizedMethod n = (( 3L * pown n 2) + (11L * n)) / 2L
 
 let private flops n =
     let n = int64 n
