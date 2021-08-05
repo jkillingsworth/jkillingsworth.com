@@ -98,7 +98,6 @@ if (n <= 10) {{
     set for [i=-n:-1:+2] xtics add (sprintf('%+i', i) i)
 }} else {{
     set xtics add -n, n, +n
-    set mxtics (n / 2)
     set format x '%+0.0f'
 }}
 
@@ -152,7 +151,6 @@ if (n <= 10) {{
     set for [i=-1:-n+1:-1] xtics add (sprintf('%+i', i) i)
 }} else {{
     set xtics add -(n - 1), (n - 1), +(n - 1)
-    set mxtics (n - 1)
     set format x '%+0.0f'
 }}
 
