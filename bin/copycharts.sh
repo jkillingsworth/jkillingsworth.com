@@ -403,3 +403,12 @@ copychart ${post} fig-53 estimate-n-20-5-pmfunc-fitted.svg
 copychart ${post} fig-54 target-pmfunc-n-50.svg
 copychart ${post} fig-55 estimate-n-50-6-biases-fitted.svg
 copychart ${post} fig-56 estimate-n-50-6-pmfunc-fitted.svg
+
+post="2021-08-13-more-coin-toss-performance-enhancements"
+
+copychart ${post} fig-21 flop-counts.svg
+copychart ${post} fig-22 target-pmfunc-n-50.svg
+copychart ${post} fig-23 estimate-n-50-0-biases-fitted.svg
+copychart ${post} fig-24 estimate-n-50-1-biases-fitted.svg
+copychart ${post} fig-25 estimate-n-50-2-biases-fitted.svg
+copychart ${post} fig-26 estimate-n-50-3-biases-fitted.svg
