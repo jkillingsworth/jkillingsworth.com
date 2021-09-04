@@ -19,7 +19,7 @@ let runEstimate n tag pmfunc upper degree start =
 
     let name = $"estimate-n-{n}-{tag}"
 
-    let trace, count, final, error = Compute.estimateBiases n pmfunc degree start
+    let count, final, error = Compute.estimateBiases n pmfunc degree start
 
     let fn = Compute.polynomial degree final
 

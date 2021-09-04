@@ -263,7 +263,7 @@ let estimateBiases n pmfunc degree value =
     let final = getBasis degree trace
     let error = getError degree final
 
-    (trace, count, final, error)
+    (count, final, error)
 
 //-------------------------------------------------------------------------------------------------
 
