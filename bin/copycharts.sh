@@ -412,3 +412,9 @@ copychart ${post} fig-23 estimate-n-50-0-biases-fitted.svg
 copychart ${post} fig-24 estimate-n-50-1-biases-fitted.svg
 copychart ${post} fig-25 estimate-n-50-2-biases-fitted.svg
 copychart ${post} fig-26 estimate-n-50-3-biases-fitted.svg
+
+post="2021-09-14-higher-order-polynomial-approximation"
+
+copychart ${post} fig-15 target-pmfunc-n-10.svg
+copychart ${post} fig-16 estimate-n-10-1-biases-fitted.svg
+copychart ${post} fig-20 estimate-n-10-2-biases-fitted.svg
