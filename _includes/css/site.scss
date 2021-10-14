@@ -24,7 +24,6 @@ $border-lower: 1px solid $shade80;
 $border-inner: 1px solid $shade90;
 $border-table: 1px solid $rgbfore;
 
-$max-overall-width: 1200px;
 $max-content-width: 720px;
 $margin-percent: 5;
 $indent-width: 16px;
@@ -674,7 +673,8 @@ svg
     body
     {
         column-gap: 60px;
-        max-width: $max-overall-width;
+        max-width: 1200px;
+        min-width: 1080px;
 
         > header
         {
@@ -685,6 +685,7 @@ svg
     .content
     {
         flex: auto;
+        width: $max-content-width;
     }
 
     .sidebar
