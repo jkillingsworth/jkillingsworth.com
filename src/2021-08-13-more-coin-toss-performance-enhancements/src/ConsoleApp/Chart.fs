@@ -227,7 +227,7 @@ set ylabel 'Floating Point Operations'
 set ytics 10
 set mytics 1
 set logscale y 10
-set format y '  10^{{%T}}'
+set format y ' 10^{{%T}}'
 
 set key box linecolor '#808080' samplen 1
 set key top left reverse Left

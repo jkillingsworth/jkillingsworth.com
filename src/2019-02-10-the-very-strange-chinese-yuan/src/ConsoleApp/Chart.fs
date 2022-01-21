@@ -116,7 +116,7 @@ if (style == 1) {{
 if (style == 2) {{
     set ylabel 'Density'
     set yrange [1:]
-    set format y '  10^{{%+T}}'
+    set format y ' 10^{{%+T}}'
     set logscale y 10
 }}
 
