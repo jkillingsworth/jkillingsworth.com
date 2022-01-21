@@ -26,7 +26,7 @@ let private render path template args =
     let template = String.Format(template, args)
     let plot = preamble + template + terminal
     use proc = new Process()
-    proc.StartInfo.FileName <- "gnuplot.exe"
+    proc.StartInfo.FileName <- Environment.GetEnvironmentVariable("GNUPLOT_EXE")
     proc.StartInfo.UseShellExecute <- false
     proc.StartInfo.RedirectStandardInput <- true
     proc.StartInfo.RedirectStandardError <- true
