@@ -4,7 +4,7 @@ This is the source repository for my personal website.
 
 ## Setup
 
-The build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) and use the [Jekyll](https://jekyllrb.com/) static site generator. Several additional packages are also required. The following instructions are designed for installing the required toolchain on a 64-bit Windows system. These tools are available on other platforms as well.
+To build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) and use the [Jekyll](https://jekyllrb.com/) static site generator. Several additional packages are also required. The following instructions are designed for installing the required toolchain on a 64-bit Windows system. These tools are available on other platforms as well.
 
 1. Download and run the [MSYS2](https://www.msys2.org/) installer. Follow the installation instructions documented on the website. Make sure you update all the core system packages before proceeding:
 
