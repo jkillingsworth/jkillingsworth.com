@@ -3,7 +3,7 @@
 open System
 open System.Collections.Generic
 open System.IO
-open System.Net
+open System.Net.Http
 open Chiron
 
 //-------------------------------------------------------------------------------------------------
@@ -43,14 +43,14 @@ let private toSeries = function
 
 //-------------------------------------------------------------------------------------------------
 
+let private httpClient = new HttpClient()
+
 let private fetchData ticker =
     let apikey = File.ReadAllText(apikeytxt).Trim()
     let url = String.Format(urlformat, apikey, ticker)
-    let request = WebRequest.CreateHttp(url)
-    use response = request.GetResponse()
-    use stream = response.GetResponseStream()
-    use reader = new StreamReader(stream)
-    reader.ReadToEnd()
+    httpClient.GetStringAsync(url)
+    |> Async.AwaitTask
+    |> Async.RunSynchronously
 
 let private parseData count final data =
     data

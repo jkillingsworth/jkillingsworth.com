@@ -3,7 +3,7 @@
 open System
 open System.Collections.Generic
 open System.IO
-open System.Net
+open System.Net.Http
 open Chiron
 
 //-------------------------------------------------------------------------------------------------
@@ -48,12 +48,12 @@ let private toSeries key = function
 
 //-------------------------------------------------------------------------------------------------
 
+let private httpClient = new HttpClient()
+
 let private fetchData (url : Lazy<string>) =
-    let request = WebRequest.CreateHttp(url.Value)
-    use response = request.GetResponse()
-    use stream = response.GetResponseStream()
-    use reader = new StreamReader(stream)
-    reader.ReadToEnd()
+    httpClient.GetStringAsync(url.Value)
+    |> Async.AwaitTask
+    |> Async.RunSynchronously
 
 let private parseData keySeries keyQuotes data =
     data
