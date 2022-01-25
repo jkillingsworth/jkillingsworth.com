@@ -3,7 +3,7 @@
 <head>
   <title>{% if page.title %}{{ page.title | smartify }} - {% endif %}{{ site.title | escape }}</title>
   <meta charset="utf-8" />
-  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta name="referrer" content="no-referrer-when-downgrade" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}" />
   <base href="{{ site.baseurl }}/" />
