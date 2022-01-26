@@ -4,6 +4,12 @@ set -e
 
 #--------------------------------------------------------------------------------------------------
 
+basedir=$(dirname "${0}" | xargs -I% realpath %/..)
+
+cd "${basedir}"
+
+#--------------------------------------------------------------------------------------------------
+
 copychart()
 {
     postname=${1}
@@ -22,10 +28,6 @@ copychart()
 
 #--------------------------------------------------------------------------------------------------
 
-basedir=$(dirname "${0}" | xargs -I% realpath %/..)
-
-cd "${basedir}"
-
 post="2018-04-23-fixed-fractions-and-fair-games"
 
 copychart ${post} fig-06 constant-add-lin-sim.svg
@@ -37,6 +39,8 @@ copychart ${post} fig-17 fraction-add-lin-avg.svg
 copychart ${post} fig-18 fraction-add-lin-med.svg
 copychart ${post} fig-19 fraction-add-log-med.svg
 
+#--------------------------------------------------------------------------------------------------
+
 post="2018-07-24-linear-and-log-scale-distributions"
 
 copychart ${post} fig-01 stochastic-constant-add-lin.svg
@@ -45,6 +49,8 @@ copychart ${post} fig-10 exhaustive-fraction-add-lin.svg
 copychart ${post} fig-11 exhaustive-fraction-add-log.svg
 copychart ${post} fig-17 exhaustive-fraction-mul-lin.svg
 copychart ${post} fig-18 exhaustive-fraction-mul-log.svg
+
+#--------------------------------------------------------------------------------------------------
 
 post="2018-09-21-least-squares-moving-averages"
 
@@ -73,6 +79,8 @@ copychart ${post} fig-34 lsrexp-WYNN-zoom.svg
 copychart ${post} fig-35 lsrexp-HEAR-full.svg
 copychart ${post} fig-36 lsrexp-HEAR-zoom.svg
 
+#--------------------------------------------------------------------------------------------------
+
 post="2018-11-15-normal-and-laplace-distributions"
 
 copychart ${post} fig-16 log-likelihood-laplace-e.svg
@@ -80,10 +88,14 @@ copychart ${post} fig-17 log-likelihood-laplace-o.svg
 copychart ${post} fig-21 distributions-lin.svg
 copychart ${post} fig-22 distributions-log.svg
 
+#--------------------------------------------------------------------------------------------------
+
 post="2018-11-18-distributions-on-a-logarithmic-scale"
 
 copychart ${post} fig-23 distributions-lin.svg
 copychart ${post} fig-24 distributions-log.svg
+
+#--------------------------------------------------------------------------------------------------
 
 post="2019-01-26-the-distribution-of-price-fluctuations"
 
@@ -155,6 +167,8 @@ copychart ${post} fig-69 crypto-daily-BTC-probs.svg
 copychart ${post} fig-70 crypto-daily-ETH-probs.svg
 copychart ${post} fig-71 crypto-daily-XRP-probs.svg
 
+#--------------------------------------------------------------------------------------------------
+
 post="2019-02-10-the-very-strange-chinese-yuan"
 
 copychart ${post} fig-01 forex-intraday-USDCNY-price-lin.svg
@@ -173,6 +187,8 @@ copychart ${post} fig-13 forex-daily-USDCNY-probs-lin.svg
 copychart ${post} fig-14 forex-daily-USDCNY-probs-log.svg
 copychart ${post} fig-15 forex-daily-USDCNH-probs-lin.svg
 copychart ${post} fig-16 forex-daily-USDCNH-probs-log.svg
+
+#--------------------------------------------------------------------------------------------------
 
 post="2019-05-24-separating-signal-from-noise"
 
@@ -201,6 +217,8 @@ copychart ${post} fig-26 crypto-daily-BTC-noise.svg
 copychart ${post} fig-27 crypto-daily-BTC-probs-market.svg
 copychart ${post} fig-28 crypto-daily-BTC-probs-smooth.svg
 copychart ${post} fig-29 crypto-daily-BTC-probs-dither.svg
+
+#--------------------------------------------------------------------------------------------------
 
 post="2019-09-14-estimating-the-weights-of-biased-coins"
 
@@ -232,6 +250,8 @@ copychart ${post} fig-58 exponential-03-biases-lower.svg
 copychart ${post} fig-59 exponential-03-biases-upper.svg
 copychart ${post} fig-60 exponential-03-biases-estimated.svg
 
+#--------------------------------------------------------------------------------------------------
+
 post="2019-11-14-hill-climbing-and-cost-functions"
 
 copychart ${post} fig-01 target-pmfunc.svg
@@ -250,6 +270,8 @@ copychart ${post} fig-30 optimize-score-A-scores.svg
 copychart ${post} fig-32 optimize-score-A-biases.svg
 copychart ${post} fig-33 optimize-score-B-scores.svg
 copychart ${post} fig-35 optimize-score-B-biases.svg
+
+#--------------------------------------------------------------------------------------------------
 
 post="2020-08-16-visualizing-the-climb-up-the-hill"
 
@@ -278,6 +300,8 @@ copychart ${post} fig-37 score-B-biases-optimum.svg
 copychart ${post} fig-38 score-B-heatmap-S.svg
 copychart ${post} fig-39 score-B-heatmap-C.svg
 
+#--------------------------------------------------------------------------------------------------
+
 post="2020-09-12-minimizing-with-gradient-descent"
 
 copychart ${post} fig-07 target-pmfunc.svg
@@ -285,6 +309,8 @@ copychart ${post} fig-12 trace-1-heatmap.svg
 copychart ${post} fig-13 trace-2-heatmap.svg
 copychart ${post} fig-14 trace-3-heatmap.svg
 copychart ${post} fig-15 trace-4-heatmap.svg
+
+#--------------------------------------------------------------------------------------------------
 
 post="2020-12-12-equality-constraints-and-lagrange-multipliers"
 
@@ -300,6 +326,8 @@ copychart ${post} fig-23 trace-B-3-heatmap.svg
 copychart ${post} fig-24 trace-B-4-heatmap.svg
 copychart ${post} fig-26 target-pmfunc-4.svg
 
+#--------------------------------------------------------------------------------------------------
+
 post="2020-12-31-finding-the-roots-with-newtons-method"
 
 copychart ${post} fig-11 trace-A-1-heatmap.svg
@@ -310,6 +338,8 @@ copychart ${post} fig-17 trace-B-1-heatmap.svg
 copychart ${post} fig-18 trace-B-2-heatmap.svg
 copychart ${post} fig-19 trace-B-3-heatmap.svg
 copychart ${post} fig-20 trace-B-4-heatmap.svg
+
+#--------------------------------------------------------------------------------------------------
 
 post="2021-01-29-visualizing-saddle-points-and-minimums"
 
@@ -330,6 +360,8 @@ copychart ${post} fig-19 costfunc-profile-1.svg
 copychart ${post} fig-20 costfunc-heatmap-2.svg
 copychart ${post} fig-21 costfunc-profile-2.svg
 
+#--------------------------------------------------------------------------------------------------
+
 post="2021-02-25-generalizing-the-coin-toss-markov-model"
 
 copychart ${post} fig-27 pmfunc-exponent.svg
@@ -340,6 +372,8 @@ copychart ${post} fig-35 pmfunc-triangle.svg
 copychart ${post} fig-36 biases-start-equal.svg
 copychart ${post} fig-39 biases-final-3.svg
 copychart ${post} fig-40 biases-final-4.svg
+
+#--------------------------------------------------------------------------------------------------
 
 post="2021-03-24-approximating-the-target-distribution"
 
@@ -375,6 +409,8 @@ copychart ${post} fig-36 estimate-3-trace-3.svg
 copychart ${post} fig-37 estimate-3-biases-fitted.svg
 copychart ${post} fig-38 estimate-3-pmfunc-fitted.svg
 
+#--------------------------------------------------------------------------------------------------
+
 post="2021-05-31-approximations-with-polynomials"
 
 copychart ${post} fig-07 target-pmfunc.svg
@@ -390,6 +426,8 @@ copychart ${post} fig-22 estimate-5-pmfunc-fitted.svg
 copychart ${post} fig-26 estimate-6-biases-fitted.svg
 copychart ${post} fig-27 estimate-6-pmfunc-fitted.svg
 
+#--------------------------------------------------------------------------------------------------
+
 post="2021-07-12-performance-tuning-for-the-coin-toss-model"
 
 copychart ${post} fig-34 flop-counts.svg
@@ -404,6 +442,8 @@ copychart ${post} fig-54 target-pmfunc-n-50.svg
 copychart ${post} fig-55 estimate-n-50-6-biases-fitted.svg
 copychart ${post} fig-56 estimate-n-50-6-pmfunc-fitted.svg
 
+#--------------------------------------------------------------------------------------------------
+
 post="2021-08-13-more-coin-toss-performance-enhancements"
 
 copychart ${post} fig-21 flop-counts.svg
@@ -412,6 +452,8 @@ copychart ${post} fig-23 estimate-n-50-0-biases-fitted.svg
 copychart ${post} fig-24 estimate-n-50-1-biases-fitted.svg
 copychart ${post} fig-25 estimate-n-50-2-biases-fitted.svg
 copychart ${post} fig-26 estimate-n-50-3-biases-fitted.svg
+
+#--------------------------------------------------------------------------------------------------
 
 post="2021-09-14-higher-order-polynomial-approximation"
 
