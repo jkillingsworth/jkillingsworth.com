@@ -8,6 +8,11 @@ open Chiron
 
 //-------------------------------------------------------------------------------------------------
 
+let private apikeytxt = @"..\..\..\..\private\apikey.txt"
+let private cachepath = @"..\..\..\..\data\"
+
+//-------------------------------------------------------------------------------------------------
+
 type private Quote = { Time : DateTime; Close : string }
 
 [<AbstractClass>]
@@ -15,11 +20,6 @@ type Dataset() =
 
     abstract member Descriptor : string
     abstract member GetPrices : unit -> float[]
-
-//-------------------------------------------------------------------------------------------------
-
-let private apikeytxt = @"..\..\..\..\private\apikey.txt"
-let private cachepath = @"..\..\..\..\data\"
 
 //-------------------------------------------------------------------------------------------------
 

@@ -8,13 +8,16 @@ open Chiron
 
 //-------------------------------------------------------------------------------------------------
 
-type private Quote = { Date : DateTime; Close : double }
+let private apikeytxt = @"..\..\..\..\private\apikey.txt"
+let private cachepath = @"..\..\..\..\data\"
 
 //-------------------------------------------------------------------------------------------------
 
-let urlformat = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={1}&outputsize=full&apikey={0}"
-let apikeytxt = @"..\..\..\..\private\apikey.txt"
-let cachepath = @"..\..\..\..\data\"
+let private urlFormat = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={1}&outputsize=full&apikey={0}"
+
+//-------------------------------------------------------------------------------------------------
+
+type private Quote = { Date : DateTime; Close : double }
 
 //-------------------------------------------------------------------------------------------------
 
@@ -47,7 +50,7 @@ let private httpClient = new HttpClient()
 
 let private fetchData ticker =
     let apikey = File.ReadAllText(apikeytxt).Trim()
-    let url = String.Format(urlformat, apikey, ticker)
+    let url = String.Format(urlFormat, apikey, ticker)
     httpClient.GetStringAsync(url)
     |> Async.AwaitTask
     |> Async.RunSynchronously
