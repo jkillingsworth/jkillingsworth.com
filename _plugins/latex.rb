@@ -13,6 +13,36 @@ module Jekyll
             \newcommand{\sscr}[1]{\text{#1}}
             '
 
+        @@latex_upper_1 = '
+            \documentclass[varwidth]{standalone}
+            \usepackage[charter]{mathdesign}
+            \usepackage[scaled=0.75]{roboto-mono}
+            \usepackage{mathtools}
+            \usepackage{eucal}
+            \thinmuskip=3mu
+            \medmuskip=7mu
+            \thickmuskip=7mu
+            \newcommand{\delimL}[2]
+            {
+                \mkern1mu
+                \if#1*
+                    \mathopen{}\left#2
+                \else
+                    \ifcase#1#2\or\bigl#2\or\Bigl#2\or\biggl#2\or\Biggl#2\else#2\fi
+                \fi
+            }
+            \newcommand{\delimR}[2]
+            {
+                \if#1*
+                    \right#2\mathclose{}
+                \else
+                    \ifcase#1#2\or\bigr#2\or\Bigr#2\or\biggr#2\or\Biggr#2\else#2\fi
+                \fi
+            }
+            \newcommand{\delim}[4]{\delimL#1#2#4\delimR#1#3}
+            \newcommand{\sscr}[1]{\text{#1}}
+            '
+
         def process_latex(items)
             items.map { |s| s.strip.lines }.flatten.map { |s| s.strip.concat("\n") }.join
         end
@@ -23,9 +53,8 @@ module Jekyll
         end
 
         def render(context)
-            match = @input.match /^fig-(?<figno>\d{2})$/
+            match = @input.match /^((?<preamble>\d{1}) )?fig-(?<figno>\d{2})$/
             figno = match ? match["figno"] : "00"
-            latex = process_latex([@@latex_upper, super])
             latex_inner = process_latex([super])
             fingerprint = Digest::SHA1.hexdigest(latex_inner)[0...8].to_i(16).to_s.rjust(10, "0")
             site = context.registers[:site]
@@ -56,6 +85,16 @@ module Jekyll
 
             if !File.exist?(file) then
                 puts "LaTeX: ".rjust(20) + "#{file}"
+                preamble = match["preamble"]
+                case preamble
+                when nil
+                    latex_upper = @@latex_upper
+                when "1"
+                    latex_upper = @@latex_upper_1
+                else
+                    raise "Unknown preamble option '#{preamble}'"
+                end
+                latex = process_latex([latex_upper, latex_inner])
                 gen_outfile(latex, opts, file)
                 site.static_files << AssetFile.new(site, path, post.url, name)
             end
