@@ -460,3 +460,36 @@ post="2021-09-14-higher-order-polynomial-approximation"
 copychart ${post} fig-15 target-pmfunc-n-10.svg
 copychart ${post} fig-16 estimate-n-10-1-biases-fitted.svg
 copychart ${post} fig-20 estimate-n-10-2-biases-fitted.svg
+
+#--------------------------------------------------------------------------------------------------
+
+post="2022-03-15-understanding-the-discrete-fourier-transform"
+
+copychart ${post} fig-11 example-1-time-xs.svg
+copychart ${post} fig-14 example-1-freq-ys-re.svg
+copychart ${post} fig-15 example-1-freq-ys-im.svg
+copychart ${post} fig-23 example-1-freq-ys-ma.svg
+copychart ${post} fig-24 example-1-freq-ys-ph.svg
+copychart ${post} fig-29 example-1-time-xs-repro.svg
+copychart ${post} fig-33 example-2-freq-ys-lower-ma.svg
+copychart ${post} fig-34 example-2-freq-ys-lower-ph.svg
+copychart ${post} fig-36 example-2-time-xs-lower.svg
+copychart ${post} fig-38 example-2-freq-ys-upper-ma.svg
+copychart ${post} fig-39 example-2-freq-ys-upper-ph.svg
+copychart ${post} fig-41 example-2-time-xs-upper.svg
+copychart ${post} fig-42 example-3-time-xs.svg
+copychart ${post} fig-46 example-3-freq-ys-ma.svg
+copychart ${post} fig-47 example-3-freq-ys-ph.svg
+copychart ${post} fig-51 example-3-time-xs-1.svg
+copychart ${post} fig-52 example-3-time-xs-2.svg
+copychart ${post} fig-53 example-3-time-xs-3.svg
+copychart ${post} fig-55 example-4-time-xs.svg
+copychart ${post} fig-56 example-4-freq-ys-ma.svg
+copychart ${post} fig-57 example-4-freq-ys-ph.svg
+copychart ${post} fig-62 example-5-time-xs.svg
+copychart ${post} fig-63 example-5-freq-ys-ma.svg
+copychart ${post} fig-64 example-5-freq-ys-ph.svg
+copychart ${post} fig-69 example-6-time-xs.svg
+copychart ${post} fig-70 example-6-freq-ys-ma.svg
+copychart ${post} fig-71 example-6-freq-ys-ph.svg
+copychart ${post} fig-72 example-6-time-xs-repro.svg
