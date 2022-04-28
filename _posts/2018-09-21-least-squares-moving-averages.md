@@ -11,7 +11,7 @@ Moving averages are often overlaid on stock price charts to give a smooth repres
 
 Let's consider the simple moving average first so that we can use it as a basis for comparison. For each day, the moving average value is computed by taking the average of all past closing prices within a given lookback period. The lookback window shifts forward by one after each new day closes. The following equation illustrates how to compute the simple moving average value at a given point in time:
 
-{% latex fig-01 %}
+{% latex 1 fig-01 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -32,10 +32,10 @@ Let's consider the simple moving average first so that we can use it as a basis 
 
 For the purpose of brevity, the equation above can be represented using the following shorthand notation:
 
-{% latex fig-02 %}
+{% latex 1 fig-02 %}
     \begin{document}
     \begin{displaymath}
-    \hat{y} = \frac{\sum y_i}{n}
+    \hat{y} = \frac{\tsum y_i}{n}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -65,7 +65,7 @@ The moving averages are nice and smooth in all three cases, but they fail to acc
 
 Instead of fitting a constant function to the observed data points, we can instead fit a linear function to the data. A linear model takes the following form:
 
-{% latex fig-09 %}
+{% latex 1 fig-09 %}
     \begin{document}
     \begin{displaymath}
     \hat{y} = a_0 + a_1 x
@@ -75,13 +75,17 @@ Instead of fitting a constant function to the observed data points, we can inste
 
 While there are many techniques that can be used to approximate the coefficients, we'll use the method of least squares in this post. You can compute the coefficients using the following formulas:
 
-{% latex fig-10 %}
+{% latex 1 fig-10 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    a_1 & = \frac{n \sum{x_i y_i} - \sum{x_i} \sum{y_i}}{n \sum{x_i^2} - \left(\sum{x_i}\right)^2}
+    a_1
+    & =
+    \frac{n \tsum x_i y_i - \tsum x_i \tsum y_i}{n \tsum x_i^2 - \brace1(){\tsum x_i}^2}
     \\[1em]
-    a_0 & = \frac{\sum{y_i} - a_1 \sum{x_i}}{n}
+    a_0
+    & =
+    \frac{\tsum y_i - a_1 \tsum x_i}{n}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -110,7 +114,7 @@ The linear least squares moving average tracks the price much better than the si
 
 We might be able to track reversals better by fitting a parabola to the observed price data. A parabolic model takes the form of a second order polynomial:
 
-{% latex fig-17 %}
+{% latex 1 fig-17 %}
     \begin{document}
     \begin{displaymath}
     \hat{y} = a_0 + a_1 x + a_2 x^2
@@ -120,38 +124,32 @@ We might be able to track reversals better by fitting a parabola to the observed
 
 The least squares coefficients can be found by solving the following matrix equation:
 
-{% latex fig-18 %}
+{% latex 1 fig-18 %}
     \begin{document}
     \begin{displaymath}
-    \left[
-    \begin{array}{l}
+    \begin{matrix}{l}
     a_0
     \\[1em]
     a_1
     \\[1em]
     a_2
-    \end{array}
-    \right]
+    \end{matrix}
     =
-    \left[
-    \begin{array}{lll}
-    n             & \sum{x_i^{ }} & \sum{x_i^{2}}
+    \begin{matrix}{lll}
+    n             & \tsum x_i^{ } & \tsum x_i^{2}
     \\[1em]
-    \sum{x_i^{ }} & \sum{x_i^{2}} & \sum{x_i^{3}}
+    \tsum x_i^{ } & \tsum x_i^{2} & \tsum x_i^{3}
     \\[1em]
-    \sum{x_i^{2}} & \sum{x_i^{3}} & \sum{x_i^{4}}
-    \end{array}
-    \right]
+    \tsum x_i^{2} & \tsum x_i^{3} & \tsum x_i^{4}
+    \end{matrix}
     ^{-1}
-    \left[
-    \begin{array}{l}
-    \sum{y_i^{ }}
+    \begin{matrix}{l}
+    \tsum y_i^{ }
     \\[1em]
-    \sum{x_i^{\phantom{1}} y_i^{ }}
+    \tsum x_i^{\phantom{1}} y_i^{ }
     \\[1em]
-    \sum{x_i^{2} y_i^{ }}
-    \end{array}
-    \right]
+    \tsum x_i^{2} y_i^{ }
+    \end{matrix}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -181,17 +179,17 @@ Notice that the fitted line for WYNN tracks the reversal quite nicely. The movin
 
 One of my objectives in this study is to quantitatively recognize and measure sustained trends. If prices are rising or falling by a relatively constant percentage each day, the growth or decay in value is not linear; it is exponential. In this case, it would be appropriate to perform the regression using an exponential model function:
 
-{% latex fig-25 %}
+{% latex 1 fig-25 %}
     \begin{document}
     \begin{displaymath}
-    \hat{y} = p \mspace{1mu} (1 + r)^x
+    \hat{y} = p \1 (1 + r)^x
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 We can estimate the coefficients of the model function using the linear regression technique described previously. To do this, we first need to transform the exponential model above into the form of a linear model:
 
-{% latex fig-26 %}
+{% latex 1 fig-26 %}
     \begin{document}
     \begin{displaymath}
     \hat{y}' = a_0 + a_1 x
@@ -201,25 +199,25 @@ We can estimate the coefficients of the model function using the linear regressi
 
 The exponential model can be transformed into the linear form by taking the logarithm of both sides:
 
-{% latex fig-27 %}
+{% latex 1 fig-27 %}
     \begin{document}
     \begin{displaymath}
-    \ln{\hat{y}} = \ln{p} + x \ln{(1 + r)}
+    \ln \hat{y} = \ln p + x \ln \2 (1 + r)
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 The following equations illustrate how the parts of the transformed exponential model map to the linear model:
 
-{% latex fig-28 %}
+{% latex 1 fig-28 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \hat{y}' & = \ln{\hat{y}}
+    \hat{y}' & = \ln \hat{y}
     \\[1em]
-    a_0      & = \ln{p}
+    a_0      & = \ln p
     \\[1em]
-    a_1      & = \ln{(1 + r)}
+    a_1      & = \ln \2 (1 + r)
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -227,13 +225,17 @@ The following equations illustrate how the parts of the transformed exponential 
 
 The following formulas can then be used to calculate the coefficients for the linear model. These formulas are similar to those defined earlier in the section on linear regression:
 
-{% latex fig-29 %}
+{% latex 1 fig-29 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    a_1 & = \frac{n \sum{x_i y'_i} - \sum{x_i} \sum{y'_i}}{n \sum{x_i^2} - \left(\sum{x_i}\right)^2}
+    a_1
+    & =
+    \frac{n \tsum x_i y'_i - \tsum x_i \tsum y'_i}{n \tsum x_i^2 - \brace1(){\tsum x_i}^2}
     \\[1em]
-    a_0 & = \frac{\sum{y'_i} - a_1 \sum{x_i}}{n}
+    a_0
+    & =
+    \frac{\tsum y'_i - a_1 \tsum x_i}{n}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -241,7 +243,7 @@ The following formulas can then be used to calculate the coefficients for the li
 
 Once the coefficients for the linear model are know, we can use the values to compute the coefficients for the exponential model:
 
-{% latex fig-30 %}
+{% latex 1 fig-30 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}

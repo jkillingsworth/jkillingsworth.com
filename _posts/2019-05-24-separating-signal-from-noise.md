@@ -26,13 +26,11 @@ As might be expected, based on a [previous study]({% post_url 2019-01-26-the-dis
 
 Looking at the dither component, the shape of histogram resembles that of a Laplace distribution about as neatly as the shape of the histogram for the market price does. The standard deviation is about the same as that of the market price data as well. To gain more insights, let's look at some concrete numbers concerning the analysis of these three data sets:
 
-{% latex fig-06 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-06 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
+    \begin{table}{|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Location Parameter} & \text{Normal ($\mu$)}    & \text{Laplace ($\mu$)}
     \\[0.25em]\hline
@@ -42,9 +40,9 @@ Looking at the dither component, the shape of histogram resembles that of a Lapl
     \\[0.25em]\hline
     \text{Dither}             & +1.921 \times 10^{-5}    & +7.902 \times 10^{-5}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \\[1em]
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
+    \begin{table}{|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Scale Parameter}    & \text{Normal ($\sigma$)} & \text{Laplace ($b$)}
     \\[0.25em]\hline
@@ -54,7 +52,7 @@ Looking at the dither component, the shape of histogram resembles that of a Lapl
     \\[0.25em]\hline
     \text{Dither}             & +1.190 \times 10^{-2}    & +7.987 \times 10^{-3}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -81,13 +79,11 @@ The intraday price series contains a couple of sudden price moves that are not t
 
 This histogram for market price data looks like it might approximate the shape of the Laplace density function, but it has a set of shoulders not present in the model function. The histogram for the smooth component has a shape that is even less well defined. But look at the shape of the histogram for the dither component---it looks like an almost ideal approximation of the Laplace density function. Let's take a look at the numbers:
 
-{% latex fig-12 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-12 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
+    \begin{table}{|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Location Parameter} & \text{Normal ($\mu$)}    & \text{Laplace ($\mu$)}
     \\[0.25em]\hline
@@ -97,9 +93,9 @@ This histogram for market price data looks like it might approximate the shape o
     \\[0.25em]\hline
     \text{Dither}             & +7.600 \times 10^{-7}    & +1.407 \times 10^{-6}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \\[1em]
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
+    \begin{table}{|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Scale Parameter}    & \text{Normal ($\sigma$)} & \text{Laplace ($b$)}
     \\[0.25em]\hline
@@ -109,7 +105,7 @@ This histogram for market price data looks like it might approximate the shape o
     \\[0.25em]\hline
     \text{Dither}             & +2.535 \times 10^{-4}    & +1.372 \times 10^{-4}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -132,13 +128,11 @@ The smooth component seems to track the market price fairly well most of the tim
 
 The shape of the histogram for both the market price data and the dither component closely resemble the shape of the Laplace density function. For the smooth component, the histogram has a general bell shape, but it looks like it might be a bit too sloppy and asymmetrical to properly characterize it as having the shape of a normal or a Laplace density function. Here are the numbers:
 
-{% latex fig-18 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-18 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
+    \begin{table}{|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Location Parameter} & \text{Normal ($\mu$)}    & \text{Laplace ($\mu$)}
     \\[0.25em]\hline
@@ -148,9 +142,9 @@ The shape of the histogram for both the market price data and the dither compone
     \\[0.25em]\hline
     \text{Dither}             & +5.110 \times 10^{-6}    & +4.360 \times 10^{-5}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \\[1em]
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
+    \begin{table}{|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Scale Parameter}    & \text{Normal ($\sigma$)} & \text{Laplace ($b$)}
     \\[0.25em]\hline
@@ -160,7 +154,7 @@ The shape of the histogram for both the market price data and the dither compone
     \\[0.25em]\hline
     \text{Dither}             & +6.100 \times 10^{-3}    & +4.343 \times 10^{-3}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -183,13 +177,11 @@ In my post titled [*The Very Strange Chinese Yuan*]({% post_url 2019-02-10-the-v
 
 The shape of the histogram for the market price data shows the triple peak pattern that is characteristic of intraday exchange rates between the yuan and dollar. The histogram for the smooth component exhibits a roughly bell shaped distribution with no indication of the triple peak pattern at all. The fitted density functions for the smooth component are both shifted to the left, which can be attributed to the downward trend visible in the price chart. The histogram for the dither component, on the other hand, clearly shows the triple peak pattern, indicating that this distinctive noise pattern is almost entirely removed from the price trend. Here are the parameter estimates for the density functions:
 
-{% latex fig-24 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-24 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
+    \begin{table}{|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Location Parameter} & \text{Normal ($\mu$)}    & \text{Laplace ($\mu$)}
     \\[0.25em]\hline
@@ -199,9 +191,9 @@ The shape of the histogram for the market price data shows the triple peak patte
     \\[0.25em]\hline
     \text{Dither}             & -3.132 \times 10^{-7}    & -1.345 \times 10^{-6}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \\[1em]
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
+    \begin{table}{|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Scale Parameter}    & \text{Normal ($\sigma$)} & \text{Laplace ($b$)}
     \\[0.25em]\hline
@@ -211,7 +203,7 @@ The shape of the histogram for the market price data shows the triple peak patte
     \\[0.25em]\hline
     \text{Dither}             & +1.899 \times 10^{-4}    & +1.223 \times 10^{-4}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -234,13 +226,11 @@ The price chart shows a fairly consistent multi-year trend followed by a distinc
 
 The histograms for both the market price and the dither component have a shape that resembles the Laplace density function. The histogram for the smooth component has a sloppy and irregular shape. Here are the numbers:
 
-{% latex fig-30 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-30 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
+    \begin{table}{|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Location Parameter} & \text{Normal ($\mu$)}    & \text{Laplace ($\mu$)}
     \\[0.25em]\hline
@@ -250,9 +240,9 @@ The histograms for both the market price and the dither component have a shape t
     \\[0.25em]\hline
     \text{Dither}             & +3.659 \times 10^{-4}    & +1.532 \times 10^{-3}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \\[1em]
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{9em}|wl{7em}|wl{7em}|}
+    \begin{table}{|wl{9em}|wl{7em}|wl{7em}|}
     \hline
     \text{Scale Parameter}    & \text{Normal ($\sigma$)} & \text{Laplace ($b$)}
     \\[0.25em]\hline
@@ -262,7 +252,7 @@ The histograms for both the market price and the dither component have a shape t
     \\[0.25em]\hline
     \text{Dither}             & +3.832 \times 10^{-2}    & +2.477 \times 10^{-2}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{aligned}
     \end{displaymath}
     \end{document}

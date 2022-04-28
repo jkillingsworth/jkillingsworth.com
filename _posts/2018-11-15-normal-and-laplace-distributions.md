@@ -11,71 +11,71 @@ I'm interested in studying the Laplace distribution. I was once under the impres
 
 Suppose we have a continuous random variable whose possible values are distributed according to a normal distribution. The probability density function is:
 
-{% latex fig-01 %}
+{% latex 1 fig-01 %}
     \begin{document}
     \begin{displaymath}
     f(x \mid \mu, \sigma)
     =
-    \frac{1}{\sigma \sqrt{2 \pi}} \exp \left[- \frac{(x - \mu)^2}{2 \sigma^2} \right]
+    \frac{1}{\sigma \sqrt{2 \pi}} \exp \2 \brace4[]{- \frac{(x - \mu)^2}{2 \sigma^2}}
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 If we have some samples of a random variable that we expect to have a normal distribution, we can estimate the parameters of the density function using the maximum likelihood method described in some of my [previous posts]({% post_url 2018-10-11-least-squares-and-normal-distributions %}#maximum-likelihood-estimation). Since it's more convenient in this case, instead of maximizing the likelihood function, let's maximize the logarithm of the likelihood function:
 
-{% latex fig-02 %}
+{% latex 1 fig-02 %}
     \begin{document}
     \begin{displaymath}
-    \ln{L(\mu, \sigma)}
+    \ln L(\mu, \sigma)
     =
-    - n \ln{(\sigma)}
-    - \frac{n}{2} \ln{(2 \pi)}
-    - \frac{1}{2 \sigma^2} \sum_{i = 1}^{n}{(x_i - \mu)^2}
+    - n \ln \2 (\sigma)
+    - \frac{n}{2} \ln \2 (2 \pi)
+    - \frac{1}{2 \sigma^2} \sum_{i = 1}^{n} \2 (x_i - \mu)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 We want to know what values for the mean and standard deviation parameters have the highest possible likelihood. To do that, we can figure out where the derivative of the log-likelihood function with respect to each of the parameters is equal to zero. Here is the partial derivative of the log-likelihood function with respect to the mean:
 
-{% latex fig-03 %}
+{% latex 1 fig-03 %}
     \begin{document}
     \begin{displaymath}
-    \frac{\partial \ln{L}}{\partial \mu}
+    \frac{\pderiv \ln L}{\pderiv \mu}
     =
-    \frac{1}{\sigma^2} \sum_{i = 1}^{n}{(x_i - \mu)}
+    \frac{1}{\sigma^2} \sum_{i = 1}^{n} \2 (x_i - \mu)
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 Setting the partial derivative to zero and solving for the mean, we arrive at the following estimated value:
 
-{% latex fig-04 %}
+{% latex 1 fig-04 %}
     \begin{document}
     \begin{displaymath}
-    \hat{\mu} = \frac{1}{n} \sum_{i = 1}^{n}{x_i}
+    \hat{\mu} = \frac{1}{n} \sum_{i = 1}^{n} x_i
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 Once we have the value for the mean, we can follow the same steps to solve for the standard deviation. Here is the partial derivative of the log-likelihood function with respect to the standard deviation:
 
-{% latex fig-05 %}
+{% latex 1 fig-05 %}
     \begin{document}
     \begin{displaymath}
-    \frac{\partial \ln{L}}{\partial \sigma}
+    \frac{\pderiv \ln L}{\pderiv \sigma}
     =
     - \frac{n}{\sigma}
-    + \frac{1}{\sigma^3} \sum_{i = 1}^{n}{(x_i - \mu)^2}
+    + \frac{1}{\sigma^3} \sum_{i = 1}^{n} \2 (x_i - \mu)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 Setting the partial derivative to zero and solving for the standard deviation, we get this estimated value:
 
-{% latex fig-06 %}
+{% latex 1 fig-06 %}
     \begin{document}
     \begin{displaymath}
-    \hat{\sigma} = \sqrt{\frac{1}{n} \sum_{i = 1}^{n}{(x_i - \mu)^2}}
+    \hat{\sigma} = \sqrt{\displaystyle \frac{1}{n} \sum_{i = 1}^{n} \2 (x_i - \mu)^2}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -86,42 +86,42 @@ If you want to see a more detailed breakdown of the steps above, you can referen
 
 Suppose we have a continuous random variable whose possible values are distributed according to a Laplace distribution. The probability density function is:
 
-{% latex fig-07 %}
+{% latex 1 fig-07 %}
     \begin{document}
     \begin{displaymath}
     f(x \mid \mu, b)
     =
-    \frac{1}{2b} \exp \left(- \frac{|x - \mu|}{b} \right)
+    \frac{1}{2b} \exp \2 \brace3(){- \frac{|x - \mu|}{b}}
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 If we have a set of samples of a random variable that we know to have a Laplace distribution, we can estimate the parameters using the same approach we took for estimating the parameters of the normal distribution. We can use the maximum likelihood method. Here is the log-likelihood function we want to maximize:
 
-{% latex fig-08 %}
+{% latex 1 fig-08 %}
     \begin{document}
     \begin{displaymath}
-    \ln{L(\mu, b)}
+    \ln L(\mu, b)
     =
-    - n \ln{(2b)}
-    - \frac{1}{b} \sum_{i = 1}^{n}{|x_i - \mu|}
+    - n \ln \2 (2b)
+    - \frac{1}{b} \sum_{i = 1}^{n} |x_i - \mu|
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 We want to know what values of the location and scale parameters have the greatest likelihood. The analytical approach is to take the derivative, set it to zero, and solve for the parameters. But consider the absolute value function:
 
-{% latex fig-09 %}
+{% latex 1 fig-09 %}
     \begin{document}
     \begin{displaymath}
     |x - \mu|
     =
     \begin{dcases}
-    \mu - x & \quad \text{if } x < \mu
+    \mu - x & \quad \text{if $x < \mu$}
     \\
-    x - \mu & \quad \text{if } x > \mu
+    x - \mu & \quad \text{if $x > \mu$}
     \\
-    0       & \quad \text{if } x = \mu
+    0       & \quad \text{if $x = \mu$}
     \end{dcases}
     \end{displaymath}
     \end{document}
@@ -129,17 +129,17 @@ We want to know what values of the location and scale parameters have the greate
 
 It's a piecewise function. Taking the derivative of the log-likelihood function with respect to the location parameter can be a bit tricky because the absolute value function, although continuous, is not differentiable at all points:
 
-{% latex fig-10 %}
+{% latex 1 fig-10 %}
     \begin{document}
     \begin{displaymath}
-    \frac{d}{d\mu}|x - \mu|
+    \frac{\dderiv}{\dderiv \mu} |x - \mu|
     =
     \begin{dcases}
-    -1        & \quad \text{if } x < \mu
+    -1               & \quad \text{if $x < \mu$}
     \\
-    +1        & \quad \text{if } x > \mu
+    +1               & \quad \text{if $x > \mu$}
     \\
-    \text{undefined} & \quad \text{if } x = \mu
+    \text{undefined} & \quad \text{if $x = \mu$}
     \end{dcases}
     \end{displaymath}
     \end{document}
@@ -147,27 +147,29 @@ It's a piecewise function. Taking the derivative of the log-likelihood function 
 
 To be more succinct, we can represent the derivative of the absolute value function using the sign function:
 
-{% latex fig-11 %}
+{% latex 1 fig-11 %}
     \begin{document}
     \begin{displaymath}
-    \frac{d}{d\mu}|x - \mu| = \operatorname{sgn}{(x - \mu)}, \quad x \neq \mu
+    \frac{\dderiv}{\dderiv \mu} |x - \mu|
+    =
+    \operatorname{sgn} \2 (x - \mu), \quad x \neq \mu
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 The sign function simply returns the sign of a value:
 
-{% latex fig-12 %}
+{% latex 1 fig-12 %}
     \begin{document}
     \begin{displaymath}
-    \operatorname{sgn}{(x - \mu)}
+    \operatorname{sgn} \2 (x - \mu)
     =
     \begin{dcases}
-    -1            & \quad \text{if } x < \mu
+    -1              & \quad \text{if $x < \mu$}
     \\
-    +1            & \quad \text{if } x > \mu
+    +1              & \quad \text{if $x > \mu$}
     \\
-    \phantom{+} 0 & \quad \text{if } x = \mu
+    \phantom{\pm} 0 & \quad \text{if $x = \mu$}
     \end{dcases}
     \end{displaymath}
     \end{document}
@@ -175,29 +177,29 @@ The sign function simply returns the sign of a value:
 
 We can express the partial derivative of the log-likelihood function with respect to the location parameter as:
 
-{% latex fig-13 %}
+{% latex 1 fig-13 %}
     \begin{document}
     \begin{displaymath}
-    \frac{\partial \ln{L}}{\partial \mu}
+    \frac{\pderiv \ln L}{\pderiv \mu}
     =
-    \frac{1}{b} \sum_{i = 1}^{n}{\operatorname{sgn}{(x_i - \mu)}}, \quad x_i \neq \mu
+    \frac{1}{b} \sum_{i = 1}^{n} \operatorname{sgn} \2 (x_i - \mu), \quad x_i \neq \mu
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 This is really just giving us the number of samples with a value greater than the location parameter minus the number of samples with a value less than the location parameter. Note also that the derivative is undefined at points where the location parameter equals the value of one of the samples. While not adequate for an analytical solution, this does provide a clue that the best estimate is at or near the median value. Let's rank our samples in ascending order:
 
-{% latex fig-14 %}
+{% latex 1 fig-14 %}
     \begin{document}
     \begin{displaymath}
-    \{\ x_1, x_2, \dots, x_{m}, \dots, x_{n-1}, x_n \mid x_{i} \leq x_{i+1}\ \}
+    \{\, x_1, x_2, \dots, x_m, \dots, x_{n-1}, x_n \mid x_i \leq x_{i+1} \,\}
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 Let's also choose a middle value that is about halfway between the first and last sample in the ordered set. The exact value depends on whether the total number of samples is an even number or an odd number:
 
-{% latex fig-15 %}
+{% latex 1 fig-15 %}
     \begin{document}
     \begin{displaymath}
     m
@@ -221,15 +223,15 @@ Notice that there is a range of possible values where the likelihood is at a max
 
 For an odd number of samples, there is a single point at which the likelihood is maximized. By inspection, we can conclude that the median value of our samples has the highest likelihood for the location parameter:
 
-{% latex fig-18 %}
+{% latex 1 fig-18 %}
     \begin{document}
     \begin{displaymath}
     \hat{\mu}
     =
     \begin{dcases}
-    \frac{1}{2} (x_{m} + x_{m+1}) & \quad \text{if $n$ is even}
+    \frac{1}{2} (x_m + x_{m+1}) & \quad \text{if $n$ is even}
     \\[0.5em]
-    x_{m}                         & \quad \text{if $n$ is odd}
+    x_m                         & \quad \text{if $n$ is odd}
     \end{dcases}
     \end{displaymath}
     \end{document}
@@ -237,23 +239,23 @@ For an odd number of samples, there is a single point at which the likelihood is
 
 If we have an even number of samples, we just take the mean of the two median values. Once an estimate of the location parameter is known, solving for the scale parameter is a bit easier since there is an analytical solution. Here is the partial derivative of the log-likelihood function with respect to the scale parameter:
 
-{% latex fig-19 %}
+{% latex 1 fig-19 %}
     \begin{document}
     \begin{displaymath}
-    \frac{\partial \ln{L}}{\partial b}
+    \frac{\pderiv \ln L}{\pderiv b}
     =
     - \frac{n}{b}
-    + \frac{1}{b^2} \sum_{i = 1}^{n}{|x_i - \mu|}
+    + \frac{1}{b^2} \sum_{i = 1}^{n} |x_i - \mu|
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 Setting the partial derivative to zero and solving for the scale parameter, we get the following estimate:
 
-{% latex fig-20 %}
+{% latex 1 fig-20 %}
     \begin{document}
     \begin{displaymath}
-    \hat{b} = \frac{1}{n} \sum_{i = 1}^{n}{|x_i - \mu|}
+    \hat{b} = \frac{1}{n} \sum_{i = 1}^{n} |x_i - \mu|
     \end{displaymath}
     \end{document}
 {% endlatex %}

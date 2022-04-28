@@ -11,7 +11,7 @@ My last few posts have centered around a weighted coin toss game in which the we
 
 In previous posts, we focused primarily on finding arbitrary solutions to the weighted coin toss problem. The scoring function that ranked each possible solution was a secondary concern. Here we want to focus on minimizing the scoring function as our primary concern while still satisfying the conditions that yield a valid result for a given target distribution. We can frame the problem as a scoring function that we want to minimize along with a set of equality constraints that we need to satisfy:
 
-{% latex fig-01 %}
+{% latex 1 fig-01 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -21,7 +21,7 @@ In previous posts, we focused primarily on finding arbitrary solutions to the we
     \\
     &                  & f_2(\mathbf{p}) & = 0
     \\
-    &                  & \vdots
+    &                  & \multicolumn{2}{c}{\vdots}
     \\
     &                  & f_m(\mathbf{p}) & = 0
     \end{aligned}
@@ -31,31 +31,31 @@ In previous posts, we focused primarily on finding arbitrary solutions to the we
 
 Our objective is not to find the absolute minimum of the scoring function. Rather, we want to find a set of parameters that satisfy the given constraints while also yielding the smallest possible value when plugged into the scoring function. The key to understanding the method of Lagrange multipliers is knowing that the gradient of the objective function---the scoring function in this case---is equal to a linear combination of the gradients of the constraint functions at the point in which we find the optimal solution:
 
-{% latex fig-02 %}
+{% latex 1 fig-02 %}
     \begin{document}
     \begin{displaymath}
     \nabla S(\mathbf{p})
     =
-    \sum_{i = 1}^{m}{\lambda_i \nabla f_i(\mathbf{p})}
+    \sum_{i = 1}^{m} \lambda_i \nabla f_i(\mathbf{p})
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 The lambda coefficients are the Lagrange multipliers. You can find plenty of resources online that explain this relationship in more detail. For our purposes here, let's just take it as a given. If you were to expand out the gradients and include the equality constraints, you would have a system of equations that can be solved. We can package this system of equations up in an elegant fashion using the Lagrangian function:
 
-{% latex fig-03 %}
+{% latex 1 fig-03 %}
     \begin{document}
     \begin{displaymath}
     \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})
     =
-    S(\mathbf{p}) - \sum_{i = 1}^{m}{\lambda_i f_i(\mathbf{p})}
+    S(\mathbf{p}) - \sum_{i = 1}^{m} \lambda_i f_i(\mathbf{p})
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 Now, if we take the gradient of the Lagrangian function and set it equal to the zero vector, we have a very concise way to express the system of equations:
 
-{% latex fig-04 %}
+{% latex 1 fig-04 %}
     \begin{document}
     \begin{displaymath}
     \nabla \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})
@@ -67,23 +67,27 @@ Now, if we take the gradient of the Lagrangian function and set it equal to the 
 
 It might even be too concise. But it makes sense if you expand the gradient and unfold it a bit. Here is the complete system of equations:
 
-{% latex fig-05 %}
-    \newcommand{\dL}{\partial \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})}
-    \newcommand{\lhsA}{\frac{\dL}{\partial p_1}}
-    \newcommand{\lhsB}{\frac{\dL}{\partial p_{n-1}}}
-    \newcommand{\lhsC}{\frac{\dL}{\partial \lambda_1}}
-    \newcommand{\lhsD}{\frac{\dL}{\partial \lambda_m}}
+{% latex 1 fig-05 %}
+    \newcommand{\dL}{\pderiv \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})}
+    \newcommand{\dS}{\pderiv S(\mathbf{p})}
+    \newcommand{\dF}{\pderiv f_i(\mathbf{p})}
+    \newcommand{\lhsA}{\dfrac{\dL}{\pderiv p_1}}
+    \newcommand{\lhsB}{\dfrac{\dL}{\pderiv p_{n-1}}}
+    \newcommand{\lhsC}{\dfrac{\dL}{\pderiv \lambda_1}}
+    \newcommand{\lhsD}{\dfrac{\dL}{\pderiv \lambda_m}}
     \newcommand{\rhsA}
     {
-    \frac{\partial S(\mathbf{p})}{\partial p_1}
-    -
-    \sum_{i = 1}^{m}{\lambda_i \frac{\partial f_i(\mathbf{p})}{\partial p_1}}
+        \displaystyle
+        \frac{\dS}{\pderiv p_1}
+        -
+        \sum_{i = 1}^{m} \lambda_i \frac{\dF}{\pderiv p_1}
     }
     \newcommand{\rhsB}
     {
-    \frac{\partial S(\mathbf{p})}{\partial p_{n-1}}
-    -
-    \sum_{i = 1}^{m}{\lambda_i \frac{\partial f_i(\mathbf{p})}{\partial p_{n-1}}}
+        \displaystyle
+        \frac{\dS}{\pderiv p_{n-1}}
+        -
+        \sum_{i = 1}^{m} \lambda_i \frac{\dF}{\pderiv p_{n-1}}
     }
     \newcommand{\rhsC}{0 - f_1(\mathbf{p})}
     \newcommand{\rhsD}{0 - f_m(\mathbf{p})}
@@ -91,37 +95,33 @@ It might even be too concise. But it makes sense if you expand the gradient and 
     \begin{displaymath}
     \nabla \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})
     =
-    \left[
-    \begin{array}{c}
-    \displaystyle \vphantom{\rhsA} \lhsA
-    \\[1em]
+    \begin{matrix}{c}
+    \vphantom{\rhsA} \lhsA
+    \\[1.5em]
     \vdots
-    \\[1em]
-    \displaystyle \vphantom{\rhsB} \lhsB
+    \\[1.5em]
+    \vphantom{\rhsB} \lhsB
     \\[2em]
-    \displaystyle \lhsC
-    \\[1em]
+    \lhsC
+    \\[1.5em]
     \vdots
-    \\[1em]
-    \displaystyle \lhsD
-    \end{array}
-    \right]
+    \\[1.5em]
+    \lhsD
+    \end{matrix}
     =
-    \left[
-    \begin{array}{c}
-    \displaystyle \rhsA
-    \\[1em]
+    \begin{matrix}{c}
+    \rhsA
+    \\[1.5em]
     \vdots
-    \\[1em]
-    \displaystyle \rhsB
+    \\[1.5em]
+    \rhsB
     \\[2em]
-    \displaystyle \vphantom{\lhsC} \rhsC
-    \\[1em]
+    \vphantom{\lhsC} \rhsC
+    \\[1.5em]
     \vdots
-    \\[1em]
-    \displaystyle \vphantom{\lhsD} \rhsD
-    \end{array}
-    \right]
+    \\[1.5em]
+    \vphantom{\lhsD} \rhsD
+    \end{matrix}
     =
     \mathbf{0}
     \end{displaymath}
@@ -134,42 +134,41 @@ Note that when using the method of Lagrange multipliers, not only do we need to 
 
 There is more than one way to solve a system of equations. One way to do it is to use the gradient descent algorithm demonstrated in my [previous post]({% post_url 2020-09-12-minimizing-with-gradient-descent %}). We can use the magnitude of the gradient as the cost function. In the examples that follow, we'll use the square of the magnitude of the gradient because it's easier that way:
 
-{% latex fig-06 %}
+{% latex 1 fig-06 %}
     \begin{document}
     \begin{displaymath}
     C(\mathbf{p}, \boldsymbol{\lambdaup})
     =
-    {\| \nabla \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup}) \|}^2
+    \| \nabla \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup}) \|^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 The square of the magnitude can be found by computing the sum of the squares of each element in the gradient vector. The equation above can be expanded out as like this:
 
-{% latex fig-07 %}
+{% latex 1 fig-07 %}
+    \newcommand{\dL}{\pderiv \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})}
     \begin{document}
     \begin{displaymath}
     C(\mathbf{p}, \boldsymbol{\lambdaup})
     =
     \sum_{i = 1}^{n - 1}
-    \left(
-    \dfrac{\partial \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})}{\partial p_i}
-    \right)^2
+    \2
+    \brace3(){\frac{\dL}{\pderiv p_i}}^2
     +
     \sum_{i = 1}^{m}
-    \left(
-    \dfrac{\partial \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})}{\partial \lambda_i}
-    \right)^2
+    \2
+    \brace3(){\frac{\dL}{\pderiv \lambda_i}}^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 In the examples illustrated in the following sections, we'll use the same learning rate calculation described in my previous post titled [*Minimizing with Gradient Descent*]({% post_url 2020-09-12-minimizing-with-gradient-descent %}). But instead of using a fixed step size, we'll use a variable step size:
 
-{% latex fig-08 %}
+{% latex 1 fig-08 %}
     \begin{document}
     \begin{displaymath}
-    s_k = \min \left\{\, 0.0001,\, \frac{1}{1 + k} \,\right\}
+    s_k = \min \2 \brace3{\lbrace}{\rbrace}{\, 0.0001,\, \frac{1}{1 + k} \,}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -188,7 +187,7 @@ Let's consider a concrete example of using the method of Lagrange multipliers an
 
 This illustration depicts the probability mass function of the expected outcome. These values can be represented using the following notation:
 
-{% latex fig-11 %}
+{% latex 1 fig-11 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -202,17 +201,17 @@ This illustration depicts the probability mass function of the expected outcome.
 
 Based on the model of the coin toss game with three flips per round, the following constraint functions must equal zero when we have a valid solution for the weights:
 
-{% latex fig-12 %}
+{% latex 1 fig-12 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
     f_1(\mathbf{p})
     & =
-    r_1 - 0.5\,\big( 1 - p_1\,p_2 \big)
+    r_1 - 0.5 \1 \brace1(){ 1 - p_1 \0 p_2 }
     \\[1em]
     f_2(\mathbf{p})
     & =
-    r_3 - 0.5\,p_1\,p_2
+    r_3 - 0.5 \0 p_1 \0 p_2
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -220,14 +219,16 @@ Based on the model of the coin toss game with three flips per round, the followi
 
 Once we have the constraint functions, we can go ahead and incorporate them into the Lagrangian function. Here is what it looks like so far:
 
-{% latex fig-13 %}
+{% latex 1 fig-13 %}
     \begin{document}
     \begin{displaymath}
     \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})
     =
     S(\mathbf{p})
-    - \lambda_1\mspace{1mu}\Big[\, r_1 - 0.5\,\big( 1 - p_1\,p_2 \big) \,\Big]
-    - \lambda_2\mspace{1mu}\Big[\, r_3 - 0.5\,p_1\,p_2 \,\Big]
+    -
+    \lambda_1 \1 \brace2[]{ r_1 - 0.5 \1 \brace1(){ 1 - p_1 \0 p_2 } }
+    -
+    \lambda_2 \1 \brace2[]{ r_3 - 0.5 \0 p_1 \0 p_2 }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -238,12 +239,14 @@ Now we just need to plug in a scoring function to produce a concrete Lagrangian 
 
 Using the two constraint functions defined for the coin toss game with three flips per round, we can construct a Lagrangian function with the following scoring function:
 
-{% latex fig-14 %}
+{% latex 1 fig-14 %}
     \begin{document}
     \begin{displaymath}
     \mathrlap{S_a}\phantom{S_b}(\mathbf{p})
     =
-    \big( p_1 - 0.5 \big)^2 + \big( p_2 - 0.5 \big)^2
+    \brace1(){ p_1 - 0.5 }^2
+    +
+    \brace1(){ p_2 - 0.5 }^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -259,12 +262,10 @@ Not all dimensions are shown in these illustrations. The colors of the heatmap a
 
 Here is a breakdown of the number of iterations required for each trace:
 
-{% latex fig-19 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-19 %}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{3em}|wr{5em}|}
+    \begin{table}{|wl{3em}|wr{5em}|}
     \hline
     \text{Trace} & \text{Iterations}
     \\[0.25em]\hline
@@ -276,7 +277,7 @@ Here is a breakdown of the number of iterations required for each trace:
     \\[0.25em]\hline
     4            & \text{36,333}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -287,12 +288,14 @@ Using gradient descent to solve the system of equations yields the correct resul
 
 Using the two constraint functions defined for the coin toss game with three flips per round, we can construct a Lagrangian function with the following scoring function:
 
-{% latex fig-20 %}
+{% latex 1 fig-20 %}
     \begin{document}
     \begin{displaymath}
     \mathrlap{S_b}\phantom{S_b}(\mathbf{p})
     =
-    \big( p_1 - 0.5 \big)^2 + \big( p_2 - p_1 \big)^2
+    \brace1(){ p_1 - 0.5 }^2
+    +
+    \brace1(){ p_2 - p_1 }^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -308,12 +311,10 @@ Not all dimensions are shown in these illustrations. The colors of the heatmap a
 
 Here is a breakdown of the number of iterations required for each trace:
 
-{% latex fig-25 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-25 %}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{3em}|wr{5em}|}
+    \begin{table}{|wl{3em}|wr{5em}|}
     \hline
     \text{Trace} & \text{Iterations}
     \\[0.25em]\hline
@@ -325,7 +326,7 @@ Here is a breakdown of the number of iterations required for each trace:
     \\[0.25em]\hline
     4            & \text{284,433}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -340,7 +341,7 @@ Let's consider another example of using the method of Lagrange multipliers and t
 
 This illustration depicts the probability mass function of the expected outcome. These values can be represented using the following notation:
 
-{% latex fig-27 %}
+{% latex 1 fig-27 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -356,21 +357,21 @@ This illustration depicts the probability mass function of the expected outcome.
 
 Based on the model of the coin toss game with four flips per round, the following constraint functions must equal zero when we have a valid solution for the weights:
 
-{% latex fig-28 %}
+{% latex 1 fig-28 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
     f_1(\mathbf{p})
     & =
-    r_0 - \big( 1 - p_1 \big) \big( 1 - p_1\,p_2 \big)
+    r_0 - \brace1(){ 1 - p_1 } \brace1(){ 1 - p_1 \0 p_2 }
     \\[1em]
     f_2(\mathbf{p})
     & =
-    r_2 - 0.5\,p_1\mspace{1mu}\big( 1 \,+\, p_2 \,-\, p_1\,p_2 \,-\, p_2\,p_3 \big)
+    r_2 - 0.5 \0 p_1 \brace1(){ 1 + p_2 - p_1 \0 p_2 - p_2 \0 p_3 }
     \\[1em]
     f_3(\mathbf{p})
     & =
-    r_4 - 0.5\,p_1\,p_2\,p_3
+    r_4 - 0.5 \0 p_1 \0 p_2 \0 p_3
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -378,35 +379,31 @@ Based on the model of the coin toss game with four flips per round, the followin
 
 We can use the constraint functions above to create a Lagrangian function. Using the Lagrangian function, we can come up with a cost function, as described earlier. Once we have a cost function, we can use it to apply the gradient descent algorithm. In this example, we'll start with the following initial guess:
 
-{% latex fig-29 %}
+{% latex 1 fig-29 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
     \mathbf{p}
     _{\mathrlap{\sscr{start}}\phantom{\sscr{finish}}}
     & =
-    \left[
-    \begin{array}{l}
+    \begin{matrix}{l}
     0.5000
     \\[1em]
     0.5000
     \\[1em]
     0.5000
-    \end{array}
-    \right]
+    \end{matrix}
     \\[1em]
     \boldsymbol{\lambdaup}
     _{\mathrlap{\sscr{start}}\phantom{\sscr{finish}}}
     & =
-    \left[
-    \begin{array}{l}
+    \begin{matrix}{l}
     0.0000
     \\[1em]
     0.0000
     \\[1em]
     0.0000
-    \end{array}
-    \right]
+    \end{matrix}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -414,47 +411,47 @@ We can use the constraint functions above to create a Lagrangian function. Using
 
 Now suppose we plug the following scoring function into our Lagrangian function:
 
-{% latex fig-30 %}
+{% latex 1 fig-30 %}
     \begin{document}
     \begin{displaymath}
     \mathrlap{S_a}\phantom{S_b}(\mathbf{p})
     =
-    \big( p_1 - 0.5 \big)^2 + \big( p_2 - 0.5 \big)^2 + \big( p_3 - 0.5 \big)^2
+    \brace1(){ p_1 - 0.5 }^2
+    +
+    \brace1(){ p_2 - 0.5 }^2
+    +
+    \brace1(){ p_3 - 0.5 }^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 Applying the gradient descent method, here is the result:
 
-{% latex fig-31 %}
+{% latex 1 fig-31 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
     \mathbf{p}
     _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
     & =
-    \left[
-    \begin{array}{l}
+    \begin{matrix}{l}
     \phantom{+}0.4422
     \\[1em]
     \phantom{+}0.6396
     \\[1em]
     \phantom{+}0.7071
-    \end{array}
-    \right]
+    \end{matrix}
     \\[1em]
     \boldsymbol{\lambdaup}
     _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
     & =
-    \left[
-    \begin{array}{l}
+    \begin{matrix}{l}
     +0.0070
     \\[1em]
     +1.4624
     \\[1em]
     -1.4660
-    \end{array}
-    \right]
+    \end{matrix}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -462,47 +459,47 @@ Applying the gradient descent method, here is the result:
 
 Now suppose we plug the following scoring function into our Lagrangian function:
 
-{% latex fig-32 %}
+{% latex 1 fig-32 %}
     \begin{document}
     \begin{displaymath}
     \mathrlap{S_b}\phantom{S_b}(\mathbf{p})
     =
-    \big( p_1 - 0.5 \big)^2 + \big( p_2 - p_1 \big)^2 + \big( p_3 - p_2 \big)^2
+    \brace1(){ p_1 - 0.5 }^2
+    +
+    \brace1(){ p_2 - p_1 }^2
+    +
+    \brace1(){ p_3 - p_2 }^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 Applying the gradient descent method, here is the result:
 
-{% latex fig-33 %}
+{% latex 1 fig-33 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
     \mathbf{p}
     _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
     & =
-    \left[
-    \begin{array}{l}
+    \begin{matrix}{l}
     \phantom{+}0.4487
     \\[1em]
     \phantom{+}0.6116
     \\[1em]
     \phantom{+}0.7288
-    \end{array}
-    \right]
+    \end{matrix}
     \\[1em]
     \boldsymbol{\lambdaup}
     _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
     & =
-    \left[
-    \begin{array}{l}
+    \begin{matrix}{l}
     -0.2970
     \\[1em]
     +0.9289
     \\[1em]
     -0.7804
-    \end{array}
-    \right]
+    \end{matrix}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -510,14 +507,12 @@ Applying the gradient descent method, here is the result:
 
 You can compare these results with the results found via a [different method]({% post_url 2019-11-14-hill-climbing-and-cost-functions %}#scoring-values-on-the-plateau) and see that they are the same. Here are the number of iterations required:
 
-{% latex fig-34 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-34 %}
     \newcommand{\Sa}{\mathrlap{S_a}\phantom{S_b}}
     \newcommand{\Sb}{\mathrlap{S_b}\phantom{S_b}}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{8em}|wr{5em}|}
+    \begin{table}{|wl{8em}|wr{5em}|}
     \hline
     \text{Scoring Function} & \text{Iterations}
     \\[0.25em]\hline
@@ -525,7 +520,7 @@ You can compare these results with the results found via a [different method]({%
     \\[0.25em]\hline
     \Sb(\mathbf{p})         & \text{448,690}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -536,7 +531,7 @@ Once again, we see that the gradient descent algorithm requires a large number o
 
 Using the optimization technique illustrated in the examples above, the solution always converges to the most optimal set of values for the weights of the biased coins, regardless of the initial guess. There is only one unique solution for a given scoring function and set of constraints. When using iterative optimization methods, the optimal point is the solution found upon reaching the final iteration:
 
-{% latex fig-35 %}
+{% latex 1 fig-35 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{p}^{*}
@@ -548,22 +543,19 @@ Using the optimization technique illustrated in the examples above, the solution
 
 This technique, however, does not necessarily converge to a unique set of Lagrange multipliers. The Lagrange multiplier theorem guarantees a unique set of Lagrange multipliers only if the constraint qualification assumption is satisfied. Maybe it doesn't matter here, since we still get the right answer for the weights of the biased coins. But I think it's worth pointing out nonetheless. So what is the constraint qualification assumption that guarantees a unique set of Lagrange multipliers? It depends on whether there are multiple constraints or only one constraint. Consider the gradient of the constraint functions at the optimal point:
 
-{% latex fig-36 %}
+{% latex 1 fig-36 %}
+    \newcommand{\dF}{\pderiv f_i(\mathbf{p}^{*})}
     \begin{document}
     \begin{displaymath}
     \nabla f_i(\mathbf{p}^{*})
     =
-    \left[
-    \begin{array}{c}
-    \displaystyle
-    \frac{\partial f_i(\mathbf{p}^{*})}{\partial p_1}
-    \\[1em]
+    \begin{matrix}{c}
+    \dfrac{\dF}{\pderiv p_1}
+    \\[1.5em]
     \vdots
-    \\[1em]
-    \displaystyle
-    \frac{\partial f_i(\mathbf{p}^{*})}{\partial p_{n-1}}
-    \end{array}
-    \right]
+    \\[1.5em]
+    \dfrac{\dF}{\pderiv p_{n-1}}
+    \end{matrix}
     ,
     \quad \forall i \in \{\, 1, \dots, m \,\}
     \end{displaymath}
@@ -572,17 +564,17 @@ This technique, however, does not necessarily converge to a unique set of Lagran
 
 In the case of multiple constraints, the gradient vectors of each constraint at the optimal point must be linearly independent of each other. Where there is only one constraint, the gradient must not equal the zero vector at the optimal point. None of the examples illustrated in the sections above satisfy the constraint qualification condition. But let's take a closer look at the constraints. Consider the set of constraints for the coin toss game with three flips per round:
 
-{% latex fig-37 %}
+{% latex 1 fig-37 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
     f_1(\mathbf{p})
     & =
-    0.3333 - 0.5\,\big( 1 - p_1\,p_2 \big)
+    0.3333 - 0.5 \1 \brace1(){ 1 - p_1 \0 p_2 }
     \\[1em]
     f_2(\mathbf{p})
     & =
-    0.1667 - 0.5\,p_1\,p_2
+    0.1667 - 0.5 \0 p_1 \0 p_2
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -590,7 +582,7 @@ In the case of multiple constraints, the gradient vectors of each constraint at 
 
 Remember, each constraint function must equal zero. And these two equations are not independent of each other. The second constraint can be expressed in terms of the first:
 
-{% latex fig-38 %}
+{% latex 1 fig-38 %}
     \begin{document}
     \begin{displaymath}
     f_2(\mathbf{p}) = -f_1(\mathbf{p})
@@ -600,21 +592,21 @@ Remember, each constraint function must equal zero. And these two equations are 
 
 Since it is not an independent equation, we can drop the second constraint entirely. Using only the first constraint, we can apply the method of Lagrange multipliers in a way that satisfies the constraint qualification assumption. In this case, there is only one Lagrange multiplier, and it always converges to the same value using iterative methods, regardless of the initial guess. Now let's consider the set of constraints for the coin toss game with four flips per round:
 
-{% latex fig-39 %}
+{% latex 1 fig-39 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
     f_1(\mathbf{p})
     & =
-    0.4000 - \big( 1 - p_1 \big) \big( 1 - p_1\,p_2 \big)
+    0.4000 - \brace1(){ 1 - p_1 } \brace1(){ 1 - p_1 \0 p_2 }
     \\[1em]
     f_2(\mathbf{p})
     & =
-    0.2000 - 0.5\,p_1\mspace{1mu}\big( 1 \,+\, p_2 \,-\, p_1\,p_2 \,-\, p_2\,p_3 \big)
+    0.2000 - 0.5 \0 p_1 \brace1(){ 1 + p_2 - p_1 \0 p_2 - p_2 \0 p_3 }
     \\[1em]
     f_3(\mathbf{p})
     & =
-    0.1000 - 0.5\,p_1\,p_2\,p_3
+    0.1000 - 0.5 \0 p_1 \0 p_2 \0 p_3
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -622,7 +614,7 @@ Since it is not an independent equation, we can drop the second constraint entir
 
 Again, each constraint function must equal zero. And like before, this is not an independent set of equations. We can express one constraint as a linear combination of the others:
 
-{% latex fig-40 %}
+{% latex 1 fig-40 %}
     \begin{document}
     \begin{displaymath}
     f_2(\mathbf{p}) = -0.5 f_1(\mathbf{p}) - f_3(\mathbf{p})
@@ -638,16 +630,14 @@ In the examples above, the gradient descent method requires tens of thousands of
 
 Example with 3 coin tosses, scoring function A:
 
-{% latex fig-41 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-41 %}
     \newcommand{\methodA}{\text{Gradient descent}}
     \newcommand{\methodB}{\text{Nelder--Mead}}
     \newcommand{\methodC}{\text{Broyden--Fletcher--Goldfarb--Shanno}}
     \newcommand{\methodD}{\text{Newton--Raphson}}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{16em}|wr{5em}|}
+    \begin{table}{|wl{16em}|wr{5em}|}
     \hline
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline
@@ -659,23 +649,21 @@ Example with 3 coin tosses, scoring function A:
     \\[0.25em]\hline
     \methodD      & \text{6}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 Example with 3 coin tosses, scoring function B:
 
-{% latex fig-42 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-42 %}
     \newcommand{\methodA}{\text{Gradient descent}}
     \newcommand{\methodB}{\text{Nelder--Mead}}
     \newcommand{\methodC}{\text{Broyden--Fletcher--Goldfarb--Shanno}}
     \newcommand{\methodD}{\text{Newton--Raphson}}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{16em}|wr{5em}|}
+    \begin{table}{|wl{16em}|wr{5em}|}
     \hline
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline
@@ -687,23 +675,21 @@ Example with 3 coin tosses, scoring function B:
     \\[0.25em]\hline
     \methodD      & \text{5}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 Example with 4 coin tosses, scoring function A:
 
-{% latex fig-43 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-43 %}
     \newcommand{\methodA}{\text{Gradient descent}}
     \newcommand{\methodB}{\text{Nelder--Mead}}
     \newcommand{\methodC}{\text{Broyden--Fletcher--Goldfarb--Shanno}}
     \newcommand{\methodD}{\text{Newton--Raphson}}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{16em}|wr{5em}|}
+    \begin{table}{|wl{16em}|wr{5em}|}
     \hline
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline
@@ -715,23 +701,21 @@ Example with 4 coin tosses, scoring function A:
     \\[0.25em]\hline
     \methodD      & \text{14}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 Example with 4 coin tosses, scoring function B:
 
-{% latex fig-44 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-44 %}
     \newcommand{\methodA}{\text{Gradient descent}}
     \newcommand{\methodB}{\text{Nelder--Mead}}
     \newcommand{\methodC}{\text{Broyden--Fletcher--Goldfarb--Shanno}}
     \newcommand{\methodD}{\text{Newton--Raphson}}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{16em}|wr{5em}|}
+    \begin{table}{|wl{16em}|wr{5em}|}
     \hline
     \text{Method} & \text{Iterations}
     \\[0.25em]\hline
@@ -743,14 +727,14 @@ Example with 4 coin tosses, scoring function B:
     \\[0.25em]\hline
     \methodD      & \text{9}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 While one method might be able to arrive at a solution in fewer iterations than another method, it is important to remember that not all iterations are created equally. An iteration in one method might be computationally more expensive than an iteration in another. When taking runtime performance into consideration, the best method might not be the one with the fewest iterations. Also, finding the minimum of a cost function is not the only way to solve for the unknowns. Keep in mind, the ultimate goal is to find the parameters in which the gradient of the Lagrangian function is equal to the zero vector:
 
-{% latex fig-45 %}
+{% latex 1 fig-45 %}
     \begin{document}
     \begin{displaymath}
     \nabla \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})

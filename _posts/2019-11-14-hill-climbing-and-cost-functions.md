@@ -17,7 +17,7 @@ Instead of randomly picking a single move, we can consider the set of all possib
 
 Suppose this represents the expected outcome of playing the weighted coin toss game with four tosses, as described in my [previous post]({% post_url 2019-09-14-estimating-the-weights-of-biased-coins %}). The target values are thus:
 
-{% latex fig-02 %}
+{% latex 1 fig-02 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -37,7 +37,7 @@ We want to figure out what weights of the biased coins will give us an expected 
 
 These weights can be represented using the following notation:
 
-{% latex fig-04 %}
+{% latex 1 fig-04 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -53,15 +53,15 @@ These weights can be represented using the following notation:
 
 Given this initial guess, we can calculate what the expectation of the coin toss game would be if the coins were weighted according to our initial estimate. Recall the following equations derived in the [previous post]({% post_url 2019-09-14-estimating-the-weights-of-biased-coins %}):
 
-{% latex fig-05 %}
+{% latex 1 fig-05 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_0 & = \big( 1 - p_1 \big) \big( 1 - p_1\,p_2 \big)
+    r_0 & = \brace1(){ 1 - p_1 } \brace1(){ 1 - p_1 \0 p_2 }
     \\[1em]
-    r_2 & = 0.5\,p_1\mspace{1mu}\big( 1 \,+\, p_2 \,-\, p_1\,p_2 \,-\, p_2\,p_3 \big)
+    r_2 & = 0.5 \0 p_1 \brace1(){ 1 + p_2 - p_1 \0 p_2 - p_2 \0 p_3 }
     \\[1em]
-    r_4 & = 0.5\,p_1\,p_2\,p_3
+    r_4 & = 0.5 \0 p_1 \0 p_2 \0 p_3
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -69,7 +69,7 @@ Given this initial guess, we can calculate what the expectation of the coin toss
 
 Plugging in the numbers and doing the math, here are the computed values based on the initial estimate of the weights:
 
-{% latex fig-06 %}
+{% latex 1 fig-06 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -85,15 +85,19 @@ Plugging in the numbers and doing the math, here are the computed values based o
 
 This does not match our target values, so we know that our initial guess is not correct. But how incorrect is it? Can we quantify the fitness of our estimate? Indeed, we can use a cost function to determine how close our estimate is to the desired result. In this example, we use the sum of squared errors as our cost function:
 
-{% latex fig-07 %}
+{% latex 1 fig-07 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    C & = \big( 0.3750 - 0.4000 \big)^2
-        + \big( 0.2500 - 0.2000 \big)^2
-        + \big( 0.0625 - 0.1000 \big)^2
+    C
+    & =
+    \brace1(){ 0.3750 - 0.4000 }^2
+    +
+    \brace1(){ 0.2500 - 0.2000 }^2
+    +
+    \brace1(){ 0.0625 - 0.1000 }^2
     \\[1em]
-      & = 0.00453125
+    & = 0.00453125
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -101,12 +105,10 @@ This does not match our target values, so we know that our initial guess is not 
 
 Our objective is to revise the estimate to minimize the value of the cost function. Lower values indicate a more favorable estimate. A zero value is the most ideal. Incrementing each one of the estimated weights by a small step size, in both the positive and negative direction, there are six possible revisions we can make to our initial estimate:
 
-{% latex fig-08 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-08 %}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{8em}|wl{6em}|}
+    \begin{table}{|wl{8em}|wl{6em}|}
     \hline
     \text{Proposed Revision} & \text{Cost}
     \\[0.25em]\hline
@@ -122,14 +124,14 @@ Our objective is to revise the estimate to minimize the value of the cost functi
     \\[0.25em]\hline
     \text{Set $p_3$ to $0.4999$} & 0.00453344
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 The proposed revision with the lowest value for the cost function is the move with the steepest ascent up the hill. If we choose the proposed revision with the lowest value for the cost function, our revised estimate then becomes:
 
-{% latex fig-09 %}
+{% latex 1 fig-09 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -145,7 +147,7 @@ The proposed revision with the lowest value for the cost function is the move wi
 
 Using this revised estimate as our new baseline, we can repeat this process again and again until none of the proposed revisions offers an improvement to the value of the cost function associated with the previous estimate. After many iterations, we converge on the following values:
 
-{% latex fig-10 %}
+{% latex 1 fig-10 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -203,24 +205,32 @@ Here I want to consider two different scoring functions that can be used to rank
 
 The first scoring function I want to consider gives preference to weights that are nearest to the center of the range of possible weights:
 
-{% latex fig-19 %}
+{% latex 1 fig-19 %}
     \begin{document}
     \begin{displaymath}
     \mathrlap{S_a}\phantom{S_b}
     =
-    \big( p_1 - 0.5 \big)^2 + \big( p_2 - 0.5 \big)^2 + \big( p_3 - 0.5 \big)^2
+    \brace1(){ p_1 - 0.5 }^2
+    +
+    \brace1(){ p_2 - 0.5 }^2
+    +
+    \brace1(){ p_3 - 0.5 }^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 The second scoring function I want to consider gives preference to weights that are nearest to their neighboring weights:
 
-{% latex fig-20 %}
+{% latex 1 fig-20 %}
     \begin{document}
     \begin{displaymath}
     \mathrlap{S_b}\phantom{S_b}
     =
-    \big( p_1 - 0.5 \big)^2 + \big( p_2 - p_1 \big)^2 + \big( p_3 - p_2 \big)^2
+    \brace1(){ p_1 - 0.5 }^2
+    +
+    \brace1(){ p_2 - p_1 }^2
+    +
+    \brace1(){ p_3 - p_2 }^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -231,7 +241,7 @@ Now let's consider the first set of weights we found for the target distribution
 
 Plugging these weights into the scoring functions:
 
-{% latex fig-22 %}
+{% latex 1 fig-22 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -249,7 +259,7 @@ Now let's consider the second set of weights we found for the target distributio
 
 Plugging these weights into the scoring functions:
 
-{% latex fig-24 %}
+{% latex 1 fig-24 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -265,13 +275,13 @@ While both sets of weights are valid solutions for the given target distribution
 
 If we only consider the range of possible solutions in which the primary cost function evaluates to zero, which are the only valid solutions for the given target distribution, how do we go about finding the one with the most optimal score for each of the two scoring functions? We can start by plotting the scores across the range of possible values. Based on the results derived in the [previous post]({% post_url 2019-09-14-estimating-the-weights-of-biased-coins %}), the weights of the biased coins the +2 and +3 states can be stated in terms of the weight of the coin in the +1 state:
 
-{% latex fig-25 %}
+{% latex 1 fig-25 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    p_2 & = \frac{1 - p_1 - r_0}{p_1 \, (1 - p_1)}
+    p_2 & = \frac{1 - p_1 - r_0}{p_1 (1 - p_1)}
     \\[1em]
-    p_3 & = \frac{2 r_4 \, (1 - p_1)}{1 - p_1 - r_0}
+    p_3 & = \frac{2 \0 r_4 (1 - p_1)}{1 - p_1 - r_0}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -279,37 +289,41 @@ If we only consider the range of possible solutions in which the primary cost fu
 
 Additionally, the value of the weight of the biased coin in the +1 state is limited to a range with a lower and upper bound:
 
-{% latex fig-26 %}
+{% latex 1 fig-26 %}
     \begin{document}
     \begin{displaymath}
-    p_{1,\sscr{min}} \,\leq\, p_1 \,\leq\, p_{1,\sscr{max}}
+    p_{1,\sscr{min}} \leq p_1 \leq p_{1,\sscr{max}}
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 The minimum value at the lower bound is:
 
-{% latex fig-27 %}
+{% latex 1 fig-27 %}
     \begin{document}
     \begin{displaymath}
-    \mathrlap{p_{1,\sscr{min}}}\phantom{p_{1,\sscr{max}}} = 1 - \sqrt{r_0}
+    \mathrlap{p_{1,\sscr{min}}}\phantom{p_{1,\sscr{max}}}
+    =
+    1 - \sqrt{r_0}
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 The maximum value at the upper bound is:
 
-{% latex fig-28 %}
+{% latex 1 fig-28 %}
     \begin{document}
     \begin{displaymath}
-    \mathrlap{p_{1,\sscr{max}}}\phantom{p_{1,\sscr{max}}} = \frac{2 r_4 - 1 + r_0}{2 r_4 - 1}
+    \mathrlap{p_{1,\sscr{max}}}\phantom{p_{1,\sscr{max}}}
+    =
+    \frac{2 \0 r_4 - 1 + r_0}{2 \0 r_4 - 1}
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 From this, we can represent the range of all valid solutions for the target distribution on a single axis. We can plot the weights on the horizontal axis and the scores on the vertical axis. Recall the values of the target distribution presented earlier:
 
-{% latex fig-29 %}
+{% latex 1 fig-29 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -329,10 +343,10 @@ Here is the plot of the first scoring function for all weights in which the prim
 
 The most optimal point can be found by taking the derivative of the scoring function and finding the root:
 
-{% latex fig-31 %}
+{% latex 1 fig-31 %}
     \begin{document}
     \begin{displaymath}
-    \frac{d\mathrlap{S_a}\phantom{S_b}}{dp_1} = 0, \quad p_1 \approx 0.4422
+    \frac{\dderiv \mathrlap{S_a}\phantom{S_b}}{\dderiv p_1} = 0, \quad p_1 \approx 0.4422
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -347,10 +361,10 @@ Here is the plot of the second scoring function for all weights in which the pri
 
 The most optimal point can be found by taking the derivative of the scoring function and finding the root:
 
-{% latex fig-34 %}
+{% latex 1 fig-34 %}
     \begin{document}
     \begin{displaymath}
-    \frac{d\mathrlap{S_b}\phantom{S_b}}{dp_1} = 0, \quad p_1 \approx 0.4487
+    \frac{\dderiv \mathrlap{S_b}\phantom{S_b}}{\dderiv p_1} = 0, \quad p_1 \approx 0.4487
     \end{displaymath}
     \end{document}
 {% endlatex %}

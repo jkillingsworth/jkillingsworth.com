@@ -13,7 +13,7 @@ In this post, I want to explore a technique that can be used to answer this ques
 
 The aforementioned coin toss game can be modeled as a Markov chain. The game starts in the initial zero state. Each toss of the coin determines whether the system transitions to a higher state or a lower state. If the coin lands on heads, we move to a higher state. If the coin lands on tails, we move to a lower state. Each state determines the weight of the biased coin used in the next toss. Here is a graphical representation of the Markov model:
 
-{% latex fig-01 %}
+{% latex 1 fig-01 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,automata}
     \begin{document}
@@ -49,12 +49,10 @@ The aforementioned coin toss game can be modeled as a Markov chain. The game sta
 
 In this model, the coin in the zero state is always a fair coin. A fair coin will land on heads 50% of the time and tails 50% of the time. Additionally, this model is also symmetrical. The biased coins in the negative states are weighted inversely to the biased coins in the corresponding positive states. The diagram above can alternately be depicted as follows:
 
-{% latex fig-02 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-02 %}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{5em}|wl{9em}|wl{9em}|}
+    \begin{table}{|wl{5em}|wl{9em}|wl{9em}|}
     \hline
     \text{State} & \text{Probability of Heads} & \text{Probability of Tails}
     \\[0.25em]\hline
@@ -64,7 +62,7 @@ In this model, the coin in the zero state is always a fair coin. A fair coin wil
     \\[0.25em]\hline
     +1 & p_1 & 1 - p_1
     \\[0.25em]\hline
-    \phantom{+}0 \text{ (start)} & p_0 = 0.5 & p_0 = 0.5
+    \phantom{\pm}0 \text{ (start)} & p_0 = 0.5 & p_0 = 0.5
     \\[0.25em]\hline
     -1 & 1 - p_1 & p_1
     \\[0.25em]\hline
@@ -72,7 +70,7 @@ In this model, the coin in the zero state is always a fair coin. A fair coin wil
     \\[0.25em]\hline
     -3 & 1 - p_3 & p_3
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -83,7 +81,7 @@ Note that the positive and negative fourth states can only be terminal states, s
 
 If we know the weights of the biased coins, we can use a Monte Carlo simulation to estimate the expected outcome of the coin toss game. Simply put, we can run a million simulated rounds of the coin toss game, with four flips in each round, and observe the distribution of possible outcomes. Suppose each coin is weighted fairly:
 
-{% latex fig-03 %}
+{% latex 1 fig-03 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -117,55 +115,53 @@ The values are all roughly the same, indicating that all possible coin toss sequ
 
 With four tosses of the coin, there are sixteen possible coin toss sequences and five unique terminal states. The following table lists every possible coin toss sequence along with its terminal state and a formula for the probability of each combination:
 
-{% latex fig-07 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-07 %}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{5em}|wl{7em}|wl{11em}|}
+    \begin{table}{|wl{5em}|wl{7em}|wl{11em}|}
     \hline
     \text{Sequence} & \text{Terminal State} & \text{Probability}
     \\[0.25em]\hline
-    \texttt{HHHH} & +4 & p_0 \, p_1 \, p_2 \, p_3
+    \texttt{HHHH} & +4 & p_0 \0 p_1 \0 p_2 \0 p_3
     \\[0.25em]\hline
-    \texttt{HHHT} & +2 & p_0 \, p_1 \, p_2 \, (1 - p_3)
+    \texttt{HHHT} & +2 & p_0 \0 p_1 \0 p_2 (1 - p_3)
     \\[0.25em]\hline
-    \texttt{HHTH} & +2 & p_0 \, p_1 \, (1 - p_2) \, p_1
+    \texttt{HHTH} & +2 & p_0 \0 p_1 (1 - p_2) \0 p_1
     \\[0.25em]\hline
-    \texttt{HTHH} & +2 & p_0 \, (1 - p_1) \, p_0 \, p_1
+    \texttt{HTHH} & +2 & p_0 (1 - p_1) \0 p_0 \0 p_1
     \\[0.25em]\hline
-    \texttt{THHH} & +2 & p_0 \, (1 - p_1) \, p_0 \, p_1
+    \texttt{THHH} & +2 & p_0 (1 - p_1) \0 p_0 \0 p_1
     \\[0.25em]\hline
-    \texttt{HHTT} & \phantom{+}0 & p_0 \, p_1 \, (1 - p_2) \, (1 - p_1)
+    \texttt{HHTT} & \phantom{\pm}0 & p_0 \0 p_1 (1 - p_2) (1 - p_1)
     \\[0.25em]\hline
-    \texttt{HTHT} & \phantom{+}0 & p_0 \, (1 - p_1) \, p_0 \, (1 - p_1)
+    \texttt{HTHT} & \phantom{\pm}0 & p_0 (1 - p_1) \0 p_0 (1 - p_1)
     \\[0.25em]\hline
-    \texttt{HTTH} & \phantom{+}0 & p_0 \, (1 - p_1) \, p_0 \, (1 - p_1)
+    \texttt{HTTH} & \phantom{\pm}0 & p_0 (1 - p_1) \0 p_0 (1 - p_1)
     \\[0.25em]\hline
-    \texttt{THHT} & \phantom{+}0 & p_0 \, (1 - p_1) \, p_0 \, (1 - p_1)
+    \texttt{THHT} & \phantom{\pm}0 & p_0 (1 - p_1) \0 p_0 (1 - p_1)
     \\[0.25em]\hline
-    \texttt{THTH} & \phantom{+}0 & p_0 \, (1 - p_1) \, p_0 \, (1 - p_1)
+    \texttt{THTH} & \phantom{\pm}0 & p_0 (1 - p_1) \0 p_0 (1 - p_1)
     \\[0.25em]\hline
-    \texttt{TTHH} & \phantom{+}0 & p_0 \, p_1 \, (1 - p_2) \, (1 - p_1)
+    \texttt{TTHH} & \phantom{\pm}0 & p_0 \0 p_1 (1 - p_2) (1 - p_1)
     \\[0.25em]\hline
-    \texttt{HTTT} & -2 & p_0 \, (1 - p_1) \, p_0 \, p_1
+    \texttt{HTTT} & -2 & p_0 (1 - p_1) \0 p_0 \0 p_1
     \\[0.25em]\hline
-    \texttt{THTT} & -2 & p_0 \, (1 - p_1) \, p_0 \, p_1
+    \texttt{THTT} & -2 & p_0 (1 - p_1) \0 p_0 \0 p_1
     \\[0.25em]\hline
-    \texttt{TTHT} & -2 & p_0 \, p_1 \, (1 - p_2) \, p_1
+    \texttt{TTHT} & -2 & p_0 \0 p_1 (1 - p_2) \0 p_1
     \\[0.25em]\hline
-    \texttt{TTTH} & -2 & p_0 \, p_1 \, p_2 \, (1 - p_3)
+    \texttt{TTTH} & -2 & p_0 \0 p_1 \0 p_2 (1 - p_3)
     \\[0.25em]\hline
-    \texttt{TTTT} & -4 & p_0 \, p_1 \, p_2 \, p_3
+    \texttt{TTTT} & -4 & p_0 \0 p_1 \0 p_2 \0 p_3
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 Keep in mind that the model is symmetrical. Let's use the following notation to represent probability of landing on each of the five possible terminal states:
 
-{% latex fig-08 %}
+{% latex 1 fig-08 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -181,7 +177,7 @@ Keep in mind that the model is symmetrical. Let's use the following notation to 
 
 Since the model is symmetrical, the chance of ending up on any given positive terminal state is equal to the probability of ending up on the corresponding negative terminal state. The equations above can be rewritten as follows:
 
-{% latex fig-09 %}
+{% latex 1 fig-09 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -202,18 +198,18 @@ Since the model is symmetrical, the chance of ending up on any given positive te
 
 Plugging in the probability formula for each of the coin toss combinations, the equations above can be expressed like this:
 
-{% latex fig-10 %}
+{% latex 1 fig-10%}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_0 & = 4\,\Big[\, p_0 \, (1 - p_1) \, p_0 \, (1 - p_1) \,\Big]
-          + 2\,\Big[\, p_0 \, p_1 \, (1 - p_2) \, (1 - p_1) \,\Big]
+    r_0 & = 4\1\brace2[]{ p_0 (1 - p_1) \0 p_0 (1 - p_1) }
+          + 2\1\brace2[]{ p_0 \0 p_1 (1 - p_2) (1 - p_1) }
     \\[1em]
-    r_2 & = 2\,\Big[\, p_0 \, (1 - p_1) \, p_0 \, p_1 \,\Big]
-          +    \Big[\, p_0 \, p_1 \, (1 - p_2) \, p_1 \,\Big]
-          +    \Big[\, p_0 \, p_1 \, p_2 \, (1 - p_3) \,\Big]
+    r_2 & = 2\1\brace2[]{ p_0 (1 - p_1) \0 p_0 \0 p_1 }
+          +    \brace2[]{ p_0 \0 p_1 (1 - p_2) \0 p_1 }
+          +    \brace2[]{ p_0 \0 p_1 \0 p_2 (1 - p_3) }
     \\[1em]
-    r_4 & = \phantom{\Big[}\, p_0 \, p_1 \, p_2 \, p_3 \,\phantom{\Big]}
+    r_4 & = p_0 \0 p_1 \0 p_2 \0 p_3
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -221,7 +217,7 @@ Plugging in the probability formula for each of the coin toss combinations, the 
 
 By definition, since our model is a symmetrical one, we know that the coin used in the zero state is always a fair coin:
 
-{% latex fig-11 %}
+{% latex 1 fig-11%}
     \begin{document}
     \begin{displaymath}
     p_0 = 0.5
@@ -231,15 +227,15 @@ By definition, since our model is a symmetrical one, we know that the coin used 
 
 Substituting the value above for the weight of the coin at the zero state and then simplifying, we can arrive at the following set of equations:
 
-{% latex fig-12 %}
+{% latex 1 fig-12%}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_0 & = \big( 1 - p_1 \big) \big( 1 - p_1\,p_2 \big)
+    r_0 & = \brace1(){ 1 - p_1 } \brace1(){ 1 - p_1 \0 p_2 }
     \\[1em]
-    r_2 & = 0.5\,p_1\mspace{1mu}\big( 1 \,+\, p_2 \,-\, p_1\,p_2 \,-\, p_2\,p_3 \big)
+    r_2 & = 0.5 \0 p_1 \brace1(){ 1 + p_2 - p_1 \0 p_2 - p_2 \0 p_3 }
     \\[1em]
-    r_4 & = 0.5\,p_1\,p_2\,p_3
+    r_4 & = 0.5 \0 p_1 \0 p_2 \0 p_3
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -247,7 +243,7 @@ Substituting the value above for the weight of the coin at the zero state and th
 
 This set of equations represents the relationship between the weights of the biased coins and the expected outcome of the coin toss game. If we know the weights of the coins, we can compute the probability mass function of the expected outcome after four tosses of the coin. To illustrate, let's assume each coin is weighted fairly:
 
-{% latex fig-13 %}
+{% latex 1 fig-13%}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -263,7 +259,7 @@ This set of equations represents the relationship between the weights of the bia
 
 This is the same scenario we started with when doing the Monte Carlo simulation above, so we can expect to get the same or similar results. Plugging in the numbers, here are the computed results:
 
-{% latex fig-14 %}
+{% latex 1 fig-14%}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -293,13 +289,13 @@ We know from the previous sections that if all the coins are fairly weighted, th
 
 Let's introduce the following notation. We have seen a graphical illustration of what a binomial distribution looks like in the previous section. Here is the symbolic form of the probability mass function for a binomial distribution:
 
-{% latex fig-17 %}
+{% latex 1 fig-17 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
     P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, \dots, n
     \\[1em]
-    f(k)     & = \binom{n}{k} = \frac{n!}{k!(n - k)!}
+    f(k)     & = \binom{n}{k} = \frac{n!}{k!\1(n - k)!}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -307,7 +303,7 @@ Let's introduce the following notation. We have seen a graphical illustration of
 
 For succinctness, I am using an alternate zero based index to represent the terminal states. The following relationship holds:
 
-{% latex fig-18 %}
+{% latex 1 fig-18 %}
     \begin{document}
     \begin{displaymath}
     P(S_t) = P(X = k), \quad t = 2k - n
@@ -317,7 +313,7 @@ For succinctness, I am using an alternate zero based index to represent the term
 
 Since there are only four coin tosses in the model we're using here, we can substitute:
 
-{% latex fig-19 %}
+{% latex 1 fig-19 %}
     \begin{document}
     \begin{displaymath}
     n = 4
@@ -327,7 +323,7 @@ Since there are only four coin tosses in the model we're using here, we can subs
 
 Now recall the following from the previous section:
 
-{% latex fig-20 %}
+{% latex 1 fig-20 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -343,7 +339,7 @@ Now recall the following from the previous section:
 
 We can substitute the alternate notation and rewrite it like this:
 
-{% latex fig-21 %}
+{% latex 1 fig-21 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -359,7 +355,7 @@ We can substitute the alternate notation and rewrite it like this:
 
 Plugging in the numbers and doing the math, we can compute the following values to represent the binomial distribution:
 
-{% latex fig-22 %}
+{% latex 1 fig-22 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -375,7 +371,7 @@ Plugging in the numbers and doing the math, we can compute the following values 
 
 This represents the expected outcome after four coin tosses. Now we want to figure out what weights of the biased coins will give us this expectation. Based on the analysis in the previous section, we already know that playing the coin toss game with fairly weighted coins will give us our desired result:
 
-{% latex fig-23 %}
+{% latex 1 fig-23 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -391,15 +387,15 @@ This represents the expected outcome after four coin tosses. Now we want to figu
 
 However, this is not the only solution. As it turns out, there is an entire range of possible solutions that result in an expected outcome that takes the form of a binomial distribution. Consider the following equations derived in the previous section:
 
-{% latex fig-24 %}
+{% latex 1 fig-24 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_0 & = \big( 1 - p_1 \big) \big( 1 - p_1\,p_2 \big)
+    r_0 & = \brace1(){ 1 - p_1 } \brace1(){ 1 - p_1 \1 p_2 }
     \\[1em]
-    r_2 & = 0.5\,p_1\mspace{1mu}\big( 1 \,+\, p_2 \,-\, p_1\,p_2 \,-\, p_2\,p_3 \big)
+    r_2 & = 0.5 \0 p_1 \brace1(){ 1 + p_2 - p_1 \0 p_2 - p_2 \0 p_3 }
     \\[1em]
-    r_4 & = 0.5\,p_1\,p_2\,p_3
+    r_4 & = 0.5 \0 p_1 \0 p_2 \0 p_3
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -407,7 +403,7 @@ However, this is not the only solution. As it turns out, there is an entire rang
 
 Any solution that fits these equations is a valid solution provided that the following constraints are met:
 
-{% latex fig-25 %}
+{% latex 1 fig-25 %}
     \begin{document}
     \begin{displaymath}
     0 \leq p_i \leq 1, \quad \forall i \in \{\, 1, 2, \dots, (n - 1) \,\}
@@ -417,13 +413,13 @@ Any solution that fits these equations is a valid solution provided that the fol
 
 The constraints are necessary because a coin cannot land on heads less than 0% of the time, nor can it land on heads more than 100% of the time. Using the equations above, we can rearrange them and solve for the weights of the biased coins in the +2 and +3 states in terms of the weight of the coin in the +1 state:
 
-{% latex fig-26 %}
+{% latex 1 fig-26 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    p_2 & = \frac{1 - p_1 - r_0}{p_1 \, (1 - p_1)}
+    p_2 & = \frac{1 - p_1 - r_0}{p_1 (1 - p_1)}
     \\[1em]
-    p_3 & = \frac{2 r_4 \, (1 - p_1)}{1 - p_1 - r_0}
+    p_3 & = \frac{2 \0 r_4 (1 - p_1)}{1 - p_1 - r_0}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -431,7 +427,7 @@ The constraints are necessary because a coin cannot land on heads less than 0% o
 
 Any value for the weight of the biased coin in the +1 state can be used provided that the aforementioned constraints are met for the weights of all coins. There is a range of possible values for the coin in the +1 state. This range has a lower and upper bound. We can determine the lower bound for the weight of the coin in the +1 state by setting the weight of the coin in the +2 state to the maximum value of one:
 
-{% latex fig-27 %}
+{% latex 1 fig-27 %}
     \begin{document}
     \begin{displaymath}
     p_2 = 1
@@ -441,13 +437,13 @@ Any value for the weight of the biased coin in the +1 state can be used provided
 
 With the weights of the coin in the +2 state held constant at one, we can solve for the weights of the coins in the +1 and + 3 states:
 
-{% latex fig-28 %}
+{% latex 1 fig-28 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
     p_1 & = 1 - \sqrt{r_0}
     \\[1em]
-    p_3 & = \frac{2 r_4}{1 - \sqrt{r_0}}
+    p_3 & = \frac{2 \0 r_4}{1 - \sqrt{r_0}}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -455,7 +451,7 @@ With the weights of the coin in the +2 state held constant at one, we can solve 
 
 Plugging the values into the equations:
 
-{% latex fig-29 %}
+{% latex 1 fig-29 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -483,7 +479,7 @@ This is the same expected outcome we would get if all the coins were fair coins.
 
 Not all coin toss combinations are equal. Some have a higher probability of being observed than others when the biased coins are weighted unfairly. We can observe a similar phenomenon when the weights of the coins are at the opposite extreme of the range of possible values. Suppose the weight of the coin in the +3 state is set to the maximum value of one:
 
-{% latex fig-33 %}
+{% latex 1 fig-33 %}
     \begin{document}
     \begin{displaymath}
     p_3 = 1
@@ -493,13 +489,13 @@ Not all coin toss combinations are equal. Some have a higher probability of bein
 
 With this held constant, we can find the upper bound for the weight of the coin in the +1 state and the lowest value for the weight of the coin in the +2 state:
 
-{% latex fig-34 %}
+{% latex 1 fig-34 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    p_1 & = \frac{2 r_4 - 1 + r_0}{2 r_4 - 1}
+    p_1 & = \frac{2 \0 r_4 - 1 + r_0}{2 \0 r_4 - 1}
     \\[1em]
-    p_2 & = \frac{2 r_4 \, (2 r_4 - 1)}{2 r_4 - 1 + r_0}
+    p_2 & = \frac{2 \0 r_4 (2 \0 r_4 - 1)}{2 \0 r_4 - 1 + r_0}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -507,7 +503,7 @@ With this held constant, we can find the upper bound for the weight of the coin 
 
 Plugging the values into the equations:
 
-{% latex fig-35 %}
+{% latex 1 fig-35 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -539,7 +535,7 @@ The examples illustrated in this section demonstrate two extremes of a range of 
 
 What if the expected outcome is not a binomial distribution? Suppose we observe many rounds of the coin toss game and determine the expected outcome is a triangle distribution instead. We know the coins are biased, but how can we estimate the weights of the biased coins? Consider the symbolic form of a triangle distribution:
 
-{% latex fig-39 %}
+{% latex 1 fig-39 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -553,7 +549,7 @@ What if the expected outcome is not a binomial distribution? Suppose we observe 
 
 Using the techniques described in the previous section, we can compute the following values for the triangle distribution:
 
-{% latex fig-40 %}
+{% latex 1 fig-40 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -582,7 +578,7 @@ Instead of trying to find an intermediate solution analytically, we can try to f
 
 Suppose we start with an initial guess of all fairly weighted coins. We can randomly pick one of the estimated weights, adjust it up or down by a small amount, and then measure whether or not the adjustment brings the computed outcome closer to that of a triangle distribution. If the adjustment is an improvement, then we accept it. If the adjustment is not an improvement, then we reject it and revert back to the previous value. We can repeat this process many times. Here is an illustration of this algorithm:
 
-{% latex fig-44 %}
+{% latex 1 fig-44 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,positioning,shapes}
     \begin{document}
@@ -638,11 +634,11 @@ Suppose we start with an initial guess of all fairly weighted coins. We can rand
         \\[1em]
         $
         \begin{aligned}
-        s & = \text{random selection from}\, \{\, -0.00001, +0.00001\, \}
+        s & = \text{random selection from $\{\, -0.00001, +0.00001 \,\}$}
         \\
-        i & = \text{random selection from}\, \{\, 1, 2, 3\, \}
+        i & = \text{random selection from $\{\, 1, 2, 3 \,\}$}
         \\
-        j & = \text{random selection from}\, \{\, 0, 2, 4\, \}
+        j & = \text{random selection from $\{\, 0, 2, 4 \,\}$}
         \end{aligned}
         $
     };
@@ -727,7 +723,7 @@ The following sections catalog the application of this estimation process to a f
 
 Suppose we model the expected outcome as a discrete double exponential distribution such that the expectation of the game finishing on a given terminal state is 0.5 times that of the terminal state with the next highest expectation. Here is the probability mass function:
 
-{% latex fig-46 %}
+{% latex 1 fig-46 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -758,7 +754,7 @@ The above values were estimated starting with an initial guess of fairly weighte
 
 Suppose we model the expected outcome as a discrete double exponential distribution such that the expectation of the game finishing on a given terminal state is 0.4 times that of the terminal state with the next highest expectation. Here is the probability mass function:
 
-{% latex fig-51 %}
+{% latex 1 fig-51 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -789,7 +785,7 @@ The above values were estimated starting with an initial guess of fairly weighte
 
 Suppose we model the expected outcome as a discrete double exponential distribution such that the expectation of the game finishing on a given terminal state is 0.3 times that of the terminal state with the next highest expectation. Here is the probability mass function:
 
-{% latex fig-56 %}
+{% latex 1 fig-56 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}

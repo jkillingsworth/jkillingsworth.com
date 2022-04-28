@@ -11,7 +11,7 @@ The [previous post]({% post_url 2021-03-24-approximating-the-target-distribution
 
 For the first example, let's start with a linear polynomial. This is similar to the two-parameter formula used in the previous post, but with a larger range of possible slopes. The polynomial formula looks like this:
 
-{% latex fig-01 %}
+{% latex 1 fig-01 %}
     \begin{document}
     \begin{displaymath}
     f(x) = ax + b
@@ -21,13 +21,13 @@ For the first example, let's start with a linear polynomial. This is similar to 
 
 Our objective is to find the coefficients that give us the lowest [approximation error]({% post_url 2021-03-24-approximating-the-target-distribution %}#approximation-error), as described in the previous post. But instead of optimizing the coefficients directly, we can use the weights of the biased coins in the +1 and +2 states as a proxy. Here is the relationship:
 
-{% latex fig-02 %}
+{% latex 1 fig-02 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    p_1 & = a(1) + b
+    p_1 & = a\1(1) + b
     \\[1em]
-    p_2 & = a(2) + b
+    p_2 & = a\1(2) + b
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -35,7 +35,7 @@ Our objective is to find the coefficients that give us the lowest [approximation
 
 We can rearrange these two equations to get the values of the coefficients in terms of the weights of these two biased coins:
 
-{% latex fig-03 %}
+{% latex 1 fig-03 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -49,7 +49,7 @@ We can rearrange these two equations to get the values of the coefficients in te
 
 Using these two coefficients in the polynomial formula, we can then compute the weights of each one of the biased coins in the model:
 
-{% latex fig-04 %}
+{% latex 1 fig-04 %}
     \begin{document}
     \begin{displaymath}
     p_i = f(i), \quad \forall i \in \{\, 1, \dots, n - 1 \,\}
@@ -59,15 +59,15 @@ Using these two coefficients in the polynomial formula, we can then compute the 
 
 But there is one small problem. The computed value might be outside the range of possible values for the coin's bias. Remember, a coin cannot land on heads more than 100% of the time or less than 0% of the time. We can get around this by capping the value at the lower and upper bounds:
 
-{% latex fig-05 %}
+{% latex 1 fig-05 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
     g(x) =
     \begin{dcases}
-    0 & \quad \text{if } x < 0
+    0 & \quad \text{if $x < 0$}
     \\
-    1 & \quad \text{if } x > 1
+    1 & \quad \text{if $x > 1$}
     \\
     x & \quad \text{otherwise}
     \end{dcases}
@@ -78,11 +78,10 @@ But there is one small problem. The computed value might be outside the range of
 
 This capping function can be composed with the polynomial function to give us a valid computed value for the weights of the biased coins:
 
-{% latex fig-06 %}
+{% latex 1 fig-06 %}
     \begin{document}
     \begin{displaymath}
-    p_i = (g \circ f)(i)
-    , \quad \forall i \in \{\, 1, \dots, n - 1 \,\}
+    p_i = (g \circ f)(i), \quad \forall i \in \{\, 1, \dots, n - 1 \,\}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -109,7 +108,7 @@ Notice that the last one doesn't converge to the same point as the other three. 
 
 Here is the value of the cost function at the most optimal point:
 
-{% latex fig-15 %}
+{% latex 1 fig-15 %}
     \begin{document}
     \begin{displaymath}
     C = 0.00001164
@@ -123,7 +122,7 @@ Compare this result to the [approximation for the same target distribution]({% p
 
 If we use a quadratic polynomial instead of a linear polynomial, can we find a better approximation? Let's find out. Here is the formula for a quadratic polynomial:
 
-{% latex fig-16 %}
+{% latex 1 fig-16 %}
     \begin{document}
     \begin{displaymath}
     f(x) = ax^2 + bx + c
@@ -133,15 +132,15 @@ If we use a quadratic polynomial instead of a linear polynomial, can we find a b
 
 Using the same technique as before, we'll use the biases of the coins in the +1, +2, and +3 states as a proxy for the coefficients. Here is the relationship:
 
-{% latex fig-17 %}
+{% latex 1 fig-17 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    p_1 & = a(1)^2 + b(1) + c
+    p_1 & = a\1(1)^2 + b\1(1) + c
     \\[1em]
-    p_2 & = a(2)^2 + b(2) + c
+    p_2 & = a\1(2)^2 + b\1(2) + c
     \\[1em]
-    p_2 & = a(3)^2 + b(3) + c
+    p_2 & = a\1(3)^2 + b\1(3) + c
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -149,47 +148,41 @@ Using the same technique as before, we'll use the biases of the coins in the +1,
 
 To rearrange these three equations to state the coefficients in terms of the three biased coins, the best approach might be to use Gauss--Jordan elimination. We can represent the equations above in augmented matrix form, like this:
 
-{% latex fig-18 %}
-    \usepackage{array}
+{% latex 1 fig-18 %}
     \begin{document}
     \begin{displaymath}
-    \left[
     \newcolumntype{x}{wr{0.75em}}
-    \begin{array}{xxx@{\quad}|@{\quad}l}
+    \begin{matrix}{xxx@{\quad}|@{\quad}l}
     1 & 1 & 1 & p_1
     \\[1em]
     4 & 2 & 1 & p_2
     \\[1em]
     9 & 3 & 1 & p_3
-    \end{array}
-    \right]
+    \end{matrix}
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 From here, we can perform a series of elementary row operations to convert the matrix above into the reduced row echelon form:
 
-{% latex fig-19 %}
-    \usepackage{array}
+{% latex 1 fig-19 %}
     \begin{document}
     \begin{displaymath}
-    \left[
     \newcolumntype{x}{wr{0.75em}}
-    \begin{array}{xxx@{\quad}|@{\quad}l}
+    \begin{matrix}{xxx@{\quad}|@{\quad}l}
     1 & 0 & 0 & + 0.5 p_1 - 1.0 p_2 + 0.5 p_3
     \\[1em]
     0 & 1 & 0 & - 2.5 p_1 + 4.0 p_2 - 1.5 p_3
     \\[1em]
     0 & 0 & 1 & + 3.0 p_1 - 3.0 p_2 + 1.0 p_3
-    \end{array}
-    \right]
+    \end{matrix}
     \end{displaymath}
     \end{document}
 {% endlatex %}
 
 Once we do that, we can easily express the three coefficients of the quadratic polynomial in terms of the weights of the three biased coins:
 
-{% latex fig-20 %}
+{% latex 1 fig-20 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -210,7 +203,7 @@ And now that we know how to compute our coefficients, we can use the same techni
 
 Here is the value of the cost function at the most optimal point:
 
-{% latex fig-23 %}
+{% latex 1 fig-23 %}
     \begin{document}
     \begin{displaymath}
     C = 0.00001117
@@ -224,7 +217,7 @@ This result is very similar to the one found in the previous section. The fitted
 
 If we use a cubic polynomial instead of a quadratic polynomial, will the results be significantly better? Again, let's find out. Here is the formula for a cubic polynomial:
 
-{% latex fig-24 %}
+{% latex 1 fig-24 %}
     \begin{document}
     \begin{displaymath}
     f(x) = ax^3 + bx^2 + cx + d
@@ -234,17 +227,17 @@ If we use a cubic polynomial instead of a quadratic polynomial, will the results
 
 Using the same technique again, we can use the biases of the coins in the +1, +2, +3, and +4 states as a proxy for the four coefficients. Here is the relationship:
 
-{% latex fig-25 %}
+{% latex 1 fig-25 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    p_1 & = a(1)^3 + b(1)^2 + c(1) + d
+    p_1 & = a\1(1)^3 + b\1(1)^2 + c\1(1) + d
     \\[1em]
-    p_2 & = a(2)^3 + b(2)^2 + c(2) + d
+    p_2 & = a\1(2)^3 + b\1(2)^2 + c\1(2) + d
     \\[1em]
-    p_3 & = a(3)^3 + b(3)^2 + c(3) + d
+    p_3 & = a\1(3)^3 + b\1(3)^2 + c\1(3) + d
     \\[1em]
-    p_4 & = a(4)^3 + b(4)^2 + c(4) + d
+    p_4 & = a\1(4)^3 + b\1(4)^2 + c\1(4) + d
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -257,7 +250,7 @@ We can use Gauss-Jordan elimination like we did before to express the four coeff
 
 Here is the value of the cost function at the most optimal point:
 
-{% latex fig-28 %}
+{% latex 1 fig-28 %}
     \begin{document}
     \begin{displaymath}
     C = 0.00000021

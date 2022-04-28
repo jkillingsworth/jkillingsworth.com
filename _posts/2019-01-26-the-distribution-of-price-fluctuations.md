@@ -33,12 +33,10 @@ So are the price fluctuations normally distributed? Eyeballing the chart above, 
 
 To get some broader insights regarding the behavior of price movements, I want to take a look at some more exchange traded funds with a few different underlying asset types. Let's examine the daily closing prices for the following ETFs:
 
-{% latex fig-04 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-04 %}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{4em}|wl{15em}|}
+    \begin{table}{|wl{4em}|wl{15em}|}
     \hline
     \text{Symbol}    & \text{Underlying Asset}
     \\[0.25em]\hline
@@ -58,7 +56,7 @@ To get some broader insights regarding the behavior of price movements, I want t
     \\[0.25em]\hline
     \texttt{USO}     & \text{Crude oil}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -80,12 +78,10 @@ As you can see, the histogram seems to fit the Laplace distribution better than 
 
 Instead of looking at broad stock market indexes, let's see what happens if we examine individual stocks. Let's consider the daily closing prices for the following stocks:
 
-{% latex fig-13%}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-13%}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{4em}|wl{15em}|}
+    \begin{table}{|wl{4em}|wl{15em}|}
     \hline
     \text{Symbol}    & \text{Underlying Asset}
     \\[0.25em]\hline
@@ -119,7 +115,7 @@ Instead of looking at broad stock market indexes, let's see what happens if we e
     \\[0.25em]\hline
     \texttt{UNH}     & \text{UnitedHealth Group Incorporated}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -206,12 +202,10 @@ Here we see a familiar pattern. It takes the shape roughly of a Laplace distribu
 
 To see if the pattern holds, let's take a look at the daily exchange rates of a few more currency pairs. Here is the list:
 
-{% latex fig-51 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-51 %}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{4em}|wl{15em}|}
+    \begin{table}{|wl{4em}|wl{15em}|}
     \hline
     \text{Symbol}    & \text{Underlying Asset}
     \\[0.25em]\hline
@@ -231,7 +225,7 @@ To see if the pattern holds, let's take a look at the daily exchange rates of a 
     \\[0.25em]\hline
     \texttt{EUR/TRY} & \text{Euro / Turkish lira}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -268,12 +262,10 @@ Notice in some of these charts there is a large spike in the concentration of pr
 
 A number of different cryptocurrencies have emerged in the past few years. And some of them have made enormous price moves. Can we expect the price fluctuations of these digital assets to exhibit the same characteristics as stocks and currencies? Let's examine a few of the most popular ones:
 
-{% latex fig-68 %}
-    \usepackage{array}
-    \setlength{\arraycolsep}{1em}
+{% latex 1 fig-68 %}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{4em}|wl{15em}|}
+    \begin{table}{|wl{4em}|wl{15em}|}
     \hline
     \text{Symbol}    & \text{Underlying Asset}
     \\[0.25em]\hline
@@ -283,7 +275,7 @@ A number of different cryptocurrencies have emerged in the past few years. And s
     \\[0.25em]\hline
     \texttt{XRP}     & \text{Ripple}
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
