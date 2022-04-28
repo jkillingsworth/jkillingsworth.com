@@ -19,27 +19,44 @@ module Jekyll
             \usepackage[scaled=0.75]{roboto-mono}
             \usepackage{mathtools}
             \usepackage{eucal}
-            \thinmuskip=3mu
-            \medmuskip=7mu
-            \thickmuskip=7mu
-            \newcommand{\delimL}[2]
+            \usepackage{array}
+            \usepackage{colortbl}
+            \arrayrulecolor[rgb]{0.5,0.5,0.5}
+            \renewenvironment{table}[1]
             {
-                \mkern1mu
+                \setlength{\arraycolsep}{1em}
+                \begin{array}{@{\rule{0em}{1.25em}}#1}
+            }
+            {
+                \end{array}
+            }
+            \renewenvironment{matrix}[1]
+            {
+                \mathopen{}\mathclose\bgroup\left[
+                \begin{array}{#1}
+            }
+            {
+                \end{array}
+                \aftergroup\egroup\right]
+            }
+            \renewcommand{\brace}[4]
+            {
                 \if#1*
-                    \mathopen{}\left#2
+                    \mathopen{}\mathclose\bgroup\left#2
+                    #4
+                    \aftergroup\egroup\right#3
                 \else
                     \ifcase#1#2\or\bigl#2\or\Bigl#2\or\biggl#2\or\Biggl#2\else#2\fi
+                    #4
+                    \ifcase#1#3\or\bigr#3\or\Bigr#3\or\biggr#3\or\Biggr#3\else#3\fi
                 \fi
             }
-            \newcommand{\delimR}[2]
-            {
-                \if#1*
-                    \right#2\mathclose{}
-                \else
-                    \ifcase#1#2\or\bigr#2\or\Bigr#2\or\biggr#2\or\Biggr#2\else#2\fi
-                \fi
-            }
-            \newcommand{\delim}[4]{\delimL#1#2#4\delimR#1#3}
+            \newcommand{\0}{\mspace{0.5mu}}
+            \newcommand{\1}{\mspace{1.0mu}}
+            \newcommand{\2}{\mspace{1.5mu}}
+            \newcommand{\tsum}{\mathop{\textstyle\sum}}
+            \newcommand{\dderiv}{d\mspace{-1.5mu}}
+            \newcommand{\pderiv}{\partial\mspace{-2.0mu}}
             \newcommand{\sscr}[1]{\text{#1}}
             '
 

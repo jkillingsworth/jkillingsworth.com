@@ -14,11 +14,11 @@ Suppose we have a function in the time domain. The value varies as a function of
 {% latex 1 fig-01 %}
     \begin{document}
     \begin{displaymath}
-    \mathcal{F}^{\,+1\!} \delim{1}\{\}{x(t)}
+    \mathcal{F}^{\,+1\!} \brace1{\lbrace}{\rbrace}{ x(t) }
     =
     y(f)
     =
-    \int_{-\infty}^{\infty} x(t) \, e^{-i 2 \pi f t} \, d\!t
+    \int_{-\infty}^{\infty} x(t) \, e^{-i 2 \pi f t} \, \dderiv t
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -28,11 +28,11 @@ The formula above is what we can think of as the forward transform. It takes a f
 {% latex 1 fig-02 %}
     \begin{document}
     \begin{displaymath}
-    \mathcal{F}^{\,-1\!} \delim{1}\{\}{y(f)}
+    \mathcal{F}^{\,-1\!} \brace1{\lbrace}{\rbrace}{ y(f) }
     =
     x(t)
     =
-    \int_{-\infty}^{\infty} y(f) \mspace{1mu} \, e^{i 2 \pi f t} \, d\!f
+    \int_{-\infty}^{\infty} y(f) \, e^{i 2 \pi f t} \, \dderiv f
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -70,13 +70,9 @@ I think the discrete transform is more intuitive and easier to understand. We'll
 We're only going to take samples over a finite time window of one second. That means we're going to have a total of eight data points. The following table shows the discrete points in time at which we'll sample the input function:
 
 {% latex 1 fig-06 %}
-    \usepackage{array}
-    \usepackage{colortbl}
-    \setlength{\arraycolsep}{1em}
-    \arrayrulecolor[rgb]{0.5,0.5,0.5}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{1.5em}|wl{3.5em}|}
+    \begin{table}{|wl{1.5em}|wl{3.5em}|}
     \hline
     n & t_n
     \\[0.25em]\hline
@@ -96,7 +92,7 @@ We're only going to take samples over a finite time window of one second. That m
     \\[0.25em]\hline
     7 & 0.8750
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -104,13 +100,9 @@ We're only going to take samples over a finite time window of one second. That m
 We want to round trip our input function from the time domain to the frequency domain and then back again to the time domain. We need to choose some discrete frequencies. Here are the eight different frequencies we'll use:
 
 {% latex 1 fig-07 %}
-    \usepackage{array}
-    \usepackage{colortbl}
-    \setlength{\arraycolsep}{1em}
-    \arrayrulecolor[rgb]{0.5,0.5,0.5}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{1.5em}|wl{3.5em}|}
+    \begin{table}{|wl{1.5em}|wl{3.5em}|}
     \hline
     k & f_k
     \\[0.25em]\hline
@@ -130,7 +122,7 @@ We want to round trip our input function from the time domain to the frequency d
     \\[0.25em]\hline
     7 & 7.0000
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -144,7 +136,7 @@ For our first example, let's just use a simple sine wave. And let's use a sine w
 {% latex 1 fig-08 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \sin\delim{1}(){2 \pi t}
+    x(t) = \sin\2\brace1(){2 \pi t}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -154,7 +146,7 @@ To foreshadow what is to come, I think it's worth pointing out here that a sine 
 {% latex 1 fig-09 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \cos\delim{1}(){2 \pi t - 0.5 \pi}
+    x(t) = \cos\2\brace1(){2 \pi t - 0.5 \pi}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -162,13 +154,9 @@ To foreshadow what is to come, I think it's worth pointing out here that a sine 
 The two function definitions above are equivalent. Keep that in the back of your mind as you read further. And while this is a continuous function, we only want to perform our transform operations on discrete samples of the input function. Here are the sample values at each of the discrete points on the time domain:
 
 {% latex 1 fig-10 %}
-    \usepackage{array}
-    \usepackage{colortbl}
-    \setlength{\arraycolsep}{1em}
-    \arrayrulecolor[rgb]{0.5,0.5,0.5}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{1.5em}|wl{3.5em}|wl{8em+2.0555em}|}
+    \begin{table}{|wl{1.5em}|wl{3.5em}|wl{8em+2.0555em}|}
     \hline
     n & t_n    & x_n
     \\[0.25em]\hline
@@ -188,7 +176,7 @@ The two function definitions above are equivalent. Keep that in the back of your
     \\[0.25em]\hline
     7 & 0.8750 & -0.7071
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -210,33 +198,29 @@ Once we have taken the sample values of the input function, we are ready to exec
 This formula takes the form of a continuous function on the frequency domain. But what we really want to do here is take discrete samples of this function, one for each of our chosen frequencies. Here are the values:
 
 {% latex 1 fig-13 %}
-    \usepackage{array}
-    \usepackage{colortbl}
-    \setlength{\arraycolsep}{1em}
-    \arrayrulecolor[rgb]{0.5,0.5,0.5}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{1.5em}|wl{3.5em}|wl{8em+2.0555em}|}
+    \begin{table}{|wl{1.5em}|wl{3.5em}|wl{8em+2.0555em}|}
     \hline
     k & f_k    & y_k
     \\[0.25em]\hline
-    0 & 0.0000 & \pm 0.0000 \pm i \, 0.0000
+    0 & 0.0000 & \pm 0.0000 \pm i \0 0.0000
     \\[0.25em]\hline
-    1 & 1.0000 & \pm 0.0000 - i \, 0.5000
+    1 & 1.0000 & \pm 0.0000 - i \0 0.5000
     \\[0.25em]\hline
-    2 & 2.0000 & \pm 0.0000 \pm i \, 0.0000
+    2 & 2.0000 & \pm 0.0000 \pm i \0 0.0000
     \\[0.25em]\hline
-    3 & 3.0000 & \pm 0.0000 \pm i \, 0.0000
+    3 & 3.0000 & \pm 0.0000 \pm i \0 0.0000
     \\[0.25em]\hline
-    4 & 4.0000 & \pm 0.0000 \pm i \, 0.0000
+    4 & 4.0000 & \pm 0.0000 \pm i \0 0.0000
     \\[0.25em]\hline
-    5 & 5.0000 & \pm 0.0000 \pm i \, 0.0000
+    5 & 5.0000 & \pm 0.0000 \pm i \0 0.0000
     \\[0.25em]\hline
-    6 & 6.0000 & \pm 0.0000 \pm i \, 0.0000
+    6 & 6.0000 & \pm 0.0000 \pm i \0 0.0000
     \\[0.25em]\hline
-    7 & 7.0000 & \pm 0.0000 + i \, 0.5000
+    7 & 7.0000 & \pm 0.0000 + i \0 0.5000
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -261,7 +245,7 @@ We want to express this using the polar form:
 {% latex 1 fig-17 %}
     \begin{document}
     \begin{displaymath}
-    y = A \, e^{i\phi}
+    y = A \0 e^{i\phi}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -283,11 +267,11 @@ Computing the phase angle is a bit more involved. If the complex value lies on t
     \begin{displaymath}
     \phi =
     \begin{dcases}
-    \arctan\delim{*}(){\tfrac{b}{a}}       & \quad \text{if $a > 0$}
+    \arctan\2\brace1(){\tfrac{b}{a}}       & \quad \text{if $a > 0$}
     \\[0.5em]
-    \arctan\delim{*}(){\tfrac{b}{a}} + \pi & \quad \text{if $a < 0$ and $b > 0$}
+    \arctan\2\brace1(){\tfrac{b}{a}} + \pi & \quad \text{if $a < 0$ and $b > 0$}
     \\[0.5em]
-    \arctan\delim{*}(){\tfrac{b}{a}} - \pi & \quad \text{if $a < 0$ and $b < 0$}
+    \arctan\2\brace1(){\tfrac{b}{a}} - \pi & \quad \text{if $a < 0$ and $b < 0$}
     \\[0.5em]
     +\pi                                   & \quad \text{if $a < 0$ and $b = 0$}
     \\[0.5em]
@@ -306,7 +290,7 @@ For this definition, the principal value of the phase angle lies in the followin
 {% latex 1 fig-20 %}
     \begin{document}
     \begin{displaymath}
-    -\pi < \phi \le +\pi
+    -\pi < \phi \leq +\pi
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -314,13 +298,9 @@ For this definition, the principal value of the phase angle lies in the followin
 We could have chosen a different range for the principal value, but this one seems to be the most widely used convention. In cases where both real and imaginary values are zero, the phase angle is undefined. It doesn't matter because the magnitude is zero. But if you're using a computer to calculate the phase, you might want to be careful what concrete result you get in this case. Consider what happens if you use the [.NET two-argument arctangent](https://docs.microsoft.com/en-us/dotnet/api/system.math.atan2) function to compute the phase when the real and imaginary coefficients are both zero:
 
 {% latex 1 fig-21 %}
-    \usepackage{array}
-    \usepackage{colortbl}
-    \setlength{\arraycolsep}{1em}
-    \arrayrulecolor[rgb]{0.5,0.5,0.5}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{4.5em}|wl{4.5em}|wl{4em+2.0555em}|}
+    \begin{table}{|wl{4.5em}|wl{4.5em}|wl{4em+2.0555em}|}
     \hline
     a       & b       & \phi
     \\[0.25em]\hline
@@ -332,7 +312,7 @@ We could have chosen a different range for the principal value, but this one see
     \\[0.25em]\hline
     -0.0000 & -0.0000 & -3.1416
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -340,13 +320,9 @@ We could have chosen a different range for the principal value, but this one see
 Do you see why I mentioned the signed zeros? You can't assume that a positive zero will always be treated the same as a negative zero. If you're not careful, you might wind up with some very unexpected results. I suspect other software libraries that provide mathematical functions have similar nuances. There are other subtleties related to this that are beyond the scope of this post. For now, let's just treat zero and near-zero complex values as having a phase angle of zero. Depicted below are the results of our Fourier transform expressed in polar form:
 
 {% latex 1 fig-22 %}
-    \usepackage{array}
-    \usepackage{colortbl}
-    \setlength{\arraycolsep}{1em}
-    \arrayrulecolor[rgb]{0.5,0.5,0.5}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{1.5em}|wl{3.5em}|wl{3.5em}|wl{4.5em}|}
+    \begin{table}{|wl{1.5em}|wl{3.5em}|wl{3.5em}|wl{4.5em}|}
     \hline
     k & f_k    & A_k    & \phi_k
     \\[0.25em]\hline
@@ -366,7 +342,7 @@ Do you see why I mentioned the signed zeros? You can't assume that a positive ze
     \\[0.25em]\hline
     7 & 7.0000 & 0.5000 & +1.5708
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -382,15 +358,11 @@ Note the symmetry and reverse symmetry of the magnitude and phase components, re
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    x(t)
-    & =
-    \sum_{k = 0}^{N - 1} y_k e^{i 2 \pi f_k t}
+    x(t) & = \sum_{k = 0}^{N - 1} y_k e^{i 2 \pi f_k t}
     \\[1em]
-    & =
-    \sum_{k = 0}^{N - 1} A_k e^{i \phi_k} e^{i 2 \pi f_k t}
+         & = \sum_{k = 0}^{N - 1} A_k e^{i \phi_k} e^{i 2 \pi f_k t}
     \\[1em]
-    & =
-    \sum_{k = 0}^{N - 1} A_k e^{i \delim{0}(){2 \pi f_k t + \phi_k}}
+         & = \sum_{k = 0}^{N - 1} A_k e^{i (2 \pi f_k t + \phi_k)}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -403,12 +375,13 @@ As shown above, we can easily consolidate the exponents when expressing our comp
     \begin{displaymath}
     x(t) =
     \sum_{k = 0}^{N - 1}
-    A_k
-    \delimL{3}[
-    \cos\delim{1}(){2 \pi f_k t + \phi_k}
+    A_k \1
+    \brace3[]
+    {
+    \cos\2\brace1(){2 \pi f_k t + \phi_k}
     + i
-    \sin\delim{1}(){2 \pi f_k t + \phi_k}
-    \delimR{3}]
+    \sin\2\brace1(){2 \pi f_k t + \phi_k}
+    }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -418,7 +391,7 @@ Since the original values in the time domain are real numbers, not complex numbe
 {% latex 1 fig-27 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \sum_{k = 0}^{N - 1} A_k \cos\delim{1}(){2 \pi f_k t + \phi_k}
+    x(t) = \sum_{k = 0}^{N - 1} A_k \cos\2\brace1(){2 \pi f_k t + \phi_k}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -429,9 +402,9 @@ This is the inverse transform expressed in a form that uses the magnitude and ph
     \begin{document}
     \begin{displaymath}
     x(t) =
-    A_1 \cos\delim{1}(){2 \pi f_1 t + \phi_1}
+    A_1 \cos\2\brace1(){2 \pi f_1 t + \phi_1}
     +
-    A_7 \cos\delim{1}(){2 \pi f_7 t + \phi_7}
+    A_7 \cos\2\brace1(){2 \pi f_7 t + \phi_7}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -449,7 +422,7 @@ In the previous example, we noted the symmetry of the transformed values on the 
 {% latex 1 fig-30 %}
     \begin{document}
     \begin{displaymath}
-    y_k = \frac{1}{N} \sum_{n = 0}^{N - 1} \sin\delim{1}(){2 \pi t_n} e^{-i 2 \pi f_k t_n}
+    y_k = \frac{1}{N} \sum_{n = 0}^{N - 1} \sin\2\brace1(){2 \pi t_n} \, e^{-i 2 \pi f_k t_n}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -460,9 +433,9 @@ These are the same complex values on the frequency domain we saw in the previous
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    u & = \delim{*}{\lfloor}{\rfloor}{\tfrac{N - 1}{2}}
+    u & = \brace1{\lfloor}{\rfloor}{\tfrac{N - 1}{2}}
     \\[0.5em]
-    v & = \delim{*}{\lfloor}{\rfloor}{\tfrac{N + 2}{2}}
+    v & = \brace1{\lfloor}{\rfloor}{\tfrac{N + 2}{2}}
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -495,7 +468,7 @@ After performing the modification, all but one of the values in the frequency do
 {% latex 1 fig-35 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = A_1 \cos\delim{1}(){2 \pi f_1 t + \phi_1}
+    x(t) = A_1 \cos\2\brace1(){2 \pi f_1 t + \phi_1}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -531,7 +504,7 @@ Analogous to the previous instance, all but one of the values in the frequency d
 {% latex 1 fig-40 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = A_7 \cos\delim{1}(){2 \pi f_7 t + \phi_7}
+    x(t) = A_7 \cos\2\brace1(){2 \pi f_7 t + \phi_7}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -551,13 +524,9 @@ Suppose we have a function that is the superimposition of several different sinu
 Now let's say that maybe we don't even know how this input function is defined; we just know the values at the samples points. Here are the samples values:
 
 {% latex 1 fig-43 %}
-    \usepackage{array}
-    \usepackage{colortbl}
-    \setlength{\arraycolsep}{1em}
-    \arrayrulecolor[rgb]{0.5,0.5,0.5}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{1.5em}|wl{3.5em}|wl{8em+2.0555em}|}
+    \begin{table}{|wl{1.5em}|wl{3.5em}|wl{8em+2.0555em}|}
     \hline
     n & t_n    & x_n
     \\[0.25em]\hline
@@ -577,7 +546,7 @@ Now let's say that maybe we don't even know how this input function is defined; 
     \\[0.25em]\hline
     7 & 0.8750 & -1.1036
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -617,13 +586,9 @@ Here is a visual representation of the modified values in the frequency domain:
 Here are the calculated results for each of the predefined frequencies:
 
 {% latex 1 fig-48 %}
-    \usepackage{array}
-    \usepackage{colortbl}
-    \setlength{\arraycolsep}{1em}
-    \arrayrulecolor[rgb]{0.5,0.5,0.5}
     \begin{document}
     \begin{displaymath}
-    \begin{array}{@{\rule{0em}{1.25em}}|wl{1.5em}|wl{3.5em}|wl{3.5em}|wl{4.5em}|}
+    \begin{table}{|wl{1.5em}|wl{3.5em}|wl{3.5em}|wl{4.5em}|}
     \hline
     k & f_k    & A_k    & \phi_k
     \\[0.25em]\hline
@@ -643,7 +608,7 @@ Here are the calculated results for each of the predefined frequencies:
     \\[0.25em]\hline
     7 & 7.0000 & 0.0000 & \pm 0.0000
     \\[0.25em]\hline
-    \end{array}
+    \end{table}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -653,7 +618,7 @@ Using these values in the frequency domain, we can now apply the inverse transfo
 {% latex 1 fig-49 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \sum_{k = 0}^{N - 1} A_k \cos\delim{1}(){2 \pi f_k t + \phi_k}
+    x(t) = \sum_{k = 0}^{N - 1} A_k \cos\2\brace1(){2 \pi f_k t + \phi_k}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -663,10 +628,12 @@ And since there are only three nonzero values in the table above, we can represe
 {% latex 1 fig-50 %}
     \begin{document}
     \begin{displaymath}
-    x(t)
-    = A_1 \cos\delim{1}(){2 \pi f_1 t + \phi_1}
-    + A_2 \cos\delim{1}(){2 \pi f_2 t + \phi_2}
-    + A_3 \cos\delim{1}(){2 \pi f_3 t + \phi_3}
+    x(t) =
+    A_1 \cos\2\brace1(){2 \pi f_1 t + \phi_1}
+    +
+    A_2 \cos\2\brace1(){2 \pi f_2 t + \phi_2}
+    +
+    A_3 \cos\2\brace1(){2 \pi f_3 t + \phi_3}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -686,7 +653,7 @@ What happens if you shift a function vertically by some amount? How does this af
 {% latex 1 fig-54 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \sin\delim{1}(){2 \pi t} + 0.5
+    x(t) = \sin\2\brace1(){2 \pi t} + 0.5
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -706,9 +673,9 @@ Notice the magnitude value for the zero frequency. This value represents the ver
     \begin{document}
     \begin{displaymath}
     x(t) =
-    A_0 \cos\delim{1}(){2 \pi f_0 t + \phi_0}
+    A_0 \cos\2\brace1(){2 \pi f_0 t + \phi_0}
     +
-    A_1 \cos\delim{1}(){2 \pi f_1 t + \phi_1}
+    A_1 \cos\2\brace1(){2 \pi f_1 t + \phi_1}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -718,7 +685,7 @@ Now let's plug in the concrete values and simplify, taking into consideration th
 {% latex 1 fig-59 %}
     \begin{document}
     \begin{displaymath}
-    \cos\delim{0}(){0} = 1
+    \cos\2(0) = 1
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -728,7 +695,7 @@ Here is the simplified version of the inverse transform:
 {% latex 1 fig-60 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \cos\delim{1}(){2 \pi t - 0.5 \pi} + 0.5
+    x(t) = \cos\2\brace1(){2 \pi t - 0.5 \pi} + 0.5
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -742,7 +709,7 @@ We've seen what happens if you shift a function vertically in the upward directi
 {% latex 1 fig-61 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \sin\delim{1}(){2 \pi t} - 0.5
+    x(t) = \sin\2\brace1(){2 \pi t} - 0.5
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -762,9 +729,9 @@ Notice the phase offset for the zero frequency in addition to the magnitude valu
     \begin{document}
     \begin{displaymath}
     x(t) =
-    A_0 \cos\delim{1}(){2 \pi f_0 t + \phi_0}
+    A_0 \cos\2\brace1(){2 \pi f_0 t + \phi_0}
     +
-    A_1 \cos\delim{1}(){2 \pi f_1 t + \phi_1}
+    A_1 \cos\2\brace1(){2 \pi f_1 t + \phi_1}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -774,7 +741,7 @@ Now let's plug in the concrete values and simplify, taking into consideration th
 {% latex 1 fig-66 %}
     \begin{document}
     \begin{displaymath}
-    \cos\delim{0}(){\pi} = -1
+    \cos\2(\pi) = -1
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -784,7 +751,7 @@ Here is the simplified version of the inverse transform:
 {% latex 1 fig-67 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \cos\delim{1}(){2 \pi t - 0.5 \pi} - 0.5
+    x(t) = \cos\2\brace1(){2 \pi t - 0.5 \pi} - 0.5
     \end{displaymath}
     \end{document}
 {% endlatex %}
