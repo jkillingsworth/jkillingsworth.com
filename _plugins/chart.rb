@@ -22,14 +22,14 @@ module Jekyll
 
             if File.exist?(file) then
                 xml = open(file, "r") { |f| Nokogiri::XML(f) }
-                w = capture_px(xml, "width")
                 h = capture_px(xml, "height")
+                w = capture_px(xml, "width")
             end
 
             aspect_ratio = 100 / (w.to_f / h.to_f)
 
             opening = "<figure class=\"fig-chart\" style=\"padding-top: #{aspect_ratio}%;\">"
-            content = "<img width=\"#{w}\" height=\"#{h}\" alt=\"Figure #{figno.to_i}\" src=\".#{post.url}#{name}\" />"
+            content = "<img src=\".#{post.url}#{name}\" alt=\"Figure #{figno.to_i}\" height=\"#{h}\" width=\"#{w}\" />"
             closing = "</figure>"
 
             opening + content + closing
