@@ -125,10 +125,9 @@ module Jekyll
 
             xml = open(file, "r") { |f| Nokogiri::XML(f) }
             h = capture_px(xml, "height")
-            w = capture_px(xml, "width")
 
             opening = "<figure class=\"fig-latex\">"
-            content = "<img src=\".#{post.url}#{name}\" alt=\"Figure #{figno.to_i}\" height=\"#{h}\" width=\"#{w}\" />"
+            content = "<img src=\".#{post.url}#{name}\" alt=\"Figure #{figno.to_i}\" height=\"#{h}\" />"
             closing = "</figure>"
 
             opening + content + closing
