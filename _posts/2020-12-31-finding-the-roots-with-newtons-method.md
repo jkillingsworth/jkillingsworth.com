@@ -124,7 +124,7 @@ Since we are interested in the inverse of the Jacobian matrix, we need to consid
     \begin{displaymath}
     \mathbf{J}
     =
-    \mathbf{U} \mathbf{\Sigma} \mathbf{V}^{\sscr{T}}
+    \mathbf{U} \mathbf{\Sigma} \mathbf{V}^{\sscript{T}}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -136,7 +136,7 @@ This is the singular value decomposition of the Jacobian matrix. It is broken do
     \begin{displaymath}
     \mathbf{J}^{-1}
     =
-    \mathbf{V} \mathbf{\Sigma}^{-1} \mathbf{U}^{\sscr{T}}
+    \mathbf{V} \mathbf{\Sigma}^{-1} \mathbf{U}^{\sscript{T}}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -276,7 +276,7 @@ Let's consider another example using a model of the coin toss game with four fli
     \begin{displaymath}
     \begin{aligned}
     \mathbf{p}
-    _{\mathrlap{\sscr{start}}\phantom{\sscr{finish}}}
+    _{\mathrlap{\sscript{start}}\phantom{\sscript{finish}}}
     & =
     \begin{matrix}{l}
     0.5000
@@ -287,7 +287,7 @@ Let's consider another example using a model of the coin toss game with four fli
     \end{matrix}
     \\[1em]
     \boldsymbol{\lambdaup}
-    _{\mathrlap{\sscr{start}}\phantom{\sscr{finish}}}
+    _{\mathrlap{\sscript{start}}\phantom{\sscript{finish}}}
     & =
     \begin{matrix}{l}
     0.0000
@@ -324,7 +324,7 @@ Applying Newton's method, here is the result:
     \begin{displaymath}
     \begin{aligned}
     \mathbf{p}
-    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
+    _{\mathrlap{\sscript{finish}}\phantom{\sscript{finish}}}
     & =
     \begin{matrix}{l}
     \phantom{+}0.4422
@@ -335,7 +335,7 @@ Applying Newton's method, here is the result:
     \end{matrix}
     \\[1em]
     \boldsymbol{\lambdaup}
-    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
+    _{\mathrlap{\sscript{finish}}\phantom{\sscript{finish}}}
     & =
     \begin{matrix}{l}
     +0.0070
@@ -372,7 +372,7 @@ Applying Newton's method, here is the result:
     \begin{displaymath}
     \begin{aligned}
     \mathbf{p}
-    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
+    _{\mathrlap{\sscript{finish}}\phantom{\sscript{finish}}}
     & =
     \begin{matrix}{l}
     \phantom{+}0.4487
@@ -383,7 +383,7 @@ Applying Newton's method, here is the result:
     \end{matrix}
     \\[1em]
     \boldsymbol{\lambdaup}
-    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
+    _{\mathrlap{\sscript{finish}}\phantom{\sscript{finish}}}
     & =
     \begin{matrix}{l}
     -0.2970

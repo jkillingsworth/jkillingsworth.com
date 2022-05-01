@@ -163,7 +163,7 @@ We need to align the arrays in a way that makes it easy to perform the calculati
     \node[cell={frame,inner,value}]         at ( 1,   1.0) {0.3000};
     \node[cell={frame,inner,value}]         at ( 2,   1.0) {0.1000};
     \node[cell={frame,outer,empty}]         at ( 3,   1.0) {0};
-    \node[pnode]                    (pph0)  at ( 0,   2.7) {$u^{\sscr{heads}}_{0}$};
+    \node[pnode]                    (pph0)  at ( 0,   2.7) {$u^{\sscript{heads}}_{0}$};
     \path[ppath]                    (pph0)  -- (vph0);
     \node[array]                            at (-1.9, 4.5) {$\mathbf{v}$};
     \node[edge={frame,outer,L}]             at (-1.6, 4.5) {};
@@ -171,7 +171,7 @@ We need to align the arrays in a way that makes it easy to perform the calculati
     \node[cell={frame,inner,value}] (vqt0)  at ( 0,   4.5) {0.7000};
     \node[cell={frame,inner,value}]         at ( 1,   4.5) {0.9000};
     \node[cell={frame,inner,empty}]         at ( 2,   4.5) {0};
-    \node[pnode]                    (pqt0)  at ( 0,   6.2) {$v^{\sscr{tails}}_{0}$};
+    \node[pnode]                    (pqt0)  at ( 0,   6.2) {$v^{\sscript{tails}}_{0}$};
     \path[ppath]                    (pqt0)  -- (vqt0);
     \end{tikzpicture}
     \end{document}
@@ -293,7 +293,7 @@ We need to align the arrays in a way that makes it easy to perform the calculati
     \node[cell={frame,inner,value}]         at ( 2,   1.0) {0.2000};
     \node[cell={frame,outer,empty}]         at ( 3,   1.0) {0};
     \node[edge={frame,outer,R}]             at ( 3.6, 1.0) {};
-    \node[pnode]                    (pph0)  at ( 0,   2.7) {$x^{\sscr{heads}}_{0}$};
+    \node[pnode]                    (pph0)  at ( 0,   2.7) {$x^{\sscript{heads}}_{0}$};
     \path[ppath]                    (pph0)  -- (vph0);
     \node[array]                            at (-1.9, 4.5) {$\mathbf{y}$};
     \node[cell={frame,outer,empty}]         at (-1,   4.5) {0};
@@ -301,7 +301,7 @@ We need to align the arrays in a way that makes it easy to perform the calculati
     \node[cell={frame,inner,value}]         at ( 1,   4.5) {0.8000};
     \node[cell={frame,inner,empty}]         at ( 2,   4.5) {0};
     \node[cell={frame,outer,empty}]         at ( 3,   4.5) {0};
-    \node[pnode]                    (pqt0)  at ( 0,   6.2) {$y^{\sscr{tails}}_{0}$};
+    \node[pnode]                    (pqt0)  at ( 0,   6.2) {$y^{\sscript{tails}}_{0}$};
     \path[ppath]                    (pqt0)  -- (vqt0);
     \end{tikzpicture}
     \end{document}

@@ -92,7 +92,10 @@ This is fewer than the total number of possible outcomes. In our model, the dist
 {% latex 1 fig-15 %}
     \begin{document}
     \begin{displaymath}
-    C = \sum_{i = 1}^{m} \2 \brace1(){ r_{k,\sscr{target}} - r_{k,\sscr{approx}} }^2, \quad
+    C =
+    \sum_{i = 1}^{m}
+    \2
+    \brace1(){ r_{k,\sscript{target}} - r_{k,\sscript{approx}} }^2, \quad
     k =
     \begin{dcases}
     2i - 2 & \quad \text{if $n$ is even}

@@ -148,9 +148,9 @@ These are our lookup tables. Notice that these arrays are padded with three extr
     \begin{document}
     \begin{displaymath}
     \begin{drcases}
-    \mathrlap{p^{\sscr{heads}}_{i}}\phantom{p^{\sscr{heads}}} = p_{(i - 1)} \quad
+    \mathrlap{p^{\sscript{heads}}_{i}}\phantom{p^{\sscript{heads}}} = p_{(i - 1)} \quad
     \\[0.5em]
-    \mathrlap{q^{\sscr{tails}}_{i}}\phantom{p^{\sscr{heads}}} = q_{(i + 1)} \quad
+    \mathrlap{q^{\sscript{tails}}_{i}}\phantom{p^{\sscript{heads}}} = q_{(i + 1)} \quad
     \end{drcases}
     \quad \forall i \in \{\, 0, \dots, n \,\}
     \end{displaymath}
@@ -213,7 +213,7 @@ One pointer is incremented, while the other is decremented. This effectively shi
     \node[cell={frame,inner,value}]         at ( 4,   1.0) {0.2000};
     \node[cell={frame,outer,empty}]         at ( 5,   1.0) {0};
     \node[edge={frame,outer,R}]             at ( 5.6, 1.0) {};
-    \node[pnode]                    (pph0)  at ( 0,   2.7) {$p^{\sscr{heads}}_{0}$};
+    \node[pnode]                    (pph0)  at ( 0,   2.7) {$p^{\sscript{heads}}_{0}$};
     \path[ppath]                    (pph0)  -- (vph0);
     \node[array]                            at (-1.9, 4.5) {$\mathbf{q}$};
     \node[edge={frame,outer,L}]             at (-1.6, 4.5) {};
@@ -223,7 +223,7 @@ One pointer is incremented, while the other is decremented. This effectively shi
     \node[cell={frame,inner,value}]         at ( 2,   4.5) {0.8000};
     \node[cell={frame,inner,empty}]         at ( 3,   4.5) {0};
     \node[cell={frame,inner,empty}]         at ( 4,   4.5) {0};
-    \node[pnode]                    (pqt0)  at ( 0,   6.2) {$q^{\sscr{tails}}_{0}$};
+    \node[pnode]                    (pqt0)  at ( 0,   6.2) {$q^{\sscript{tails}}_{0}$};
     \path[ppath]                    (pqt0)  -- (vqt0);
     \end{tikzpicture}
     \end{document}
@@ -276,9 +276,9 @@ This array is allocated to the same size as the arrays used for the state transi
     \begin{document}
     \begin{displaymath}
     \begin{drcases}
-    \mathrlap{r^{\sscr{heads}}_{k,i}}\phantom{r^{\sscr{heads}}} = r_{k,(i - 1)} \quad
+    \mathrlap{r^{\sscript{heads}}_{k,i}}\phantom{r^{\sscript{heads}}} = r_{k,(i - 1)} \quad
     \\[0.5em]
-    \mathrlap{r^{\sscr{tails}}_{k,i}}\phantom{r^{\sscr{heads}}} = r_{k,(i + 1)} \quad
+    \mathrlap{r^{\sscript{tails}}_{k,i}}\phantom{r^{\sscript{heads}}} = r_{k,(i + 1)} \quad
     \end{drcases}
     \quad \forall i \in \{\, 0, \dots, n \,\}
     \end{displaymath}
@@ -341,7 +341,7 @@ In this case, we create a pair of pointers that point to two different elements 
     \node[cell={frame,inner,empty}]         at ( 4,   1.0) {0};
     \node[cell={frame,outer,empty}]         at ( 5,   1.0) {0};
     \node[edge={frame,outer,R}]             at ( 5.6, 1.0) {};
-    \node[pnode]                    (prh00) at ( 0,   2.7) {$r^{\sscr{heads}}_{0,0}$};
+    \node[pnode]                    (prh00) at ( 0,   2.7) {$r^{\sscript{heads}}_{0,0}$};
     \path[ppath]                    (prh00) -- (vrh00);
     \node[array]                            at (-1.9, 4.5) {$\mathbf{r}_{0}$};
     \node[edge={frame,outer,L}]             at (-1.6, 4.5) {};
@@ -351,7 +351,7 @@ In this case, we create a pair of pointers that point to two different elements 
     \node[cell={frame,inner,empty}]         at ( 2,   4.5) {0};
     \node[cell={frame,inner,empty}]         at ( 3,   4.5) {0};
     \node[cell={frame,inner,empty}]         at ( 4,   4.5) {0};
-    \node[pnode]                    (prt00) at ( 0,   6.2) {$r^{\sscr{tails}}_{0,0}$};
+    \node[pnode]                    (prt00) at ( 0,   6.2) {$r^{\sscript{tails}}_{0,0}$};
     \path[ppath]                    (prt00) -- (vrt00);
     \end{tikzpicture}
     \end{document}
@@ -375,9 +375,9 @@ Now that we have arrays representing our state transition values and our initial
             $
             r_{k,i}
             \leftarrow
-            \brace2(){ p^{\sscr{heads}}_{i} \cdot r^{\sscr{heads}}_{j,i} }
+            \brace2(){ p^{\sscript{heads}}_{i} \cdot r^{\sscript{heads}}_{j,i} }
             +
-            \brace2(){ q^{\sscr{tails}}_{i} \cdot r^{\sscr{tails}}_{j,i} }
+            \brace2(){ q^{\sscript{tails}}_{i} \cdot r^{\sscript{tails}}_{j,i} }
             $\;
         }
         \BlankLine

@@ -648,23 +648,23 @@ Suppose we start with an initial guess of all fairly weighted coins. We can rand
         \\[1em]
         $
         \begin{aligned}
-        d_{\mathrlap{\sscr{original}}\phantom{\sscr{proposed}}}
+        d_{\mathrlap{\sscript{original}}\phantom{\sscript{proposed}}}
         & =
         r_j - (\text{calculate $r_j$ given $p_i$})
         \\
-        d_{\mathrlap{\sscr{proposed}}\phantom{\sscr{proposed}}}
+        d_{\mathrlap{\sscript{proposed}}\phantom{\sscript{proposed}}}
         & =
         r_j - (\text{calculate $r_j$ given $p_i + s$})
         \\
-        v_{\sscr{improved}}
+        v_{\sscript{improved}}
         & =
-        |d_{\sscr{proposed}}| < |d_{\sscr{original}}|
+        |d_{\sscript{proposed}}| < |d_{\sscript{original}}|
         \end{aligned}
         $
     };
     \node[decision] (step5) [below=0.25in of step4]
     {
-        $v_{\sscr{improved}}$
+        $v_{\sscript{improved}}$
     };
     \node[process]  (step6) [below=0.25in of step5]
     {

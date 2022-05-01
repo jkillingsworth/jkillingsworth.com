@@ -384,7 +384,7 @@ We can use the constraint functions above to create a Lagrangian function. Using
     \begin{displaymath}
     \begin{aligned}
     \mathbf{p}
-    _{\mathrlap{\sscr{start}}\phantom{\sscr{finish}}}
+    _{\mathrlap{\sscript{start}}\phantom{\sscript{finish}}}
     & =
     \begin{matrix}{l}
     0.5000
@@ -395,7 +395,7 @@ We can use the constraint functions above to create a Lagrangian function. Using
     \end{matrix}
     \\[1em]
     \boldsymbol{\lambdaup}
-    _{\mathrlap{\sscr{start}}\phantom{\sscr{finish}}}
+    _{\mathrlap{\sscript{start}}\phantom{\sscript{finish}}}
     & =
     \begin{matrix}{l}
     0.0000
@@ -432,7 +432,7 @@ Applying the gradient descent method, here is the result:
     \begin{displaymath}
     \begin{aligned}
     \mathbf{p}
-    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
+    _{\mathrlap{\sscript{finish}}\phantom{\sscript{finish}}}
     & =
     \begin{matrix}{l}
     \phantom{+}0.4422
@@ -443,7 +443,7 @@ Applying the gradient descent method, here is the result:
     \end{matrix}
     \\[1em]
     \boldsymbol{\lambdaup}
-    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
+    _{\mathrlap{\sscript{finish}}\phantom{\sscript{finish}}}
     & =
     \begin{matrix}{l}
     +0.0070
@@ -480,7 +480,7 @@ Applying the gradient descent method, here is the result:
     \begin{displaymath}
     \begin{aligned}
     \mathbf{p}
-    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
+    _{\mathrlap{\sscript{finish}}\phantom{\sscript{finish}}}
     & =
     \begin{matrix}{l}
     \phantom{+}0.4487
@@ -491,7 +491,7 @@ Applying the gradient descent method, here is the result:
     \end{matrix}
     \\[1em]
     \boldsymbol{\lambdaup}
-    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
+    _{\mathrlap{\sscript{finish}}\phantom{\sscript{finish}}}
     & =
     \begin{matrix}{l}
     -0.2970
@@ -536,7 +536,7 @@ Using the optimization technique illustrated in the examples above, the solution
     \begin{displaymath}
     \mathbf{p}^{*}
     =
-    \mathbf{p}_{\sscr{finish}}
+    \mathbf{p}_{\sscript{finish}}
     \end{displaymath}
     \end{document}
 {% endlatex %}

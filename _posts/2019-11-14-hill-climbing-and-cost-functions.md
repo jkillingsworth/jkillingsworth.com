@@ -292,7 +292,7 @@ Additionally, the value of the weight of the biased coin in the +1 state is limi
 {% latex 1 fig-26 %}
     \begin{document}
     \begin{displaymath}
-    p_{1,\sscr{min}} \leq p_1 \leq p_{1,\sscr{max}}
+    p_{1,\sscript{min}} \leq p_1 \leq p_{1,\sscript{max}}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -302,7 +302,7 @@ The minimum value at the lower bound is:
 {% latex 1 fig-27 %}
     \begin{document}
     \begin{displaymath}
-    \mathrlap{p_{1,\sscr{min}}}\phantom{p_{1,\sscr{max}}}
+    \mathrlap{p_{1,\sscript{min}}}\phantom{p_{1,\sscript{max}}}
     =
     1 - \sqrt{r_0}
     \end{displaymath}
@@ -314,7 +314,7 @@ The maximum value at the upper bound is:
 {% latex 1 fig-28 %}
     \begin{document}
     \begin{displaymath}
-    \mathrlap{p_{1,\sscr{max}}}\phantom{p_{1,\sscr{max}}}
+    \mathrlap{p_{1,\sscript{max}}}\phantom{p_{1,\sscript{max}}}
     =
     \frac{2 \0 r_4 - 1 + r_0}{2 \0 r_4 - 1}
     \end{displaymath}

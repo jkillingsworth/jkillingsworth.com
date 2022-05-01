@@ -125,7 +125,7 @@ Just like with the hill climbing algorithms used in the previous post, to apply 
     \begin{document}
     \begin{displaymath}
     \mathbf{p}
-    _{\mathrlap{\sscr{start}}\phantom{\sscr{finish}}}
+    _{\mathrlap{\sscript{start}}\phantom{\sscript{finish}}}
     =
     \begin{matrix}{l}
     0.3500
@@ -142,7 +142,7 @@ Applying the gradient descent procedure using the above as the initial input, th
     \begin{document}
     \begin{displaymath}
     \mathbf{p}
-    _{\mathrlap{\sscr{finish}}\phantom{\sscr{finish}}}
+    _{\mathrlap{\sscript{finish}}\phantom{\sscript{finish}}}
     =
     \begin{matrix}{l}
     0.6140

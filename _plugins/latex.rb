@@ -57,7 +57,7 @@ module Jekyll
             \newcommand{\tsum}{\mathop{\textstyle\sum}}
             \newcommand{\dderiv}{d\mspace{-1.5mu}}
             \newcommand{\pderiv}{\partial\mspace{-2.0mu}}
-            \newcommand{\sscr}[1]{\text{#1}}
+            \newcommand{\sscript}[1]{\text{#1}}
             '
 
         def process_latex(items)
