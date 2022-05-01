@@ -9,7 +9,7 @@ The hill climbing algorithm described in my [previous post]({% post_url 2019-11-
 
 ## The Model
 
-We'll use the same model of the coin toss game described in an earlier post titled [*Estimating the Weights of Biased Coins*]({% post_url 2019-09-14-estimating-the-weights-of-biased-coins %}). But to be able to plot the value of the cost function for every combination of weights on a two dimensional illustration, we need to limit the number of coin tosses in each round so that there are only two different weights that can vary. Since the first coin toss always uses a fairly weighted coin, we can model the coin toss game using three flips per round. The Markov model looks like this:
+We'll use the same model of the coin toss game described in an earlier post titled [*Estimating the Weights of Biased Coins*]({% post_url 2019-09-14-estimating-the-weights-of-biased-coins %}). But to be able to plot the value of the cost function for every combination of weights on a two-dimensional illustration, we need to limit the number of coin tosses in each round so that there are only two different weights that can vary. Since the first coin toss always uses a fairly weighted coin, we can model the coin toss game using three flips per round. The Markov model looks like this:
 
 {% latex 1 fig-01 %}
     \usepackage{tikz}
@@ -218,7 +218,7 @@ This gives a visualization of where the high and low spots are. Since the cost f
 
 {% chart fig-14-surface-2.svg %}
 
-A surface plot does a nice job of illustrating the curvature of the cost function. For overlaying additional information in top of the cost function, a heatmap might be a more useful alternative. Here is a visualization of the cost function as a heatmap:
+A surface plot does a nice job of illustrating the curvature of the cost function. For overlaying additional information on top of the cost function, a heatmap might be a more useful alternative. Here is a visualization of the cost function as a heatmap:
 
 {% chart fig-15-heatmap-plateau.svg %}
 

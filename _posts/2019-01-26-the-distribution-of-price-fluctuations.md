@@ -11,7 +11,7 @@ In the 1960s, Mandelbrot studied historical cotton prices and noticed the distri
 
 ## Analyzing the Data
 
-The first set of data I want to look at are the daily closing prices of an S&P 500 index tracking fund. Specifically, I'm using the SPDR S&P 500 ETF. The ticker symbol is SPY. This is currently one of the most heavily traded instruments on the New York Stock Exchange. Below is a chart of the daily closing prices over the past 21 years:
+The first set of data I want to look at is the daily closing price history of an S&P 500 index-tracking fund. Specifically, I'm using the SPDR S&P 500 ETF. The ticker symbol is SPY. This is currently one of the most heavily traded instruments on the New York Stock Exchange. Below is a chart of the daily closing prices over the past 21 years:
 
 {% chart fig-01-stocks-daily-SPY-price.svg %}
 
@@ -19,7 +19,7 @@ Notice in the chart above that the vertical axis represents the natural logarith
 
 {% chart fig-02-stocks-daily-SPY-diffs.svg %}
 
-The price moves up and down seemingly at random. The magnitude of each price move varies from day to day. Are these variations in price movement normally distributed? It's hard to tell just by looking at the chart. What stands out, however, is that the variance seems to be heteroskedastic; there are periods of relative calm followed by clusters of large moves up and down. While a study of heteroskedasticity is beyond the scope of this post, it is definitely a peculiarity worth pointing out.
+The price moves up and down seemingly at random. The magnitude of each price move varies from one day to the next. Are these variations in price movement normally distributed? It's hard to tell just by looking at the chart. What stands out, however, is that the variance seems to be heteroskedastic; there are periods of relative calm followed by clusters of large moves up and down. While a study of heteroskedasticity is beyond the scope of this post, it is definitely a peculiarity worth pointing out.
 
 Ignoring these pockets of high and low variability, the question remains: is the overall variation in price movement normally distributed? Would the data better conform to a different probability distribution instead? Let's put the data in a histogram and see what it looks like:
 
@@ -29,9 +29,9 @@ The histogram is overlaid with two probability density functions, one representi
 
 So are the price fluctuations normally distributed? Eyeballing the chart above, it appears not. At least for this data set. Without measuring it objectively, it certainly looks like the Laplace distribution is a better fit. But what happens if we perform this experiment on different data sets? Will we get the same results for different asset types? What if we study intraday data instead of daily closing prices? The following sections present the result of this analysis across a mix of different markets and time frames.
 
-## Exchange Traded Funds
+## Exchange-Traded Funds
 
-To get some broader insights regarding the behavior of price movements, I want to take a look at some more exchange traded funds with a few different underlying asset types. Let's examine the daily closing prices for the following ETFs:
+To get some broader insights regarding the behavior of price movements, I want to take a look at some more exchange-traded funds with a few different underlying asset types. Let's examine the daily closing prices for the following ETFs:
 
 {% latex 1 fig-04 %}
     \begin{document}
@@ -40,17 +40,17 @@ To get some broader insights regarding the behavior of price movements, I want t
     \hline
     \text{Symbol}    & \text{Underlying Asset}
     \\[0.25em]\hline
-    \texttt{DIA}     & \text{Large cap domestic stocks}
+    \texttt{DIA}     & \text{Large-cap domestic stocks}
     \\[0.25em]\hline
     \texttt{EEM}     & \text{Emerging markets}
     \\[0.25em]\hline
     \texttt{GLD}     & \text{Gold}
     \\[0.25em]\hline
-    \texttt{HYG}     & \text{High yield corporate bonds}
+    \texttt{HYG}     & \text{High-yield corporate bonds}
     \\[0.25em]\hline
-    \texttt{LQD}     & \text{Investment grade corporate bonds}
+    \texttt{LQD}     & \text{Investment-grade corporate bonds}
     \\[0.25em]\hline
-    \texttt{TLT}     & \text{Long term US Treasury bonds}
+    \texttt{TLT}     & \text{Long-term US Treasury bonds}
     \\[0.25em]\hline
     \texttt{UNG}     & \text{Natural gas}
     \\[0.25em]\hline
@@ -61,7 +61,7 @@ To get some broader insights regarding the behavior of price movements, I want t
     \end{document}
 {% endlatex %}
 
-Each data set contains at least 10 years worth of data. Using the same technique as before, we can plot the histogram of daily price fluctuations and overlay the fitted normal and Laplace density functions. Here are the charts:
+Each data set contains at least 10 years' worth of data. Using the same technique as before, we can plot the histogram of daily price fluctuations and overlay the fitted normal and Laplace density functions. Here are the charts:
 
 {% chart fig-05-stocks-daily-DIA-probs.svg %}
 {% chart fig-06-stocks-daily-EEM-probs.svg %}
@@ -142,7 +142,7 @@ Subjectively, it seems like the Laplace distribution is a better overall fit.
 
 ## Individual Stocks (Intraday)
 
-What happens if we study intraday stock prices instead of daily closing prices? Let's perform the analysis on the same set of stocks using one minute price data instead of end of day prices. Here are the charts:
+What happens if we study intraday stock prices instead of daily closing prices? Let's perform the analysis on the same set of stocks using one-minute price data instead of end-of-day prices. Here are the charts:
 
 {% chart fig-29-stocks-intraday-AMZN-probs.svg %}
 {% chart fig-30-stocks-intraday-AZO-probs.svg %}
@@ -160,7 +160,7 @@ What happens if we study intraday stock prices instead of daily closing prices? 
 {% chart fig-42-stocks-intraday-ULTA-probs.svg %}
 {% chart fig-43-stocks-intraday-UNH-probs.svg %}
 
-Each data set contains five days worth of data. Using intraday data instead of daily data doesn't seem to change the outcome with respect to the general shape of the distribution.
+Each data set contains five days' worth of data. Using intraday data instead of daily data doesn't seem to change the outcome with respect to the general shape of the distribution.
 
 ## Volatility Index
 
@@ -168,7 +168,7 @@ I'm curious what happens if we apply this analysis to the values of the CBOE Vol
 
 {% chart fig-44-stocks-daily-VIX-price.svg %}
 
-Consistent with the other data sets used in this post, the "price" values on this chart are the logarithmic values of the volatility index, not the actual index values. The VIX is a quoted in percentage points, so the use of logarithmic values may or may not be the best approach here, depending on how one might go about trading volatility derivatives. I suspect that studying the behavior of volatility instruments might warrant some special consideration, but that's beyond the scope of the post. For our purposes here, let's treat the index the way we would any other tradable instrument. The daily "price" differences look like this:
+Consistent with the other data sets used in this post, the "price" values on this chart are the logarithmic values of the volatility index, not the actual index values. The VIX is quoted in percentage points, so the use of logarithmic values may or may not be the best approach here, depending on how one might go about trading volatility derivatives. I suspect that studying the behavior of volatility instruments might warrant some special consideration, but that's beyond the scope of the post. For our purposes here, let's treat the index the way we would any other tradable instrument. The daily "price" differences look like this:
 
 {% chart fig-45-stocks-daily-VIX-diffs.svg %}
 
@@ -176,7 +176,7 @@ The variance seems to be a bit more consistent than that of the price difference
 
 {% chart fig-46-stocks-daily-VIX-probs.svg %}
 
-It looks like the changes in implied volatility vary from one day to the next according to a distribution that might be somewhere between a normal distribution and a Laplace distribution. Here is a histogram of five days worth of one minute intraday values:
+It looks like the changes in implied volatility vary from one day to the next according to a distribution that might be somewhere between a normal distribution and a Laplace distribution. Here is a histogram of five days' worth of one-minute intraday values:
 
 {% chart fig-47-stocks-intraday-VIX-probs.svg %}
 
@@ -245,7 +245,7 @@ And here we see the familiar pattern once again.
 
 ## Currency Pairs (Intraday)
 
-For the same currency pairs as above, let's examine the distribution of price fluctuations for one minute intraday data over a span of 24 hours:
+For the same currency pairs as above, let's examine the distribution of price fluctuations for one-minute intraday data over a span of 24 hours:
 
 {% chart fig-60-forex-intraday-USDJPY-probs.svg %}
 {% chart fig-61-forex-intraday-USDMXN-probs.svg %}
@@ -256,7 +256,7 @@ For the same currency pairs as above, let's examine the distribution of price fl
 {% chart fig-66-forex-intraday-EURSEK-probs.svg %}
 {% chart fig-67-forex-intraday-EURTRY-probs.svg %}
 
-Notice in some of these charts there is a large spike in the concentration of price changes at or around zero. I suspect this is because there are certain times of day where these instruments are thinly traded and don't move very much.
+Notice that in some of these charts there is a large spike in the concentration of price changes at or around zero. I suspect this is because there are certain times of day when these instruments are thinly traded and don't move very much.
 
 ## Cryptocurrencies
 
@@ -296,7 +296,7 @@ Vance Harwood from *Six Figure Investing* wrote an interesting article asserting
 
 * [*Predicting Stock Market Returns---Lose the Normal and Switch to Laplace*](https://sixfigureinvesting.com/2016/03/modeling-stock-market-returns-with-laplace-distribution-instead-of-normal/)
 
-His analysis includes a deeper study on the tails of the distribution. While he acknowledges the observed price data include a higher frequency of large moves than what would be expected from a Laplace distribution, I agree with his assessment that the Laplace distribution is a better alternative compared to the normal distribution.
+His analysis includes a deeper study of the tails of the distribution. While he acknowledges the observed price data include a higher frequency of large moves than what would be expected from a Laplace distribution, I agree with his assessment that the Laplace distribution is a better alternative compared to the normal distribution.
 
 The *Business Forecasting* blog authored by Clive Jones includes a whole series of articles on the topic of price change distributions:
 
@@ -306,7 +306,7 @@ The *Business Forecasting* blog authored by Clive Jones includes a whole series 
 * [*Microsoft Stock Prices and the Laplace Distribution*](https://businessforecastblog.com/microsoft-stock-prices-and-the-laplace-distribution/)
 * [*Distributions of Stock Returns and Other Asset Prices*](https://businessforecastblog.com/distributions-of-stock-returns-and-other-asset-prices/)
 
-This series cites plenty of evidence that favors the use of the Laplace distribution to model price movements. Nonetheless, as I have illustrated in this post, there are still some cases where the histogram does not exhibit the pointy shaped peak characteristic of the Laplace distribution.
+This series cites plenty of evidence that favors the use of the Laplace distribution to model price movements. Nonetheless, as I have illustrated in this post, there are still some cases where the histogram does not exhibit the pointy-shaped peak characteristic of the Laplace distribution.
 
 Based on his study of historical cotton prices, Mandelbrot claims that price fluctuations are best described by a family of [stable distributions](https://en.wikipedia.org/wiki/Stable_distribution). These distributions are more rounded at the peak than the Laplace distribution. I currently don't know enough about this class of probability distributions to draw my own conclusions, but I think it's an area worthy of further study.
 

@@ -9,7 +9,7 @@ In the [last post]({% post_url 2020-12-12-equality-constraints-and-lagrange-mult
 
 ## The Method
 
-Newton's method is an iterative root finding technique for solving equations. It is sometimes called the Newton--Raphson method. In the univariate form, you can use this method to find the root of an equation in the following form:
+Newton's method is an iterative root-finding technique for solving equations. It is sometimes called the Newton--Raphson method. In the univariate form, you can use this method to find the root of an equation in the following form:
 
 {% latex 1 fig-01 %}
     \begin{document}
@@ -59,7 +59,7 @@ This is a system of equations that must be satisfied. And each equation has mult
     \end{document}
 {% endlatex %}
 
-The multivariate form of Newton's method works in very much the same way as the univariate form. The main difference is, the initial guess and the revised estimate are vectors instead of scalar values. Here is the formula:
+The multivariate form of Newton's method works in very much the same way as the univariate form of the method. The main difference is that the initial guess and the revised estimate are vectors instead of scalar values. Here is the formula:
 
 {% latex 1 fig-05 %}
     \begin{document}
@@ -423,8 +423,8 @@ Again, the number of iterations required to reach a solution using Newton's meth
 
 We have demonstrated here that Newton's method can find a solution to the coin toss problem in far fewer iterations than the gradient descent method used in the previous post. Newton's method requires only a handful of iterations versus the tens of thousands or even hundreds of thousands of iterations required using gradient descent. But that doesn't necessarily mean Newton's method is a more efficient approach.
 
-While both methods must evaluate a gradient in each iteration, Newton's method must also compute the values of a Jacobian matrix that is squared the size of the gradient vector. Furthermore, each iteration of Newton's method must also compute the inverse of the Jacobian matrix, which might be a computationally expensive task. These two methods might have very different algorithmic complexity characteristics in a larger problem space. Imagine a model of the coin toss game with ten, twenty, or even fifty flips per round.
+While both methods must evaluate a gradient in each iteration, Newton's method must also compute the values of a Jacobian matrix that is a square of the size of the gradient vector. Furthermore, each iteration of Newton's method must also compute the inverse of the Jacobian matrix, which might be a computationally expensive task. These two methods might have very different algorithmic complexity characteristics in a larger problem space. Imagine a model of the coin toss game with ten, twenty, or even fifty flips per round.
 
-Some of the other optimization and root finding methods mentioned in the previous post might have better performance characteristics than either Newton's method or gradient descent. The best way to find out might be to try out each method on larger problem sizes and empirically measure how well they perform.
+Some of the other optimization and root-finding methods mentioned in the previous post might have better performance characteristics than either Newton's method or gradient descent. The best way to find out might be to try out each method on larger problem sizes and empirically measure how well they perform.
 
 {% accompanying_src_link %}

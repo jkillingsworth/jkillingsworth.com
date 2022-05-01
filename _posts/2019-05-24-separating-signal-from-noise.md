@@ -7,7 +7,7 @@ I want to experiment with modeling price changes over time as the combination of
 
 <!--excerpt-->
 
-In this post, I use a [least squares moving average]({% post_url 2018-09-21-least-squares-moving-averages %}) to determine the smooth component of a price series. This is our signal, so to speak. The difference between the market price and the smooth component is the noise component, which I have dubbed the "dither". All calculations are based on the logarithmic price values.
+In this post, I use a [least squares moving average]({% post_url 2018-09-21-least-squares-moving-averages %}) to determine the smooth component of a price series. This is our signal, so to speak. The difference between the market price and the smooth component is the noise component, which I have dubbed the "dither." All calculations are based on the logarithmic price values.
 
 ## S&P 500 ETF (Daily)
 
@@ -16,15 +16,15 @@ The first set of data I want to examine is a series of daily closing prices of a
 {% chart fig-01-stocks-daily-SPY-price.svg %}
 {% chart fig-02-stocks-daily-SPY-noise.svg %}
 
-The dither component of the daily price fluctuation is separated from the smooth component that represents the general trend, creating two distinct data sets that can be analyzed individually. In my post titled [*The Distribution of Price Fluctuations*]({% post_url 2019-01-26-the-distribution-of-price-fluctuations %}), I plotted the daily returns of the market price in a histogram, along with a fitted normal and Laplace density function. We can perform the same analysis not only on the market price data, but also on the separated smooth and dither components. See charts below:
+The dither component of the daily price fluctuation is separated from the smooth component that represents the general trend, creating two distinct data sets that can be analyzed individually. In my post titled [*The Distribution of Price Fluctuations*]({% post_url 2019-01-26-the-distribution-of-price-fluctuations %}), I plotted the daily returns of the market price in a histogram, along with a fitted normal and Laplace density function. We can perform the same analysis not only on the market price data but also on the separated smooth and dither components. See charts below:
 
 {% chart fig-03-stocks-daily-SPY-probs-market.svg %}
 {% chart fig-04-stocks-daily-SPY-probs-smooth.svg %}
 {% chart fig-05-stocks-daily-SPY-probs-dither.svg %}
 
-As might be expected, based on a [previous study]({% post_url 2019-01-26-the-distribution-of-price-fluctuations %}), the histogram for the market price data has the shape of a Laplace distribution. For the smooth data set, the shape of the histogram also looks roughly like that of a Laplace distribution, although it's a bit distorted. Notice, however, the standard deviation of the smooth data is about an order of magnitude smaller than that of the market price data. Also notice how the peak in the smooth price histogram is shifted noticeably to the right, indicating a general uptrend in the data. The rightward shift is present in the market price data as well, but it's not as noticeable because of the larger dispersion of daily price moves in the market price data.
+As might be expected, based on a [previous study]({% post_url 2019-01-26-the-distribution-of-price-fluctuations %}), the histogram for the market price data has the shape of a Laplace distribution. For the smooth data set, the shape of the histogram also looks roughly like that of a Laplace distribution, although it's a bit distorted. Notice, however, that the standard deviation of the smooth data is about an order of magnitude smaller than that of the market price data. Also notice how the peak in the smooth price histogram is shifted noticeably to the right, indicating a general uptrend in the data. The rightward shift is present in the market price data as well, but it's not as noticeable because of the larger dispersion of daily price moves in the market price data.
 
-Looking at the dither component, the shape of histogram resembles that of a Laplace distribution about as neatly as the shape of the histogram for the market price does. The standard deviation is about the same as that of the market price data as well. To gain more insights, let's look at some concrete numbers concerning the analysis of these three data sets:
+Looking at the dither component, the shape of the histogram resembles that of a Laplace distribution about as neatly as the shape of the histogram for the market price does. The standard deviation is about the same as that of the market price data as well. To gain more insights, let's look at some concrete numbers concerning the analysis of these three data sets:
 
 {% latex 1 fig-06 %}
     \begin{document}
@@ -66,7 +66,7 @@ The scale parameter values for both density functions are roughly the same for b
 
 ## S&P 500 ETF (Intraday)
 
-The next set of data I want to look at is a series of intraday prices of the same S&P 500 index tracking fund evaluated previously. This data set contains one minute intraday data covering a single trading day. The charts below show the market price along with the smooth trend component and the dither noise component:
+The next set of data I want to look at is a series of intraday prices of the same S&P 500 index tracking fund evaluated previously. This data set contains one-minute intraday data covering a single trading day. The charts below show the market price along with the smooth trend component and the dither noise component:
 
 {% chart fig-07-stocks-intraday-SPY-price.svg %}
 {% chart fig-08-stocks-intraday-SPY-noise.svg %}
@@ -111,7 +111,7 @@ This histogram for market price data looks like it might approximate the shape o
     \end{document}
 {% endlatex %}
 
-The location and scale parameters fitted to the normal density function follow the same pattern we saw in the previous data set. The smooth component represents the trend and the dither component represents the noise. For the Laplace density function, this pattern also holds for the scale parameter but not for the location parameter. Interestingly, the location parameter fitted to the Laplace density function implies a sideways trend in the market price, but indicates and upward bias in both the smooth component and the dither component.
+The location and scale parameters fitted to the normal density function follow the same pattern we saw in the previous data set. The smooth component represents the trend and the dither component represents the noise. For the Laplace density function, this pattern also holds for the scale parameter but not for the location parameter. Interestingly, the location parameter fitted to the Laplace density function implies a sideways trend in the market price but indicates an upward bias in both the smooth component and the dither component.
 
 ## Japanese Yen (Daily)
 
@@ -175,7 +175,7 @@ In my post titled [*The Very Strange Chinese Yuan*]({% post_url 2019-02-10-the-v
 {% chart fig-22-forex-intraday-USDCNH-probs-smooth.svg %}
 {% chart fig-23-forex-intraday-USDCNH-probs-dither.svg %}
 
-The shape of the histogram for the market price data shows the triple peak pattern that is characteristic of intraday exchange rates between the yuan and dollar. The histogram for the smooth component exhibits a roughly bell shaped distribution with no indication of the triple peak pattern at all. The fitted density functions for the smooth component are both shifted to the left, which can be attributed to the downward trend visible in the price chart. The histogram for the dither component, on the other hand, clearly shows the triple peak pattern, indicating that this distinctive noise pattern is almost entirely removed from the price trend. Here are the parameter estimates for the density functions:
+The shape of the histogram for the market price data shows the triple peak pattern that is characteristic of intraday exchange rates between the yuan and dollar. The histogram for the smooth component exhibits a roughly bell-shaped distribution with no indication of the triple peak pattern at all. The fitted density functions for the smooth component are both shifted to the left, which can be attributed to the downward trend visible in the price chart. The histogram for the dither component, on the other hand, clearly shows the triple peak pattern, indicating that this distinctive noise pattern is almost entirely removed from the price trend. Here are the parameter estimates for the density functions:
 
 {% latex 1 fig-24 %}
     \begin{document}
@@ -213,7 +213,7 @@ Again, we see a pattern here similar to that of the previous data sets. For the 
 
 ## Bitcoin (Daily)
 
-The final set of data I want to examine are the daily Bitcoin prices covering a period of about five years. Here are the charts:
+The final set of data I want to examine is the series of daily Bitcoin prices covering a period of about five years. Here are the charts:
 
 {% chart fig-25-crypto-daily-BTC-price.svg %}
 {% chart fig-26-crypto-daily-BTC-noise.svg %}

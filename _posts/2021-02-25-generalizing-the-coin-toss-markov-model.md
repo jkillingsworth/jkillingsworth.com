@@ -3,7 +3,7 @@ layout: post
 title: Generalizing the Coin Toss Markov Model
 ---
 
-This is a continuation of the series on weighted coin toss games. In previous posts, we explored variations of the weighted coin toss game using two, three, and four flips per round. In each variation, the game was described using a Markov model with a fixed number of coin toss events. This post presents a generalized form of the Markov model that can be used to model a game with an arbitrary number of coin toss events. I also show a few examples using a model of the coin toss game with ten flips per round.
+This is a continuation of a series of posts on weighted coin toss games. In previous posts, we explored variations of the weighted coin toss game using two, three, and four flips per round. In each variation, the game was described using a Markov model with a fixed number of coin toss events. This post presents a generalized form of the Markov model that can be used to model a game with an arbitrary number of coin toss events. I also show a few examples using a model of the coin toss game with ten flips per round.
 
 <!--excerpt-->
 
@@ -201,7 +201,7 @@ In this model, there are seven possible states that the system can be in and a t
     \end{document}
 {% endlatex %}
 
-This is a square matrix with seven rows and seven columns. We can also use a seven element vector to represent the likelihood of the system being in a particular state at a given point in time. The initial vector looks like this:
+This is a square matrix with seven rows and seven columns. We can also use a seven-element vector to represent the likelihood of the system being in a particular state at a given point in time. The initial vector looks like this:
 
 {% latex 1 fig-10 %}
     \begin{document}
@@ -441,7 +441,7 @@ The final outcome tells us how likely it is for each state to be the final state
     \end{document}
 {% endlatex %}
 
-Each element contains the probability that the system terminates in the corresponding state after the final coin toss. Since our model is symmetrical about the initial state, there is a symmetry to the resulting values in the final outcome.
+Each element contains the probability that the system terminates in the corresponding state after the final coin toss. Since our model is symmetric about the initial state, there is a symmetry to the resulting values in the final outcome.
 
 ## Equality Constraints
 
@@ -555,7 +555,7 @@ Using these equality constraints, we can construct a Lagrangian function that ca
     \end{document}
 {% endlatex %}
 
-We can use this Lagrangian function to find a valid set of weights by applying the optimization and root finding methods outlined in previous posts.
+We can use this Lagrangian function to find a valid set of weights by applying the optimization and root-finding methods outlined in previous posts.
 
 ## Example with Exponential Distribution
 
@@ -701,7 +701,7 @@ The damped version of Newton's method requires many more iterations to converge 
 
 ## Shortcomings
 
-The methods used here allow us to find a valid set of weights for a given target distribution using a model of the coin toss game that allows for an arbitrary number of coin toss events. We used the method of Lagrange multiplier to set up an equation, and we used Newton's method to solve the equation. But these methods are not without their shortcomings. As we saw in the previous section, we had to adapt the iterative formula with a damping factor to get the iterative process to converge to a solution.
+The methods used here allow us to find a valid set of weights for a given target distribution using a model of the coin toss game that allows for an arbitrary number of coin toss events. We used the method of Lagrange multipliers to set up an equation, and we used Newton's method to solve the equation. But these methods are not without their shortcomings. As we saw in the previous section, we had to adapt the iterative formula with a damping factor to get the iterative process to converge to a solution.
 
 Besides the overshoot problem, there are cases where these methods might converge to a solution outside the acceptable range of values. The weights of the biased coins must always be a probability between zero and one. There is nothing in the method of Lagrange multipliers that limits values to a particular range. I might have to explore an approach using [Karush--Kuhn--Tucker conditions](https://en.wikipedia.org/wiki/Karush%E2%80%93Kuhn%E2%80%93Tucker_conditions) to include inequality constraints.
 

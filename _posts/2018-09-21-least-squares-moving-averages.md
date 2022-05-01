@@ -42,7 +42,7 @@ For the purpose of brevity, the equation above can be represented using the foll
 
 You can think of this as a constant function for which we estimate the coefficient based on the observed data points within the lookback window. The constant function, if plotted within the bounds of the lookback window, would appear as a horizontal line fitted to the average of all closing prices within the lookback window.
 
-The charts below illustrate what the moving average looks like for three different stock price data sets. The moving averages are computed using a 200 day lookback window. The fitted line is plotted for the final lookback period.
+The charts below illustrate what the moving average looks like for three different stock price data sets. The moving averages are computed using a 200-day lookback window. The fitted line is plotted for the final lookback period.
 
 For ticker symbol MSFT:
 
@@ -108,7 +108,7 @@ For ticker symbol HEAR:
 {% chart fig-15-lsrlin-HEAR-full.svg %}
 {% chart fig-16-lsrlin-HEAR-zoom.svg %}
 
-The linear least squares moving average tracks the price much better than the simple moving average does, especially during periods when the price is trending up or down. If you look at the fitted line for MSFT, you can see how it is almost a perfect fit. The linear model still seems to lag a little but during reversals, however.
+The linear least squares moving average tracks the price much better than the simple moving average does, especially during periods when the price is trending up or down. If you look at the fitted line for MSFT, you can see how it is almost a perfect fit. The linear model still seems to lag a little bit during reversals, however.
 
 ## Polynomial Regression
 
@@ -241,7 +241,7 @@ The following formulas can then be used to calculate the coefficients for the li
     \end{document}
 {% endlatex %}
 
-Once the coefficients for the linear model are know, we can use the values to compute the coefficients for the exponential model:
+Once the coefficients for the linear model are known, we can use the values to compute the coefficients for the exponential model:
 
 {% latex 1 fig-30 %}
     \begin{document}

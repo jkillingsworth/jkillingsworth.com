@@ -3,7 +3,7 @@ layout: post
 title: Understanding the Discrete Fourier Transform
 ---
 
-For the longest time, the Fourier transform remained a bit of a mystery to me. I knew it involved transforming a function in the time domain to a representation in the frequency domain. And I knew it had something to do with sinusoidal waves. But I didn't understand what it meant to have a frequency domain representation of a function. As it turns out, it's quite a simple thing once you realize what the frequency values represent. In this post, I explain the discrete Fourier transform by working through a set of examples.
+For the longest time, the Fourier transform remained a bit of a mystery to me. I knew it involved transforming a function in the time domain into a representation in the frequency domain. And I knew it had something to do with sinusoidal waves. But I didn't understand what it meant to have a frequency domain representation of a function. As it turns out, it's quite a simple thing once you realize what the frequency values represent. In this post, I explain the discrete Fourier transform by working through a set of examples.
 
 <!--excerpt-->
 
@@ -225,7 +225,7 @@ This formula takes the form of a continuous function on the frequency domain. Bu
     \end{document}
 {% endlatex %}
 
-The values on the frequency domain are complex numbers with both real and imaginary components. Again, keep in mind that zero values might be positive or negative when using a computer. The following plots show a visual representation for both axes of the complex plane:
+The values on the frequency domain are complex numbers with both real and imaginary components. Again, keep in mind that zero values might be positive or negative when using a computer. The following plots show a visual representation of both axes of the complex plane:
 
 {% chart fig-14-example-1-freq-ys-re.svg %}
 {% chart fig-15-example-1-freq-ys-im.svg %}
@@ -513,7 +513,7 @@ Plotting this function on a chart with discrete samples at the predetermined sam
 
 {% chart fig-41-example-2-time-xs-upper.svg %}
 
-As you can see, we have an entirely different function on the time domain when using only the upper frequencies. But the values at the sample points are still the same as when we used only the lower frequencies. Because the values on each half the frequency range are mirror images of one another, we only need half of these values to complete a full circle back to the time domain.
+As you can see, we have an entirely different function on the time domain when using only the upper frequencies. But the values at the sample points are still the same as when we used only the lower frequencies. Because the values on each half of the frequency range are mirror images of one another, we only need half of these values to complete a full circle back to the time domain.
 
 ## Example 3
 
@@ -521,7 +521,7 @@ Suppose we have a function that is the superimposition of several different sinu
 
 {% chart fig-42-example-3-time-xs.svg %}
 
-Now let's say that maybe we don't even know how this input function is defined; we just know the values at the samples points. Here are the samples values:
+Now let's say that maybe we don't even know how this input function is defined; we just know the values at the sample points. Here are the samples values:
 
 {% latex 1 fig-43 %}
     \begin{document}
@@ -644,7 +644,7 @@ Thus, we have a function that is the superimposition of three different sinusoid
 {% chart fig-52-example-3-time-xs-2.svg %}
 {% chart fig-53-example-3-time-xs-3.svg %}
 
-Adding these three waveforms together gives us a function that reproduces our original input. The beauty of the discrete Fourier transform is that it allows us to decompose a function into discrete sinusoidal components. This can be useful if you want to amplify the values on some frequency ranges while attenuating the values on others. Adjustments can be made on the frequency domain that might otherwise be difficult or impossible to do on the time domain.
+Adding these three waveforms together gives us a function that reproduces our original input. The beauty of the discrete Fourier transform is that it allows us to decompose a function into discrete sinusoidal components. This can be useful if you want to amplify the values on some frequency ranges while attenuating the values on others. Adjustments can be made on the frequency domain that might otherwise be difficult or impossible to do in the time domain.
 
 ## Example 4
 

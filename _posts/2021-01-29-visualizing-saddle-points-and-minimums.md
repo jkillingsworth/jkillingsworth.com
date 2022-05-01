@@ -33,7 +33,7 @@ The model of the coin toss game we'll use here is a simplified version. It uses 
     \end{document}
 {% endlatex %}
 
-The first coin toss is always a fair coin, by definition. Let's assume the probability of tossing both a heads and a tails, in any order, is twice that of getting either two heads in a row or two tails in a row. Let's also assume a scoring function that gives preference to weights that are as close to that of a fair coin as possible. The Lagrangian function for this model looks like this:
+The first coin toss is always a fair coin, by definition. Let's assume the probability of tossing both a head and a tail, in any order, is twice that of getting either two heads in a row or two tails in a row. Let's also assume a scoring function that gives preference to weights that are as close to that of a fair coin as possible. The Lagrangian function for this model looks like this:
 
 {% latex 1 fig-02 %}
     \begin{document}

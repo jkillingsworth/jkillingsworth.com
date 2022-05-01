@@ -3,7 +3,7 @@ layout: post
 title: Higher Order Polynomial Approximation
 ---
 
-This is an extension of one of my earlier posts on [polynomial approximations]({% post_url 2021-05-31-approximations-with-polynomials %}). Previously, I demonstrated how to find approximate solutions to the weighted coin toss problem using first, second, and third order polynomials to describe the weights of the biased coins. In this post, I demonstrate a generalized method for applying this technique using higher order polynomials.
+This is an extension of one of my earlier posts on [polynomial approximations]({% post_url 2021-05-31-approximations-with-polynomials %}). Previously, I showed how to find approximate solutions to the weighted coin toss problem using first, second, and third order polynomials to describe the weights of the biased coins. In this post, I demonstrate a generalized method for applying this technique using higher order polynomials.
 
 <!--excerpt-->
 

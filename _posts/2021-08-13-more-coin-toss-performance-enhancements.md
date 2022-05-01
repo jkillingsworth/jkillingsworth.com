@@ -3,13 +3,13 @@ layout: post
 title: More Coin Toss Performance Enhancements
 ---
 
-This post is an extension of the [previous post]({% post_url 2021-07-12-performance-tuning-for-the-coin-toss-model %}) in which I explored some techniques for speeding up the calculations used to find approximate solutions to the coin toss problem. Here I want to examine a couple of enhancements to these ideas. First, I describe an enhanced computation method that cuts the number of floating point operations required almost in half. Second, I introduce a progressive polynomial approximation technique that can reduce the number of iterations needed to find a solution.
+This post is an extension of the [previous post]({% post_url 2021-07-12-performance-tuning-for-the-coin-toss-model %}) in which I explored some techniques for speeding up the calculations used to find approximate solutions to the coin toss problem. Here I want to examine a couple of enhancements to these ideas. First, I describe an enhanced computation method that cuts the number of floating-point operations required almost in half. Second, I introduce a progressive polynomial approximation technique that can reduce the number of iterations needed to find a solution.
 
 <!--excerpt-->
 
 ## Enhanced Computation Method
 
-The optimized computation method outlined in the previous post had a much better performance profile than the previously used method. However, it still included a bunch of redundant computations. For even numbered coin tosses, the value computed for the odd numbered states is always zero. Likewise, for odd numbered coin tosses, the value computed for the even numbered states is always zero. Since we know these alternating values are always zero, we really don't need to compute them. We can use an enhanced computation method that just eliminates the unnecessary computations. Like before, the best way to describe how it works is with an example. Suppose we have a model of the coin toss game with five coin toss events per round:
+The optimized computation method outlined in the previous post had a much better performance profile than the previously used method. However, it still included a bunch of redundant computations. For even-numbered coin tosses, the value computed for the odd-numbered states is always zero. Likewise, for odd-numbered coin tosses, the value computed for the even-numbered states is always zero. Since we know these alternating values are always zero, we really don't need to compute them. We can use an enhanced computation method that just eliminates the unnecessary computations. Like before, the best way to describe how it works is with an example. Suppose we have a model of the coin toss game with five coin toss events per round:
 
 {% latex 1 fig-01 %}
     \begin{document}
@@ -47,7 +47,7 @@ For this example, let's choose some arbitrary values for the remaining state tra
     \end{document}
 {% endlatex %}
 
-We want to create some lookup tables for our state transition values like we did for the optimized computation method presented in the previous post. But this time around, we want to create two different sets of lookup tables, one for odd numbered coin tosses and one for even numbered coin tosses. Here is the formula to populate the lookup tables for odd numbered coin tosses:
+We want to create some lookup tables for our state transition values like we did for the optimized computation method presented in the previous post. But this time around, we want to create two different sets of lookup tables, one for odd-numbered coin tosses and one for even-numbered coin tosses. Here is the formula to populate the lookup tables for odd-numbered coin tosses:
 
 {% latex 1 fig-04 %}
     \begin{document}
@@ -66,7 +66,7 @@ We want to create some lookup tables for our state transition values like we did
     \end{document}
 {% endlatex %}
 
-This formula is based on the even numbered state transition values. Here is what the populated arrays wind up looking like:
+This formula is based on the even-numbered state transition values. Here is what the populated arrays wind up looking like:
 
 {% latex 1 fig-05 %}
     \usepackage{tikz}
@@ -177,7 +177,7 @@ We need to align the arrays in a way that makes it easy to perform the calculati
     \end{document}
 {% endlatex %}
 
-These are the lookup tables we'll use for odd numbered coin tosses. For even numbered coin tosses, we need to do something similar. But we need to do it with the alternate set of state transition values. Here is the formula to populate the lookup tables for even numbered coin tosses:
+These are the lookup tables we'll use for odd-numbered coin tosses. For even-numbered coin tosses, we need to do something similar. But we need to do it with the alternate set of state transition values. Here is the formula to populate the lookup tables for even-numbered coin tosses:
 
 {% latex 1 fig-07 %}
     \begin{document}
@@ -196,7 +196,7 @@ These are the lookup tables we'll use for odd numbered coin tosses. For even num
     \end{document}
 {% endlatex %}
 
-This formula is based on the odd numbered state transition values. Here is what the populated arrays wind up looking like:
+This formula is based on the odd-numbered state transition values. Here is what the populated arrays wind up looking like:
 
 {% latex 1 fig-08 %}
     \usepackage{tikz}
@@ -307,7 +307,7 @@ We need to align the arrays in a way that makes it easy to perform the calculati
     \end{document}
 {% endlatex %}
 
-These are the lookup tables we'll use for even numbered coin tosses. Notice the padded zeros in the front and back of the arrays. This padding guarantees that we can shift the arrays left or right without violating any memory allocated for something else. For this method, we also need to shift the state vector arrays left and right in a similar fashion when computing the results for the even and odd coin tosses. Here is the algorithm for the enhanced computation method:
+These are the lookup tables we'll use for even-numbered coin tosses. Notice the padded zeros in the front and back of the arrays. This padding guarantees that we can shift the arrays left or right without violating any memory allocated for something else. For this method, we also need to shift the state vector arrays left and right in a similar fashion when computing the results for the even and odd coin tosses. Here is the algorithm for the enhanced computation method:
 
 {% latex 1 fig-10 %}
     \usepackage[vlined]{algorithm2e}
@@ -357,7 +357,7 @@ These are the lookup tables we'll use for even numbered coin tosses. Notice the 
     \end{document}
 {% endlatex %}
 
-The execution path of the inner loop depends on whether we are calculating the result for an even numbered coin toss or an odd numbered coin toss. Notice that we double the value in the zero offset just like we did for the optimized computation method in the previous post. But in this case, we only do it for even numbered coin tosses.
+The execution path of the inner loop depends on whether we are calculating the result for an even-numbered coin toss or an odd-numbered coin toss. Notice that we double the value in the zero offset just like we did for the optimized computation method in the previous post. But in this case, we only do it for even-numbered coin tosses.
 
 Here are the computed values after outer loop iteration #1:
 
@@ -779,7 +779,7 @@ Here are the computed values after outer loop iteration #5:
     \end{document}
 {% endlatex %}
 
-After the loop terminates, we have the probabilities of landing on each state after the fifth and final toss of the coin. This result only includes the terminal states since we never bothered to compute the non terminal states. Since this example models an odd number of coin toss events, the terminal states are always odd numbered states. Here are the resulting values:
+After the loop terminates, we have the probabilities of landing on each state after the fifth and final toss of the coin. This result only includes the terminal states since we never bothered to compute the non-terminal states. Since this example models an odd number of coin toss events, the terminal states are always odd-numbered states. Here are the resulting values:
 
 {% latex 1 fig-16 %}
     \begin{document}
@@ -795,11 +795,11 @@ After the loop terminates, we have the probabilities of landing on each state af
     \end{document}
 {% endlatex %}
 
-Using this enhanced computation method, we can compute the final result with less memory and fewer floating point operations than we could with the optimized computation method presented in the last post.
+Using this enhanced computation method, we can compute the final result with less memory and fewer floating-point operations than we could with the optimized computation method presented in the last post.
 
-## Counting the Floating Point Operations
+## Counting the Floating-Point Operations
 
-How does the number of floating point operations required for the enhanced computation method presented above compare to the number of floating point operations required for the optimized computation method presented in the previous post? Let's count the number of operations needed for each iteration of the outer loop in the above example:
+How does the number of floating-point operations required for the enhanced computation method presented above compare to the number of floating-point operations required for the optimized computation method presented in the previous post? Let's count the number of operations needed for each iteration of the outer loop in the above example:
 
 {% latex 1 fig-17 %}
     \begin{document}
@@ -873,7 +873,7 @@ Using the optimized computation method from the last post as a baseline, we can 
 
 {% chart fig-21-flop-counts.svg %}
 
-Both methods have quadratic time complexity. But as you can see in the chart above, the enhanced computation method requires fewer floating point operations in all cases. The enhanced computation method requires roughly half the number of floating point operations.
+Both methods have quadratic time complexity. But as you can see in the chart above, the enhanced computation method requires fewer floating-point operations in all cases. The enhanced computation method requires roughly half the number of floating-point operations.
 
 ## Progressive Polynomial Approximation
 
@@ -897,7 +897,7 @@ And repeating this procedure one more time, we can use the result above as the s
 
 {% chart fig-26-estimate-n-50-3-biases-fitted.svg %}
 
-This is the final solution after a total of 113 iterations. In this case, using the progressive polynomial approximation technique allows us to find a solution that fits a cubic polynomial in far fewer iterations than the regular cubic polynomial approximation method. In addition, it is worth noting that iterations involving lower order polynomials are less computationally expensive.
+This is the final solution after a total of 113 iterations. In this case, using the progressive polynomial approximation technique allows us to find a solution that fits a cubic polynomial in far fewer iterations than the regular cubic polynomial approximation method. In addition, it is worth noting that iterations involving lower-order polynomials are less computationally expensive.
 
 You might notice that this is not the same solution that was found using the regular cubic polynomial approximation technique in the previous post. And it is not the most optimal solution that can be found with a cubic polynomial. Like the example in the last post, the hill climbing process gets stuck in what seems to be a local minimum. But further analysis indicates that it might be stuck in a narrow ridge or valley. Applying the hill climbing algorithm with smaller step sizes may lead to a more accurate solution, but there is no guarantee. Because of this, I am a bit wary of using the hill climbing algorithm. I might experiment with using a different approach to avoid this pitfall.
 

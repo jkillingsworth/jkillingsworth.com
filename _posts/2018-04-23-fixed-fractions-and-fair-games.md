@@ -50,7 +50,7 @@ If we assume it's a fair coin, then each of the two outcomes has a 50% probabili
     \end{document}
 {% endlatex %}
 
-The gambler needs to decide how much to bet on each play. If he bets his entire stake, then he risks losing everything on the first round. If he only bets a portion of his bankroll, then he can afford to absorb a few losses without going broke. There are two betting strategies the gambler can choose from: a fixed constant bet size strategy and a fixed fraction bet size strategy. The gambler must choose one strategy and stick to it for every round of the game.
+The gambler needs to decide how much to bet on each play. If he bets his entire stake, then he risks losing everything in the first round. If he only bets a portion of his bankroll, then he can afford to absorb a few losses without going broke. There are two betting strategies the gambler can choose from: a fixed constant bet size strategy and a fixed fraction bet size strategy. The gambler must choose one strategy and stick to it for every round of the game.
 
 ## Fixed Constant Bet Size
 
@@ -144,7 +144,7 @@ Instead of taking the limit as the number of plays approaches infinity, we can c
     \end{document}
 {% endlatex %}
 
-While this is certainly a fair game, look closely at the result of the repeated coin toss simulation. The gambler's holdings dip below zero for a few rounds before moving back up. This might not be possible if the gambler is unable to borrow a few bucks to temporarily cover his debt. Also note that the constant bet size is a smaller percentage of the gambler's stake as his winnings increase, but it's a larger percentage of his stake as his holdings decrease. What happens if he bets a fixed percentage every time?
+While this is certainly a fair game, look closely at the result of the repeated coin toss simulation. The gambler's holdings dip below zero for a few rounds before moving back up. This might not be possible if the gambler is unable to borrow a few bucks to temporarily cover his debt. Also, note that the constant bet size is a smaller percentage of the gambler's stake as his winnings increase, but it's a larger percentage of his stake as his holdings decrease. What happens if he bets a fixed percentage every time?
 
 ## Fixed Fraction Bet Size
 
@@ -203,7 +203,7 @@ Unlike the previous example, the median value decays steadily downward, graduall
 
 {% chart fig-19-fraction-add-log-med.svg %}
 
-So is this a fair game or not? The mean value suggest that it might be, but the median value suggests otherwise. What if we take an analytical approach? Since the fixed fraction betting strategy is multiplicative instead of additive, let's consider the geometric mean instead of the arithmetic mean:
+So is this a fair game or not? The mean value suggests that it might be, but the median value suggests otherwise. What if we take an analytical approach? Since the fixed fraction betting strategy is multiplicative instead of additive, let's consider the geometric mean instead of the arithmetic mean:
 
 {% latex 1 fig-20 %}
     \begin{document}
@@ -263,7 +263,7 @@ Let's suppose the gambler plays two rounds of the coin toss game and always bets
     \end{document}
 {% endlatex %}
 
-The average value of all possible outcomes in this case is $100, which is the breakeven amount. Also notice that there are an equal number of winning games as there are losing games. Both aspects are indicative of a fair game. If the gambler chooses the fixed fraction betting strategy, the results are a bit different:
+In this case, the average value of all possible outcomes is $100, which is the breakeven amount. Also notice that there are an equal number of winning games as there are losing games. Both aspects are indicative of a fair game. If the gambler chooses the fixed fraction betting strategy, the results are a bit different:
 
 {% latex 1 fig-23 %}
     \begin{document}

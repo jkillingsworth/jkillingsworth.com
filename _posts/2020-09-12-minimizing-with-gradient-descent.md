@@ -9,7 +9,7 @@ The [previous post]({% post_url 2020-08-16-visualizing-the-climb-up-the-hill %})
 
 ## The Algorithm
 
-The gradient descent algorithm is a way of finding a local minimum of a differentiable function. In this case, we'll use the same cost function used in the previous post titled [*Visualizing the Climb up the Hill*]({% post_url 2020-08-16-visualizing-the-climb-up-the-hill %}) as the example. Recall the following equations based on the model of the coin toss game:
+The gradient descent algorithm is a way of finding a local minimum of a differentiable function. In this case, we'll use the same cost function used in the previous post titled [*Visualizing the Climb up the Hill*]({% post_url 2020-08-16-visualizing-the-climb-up-the-hill %}) as our example. Recall the following equations based on the model of the coin toss game:
 
 {% latex 1 fig-01 %}
     \begin{document}
@@ -91,7 +91,7 @@ I want to compare and contrast the gradient descent algorithm outlined above wit
 
 {% chart fig-07-target-pmfunc.svg %}
 
-These values can be represented symbolically as like this:
+These values can be represented symbolically like this:
 
 {% latex 1 fig-08 %}
     \begin{document}

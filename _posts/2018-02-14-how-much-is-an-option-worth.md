@@ -3,7 +3,7 @@ layout: post
 title: How Much Is an Option Worth?
 ---
 
-Consider an at-the-money call option with a strike price of $50. The underlying asset is currently trading at $50 per share. Assume it's a European style option. One trader wants to take the long side of the contract. Another trader wants to take the short side. How can they agree on a fair price?
+Consider an at-the-money call option with a strike price of $50. The underlying asset is currently trading at $50 per share. Assume it's a European-style option. One trader wants to take the long side of the contract. Another trader wants to take the short side. How can they agree on a fair price?
 
 <!--excerpt-->
 
@@ -154,7 +154,7 @@ We can compute the expected value of the option as a weighted average:
     \end{document}
 {% endlatex %}
 
-This approach lets us to model a prediction as a probability mass function across a range of values. The prediction might be based on historical price action or it might simply be an arbitrary belief chosen at our discretion.
+This approach lets us model a prediction as a probability mass function across a range of values. The prediction might be based on historical price action or it might simply be an arbitrary belief chosen at our discretion.
 
 ## Continuous Distributions
 
@@ -240,7 +240,7 @@ The examples above present a few simple models for estimating the value of an op
 * Choosing a probability distribution that best approximates price fluctuations
 * Evaluating price changes on a logarithmic scale vs. a linear scale
 * How the passage of time affects the value of an option
-* Computing the value of American-style options on dividend paying stocks
+* Computing the value of American-style options on dividend-paying stocks
 * Heteroskedastic variances, price jumps, and other such hazards
 
-There are other, more sophisticated option pricing models available which take these and other factors into consideration. I might explore some of these topics in future posts.
+There are other, more sophisticated option pricing models available that take these and other factors into consideration. I might explore some of these topics in future posts.

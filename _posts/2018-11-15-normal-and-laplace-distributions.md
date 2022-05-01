@@ -260,7 +260,7 @@ Setting the partial derivative to zero and solving for the scale parameter, we g
     \end{document}
 {% endlatex %}
 
-It think it's worth mentioning here that this method of estimating the parameters of a Laplace distribution doesn't sit well with me. Choosing the median value for the location parameter seems like a coarse approach. In cases where there is a range of possible values for the location, I wonder just how wide that range can be in practice. There might be other estimation techniques worth looking into, but I want to see how well this one works with real data before exploring alternatives.
+I think it's worth mentioning here that this method of estimating the parameters of a Laplace distribution doesn't sit well with me. Choosing the median value for the location parameter seems like a coarse approach. In cases where there is a range of possible values for the location, I wonder just how wide that range can be in practice. There might be other estimation techniques worth looking into, but I want to see how well this one works with real data before exploring alternatives.
 
 ## Comparison
 

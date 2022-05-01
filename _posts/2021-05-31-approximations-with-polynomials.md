@@ -243,7 +243,7 @@ Using the same technique again, we can use the biases of the coins in the +1, +2
     \end{document}
 {% endlatex %}
 
-We can use Gauss-Jordan elimination like we did before to express the four coefficients in terms of the weights of the four biased coins. And like we did before, we can use the hill climbing optimization method to find the optimum result:
+We can use Gauss--Jordan elimination as we did before to express the four coefficients in terms of the weights of the four biased coins. And like we did before, we can use the hill climbing optimization method to find the optimum result:
 
 {% chart fig-26-estimate-6-biases-fitted.svg %}
 {% chart fig-27-estimate-6-pmfunc-fitted.svg %}

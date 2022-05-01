@@ -121,7 +121,7 @@ We want to find the lowest point on the surface. To do this, we can use a simple
 {% chart fig-19-estimate-1-trace-2.svg %}
 {% chart fig-20-estimate-1-trace-3.svg %}
 
-Since the error function is convex, the algorithm always converges to the best solution, regardless of the initial guess. Here is the optimal set weights and corresponding probability mass function for the approximate solution found:
+Since the error function is convex, the algorithm always converges to the best solution, regardless of the initial guess. Here is the optimal set of weights and corresponding probability mass function for the approximate solution found:
 
 {% chart fig-21-estimate-1-biases-fitted.svg %}
 {% chart fig-22-estimate-1-pmfunc-fitted.svg %}
@@ -154,7 +154,7 @@ We want to find the lowest point on the surface. To do this, we can use a simple
 {% chart fig-27-estimate-2-trace-2.svg %}
 {% chart fig-28-estimate-2-trace-3.svg %}
 
-Since the error function is convex, the algorithm always converges to the best solution, regardless of the initial guess. Here is the optimal set weights and corresponding probability mass function for the approximate solution found:
+Since the error function is convex, the algorithm always converges to the best solution, regardless of the initial guess. Here is the optimal set of weights and corresponding probability mass function for the approximate solution found:
 
 {% chart fig-29-estimate-2-biases-fitted.svg %}
 {% chart fig-30-estimate-2-pmfunc-fitted.svg %}
@@ -187,7 +187,7 @@ We want to find the lowest point on the surface. To do this, we can use a simple
 {% chart fig-35-estimate-3-trace-2.svg %}
 {% chart fig-36-estimate-3-trace-3.svg %}
 
-Since the error function is convex, the algorithm always converges to the best solution, regardless of the initial guess. Here is the optimal set weights and corresponding probability mass function for the approximate solution found:
+Since the error function is convex, the algorithm always converges to the best solution, regardless of the initial guess. Here is the optimal set of weights and corresponding probability mass function for the approximate solution found:
 
 {% chart fig-37-estimate-3-biases-fitted.svg %}
 {% chart fig-38-estimate-3-pmfunc-fitted.svg %}

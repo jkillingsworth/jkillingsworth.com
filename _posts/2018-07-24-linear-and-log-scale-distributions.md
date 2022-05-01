@@ -117,7 +117,7 @@ This is the idealized form of the previous chart. Notice that the chart is symme
     \end{document}
 {% endlatex %}
 
-While the symmetry between the distribution of winning and losing outcomes may not be surprising when using a fixed constant bet size, can we expect the same property hold true if we use the fixed fraction bet size strategy instead? Let's find out.
+While the symmetry between the distribution of winning and losing outcomes may not be surprising when using a fixed constant bet size, can we expect the same property to hold true if we use the fixed fraction bet size strategy instead? Let's find out.
 
 ## Distributions on a Logarithmic Scale
 
@@ -135,7 +135,7 @@ Plugging in the numbers, using the same parameters of the coin toss game as we u
 
 {% chart fig-10-exhaustive-fraction-add-lin.svg %}
 
-In the fixed fraction case, the gambler's bankroll can never fall below zero. This is why the chart doesn't show the existence of any possible outcomes below zero. Notice that there is a cluster of outcomes between zero and the $100 breakeven amount, while outcomes above $100 are fewer and more spaced out. The set of possible outcomes are not evenly spaced. It might be more appropriate to plot this chart on a logarithmic scale:
+In the fixed fraction case, the gambler's bankroll can never fall below zero. This is why the chart doesn't show the existence of any possible outcomes below zero. Notice that there is a cluster of outcomes between zero and the $100 breakeven amount, while outcomes above $100 are fewer and more spaced out. The set of possible outcomes is not evenly distributed. It might be more appropriate to plot this chart on a logarithmic scale:
 
 {% chart fig-11-exhaustive-fraction-add-log.svg %}
 

@@ -11,7 +11,7 @@ If you're climbing a hill, you know you've reached the top when you can't take a
 
 The hill climbing algorithm used in my [previous post]({% post_url 2019-09-14-estimating-the-weights-of-biased-coins %}) is a stochastic hill climbing algorithm. It randomly chooses a small increment to one of the weights and then either accepts or rejects the move, depending on whether or not the adjustment brings the computed outcome closer to that of the target distribution.
 
-Instead of randomly picking a single move, we can consider the set of all possible moves and pick the one with the steepest ascent up the hill. To do this, we can increment each one of the weights in both the positive and negative direction. If there are three weights, there are six possible moves. We can compute the value of a cost function for each move and then choose the best one. This process can be repeated until the none of the possible moves offers and improvement to the value of the cost function associated with the previous estimate. To illustrate, consider the following target distribution:
+Instead of randomly picking a single move, we can consider the set of all possible moves and pick the one with the steepest ascent up the hill. To do this, we can increment each one of the weights in both the positive and the negative direction. If there are three weights, there are six possible moves. We can compute the value of a cost function for each move and then choose the best one. This process can be repeated until none of the possible moves offers an improvement to the value of the cost function associated with the previous estimate. To illustrate, consider the following target distribution:
 
 {% chart fig-01-target-pmfunc.svg %}
 
@@ -273,7 +273,7 @@ Plugging these weights into the scoring functions:
 
 While both sets of weights are valid solutions for the given target distribution, the scoring functions give preference to one over the other. In this case, both scoring functions give preference to the second set of weights. But these two sets of weights are just two possible solutions in an entire range of possible solutions in which the primary cost function evaluates to zero.
 
-If we only consider the range of possible solutions in which the primary cost function evaluates to zero, which are the only valid solutions for the given target distribution, how do we go about finding the one with the most optimal score for each of the two scoring functions? We can start by plotting the scores across the range of possible values. Based on the results derived in the [previous post]({% post_url 2019-09-14-estimating-the-weights-of-biased-coins %}), the weights of the biased coins the +2 and +3 states can be stated in terms of the weight of the coin in the +1 state:
+If we only consider the range of possible solutions in which the primary cost function evaluates to zero, which are the only valid solutions for the given target distribution, how do we go about finding the one with the most optimal score for each of the two scoring functions? We can start by plotting the scores across the range of possible values. Based on the results derived in the [previous post]({% post_url 2019-09-14-estimating-the-weights-of-biased-coins %}), the weights of the biased coins in the +2 and +3 states can be stated in terms of the weight of the coin in the +1 state:
 
 {% latex 1 fig-25 %}
     \begin{document}
@@ -373,7 +373,7 @@ Here is the most optimal set of weights determined by the scoring function:
 
 {% chart fig-35-optimize-score-B-biases.svg %}
 
-These two results are different than those found by the hill climbing algorithm. For both scoring functions above, I used a numerical root finding method to find the root of the derivative. I don't think a closed form solution is possible in either of these two cases. This approach to finding the optimal values may not work if the scoring function is not differentiable at all points that fall within the lower and upper bound.
+These two results are different than those found by the hill climbing algorithm. For both scoring functions above, I used a numerical root-finding method to find the root of the derivative. I don't think a closed-form solution is possible in either of these two cases. This approach to finding the optimal values may not work if the scoring function is not differentiable at all points that fall within the lower and upper bound.
 
 ## Next Steps
 

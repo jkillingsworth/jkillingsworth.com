@@ -789,13 +789,13 @@ Once the loop terminates, we have the probabilities of landing on each state aft
     \end{document}
 {% endlatex %}
 
-Is this the most optimal computation method? Probably not. For even numbered coin tosses, the odd numbered states are always zero. For odd numbered coin tosses, the even numbered states are always zero. We could probably use this knowledge to optimize the inner loop even further, but it might make the algorithm a little more complicated.
+Is this the most optimal computation method? Probably not. For even-numbered coin tosses, the odd-numbered states are always zero. For odd-numbered coin tosses, the even-numbered states are always zero. We could probably use this knowledge to optimize the inner loop even further, but it might make the algorithm a little more complicated.
 
-Consider also that each iteration of the inner loop is independent of the others. This means that they can be run out of order or in parallel. Since we're using pointers to reference elements of the state transition lookup tables and state vector arrays, we could easily modify our program to use hardware specific SIMD intrinsics such as those for the SSE or AVX instruction sets. This would allow us to parallelize the computations in the inner loop.
+Consider also that each iteration of the inner loop is independent of the others. This means that they can be run out of order or in parallel. Since we're using pointers to reference elements of the state transition lookup tables and state vector arrays, we could easily modify our program to use hardware-specific SIMD intrinsics such as those for the SSE or AVX instruction sets. This would allow us to parallelize the computations in the inner loop.
 
-## Counting the Floating Point Operations
+## Counting the Floating-Point Operations
 
-The example we worked through in the computation method described above is small enough that we can easily count the number of floating point operations required to compute the result. Here is a table showing the count of all addition and multiplication operations needed to complete each iteration of the outer loop:
+The example we worked through in the computation method described above is small enough that we can easily count the number of floating-point operations required to compute the result. Here is a table showing the count of all addition and multiplication operations needed to complete each iteration of the outer loop:
 
 {% latex 1 fig-18 %}
     \begin{document}
@@ -857,7 +857,7 @@ Now we need to add up the number of operations used in each iteration to get the
     \end{document}
 {% endlatex %}
 
-This formula tells us the total number of floating point operations necessary to calculate the final result for a coin toss model with an arbitrary number of coin toss events. But I think it might be convenient to represent this in algebraic form instead of summation form. Consider the following relationship:
+This formula tells us the total number of floating-point operations necessary to calculate the final result for a coin toss model with an arbitrary number of coin toss events. But I think it might be convenient to represent this in algebraic form instead of summation form. Consider the following relationship:
 
 {% latex 1 fig-22 %}
     \begin{document}
@@ -877,7 +877,7 @@ This is the formula for the triangular number sequence. We can use this relation
     \end{document}
 {% endlatex %}
 
-As you can see, this indicates that our algorithm has quadratic time complexity. But this doesn't tell us everything. How we access memory and whether or not we make efficient use of the cache can have an impact on performance regardless of the number of floating point operations required to complete a task.
+As you can see, this indicates that our algorithm has quadratic time complexity. But this doesn't tell us everything. How we access memory and whether or not we make efficient use of the cache can have an impact on performance regardless of the number of floating-point operations required to complete a task.
 
 ## Comparison to Matrix Multiplication
 
@@ -950,7 +950,7 @@ If we are modeling a system with four coin toss events, we can expand the above 
     \end{document}
 {% endlatex %}
 
-In this case, there are a total of four matrix operations. Each matrix operation contains many elementary operations. We want to count the number of elementary operations. Since matrix multiplication is associative, we'll get the same result whether we evaluate the expression from left to right or right to left---assuming we don't have any floating point rounding errors. But the number of elementary operations required to evaluate this expression depends on the order in which we perform the evaluation. Here is the analysis for right-associative evaluation:
+In this case, there are a total of four matrix operations. Each matrix operation contains many elementary operations. We want to count the number of elementary operations. Since matrix multiplication is associative, we'll get the same result whether we evaluate the expression from left to right or right to left---assuming we don't have any floating-point rounding errors. But the number of elementary operations required to evaluate this expression depends on the order in which we perform the evaluation. Here is the analysis for right-associative evaluation:
 
 {% latex 1 fig-28 %}
     \begin{document}
@@ -974,7 +974,7 @@ In this case, there are a total of four matrix operations. Each matrix operation
     \end{document}
 {% endlatex %}
 
-Using this information, we can express the total number of floating point operations as a function of the number of coin toss events:
+Using this information, we can express the total number of floating-point operations as a function of the number of coin toss events:
 
 {% latex 1 fig-29 %}
     \begin{document}
@@ -1026,7 +1026,7 @@ This is about two orders of magnitude more than the number of operations require
     \end{document}
 {% endlatex %}
 
-Using this information, we can express the total number of floating point operations as a function of the number of coin toss events:
+Using this information, we can express the total number of floating-point operations as a function of the number of coin toss events:
 
 {% latex 1 fig-32 %}
     \begin{document}
@@ -1108,7 +1108,7 @@ Suppose we have a set of algebraic formulas that we can use to compute the expec
     \end{document}
 {% endlatex %}
 
-With four coin toss events, there are sixteen possible coin toss sequences. The table above shows the probability of each one, along with the terminal state after the final coin toss. We can express the chance of ending up on each one of the final states with the following:
+With four coin toss events, there are sixteen possible coin toss sequences. The table above shows the probability of each one, along with the terminal state after the final coin toss. We can express the chance of ending up in each one of the final states with the following:
 
 {% latex 1 fig-36 %}
     \begin{document}
@@ -1143,7 +1143,7 @@ Remember, the coin in the initial state is always a fair coin. The formulas abov
     \end{document}
 {% endlatex %}
 
-You might want to stop here and check my work to make sure I did this correctly. It's easy to make a mistake. With these formulas, we can now count all the addition and multiplication operations to get the total number of floating point operations needed to compute the results:
+You might want to stop here and check my work to make sure I did this correctly. It's easy to make a mistake. With these formulas, we can now count all the addition and multiplication operations to get the total number of floating-point operations needed to compute the results:
 
 {% latex 1 fig-38 %}
     \begin{document}
@@ -1185,7 +1185,7 @@ It's not clear to me how to generalize this for a model with an arbitrary number
     \end{document}
 {% endlatex %}
 
-This computation has linear time complexity. The number of operations required is directly proportional to the number of coin toss events. Knowing this, we can assume that an approach using predetermined algebraic formulas has at least a linear growth rate. That's a best case scenario. But realistically, it's probably not that good. Nonetheless, this approach still might have a better performance profile than the optimized computation method we detailed earlier. It might be worth exploring this idea further.
+This computation has linear time complexity. The number of operations required is directly proportional to the number of coin toss events. Knowing this, we can assume that an approach using predetermined algebraic formulas has at least a linear growth rate. That's a best-case scenario. But realistically, it's probably not that good. Nonetheless, this approach still might have a better performance profile than the optimized computation method we detailed earlier. It might be worth exploring this idea further.
 
 ## Performance Bottleneck
 

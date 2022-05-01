@@ -7,7 +7,7 @@ In my [previous post]({% post_url 2019-01-26-the-distribution-of-price-fluctuati
 
 <!--excerpt-->
 
-The exchange rate between the Chinese yuan and the US dollar is not an entirely market driven rate the way many other currency exchange rates are. While the value of the yuan is allowed to float to some degree, the People's Bank of China maintains a certain level of control over the yuan's exchange rate. Furthermore, the yuan is quoted in two separate markets: an onshore market and an offshore market.
+The exchange rate between the Chinese yuan and the US dollar is not an entirely market-driven rate the way many other currency exchange rates are. While the value of the yuan is allowed to float to some degree, the People's Bank of China maintains a certain level of control over the yuan's exchange rate. Furthermore, the yuan is quoted in two separate markets: an onshore market and an offshore market.
 
 ## The Onshore Exchange Rate
 
@@ -15,7 +15,7 @@ The onshore exchange rate, according to my understanding, is determined by a ref
 
 {% chart fig-01-forex-intraday-USDCNY-price-lin.svg %}
 
-The chart above is based on one minute intraday data. This chart looks a bit odd to me. It seems to be sprinkled with unnatural spikes that quickly revert back to their previous values. The price doesn't zigzag the same way prices seem to move on other price charts. But this is just a subjective observation. Let's look at a histogram of price differences from one minute to the next:
+The chart above is based on one-minute intraday data. This chart looks a bit odd to me. It seems to be sprinkled with unnatural spikes that quickly revert back to their previous values. The price doesn't zigzag the same way prices seem to move on other price charts. But this is just a subjective observation. Let's look at a histogram of price differences from one minute to the next:
 
 {% chart fig-02-forex-intraday-USDCNY-probs-lin.svg %}
 {% chart fig-03-forex-intraday-USDCNY-probs-log.svg %}
@@ -26,11 +26,11 @@ If you were to only look at the centermost third of the chart, it would seem lik
 
 ## The Offshore Exchange Rate
 
-The offshore exchange rate is supposedly a floating rate determined by the market. While I'm no expert on the specific details, I presume the Chinese central bankers exert some form of indirect influence on the offshore rate to keep it in parity with the onshore rate. Here is a one minute intraday chart of the offshore rate covering a period 24 hours:
+The offshore exchange rate is supposedly a floating rate determined by the market. While I'm no expert on the specific details, I presume the Chinese central bankers exert some form of indirect influence on the offshore rate to keep it in parity with the onshore rate. Here is a one-minute intraday chart of the offshore rate covering a period of 24 hours:
 
 {% chart fig-04-forex-intraday-USDCNH-price-lin.svg %}
 
-This one also looks odd to me. It has those same unnatural looking spikes, mostly in the downward direction. If we examine distribution of price movements for the offshore rate, will the histogram exhibit the same triple peak pattern as the onshore rate? Take a look:
+This one also looks odd to me. It has those same unnatural-looking spikes, mostly in the downward direction. If we examine the distribution of price movements for the offshore rate, will the histogram exhibit the same triple peak pattern as the onshore rate? Take a look:
 
 {% chart fig-05-forex-intraday-USDCNH-probs-lin.svg %}
 {% chart fig-06-forex-intraday-USDCNH-probs-log.svg %}
@@ -43,7 +43,7 @@ Does the exchange rate between the yuan and the euro exhibit the same characteri
 
 {% chart fig-07-forex-intraday-EURCNH-price-lin.svg %}
 
-This data set covers the same 24 hour period as the US dollar offshore rate examined in the previous section. This price chart seems to be much cleaner, with fewer of those unnatural price spikes. The distribution of price fluctuations looks like this:
+This data set covers the same 24-hour period as the US dollar offshore rate examined in the previous section. This price chart seems to be much cleaner, with fewer of those unnatural price spikes. The distribution of price fluctuations looks like this:
 
 {% chart fig-08-forex-intraday-EURCNH-probs-lin.svg %}
 {% chart fig-09-forex-intraday-EURCNH-probs-log.svg %}
@@ -56,7 +56,7 @@ Without observing a quoted exchange rate directly, a synthetic exchange rate bet
 
 {% chart fig-10-pair-synthetic-USDCNH-price-lin.svg %}
 
-As expected, this chart looks very similar to the intraday chart of the offshore rate between the yuan and the dollar shown earlier. In fact, I think this chart looks even better than the one based on the actual quoted values. It doesn't have as many of those unnatural looking spikes. Here is what the distribution of price movements looks like:
+As expected, this chart looks very similar to the intraday chart of the offshore rate between the yuan and the dollar shown earlier. In fact, I think this chart looks even better than the one based on the actual quoted values. It doesn't have as many of those unnatural-looking spikes. Here is what the distribution of price movements looks like:
 
 {% chart fig-11-pair-synthetic-USDCNH-probs-lin.svg %}
 {% chart fig-12-pair-synthetic-USDCNH-probs-log.svg %}

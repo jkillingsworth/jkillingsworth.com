@@ -75,7 +75,7 @@ In this model, the coin in the zero state is always a fair coin. A fair coin wil
     \end{document}
 {% endlatex %}
 
-Note that the positive and negative fourth states can only be terminal states, so there is never a transition out of them. Also keep in mind that the Markov model does not necessarily have to be symmetrical. I chose to make it symmetrical to reduce the number of variables and simplify the model.
+Note that the positive and negative fourth states can only be terminal states, so there is never a transition out of them. Also, keep in mind that the Markov model does not necessarily have to be symmetrical. I chose to make it symmetrical to reduce the number of variables and simplify the model.
 
 ## Monte Carlo Simulation
 
@@ -105,11 +105,11 @@ In the Monte Carlo simulation, we use a random number generator to simulate the 
 
 {% chart fig-05-binomial-equal-pmfunc-simulated.svg %}
 
-This gives us an estimate of the expected outcome after four tosses of the coin. Notice that only even terminal states are possible when there is an even number of coin tosses. Odd numbered terminal states would only be possible if there were an odd number of tosses. It is also worth noting that the chart above closely approximates a binomial distribution. Here is a breakdown of the expectation for each individual coin toss sequence:
+This gives us an estimate of the expected outcome after four tosses of the coin. Notice that only even terminal states are possible when there is an even number of coin tosses. Odd-numbered terminal states would only be possible if there were an odd number of tosses. It is also worth noting that the chart above closely approximates a binomial distribution. Here is a breakdown of the expectation for each individual coin toss sequence:
 
 {% chart fig-06-binomial-equal-tosses-simulated.svg %}
 
-The values are all roughly the same, indicating that all possible coin toss sequences have about an equal probability of being observed in any given round of the coin toss game, assuming we're always using fair coins. The Monte Carlo simulation is a brute force approach that yields fairly accurate results. We can arrive at more precise values by solving analytically.
+The values are all roughly the same, indicating that all possible coin toss sequences have about an equal probability of being observed in any given round of the coin toss game, assuming we're always using fair coins. The Monte Carlo simulation is a brute force approach that yields fairly accurate results. We can arrive at more precise values by finding the results analytically.
 
 ## Analytical Evaluation
 
@@ -159,7 +159,7 @@ With four tosses of the coin, there are sixteen possible coin toss sequences and
     \end{document}
 {% endlatex %}
 
-Keep in mind that the model is symmetrical. Let's use the following notation to represent probability of landing on each of the five possible terminal states:
+Keep in mind that the model is symmetrical. We can use the following notation to represent the probability of landing on each of the five possible terminal states:
 
 {% latex 1 fig-08 %}
     \begin{document}
@@ -175,7 +175,7 @@ Keep in mind that the model is symmetrical. Let's use the following notation to 
     \end{document}
 {% endlatex %}
 
-Since the model is symmetrical, the chance of ending up on any given positive terminal state is equal to the probability of ending up on the corresponding negative terminal state. The equations above can be rewritten as follows:
+Since the model is symmetrical, the chance of ending up in any given positive terminal state is equal to the probability of ending up in the corresponding negative terminal state. The equations above can be rewritten as follows:
 
 {% latex 1 fig-09 %}
     \begin{document}
@@ -277,7 +277,7 @@ These results can be presented visually with the following chart:
 
 {% chart fig-15-binomial-equal-pmfunc-evaluated.svg %}
 
-These are the exact figures that were estimated by the Monte Carlo simulation demonstrated in the previous section. This is a binomial distribution. The computed expectation of each individual coin toss sequence is show below:
+These are the exact figures that were estimated by the Monte Carlo simulation demonstrated in the previous section. This is a binomial distribution. The computed expectation of each individual coin toss sequence is shown below:
 
 {% chart fig-16-binomial-equal-tosses-evaluated.svg %}
 
@@ -301,7 +301,7 @@ Let's introduce the following notation. We have seen a graphical illustration of
     \end{document}
 {% endlatex %}
 
-For succinctness, I am using an alternate zero based index to represent the terminal states. The following relationship holds:
+For succinctness, I am using an alternate zero-based index to represent the terminal states. The following relationship holds:
 
 {% latex 1 fig-18 %}
     \begin{document}
@@ -572,7 +572,7 @@ And using the techniques described in the previous section, we can also compute 
 {% chart fig-42-triangle-learn-biases-lower.svg %}
 {% chart fig-43-triangle-learn-biases-upper.svg %}
 
-While the weights illustrated above are valid to produce a triangle distribution, they might not be the best estimates to model a real world scenario. A coin that always lands on heads or always lands on tails, for example, might not be the most accurate model of reality. It might be better to come up with an intermediate solution that lies somewhere in between the two extremes.
+While the weights illustrated above are valid to produce a triangle distribution, they might not be the best estimates to model a real-world scenario. A coin that always lands on heads or always lands on tails, for example, might not be the most accurate model of reality. It might be better to come up with an intermediate solution that lies somewhere in between the two extremes.
 
 Instead of trying to find an intermediate solution analytically, we can try to find one incrementally. We can start with an initial guess somewhere in the middle and then incrementally try to improve our initial estimate. We can repeat this process until we converge on a valid solution that fits the triangle distribution. This would effectively be a type of hill climbing algorithm.
 
@@ -816,6 +816,6 @@ The above values were estimated starting with an initial guess of fairly weighte
 
 I want to explore this estimation technique in more depth. I would like to see what the estimated weights look like when the coin toss game is played with many coin tosses per round instead of just four. Perhaps this will be the topic of a later post.
 
-Also, I would also like to come up with a more meaningful cost function for the hill climbing algorithm, one that would give preference to valid values closer to the middle of the range of possible values. With the implementation presented in this post, there is a plateau of valid values that can be estimated. The value that it converges to is highly dependent on the initial guess. Having a better cost function would allow the algorithm to converge to the same solution regardless of the starting point. I'm not sure yet how to do this.
+I would also like to come up with a more meaningful cost function for the hill climbing algorithm, one that would give preference to valid values closer to the middle of the range of possible values. With the implementation presented in this post, there is a plateau of valid values that can be estimated. The value that it converges to is highly dependent on the initial guess. Having a better cost function would allow the algorithm to converge to the same solution regardless of the starting point. I'm not sure yet how to do this.
 
 {% accompanying_src_link %}

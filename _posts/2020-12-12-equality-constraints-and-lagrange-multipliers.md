@@ -29,7 +29,7 @@ In previous posts, we focused primarily on finding arbitrary solutions to the we
     \end{document}
 {% endlatex %}
 
-Our objective is not to find the absolute minimum of the scoring function. Rather, we want to find a set of parameters that satisfy the given constraints while also yielding the smallest possible value when plugged into the scoring function. The key to understanding the method of Lagrange multipliers is knowing that the gradient of the objective function---the scoring function in this case---is equal to a linear combination of the gradients of the constraint functions at the point in which we find the optimal solution:
+Our objective is not to find the absolute minimum of the scoring function. Rather, we want to find a set of parameters that satisfy the given constraints while also yielding the smallest possible value when plugged into the scoring function. The key to understanding the method of Lagrange multipliers is knowing that the gradient of the objective function---the scoring function in this case---is equal to a linear combination of the gradients of the constraint functions at the point at which we find the optimal solution:
 
 {% latex 1 fig-02 %}
     \begin{document}
@@ -144,7 +144,7 @@ There is more than one way to solve a system of equations. One way to do it is t
     \end{document}
 {% endlatex %}
 
-The square of the magnitude can be found by computing the sum of the squares of each element in the gradient vector. The equation above can be expanded out as like this:
+The square of the magnitude can be found by computing the sum of the squares of each element in the gradient vector. The equation above can be expanded out like this:
 
 {% latex 1 fig-07 %}
     \newcommand{\dL}{\pderiv \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})}
@@ -624,7 +624,7 @@ Again, each constraint function must equal zero. And like before, this is not an
 
 If we exclude the dependent equation from the set of constraints, we can satisfy the constraint qualification assumption. As I mentioned earlier, satisfying the constraint qualification assumption may not be necessary if we only care about the optimal set of values for the weights of the biased coins. But this knowledge might come in handy when exploring other optimization techniques that might be more efficient than the gradient descent method used in the examples illustrated in the previous sections.
 
-## Other Optimization and Root Finding Methods
+## Other Optimization and Root-Finding Methods
 
 In the examples above, the gradient descent method requires tens of thousands of iterations to converge to a solution. In some cases, it even takes hundreds of thousands of iterations. While I tried to optimize it a bit using a variable step size, it still seems like a large number of iterations. The [numerics library](https://numerics.mathdotnet.com/) I am using comes with some alternative optimization methods that can be used in place of my gradient descent implementation. These alternatives can find the minimum of the cost function in far fewer iterations. See the tables below.
 
@@ -744,6 +744,6 @@ While one method might be able to arrive at a solution in fewer iterations than 
     \end{document}
 {% endlatex %}
 
-The critical points of the Lagrangian function may occur at saddle points instead of at minimums or maximums. There are some root finding methods that can solve this type of problem directly without having to use a cost function. With the numerics library I am using, I was able to apply Broyden's method to solve the coin toss problem based on the gradient of the Lagrangian function, without having to use a cost function.
+The critical points of the Lagrangian function may occur at saddle points instead of at minimums or maximums. Some root-finding methods can solve this type of problem directly without having to use a cost function. With the numerics library I am using, I was able to apply Broyden's method to solve the coin toss problem based on the gradient of the Lagrangian function, without having to use a cost function.
 
 {% accompanying_src_link %}
