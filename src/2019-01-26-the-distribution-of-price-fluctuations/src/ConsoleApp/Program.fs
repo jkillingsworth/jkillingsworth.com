@@ -40,9 +40,9 @@ let output flag (dataset : Data.Dataset) =
     | Stats ->
         printfn "----------------------------------------"
         printfn "%s" dataset.Descriptor
-        printfn "µN = %+0.3e" (fst criteriaN)
+        printfn "μN = %+0.3e" (fst criteriaN)
         printfn "σN = %+0.3e" (snd criteriaN)
-        printfn "µL = %+0.3e" (fst criteriaL)
+        printfn "μL = %+0.3e" (fst criteriaL)
         printfn "bL = %+0.3e" (snd criteriaL)
         printfn ""
 

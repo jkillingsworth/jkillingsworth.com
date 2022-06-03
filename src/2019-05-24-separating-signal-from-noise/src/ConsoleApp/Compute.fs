@@ -81,17 +81,17 @@ let histogram wide values =
 let fitDistributionN (values : float[]) =
 
     let n = values |> Array.length
-    let µ = values |> Statistics.Mean
-    let σ = values |> Array.map (fun x -> (x - µ) ** 2.0) |> Array.sum
+    let μ = values |> Statistics.Mean
+    let σ = values |> Array.map (fun x -> (x - μ) ** 2.0) |> Array.sum
     let σ = sqrt (σ / float n)
 
-    (µ, σ)
+    (μ, σ)
 
 let fitDistributionL (values : float[]) =
 
     let n = values |> Array.length
-    let µ = values |> Statistics.Median
-    let b = values |> Array.map (fun x -> abs (x - µ)) |> Array.sum
+    let μ = values |> Statistics.Median
+    let b = values |> Array.map (fun x -> abs (x - μ)) |> Array.sum
     let b = (b / float n)
 
-    (µ, b)
+    (μ, b)

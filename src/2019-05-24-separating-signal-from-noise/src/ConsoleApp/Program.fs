@@ -26,9 +26,9 @@ let outputResult render descriptor name logvalues =
     dataProbs |> render (path descriptor + "-probs-" + name + ".svg")
     printfn "----------------------------------------"
     printfn "%s %s" descriptor name
-    printfn "µN = %+0.3e" (fst criteriaN)
+    printfn "μN = %+0.3e" (fst criteriaN)
     printfn "σN = %+0.3e" (snd criteriaN)
-    printfn "µL = %+0.3e" (fst criteriaL)
+    printfn "μL = %+0.3e" (fst criteriaL)
     printfn "bL = %+0.3e" (snd criteriaL)
     printfn ""
 

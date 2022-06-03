@@ -62,7 +62,7 @@ set grid linestyle 1 linecolor '#e6e6e6'
 set grid xtics mxtics
 set grid ytics mytics
 
-set xlabel 'Location (µ)'
+set xlabel 'Location (μ)'
 
 set ylabel 'Likelihood'
 set yrange [lower:upper]

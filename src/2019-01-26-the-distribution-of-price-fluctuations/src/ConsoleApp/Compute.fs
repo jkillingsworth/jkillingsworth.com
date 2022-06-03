@@ -28,17 +28,17 @@ let histogram wide differences =
 let fitDistributionN (diffs : float[]) =
 
     let n = diffs |> Array.length
-    let µ = diffs |> Statistics.Mean
-    let σ = diffs |> Array.map (fun x -> (x - µ) ** 2.0) |> Array.sum
+    let μ = diffs |> Statistics.Mean
+    let σ = diffs |> Array.map (fun x -> (x - μ) ** 2.0) |> Array.sum
     let σ = sqrt (σ / float n)
 
-    (µ, σ)
+    (μ, σ)
 
 let fitDistributionL (diffs : float[]) =
 
     let n = diffs |> Array.length
-    let µ = diffs |> Statistics.Median
-    let b = diffs |> Array.map (fun x -> abs (x - µ)) |> Array.sum
+    let μ = diffs |> Statistics.Median
+    let b = diffs |> Array.map (fun x -> abs (x - μ)) |> Array.sum
     let b = (b / float n)
 
-    (µ, b)
+    (μ, b)

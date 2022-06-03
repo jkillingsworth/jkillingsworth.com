@@ -134,7 +134,7 @@ $data0 << EOD
 {0}
 EOD
 
-title = '{1}'; sigmas = {2}; µN = {3}; σN = {4}; µL = {5}; bL = {6}
+title = '{1}'; sigmas = {2}; μN = {3}; σN = {4}; μL = {5}; bL = {6}
 
 set border linewidth 1.2
 set grid linestyle 1 linecolor '#e6e6e6'
@@ -161,17 +161,17 @@ set style fill solid border linecolor '#808080'
 
 set samples 1000
 
-distributionN(x,µ,σ) = (1 / (σ * ((2 * pi) ** 0.5))) * exp(-0.5 * ((x - µ) / σ) ** 2)
-distributionL(x,µ,b) = (1 / (2 * b)) * exp(-abs(x - µ) / b)
+distributionN(x,μ,σ) = (1 / (σ * ((2 * pi) ** 0.5))) * exp(-0.5 * ((x - μ) / σ) ** 2)
+distributionL(x,μ,b) = (1 / (2 * b)) * exp(-abs(x - μ) / b)
 
 plot $data0 using 1:2 with boxes title 'Histogram',\
-     distributionN(x, µN, σN) title 'Normal',\
-     distributionL(x, µL, bL) title 'Laplace'
+     distributionN(x, μN, σN) title 'Normal',\
+     distributionL(x, μL, bL) title 'Laplace'
 "
 
 let renderProbs path data =
 
-    let descriptor, histogram, sigmas, (µN, σN), (µL, bL) = data
+    let descriptor, histogram, sigmas, (μN, σN), (μL, bL) = data
     let title = makeTitle descriptor
 
     let data0 =
@@ -179,4 +179,4 @@ let renderProbs path data =
         |> Array.map (fun (center, amount) -> sprintf "%O %O" center amount)
         |> String.concat "\n"
 
-    render path plotProbs [| data0; title; sigmas; µN; σN; µL; bL |]
+    render path plotProbs [| data0; title; sigmas; μN; σN; μL; bL |]
