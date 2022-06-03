@@ -4,7 +4,7 @@ module Jekyll
 
     class LatexBlock < Liquid::Block
 
-        @@latex_upper = '
+        @@latex_preamble = '
             \documentclass[varwidth]{standalone}
             \usepackage[charter]{mathdesign}
             \usepackage[scaled=0.75]{roboto-mono}
@@ -63,12 +63,12 @@ module Jekyll
         def render(context)
             match = @input.match /^((?<preamble>\d{1}) )?fig-(?<figno>\d{2})$/
             figno = match ? match["figno"] : "00"
-            latex_inner = process_latex([super])
-            fingerprint = Digest::SHA1.hexdigest(latex_inner)[0...8].to_i(16).to_s.rjust(10, "0")
+            latex_document = process_latex([super])
+            latex_hashcode = Digest::SHA1.hexdigest(latex_document)[0...8].to_i(16).to_s.rjust(10, "0")
             site = context.registers[:site]
             post = context.registers[:page]
             path = Assets.source_path(post)
-            file = File.join(path, "fig-#{figno}-latex-#{fingerprint}.svg")
+            file = File.join(path, "fig-#{figno}-latex-#{latex_hashcode}.svg")
             name = File.basename(file)
             opts = site.config["latextosvg"]
 
@@ -96,11 +96,11 @@ module Jekyll
                 preamble = match["preamble"]
                 case preamble
                 when nil
-                    latex_upper = @@latex_upper
+                    latex_preamble = @@latex_preamble
                 else
                     raise "Unknown preamble option '#{preamble}'"
                 end
-                latex = process_latex([latex_upper, latex_inner])
+                latex = process_latex([latex_preamble, latex_document])
                 gen_outfile(latex, opts, file)
                 site.static_files << AssetFile.new(site, path, post.url, name)
             end
