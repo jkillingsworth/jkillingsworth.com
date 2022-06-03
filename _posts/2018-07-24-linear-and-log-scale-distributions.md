@@ -15,7 +15,7 @@ Suppose a gambler with $100 plays 200 rounds of the coin toss game, betting a fi
 
 The chart above looks like it roughly approximates a binomial distribution, with outcomes closer to the breakeven amount more likely than outcomes further away. We can also separate the outcomes into categories based on whether the result is a profit, a loss, or a breakeven amount:
 
-{% latex 1 fig-02 %}
+{% latex fig-02 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{5em}|wl{5em}|}
@@ -39,7 +39,7 @@ While the simulated results might give us a pretty good approximation of the dis
 
 Regardless of which betting strategy the gambler uses, the outcome of the repeated coin toss game depends on the total number of winning and losing plays. The order of winners and losers doesn't matter. For the fixed constant betting strategy, the following formula can be used to compute the final outcome based on the number of winning and losing games:
 
-{% latex 1 fig-03 %}
+{% latex fig-03 %}
     \begin{document}
     \begin{displaymath}
     V_n = W(+bV_0) + L(-bV_0)
@@ -49,7 +49,7 @@ Regardless of which betting strategy the gambler uses, the outcome of the repeat
 
 Since there are only two possible outcomes for each toss of the coin, the distribution of possible outcomes in a repeated coin toss game can be modeled as a binomial distribution. We can use the following probability mass function to compute the probability of each outcome based on the number of winning rounds relative to the total number of plays:
 
-{% latex 1 fig-04 %}
+{% latex fig-04 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -70,7 +70,7 @@ Since there are only two possible outcomes for each toss of the coin, the distri
 
 While there are multiple techniques for computing the binomial coefficient, the formula using factorials seems to be the most common:
 
-{% latex 1 fig-05 %}
+{% latex fig-05 %}
     \begin{document}
     \begin{displaymath}
     \binom{n}{k} = \frac{n!}{k!\1(n - k)!}
@@ -80,7 +80,7 @@ While there are multiple techniques for computing the binomial coefficient, the 
 
 However, I prefer to use the following alternative method when using a computer to perform the calculations:
 
-{% latex 1 fig-06 %}
+{% latex fig-06 %}
     \begin{document}
     \begin{displaymath}
     \binom{n}{k} =
@@ -99,7 +99,7 @@ If the gambler plays 200 rounds of the coin toss game, there is a total of 201 u
 
 This is the idealized form of the previous chart. Notice that the chart is symmetrical. The distribution of profitable outcomes to the right of $100 mirrors the distribution of losing outcomes to the left of $100. Grouping the results into profit, loss, and breakeven categories again, we get the following:
 
-{% latex 1 fig-08 %}
+{% latex fig-08 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{5em}|wl{5em}|}
@@ -123,7 +123,7 @@ While the symmetry between the distribution of winning and losing outcomes may n
 
 To generate the equivalent probability distribution chart for the fixed fraction betting strategy, we need to compute the final outcomes differently. In this case, we use the following formula to determine the final outcome based on the number of winning and losing plays:
 
-{% latex 1 fig-09 %}
+{% latex fig-09 %}
     \begin{document}
     \begin{displaymath}
     V_n = V_0 \1 \brace2[]{ (1 + b)^W (1 - b)^L }
@@ -141,7 +141,7 @@ In the fixed fraction case, the gambler's bankroll can never fall below zero. Th
 
 The outcomes are evenly distributed on a logarithmic scale, but the most likely outcomes are shifted to the left of the $100 breakeven amount. After playing 200 rounds, the gambler is far more likely to take a loss than to go home with a profit:
 
-{% latex 1 fig-12 %}
+{% latex fig-12 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{5em}|wl{5em}|}
@@ -163,7 +163,7 @@ The most likely outcomes, outcomes with 100 winning plays and 100 losing plays, 
 
 As with the [previous post]({% post_url 2018-04-23-fixed-fractions-and-fair-games %}), we assume the gambler always bets on heads. Recall the reward function we've been using so far for the fixed fraction betting strategy:
 
-{% latex 1 fig-13 %}
+{% latex fig-13 %}
     \begin{document}
     \begin{displaymath}
     R(X) =
@@ -180,7 +180,7 @@ With this reward function, for any given round of the coin toss game, the value 
 
 How can the reward function for the fixed fraction betting strategy be modified to give a balanced distribution of winning and losing outcomes? Instead of having a reward function in which the winning and losing amounts are the same, we need to come up with a reward function in which the multiplier applied to the gambler's bankroll for a winning play has the same magnitude as the multiplier used for a losing play. But the multipliers must have an equal magnitude on a logarithmic scale instead of a linear scale. Holding the gambler's risk of loss constant, we can define the reward function for the winning case in terms of the reward function applied for the losing case using the following equation:
 
-{% latex 1 fig-14 %}
+{% latex fig-14 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -196,7 +196,7 @@ How can the reward function for the fixed fraction betting strategy be modified 
 
 Taking the exponent of both sides, we can get the reward function for the winning case. Putting both the winning and losing reward functions together, we now have a balanced reward function that looks like this:
 
-{% latex 1 fig-15 %}
+{% latex fig-15 %}
     \begin{document}
     \begin{displaymath}
     R(X) =
@@ -211,7 +211,7 @@ Taking the exponent of both sides, we can get the reward function for the winnin
 
 The reward multiplier that gets applied to the gambler's bankroll when the coin lands on heads is the multiplicative inverse of the multiplier used when the coin lands on tails. With the balanced reward function, the formula to compute the final outcome based on the number of winning and losing plays becomes:
 
-{% latex 1 fig-16 %}
+{% latex fig-16 %}
     \begin{document}
     \begin{displaymath}
     V_n = V_0 \1 \brace2[]{ (1 - b)^{L - W} }
@@ -229,7 +229,7 @@ Of course, it makes more sense to plot this on a logarithmic chart:
 
 With the modified reward function for the fixed fraction betting strategy, the gambler now has an equal probability of getting a winning outcome as he does a losing outcome. The breakdown of profit, loss, and breakeven outcomes is now the same as that of the fixed constant betting strategy:
 
-{% latex 1 fig-19 %}
+{% latex fig-19 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{5em}|wl{5em}|}

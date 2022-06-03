@@ -11,7 +11,7 @@ I'm interested in studying the Laplace distribution. I was once under the impres
 
 Suppose we have a continuous random variable whose possible values are distributed according to a normal distribution. The probability density function is:
 
-{% latex 1 fig-01 %}
+{% latex fig-01 %}
     \begin{document}
     \begin{displaymath}
     f(x \mid \mu, \sigma)
@@ -23,7 +23,7 @@ Suppose we have a continuous random variable whose possible values are distribut
 
 If we have some samples of a random variable that we expect to have a normal distribution, we can estimate the parameters of the density function using the maximum likelihood method described in some of my [previous posts]({% post_url 2018-10-11-least-squares-and-normal-distributions %}#maximum-likelihood-estimation). Since it's more convenient in this case, instead of maximizing the likelihood function, let's maximize the logarithm of the likelihood function:
 
-{% latex 1 fig-02 %}
+{% latex fig-02 %}
     \begin{document}
     \begin{displaymath}
     \ln L(\mu, \sigma)
@@ -37,7 +37,7 @@ If we have some samples of a random variable that we expect to have a normal dis
 
 We want to know what values for the mean and standard deviation parameters have the highest possible likelihood. To do that, we can figure out where the derivative of the log-likelihood function with respect to each of the parameters is equal to zero. Here is the partial derivative of the log-likelihood function with respect to the mean:
 
-{% latex 1 fig-03 %}
+{% latex fig-03 %}
     \begin{document}
     \begin{displaymath}
     \frac{\pderiv \ln L}{\pderiv \mu}
@@ -49,7 +49,7 @@ We want to know what values for the mean and standard deviation parameters have 
 
 Setting the partial derivative to zero and solving for the mean, we arrive at the following estimated value:
 
-{% latex 1 fig-04 %}
+{% latex fig-04 %}
     \begin{document}
     \begin{displaymath}
     \hat{\mu} = \frac{1}{n} \sum_{i = 1}^{n} x_i
@@ -59,7 +59,7 @@ Setting the partial derivative to zero and solving for the mean, we arrive at th
 
 Once we have the value for the mean, we can follow the same steps to solve for the standard deviation. Here is the partial derivative of the log-likelihood function with respect to the standard deviation:
 
-{% latex 1 fig-05 %}
+{% latex fig-05 %}
     \begin{document}
     \begin{displaymath}
     \frac{\pderiv \ln L}{\pderiv \sigma}
@@ -72,7 +72,7 @@ Once we have the value for the mean, we can follow the same steps to solve for t
 
 Setting the partial derivative to zero and solving for the standard deviation, we get this estimated value:
 
-{% latex 1 fig-06 %}
+{% latex fig-06 %}
     \begin{document}
     \begin{displaymath}
     \hat{\sigma} = \sqrt{\displaystyle \frac{1}{n} \sum_{i = 1}^{n} \2 (x_i - \mu)^2}
@@ -86,7 +86,7 @@ If you want to see a more detailed breakdown of the steps above, you can referen
 
 Suppose we have a continuous random variable whose possible values are distributed according to a Laplace distribution. The probability density function is:
 
-{% latex 1 fig-07 %}
+{% latex fig-07 %}
     \begin{document}
     \begin{displaymath}
     f(x \mid \mu, b)
@@ -98,7 +98,7 @@ Suppose we have a continuous random variable whose possible values are distribut
 
 If we have a set of samples of a random variable that we know to have a Laplace distribution, we can estimate the parameters using the same approach we took for estimating the parameters of the normal distribution. We can use the maximum likelihood method. Here is the log-likelihood function we want to maximize:
 
-{% latex 1 fig-08 %}
+{% latex fig-08 %}
     \begin{document}
     \begin{displaymath}
     \ln L(\mu, b)
@@ -111,7 +111,7 @@ If we have a set of samples of a random variable that we know to have a Laplace 
 
 We want to know what values of the location and scale parameters have the greatest likelihood. The analytical approach is to take the derivative, set it to zero, and solve for the parameters. But consider the absolute value function:
 
-{% latex 1 fig-09 %}
+{% latex fig-09 %}
     \begin{document}
     \begin{displaymath}
     |x - \mu|
@@ -129,7 +129,7 @@ We want to know what values of the location and scale parameters have the greate
 
 It's a piecewise function. Taking the derivative of the log-likelihood function with respect to the location parameter can be a bit tricky because the absolute value function, although continuous, is not differentiable at all points:
 
-{% latex 1 fig-10 %}
+{% latex fig-10 %}
     \begin{document}
     \begin{displaymath}
     \frac{\dderiv}{\dderiv \mu} |x - \mu|
@@ -147,7 +147,7 @@ It's a piecewise function. Taking the derivative of the log-likelihood function 
 
 To be more succinct, we can represent the derivative of the absolute value function using the sign function:
 
-{% latex 1 fig-11 %}
+{% latex fig-11 %}
     \begin{document}
     \begin{displaymath}
     \frac{\dderiv}{\dderiv \mu} |x - \mu|
@@ -159,7 +159,7 @@ To be more succinct, we can represent the derivative of the absolute value funct
 
 The sign function simply returns the sign of a value:
 
-{% latex 1 fig-12 %}
+{% latex fig-12 %}
     \begin{document}
     \begin{displaymath}
     \operatorname{sgn} \2 (x - \mu)
@@ -177,7 +177,7 @@ The sign function simply returns the sign of a value:
 
 We can express the partial derivative of the log-likelihood function with respect to the location parameter as:
 
-{% latex 1 fig-13 %}
+{% latex fig-13 %}
     \begin{document}
     \begin{displaymath}
     \frac{\pderiv \ln L}{\pderiv \mu}
@@ -189,7 +189,7 @@ We can express the partial derivative of the log-likelihood function with respec
 
 This is really just giving us the number of samples with a value greater than the location parameter minus the number of samples with a value less than the location parameter. Note also that the derivative is undefined at points where the location parameter equals the value of one of the samples. While not adequate for an analytical solution, this does provide a clue that the best estimate is at or near the median value. Let's rank our samples in ascending order:
 
-{% latex 1 fig-14 %}
+{% latex fig-14 %}
     \begin{document}
     \begin{displaymath}
     \{\, x_1, x_2, \dots, x_m, \dots, x_{n-1}, x_n \mid x_i \leq x_{i+1} \,\}
@@ -199,7 +199,7 @@ This is really just giving us the number of samples with a value greater than th
 
 Let's also choose a middle value that is about halfway between the first and last sample in the ordered set. The exact value depends on whether the total number of samples is an even number or an odd number:
 
-{% latex 1 fig-15 %}
+{% latex fig-15 %}
     \begin{document}
     \begin{displaymath}
     m
@@ -223,7 +223,7 @@ Notice that there is a range of possible values where the likelihood is at a max
 
 For an odd number of samples, there is a single point at which the likelihood is maximized. By inspection, we can conclude that the median value of our samples has the highest likelihood for the location parameter:
 
-{% latex 1 fig-18 %}
+{% latex fig-18 %}
     \begin{document}
     \begin{displaymath}
     \hat{\mu}
@@ -239,7 +239,7 @@ For an odd number of samples, there is a single point at which the likelihood is
 
 If we have an even number of samples, we just take the mean of the two median values. Once an estimate of the location parameter is known, solving for the scale parameter is a bit easier since there is an analytical solution. Here is the partial derivative of the log-likelihood function with respect to the scale parameter:
 
-{% latex 1 fig-19 %}
+{% latex fig-19 %}
     \begin{document}
     \begin{displaymath}
     \frac{\pderiv \ln L}{\pderiv b}
@@ -252,7 +252,7 @@ If we have an even number of samples, we just take the mean of the two median va
 
 Setting the partial derivative to zero and solving for the scale parameter, we get the following estimate:
 
-{% latex 1 fig-20 %}
+{% latex fig-20 %}
     \begin{document}
     \begin{displaymath}
     \hat{b} = \frac{1}{n} \sum_{i = 1}^{n} |x_i - \mu|

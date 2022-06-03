@@ -11,7 +11,7 @@ My last few posts have centered around a weighted coin toss game in which the we
 
 In previous posts, we focused primarily on finding arbitrary solutions to the weighted coin toss problem. The scoring function that ranked each possible solution was a secondary concern. Here we want to focus on minimizing the scoring function as our primary concern while still satisfying the conditions that yield a valid result for a given target distribution. We can frame the problem as a scoring function that we want to minimize along with a set of equality constraints that we need to satisfy:
 
-{% latex 1 fig-01 %}
+{% latex fig-01 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -31,7 +31,7 @@ In previous posts, we focused primarily on finding arbitrary solutions to the we
 
 Our objective is not to find the absolute minimum of the scoring function. Rather, we want to find a set of parameters that satisfy the given constraints while also yielding the smallest possible value when plugged into the scoring function. The key to understanding the method of Lagrange multipliers is knowing that the gradient of the objective function---the scoring function in this case---is equal to a linear combination of the gradients of the constraint functions at the point at which we find the optimal solution:
 
-{% latex 1 fig-02 %}
+{% latex fig-02 %}
     \begin{document}
     \begin{displaymath}
     \nabla S(\mathbf{p})
@@ -43,7 +43,7 @@ Our objective is not to find the absolute minimum of the scoring function. Rathe
 
 The lambda coefficients are the Lagrange multipliers. You can find plenty of resources online that explain this relationship in more detail. For our purposes here, let's just take it as a given. If you were to expand out the gradients and include the equality constraints, you would have a system of equations that can be solved. We can package this system of equations up in an elegant fashion using the Lagrangian function:
 
-{% latex 1 fig-03 %}
+{% latex fig-03 %}
     \begin{document}
     \begin{displaymath}
     \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})
@@ -55,7 +55,7 @@ The lambda coefficients are the Lagrange multipliers. You can find plenty of res
 
 Now, if we take the gradient of the Lagrangian function and set it equal to the zero vector, we have a very concise way to express the system of equations:
 
-{% latex 1 fig-04 %}
+{% latex fig-04 %}
     \begin{document}
     \begin{displaymath}
     \nabla \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})
@@ -67,7 +67,7 @@ Now, if we take the gradient of the Lagrangian function and set it equal to the 
 
 It might even be too concise. But it makes sense if you expand the gradient and unfold it a bit. Here is the complete system of equations:
 
-{% latex 1 fig-05 %}
+{% latex fig-05 %}
     \newcommand{\dL}{\pderiv \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})}
     \newcommand{\dS}{\pderiv S(\mathbf{p})}
     \newcommand{\dF}{\pderiv f_i(\mathbf{p})}
@@ -134,7 +134,7 @@ Note that when using the method of Lagrange multipliers, not only do we need to 
 
 There is more than one way to solve a system of equations. One way to do it is to use the gradient descent algorithm demonstrated in my [previous post]({% post_url 2020-09-12-minimizing-with-gradient-descent %}). We can use the magnitude of the gradient as the cost function. In the examples that follow, we'll use the square of the magnitude of the gradient because it's easier that way:
 
-{% latex 1 fig-06 %}
+{% latex fig-06 %}
     \begin{document}
     \begin{displaymath}
     C(\mathbf{p}, \boldsymbol{\lambdaup})
@@ -146,7 +146,7 @@ There is more than one way to solve a system of equations. One way to do it is t
 
 The square of the magnitude can be found by computing the sum of the squares of each element in the gradient vector. The equation above can be expanded out like this:
 
-{% latex 1 fig-07 %}
+{% latex fig-07 %}
     \newcommand{\dL}{\pderiv \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})}
     \begin{document}
     \begin{displaymath}
@@ -165,7 +165,7 @@ The square of the magnitude can be found by computing the sum of the squares of 
 
 In the examples illustrated in the following sections, we'll use the same learning rate calculation described in my previous post titled [*Minimizing with Gradient Descent*]({% post_url 2020-09-12-minimizing-with-gradient-descent %}). But instead of using a fixed step size, we'll use a variable step size:
 
-{% latex 1 fig-08 %}
+{% latex fig-08 %}
     \begin{document}
     \begin{displaymath}
     s_k = \min \2 \brace3{\lbrace}{\rbrace}{\, 0.0001,\, \frac{1}{1 + k} \,}
@@ -187,7 +187,7 @@ Let's consider a concrete example of using the method of Lagrange multipliers an
 
 This illustration depicts the probability mass function of the expected outcome. These values can be represented using the following notation:
 
-{% latex 1 fig-11 %}
+{% latex fig-11 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -201,7 +201,7 @@ This illustration depicts the probability mass function of the expected outcome.
 
 Based on the model of the coin toss game with three flips per round, the following constraint functions must equal zero when we have a valid solution for the weights:
 
-{% latex 1 fig-12 %}
+{% latex fig-12 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -219,7 +219,7 @@ Based on the model of the coin toss game with three flips per round, the followi
 
 Once we have the constraint functions, we can go ahead and incorporate them into the Lagrangian function. Here is what it looks like so far:
 
-{% latex 1 fig-13 %}
+{% latex fig-13 %}
     \begin{document}
     \begin{displaymath}
     \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})
@@ -239,7 +239,7 @@ Now we just need to plug in a scoring function to produce a concrete Lagrangian 
 
 Using the two constraint functions defined for the coin toss game with three flips per round, we can construct a Lagrangian function with the following scoring function:
 
-{% latex 1 fig-14 %}
+{% latex fig-14 %}
     \begin{document}
     \begin{displaymath}
     \mathrlap{S_a}\phantom{S_b}(\mathbf{p})
@@ -262,7 +262,7 @@ Not all dimensions are shown in these illustrations. The colors of the heatmap a
 
 Here is a breakdown of the number of iterations required for each trace:
 
-{% latex 1 fig-19 %}
+{% latex fig-19 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{3em}|wr{5em}|}
@@ -288,7 +288,7 @@ Using gradient descent to solve the system of equations yields the correct resul
 
 Using the two constraint functions defined for the coin toss game with three flips per round, we can construct a Lagrangian function with the following scoring function:
 
-{% latex 1 fig-20 %}
+{% latex fig-20 %}
     \begin{document}
     \begin{displaymath}
     \mathrlap{S_b}\phantom{S_b}(\mathbf{p})
@@ -311,7 +311,7 @@ Not all dimensions are shown in these illustrations. The colors of the heatmap a
 
 Here is a breakdown of the number of iterations required for each trace:
 
-{% latex 1 fig-25 %}
+{% latex fig-25 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{3em}|wr{5em}|}
@@ -341,7 +341,7 @@ Let's consider another example of using the method of Lagrange multipliers and t
 
 This illustration depicts the probability mass function of the expected outcome. These values can be represented using the following notation:
 
-{% latex 1 fig-27 %}
+{% latex fig-27 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -357,7 +357,7 @@ This illustration depicts the probability mass function of the expected outcome.
 
 Based on the model of the coin toss game with four flips per round, the following constraint functions must equal zero when we have a valid solution for the weights:
 
-{% latex 1 fig-28 %}
+{% latex fig-28 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -379,7 +379,7 @@ Based on the model of the coin toss game with four flips per round, the followin
 
 We can use the constraint functions above to create a Lagrangian function. Using the Lagrangian function, we can come up with a cost function, as described earlier. Once we have a cost function, we can use it to apply the gradient descent algorithm. In this example, we'll start with the following initial guess:
 
-{% latex 1 fig-29 %}
+{% latex fig-29 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -411,7 +411,7 @@ We can use the constraint functions above to create a Lagrangian function. Using
 
 Now suppose we plug the following scoring function into our Lagrangian function:
 
-{% latex 1 fig-30 %}
+{% latex fig-30 %}
     \begin{document}
     \begin{displaymath}
     \mathrlap{S_a}\phantom{S_b}(\mathbf{p})
@@ -427,7 +427,7 @@ Now suppose we plug the following scoring function into our Lagrangian function:
 
 Applying the gradient descent method, here is the result:
 
-{% latex 1 fig-31 %}
+{% latex fig-31 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -459,7 +459,7 @@ Applying the gradient descent method, here is the result:
 
 Now suppose we plug the following scoring function into our Lagrangian function:
 
-{% latex 1 fig-32 %}
+{% latex fig-32 %}
     \begin{document}
     \begin{displaymath}
     \mathrlap{S_b}\phantom{S_b}(\mathbf{p})
@@ -475,7 +475,7 @@ Now suppose we plug the following scoring function into our Lagrangian function:
 
 Applying the gradient descent method, here is the result:
 
-{% latex 1 fig-33 %}
+{% latex fig-33 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -507,7 +507,7 @@ Applying the gradient descent method, here is the result:
 
 You can compare these results with the results found via a [different method]({% post_url 2019-11-14-hill-climbing-and-cost-functions %}#scoring-values-on-the-plateau) and see that they are the same. Here are the number of iterations required:
 
-{% latex 1 fig-34 %}
+{% latex fig-34 %}
     \newcommand{\Sa}{\mathrlap{S_a}\phantom{S_b}}
     \newcommand{\Sb}{\mathrlap{S_b}\phantom{S_b}}
     \begin{document}
@@ -531,7 +531,7 @@ Once again, we see that the gradient descent algorithm requires a large number o
 
 Using the optimization technique illustrated in the examples above, the solution always converges to the most optimal set of values for the weights of the biased coins, regardless of the initial guess. There is only one unique solution for a given scoring function and set of constraints. When using iterative optimization methods, the optimal point is the solution found upon reaching the final iteration:
 
-{% latex 1 fig-35 %}
+{% latex fig-35 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{p}^{*}
@@ -543,7 +543,7 @@ Using the optimization technique illustrated in the examples above, the solution
 
 This technique, however, does not necessarily converge to a unique set of Lagrange multipliers. The Lagrange multiplier theorem guarantees a unique set of Lagrange multipliers only if the constraint qualification assumption is satisfied. Maybe it doesn't matter here, since we still get the right answer for the weights of the biased coins. But I think it's worth pointing out nonetheless. So what is the constraint qualification assumption that guarantees a unique set of Lagrange multipliers? It depends on whether there are multiple constraints or only one constraint. Consider the gradient of the constraint functions at the optimal point:
 
-{% latex 1 fig-36 %}
+{% latex fig-36 %}
     \newcommand{\dF}{\pderiv f_i(\mathbf{p}^{*})}
     \begin{document}
     \begin{displaymath}
@@ -564,7 +564,7 @@ This technique, however, does not necessarily converge to a unique set of Lagran
 
 In the case of multiple constraints, the gradient vectors of each constraint at the optimal point must be linearly independent of each other. Where there is only one constraint, the gradient must not equal the zero vector at the optimal point. None of the examples illustrated in the sections above satisfy the constraint qualification condition. But let's take a closer look at the constraints. Consider the set of constraints for the coin toss game with three flips per round:
 
-{% latex 1 fig-37 %}
+{% latex fig-37 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -582,7 +582,7 @@ In the case of multiple constraints, the gradient vectors of each constraint at 
 
 Remember, each constraint function must equal zero. And these two equations are not independent of each other. The second constraint can be expressed in terms of the first:
 
-{% latex 1 fig-38 %}
+{% latex fig-38 %}
     \begin{document}
     \begin{displaymath}
     f_2(\mathbf{p}) = -f_1(\mathbf{p})
@@ -592,7 +592,7 @@ Remember, each constraint function must equal zero. And these two equations are 
 
 Since it is not an independent equation, we can drop the second constraint entirely. Using only the first constraint, we can apply the method of Lagrange multipliers in a way that satisfies the constraint qualification assumption. In this case, there is only one Lagrange multiplier, and it always converges to the same value using iterative methods, regardless of the initial guess. Now let's consider the set of constraints for the coin toss game with four flips per round:
 
-{% latex 1 fig-39 %}
+{% latex fig-39 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -614,7 +614,7 @@ Since it is not an independent equation, we can drop the second constraint entir
 
 Again, each constraint function must equal zero. And like before, this is not an independent set of equations. We can express one constraint as a linear combination of the others:
 
-{% latex 1 fig-40 %}
+{% latex fig-40 %}
     \begin{document}
     \begin{displaymath}
     f_2(\mathbf{p}) = -0.5 f_1(\mathbf{p}) - f_3(\mathbf{p})
@@ -630,7 +630,7 @@ In the examples above, the gradient descent method requires tens of thousands of
 
 Example with 3 coin tosses, scoring function A:
 
-{% latex 1 fig-41 %}
+{% latex fig-41 %}
     \newcommand{\methodA}{\text{Gradient descent}}
     \newcommand{\methodB}{\text{Nelder--Mead}}
     \newcommand{\methodC}{\text{Broyden--Fletcher--Goldfarb--Shanno}}
@@ -656,7 +656,7 @@ Example with 3 coin tosses, scoring function A:
 
 Example with 3 coin tosses, scoring function B:
 
-{% latex 1 fig-42 %}
+{% latex fig-42 %}
     \newcommand{\methodA}{\text{Gradient descent}}
     \newcommand{\methodB}{\text{Nelder--Mead}}
     \newcommand{\methodC}{\text{Broyden--Fletcher--Goldfarb--Shanno}}
@@ -682,7 +682,7 @@ Example with 3 coin tosses, scoring function B:
 
 Example with 4 coin tosses, scoring function A:
 
-{% latex 1 fig-43 %}
+{% latex fig-43 %}
     \newcommand{\methodA}{\text{Gradient descent}}
     \newcommand{\methodB}{\text{Nelder--Mead}}
     \newcommand{\methodC}{\text{Broyden--Fletcher--Goldfarb--Shanno}}
@@ -708,7 +708,7 @@ Example with 4 coin tosses, scoring function A:
 
 Example with 4 coin tosses, scoring function B:
 
-{% latex 1 fig-44 %}
+{% latex fig-44 %}
     \newcommand{\methodA}{\text{Gradient descent}}
     \newcommand{\methodB}{\text{Nelder--Mead}}
     \newcommand{\methodC}{\text{Broyden--Fletcher--Goldfarb--Shanno}}
@@ -734,7 +734,7 @@ Example with 4 coin tosses, scoring function B:
 
 While one method might be able to arrive at a solution in fewer iterations than another method, it is important to remember that not all iterations are created equally. An iteration in one method might be computationally more expensive than an iteration in another. When taking runtime performance into consideration, the best method might not be the one with the fewest iterations. Also, finding the minimum of a cost function is not the only way to solve for the unknowns. Keep in mind, the ultimate goal is to find the parameters in which the gradient of the Lagrangian function is equal to the zero vector:
 
-{% latex 1 fig-45 %}
+{% latex fig-45 %}
     \begin{document}
     \begin{displaymath}
     \nabla \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})

@@ -26,7 +26,7 @@ As might be expected, based on a [previous study]({% post_url 2019-01-26-the-dis
 
 Looking at the dither component, the shape of the histogram resembles that of a Laplace distribution about as neatly as the shape of the histogram for the market price does. The standard deviation is about the same as that of the market price data as well. To gain more insights, let's look at some concrete numbers concerning the analysis of these three data sets:
 
-{% latex 1 fig-06 %}
+{% latex fig-06 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -79,7 +79,7 @@ The intraday price series contains a couple of sudden price moves that are not t
 
 This histogram for market price data looks like it might approximate the shape of the Laplace density function, but it has a set of shoulders not present in the model function. The histogram for the smooth component has a shape that is even less well defined. But look at the shape of the histogram for the dither component---it looks like an almost ideal approximation of the Laplace density function. Let's take a look at the numbers:
 
-{% latex 1 fig-12 %}
+{% latex fig-12 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -128,7 +128,7 @@ The smooth component seems to track the market price fairly well most of the tim
 
 The shape of the histogram for both the market price data and the dither component closely resemble the shape of the Laplace density function. For the smooth component, the histogram has a general bell shape, but it looks like it might be a bit too sloppy and asymmetrical to properly characterize it as having the shape of a normal or a Laplace density function. Here are the numbers:
 
-{% latex 1 fig-18 %}
+{% latex fig-18 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -177,7 +177,7 @@ In my post titled [*The Very Strange Chinese Yuan*]({% post_url 2019-02-10-the-v
 
 The shape of the histogram for the market price data shows the triple peak pattern that is characteristic of intraday exchange rates between the yuan and dollar. The histogram for the smooth component exhibits a roughly bell-shaped distribution with no indication of the triple peak pattern at all. The fitted density functions for the smooth component are both shifted to the left, which can be attributed to the downward trend visible in the price chart. The histogram for the dither component, on the other hand, clearly shows the triple peak pattern, indicating that this distinctive noise pattern is almost entirely removed from the price trend. Here are the parameter estimates for the density functions:
 
-{% latex 1 fig-24 %}
+{% latex fig-24 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -226,7 +226,7 @@ The price chart shows a fairly consistent multi-year trend followed by a distinc
 
 The histograms for both the market price and the dither component have a shape that resembles the Laplace density function. The histogram for the smooth component has a sloppy and irregular shape. Here are the numbers:
 
-{% latex 1 fig-30 %}
+{% latex fig-30 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}

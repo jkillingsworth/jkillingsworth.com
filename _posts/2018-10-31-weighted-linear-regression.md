@@ -11,7 +11,7 @@ When doing a regression analysis, you might want to weight some data points more
 
 Suppose we have a set of data points that we expect to fall on a line given by the following linear equation:
 
-{% latex 1 fig-01 %}
+{% latex fig-01 %}
     \begin{document}
     \begin{displaymath}
     \hat{y} = a_0 + a_1 x
@@ -21,7 +21,7 @@ Suppose we have a set of data points that we expect to fall on a line given by t
 
 The observed data, however, contain errors for values on the vertical axis. For each data point, we define the error as the difference between the observed value and the fitted value of the linear model:
 
-{% latex 1 fig-02 %}
+{% latex fig-02 %}
     \begin{document}
     \begin{displaymath}
     \varepsilon_i = y_i - \hat{y}_i
@@ -31,7 +31,7 @@ The observed data, however, contain errors for values on the vertical axis. For 
 
 If we were performing an ordinary least squares regression, we would want to find the coefficients for the linear model that minimize the sum of the squared errors. But in this case, we want to consider the weighted sum of squares:
 
-{% latex 1 fig-03 %}
+{% latex fig-03 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -47,7 +47,7 @@ If we were performing an ordinary least squares regression, we would want to fin
 
 There is a unique weight associated with the error of each observation. Some values are counted more than others, depending on the scheme used to determine the weights. Let's treat the weighted sum of squares as a function of the coefficients:
 
-{% latex 1 fig-04 %}
+{% latex fig-04 %}
     \begin{document}
     \begin{displaymath}
     S(a_0, a_1) = \tsum w_i (y_i - a_0 - a_1 x_i)^2
@@ -57,7 +57,7 @@ There is a unique weight associated with the error of each observation. Some val
 
 Following the same approach we used in the [previous post]({% post_url 2018-10-11-least-squares-and-normal-distributions %}), we can estimate the coefficients of the model function by finding the values that minimize the weighted sum of squares. We take the partial derivative of the weighted sum of squares function with respect to each of the coefficients, set the derivative to zero, and then solve for the coefficient. Here are the derivatives with respect to each coefficient:
 
-{% latex 1 fig-05 %}
+{% latex fig-05 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -75,7 +75,7 @@ Following the same approach we used in the [previous post]({% post_url 2018-10-1
 
 Setting the derivative with respect to the first coefficient to zero, we get the following result:
 
-{% latex 1 fig-06 %}
+{% latex fig-06 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -94,7 +94,7 @@ Setting the derivative with respect to the first coefficient to zero, we get the
 
 Rearranging the equation and solving for the coefficient:
 
-{% latex 1 fig-07 %}
+{% latex fig-07 %}
     \begin{document}
     \begin{displaymath}
     a_0 = \frac{\tsum w_i y_i - a_1 \tsum w_i x_i}{\tsum w_i}
@@ -104,7 +104,7 @@ Rearranging the equation and solving for the coefficient:
 
 Setting the derivative with respect to the second coefficient to zero, we get the following result:
 
-{% latex 1 fig-08 %}
+{% latex fig-08 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -123,7 +123,7 @@ Setting the derivative with respect to the second coefficient to zero, we get th
 
 Rearranging the equation and solving for the coefficient:
 
-{% latex 1 fig-09 %}
+{% latex fig-09 %}
     \begin{document}
     \begin{displaymath}
     a_1 = \frac{\tsum w_i x_i y_i - a_0 \tsum w_i x_i}{\tsum w_i x_i^2}
@@ -137,7 +137,7 @@ If you plug in the weights and the observed values, finding the coefficients is 
 
 Let's assume the errors are normally distributed around the model. Recall the probability density function for the normal distribution:
 
-{% latex 1 fig-10 %}
+{% latex fig-10 %}
     \begin{document}
     \begin{displaymath}
     f(y \mid \hat{y}, \sigma)
@@ -149,7 +149,7 @@ Let's assume the errors are normally distributed around the model. Recall the pr
 
 For a given set of observations, we know the likelihood of a particular mean and standard deviation value is the product of the probability density of each observation given that particular mean and standard deviation. But how do we weight one observation differently than another? For each observation, we can raise the probability density to the power of the weight associated with that observation:
 
-{% latex 1 fig-11 %}
+{% latex fig-11 %}
     \begin{document}
     \begin{displaymath}
     L(\hat{y}, \sigma \mid y_1, y_2, \dots, y_n)
@@ -161,7 +161,7 @@ For a given set of observations, we know the likelihood of a particular mean and
 
 If the weight of one observation is twice that of all the others, for example, then it is treated as if the measurement had appeared twice in the observed data set. The estimated mean and standard deviation values can be found by maximizing the likelihood function. To make things easier, we can work with the log-likelihood function instead:
 
-{% latex 1 fig-12 %}
+{% latex fig-12 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -192,7 +192,7 @@ If the weight of one observation is twice that of all the others, for example, t
 
 Let's replace the mean with the body of the model function and treat the log-likelihood function as a function of the coefficients we want to solve for:
 
-{% latex 1 fig-13 %}
+{% latex fig-13 %}
     \begin{document}
     \begin{displaymath}
     \ln L(a_0, a_1, \sigma)
@@ -210,7 +210,7 @@ Let's replace the mean with the body of the model function and treat the log-lik
 
 Now we can find the maximum of the log-likelihood function and solve for the coefficients using the same approach as before. Here are the partial derivatives of the log-likelihood function with respect to each of the coefficients:
 
-{% latex 1 fig-14 %}
+{% latex fig-14 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -228,7 +228,7 @@ Now we can find the maximum of the log-likelihood function and solve for the coe
 
 Setting the derivative with respect to the first coefficient to zero, we get the following result:
 
-{% latex 1 fig-15 %}
+{% latex fig-15 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -247,7 +247,7 @@ Setting the derivative with respect to the first coefficient to zero, we get the
 
 Rearranging the equation and solving for the coefficient:
 
-{% latex 1 fig-16 %}
+{% latex fig-16 %}
     \begin{document}
     \begin{displaymath}
     a_0 = \frac{\tsum w_i y_i - a_1 \tsum w_i x_i}{\tsum w_i}
@@ -257,7 +257,7 @@ Rearranging the equation and solving for the coefficient:
 
 Setting the derivative with respect to the second coefficient to zero, we get the following result:
 
-{% latex 1 fig-17 %}
+{% latex fig-17 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -276,7 +276,7 @@ Setting the derivative with respect to the second coefficient to zero, we get th
 
 Rearranging the equation and solving for the coefficient:
 
-{% latex 1 fig-18 %}
+{% latex fig-18 %}
     \begin{document}
     \begin{displaymath}
     a_1 = \frac{\tsum w_i x_i y_i - a_0 \tsum w_i x_i}{\tsum w_i x_i^2}

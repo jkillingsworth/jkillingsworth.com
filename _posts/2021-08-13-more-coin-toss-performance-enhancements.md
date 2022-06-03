@@ -11,7 +11,7 @@ This post is an extension of the [previous post]({% post_url 2021-07-12-performa
 
 The optimized computation method outlined in the previous post had a much better performance profile than the previously used method. However, it still included a bunch of redundant computations. For even-numbered coin tosses, the value computed for the odd-numbered states is always zero. Likewise, for odd-numbered coin tosses, the value computed for the even-numbered states is always zero. Since we know these alternating values are always zero, we really don't need to compute them. We can use an enhanced computation method that just eliminates the unnecessary computations. Like before, the best way to describe how it works is with an example. Suppose we have a model of the coin toss game with five coin toss events per round:
 
-{% latex 1 fig-01 %}
+{% latex fig-01 %}
     \begin{document}
     \begin{displaymath}
     n = 5
@@ -21,7 +21,7 @@ The optimized computation method outlined in the previous post had a much better
 
 Since we're using the same symmetrical coin toss model we've been using in the past few posts, we can assume that the coin in the initial state is always a fair coin:
 
-{% latex 1 fig-02 %}
+{% latex fig-02 %}
     \begin{document}
     \begin{displaymath}
     p_0 = 0.5000
@@ -31,7 +31,7 @@ Since we're using the same symmetrical coin toss model we've been using in the p
 
 For this example, let's choose some arbitrary values for the remaining state transitions:
 
-{% latex 1 fig-03 %}
+{% latex fig-03 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -49,7 +49,7 @@ For this example, let's choose some arbitrary values for the remaining state tra
 
 We want to create some lookup tables for our state transition values like we did for the optimized computation method presented in the previous post. But this time around, we want to create two different sets of lookup tables, one for odd-numbered coin tosses and one for even-numbered coin tosses. Here is the formula to populate the lookup tables for odd-numbered coin tosses:
 
-{% latex 1 fig-04 %}
+{% latex fig-04 %}
     \begin{document}
     \begin{displaymath}
     \begin{drcases}
@@ -68,7 +68,7 @@ We want to create some lookup tables for our state transition values like we did
 
 This formula is based on the even-numbered state transition values. Here is what the populated arrays wind up looking like:
 
-{% latex 1 fig-05 %}
+{% latex fig-05 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,calc}
     \begin{document}
@@ -113,7 +113,7 @@ This formula is based on the even-numbered state transition values. Here is what
 
 We need to align the arrays in a way that makes it easy to perform the calculations. In this case, we only need to shift one of them to the left:
 
-{% latex 1 fig-06 %}
+{% latex fig-06 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,calc}
     \begin{document}
@@ -179,7 +179,7 @@ We need to align the arrays in a way that makes it easy to perform the calculati
 
 These are the lookup tables we'll use for odd-numbered coin tosses. For even-numbered coin tosses, we need to do something similar. But we need to do it with the alternate set of state transition values. Here is the formula to populate the lookup tables for even-numbered coin tosses:
 
-{% latex 1 fig-07 %}
+{% latex fig-07 %}
     \begin{document}
     \begin{displaymath}
     \begin{drcases}
@@ -198,7 +198,7 @@ These are the lookup tables we'll use for odd-numbered coin tosses. For even-num
 
 This formula is based on the odd-numbered state transition values. Here is what the populated arrays wind up looking like:
 
-{% latex 1 fig-08 %}
+{% latex fig-08 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,calc}
     \begin{document}
@@ -243,7 +243,7 @@ This formula is based on the odd-numbered state transition values. Here is what 
 
 We need to align the arrays in a way that makes it easy to perform the calculations. In this case, we only need to shift one of them to the right:
 
-{% latex 1 fig-09 %}
+{% latex fig-09 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,calc}
     \begin{document}
@@ -309,7 +309,7 @@ We need to align the arrays in a way that makes it easy to perform the calculati
 
 These are the lookup tables we'll use for even-numbered coin tosses. Notice the padded zeros in the front and back of the arrays. This padding guarantees that we can shift the arrays left or right without violating any memory allocated for something else. For this method, we also need to shift the state vector arrays left and right in a similar fashion when computing the results for the even and odd coin tosses. Here is the algorithm for the enhanced computation method:
 
-{% latex 1 fig-10 %}
+{% latex fig-10 %}
     \usepackage[vlined]{algorithm2e}
     \begin{document}
     \begin{algorithm}[H]
@@ -361,7 +361,7 @@ The execution path of the inner loop depends on whether we are calculating the r
 
 Here are the computed values after outer loop iteration #1:
 
-{% latex 1 fig-11 %}
+{% latex fig-11 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,calc}
     \begin{document}
@@ -445,7 +445,7 @@ Here are the computed values after outer loop iteration #1:
 
 Here are the computed values after outer loop iteration #2:
 
-{% latex 1 fig-12 %}
+{% latex fig-12 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,calc}
     \begin{document}
@@ -529,7 +529,7 @@ Here are the computed values after outer loop iteration #2:
 
 Here are the computed values after outer loop iteration #3:
 
-{% latex 1 fig-13 %}
+{% latex fig-13 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,calc}
     \begin{document}
@@ -613,7 +613,7 @@ Here are the computed values after outer loop iteration #3:
 
 Here are the computed values after outer loop iteration #4:
 
-{% latex 1 fig-14 %}
+{% latex fig-14 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,calc}
     \begin{document}
@@ -697,7 +697,7 @@ Here are the computed values after outer loop iteration #4:
 
 Here are the computed values after outer loop iteration #5:
 
-{% latex 1 fig-15 %}
+{% latex fig-15 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,calc}
     \begin{document}
@@ -781,7 +781,7 @@ Here are the computed values after outer loop iteration #5:
 
 After the loop terminates, we have the probabilities of landing on each state after the fifth and final toss of the coin. This result only includes the terminal states since we never bothered to compute the non-terminal states. Since this example models an odd number of coin toss events, the terminal states are always odd-numbered states. Here are the resulting values:
 
-{% latex 1 fig-16 %}
+{% latex fig-16 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -801,7 +801,7 @@ Using this enhanced computation method, we can compute the final result with les
 
 How does the number of floating-point operations required for the enhanced computation method presented above compare to the number of floating-point operations required for the optimized computation method presented in the previous post? Let's count the number of operations needed for each iteration of the outer loop in the above example:
 
-{% latex 1 fig-17 %}
+{% latex fig-17 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{4.5em}|wr{7em}|wr{7em}|wr{7.5em}|}
@@ -827,7 +827,7 @@ How does the number of floating-point operations required for the enhanced compu
 
 From the table above, we can deduce the following generalization for each iteration, regardless of the size of the coin toss model:
 
-{% latex 1 fig-18 %}
+{% latex fig-18 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{4.5em}|wr{7em}|wr{7em}|wr{7.5em}|}
@@ -847,7 +847,7 @@ From the table above, we can deduce the following generalization for each iterat
 
 We can sum the number of operations for each iteration to get the total number of operations for a coin toss model of any size. Here is the formula:
 
-{% latex 1 fig-19 %}
+{% latex fig-19 %}
     \begin{document}
     \begin{displaymath}
     T_n
@@ -861,7 +861,7 @@ We can sum the number of operations for each iteration to get the total number o
 
 We can replace the summation like we did in the last post and present the solution in the following algebraic form:
 
-{% latex 1 fig-20 %}
+{% latex fig-20 %}
     \begin{document}
     \begin{displaymath}
     T_n = \frac{3n^2 + 9n + 10 \1 \brace1{\lfloor}{\rfloor}{ \frac{n}{2} }}{4}

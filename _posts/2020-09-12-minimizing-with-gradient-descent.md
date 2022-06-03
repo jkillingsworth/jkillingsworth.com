@@ -11,7 +11,7 @@ The [previous post]({% post_url 2020-08-16-visualizing-the-climb-up-the-hill %})
 
 The gradient descent algorithm is a way of finding a local minimum of a differentiable function. In this case, we'll use the same cost function used in the previous post titled [*Visualizing the Climb up the Hill*]({% post_url 2020-08-16-visualizing-the-climb-up-the-hill %}) as our example. Recall the following equations based on the model of the coin toss game:
 
-{% latex 1 fig-01 %}
+{% latex fig-01 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -25,7 +25,7 @@ The gradient descent algorithm is a way of finding a local minimum of a differen
 
 The two equations above must hold true if we have a valid set of weights for a given target distribution. If we estimate a set of weights that do not satisfy these equations, then we know the estimate can be improved. The sum of squared errors makes for a convenient cost function:
 
-{% latex 1 fig-02 %}
+{% latex fig-02 %}
     \begin{document}
     \begin{displaymath}
     C(\mathbf{p})
@@ -39,7 +39,7 @@ The two equations above must hold true if we have a valid set of weights for a g
 
 Note the use of a parameter vector for the input. As you might expect, this is a convenient notation for multivariable functions. Now once we have a cost function to work with, we also need to find the gradient of the cost function:
 
-{% latex 1 fig-03 %}
+{% latex fig-03 %}
     \begin{document}
     \begin{displaymath}
     \nabla C(\mathbf{p})
@@ -55,7 +55,7 @@ Note the use of a parameter vector for the input. As you might expect, this is a
 
 The gradient is a vector containing partial derivatives of the cost function, one for each of the variables. Each component is the slope of the function along the corresponding axis. The vector points in the direction of steepest ascent. The apply the gradient descent algorithm, we need to subtract a value in the direction of the gradient from an estimated value to obtain an improved value. Here is the formula:
 
-{% latex 1 fig-04 %}
+{% latex fig-04 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{p}_{k + 1} = \mathbf{p}_{k} - \gamma_k \nabla C(\mathbf{p}_k)
@@ -65,7 +65,7 @@ The gradient is a vector containing partial derivatives of the cost function, on
 
 Starting with an initial guess, we can apply the above repeatedly until the gradient has a magnitude of zero. Once the gradient is zero, we know we have reached a local minimum. In practice, however, you might want to stop once the gradient is sufficiently small. In this example, we terminate once the magnitude of the gradient is below a predetermined step size:
 
-{% latex 1 fig-05 %}
+{% latex fig-05 %}
     \begin{document}
     \begin{displaymath}
     s = 0.0001
@@ -75,7 +75,7 @@ Starting with an initial guess, we can apply the above repeatedly until the grad
 
 To ensure each increment adjusts the estimate by a fixed step size, we need to multiply the gradient by a scalar factor called the learning rate:
 
-{% latex 1 fig-06 %}
+{% latex fig-06 %}
     \begin{document}
     \begin{displaymath}
     \gamma_k = \frac{s}{\| \nabla C(\mathbf{p}_k) \|}
@@ -93,7 +93,7 @@ I want to compare and contrast the gradient descent algorithm outlined above wit
 
 These values can be represented symbolically like this:
 
-{% latex 1 fig-08 %}
+{% latex fig-08 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -107,7 +107,7 @@ These values can be represented symbolically like this:
 
 These values can be used to produce a concrete form of the cost function:
 
-{% latex 1 fig-09 %}
+{% latex fig-09 %}
     \begin{document}
     \begin{displaymath}
     C(\mathbf{p})
@@ -121,7 +121,7 @@ These values can be used to produce a concrete form of the cost function:
 
 Just like with the hill climbing algorithms used in the previous post, to apply the gradient descent algorithm we need to start out with an initial estimate. Let's use the following set of parameters as the initial guess:
 
-{% latex 1 fig-10 %}
+{% latex fig-10 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{p}
@@ -138,7 +138,7 @@ Just like with the hill climbing algorithms used in the previous post, to apply 
 
 Applying the gradient descent procedure using the above as the initial input, the output of the first iteration is the input to the second iteration. The estimate is updated repeatedly until the process terminates. Here is the final result:
 
-{% latex 1 fig-11 %}
+{% latex fig-11 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{p}
@@ -169,7 +169,7 @@ As you can see, the final result very much depends on the initial estimate. In e
 
 Each one of the examples illustrated above requires over a thousand iterations to complete. Some of them require over four thousand iterations. The number of iterations required depends largely on the learning rate. I think it's worth pointing out here that other learning rate schemes are possible. Some learning rates may yield a much faster convergence than the one used here. Consider this alternative:
 
-{% latex 1 fig-16 %}
+{% latex fig-16 %}
     \begin{document}
     \begin{displaymath}
     \gamma_k = 1

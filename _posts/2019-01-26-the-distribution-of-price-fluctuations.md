@@ -33,7 +33,7 @@ So are the price fluctuations normally distributed? Eyeballing the chart above, 
 
 To get some broader insights regarding the behavior of price movements, I want to take a look at some more exchange-traded funds with a few different underlying asset types. Let's examine the daily closing prices for the following ETFs:
 
-{% latex 1 fig-04 %}
+{% latex fig-04 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{4em}|wl{15em}|}
@@ -78,7 +78,7 @@ As you can see, the histogram seems to fit the Laplace distribution better than 
 
 Instead of looking at broad stock market indexes, let's see what happens if we examine individual stocks. Let's consider the daily closing prices for the following stocks:
 
-{% latex 1 fig-13%}
+{% latex fig-13%}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{4em}|wl{15em}|}
@@ -202,7 +202,7 @@ Here we see a familiar pattern. It takes the shape roughly of a Laplace distribu
 
 To see if the pattern holds, let's take a look at the daily exchange rates of a few more currency pairs. Here is the list:
 
-{% latex 1 fig-51 %}
+{% latex fig-51 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{4em}|wl{15em}|}
@@ -262,7 +262,7 @@ Notice that in some of these charts there is a large spike in the concentration 
 
 A number of different cryptocurrencies have emerged in the past few years. And some of them have made enormous price moves. Can we expect the price fluctuations of these digital assets to exhibit the same characteristics as stocks and currencies? Let's examine a few of the most popular ones:
 
-{% latex 1 fig-68 %}
+{% latex fig-68 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{4em}|wl{15em}|}

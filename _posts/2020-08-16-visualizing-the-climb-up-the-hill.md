@@ -11,7 +11,7 @@ The hill climbing algorithm described in my [previous post]({% post_url 2019-11-
 
 We'll use the same model of the coin toss game described in an earlier post titled [*Estimating the Weights of Biased Coins*]({% post_url 2019-09-14-estimating-the-weights-of-biased-coins %}). But to be able to plot the value of the cost function for every combination of weights on a two-dimensional illustration, we need to limit the number of coin tosses in each round so that there are only two different weights that can vary. Since the first coin toss always uses a fairly weighted coin, we can model the coin toss game using three flips per round. The Markov model looks like this:
 
-{% latex 1 fig-01 %}
+{% latex fig-01 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,automata}
     \begin{document}
@@ -41,7 +41,7 @@ We'll use the same model of the coin toss game described in an earlier post titl
 
 In this model, every round starts in the zero state. The coin in the zero state is always a fair coin. The model can be represented in tabular form like this:
 
-{% latex 1 fig-02 %}
+{% latex fig-02 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{5em}|wl{9em}|wl{9em}|}
@@ -65,7 +65,7 @@ In this model, every round starts in the zero state. The coin in the zero state 
 
 Since there are three coin tosses per round, with two possible outcomes for each flip, there are a total of eight unique coin toss sequences possible. The following table lists all possible outcomes along with the terminal state and probability formula for each combination:
 
-{% latex 1 fig-03 %}
+{% latex fig-03 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{5em}|wl{7em}|wl{11em}|}
@@ -95,7 +95,7 @@ Since there are three coin tosses per round, with two possible outcomes for each
 
 While the model has a total of seven states, there are only four possible terminal states. And since the model is symmetrical, the probability of ending on one of the positive terminal states is equal to the probability of ending on the corresponding negative terminal state:
 
-{% latex 1 fig-04 %}
+{% latex fig-04 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -109,7 +109,7 @@ While the model has a total of seven states, there are only four possible termin
 
 Plugging in the probability formulas, the equations above can be rewritten as follows:
 
-{% latex 1 fig-05 %}
+{% latex fig-05 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -124,7 +124,7 @@ Plugging in the probability formulas, the equations above can be rewritten as fo
 
 Simplifying, these equations can be reduced to the following:
 
-{% latex 1 fig-06 %}
+{% latex fig-06 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -138,7 +138,7 @@ Simplifying, these equations can be reduced to the following:
 
 Based on the set of equations above, we can state a relationship between the weight of the coin in the +1 state and the weight of the coin in the +2 state:
 
-{% latex 1 fig-07 %}
+{% latex fig-07 %}
     \begin{document}
     \begin{displaymath}
     p_2 = \frac{1 - 2 \0 r_1}{p_1}
@@ -148,7 +148,7 @@ Based on the set of equations above, we can state a relationship between the wei
 
 The bias of each coin must be between a minimum value of zero and a maximum value of one. If we know the expected outcome of the coin toss game, the minimum and maximum values might be further constrained. Suppose the coin in the +2 state always lands on heads:
 
-{% latex 1 fig-08 %}
+{% latex fig-08 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -162,7 +162,7 @@ The bias of each coin must be between a minimum value of zero and a maximum valu
 
 The case above shows the minimum value for the weight of the coin in the +1 state when the coin in the +2 state is at the maximum. The opposite extreme occurs when the coin in the +1 state always lands on heads:
 
-{% latex 1 fig-09 %}
+{% latex fig-09 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -184,7 +184,7 @@ A cost function assigns a value to a set of weights based on a target distributi
 
 The probability mass function illustrated above is symmetrical. The values can also be represented like this:
 
-{% latex 1 fig-11 %}
+{% latex fig-11 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -198,7 +198,7 @@ The probability mass function illustrated above is symmetrical. The values can a
 
 Our cost function must compare the difference between the target distribution and the expected outcome of a given set of weights. In this example, as with the previous post, I want to use the sum of squared errors as the cost function:
 
-{% latex 1 fig-12 %}
+{% latex fig-12 %}
     \begin{document}
     \begin{displaymath}
     C(p_1, p_2)
@@ -272,7 +272,7 @@ Again, the final set of weights discovered by the hill climbing algorithm varies
 
 A scoring function can be used in addition to a cost function to constrain the valid set of weights to a single optimum value. One scoring function analyzed in my previous post computes the sum of squared differences between the weights and the centermost value. Here is the function:
 
-{% latex 1 fig-28 %}
+{% latex fig-28 %}
     \begin{document}
     \begin{displaymath}
     \mathrlap{S_a}\phantom{S_b}(p_1, p_2)
@@ -286,7 +286,7 @@ A scoring function can be used in addition to a cost function to constrain the v
 
 Keep in mind we only want to consider inputs in which the cost function evaluates to zero. We can use a numerical method to find the optimum parameter values that minimize the scoring function when the cost function is zero:
 
-{% latex 1 fig-29 %}
+{% latex fig-29 %}
     \begin{document}
     \begin{displaymath}
     p_{1,\sscript{optimum}}
@@ -321,7 +321,7 @@ In the two illustrations above, the intensity of the plateau line varies based o
 
 The scoring function in the previous section is not the only one possible. Another scoring function analyzed in my previous post computes the sum of squared differences between each weight and the weight of its preceding neighbor. Here is the function:
 
-{% latex 1 fig-34 %}
+{% latex fig-34 %}
     \begin{document}
     \begin{displaymath}
     \mathrlap{S_b}\phantom{S_b}(p_1, p_2)
@@ -335,7 +335,7 @@ The scoring function in the previous section is not the only one possible. Anoth
 
 Keep in mind we only want to consider inputs in which the cost function evaluates to zero. We can use a numerical method to find the optimum parameter values that minimize the scoring function when the cost function is zero:
 
-{% latex 1 fig-35 %}
+{% latex fig-35 %}
     \begin{document}
     \begin{displaymath}
     p_{1,\sscript{optimum}}

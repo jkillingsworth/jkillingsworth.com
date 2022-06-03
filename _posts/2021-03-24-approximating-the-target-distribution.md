@@ -16,7 +16,7 @@ The probability mass function of the possible outcomes of the coin toss game is 
 
 In this case, we wind up with a binomial distribution for the distribution of expected outcomes. You can think of the weighted coin toss game as a system that maps a set of weights to a discrete probability distribution. The shape of the probability mass function is determined by the weights of the biased coins. Now suppose the weights of the biased coins are determined by a formula with a single parameter:
 
-{% latex 1 fig-03 %}
+{% latex fig-03 %}
     \begin{document}
     \begin{displaymath}
     p_i = 0.5 + i\1\brace3(){ \frac{a - 0.5}{n - 1} }
@@ -38,7 +38,7 @@ Here is another example with a different parameter value:
 
 As you can see in the examples above, a single parameter can determine the shape of the probability mass function. The shape of the distribution appears to be either a stretched or compressed form of the binomial distribution, depending on whether the parameter is larger or smaller than 50%. Now let's consider another formula, this time with two parameters:
 
-{% latex 1 fig-08 %}
+{% latex fig-08 %}
     \begin{document}
     \begin{displaymath}
     p_i = a + (i - 1) \brace3(){ \frac{b - a}{n - 2} }
@@ -50,7 +50,7 @@ As you can see in the examples above, a single parameter can determine the shape
 
 Remember that, according to our model of the coin toss game, the coin in the initial state is always a fair coin:
 
-{% latex 1 fig-09 %}
+{% latex fig-09 %}
     \begin{document}
     \begin{displaymath}
     p_0 = 0.5
@@ -74,7 +74,7 @@ Again, the shape of the probability distribution can be determined by the parame
 
 We want to use the two-parameter formula described in the previous section to find an approximate solution for a given target distribution. For some distributions, we might be able to find an exact solution. For others, we want to find the closest match. To do this, we need to be able to quantify the difference between the target distribution and a proposed approximation. The number of unique data points we need to compare is given by:
 
-{% latex 1 fig-14 %}
+{% latex fig-14 %}
     \begin{document}
     \begin{displaymath}
     m =
@@ -89,7 +89,7 @@ We want to use the two-parameter formula described in the previous section to fi
 
 This is fewer than the total number of possible outcomes. In our model, the distribution of possible outcomes is always symmetrical about the initial state, so we only bother looking at values on one side. For each element, we can compute an error term that is the difference between the target value and the approximate value. We can then take the sum of the square of the errors to give us a value that quantifies the approximation error:
 
-{% latex 1 fig-15 %}
+{% latex fig-15 %}
     \begin{document}
     \begin{displaymath}
     C =
@@ -131,7 +131,7 @@ Since the error function is convex, the algorithm always converges to the best s
 
 Once we have found the optimal solution, we can then compute the sum of squared errors to give us a measure of how well the optimal solution approximates the target distribution:
 
-{% latex 1 fig-23 %}
+{% latex fig-23 %}
     \begin{document}
     \begin{displaymath}
     C = 0.00000000
@@ -164,7 +164,7 @@ Since the error function is convex, the algorithm always converges to the best s
 
 Once we have found the optimal solution, we can then compute the sum of squared errors to give us a measure of how well the optimal solution approximates the target distribution:
 
-{% latex 1 fig-31 %}
+{% latex fig-31 %}
     \begin{document}
     \begin{displaymath}
     C = 0.00000405
@@ -197,7 +197,7 @@ Since the error function is convex, the algorithm always converges to the best s
 
 Once we have found the optimal solution, we can then compute the sum of squared errors to give us a measure of how well the optimal solution approximates the target distribution:
 
-{% latex 1 fig-39 %}
+{% latex fig-39 %}
     \begin{document}
     \begin{displaymath}
     C = 0.00001164

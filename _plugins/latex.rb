@@ -10,15 +10,6 @@ module Jekyll
             \usepackage[scaled=0.75]{roboto-mono}
             \usepackage{mathtools}
             \usepackage{eucal}
-            \newcommand{\sscr}[1]{\text{#1}}
-            '
-
-        @@latex_upper_1 = '
-            \documentclass[varwidth]{standalone}
-            \usepackage[charter]{mathdesign}
-            \usepackage[scaled=0.75]{roboto-mono}
-            \usepackage{mathtools}
-            \usepackage{eucal}
             \usepackage{array}
             \usepackage{colortbl}
             \arrayrulecolor[rgb]{0.5,0.5,0.5}
@@ -106,8 +97,6 @@ module Jekyll
                 case preamble
                 when nil
                     latex_upper = @@latex_upper
-                when "1"
-                    latex_upper = @@latex_upper_1
                 else
                     raise "Unknown preamble option '#{preamble}'"
                 end

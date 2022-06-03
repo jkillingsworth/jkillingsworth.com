@@ -11,7 +11,7 @@ This is a continuation of a series of posts on weighted coin toss games. In prev
 
 Let's start with a very simple model of the coin toss game that uses only two flips of the coin per round. This is the model used in the previous post titled [*Visualizing Saddle Points and Minimums*]({% post_url 2021-01-29-visualizing-saddle-points-and-minimums %}). Here is what the Markov model looks like:
 
-{% latex 1 fig-01 %}
+{% latex fig-01 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,automata}
     \begin{document}
@@ -35,7 +35,7 @@ Let's start with a very simple model of the coin toss game that uses only two fl
 
 In this model, there are five possible states that the system can be in and six possible state transitions. Each arrow represents a state transition. The state diagram above can be represented using a state transition matrix:
 
-{% latex 1 fig-02 %}
+{% latex fig-02 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{M} =
@@ -57,7 +57,7 @@ In this model, there are five possible states that the system can be in and six 
 
 This transition matrix determines the probability of moving from one state to the next. This is a square matrix with a row and a column for each state. The rows represent the starting states, and the columns represent the subsequent states. We can also use a vector with five elements---one for each state---to represent the probability of being in each one of the states at a particular point in time. Since we always start in the zero state, the initial vector looks like this:
 
-{% latex 1 fig-03 %}
+{% latex fig-03 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_0 =
@@ -79,7 +79,7 @@ This transition matrix determines the probability of moving from one state to th
 
 We can compute the probability of being in each one of the five states after the first coin toss by taking the product of the state vector and the state transition matrix:
 
-{% latex 1 fig-04 %}
+{% latex fig-04 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_1 = \mathbf{v}_0 \times \mathbf{M}
@@ -89,7 +89,7 @@ We can compute the probability of being in each one of the five states after the
 
 After the first coin toss, there are two possible states that the system can be in. The product above works out to the following:
 
-{% latex 1 fig-05 %}
+{% latex fig-05 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_1 =
@@ -111,7 +111,7 @@ After the first coin toss, there are two possible states that the system can be 
 
 Since there are two flips of the coin per round, we can compute the final outcome distribution by multiplying the vector above by the transition matrix one more time:
 
-{% latex 1 fig-06 %}
+{% latex fig-06 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_2 = \mathbf{v}_1 \times \mathbf{M}
@@ -121,7 +121,7 @@ Since there are two flips of the coin per round, we can compute the final outcom
 
 After the second coin toss, there are three possible states the system can be in. The product above works out to the following:
 
-{% latex 1 fig-07 %}
+{% latex fig-07 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_2 =
@@ -147,7 +147,7 @@ As you can see, for the final outcome, the system can only be in one of three ou
 
 A slightly more complicated model is that of a coin toss game with three flips of the coin per round. This is the model used previously in the post titled [*Visualizing the Climb up the Hill*]({% post_url 2020-08-16-visualizing-the-climb-up-the-hill %}). Here is what the Markov model looks like:
 
-{% latex 1 fig-08 %}
+{% latex fig-08 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,automata}
     \begin{document}
@@ -177,7 +177,7 @@ A slightly more complicated model is that of a coin toss game with three flips o
 
 In this model, there are seven possible states that the system can be in and a total of ten possible state transitions. The state diagram illustrated above can be represented with the following state transition matrix:
 
-{% latex 1 fig-09 %}
+{% latex fig-09 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{M} =
@@ -203,7 +203,7 @@ In this model, there are seven possible states that the system can be in and a t
 
 This is a square matrix with seven rows and seven columns. We can also use a seven-element vector to represent the likelihood of the system being in a particular state at a given point in time. The initial vector looks like this:
 
-{% latex 1 fig-10 %}
+{% latex fig-10 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_0 =
@@ -229,7 +229,7 @@ This is a square matrix with seven rows and seven columns. We can also use a sev
 
 We can multiply this vector by the transition matrix three times to determine where we might find the state of the system after three flips of the coin:
 
-{% latex 1 fig-11 %}
+{% latex fig-11 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_3 = \mathbf{v}_0 \times \mathbf{M} \times \mathbf{M} \times \mathbf{M}
@@ -239,7 +239,7 @@ We can multiply this vector by the transition matrix three times to determine wh
 
 After the third coin toss, there are four possible states the system can be in. The product above works out to the following:
 
-{% latex 1 fig-12 %}
+{% latex fig-12 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_3 =
@@ -269,7 +269,7 @@ The system can be in one of four possible states for the final outcome. The othe
 
 In addition to the two Markov models outlined above, you can also find a detailed discussion of a model of the coin toss game with four flips per round in one of my earlier posts titled [*Estimating the Weights of Biased Coins*]({% post_url 2019-09-14-estimating-the-weights-of-biased-coins %}). All of these models can be described by a generalized model. Suppose we have a coin toss game with an arbitrary number of flips per round. We can represent the generalized form of the Markov model with a state diagram that looks like this:
 
-{% latex 1 fig-13 %}
+{% latex fig-13 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,automata}
     \begin{document}
@@ -305,7 +305,7 @@ In addition to the two Markov models outlined above, you can also find a detaile
 
 The total number of states the system can be in depends on the number of coin toss events. We can determine the number of states using the following equation:
 
-{% latex 1 fig-14 %}
+{% latex fig-14 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -324,7 +324,7 @@ The total number of states the system can be in depends on the number of coin to
 
 The number of states the system can be in determines the size of the state transition matrix. Since this can be an arbitrarily large matrix, it is more practical to describe the contents of the matrix using an algorithm:
 
-{% latex 1 fig-15 %}
+{% latex fig-15 %}
     \usepackage[vlined]{algorithm2e}
     \begin{document}
     \begin{algorithm}[H]
@@ -379,7 +379,7 @@ The number of states the system can be in determines the size of the state trans
 
 This is a square matrix with a nonzero value for every possible state transition in the Markov model. We also need to define an initial state vector. Since there is only one initial state, this vector can be described with a very simple algorithm:
 
-{% latex 1 fig-16 %}
+{% latex fig-16 %}
     \usepackage[vlined]{algorithm2e}
     \begin{document}
     \begin{algorithm}[H]
@@ -411,7 +411,7 @@ This is a square matrix with a nonzero value for every possible state transition
 
 Once we have a state transition matrix and the initial state vector, we can compute the final outcome using the following formula:
 
-{% latex 1 fig-17 %}
+{% latex fig-17 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_n = \mathbf{v}_0 \times \mathbf{M}^n
@@ -421,7 +421,7 @@ Once we have a state transition matrix and the initial state vector, we can comp
 
 The final outcome tells us how likely it is for each state to be the final state of the system after a single round of the coin toss game. We can also represent the final outcome like this:
 
-{% latex 1 fig-18 %}
+{% latex fig-18 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{v}_n =
@@ -447,7 +447,7 @@ Each element contains the probability that the system terminates in the correspo
 
 Given the model of the coin toss game described above, suppose we know the values of the final outcome but not the values of the weights of the biased coins. Starting with the final outcome---sometimes referred to as the target distribution---we can find a valid set of weights using the method of Lagrange multipliers described in [*Equality Constraints and Lagrange Multipliers*]({% post_url 2020-12-12-equality-constraints-and-lagrange-multipliers %}). To use this method, we need to come up with a set of equality constraints based on the model. Let's start with some equality conditions that must hold true:
 
-{% latex 1 fig-19 %}
+{% latex fig-19 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -461,7 +461,7 @@ Given the model of the coin toss game described above, suppose we know the value
 
 The left-hand side of these equations represents the value of the known target distribution for the corresponding state. The right-hand side represents the computed result based on the values of the weights of the biased coins. These equality conditions are true if we have a valid set of weights. Notice also the symmetry for states above and below the initial state. We can leave out the duplicate conditions because they are redundant. We can also eliminate states that we know are never terminal states. Consider the following:
 
-{% latex 1 fig-20 %}
+{% latex fig-20 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -479,7 +479,7 @@ The left-hand side of these equations represents the value of the known target d
 
 These two sets contain even and odd numbers, respectively. We can select one or the other based on whether the number of coin toss events per round is even or odd:
 
-{% latex 1 fig-21 %}
+{% latex fig-21 %}
     \begin{document}
     \begin{displaymath}
     R =
@@ -494,7 +494,7 @@ These two sets contain even and odd numbers, respectively. We can select one or 
 
 Using the selected set, we can determine which states are never terminal states. Non-terminal states have a probability of zero in the final outcome. We know the following holds true, no matter what weights are used for the biased coins:
 
-{% latex 1 fig-22 %}
+{% latex fig-22 %}
     \begin{document}
     \begin{displaymath}
     r_k = 0, \quad \forall k \notin R
@@ -504,7 +504,7 @@ Using the selected set, we can determine which states are never terminal states.
 
 We can eliminate non-terminal states from consideration because they have no bearing on the equality constraints needed for the method of Lagrange multipliers. The total number of equality constraints then is given by the following:
 
-{% latex 1 fig-23 %}
+{% latex fig-23 %}
     \begin{document}
     \begin{displaymath}
     m = |R| =
@@ -519,7 +519,7 @@ We can eliminate non-terminal states from consideration because they have no bea
 
 The number of equality constraints is a function of the total number of coin toss events. We can establish a set of equality constraints like this:
 
-{% latex 1 fig-24 %}
+{% latex fig-24 %}
     \begin{document}
     \begin{displaymath}
     f_i(\mathbf{p}) = 0, \quad \forall i \in \{\, 1, \dots, m \,\}
@@ -529,7 +529,7 @@ The number of equality constraints is a function of the total number of coin tos
 
 Each constraint function must be equal to zero. The functions we want to use here are functions that take the difference between the target values and the computed values based on a given set of weights:
 
-{% latex 1 fig-25 %}
+{% latex fig-25 %}
     \begin{document}
     \begin{displaymath}
     f_i(\mathbf{p}) = r_k - P(S_{\pm k}), \quad
@@ -545,7 +545,7 @@ Each constraint function must be equal to zero. The functions we want to use her
 
 Using these equality constraints, we can construct a Lagrangian function that can be used to find a valid set of weights:
 
-{% latex 1 fig-26 %}
+{% latex fig-26 %}
     \begin{document}
     \begin{displaymath}
     \mathcal{L}(\mathbf{p}, \boldsymbol{\lambdaup})
@@ -569,7 +569,7 @@ We want to find a valid set of weights that yields this distribution in the fina
 
 We can use the multivariate form of Newton's method to find the weights for which the gradient of the Lagrangian function is equal to zero. This method is described in detail in the post titled [*Finding the Roots with Newton's Method*]({% post_url 2020-12-31-finding-the-roots-with-newtons-method %}). Here we apply the following iterative formula:
 
-{% latex 1 fig-29 %}
+{% latex fig-29 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{x}_{i+1}
@@ -583,7 +583,7 @@ Note the use of the alternative notation scheme above for the gradient of the La
 
 Here is the definition of scoring function A:
 
-{% latex 1 fig-30 %}
+{% latex fig-30 %}
     \begin{document}
     \begin{displaymath}
     \mathrlap{S_a}\phantom{S_b}(\mathbf{p})
@@ -595,7 +595,7 @@ Here is the definition of scoring function A:
 
 Here is the definition of scoring function B:
 
-{% latex 1 fig-31 %}
+{% latex fig-31 %}
     \begin{document}
     \begin{displaymath}
     \mathrlap{S_b}\phantom{S_b}(\mathbf{p})
@@ -615,7 +615,7 @@ Here is the solution found using scoring function B:
 
 Here are the number of iterations required for each scoring function:
 
-{% latex 1 fig-34 %}
+{% latex fig-34 %}
     \newcommand{\Sa}{\mathrlap{S_a}\phantom{S_b}}
     \newcommand{\Sb}{\mathrlap{S_b}\phantom{S_b}}
     \begin{document}
@@ -647,7 +647,7 @@ We want to find a valid set of weights that yields this distribution in the fina
 
 To find a valid set of weights, we'll use the multivariate form of Newton's method like we did in the last example. But this time, we'll include a damping factor to slow down the convergence. Here is the iterative formula:
 
-{% latex 1 fig-37 %}
+{% latex fig-37 %}
     \begin{document}
     \begin{displaymath}
     \mathbf{x}_{i+1}
@@ -659,7 +659,7 @@ To find a valid set of weights, we'll use the multivariate form of Newton's meth
 
 We'll use a damping factor of ten percent:
 
-{% latex 1 fig-38 %}
+{% latex fig-38 %}
     \begin{document}
     \begin{displaymath}
     \gamma = 0.1
@@ -679,7 +679,7 @@ Here is the solution found using scoring function B:
 
 Here are the number of iterations required for each scoring function:
 
-{% latex 1 fig-41 %}
+{% latex fig-41 %}
     \newcommand{\Sa}{\mathrlap{S_a}\phantom{S_b}}
     \newcommand{\Sb}{\mathrlap{S_b}\phantom{S_b}}
     \begin{document}

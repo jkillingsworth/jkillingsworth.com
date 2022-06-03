@@ -11,7 +11,7 @@ The two previous posts demonstrated how to use the method of Lagrange multiplier
 
 The model of the coin toss game we'll use here is a simplified version. It uses only two flips per round instead of three flips or four flips per round as used in previous examples. Here is what the Markov model looks like:
 
-{% latex 1 fig-01 %}
+{% latex fig-01 %}
     \usepackage{tikz}
     \usetikzlibrary{arrows,automata}
     \begin{document}
@@ -35,7 +35,7 @@ The model of the coin toss game we'll use here is a simplified version. It uses 
 
 The first coin toss is always a fair coin, by definition. Let's assume the probability of tossing both a head and a tail, in any order, is twice that of getting either two heads in a row or two tails in a row. Let's also assume a scoring function that gives preference to weights that are as close to that of a fair coin as possible. The Lagrangian function for this model looks like this:
 
-{% latex 1 fig-02 %}
+{% latex fig-02 %}
     \begin{document}
     \begin{displaymath}
     \mathcal{L}(p, \lambda)
@@ -47,7 +47,7 @@ The first coin toss is always a fair coin, by definition. Let's assume the proba
 
 Like we did previously, we can derive a cost function from the Lagrangian function by computing the magnitude of the gradient of the Lagrangian function. We'll take the square of the magnitude to simplify the calculation. Here is the cost function:
 
-{% latex 1 fig-03 %}
+{% latex fig-03 %}
     \begin{document}
     \begin{displaymath}
     C(p, \lambda)
@@ -63,7 +63,7 @@ For such a simple model, it might be obvious what the solution is. The critical 
 
 The optimum value lies at the point at which the gradient is equal to the zero vector:
 
-{% latex 1 fig-04 %}
+{% latex fig-04 %}
     \begin{document}
     \begin{displaymath}
     \nabla \mathcal{L}(p, \lambda)
@@ -99,7 +99,7 @@ The surface plot resembles the shape of a cowboy hat or a western horse saddle. 
 
 The optimum value lies at the point at which the gradient is equal to the zero vector:
 
-{% latex 1 fig-13 %}
+{% latex fig-13 %}
     \begin{document}
     \begin{displaymath}
     \nabla C(p, \lambda)

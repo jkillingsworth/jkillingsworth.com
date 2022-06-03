@@ -9,7 +9,7 @@ Consider an at-the-money call option with a strike price of $50. The underlying 
 
 The intrinsic value of the option at the time of expiration is a function of two things: the strike price of the option contract and the market price of the underlying asset when the option expires. You can compute the value of the option at expiration using this equation:
 
-{% latex 1 fig-01 %}
+{% latex fig-01 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -40,7 +40,7 @@ Since the market price of the underlying can fluctuate over time, the price of t
 
 Let's say the seller of the option contract predicts the price of the underlying will be trading at $40 per share at expiration. The buyer, on the other hand, speculates that the underlying will be trading at $60 per share at expiration. Using the formula above, we can compute the intrinsic value of the option at each of the anticipated outcomes:
 
-{% latex 1 fig-02 %}
+{% latex fig-02 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{2em}|wl{3em}|}
@@ -58,7 +58,7 @@ Let's say the seller of the option contract predicts the price of the underlying
 
 The seller reasons that offering the option at any price greater than zero would be to his advantage since, according to his prediction, the option will expire worthless. The buyer figures that purchasing the option at any price below $10 is an opportunity for profit. The two traders decide that the fairest price can be obtained by taking the average value of the option for the two predicted outcomes:
 
-{% latex 1 fig-03 %}
+{% latex fig-03 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -76,7 +76,7 @@ In valuing the option, the two traders effectively give equal weight to the prob
 
 In a more realistic scenario, there might be many possible outcomes. Some outcomes might have a higher probability of occurring than others. Consider another example with the following set of possible outcomes:
 
-{% latex 1 fig-04 %}
+{% latex fig-04 %}
     \begin{document}
     \begin{displaymath}
     X = \{\, \$20,\, \$30,\, \$40,\, \$50,\, \$60,\, \$70,\, \$80 \,\}
@@ -86,7 +86,7 @@ In a more realistic scenario, there might be many possible outcomes. Some outcom
 
 Using the formula above again, we can compute the intrinsic value of the option at each of the possible outcomes:
 
-{% latex 1 fig-05 %}
+{% latex fig-05 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{2em}|wl{3em}|}
@@ -114,7 +114,7 @@ Using the formula above again, we can compute the intrinsic value of the option 
 
 Now let's assume the probability of each outcome is this:
 
-{% latex 1 fig-06 %}
+{% latex fig-06 %}
     \begin{document}
     \begin{displaymath}
     \begin{table}{|wl{2em}|wl{3em}|}
@@ -142,7 +142,7 @@ Now let's assume the probability of each outcome is this:
 
 We can compute the expected value of the option as a weighted average:
 
-{% latex 1 fig-07 %}
+{% latex fig-07 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -160,7 +160,7 @@ This approach lets us model a prediction as a probability mass function across a
 
 In real markets, prices don't always snap neatly to $10 increments. Tick sizes can be as small as a penny or even smaller. It might be better to model a price prediction as a continuous probability distribution. Let's consider a set of possible outcomes that can span across a continuous range of values:
 
-{% latex 1 fig-08 %}
+{% latex fig-08 %}
     \begin{document}
     \begin{displaymath}
     X = \{\, x \in \mathbb{R} \mid x \geq 0 \,\}
@@ -170,7 +170,7 @@ In real markets, prices don't always snap neatly to $10 increments. Tick sizes c
 
 Prices can't fall below zero, so the range of possible values has a lower bound at zero. As before, some outcomes might have a higher probability of occurring than others. The cumulative distribution function is the probability that, when the option expires, the price of the underlying is less than or equal to a given value:
 
-{% latex 1 fig-09 %}
+{% latex fig-09 %}
     \begin{document}
     \begin{displaymath}
     F(x) = P(S_T \leq x)
@@ -180,7 +180,7 @@ Prices can't fall below zero, so the range of possible values has a lower bound 
 
 From probability theory, we know that the probability density function is just the derivative of the cumulative distribution function:
 
-{% latex 1 fig-10 %}
+{% latex fig-10 %}
     \begin{document}
     \begin{displaymath}
     f(x) = \frac{\dderiv}{\dderiv x} F(x)
@@ -190,7 +190,7 @@ From probability theory, we know that the probability density function is just t
 
 If we can come up with a probability density function that models our prediction, we can compute the expected value of the option by integrating over the range of possible outcomes:
 
-{% latex 1 fig-11 %}
+{% latex fig-11 %}
     \begin{document}
     \begin{displaymath}
     \mathbb{E}\1\brace1[]{V(S_T)} = \int_{0}^{\infty} V(x) \0 f(x) \, \dderiv x
@@ -200,7 +200,7 @@ If we can come up with a probability density function that models our prediction
 
 Here the lower limit is zero because the price of the underlying can never fall below zero. The upper limit approaches infinity if the density function is unbounded. If using a bounded density function, you can set the limits accordingly. Let's look at a concrete example. Suppose we model our prediction as a simple triangular distribution:
 
-{% latex 1 fig-12 %}
+{% latex fig-12 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -219,7 +219,7 @@ Here the lower limit is zero because the price of the underlying can never fall 
 
 Since the probability density is zero for all values outside the range spanning from $20 to $80, we can ignore values outside of this range. Furthermore, since we're only considering at-the-money call options with a strike price of $50 in this context, we know the intrinsic value of the option upon expiration is always zero if the underlying is trading below $50. Plugging in the density function and simplifying:
 
-{% latex 1 fig-13 %}
+{% latex fig-13 %}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
