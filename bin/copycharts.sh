@@ -493,3 +493,21 @@ copychart ${post} fig-69 example-6-time-xs.svg
 copychart ${post} fig-70 example-6-freq-ys-ma.svg
 copychart ${post} fig-71 example-6-freq-ys-ph.svg
 copychart ${post} fig-72 example-6-time-xs-repro.svg
+
+#--------------------------------------------------------------------------------------------------
+
+post="2022-06-06-using-the-kelly-criterion-for-optimal-bet-sizing"
+
+copychart ${post} fig-06 coin-toss-simulations.svg
+copychart ${post} fig-12 example-1-gs.svg
+copychart ${post} fig-26 example-2-gs.svg
+copychart ${post} fig-35 example-3-gs.svg
+copychart ${post} fig-44 example-4-gs.svg
+copychart ${post} fig-50 example-5-ps.svg
+copychart ${post} fig-53 example-5-ws.svg
+copychart ${post} fig-56 example-5-gs.svg
+copychart ${post} fig-60 example-6-ps.svg
+copychart ${post} fig-62 example-6-ws.svg
+copychart ${post} fig-63 example-6-gs.svg
+copychart ${post} fig-68 limitations-1.svg
+copychart ${post} fig-73 limitations-2.svg
