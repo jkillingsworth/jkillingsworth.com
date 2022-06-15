@@ -1,45 +1,7 @@
 ﻿module Chart
 
 open System
-open System.Diagnostics
-open System.IO
-open System.Text
-
-//-------------------------------------------------------------------------------------------------
-
-let private preamble = "
-set terminal svg size 720 405 font 'Consolas, Menlo, monospace'
-set encoding utf8
-set output '{0}'
-
-set xtics scale 0, 0.0001
-set ytics scale 0, 0.0001
-"
-
-let private terminal = "
-exit
-"
-
-let private render path template args =
-
-    let preamble = String.Format(preamble, Path.GetFullPath(path))
-    let template = String.Format(template, args)
-    let plot = preamble + template + terminal
-    use proc = new Process()
-    proc.StartInfo.FileName <- Environment.GetEnvironmentVariable("GNUPLOT_EXE")
-    proc.StartInfo.UseShellExecute <- false
-    proc.StartInfo.RedirectStandardInput <- true
-    proc.StartInfo.RedirectStandardError <- true
-    proc.StartInfo.StandardInputEncoding <- new UTF8Encoding()
-    proc.StartInfo.StandardErrorEncoding <- new UTF8Encoding()
-    proc.Start() |> ignore
-    proc.StandardInput.Write(plot)
-    proc.StandardInput.Flush()
-    proc.WaitForExit()
-    let stderr = proc.StandardError.ReadToEnd()
-    Console.ForegroundColor <- ConsoleColor.Red
-    Console.Error.Write(stderr)
-    Console.ResetColor()
+open Common.Chart
 
 //-------------------------------------------------------------------------------------------------
 

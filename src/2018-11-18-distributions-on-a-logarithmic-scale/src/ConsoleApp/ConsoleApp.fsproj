@@ -11,4 +11,8 @@
     <Compile Include="Program.fs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\src\Common\Common.fsproj" />
+  </ItemGroup>
+
 </Project>

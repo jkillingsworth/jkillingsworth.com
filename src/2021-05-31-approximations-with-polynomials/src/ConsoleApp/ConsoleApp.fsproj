@@ -17,4 +17,8 @@
     <PackageReference Include="MathNet.Symbolics" Version="0.24.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\src\Common\Common.fsproj" />
+  </ItemGroup>
+
 </Project>
