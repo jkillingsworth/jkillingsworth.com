@@ -26,8 +26,8 @@ set ylabel 'Probability'
 set yrange [0:upper]
 set format y '%0.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 
 set linetype 1 linewidth 1 linecolor '#808080'
 set style fill solid border linecolor '#ffffff'
@@ -75,8 +75,8 @@ set yrange [0:1]
 set ytics 0.10
 set format y '%0.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 
 set linetype 1 linewidth 1 linecolor '#80a080'
 set linetype 2 pointtype 7 linecolor '#a060a0'

@@ -37,8 +37,8 @@ set ylabel 'Price (Log Values)'
 set yrange [lower:upper]
 set format y '%7.4f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key title sprintf('%s', title) left
 
 set linetype 1 linewidth 1 linecolor '#808080'
@@ -87,8 +87,8 @@ set xlabel sprintf('Time (%s)', tunit)
 set ylabel 'Noise'
 set format y '%7.4f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key title sprintf('%s', title) left
 
 set linetype 1 linewidth 1 linecolor '#808080'
@@ -140,8 +140,8 @@ set for [i=-1:-sigmas:-1] xtics add (sprintf('%+iσ', i) i * σN)
 set ylabel 'Density'
 set format y '%7.0f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key title sprintf('%s', title) left
 
 set linetype 1 linewidth 1 linecolor '#c0c0c0'

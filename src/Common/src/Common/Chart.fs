@@ -48,17 +48,30 @@ let render path template args =
 
 let baseplotRegular = "
 set border linewidth 1.2
+
 set grid linestyle 1
 set grid xtics mxtics
 set grid ytics mytics
+
+set key box linecolor '#808080'
 set key opaque
+set key samplen 1
 "
 
 let baseplotHeatmap = "
 set border linewidth 1.2
+
+set key box linecolor '#808080'
+set key noopaque
+set key samplen 1
 "
 
 let baseplotSurface = "
 set border linewidth 1.0
+
 set grid
+
+set key box linecolor '#808080'
+set key noopaque
+set key samplen 1
 "

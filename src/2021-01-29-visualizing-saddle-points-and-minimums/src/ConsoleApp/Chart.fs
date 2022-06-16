@@ -54,8 +54,8 @@ set cbrange [lower:upper]
 set cbtics add ('\u00A00.0' 0)
 set format cb '%+0.1f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key width -1
 
 set pm3d
@@ -129,8 +129,8 @@ set cbrange [lower:upper]
 set cbtics add ('\u00A00.0' 0)
 set format cb '%+0.1f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key textcolor '#ffffff'
 
 set palette defined\
@@ -208,8 +208,8 @@ set yrange [lower:upper]
 set ytics add ('\u00A00.0' 0)
 set format y '%+0.1f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 
 set linetype 1 pointtype 7 linecolor '#a000a0'
 set linetype 2 linewidth 2 linecolor '#a000a0'

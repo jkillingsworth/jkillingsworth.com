@@ -21,8 +21,8 @@ set xlabel 'Number of Plays'
 
 set ylabel 'Dollars'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 
 set linetype 1 linewidth 2 linecolor '#ff4040'
 set linetype 2 linewidth 2 linecolor '#40c040'
@@ -78,8 +78,8 @@ set yrange [yLower:yUpper]
 set ytics add ('0.00' 0)
 set format y '%+5.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 
 set linetype 1 linewidth 2 linecolor '#a040c0'
 set linetype 2 pointtype 7 linecolor '#a040c0'
@@ -123,8 +123,8 @@ set yrange [yLower:yUpper]
 set ytics 0.025
 set format y '%5.3f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key width -3
 
 set linetype 1 linewidth 2 linecolor '#4080ff'
@@ -171,8 +171,8 @@ set ytics add ('0.00' 0)
 set mytics 2
 set format y '%+5.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 
 set linetype 1 linewidth 2 linecolor '#40c040'
 set linetype 2 linewidth 2 linecolor '#ff4040'
@@ -228,8 +228,8 @@ set yrange [0:2*c]
 set ytics 5
 set format y '%5.0f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 
 set linetype 1 linewidth 2 linecolor '#c0c0c0'
 set linetype 2 linewidth 2 linecolor '#40c040'

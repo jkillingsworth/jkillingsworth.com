@@ -31,8 +31,8 @@ if (style == 2) {{
     set logscale y 10
 }}
 
-set key box linecolor '#808080' samplen 1
-set key top right noreverse Right
+set key top right
+set key noreverse Right
 
 set linetype 1 linewidth 1 linecolor '#ff0000'
 

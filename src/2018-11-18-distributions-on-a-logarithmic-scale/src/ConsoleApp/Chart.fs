@@ -29,8 +29,8 @@ set yrange [0:0.75]
 set ytics 0.05
 set format y '%0.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top right reverse Left
+set key top right
+set key reverse Left
 
 set linetype 1 linewidth 2 linecolor '#0000ff'
 set linetype 2 linewidth 2 linecolor '#ff0000'

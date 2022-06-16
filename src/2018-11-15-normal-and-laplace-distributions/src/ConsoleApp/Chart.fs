@@ -24,8 +24,8 @@ set ylabel 'Likelihood'
 set yrange [lower:upper]
 set ytics (' Max' ymax)
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key width -2
 
 set linetype 1 linewidth 2 linecolor '#ff0000'
@@ -89,8 +89,8 @@ if (style == 2) {{
     set logscale y 10
 }}
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 
 set linetype 1 linewidth 2 linecolor '#0000ff'
 set linetype 2 linewidth 2 linecolor '#ff0000'

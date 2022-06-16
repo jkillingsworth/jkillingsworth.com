@@ -64,8 +64,8 @@ set format y '%0.2f'
 set cblabel offset 1 'Cost \u00f7 10^{{1}}'
 set format cb '%0.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key textcolor '#ffffff'
 
 set palette defined\

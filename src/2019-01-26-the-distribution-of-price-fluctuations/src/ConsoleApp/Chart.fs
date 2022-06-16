@@ -25,8 +25,8 @@ set xlabel 'Time (Days)'
 set ylabel 'Market Price (Log Values)'
 set format y '%5.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 
 set linetype 1 linewidth 1 linecolor '#808080'
 
@@ -59,8 +59,8 @@ set xlabel 'Time (Days)'
 set ylabel 'Price Differences (Log Values)'
 set format y '%5.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 
 set linetype 1 linewidth 1 linecolor '#808080'
 
@@ -97,8 +97,8 @@ set for [i=-1:-sigmas:-1] xtics add (sprintf('%+iσ', i) i * σN)
 set ylabel 'Density'
 set format y '%5.0f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key title sprintf('%s', title) left
 
 set linetype 1 linewidth 1 linecolor '#c0c0c0'

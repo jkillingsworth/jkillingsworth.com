@@ -60,8 +60,8 @@ set ylabel 'Probability'
 set yrange [0:0.6]
 set format y '%0.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 
 set linetype 1 linewidth 1 linecolor '#808080'
 set style fill solid border linecolor '#ffffff'
@@ -101,8 +101,8 @@ set yrange [0:1]
 set ytics 0.10
 set format y '%0.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 
 set linetype 1 linewidth 1 linecolor '#80a080'
 set style fill solid border linecolor '#ffffff'
@@ -139,8 +139,8 @@ set ylabel 'Probability'
 set yrange [0:0.30]
 set format y '%0.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 
 set linetype 1 linewidth 1 linecolor '#80b0e0'
 set linetype 2 linewidth 1 linecolor '#8098b0'
@@ -206,8 +206,8 @@ set format z '%0.2f'
 set cblabel offset 1 'Cost'
 set format cb '%0.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key width -1
 
 set pm3d
@@ -255,8 +255,8 @@ set format y '%0.2f'
 set cblabel offset 1 'Cost'
 set format cb '%0.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key textcolor '#ffffff'
 
 set palette rgb 7,5,15
@@ -320,8 +320,8 @@ set format y '%0.2f'
 set cblabel offset 1 'Cost'
 set format cb '%0.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key textcolor '#ffffff'
 
 set palette rgb 7,5,15
@@ -396,8 +396,8 @@ if (style == 1) {{ set cblabel offset 1 'Score' }}
 if (style == 2) {{ set cblabel offset 1 'Cost' }}
 set format cb '%0.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key textcolor '#ffffff'
 
 if (style == 1) {{ set palette defined (0 '#000000', 1 '#c0c0c0') }}
@@ -453,8 +453,8 @@ set ylabel 'Score'
 set yrange [-0.05:0.8]
 set format y '%0.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 
 set linetype 1 linewidth 1 linecolor '#ff0000'
 set linetype 2 pointtype 2 linecolor '#000000'

@@ -25,8 +25,8 @@ set ylabel 'Value'
 set yrange [-2:+2]
 set format y '%4.1f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key title 'Time Domain'
 
 set linetype 1 linewidth 1 linecolor '#a0a0a0'
@@ -104,8 +104,8 @@ if (style eq 'ph') {{
     set format y '%4.0f'
 }}
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key title 'Frequency Domain'
 
 set linetype 1 linewidth 1 linecolor '#a0a0a0'

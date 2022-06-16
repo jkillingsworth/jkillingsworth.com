@@ -60,8 +60,8 @@ set ylabel 'Probability'
 set yrange [0:0.6]
 set format y '%0.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 
 set linetype 1 linewidth 1 linecolor '#808080'
 set style fill solid border linecolor '#ffffff'
@@ -123,8 +123,8 @@ set format y '%0.2f'
 set cblabel offset 1 'Cost'
 set format cb '%0.2f'
 
-set key box linecolor '#808080' samplen 1
-set key top left reverse Left
+set key top left
+set key reverse Left
 set key textcolor '#ffffff'
 
 set palette rgb 7,5,15
