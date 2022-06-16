@@ -61,7 +61,7 @@ set key samplen 1
 let baseplotHeatmap = "
 set border linewidth 1.2
 
-set key box linecolor '#808080'
+set key nobox
 set key noopaque
 set key samplen 1
 "
