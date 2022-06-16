@@ -17,9 +17,6 @@ $data2 << EOD
 {2}
 EOD
 
-set xzeroaxis linestyle 2
-set yzeroaxis linestyle 2
-
 set xlabel 'Number of Plays'
 
 set ylabel 'Dollars'
@@ -69,8 +66,8 @@ EOD
 
 xLower = {2}; xUpper = {3}; yLower = {4}; yUpper = {5}
 
-set xzeroaxis linestyle 2
-set yzeroaxis linestyle 2
+set arrow nohead linestyle 2 from xLower,0 to xUpper,0
+set arrow nohead linestyle 2 from 0,yLower to 0,yUpper
 
 set xlabel 'Bet Size'
 set xrange [xLower:xUpper]
@@ -119,9 +116,6 @@ EOD
 
 xLower = {1}; xUpper = {2}; yLower = {3}; yUpper = {4}
 
-set xzeroaxis linestyle 2
-set yzeroaxis linestyle 2
-
 set xlabel 'Price'
 set xrange [xLower:xUpper]
 set xtics 1
@@ -167,8 +161,7 @@ EOD
 
 xLower = {1}; xUpper = {2}; yLower = {3}; yUpper = {4}
 
-set xzeroaxis linestyle 2
-set yzeroaxis linestyle 2
+set arrow nohead linestyle 2 from xLower,0 to xUpper,0
 
 set xlabel 'Price'
 set xrange [xLower:xUpper]
@@ -226,8 +219,7 @@ bMin = data0_min_x
 stats $data1 using 1:3 nooutput prefix 'data1'
 bMax = data1_max_x
 
-set xzeroaxis linestyle 2
-set yzeroaxis linestyle 2
+set arrow nohead linestyle 2 from 0,0 to 0,(2*c)
 
 set xlabel 'Bet Size'
 set xrange [xLower:xUpper]

@@ -13,7 +13,7 @@ $data1 << EOD
 {1}
 EOD
 
-set xzeroaxis linestyle 2
+set arrow nohead linestyle 2 from -0.01,0 to +1,0
 
 set xlabel 'Time (Seconds)'
 set xrange [-0.01:+1]
@@ -65,7 +65,7 @@ EOD
 
 n = {2}; style = '{3}'
 
-set xzeroaxis linestyle 2
+set arrow nohead linestyle 2 from -(0.01*n),0 to +n,0
 
 set xlabel 'Frequency (Hz)'
 set xrange [-(0.01*n):+n]
