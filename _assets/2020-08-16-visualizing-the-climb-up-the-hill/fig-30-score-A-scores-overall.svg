@@ -221,31 +221,21 @@
 	<path stroke='rgb(128, 128, 128)'  d='M80.92,63.01 L80.92,27.01 L173.82,27.01 L173.82,63.01 L80.92,63.01 Z  '/></g>
 	<g id="gnuplot_plot_1" ><title>Score A</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(115.09,39.91)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Consolas, Menlo, monospace" >Score A</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(255,   0,   0)'  d='M89.31,36.01 L106.70,36.01 M72.53,220.38 L78.75,228.67 L84.98,236.37 L91.20,243.50 L97.42,250.13 L103.64,256.28
-		L109.87,262.00 L116.09,267.31 L122.31,272.25 L128.54,276.83 L134.76,281.09 L140.98,285.05 L147.20,288.72 L153.43,292.13
-		L159.65,295.29 L165.87,298.21 L172.10,300.92 L178.32,303.42 L184.54,305.73 L190.77,307.85 L196.99,309.80 L203.21,311.59
-		L209.43,313.22 L215.66,314.70 L221.88,316.05 L228.10,317.26 L234.33,318.35 L240.55,319.31 L246.77,320.16 L252.99,320.90
-		L259.22,321.54 L265.44,322.07 L271.66,322.51 L277.89,322.86 L284.11,323.11 L290.33,323.28 L296.55,323.37 L302.78,323.38
-		L309.00,323.31 L315.22,323.17 L321.45,322.95 L327.67,322.67 L333.89,322.31 L340.11,321.90 L346.34,321.41 L352.56,320.87
-		L358.78,320.26 L365.01,319.60 L371.23,318.87 L377.45,318.09 L383.68,317.26 L389.90,316.37 L396.12,315.43 L402.34,314.44
-		L408.57,313.40 L414.79,312.30 L421.01,311.16 L427.24,309.97 L433.46,308.74 L439.68,307.45 L445.90,306.13 L452.13,304.75
-		L458.35,303.33 L464.57,301.87 L470.80,300.37 L477.02,298.82 L483.24,297.23 L489.46,295.60 L495.69,293.92 L501.91,292.21
-		L508.13,290.46 L514.36,288.66 L520.58,286.83 L526.80,284.95 L533.02,283.04 L539.25,281.09 L545.47,279.10 L551.69,277.07
-		L557.92,275.01 L564.14,272.91 L570.36,270.77 L576.58,268.59 L582.81,266.37 L589.03,264.12 L595.25,261.83 L601.48,259.51
-		L607.70,257.15 L613.92,254.75 L620.15,252.32 L626.37,249.85 L632.59,247.35 L638.81,244.81 L645.04,242.23 L651.26,239.63
-		L657.48,236.98 L663.71,234.30 L669.93,231.59 L676.15,228.84 L682.37,226.05 L688.60,223.23 L694.82,220.38  '/></g>
+	<path stroke='rgb(255,   0,   0)'  d='M72.53,220.38 L78.75,228.67 L84.98,236.37 L91.20,243.50 L97.42,250.13 L103.64,256.28 L109.87,262.00 L116.09,267.31
+		L122.31,272.25 L128.54,276.83 L134.76,281.09 L140.98,285.05 L147.20,288.72 L153.43,292.13 L159.65,295.29 L165.87,298.21
+		L172.10,300.92 L178.32,303.42 L184.54,305.73 L190.77,307.85 L196.99,309.80 L203.21,311.59 L209.43,313.22 L215.66,314.70
+		L221.88,316.05 L228.10,317.26 L234.33,318.35 L240.55,319.31 L246.77,320.16 L252.99,320.90 L259.22,321.54 L265.44,322.07
+		L271.66,322.51 L277.89,322.86 L284.11,323.11 L290.33,323.28 L296.55,323.37 L302.78,323.38 L309.00,323.31 L315.22,323.17
+		L321.45,322.95 L327.67,322.67 L333.89,322.31 L340.11,321.90 L346.34,321.41 L352.56,320.87 L358.78,320.26 L365.01,319.60
+		L371.23,318.87 L377.45,318.09 L383.68,317.26 L389.90,316.37 L396.12,315.43 L402.34,314.44 L408.57,313.40 L414.79,312.30
+		L421.01,311.16 L427.24,309.97 L433.46,308.74 L439.68,307.45 L445.90,306.13 L452.13,304.75 L458.35,303.33 L464.57,301.87
+		L470.80,300.37 L477.02,298.82 L483.24,297.23 L489.46,295.60 L495.69,293.92 L501.91,292.21 L508.13,290.46 L514.36,288.66
+		L520.58,286.83 L526.80,284.95 L533.02,283.04 L539.25,281.09 L545.47,279.10 L551.69,277.07 L557.92,275.01 L564.14,272.91
+		L570.36,270.77 L576.58,268.59 L582.81,266.37 L589.03,264.12 L595.25,261.83 L601.48,259.51 L607.70,257.15 L613.92,254.75
+		L620.15,252.32 L626.37,249.85 L632.59,247.35 L638.81,244.81 L645.04,242.23 L651.26,239.63 L657.48,236.98 L663.71,234.30
+		L669.93,231.59 L676.15,228.84 L682.37,226.05 L688.60,223.23 L694.82,220.38  '/></g>
 	</g>
 	<g id="gnuplot_plot_2" ><title>Optimum</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(115.09,57.91)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Consolas, Menlo, monospace" >Optimum</tspan></text>
-	</g>
-</g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(304.80,304.79)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
 		<text><tspan font-family="Consolas, Menlo, monospace" >0.01196613</tspan></text>
@@ -258,7 +248,30 @@
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
-<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	</g>
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'white' points = '80.92,63.01 173.82,63.01 173.82,27.01 80.92,27.01 '/>
+	</g>
+<g fill="none" color="white" stroke="white" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(128, 128, 128)'  d='M80.92,63.01 L80.92,27.01 L173.82,27.01 L173.82,63.01 L80.92,63.01 Z  '/></g>
+	<g id="gnuplot_plot_1" ><title>Score A</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g transform="translate(115.09,39.91)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="start">
+		<text><tspan font-family="Consolas, Menlo, monospace" >Score A</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(255,   0,   0)'  d='M89.31,36.01 L106.70,36.01  '/></g>
+	</g>
+	<g id="gnuplot_plot_2" ><title>Optimum</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g transform="translate(115.09,57.91)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="start">
+		<text><tspan font-family="Consolas, Menlo, monospace" >Optimum</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<use xlink:href='#gpPt1' transform='translate(98.01,54.01) scale(4.50)' color='rgb(  0,   0,   0)'/>

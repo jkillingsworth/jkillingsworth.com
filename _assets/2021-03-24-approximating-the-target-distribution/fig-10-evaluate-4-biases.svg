@@ -455,16 +455,6 @@
 	<path stroke='rgb(128, 128, 128)'  d='M80.92,81.01 L80.92,27.01 L198.99,27.01 L198.99,81.01 L80.92,81.01 Z  '/></g>
 	<g id="gnuplot_plot_1" ><title>Coin Bias</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(115.09,39.91)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Consolas, Menlo, monospace" >Coin Bias</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(128, 160, 128)' points = '89.31,40.51 106.70,40.51 106.70,31.51 89.31,31.51 '/>
-	</g>
-	<path stroke='rgb(255, 255, 255)'  d='M89.31,40.51 L106.70,40.51 L106.70,31.51 L89.31,31.51 L89.31,40.51 Z  '/></g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb(128, 160, 128)' points = '88.09,347.40 119.21,347.40 119.21,281.51 88.09,281.51 '/>
 	</g>
@@ -564,11 +554,6 @@
 	</g>
 	<g id="gnuplot_plot_2" ><title>a = 0.4000</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(115.09,57.91)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Consolas, Menlo, monospace" >a = 0.4000</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(415.10,233.04)" stroke="none" fill="rgb(255,255,255)" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
 		<text><tspan font-family="Consolas, Menlo, monospace" >a</tspan></text>
 	</g>
@@ -580,17 +565,9 @@
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
-<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(98.01,54.01) scale(4.50)' color='rgb(160,  96, 160)'/>
-</g>
 	</g>
 	<g id="gnuplot_plot_3" ><title>b = 0.8000</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(115.09,75.91)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Consolas, Menlo, monospace" >b = 0.8000</tspan></text>
-	</g>
+<g fill="none" color="white" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(664.02,101.29)" stroke="none" fill="rgb(255,255,255)" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
@@ -604,7 +581,54 @@
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
-<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	</g>
+	<g id="gnuplot_plot_4" ><title>gnuplot_plot_4</title>
+<g fill="none" color="white" stroke="black" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(160,  96, 160)'  d='M414.79,215.64 L445.90,199.17 L477.02,182.70 L508.13,166.24 L539.25,149.77 L570.36,133.30 L601.48,116.83 L632.59,100.36
+		L663.71,83.89  '/></g>
+	</g>
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'white' points = '80.92,81.01 198.99,81.01 198.99,27.01 80.92,27.01 '/>
+	</g>
+<g fill="none" color="white" stroke="white" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(128, 128, 128)'  d='M80.92,81.01 L80.92,27.01 L198.99,27.01 L198.99,81.01 L80.92,81.01 Z  '/></g>
+	<g id="gnuplot_plot_1" ><title>Coin Bias</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g transform="translate(115.09,39.91)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="start">
+		<text><tspan font-family="Consolas, Menlo, monospace" >Coin Bias</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(128, 160, 128)' points = '89.31,40.51 106.70,40.51 106.70,31.51 89.31,31.51 '/>
+	</g>
+	<path stroke='rgb(255, 255, 255)'  d='M89.31,40.51 L106.70,40.51 L106.70,31.51 L89.31,31.51 L89.31,40.51 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+	</g>
+	<g id="gnuplot_plot_2" ><title>a = 0.4000</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g transform="translate(115.09,57.91)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="start">
+		<text><tspan font-family="Consolas, Menlo, monospace" >a = 0.4000</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<use xlink:href='#gpPt6' transform='translate(98.01,54.01) scale(4.50)' color='rgb(160,  96, 160)'/>
+</g>
+	</g>
+	<g id="gnuplot_plot_3" ><title>b = 0.8000</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g transform="translate(115.09,75.91)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="start">
+		<text><tspan font-family="Consolas, Menlo, monospace" >b = 0.8000</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<use xlink:href='#gpPt6' transform='translate(98.01,72.01) scale(4.50)' color='rgb(160,  96, 160)'/>
@@ -614,8 +638,7 @@
 <g fill="none" color="white" stroke="rgb(160,  96, 160)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(160,  96, 160)'  d='M414.79,215.64 L445.90,199.17 L477.02,182.70 L508.13,166.24 L539.25,149.77 L570.36,133.30 L601.48,116.83 L632.59,100.36
-		L663.71,83.89  '/></g>
+</g>
 	</g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>

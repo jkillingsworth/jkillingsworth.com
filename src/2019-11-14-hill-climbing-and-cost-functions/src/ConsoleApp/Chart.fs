@@ -183,6 +183,8 @@ if (landform == 1) {{ set ytics ('Base' 0.25 0, 'Peak' 2.25) }}
 if (landform == 2) {{ set ytics ('Base' 0.25 0, 'Peak' 1.25) }}
 set ytics scale 1
 
+unset key
+
 set linetype 1 linewidth 0 linecolor '#ff000000'
 set linetype 2 linewidth 0 linecolor '#e0e0e0'
 set linetype 3 linewidth 2 linecolor '#808080'

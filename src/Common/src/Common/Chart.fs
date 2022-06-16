@@ -51,6 +51,7 @@ set border linewidth 1.2
 set grid linestyle 1
 set grid xtics mxtics
 set grid ytics mytics
+set key opaque
 "
 
 let baseplotHeatmap = "

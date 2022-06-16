@@ -381,13 +381,42 @@
 <g fill="none" color="white" stroke="rgb(128, 128, 128)" stroke-width="5.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="5.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(  0, 192,   0)'  d='M401.18,347.40 L401.18,41.12 M428.52,347.40 L428.52,50.13 M471.25,347.40 L471.25,64.56 M538.02,347.40 L538.02,83.60
+		M642.34,347.40 L642.34,106.21  '/></g>
+	</g>
+	<g id="gnuplot_plot_2" ><title>Loss</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="5.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(255,   0,   0)'  d='M352.56,347.40 L352.56,347.39 M352.56,347.40 L352.56,347.38 M352.56,347.40 L352.56,347.37 M352.56,347.40 L352.56,347.34
+		M352.56,347.40 L352.56,347.29 M352.56,347.40 L352.56,347.20 M352.56,347.40 L352.56,347.06 M352.56,347.40 L352.56,346.82
+		M352.56,347.40 L352.56,346.45 M352.56,347.40 L352.56,345.87 M352.56,347.40 L352.56,344.99 M352.56,347.40 L352.56,343.68
+		M352.56,347.40 L352.56,341.77 M352.57,347.40 L352.57,339.06 M352.57,347.40 L352.57,335.30 M352.58,347.40 L352.58,330.20
+		M352.59,347.40 L352.59,323.44 M352.60,347.40 L352.60,314.70 M352.62,347.40 L352.62,303.68 M352.65,347.40 L352.65,290.11
+		M352.71,347.40 L352.71,273.83 M352.79,347.40 L352.79,254.82 M352.92,347.40 L352.92,233.22 M353.12,347.40 L353.12,209.38
+		M353.44,347.40 L353.44,183.87 M353.93,347.40 L353.93,157.50 M354.70,347.40 L354.70,131.24 M355.90,347.40 L355.90,106.21
+		M357.78,347.40 L357.78,83.60 M360.72,347.40 L360.72,64.56 M365.30,347.40 L365.30,50.13 M372.47,347.40 L372.47,41.12
+		 '/></g>
+	</g>
+	<g id="gnuplot_plot_3" ><title>Breakeven</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="5.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(128, 128, 128)'  d='M383.68,347.40 L383.68,38.06  '/></g>
+	</g>
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'white' points = '576.75,81.01 686.43,81.01 686.43,27.01 576.75,27.01 '/>
+	</g>
+<g fill="none" color="white" stroke="white" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(128, 128, 128)'  d='M576.75,81.01 L576.75,27.01 L686.43,27.01 L686.43,81.01 L576.75,81.01 Z  '/></g>
+	<g id="gnuplot_plot_1" ><title>Profit</title>
+<g fill="none" color="white" stroke="rgb(128, 128, 128)" stroke-width="5.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="5.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(652.26,39.91)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
 		<text><tspan font-family="Consolas, Menlo, monospace" >Profit</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="5.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0, 192,   0)'  d='M660.65,36.01 L678.04,36.01 M401.18,347.40 L401.18,41.12 M428.52,347.40 L428.52,50.13 M471.25,347.40 L471.25,64.56
-		M538.02,347.40 L538.02,83.60 M642.34,347.40 L642.34,106.21  '/></g>
+	<path stroke='rgb(  0, 192,   0)'  d='M660.65,36.01 L678.04,36.01  '/></g>
 	</g>
 	<g id="gnuplot_plot_2" ><title>Loss</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="5.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -396,15 +425,7 @@
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="5.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(255,   0,   0)'  d='M660.65,54.01 L678.04,54.01 M352.56,347.40 L352.56,347.39 M352.56,347.40 L352.56,347.38 M352.56,347.40 L352.56,347.37
-		M352.56,347.40 L352.56,347.34 M352.56,347.40 L352.56,347.29 M352.56,347.40 L352.56,347.20 M352.56,347.40 L352.56,347.06
-		M352.56,347.40 L352.56,346.82 M352.56,347.40 L352.56,346.45 M352.56,347.40 L352.56,345.87 M352.56,347.40 L352.56,344.99
-		M352.56,347.40 L352.56,343.68 M352.56,347.40 L352.56,341.77 M352.57,347.40 L352.57,339.06 M352.57,347.40 L352.57,335.30
-		M352.58,347.40 L352.58,330.20 M352.59,347.40 L352.59,323.44 M352.60,347.40 L352.60,314.70 M352.62,347.40 L352.62,303.68
-		M352.65,347.40 L352.65,290.11 M352.71,347.40 L352.71,273.83 M352.79,347.40 L352.79,254.82 M352.92,347.40 L352.92,233.22
-		M353.12,347.40 L353.12,209.38 M353.44,347.40 L353.44,183.87 M353.93,347.40 L353.93,157.50 M354.70,347.40 L354.70,131.24
-		M355.90,347.40 L355.90,106.21 M357.78,347.40 L357.78,83.60 M360.72,347.40 L360.72,64.56 M365.30,347.40 L365.30,50.13
-		M372.47,347.40 L372.47,41.12  '/></g>
+	<path stroke='rgb(255,   0,   0)'  d='M660.65,54.01 L678.04,54.01  '/></g>
 	</g>
 	<g id="gnuplot_plot_3" ><title>Breakeven</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="5.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -413,7 +434,7 @@
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="5.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(128, 128, 128)'  d='M660.65,72.01 L678.04,72.01 M383.68,347.40 L383.68,38.06  '/></g>
+	<path stroke='rgb(128, 128, 128)'  d='M660.65,72.01 L678.04,72.01  '/></g>
 	</g>
 <g fill="none" color="white" stroke="rgb(128, 128, 128)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
