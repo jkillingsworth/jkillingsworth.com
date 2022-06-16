@@ -223,18 +223,41 @@
 <g fill="none" color="white" stroke="rgb(128, 128, 128)" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(  0, 192,   0)'  d='M84.98,277.81 L97.42,246.08 L109.87,225.76 L122.31,210.48 L134.76,198.11 L147.20,187.69 L159.65,178.65 L172.10,170.67
+		L184.54,163.52 L196.99,157.03 L209.43,151.10 L221.88,145.63 L234.33,140.55 L246.77,135.82 L259.22,131.38 L271.66,127.21
+		L284.11,123.27 L296.55,119.53 L309.00,115.98 L321.45,112.61 L333.89,109.38 L346.34,106.30 L358.78,103.34 L371.23,100.50
+		L383.68,97.77 L396.12,95.14 L408.57,92.61 L421.01,90.16 L433.46,87.79 L445.90,85.50 L458.35,83.28 L470.80,81.13
+		L483.24,79.04 L495.69,77.01 L508.13,75.04 L520.58,73.12 L533.02,71.25 L545.47,69.42 L557.92,67.65 L570.36,65.91
+		L582.81,64.22 L595.25,62.56 L607.70,60.95 L620.15,59.37 L632.59,57.82 L645.04,56.31 L657.48,54.83 L669.93,53.37
+		L682.37,51.95 L694.82,50.56  '/></g>
+	</g>
+	<g id="gnuplot_plot_2" ><title>Enhanced Method</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(208,   0, 208)'  d='M84.98,308.11 L97.42,265.05 L109.87,248.24 L122.31,230.88 L134.76,220.25 L147.20,208.95 L159.65,200.97 L172.10,192.52
+		L184.54,186.08 L196.99,179.30 L209.43,173.88 L221.88,168.20 L234.33,163.52 L246.77,158.64 L259.22,154.51 L271.66,150.22
+		L284.11,146.53 L296.55,142.71 L309.00,139.36 L321.45,135.92 L333.89,132.86 L346.34,129.72 L358.78,126.91 L371.23,124.02
+		L383.68,121.41 L396.12,118.75 L408.57,116.32 L421.01,113.84 L433.46,111.56 L445.90,109.24 L458.35,107.11 L470.80,104.93
+		L483.24,102.91 L495.69,100.86 L508.13,98.95 L520.58,97.01 L533.02,95.20 L545.47,93.36 L557.92,91.64 L570.36,89.89
+		L582.81,88.25 L595.25,86.58 L607.70,85.01 L620.15,83.41 L632.59,81.91 L645.04,80.38 L657.48,78.94 L669.93,77.48
+		L682.37,76.09 L694.82,74.69  '/></g>
+	</g>
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'white' points = '80.92,63.01 240.94,63.01 240.94,27.01 80.92,27.01 '/>
+	</g>
+<g fill="none" color="white" stroke="white" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(128, 128, 128)'  d='M80.92,63.01 L80.92,27.01 L240.94,27.01 L240.94,63.01 L80.92,63.01 Z  '/></g>
+	<g id="gnuplot_plot_1" ><title>Baseline Method</title>
+<g fill="none" color="white" stroke="rgb(128, 128, 128)" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(115.09,39.91)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="start">
 		<text><tspan font-family="Consolas, Menlo, monospace" >Baseline Method</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0, 192,   0)'  d='M89.31,36.01 L106.70,36.01 M84.98,277.81 L97.42,246.08 L109.87,225.76 L122.31,210.48 L134.76,198.11 L147.20,187.69
-		L159.65,178.65 L172.10,170.67 L184.54,163.52 L196.99,157.03 L209.43,151.10 L221.88,145.63 L234.33,140.55 L246.77,135.82
-		L259.22,131.38 L271.66,127.21 L284.11,123.27 L296.55,119.53 L309.00,115.98 L321.45,112.61 L333.89,109.38 L346.34,106.30
-		L358.78,103.34 L371.23,100.50 L383.68,97.77 L396.12,95.14 L408.57,92.61 L421.01,90.16 L433.46,87.79 L445.90,85.50
-		L458.35,83.28 L470.80,81.13 L483.24,79.04 L495.69,77.01 L508.13,75.04 L520.58,73.12 L533.02,71.25 L545.47,69.42
-		L557.92,67.65 L570.36,65.91 L582.81,64.22 L595.25,62.56 L607.70,60.95 L620.15,59.37 L632.59,57.82 L645.04,56.31
-		L657.48,54.83 L669.93,53.37 L682.37,51.95 L694.82,50.56  '/></g>
+	<path stroke='rgb(  0, 192,   0)'  d='M89.31,36.01 L106.70,36.01  '/></g>
 	</g>
 	<g id="gnuplot_plot_2" ><title>Enhanced Method</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
@@ -243,13 +266,7 @@
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(208,   0, 208)'  d='M89.31,54.01 L106.70,54.01 M84.98,308.11 L97.42,265.05 L109.87,248.24 L122.31,230.88 L134.76,220.25 L147.20,208.95
-		L159.65,200.97 L172.10,192.52 L184.54,186.08 L196.99,179.30 L209.43,173.88 L221.88,168.20 L234.33,163.52 L246.77,158.64
-		L259.22,154.51 L271.66,150.22 L284.11,146.53 L296.55,142.71 L309.00,139.36 L321.45,135.92 L333.89,132.86 L346.34,129.72
-		L358.78,126.91 L371.23,124.02 L383.68,121.41 L396.12,118.75 L408.57,116.32 L421.01,113.84 L433.46,111.56 L445.90,109.24
-		L458.35,107.11 L470.80,104.93 L483.24,102.91 L495.69,100.86 L508.13,98.95 L520.58,97.01 L533.02,95.20 L545.47,93.36
-		L557.92,91.64 L570.36,89.89 L582.81,88.25 L595.25,86.58 L607.70,85.01 L620.15,83.41 L632.59,81.91 L645.04,80.38
-		L657.48,78.94 L669.93,77.48 L682.37,76.09 L694.82,74.69  '/></g>
+	<path stroke='rgb(208,   0, 208)'  d='M89.31,54.01 L106.70,54.01  '/></g>
 	</g>
 <g fill="none" color="white" stroke="rgb(208,   0, 208)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
