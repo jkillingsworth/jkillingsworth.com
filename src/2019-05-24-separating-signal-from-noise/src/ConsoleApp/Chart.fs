@@ -20,7 +20,7 @@ let private makeTunit (descriptor : string) =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotPrice = "
+let private plotPrice = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
@@ -30,11 +30,6 @@ $data1 << EOD
 EOD
 
 title = '{2}'; tunit = '{3}'; lower = {4}; upper = {5}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel sprintf('Time (%s)', tunit)
 
@@ -76,7 +71,7 @@ let renderPrice path data =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotNoise = "
+let private plotNoise = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
@@ -86,11 +81,6 @@ $data1 << EOD
 EOD
 
 title = '{2}'; tunit = '{3}'
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel sprintf('Time (%s)', tunit)
 
@@ -132,17 +122,12 @@ let renderNoise path data =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotProbs = "
+let private plotProbs = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 title = '{1}'; style = '{2}'; sigmas = {3}; μN = {4}; σN = {5}; μL = {6}; bL = {7}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 if (style == 1) {{ set xlabel gprintf('Market Price Differences, σ = %0.3te%04T', σN) }}
 if (style == 2) {{ set xlabel gprintf('Smooth Price Differences, σ = %0.3te%04T', σN) }}

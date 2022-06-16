@@ -4,17 +4,12 @@ open Common.Chart
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotBankroll = "
+let private plotBankroll = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 style = {1}; lower = {2}; upper = {3}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Number of Plays'
 set xrange [0:200]

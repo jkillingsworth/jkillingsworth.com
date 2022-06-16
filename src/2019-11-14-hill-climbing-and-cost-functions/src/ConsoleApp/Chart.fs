@@ -10,17 +10,12 @@ let private percent x =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotPmfunc = "
+let private plotPmfunc = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 n = {1}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Possible Outcome'
 set xrange [-n-2:+n+2]
@@ -55,17 +50,12 @@ let renderPmfunc path pmfunc =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotBiases = "
+let private plotBiases = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 n = {1}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'State'
 set xrange [-n:+n]
@@ -102,17 +92,12 @@ let renderBiases path biases =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotTosses = "
+let private plotTosses = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 n = {1}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Sequence'
 set xrange [-1:(2**n)]
@@ -163,7 +148,7 @@ let renderTosses path tosses =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotClimb = "
+let private plotClimb = baseplotRegular + "
 $hilleast << EOD
 3.0 0.375 Start
 2.0 2.375 Finish
@@ -186,7 +171,7 @@ EOD
 
 landform = {0}; eastwest = {1}
 
-set border linewidth 1.2
+unset grid
 
 set xlabel 'Location'
 set xrange [0.5:3.5]
@@ -257,7 +242,7 @@ let renderClimbPlatWest path = renderClimb 2 2 path
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotScores = "
+let private plotScores = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
@@ -267,11 +252,6 @@ $data1 << EOD
 EOD
 
 lower = {2}; upper = {3}; p1 = {4}; tag = '{5}'
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Coin Bias (+1)'
 set xrange [lower:upper]

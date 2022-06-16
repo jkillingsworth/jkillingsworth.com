@@ -13,17 +13,12 @@ let private makeTitle (descriptor : string) =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotPriceLin = "
+let private plotPriceLin = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 title = '{1}'
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Time (Minutes)'
 
@@ -52,17 +47,12 @@ let renderPriceLin path data =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotProbs = "
+let private plotProbs = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 title = '{1}'; style = {2}; sigmas = {3}; μN = {4}; σN = {5}; μL = {6}; bL = {7}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel gprintf('Price Differences (Log Values), σ = %0.3te%04T', σN)
 set xrange [-(sigmas * σN):+(sigmas * σN)]

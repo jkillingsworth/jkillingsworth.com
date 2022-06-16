@@ -10,17 +10,12 @@ let private percent x =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotPmfunc = "
+let private plotPmfunc = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 n = {1}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Possible Outcome'
 set xrange [-n-2:+n+2]
@@ -55,17 +50,12 @@ let renderPmfunc path pmfunc =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotBiases = "
+let private plotBiases = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 n = {1}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'State'
 set xrange [-n:+n]
@@ -102,17 +92,12 @@ let renderBiases path biases =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotTosses = "
+let private plotTosses = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 n = {1}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Sequence'
 set xrange [-1:(2**n)]

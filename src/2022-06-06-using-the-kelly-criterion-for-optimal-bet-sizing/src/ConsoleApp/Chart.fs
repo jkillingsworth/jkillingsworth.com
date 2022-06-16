@@ -4,7 +4,7 @@ open Common.Chart
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotSimulations = "
+let private plotSimulations = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
@@ -17,12 +17,8 @@ $data2 << EOD
 {2}
 EOD
 
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
-set xzeroaxis linestyle 1 linewidth 2 linecolor '#e6e6e6'
-set yzeroaxis linestyle 1 linewidth 2 linecolor '#e6e6e6'
+set xzeroaxis linestyle 2
+set yzeroaxis linestyle 2
 
 set xlabel 'Number of Plays'
 
@@ -62,7 +58,7 @@ let renderSimulations path vsA vsB vsC =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotGs = "
+let private plotGs = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
@@ -73,12 +69,8 @@ EOD
 
 xLower = {2}; xUpper = {3}; yLower = {4}; yUpper = {5}
 
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
-set xzeroaxis linestyle 1 linewidth 2 linecolor '#e6e6e6'
-set yzeroaxis linestyle 1 linewidth 2 linecolor '#e6e6e6'
+set xzeroaxis linestyle 2
+set yzeroaxis linestyle 2
 
 set xlabel 'Bet Size'
 set xrange [xLower:xUpper]
@@ -120,19 +112,15 @@ let renderGs path gRange bs gs (b', g')=
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotPs = "
+let private plotPs = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 xLower = {1}; xUpper = {2}; yLower = {3}; yUpper = {4}
 
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
-set xzeroaxis linestyle 1 linewidth 2 linecolor '#e6e6e6'
-set yzeroaxis linestyle 1 linewidth 2 linecolor '#e6e6e6'
+set xzeroaxis linestyle 2
+set yzeroaxis linestyle 2
 
 set xlabel 'Price'
 set xrange [xLower:xUpper]
@@ -172,19 +160,15 @@ let renderPs path pRange xs ps =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotWs = "
+let private plotWs = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 xLower = {1}; xUpper = {2}; yLower = {3}; yUpper = {4}
 
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
-set xzeroaxis linestyle 1 linewidth 2 linecolor '#e6e6e6'
-set yzeroaxis linestyle 1 linewidth 2 linecolor '#e6e6e6'
+set xzeroaxis linestyle 2
+set yzeroaxis linestyle 2
 
 set xlabel 'Price'
 set xrange [xLower:xUpper]
@@ -225,7 +209,7 @@ let renderWs path wRange xs ws =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotLimitations = "
+let private plotLimitations = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
@@ -242,12 +226,8 @@ bMin = data0_min_x
 stats $data1 using 1:3 nooutput prefix 'data1'
 bMax = data1_max_x
 
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
-set xzeroaxis linestyle 1 linewidth 2 linecolor '#e6e6e6'
-set yzeroaxis linestyle 1 linewidth 2 linecolor '#e6e6e6'
+set xzeroaxis linestyle 2
+set yzeroaxis linestyle 2
 
 set xlabel 'Bet Size'
 set xrange [xLower:xUpper]

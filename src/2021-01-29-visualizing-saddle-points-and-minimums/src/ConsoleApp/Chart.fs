@@ -24,7 +24,7 @@ let private matrix (items : float[,]) =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotSurface = "
+let private plotSurface = baseplotSurface + "
 $data0 << EOD
 {0}
 EOD
@@ -34,9 +34,6 @@ lower = {1}; upper = {2}; style = {3}
 stats $data0 using 1:2 matrix nooutput prefix 'data0'
 densityX = data0_size_x - 1
 densityY = data0_size_y - 1
-
-set border linewidth 1.0
-set grid
 
 set xlabel 'Coin Bias (p)'
 set xrange [0.0:1.0]
@@ -92,7 +89,7 @@ let renderSurface path heatmap (lower, upper) style =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotHeatmap = "
+let private plotHeatmap = baseplotHeatmap + "
 $data0 << EOD
 {0}
 EOD
@@ -116,8 +113,6 @@ if (style != 0) {{
     a = 0
     b = data2_records - 1
 }}
-
-set border linewidth 1.2
 
 set xlabel 'Coin Bias (p)'
 set xrange [0.0:1.0]
@@ -191,7 +186,7 @@ let renderHeatmap path heatmap (lower, upper) style optimum slice =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotProfile = "
+let private plotProfile = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
@@ -201,11 +196,6 @@ $data1 << EOD
 EOD
 
 lower = {2}; upper = {3}; style = {4}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Profile (p, λ)'
 set xrange [0:1]

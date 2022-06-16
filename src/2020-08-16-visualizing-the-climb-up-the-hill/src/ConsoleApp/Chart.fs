@@ -43,17 +43,12 @@ let private downsample samples items =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotPmfunc = "
+let private plotPmfunc = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 n = {1}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Possible Outcome'
 set xrange [-n-2:+n+2]
@@ -88,17 +83,12 @@ let renderPmfunc path pmfunc =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotBiases = "
+let private plotBiases = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 n = {1}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'State'
 set xrange [-n:+n]
@@ -135,17 +125,12 @@ let renderBiases path biases =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotTosses = "
+let private plotTosses = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 n = {1}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Sequence'
 set xrange [-1:(2**n)]
@@ -193,7 +178,7 @@ let renderTosses path tosses =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotSurface = "
+let private plotSurface = baseplotSurface + "
 $data0 << EOD
 {0}
 EOD
@@ -203,9 +188,6 @@ style = {1}
 stats $data0 using 1:2 matrix nooutput prefix 'data0'
 densityX = data0_size_x - 1
 densityY = data0_size_y - 1
-
-set border linewidth 1.0
-set grid
 
 set xlabel 'Coin Bias (+1)'
 set xrange [0:1]
@@ -247,7 +229,7 @@ let renderSurface path heatmap style =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotHeatmap = "
+let private plotHeatmap = baseplotHeatmap + "
 $data0 << EOD
 {0}
 EOD
@@ -259,8 +241,6 @@ EOD
 stats $data0 using 1:2 matrix nooutput prefix 'data0'
 densityX = data0_size_x - 1
 densityY = data0_size_y - 1
-
-set border linewidth 1.2
 
 set xlabel 'Coin Bias (+1)'
 set xrange [0:1]
@@ -300,7 +280,7 @@ let renderHeatmap path heatmap plateau =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotHeatmapTraces = "
+let private plotHeatmapTraces = baseplotHeatmap + "
 $data0 << EOD
 {0}
 EOD
@@ -326,8 +306,6 @@ tag = '{5}'
 stats $data0 using 1:2 matrix nooutput prefix 'data0'
 densityX = data0_size_x - 1
 densityY = data0_size_y - 1
-
-set border linewidth 1.2
 
 set xlabel 'Coin Bias (+1)'
 set xrange [0:1]
@@ -382,7 +360,7 @@ let renderHeatmapTraces path heatmap plateau trace samples tag =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotHeatmapScores = "
+let private plotHeatmapScores = baseplotHeatmap + "
 $data0 << EOD
 {0}
 EOD
@@ -403,8 +381,6 @@ densityY = data0_size_y - 1
 
 stats $data1 using 1:2 nooutput prefix 'data1'
 n = data1_records - 1
-
-set border linewidth 1.2
 
 set xlabel 'Coin Bias (+1)'
 set xrange [0:1]
@@ -457,7 +433,7 @@ let renderHeatmapScores path heatmap scores (p1, p2, score) style =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotScores = "
+let private plotScores = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
@@ -467,11 +443,6 @@ $data1 << EOD
 EOD
 
 lower = {2}; upper = {3}; p1 = {4}; tag = '{5}'
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Coin Bias (+1)'
 set xrange [lower:upper]

@@ -43,17 +43,12 @@ let private downsample samples items =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotPmfunc = "
+let private plotPmfunc = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 n = {1}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Possible Outcome'
 set xrange [-n-2:+n+2]
@@ -88,7 +83,7 @@ let renderPmfunc path pmfunc =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotHeatmapTraces = "
+let private plotHeatmapTraces = baseplotHeatmap + "
 $data0 << EOD
 {0}
 EOD
@@ -114,8 +109,6 @@ tag = '{5}'
 stats $data0 using 1:2 matrix nooutput prefix 'data0'
 densityX = data0_size_x - 1
 densityY = data0_size_y - 1
-
-set border linewidth 1.2
 
 set xlabel 'Coin Bias (+1)'
 set xrange [0:1]

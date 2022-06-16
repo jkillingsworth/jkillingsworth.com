@@ -4,7 +4,7 @@ open Common.Chart
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotLikelihood = "
+let private plotLikelihood = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
@@ -17,11 +17,6 @@ lower = {2}; upper = {3}; n = {4}
 
 stats $data1 using 1:2 nooutput prefix 'data1'
 ymax = data1_max_y
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Location (μ)'
 
@@ -68,17 +63,12 @@ let renderLikelihood path (lower, upper) items =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotDistributions = "
+let private plotDistributions = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 style = {1}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'x'
 set xtics 1

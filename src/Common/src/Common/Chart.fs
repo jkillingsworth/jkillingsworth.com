@@ -12,6 +12,9 @@ set terminal svg size 720 405 font 'Consolas, Menlo, monospace'
 set encoding utf8
 set output '{0}'
 
+set style line 1 linewidth 1 linecolor '#e6e6e6'
+set style line 2 linewidth 2 linecolor '#e6e6e6'
+
 set xtics scale 0, 0.0001
 set ytics scale 0, 0.0001
 "
@@ -40,3 +43,21 @@ let render path template args =
     Console.ForegroundColor <- ConsoleColor.Red
     Console.Error.Write(stderr)
     Console.ResetColor()
+
+//-------------------------------------------------------------------------------------------------
+
+let baseplotRegular = "
+set border linewidth 1.2
+set grid linestyle 1
+set grid xtics mxtics
+set grid ytics mytics
+"
+
+let baseplotHeatmap = "
+set border linewidth 1.2
+"
+
+let baseplotSurface = "
+set border linewidth 1.0
+set grid
+"

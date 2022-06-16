@@ -5,17 +5,12 @@ open Common.Chart
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotDistribution = "
+let private plotDistribution = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 style = {1}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 if (style == 1) {{
     set xlabel 'Possible Outcome'

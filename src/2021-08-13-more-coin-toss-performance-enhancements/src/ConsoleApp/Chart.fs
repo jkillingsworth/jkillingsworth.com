@@ -4,17 +4,12 @@ open Common.Chart
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotPmfunc = "
+let private plotPmfunc = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 n = {1}; upper = {2}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Possible Outcome'
 set xrange [-n-2:+n+2]
@@ -53,7 +48,7 @@ let renderPmfunc path pmfunc upper =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotBiases = "
+let private plotBiases = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
@@ -63,11 +58,6 @@ $data1 << EOD
 EOD
 
 n = {2}; style = {3}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'State'
 set xrange [-n:+n]
@@ -168,17 +158,12 @@ let renderBiases path biases points style =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotFlopCounts = "
+let private plotFlopCounts = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 n = {1}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Coin Tosses (n)'
 set xtics 10

@@ -4,17 +4,12 @@ open Common.Chart
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotPrice = "
+let private plotPrice = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
 
 lower = {1}; upper = {2}; step = {3}; ticker = '{4}'; style = {5}
-
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
 
 set xlabel 'Time (Days)'
 if (style == 1) {{ set xrange [0:2000] }}

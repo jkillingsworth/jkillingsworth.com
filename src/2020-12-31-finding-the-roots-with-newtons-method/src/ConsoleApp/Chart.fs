@@ -24,7 +24,7 @@ let private matrix (items : float[,]) =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotHeatmapTraces = "
+let private plotHeatmapTraces = baseplotHeatmap + "
 $data0 << EOD
 {0}
 EOD
@@ -50,8 +50,6 @@ tag = '{5}'
 stats $data0 using 1:2 matrix nooutput prefix 'data0'
 densityX = data0_size_x - 1
 densityY = data0_size_y - 1
-
-set border linewidth 1.2
 
 set xlabel 'Coin Bias (+1)'
 set xrange [0:1]

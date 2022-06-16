@@ -4,7 +4,7 @@ open Common.Chart
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotTimeXs = "
+let private plotTimeXs = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
@@ -13,11 +13,7 @@ $data1 << EOD
 {1}
 EOD
 
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
-set xzeroaxis linestyle 1 linewidth 2 linecolor '#e6e6e6'
+set xzeroaxis linestyle 2
 
 set xlabel 'Time (Seconds)'
 set xrange [-0.01:+1]
@@ -58,7 +54,7 @@ let renderTimeXs path unitXs timeXs =
 
 //-------------------------------------------------------------------------------------------------
 
-let private plotFreqYs = "
+let private plotFreqYs = baseplotRegular + "
 $data0 << EOD
 {0}
 EOD
@@ -69,11 +65,7 @@ EOD
 
 n = {2}; style = '{3}'
 
-set border linewidth 1.2
-set grid linestyle 1 linecolor '#e6e6e6'
-set grid xtics mxtics
-set grid ytics mytics
-set xzeroaxis linestyle 1 linewidth 2 linecolor '#e6e6e6'
+set xzeroaxis linestyle 2
 
 set xlabel 'Frequency (Hz)'
 set xrange [-(0.01*n):+n]
