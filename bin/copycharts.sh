@@ -511,3 +511,18 @@ copychart ${post} fig-62 example-6-ws.svg
 copychart ${post} fig-63 example-6-gs.svg
 copychart ${post} fig-68 limitations-1.svg
 copychart ${post} fig-73 limitations-2.svg
+
+#--------------------------------------------------------------------------------------------------
+
+post="2022-06-26-convolutions-and-first-differences"
+
+copychart ${post} fig-02 example-1-series-xs.svg
+copychart ${post} fig-07 example-1-series-ys.svg
+copychart ${post} fig-11 example-2-pmfunc-fs.svg
+copychart ${post} fig-14 example-2-pmfunc-gs.svg
+copychart ${post} fig-16 example-3-pdfunc-fs.svg
+copychart ${post} fig-18 example-3-pdfunc-gs.svg
+copychart ${post} fig-21 example-4-pdfunc-fs.svg
+copychart ${post} fig-22 example-4-pdfunc-gs.svg
+copychart ${post} fig-24 example-5-pdfunc-gs.svg
+copychart ${post} fig-31 example-5-pdfunc-fs.svg
