@@ -13,8 +13,10 @@ html
 
 $rgbback: white;
 $rgbfore: black;
-$rgblink: blue;
-$rgbmark: yellow;
+$rgblink: #0050ff;
+$rgbmark: #ffff60;
+$rgbmore: #e8f0ff;
+
 $shade50: mix($rgbback, $rgbfore, 50);
 $shade80: mix($rgbback, $rgbfore, 80);
 $shade90: mix($rgbback, $rgbfore, 90);
@@ -400,6 +402,11 @@ svg
     header > h2
     {
         font-size: 18pt;
+    }
+
+    a.readmore
+    {
+        background: $rgbmore;
     }
 
     a.readmore::after
