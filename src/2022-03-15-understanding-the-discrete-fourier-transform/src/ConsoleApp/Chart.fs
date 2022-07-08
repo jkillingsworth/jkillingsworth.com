@@ -135,7 +135,7 @@ plot $data0 using 1:2 with lines notitle,\
      $data1 using 1:2 with points notitle
 "
 
-let renderFreqYs path unitYs freqYs mapping (style : string) =
+let renderFreqYs path unitYs freqYs mapping style =
 
     let n = freqYs |> Array.length
 
