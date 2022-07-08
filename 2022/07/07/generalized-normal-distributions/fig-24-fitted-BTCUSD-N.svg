@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"  standalone="no"?>
+<svg 
+ width="720" height="405"
+ viewBox="0 0 720 405"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+
+<title>Gnuplot</title>
+<desc>Produced by GNUPLOT 5.4 patchlevel 2 </desc>
+
+<g id="gnuplot_canvas">
+
+<rect x="0" y="0" width="720" height="405" fill="none"/>
+<defs>
+
+	<circle id='gpDot' r='0.5' stroke-width='0.5' stroke='currentColor'/>
+	<path id='gpPt0' stroke-width='0.222' stroke='currentColor' d='M-1,0 h2 M0,-1 v2'/>
+	<path id='gpPt1' stroke-width='0.222' stroke='currentColor' d='M-1,-1 L1,1 M1,-1 L-1,1'/>
+	<path id='gpPt2' stroke-width='0.222' stroke='currentColor' d='M-1,0 L1,0 M0,-1 L0,1 M-1,-1 L1,1 M-1,1 L1,-1'/>
+	<rect id='gpPt3' stroke-width='0.222' stroke='currentColor' x='-1' y='-1' width='2' height='2'/>
+	<rect id='gpPt4' stroke-width='0.222' stroke='currentColor' fill='currentColor' x='-1' y='-1' width='2' height='2'/>
+	<circle id='gpPt5' stroke-width='0.222' stroke='currentColor' cx='0' cy='0' r='1'/>
+	<use xlink:href='#gpPt5' id='gpPt6' fill='currentColor' stroke='none'/>
+	<path id='gpPt7' stroke-width='0.222' stroke='currentColor' d='M0,-1.33 L-1.33,0.67 L1.33,0.67 z'/>
+	<use xlink:href='#gpPt7' id='gpPt8' fill='currentColor' stroke='none'/>
+	<use xlink:href='#gpPt7' id='gpPt9' stroke='currentColor' transform='rotate(180)'/>
+	<use xlink:href='#gpPt9' id='gpPt10' fill='currentColor' stroke='none'/>
+	<use xlink:href='#gpPt3' id='gpPt11' stroke='currentColor' transform='rotate(45)'/>
+	<use xlink:href='#gpPt11' id='gpPt12' fill='currentColor' stroke='none'/>
+	<path id='gpPt13' stroke-width='0.222' stroke='currentColor' d='M0,1.330 L1.265,0.411 L0.782,-1.067 L-0.782,-1.076 L-1.265,0.411 z'/>
+	<use xlink:href='#gpPt13' id='gpPt14' fill='currentColor' stroke='none'/>
+	<filter id='textbox' filterUnits='objectBoundingBox' x='0' y='0' height='1' width='1'>
+	  <feFlood flood-color='white' flood-opacity='1' result='bgnd'/>
+	  <feComposite in='SourceGraphic' in2='bgnd' operator='atop'/>
+	</filter>
+	<filter id='greybox' filterUnits='objectBoundingBox' x='0' y='0' height='1' width='1'>
+	  <feFlood flood-color='lightgrey' flood-opacity='1' result='grey'/>
+	  <feComposite in='SourceGraphic' in2='grey' operator='atop'/>
+	</filter>
+</defs>
+<g fill="none" color="white" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="white" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.92,347.40 L694.82,347.40  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.92,347.40 M694.82,347.40  '/>	<g transform="translate(72.53,351.30)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
+		<text xml:space="preserve"><tspan font-family="Consolas, Menlo, monospace"  xml:space="preserve">  0.0</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.92,306.23 L694.82,306.23  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.92,306.23 M694.82,306.23  '/>	<g transform="translate(72.53,310.13)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
+		<text xml:space="preserve"><tspan font-family="Consolas, Menlo, monospace"  xml:space="preserve">  3.5</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.92,265.05 L694.82,265.05  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.92,265.05 M694.82,265.05  '/>	<g transform="translate(72.53,268.95)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
+		<text xml:space="preserve"><tspan font-family="Consolas, Menlo, monospace"  xml:space="preserve">  7.0</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.92,223.88 L694.82,223.88  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.92,223.88 M694.82,223.88  '/>	<g transform="translate(72.53,227.78)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 10.5</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.92,182.70 L694.82,182.70  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.92,182.70 M694.82,182.70  '/>	<g transform="translate(72.53,186.60)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 14.0</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.92,141.53 L694.82,141.53  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.92,141.53 M694.82,141.53  '/>	<g transform="translate(72.53,145.43)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 17.5</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.92,100.36 L694.82,100.36  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.92,100.36 M694.82,100.36  '/>	<g transform="translate(72.53,104.26)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 21.0</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.92,59.18 L89.31,59.18 M198.99,59.18 L694.82,59.18  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.92,59.18 M694.82,59.18  '/>	<g transform="translate(72.53,63.08)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 24.5</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.92,18.01 L694.82,18.01  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.92,18.01 M694.82,18.01  '/>	<g transform="translate(72.53,21.91)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 28.0</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M80.92,347.40 L80.92,18.01  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.92,347.40 M80.92,18.01  '/>	<g transform="translate(80.92,369.30)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >-4σ</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M157.66,347.40 L157.66,63.01 M157.66,27.01 L157.66,18.01  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M157.66,347.40 M157.66,18.01  '/>	<g transform="translate(157.66,369.30)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >-3σ</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M234.40,347.40 L234.40,18.01  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M234.40,347.40 M234.40,18.01  '/>	<g transform="translate(234.40,369.30)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >-2σ</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M311.13,347.40 L311.13,18.01  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M311.13,347.40 M311.13,18.01  '/>	<g transform="translate(311.13,369.30)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >-1σ</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M387.87,347.40 L387.87,18.01  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M387.87,347.40 M387.87,18.01  '/>	<g transform="translate(387.87,369.30)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" > 0</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M464.61,347.40 L464.61,18.01  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M464.61,347.40 M464.61,18.01  '/>	<g transform="translate(464.61,369.30)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >+1σ</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M541.34,347.40 L541.34,18.01  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M541.34,347.40 M541.34,18.01  '/>	<g transform="translate(541.34,369.30)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >+2σ</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M618.08,347.40 L618.08,18.01  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M618.08,347.40 M618.08,18.01  '/>	<g transform="translate(618.08,369.30)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >+3σ</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(230, 230, 230)' class="gridline"  d='M694.82,347.40 L694.82,18.01  '/></g>
+<g fill="none" color="black" stroke="rgb(230, 230, 230)" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M694.82,347.40 M694.82,18.01  '/>	<g transform="translate(694.82,369.30)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >+4σ</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.92,18.01 L80.92,347.40 L694.82,347.40 L694.82,18.01 L80.92,18.01 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<g transform="translate(19.18,182.71) rotate(270)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >Density</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<g transform="translate(387.87,396.30)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Consolas, Menlo, monospace" >Price Differences (Log Values), σ = 4.837e-002</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(128, 128, 128)'  d='M89.31,63.01 L89.31,27.01 L198.99,27.01 L198.99,63.01 L89.31,63.01 Z  '/></g>
+	<g id="gnuplot_plot_1" ><title>Histogram</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '99.15,347.40 105.24,347.40 105.24,342.72 99.15,342.72 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M99.15,347.40 L99.15,342.73 L105.23,342.73 L105.23,347.40 L99.15,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '105.23,347.40 111.32,347.40 111.32,345.83 105.23,345.83 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M105.23,347.40 L105.23,345.84 L111.31,345.84 L111.31,347.40 L105.23,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '111.31,347.40 117.40,347.40 117.40,345.83 111.31,345.83 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M111.31,347.40 L111.31,345.84 L117.39,345.84 L117.39,347.40 L111.31,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '117.39,347.40 123.48,347.40 123.48,345.05 117.39,345.05 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M117.39,347.40 L117.39,345.06 L123.47,345.06 L123.47,347.40 L117.39,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '123.47,347.40 129.56,347.40 129.56,346.61 123.47,346.61 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M123.47,347.40 L123.47,346.62 L129.55,346.62 L129.55,347.40 L123.47,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '129.55,347.40 135.63,347.40 135.63,345.83 129.55,345.83 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M129.55,347.40 L129.55,345.84 L135.62,345.84 L135.62,347.40 L129.55,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '135.62,347.40 141.71,347.40 141.71,345.05 135.62,345.05 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M135.62,347.40 L135.62,345.06 L141.70,345.06 L141.70,347.40 L135.62,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '147.78,347.40 153.87,347.40 153.87,346.61 147.78,346.61 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M147.78,347.40 L147.78,346.62 L153.86,346.62 L153.86,347.40 L147.78,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '153.86,347.40 159.95,347.40 159.95,346.61 153.86,346.61 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M153.86,347.40 L153.86,346.62 L159.94,346.62 L159.94,347.40 L153.86,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '159.94,347.40 166.03,347.40 166.03,345.83 159.94,345.83 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M159.94,347.40 L159.94,345.84 L166.02,345.84 L166.02,347.40 L159.94,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '166.02,347.40 172.10,347.40 172.10,345.05 166.02,345.05 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M166.02,347.40 L166.02,345.06 L172.09,345.06 L172.09,347.40 L166.02,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '172.09,347.40 178.18,347.40 178.18,345.83 172.09,345.83 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M172.09,347.40 L172.09,345.84 L178.17,345.84 L178.17,347.40 L172.09,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '178.17,347.40 184.26,347.40 184.26,345.05 178.17,345.05 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M178.17,347.40 L178.17,345.06 L184.25,345.06 L184.25,347.40 L178.17,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '184.25,347.40 190.34,347.40 190.34,345.83 184.25,345.83 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M184.25,347.40 L184.25,345.84 L190.33,345.84 L190.33,347.40 L184.25,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '190.33,347.40 196.42,347.40 196.42,346.61 190.33,346.61 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M190.33,347.40 L190.33,346.62 L196.41,346.62 L196.41,347.40 L190.33,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '196.41,347.40 202.49,347.40 202.49,341.94 196.41,341.94 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M196.41,347.40 L196.41,341.95 L202.48,341.95 L202.48,347.40 L196.41,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '202.48,347.40 208.57,347.40 208.57,342.72 202.48,342.72 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M202.48,347.40 L202.48,342.73 L208.56,342.73 L208.56,347.40 L202.48,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '208.56,347.40 214.65,347.40 214.65,341.94 208.56,341.94 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M208.56,347.40 L208.56,341.95 L214.64,341.95 L214.64,347.40 L208.56,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '214.64,347.40 220.73,347.40 220.73,342.72 214.64,342.72 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M214.64,347.40 L214.64,342.73 L220.72,342.73 L220.72,347.40 L214.64,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '220.72,347.40 226.81,347.40 226.81,341.16 220.72,341.16 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M220.72,347.40 L220.72,341.17 L226.80,341.17 L226.80,347.40 L220.72,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '226.80,347.40 232.89,347.40 232.89,339.60 226.80,339.60 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M226.80,347.40 L226.80,339.61 L232.88,339.61 L232.88,347.40 L226.80,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '232.88,347.40 238.96,347.40 238.96,343.50 232.88,343.50 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M232.88,347.40 L232.88,343.51 L238.95,343.51 L238.95,347.40 L232.88,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '238.95,347.40 245.04,347.40 245.04,343.50 238.95,343.50 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M238.95,347.40 L238.95,343.51 L245.03,343.51 L245.03,347.40 L238.95,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '245.03,347.40 251.12,347.40 251.12,338.04 245.03,338.04 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M245.03,347.40 L245.03,338.05 L251.11,338.05 L251.11,347.40 L245.03,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '251.11,347.40 257.20,347.40 257.20,339.60 251.11,339.60 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M251.11,347.40 L251.11,339.61 L257.19,339.61 L257.19,347.40 L251.11,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '257.19,347.40 263.28,347.40 263.28,337.26 257.19,337.26 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M257.19,347.40 L257.19,337.27 L263.27,337.27 L263.27,347.40 L257.19,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '263.27,347.40 269.35,347.40 269.35,337.26 263.27,337.26 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M263.27,347.40 L263.27,337.27 L269.34,337.27 L269.34,347.40 L263.27,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '269.34,347.40 275.43,347.40 275.43,332.59 269.34,332.59 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M269.34,347.40 L269.34,332.60 L275.42,332.60 L275.42,347.40 L269.34,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '275.42,347.40 281.51,347.40 281.51,332.59 275.42,332.59 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M275.42,347.40 L275.42,332.60 L281.50,332.60 L281.50,347.40 L275.42,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '281.50,347.40 287.59,347.40 287.59,326.36 281.50,326.36 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M281.50,347.40 L281.50,326.37 L287.58,326.37 L287.58,347.40 L281.50,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '287.58,347.40 293.67,347.40 293.67,323.25 287.58,323.25 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M287.58,347.40 L287.58,323.26 L293.66,323.26 L293.66,347.40 L287.58,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '293.66,347.40 299.75,347.40 299.75,322.47 293.66,322.47 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M293.66,347.40 L293.66,322.48 L299.74,322.48 L299.74,347.40 L293.66,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '299.74,347.40 305.82,347.40 305.82,331.03 299.74,331.03 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M299.74,347.40 L299.74,331.04 L305.81,331.04 L305.81,347.40 L299.74,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '305.81,347.40 311.90,347.40 311.90,326.36 305.81,326.36 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M305.81,347.40 L305.81,326.37 L311.89,326.37 L311.89,347.40 L305.81,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '311.89,347.40 317.98,347.40 317.98,319.35 311.89,319.35 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M311.89,347.40 L311.89,319.36 L317.97,319.36 L317.97,347.40 L311.89,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '317.97,347.40 324.06,347.40 324.06,322.47 317.97,322.47 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M317.97,347.40 L317.97,322.48 L324.05,322.48 L324.05,347.40 L317.97,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '324.05,347.40 330.14,347.40 330.14,304.55 324.05,304.55 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M324.05,347.40 L324.05,304.56 L330.13,304.56 L330.13,347.40 L324.05,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '330.13,347.40 336.22,347.40 336.22,300.66 330.13,300.66 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M330.13,347.40 L330.13,300.67 L336.21,300.67 L336.21,347.40 L330.13,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '336.21,347.40 342.29,347.40 342.29,299.10 336.21,299.10 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M336.21,347.40 L336.21,299.11 L342.28,299.11 L342.28,347.40 L336.21,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '342.28,347.40 348.37,347.40 348.37,285.08 342.28,285.08 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M342.28,347.40 L342.28,285.09 L348.36,285.09 L348.36,347.40 L342.28,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '348.36,347.40 354.45,347.40 354.45,271.06 348.36,271.06 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M348.36,347.40 L348.36,271.07 L354.44,271.07 L354.44,347.40 L348.36,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '354.44,347.40 360.53,347.40 360.53,255.48 354.44,255.48 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M354.44,347.40 L354.44,255.49 L360.52,255.49 L360.52,347.40 L354.44,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '360.52,347.40 366.61,347.40 366.61,242.24 360.52,242.24 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M360.52,347.40 L360.52,242.25 L366.60,242.25 L366.60,347.40 L360.52,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '366.60,347.40 372.68,347.40 372.68,231.34 366.60,231.34 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M366.60,347.40 L366.60,231.35 L372.67,231.35 L372.67,347.40 L366.60,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '372.67,347.40 378.76,347.40 378.76,152.67 372.67,152.67 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M372.67,347.40 L372.67,152.68 L378.75,152.68 L378.75,347.40 L372.67,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '378.75,347.40 384.84,347.40 384.84,140.99 378.75,140.99 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M378.75,347.40 L378.75,141.00 L384.83,141.00 L384.83,347.40 L378.75,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '384.83,347.40 390.92,347.40 390.92,112.95 384.83,112.95 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M384.83,347.40 L384.83,112.96 L390.91,112.96 L390.91,347.40 L384.83,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '390.91,347.40 397.00,347.40 397.00,120.74 390.91,120.74 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M390.91,347.40 L390.91,120.75 L396.99,120.75 L396.99,347.40 L390.91,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '396.99,347.40 403.08,347.40 403.08,158.13 396.99,158.13 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M396.99,347.40 L396.99,158.14 L403.07,158.14 L403.07,347.40 L396.99,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '403.07,347.40 409.15,347.40 409.15,190.84 403.07,190.84 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M403.07,347.40 L403.07,190.85 L409.14,190.85 L409.14,347.40 L403.07,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '409.14,347.40 415.23,347.40 415.23,216.54 409.14,216.54 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M409.14,347.40 L409.14,216.55 L415.22,216.55 L415.22,347.40 L409.14,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '415.22,347.40 421.31,347.40 421.31,244.58 415.22,244.58 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M415.22,347.40 L415.22,244.59 L421.30,244.59 L421.30,347.40 L415.22,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '421.30,347.40 427.39,347.40 427.39,255.48 421.30,255.48 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M421.30,347.40 L421.30,255.49 L427.38,255.49 L427.38,347.40 L421.30,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '427.38,347.40 433.47,347.40 433.47,274.96 427.38,274.96 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M427.38,347.40 L427.38,274.97 L433.46,274.97 L433.46,347.40 L427.38,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '433.46,347.40 439.54,347.40 439.54,276.51 433.46,276.51 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M433.46,347.40 L433.46,276.52 L439.53,276.52 L439.53,347.40 L433.46,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '439.53,347.40 445.62,347.40 445.62,279.63 439.53,279.63 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M439.53,347.40 L439.53,279.64 L445.61,279.64 L445.61,347.40 L439.53,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '445.61,347.40 451.70,347.40 451.70,304.55 445.61,304.55 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M445.61,347.40 L445.61,304.56 L451.69,304.56 L451.69,347.40 L445.61,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '451.69,347.40 457.78,347.40 457.78,295.98 451.69,295.98 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M451.69,347.40 L451.69,295.99 L457.77,295.99 L457.77,347.40 L451.69,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '457.77,347.40 463.86,347.40 463.86,306.11 457.77,306.11 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M457.77,347.40 L457.77,306.12 L463.85,306.12 L463.85,347.40 L457.77,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '463.85,347.40 469.94,347.40 469.94,307.67 463.85,307.67 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M463.85,347.40 L463.85,307.68 L469.93,307.68 L469.93,347.40 L463.85,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '469.93,347.40 476.01,347.40 476.01,320.13 469.93,320.13 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M469.93,347.40 L469.93,320.14 L476.00,320.14 L476.00,347.40 L469.93,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '476.00,347.40 482.09,347.40 482.09,331.03 476.00,331.03 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M476.00,347.40 L476.00,331.04 L482.08,331.04 L482.08,347.40 L476.00,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '482.08,347.40 488.17,347.40 488.17,323.25 482.08,323.25 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M482.08,347.40 L482.08,323.26 L488.16,323.26 L488.16,347.40 L482.08,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '488.16,347.40 494.25,347.40 494.25,327.92 488.16,327.92 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M488.16,347.40 L488.16,327.93 L494.24,327.93 L494.24,347.40 L488.16,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '494.24,347.40 500.33,347.40 500.33,333.37 494.24,333.37 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M494.24,347.40 L494.24,333.38 L500.32,333.38 L500.32,347.40 L494.24,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '500.32,347.40 506.41,347.40 506.41,334.15 500.32,334.15 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M500.32,347.40 L500.32,334.16 L506.40,334.16 L506.40,347.40 L500.32,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '506.40,347.40 512.48,347.40 512.48,334.93 506.40,334.93 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M506.40,347.40 L506.40,334.94 L512.47,334.94 L512.47,347.40 L506.40,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '512.47,347.40 518.56,347.40 518.56,337.26 512.47,337.26 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M512.47,347.40 L512.47,337.27 L518.55,337.27 L518.55,347.40 L512.47,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '518.55,347.40 524.64,347.40 524.64,336.49 518.55,336.49 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M518.55,347.40 L518.55,336.50 L524.63,336.50 L524.63,347.40 L518.55,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '524.63,347.40 530.72,347.40 530.72,341.16 524.63,341.16 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M524.63,347.40 L524.63,341.17 L530.71,341.17 L530.71,347.40 L524.63,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '530.71,347.40 536.80,347.40 536.80,337.26 530.71,337.26 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M530.71,347.40 L530.71,337.27 L536.79,337.27 L536.79,347.40 L530.71,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '536.79,347.40 542.87,347.40 542.87,336.49 536.79,336.49 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M536.79,347.40 L536.79,336.50 L542.86,336.50 L542.86,347.40 L536.79,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '542.86,347.40 548.95,347.40 548.95,338.82 542.86,338.82 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M542.86,347.40 L542.86,338.83 L548.94,338.83 L548.94,347.40 L542.86,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '548.94,347.40 555.03,347.40 555.03,341.16 548.94,341.16 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M548.94,347.40 L548.94,341.17 L555.02,341.17 L555.02,347.40 L548.94,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '555.02,347.40 561.11,347.40 561.11,343.50 555.02,343.50 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M555.02,347.40 L555.02,343.51 L561.10,343.51 L561.10,347.40 L555.02,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '561.10,347.40 567.19,347.40 567.19,338.82 561.10,338.82 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M561.10,347.40 L561.10,338.83 L567.18,338.83 L567.18,347.40 L561.10,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '567.18,347.40 573.27,347.40 573.27,343.50 567.18,343.50 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M567.18,347.40 L567.18,343.51 L573.26,343.51 L573.26,347.40 L567.18,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '573.26,347.40 579.34,347.40 579.34,344.27 573.26,344.27 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M573.26,347.40 L573.26,344.28 L579.33,344.28 L579.33,347.40 L573.26,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '579.33,347.40 585.42,347.40 585.42,346.61 579.33,346.61 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M579.33,347.40 L579.33,346.62 L585.41,346.62 L585.41,347.40 L579.33,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '585.41,347.40 591.50,347.40 591.50,341.16 585.41,341.16 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M585.41,347.40 L585.41,341.17 L591.49,341.17 L591.49,347.40 L585.41,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '597.57,347.40 603.66,347.40 603.66,343.50 597.57,343.50 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M597.57,347.40 L597.57,343.51 L603.65,343.51 L603.65,347.40 L597.57,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '603.65,347.40 609.73,347.40 609.73,344.27 603.65,344.27 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M603.65,347.40 L603.65,344.28 L609.72,344.28 L609.72,347.40 L603.65,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '609.72,347.40 615.81,347.40 615.81,345.05 609.72,345.05 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M609.72,347.40 L609.72,345.06 L615.80,345.06 L615.80,347.40 L609.72,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '615.80,347.40 621.89,347.40 621.89,345.05 615.80,345.05 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M615.80,347.40 L615.80,345.06 L621.88,345.06 L621.88,347.40 L615.80,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '621.88,347.40 627.97,347.40 627.97,345.05 621.88,345.05 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M621.88,347.40 L621.88,345.06 L627.96,345.06 L627.96,347.40 L621.88,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '627.96,347.40 634.05,347.40 634.05,345.05 627.96,345.05 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M627.96,347.40 L627.96,345.06 L634.04,345.06 L634.04,347.40 L627.96,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '634.04,347.40 640.13,347.40 640.13,346.61 634.04,346.61 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M634.04,347.40 L634.04,346.62 L640.12,346.62 L640.12,347.40 L634.04,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '640.12,347.40 646.20,347.40 646.20,345.83 640.12,345.83 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M640.12,347.40 L640.12,345.84 L646.19,345.84 L646.19,347.40 L640.12,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '646.19,347.40 652.28,347.40 652.28,345.83 646.19,345.83 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M646.19,347.40 L646.19,345.84 L652.27,345.84 L652.27,347.40 L646.19,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '652.27,347.40 658.36,347.40 658.36,345.83 652.27,345.83 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M652.27,347.40 L652.27,345.84 L658.35,345.84 L658.35,347.40 L652.27,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '664.43,347.40 670.52,347.40 670.52,346.61 664.43,346.61 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M664.43,347.40 L664.43,346.62 L670.51,346.62 L670.51,347.40 L664.43,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '670.51,347.40 676.60,347.40 676.60,346.61 670.51,346.61 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M670.51,347.40 L670.51,346.62 L676.59,346.62 L676.59,347.40 L670.51,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '676.59,347.40 682.67,347.40 682.67,345.83 676.59,345.83 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M676.59,347.40 L676.59,345.84 L682.66,345.84 L682.66,347.40 L676.59,347.40 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+	</g>
+	<g id="gnuplot_plot_2" ><title>PDF (N)</title>
+<g fill="none" color="white" stroke="rgb(240, 240, 240)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(255,  64,  64)'  d='M80.92,347.37 L81.53,347.37 L82.15,347.37 L82.76,347.37 L83.38,347.37 L83.99,347.37 L84.60,347.37 L85.22,347.37
+		L85.83,347.36 L86.45,347.36 L87.06,347.36 L87.67,347.36 L88.29,347.36 L88.90,347.36 L89.51,347.36 L90.13,347.36
+		L90.74,347.35 L91.36,347.35 L91.97,347.35 L92.58,347.35 L93.20,347.35 L93.81,347.35 L94.43,347.34 L95.04,347.34
+		L95.65,347.34 L96.27,347.34 L96.88,347.34 L97.50,347.34 L98.11,347.33 L98.72,347.33 L99.34,347.33 L99.95,347.33
+		L100.56,347.32 L101.18,347.32 L101.79,347.32 L102.41,347.32 L103.02,347.31 L103.63,347.31 L104.25,347.31 L104.86,347.31
+		L105.48,347.30 L106.09,347.30 L106.70,347.30 L107.32,347.30 L107.93,347.29 L108.55,347.29 L109.16,347.29 L109.77,347.28
+		L110.39,347.28 L111.00,347.27 L111.62,347.27 L112.23,347.27 L112.84,347.26 L113.46,347.26 L114.07,347.26 L114.68,347.25
+		L115.30,347.25 L115.91,347.24 L116.53,347.24 L117.14,347.23 L117.75,347.23 L118.37,347.22 L118.98,347.22 L119.60,347.21
+		L120.21,347.21 L120.82,347.20 L121.44,347.20 L122.05,347.19 L122.67,347.18 L123.28,347.18 L123.89,347.17 L124.51,347.17
+		L125.12,347.16 L125.73,347.15 L126.35,347.15 L126.96,347.14 L127.58,347.13 L128.19,347.12 L128.80,347.12 L129.42,347.11
+		L130.03,347.10 L130.65,347.09 L131.26,347.08 L131.87,347.07 L132.49,347.07 L133.10,347.06 L133.72,347.05 L134.33,347.04
+		L134.94,347.03 L135.56,347.02 L136.17,347.01 L136.78,347.00 L137.40,346.99 L138.01,346.98 L138.63,346.96 L139.24,346.95
+		L139.85,346.94 L140.47,346.93 L141.08,346.92 L141.70,346.90 L142.31,346.89 L142.92,346.88 L143.54,346.86 L144.15,346.85
+		L144.77,346.83 L145.38,346.82 L145.99,346.80 L146.61,346.79 L147.22,346.77 L147.84,346.76 L148.45,346.74 L149.06,346.72
+		L149.68,346.71 L150.29,346.69 L150.90,346.67 L151.52,346.65 L152.13,346.63 L152.75,346.61 L153.36,346.60 L153.97,346.58
+		L154.59,346.55 L155.20,346.53 L155.82,346.51 L156.43,346.49 L157.04,346.47 L157.66,346.44 L158.27,346.42 L158.89,346.40
+		L159.50,346.37 L160.11,346.35 L160.73,346.32 L161.34,346.30 L161.95,346.27 L162.57,346.24 L163.18,346.21 L163.80,346.19
+		L164.41,346.16 L165.02,346.13 L165.64,346.10 L166.25,346.07 L166.87,346.03 L167.48,346.00 L168.09,345.97 L168.71,345.93
+		L169.32,345.90 L169.94,345.87 L170.55,345.83 L171.16,345.79 L171.78,345.76 L172.39,345.72 L173.01,345.68 L173.62,345.64
+		L174.23,345.60 L174.85,345.56 L175.46,345.52 L176.07,345.47 L176.69,345.43 L177.30,345.39 L177.92,345.34 L178.53,345.29
+		L179.14,345.25 L179.76,345.20 L180.37,345.15 L180.99,345.10 L181.60,345.05 L182.21,345.00 L182.83,344.95 L183.44,344.89
+		L184.06,344.84 L184.67,344.78 L185.28,344.72 L185.90,344.67 L186.51,344.61 L187.12,344.55 L187.74,344.49 L188.35,344.42
+		L188.97,344.36 L189.58,344.30 L190.19,344.23 L190.81,344.16 L191.42,344.10 L192.04,344.03 L192.65,343.96 L193.26,343.88
+		L193.88,343.81 L194.49,343.74 L195.11,343.66 L195.72,343.58 L196.33,343.50 L196.95,343.43 L197.56,343.34 L198.17,343.26
+		L198.79,343.18 L199.40,343.09 L200.02,343.01 L200.63,342.92 L201.24,342.83 L201.86,342.74 L202.47,342.64 L203.09,342.55
+		L203.70,342.45 L204.31,342.36 L204.93,342.26 L205.54,342.16 L206.16,342.06 L206.77,341.95 L207.38,341.85 L208.00,341.74
+		L208.61,341.63 L209.23,341.52 L209.84,341.41 L210.45,341.29 L211.07,341.18 L211.68,341.06 L212.29,340.94 L212.91,340.82
+		L213.52,340.70 L214.14,340.57 L214.75,340.44 L215.36,340.32 L215.98,340.19 L216.59,340.05 L217.21,339.92 L217.82,339.78
+		L218.43,339.64 L219.05,339.50 L219.66,339.36 L220.28,339.22 L220.89,339.07 L221.50,338.92 L222.12,338.77 L222.73,338.62
+		L223.34,338.46 L223.96,338.30 L224.57,338.14 L225.19,337.98 L225.80,337.82 L226.41,337.65 L227.03,337.48 L227.64,337.31
+		L228.26,337.14 L228.87,336.97 L229.48,336.79 L230.10,336.61 L230.71,336.43 L231.33,336.24 L231.94,336.06 L232.55,335.87
+		L233.17,335.68 L233.78,335.48 L234.40,335.28 L235.01,335.09 L235.62,334.88 L236.24,334.68 L236.85,334.47 L237.46,334.27
+		L238.08,334.05 L238.69,333.84 L239.31,333.62 L239.92,333.40 L240.53,333.18 L241.15,332.96 L241.76,332.73 L242.38,332.50
+		L242.99,332.27 L243.60,332.04 L244.22,331.80 L244.83,331.56 L245.45,331.32 L246.06,331.07 L246.67,330.82 L247.29,330.57
+		L247.90,330.32 L248.51,330.06 L249.13,329.80 L249.74,329.54 L250.36,329.28 L250.97,329.01 L251.58,328.74 L252.20,328.47
+		L252.81,328.19 L253.43,327.92 L254.04,327.64 L254.65,327.35 L255.27,327.07 L255.88,326.78 L256.50,326.48 L257.11,326.19
+		L257.72,325.89 L258.34,325.59 L258.95,325.29 L259.56,324.98 L260.18,324.68 L260.79,324.37 L261.41,324.05 L262.02,323.73
+		L262.63,323.42 L263.25,323.09 L263.86,322.77 L264.48,322.44 L265.09,322.11 L265.70,321.78 L266.32,321.44 L266.93,321.10
+		L267.55,320.76 L268.16,320.42 L268.77,320.07 L269.39,319.72 L270.00,319.37 L270.62,319.01 L271.23,318.66 L271.84,318.30
+		L272.46,317.93 L273.07,317.57 L273.68,317.20 L274.30,316.83 L274.91,316.46 L275.53,316.08 L276.14,315.70 L276.75,315.32
+		L277.37,314.94 L277.98,314.56 L278.60,314.17 L279.21,313.78 L279.82,313.38 L280.44,312.99 L281.05,312.59 L281.67,312.19
+		L282.28,311.79 L282.89,311.38 L283.51,310.98 L284.12,310.57 L284.73,310.16 L285.35,309.74 L285.96,309.33 L286.58,308.91
+		L287.19,308.49 L287.80,308.07 L288.42,307.65 L289.03,307.22 L289.65,306.79 L290.26,306.36 L290.87,305.93 L291.49,305.50
+		L292.10,305.06 L292.72,304.63 L293.33,304.19 L293.94,303.75 L294.56,303.30 L295.17,302.86 L295.79,302.41 L296.40,301.97
+		L297.01,301.52 L297.63,301.07 L298.24,300.62 L298.85,300.17 L299.47,299.71 L300.08,299.26 L300.70,298.80 L301.31,298.34
+		L301.92,297.88 L302.54,297.42 L303.15,296.96 L303.77,296.50 L304.38,296.04 L304.99,295.57 L305.61,295.11 L306.22,294.64
+		L306.84,294.18 L307.45,293.71 L308.06,293.24 L308.68,292.77 L309.29,292.31 L309.90,291.84 L310.52,291.37 L311.13,290.90
+		L311.75,290.43 L312.36,289.96 L312.97,289.49 L313.59,289.01 L314.20,288.54 L314.82,288.07 L315.43,287.60 L316.04,287.13
+		L316.66,286.66 L317.27,286.19 L317.89,285.72 L318.50,285.25 L319.11,284.78 L319.73,284.31 L320.34,283.85 L320.95,283.38
+		L321.57,282.91 L322.18,282.45 L322.80,281.98 L323.41,281.52 L324.02,281.05 L324.64,280.59 L325.25,280.13 L325.87,279.67
+		L326.48,279.21 L327.09,278.75 L327.71,278.30 L328.32,277.84 L328.94,277.39 L329.55,276.94 L330.16,276.49 L330.78,276.04
+		L331.39,275.59 L332.01,275.15 L332.62,274.71 L333.23,274.27 L333.85,273.83 L334.46,273.39 L335.07,272.96 L335.69,272.52
+		L336.30,272.09 L336.92,271.67 L337.53,271.24 L338.14,270.82 L338.76,270.40 L339.37,269.98 L339.99,269.57 L340.60,269.15
+		L341.21,268.74 L341.83,268.34 L342.44,267.94 L343.06,267.54 L343.67,267.14 L344.28,266.74 L344.90,266.35 L345.51,265.97
+		L346.12,265.58 L346.74,265.20 L347.35,264.83 L347.97,264.45 L348.58,264.08 L349.19,263.72 L349.81,263.35 L350.42,263.00
+		L351.04,262.64 L351.65,262.29 L352.26,261.94 L352.88,261.60 L353.49,261.26 L354.11,260.93 L354.72,260.60 L355.33,260.27
+		L355.95,259.95 L356.56,259.64 L357.18,259.32 L357.79,259.02 L358.40,258.71 L359.02,258.42 L359.63,258.12 L360.24,257.83
+		L360.86,257.55 L361.47,257.27 L362.09,257.00 L362.70,256.73 L363.31,256.46 L363.93,256.20 L364.54,255.95 L365.16,255.70
+		L365.77,255.46 L366.38,255.22 L367.00,254.98 L367.61,254.76 L368.23,254.53 L368.84,254.32 L369.45,254.11 L370.07,253.90
+		L370.68,253.70 L371.29,253.50 L371.91,253.31 L372.52,253.13 L373.14,252.95 L373.75,252.78 L374.36,252.61 L374.98,252.45
+		L375.59,252.30 L376.21,252.15 L376.82,252.01 L377.43,251.87 L378.05,251.74 L378.66,251.61 L379.28,251.49 L379.89,251.38
+		L380.50,251.27 L381.12,251.17 L381.73,251.07 L382.34,250.99 L382.96,250.90 L383.57,250.82 L384.19,250.75 L384.80,250.69
+		L385.41,250.63 L386.03,250.58 L386.64,250.53 L387.26,250.49 L387.87,250.46 L388.48,250.43 L389.10,250.41 L389.71,250.39
+		L390.33,250.38 L390.94,250.38 L391.55,250.38 L392.17,250.39 L392.78,250.41 L393.40,250.43 L394.01,250.46 L394.62,250.49
+		L395.24,250.53 L395.85,250.58 L396.46,250.63 L397.08,250.69 L397.69,250.76 L398.31,250.83 L398.92,250.91 L399.53,250.99
+		L400.15,251.08 L400.76,251.17 L401.38,251.28 L401.99,251.38 L402.60,251.50 L403.22,251.62 L403.83,251.74 L404.45,251.87
+		L405.06,252.01 L405.67,252.16 L406.29,252.31 L406.90,252.46 L407.51,252.62 L408.13,252.79 L408.74,252.96 L409.36,253.14
+		L409.97,253.32 L410.58,253.51 L411.20,253.71 L411.81,253.91 L412.43,254.12 L413.04,254.33 L413.65,254.54 L414.27,254.77
+		L414.88,254.99 L415.50,255.23 L416.11,255.47 L416.72,255.71 L417.34,255.96 L417.95,256.21 L418.57,256.47 L419.18,256.74
+		L419.79,257.01 L420.41,257.28 L421.02,257.56 L421.63,257.85 L422.25,258.14 L422.86,258.43 L423.48,258.73 L424.09,259.03
+		L424.70,259.34 L425.32,259.65 L425.93,259.97 L426.55,260.29 L427.16,260.62 L427.77,260.95 L428.39,261.28 L429.00,261.62
+		L429.62,261.96 L430.23,262.31 L430.84,262.66 L431.46,263.01 L432.07,263.37 L432.68,263.73 L433.30,264.10 L433.91,264.47
+		L434.53,264.84 L435.14,265.22 L435.75,265.60 L436.37,265.98 L436.98,266.37 L437.60,266.76 L438.21,267.16 L438.82,267.55
+		L439.44,267.95 L440.05,268.36 L440.67,268.76 L441.28,269.17 L441.89,269.58 L442.51,270.00 L443.12,270.42 L443.73,270.84
+		L444.35,271.26 L444.96,271.69 L445.58,272.11 L446.19,272.54 L446.80,272.98 L447.42,273.41 L448.03,273.85 L448.65,274.29
+		L449.26,274.73 L449.87,275.17 L450.49,275.61 L451.10,276.06 L451.72,276.51 L452.33,276.96 L452.94,277.41 L453.56,277.86
+		L454.17,278.32 L454.79,278.78 L455.40,279.23 L456.01,279.69 L456.63,280.15 L457.24,280.61 L457.85,281.08 L458.47,281.54
+		L459.08,282.00 L459.70,282.47 L460.31,282.93 L460.92,283.40 L461.54,283.87 L462.15,284.34 L462.77,284.80 L463.38,285.27
+		L463.99,285.74 L464.61,286.21 L465.22,286.68 L465.84,287.15 L466.45,287.62 L467.06,288.09 L467.68,288.57 L468.29,289.04
+		L468.90,289.51 L469.52,289.98 L470.13,290.45 L470.75,290.92 L471.36,291.39 L471.97,291.86 L472.59,292.33 L473.20,292.80
+		L473.82,293.26 L474.43,293.73 L475.04,294.20 L475.66,294.66 L476.27,295.13 L476.89,295.59 L477.50,296.06 L478.11,296.52
+		L478.73,296.98 L479.34,297.44 L479.96,297.90 L480.57,298.36 L481.18,298.82 L481.80,299.28 L482.41,299.73 L483.02,300.19
+		L483.64,300.64 L484.25,301.09 L484.87,301.54 L485.48,301.99 L486.09,302.44 L486.71,302.88 L487.32,303.32 L487.94,303.77
+		L488.55,304.21 L489.16,304.65 L489.78,305.08 L490.39,305.52 L491.01,305.95 L491.62,306.38 L492.23,306.81 L492.85,307.24
+		L493.46,307.67 L494.07,308.09 L494.69,308.51 L495.30,308.93 L495.92,309.35 L496.53,309.76 L497.14,310.18 L497.76,310.59
+		L498.37,311.00 L498.99,311.40 L499.60,311.81 L500.21,312.21 L500.83,312.61 L501.44,313.01 L502.06,313.40 L502.67,313.79
+		L503.28,314.19 L503.90,314.57 L504.51,314.96 L505.12,315.34 L505.74,315.72 L506.35,316.10 L506.97,316.48 L507.58,316.85
+		L508.19,317.22 L508.81,317.59 L509.42,317.95 L510.04,318.31 L510.65,318.67 L511.26,319.03 L511.88,319.39 L512.49,319.74
+		L513.11,320.09 L513.72,320.43 L514.33,320.78 L514.95,321.12 L515.56,321.46 L516.18,321.79 L516.79,322.13 L517.40,322.46
+		L518.02,322.78 L518.63,323.11 L519.24,323.43 L519.86,323.75 L520.47,324.07 L521.09,324.38 L521.70,324.69 L522.31,325.00
+		L522.93,325.30 L523.54,325.61 L524.16,325.91 L524.77,326.20 L525.38,326.50 L526.00,326.79 L526.61,327.08 L527.23,327.36
+		L527.84,327.65 L528.45,327.93 L529.07,328.21 L529.68,328.48 L530.29,328.75 L530.91,329.02 L531.52,329.29 L532.14,329.55
+		L532.75,329.82 L533.36,330.07 L533.98,330.33 L534.59,330.58 L535.21,330.83 L535.82,331.08 L536.43,331.33 L537.05,331.57
+		L537.66,331.81 L538.28,332.05 L538.89,332.28 L539.50,332.51 L540.12,332.74 L540.73,332.97 L541.34,333.19 L541.96,333.41
+		L542.57,333.63 L543.19,333.85 L543.80,334.06 L544.41,334.27 L545.03,334.48 L545.64,334.69 L546.26,334.89 L546.87,335.09
+		L547.48,335.29 L548.10,335.49 L548.71,335.68 L549.33,335.88 L549.94,336.06 L550.55,336.25 L551.17,336.44 L551.78,336.62
+		L552.40,336.80 L553.01,336.97 L553.62,337.15 L554.24,337.32 L554.85,337.49 L555.46,337.66 L556.08,337.83 L556.69,337.99
+		L557.31,338.15 L557.92,338.31 L558.53,338.47 L559.15,338.62 L559.76,338.78 L560.38,338.93 L560.99,339.08 L561.60,339.22
+		L562.22,339.37 L562.83,339.51 L563.45,339.65 L564.06,339.79 L564.67,339.92 L565.29,340.06 L565.90,340.19 L566.51,340.32
+		L567.13,340.45 L567.74,340.58 L568.36,340.70 L568.97,340.82 L569.58,340.95 L570.20,341.07 L570.81,341.18 L571.43,341.30
+		L572.04,341.41 L572.65,341.52 L573.27,341.64 L573.88,341.74 L574.50,341.85 L575.11,341.96 L575.72,342.06 L576.34,342.16
+		L576.95,342.26 L577.57,342.36 L578.18,342.46 L578.79,342.55 L579.41,342.65 L580.02,342.74 L580.63,342.83 L581.25,342.92
+		L581.86,343.01 L582.48,343.10 L583.09,343.18 L583.70,343.27 L584.32,343.35 L584.93,343.43 L585.55,343.51 L586.16,343.59
+		L586.77,343.66 L587.39,343.74 L588.00,343.81 L588.62,343.89 L589.23,343.96 L589.84,344.03 L590.46,344.10 L591.07,344.17
+		L591.68,344.23 L592.30,344.30 L592.91,344.36 L593.53,344.43 L594.14,344.49 L594.75,344.55 L595.37,344.61 L595.98,344.67
+		L596.60,344.73 L597.21,344.78 L597.82,344.84 L598.44,344.89 L599.05,344.95 L599.67,345.00 L600.28,345.05 L600.89,345.10
+		L601.51,345.15 L602.12,345.20 L602.73,345.25 L603.35,345.30 L603.96,345.34 L604.58,345.39 L605.19,345.43 L605.80,345.48
+		L606.42,345.52 L607.03,345.56 L607.65,345.60 L608.26,345.64 L608.87,345.68 L609.49,345.72 L610.10,345.76 L610.72,345.79
+		L611.33,345.83 L611.94,345.87 L612.56,345.90 L613.17,345.94 L613.79,345.97 L614.40,346.00 L615.01,346.03 L615.63,346.07
+		L616.24,346.10 L616.85,346.13 L617.47,346.16 L618.08,346.19 L618.70,346.21 L619.31,346.24 L619.92,346.27 L620.54,346.30
+		L621.15,346.32 L621.77,346.35 L622.38,346.37 L622.99,346.40 L623.61,346.42 L624.22,346.45 L624.84,346.47 L625.45,346.49
+		L626.06,346.51 L626.68,346.53 L627.29,346.56 L627.90,346.58 L628.52,346.60 L629.13,346.62 L629.75,346.64 L630.36,346.65
+		L630.97,346.67 L631.59,346.69 L632.20,346.71 L632.82,346.73 L633.43,346.74 L634.04,346.76 L634.66,346.77 L635.27,346.79
+		L635.89,346.81 L636.50,346.82 L637.11,346.84 L637.73,346.85 L638.34,346.86 L638.96,346.88 L639.57,346.89 L640.18,346.90
+		L640.80,346.92 L641.41,346.93 L642.02,346.94 L642.64,346.95 L643.25,346.96 L643.87,346.98 L644.48,346.99 L645.09,347.00
+		L645.71,347.01 L646.32,347.02 L646.94,347.03 L647.55,347.04 L648.16,347.05 L648.78,347.06 L649.39,347.07 L650.01,347.08
+		L650.62,347.08 L651.23,347.09 L651.85,347.10 L652.46,347.11 L653.07,347.12 L653.69,347.12 L654.30,347.13 L654.92,347.14
+		L655.53,347.15 L656.14,347.15 L656.76,347.16 L657.37,347.17 L657.99,347.17 L658.60,347.18 L659.21,347.18 L659.83,347.19
+		L660.44,347.20 L661.06,347.20 L661.67,347.21 L662.28,347.21 L662.90,347.22 L663.51,347.22 L664.13,347.23 L664.74,347.23
+		L665.35,347.24 L665.97,347.24 L666.58,347.25 L667.19,347.25 L667.81,347.26 L668.42,347.26 L669.04,347.26 L669.65,347.27
+		L670.26,347.27 L670.88,347.28 L671.49,347.28 L672.11,347.28 L672.72,347.29 L673.33,347.29 L673.95,347.29 L674.56,347.30
+		L675.18,347.30 L675.79,347.30 L676.40,347.30 L677.02,347.31 L677.63,347.31 L678.24,347.31 L678.86,347.31 L679.47,347.32
+		L680.09,347.32 L680.70,347.32 L681.31,347.32 L681.93,347.33 L682.54,347.33 L683.16,347.33 L683.77,347.33 L684.38,347.34
+		L685.00,347.34 L685.61,347.34 L686.23,347.34 L686.84,347.34 L687.45,347.34 L688.07,347.35 L688.68,347.35 L689.29,347.35
+		L689.91,347.35 L690.52,347.35 L691.14,347.35 L691.75,347.36 L692.36,347.36 L692.98,347.36 L693.59,347.36 L694.21,347.36
+		L694.82,347.36  '/></g>
+	</g>
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'white' points = '89.31,63.01 198.99,63.01 198.99,27.01 89.31,27.01 '/>
+	</g>
+<g fill="none" color="white" stroke="white" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(128, 128, 128)'  d='M89.31,63.01 L89.31,27.01 L198.99,27.01 L198.99,63.01 L89.31,63.01 Z  '/></g>
+	<g id="gnuplot_plot_1" ><title>Histogram</title>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g transform="translate(123.48,39.91)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="start">
+		<text><tspan font-family="Consolas, Menlo, monospace" >Histogram</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(240, 240, 240)' points = '97.70,40.51 115.09,40.51 115.09,31.51 97.70,31.51 '/>
+	</g>
+	<path stroke='rgb(192, 192, 192)'  d='M97.70,40.51 L115.09,40.51 L115.09,31.51 L97.70,31.51 L97.70,40.51 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+	</g>
+	<g id="gnuplot_plot_2" ><title>PDF (N)</title>
+<g fill="none" color="white" stroke="rgb(240, 240, 240)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<g transform="translate(123.48,57.91)" stroke="none" fill="black" font-family="Consolas, Menlo, monospace" font-size="12.00"  text-anchor="start">
+		<text><tspan font-family="Consolas, Menlo, monospace" >PDF (N)</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='rgb(255,  64,  64)'  d='M97.70,54.01 L115.09,54.01  '/></g>
+	</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="black" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M80.92,18.01 L80.92,347.40 L694.82,347.40 L694.82,18.01 L80.92,18.01 Z  '/></g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.20" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
+</g>
+</svg>
+
