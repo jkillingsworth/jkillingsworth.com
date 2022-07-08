@@ -133,7 +133,7 @@ if (style == 1) {{ set xlabel gprintf('Market Price Differences, σ = %0.3te%04T
 if (style == 2) {{ set xlabel gprintf('Smooth Price Differences, σ = %0.3te%04T', σN) }}
 if (style == 3) {{ set xlabel gprintf('Dither Noise Differences, σ = %0.3te%04T', σN) }}
 set xrange [-(sigmas * σN):+(sigmas * σN)]
-set xtics(0)
+set xtics (0)
 set for [i=+1:+sigmas:+1] xtics add (sprintf('%+iσ', i) i * σN)
 set for [i=-1:-sigmas:-1] xtics add (sprintf('%+iσ', i) i * σN)
 

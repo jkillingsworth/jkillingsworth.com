@@ -90,7 +90,7 @@ title = '{1}'; sigmas = {2}; μN = {3}; σN = {4}; μL = {5}; bL = {6}
 
 set xlabel gprintf('Price Differences (Log Values), σ = %0.3te%04T', σN)
 set xrange [-(sigmas * σN):+(sigmas * σN)]
-set xtics(0)
+set xtics (0)
 set for [i=+1:+sigmas:+1] xtics add (sprintf('%+iσ', i) i * σN)
 set for [i=-1:-sigmas:-1] xtics add (sprintf('%+iσ', i) i * σN)
 
