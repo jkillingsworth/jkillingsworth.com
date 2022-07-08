@@ -526,3 +526,24 @@ copychart ${post} fig-21 example-4-pdfunc-fs.svg
 copychart ${post} fig-22 example-4-pdfunc-gs.svg
 copychart ${post} fig-24 example-5-pdfunc-gs.svg
 copychart ${post} fig-31 example-5-pdfunc-fs.svg
+
+#--------------------------------------------------------------------------------------------------
+
+post="2022-07-07-generalized-normal-distributions"
+
+copychart ${post} fig-03 shape-0.50.svg
+copychart ${post} fig-04 shape-0.75.svg
+copychart ${post} fig-05 shape-1.00.svg
+copychart ${post} fig-06 shape-1.50.svg
+copychart ${post} fig-07 shape-2.00.svg
+copychart ${post} fig-08 shape-4.00.svg
+copychart ${post} fig-09 shape-8.00.svg
+copychart ${post} fig-20 fitted-MSFT-N.svg
+copychart ${post} fig-21 fitted-MSFT-L.svg
+copychart ${post} fig-22 fitted-MSFT-G.svg
+copychart ${post} fig-24 fitted-BTCUSD-N.svg
+copychart ${post} fig-25 fitted-BTCUSD-L.svg
+copychart ${post} fig-26 fitted-BTCUSD-G.svg
+copychart ${post} fig-28 fitted-UNG-N.svg
+copychart ${post} fig-29 fitted-UNG-L.svg
+copychart ${post} fig-30 fitted-UNG-G.svg
