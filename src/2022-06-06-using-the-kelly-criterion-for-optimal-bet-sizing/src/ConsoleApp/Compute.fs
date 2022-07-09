@@ -59,7 +59,7 @@ let bOptimal gKelly =
 //-------------------------------------------------------------------------------------------------
 
 let rangeNew (start, final) =
-    let samples = 100
+    let samples = 200
     let step = (final - start) / (float samples)
     Array.init (samples + 1) (fun i -> start + (float i) * step)
 

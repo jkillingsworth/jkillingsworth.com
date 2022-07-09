@@ -83,7 +83,7 @@ let deconvolution (G : float -> complex) (x : float) =
 
 let ps (lower, upper) mapping =
 
-    let samples = 100
+    let samples = 200
     let step = (upper - lower) / float samples
 
     [| lower .. step .. upper |]
