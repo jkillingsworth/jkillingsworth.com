@@ -8,7 +8,7 @@ open System.Text
 //-------------------------------------------------------------------------------------------------
 
 let private preamble = "
-set terminal svg size 720 405 font 'Consolas, Menlo, monospace'
+set terminal svg size 720 405 font 'monospace'
 set encoding utf8
 set output '{0}'
 
