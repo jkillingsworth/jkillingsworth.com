@@ -210,7 +210,6 @@ set format cb '%0.2f'
 
 set key top left
 set key reverse Left
-set key width -1
 
 set pm3d
 set view 30,30,1,1.8
@@ -338,7 +337,6 @@ set format y ' 10^{{%T}}'
 
 set key top left
 set key reverse Left
-set key width -3
 
 set linetype 1 linewidth 1.5 linecolor '#ff0000'
 set linetype 2 linewidth 1.5 linecolor '#0000ff'

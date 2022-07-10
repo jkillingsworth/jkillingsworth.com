@@ -124,7 +124,6 @@ set format y '%4.2f'
 
 set key top left
 set key reverse Left
-set key width -1
 
 if (style == 1) {{
     set linetype 1 linewidth 2 linecolor '#4080ff'

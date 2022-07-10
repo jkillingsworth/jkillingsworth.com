@@ -181,7 +181,6 @@ set format cb '%0.2f'
 
 set key top left
 set key reverse Left
-set key width -1
 
 set pm3d
 set view 30,30,1,1.8

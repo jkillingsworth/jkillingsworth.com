@@ -26,7 +26,6 @@ set ytics (' Max' ymax)
 
 set key top left
 set key reverse Left
-set key width -2
 
 set linetype 1 linewidth 2 linecolor '#ff0000'
 set linetype 2 pointtype 7 linecolor '#ff0000' pointsize 0.75

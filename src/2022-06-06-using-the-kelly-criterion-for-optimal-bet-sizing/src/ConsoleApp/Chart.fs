@@ -125,7 +125,6 @@ set format y '%5.3f'
 
 set key top left
 set key reverse Left
-set key width -3
 
 set linetype 1 linewidth 2 linecolor '#4080ff'
 set linetype 2 linewidth 2 linecolor '#4080ff'
