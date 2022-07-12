@@ -17,8 +17,8 @@ EOD
 
 style = {1}
 
-stats $data0 using 1 nooutput prefix 'data1'
-xmax = data1_max
+stats $data0 using 1 nooutput prefix 'data0'
+xmax = data0_max
 
 set arrow nohead linestyle 2 from (0-0.2),0 to (xmax+0.2),0
 
@@ -61,9 +61,9 @@ EOD
 
 style = {1}
 
-stats $data0 using 1 nooutput prefix 'data1'
-xmin = data1_min
-xmax = data1_max
+stats $data0 using 1 nooutput prefix 'data0'
+xmin = data0_min
+xmax = data0_max
 
 set xlabel 'Possible Outcome'
 set xrange [xmin-1:xmax+1]
