@@ -329,7 +329,7 @@ set xlabel 'Coin Tosses (n)'
 set xtics 10
 set xtics add (4)
 
-set ylabel 'Floating Point Operations'
+set ylabel 'Floating-Point Operations'
 set ytics 10
 set mytics 1
 set format y ' 10^{{%T}}'
