@@ -20,11 +20,10 @@ style = {1}
 stats $data0 using 1 nooutput prefix 'data0'
 xmax = data0_max
 
-set arrow nohead linestyle 2 from (0-0.2),0 to (xmax+0.2),0
-
 set xlabel 'Time'
 set xrange [0-0.2:xmax+0.2]
 set xtics 1
+set xzeroaxis linestyle 2
 
 set ylabel 'Value'
 set yrange [-5:+5]

@@ -13,11 +13,10 @@ $data1 << EOD
 {1}
 EOD
 
-set arrow nohead linestyle 2 from -0.01,0 to +1,0
-
 set xlabel 'Time (Seconds)'
 set xrange [-0.01:+1]
 set xtics 0.25
+set xzeroaxis linestyle 2
 set mxtics 2
 set format x '%0.2f'
 
@@ -66,11 +65,10 @@ EOD
 
 n = {2}; style = '{3}'
 
-set arrow nohead linestyle 2 from -(0.01*n),0 to +n,0
-
 set xlabel 'Frequency (Hz)'
 set xrange [-(0.01*n):+n]
 set xtics 0, 1, n
+set xzeroaxis linestyle 2
 
 if (style eq 're') {{
     set ylabel 'Real'

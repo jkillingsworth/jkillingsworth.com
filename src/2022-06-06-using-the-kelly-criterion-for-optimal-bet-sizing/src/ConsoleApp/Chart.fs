@@ -65,17 +65,16 @@ EOD
 
 xLower = {2}; xUpper = {3}; yLower = {4}; yUpper = {5}
 
-set arrow nohead linestyle 2 from xLower,0 to xUpper,0
-set arrow nohead linestyle 2 from 0,yLower to 0,yUpper
-
 set xlabel 'Bet Size'
 set xrange [xLower:xUpper]
 set xtics add ('0.0' 0)
+set xzeroaxis linestyle 2
 set format x '%+0.1f'
 
 set ylabel 'Growth Rate (Log Values)'
 set yrange [yLower:yUpper]
 set ytics add ('0.00' 0)
+set yzeroaxis linestyle 2
 set format y '%+5.2f'
 
 set key top left
@@ -157,11 +156,10 @@ EOD
 
 xLower = {1}; xUpper = {2}; yLower = {3}; yUpper = {4}
 
-set arrow nohead linestyle 2 from xLower,0 to xUpper,0
-
 set xlabel 'Price'
 set xrange [xLower:xUpper]
 set xtics 1
+set xzeroaxis linestyle 2
 
 set ylabel 'Payoff'
 set yrange [yLower:yUpper]
@@ -214,8 +212,6 @@ bMin = data0_min_x
 stats $data1 using 1:3 nooutput prefix 'data1'
 bMax = data1_max_x
 
-set arrow nohead linestyle 2 from 0,0 to 0,(2*c)
-
 set xlabel 'Bet Size'
 set xrange [xLower:xUpper]
 set xtics 1
@@ -225,6 +221,7 @@ set format x '%+0.1f'
 set ylabel 'Price'
 set yrange [0:2*c]
 set ytics 5
+set yzeroaxis linestyle 2
 set format y '%5.0f'
 
 set key top left
