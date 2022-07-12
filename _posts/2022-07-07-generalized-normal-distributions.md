@@ -12,7 +12,6 @@ The generalized normal distribution is a family of probability distributions tha
 The generalized normal distribution is a continuous probability distribution with three parameters: a location parameter, a scale parameter, and a shape parameter. The probability density function takes the following form:
 
 {% latex fig-01 %}
-    \usepackage{nicefrac}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
@@ -64,7 +63,6 @@ If you think the density function looks like that of a Laplace distribution when
 The normal distribution is a special case of the generalized normal distribution when the shape parameter is equal to two. Consider the following:
 
 {% latex fig-10 %}
-    \usepackage{nicefrac}
     \begin{document}
     \begin{displaymath}
     \beta = 2, \quad \Gamma(\nicefrac{1}{2}) = \sqrt{\pi}
@@ -75,7 +73,6 @@ The normal distribution is a special case of the generalized normal distribution
 Plug these values into the density function and replace the scale parameter with the following:
 
 {% latex fig-11 %}
-    \usepackage{nicefrac}
     \begin{document}
     \begin{displaymath}
     \alpha = \sigma \sqrt{2}
@@ -102,7 +99,6 @@ As you can see, by holding the shape parameter to a fixed value of two, the gene
 The Laplace distribution is a special case of the generalized normal distribution when the shape parameter is equal to one. Consider the following:
 
 {% latex fig-13 %}
-    \usepackage{nicefrac}
     \begin{document}
     \begin{displaymath}
     \beta = 1, \quad \Gamma(\nicefrac{1}{1}) = 1
@@ -113,7 +109,6 @@ The Laplace distribution is a special case of the generalized normal distributio
 Plug these values into the density function and replace the scale parameter with the following:
 
 {% latex fig-14 %}
-    \usepackage{nicefrac}
     \begin{document}
     \begin{displaymath}
     \alpha = b

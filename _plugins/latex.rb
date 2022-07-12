@@ -9,6 +9,7 @@ module Jekyll
             \usepackage[charter]{mathdesign}
             \usepackage[scaled=0.75]{roboto-mono}
             \usepackage{mathtools}
+            \usepackage{nicefrac}
             \usepackage{eucal}
             \usepackage{array}
             \usepackage{colortbl}
