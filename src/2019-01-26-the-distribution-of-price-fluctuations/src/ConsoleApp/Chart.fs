@@ -55,6 +55,7 @@ EOD
 title = '{1}'
 
 set xlabel 'Time (Days)'
+set xzeroaxis linestyle 2
 
 set ylabel 'Price Differences (Log Values)'
 set ytics add ('0.00' 0)

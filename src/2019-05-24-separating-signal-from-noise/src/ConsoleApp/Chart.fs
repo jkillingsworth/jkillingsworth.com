@@ -83,6 +83,7 @@ EOD
 title = '{2}'; tunit = '{3}'
 
 set xlabel sprintf('Time (%s)', tunit)
+set xzeroaxis linestyle 2
 
 set ylabel 'Noise'
 set ytics add ('0.0000' 0)

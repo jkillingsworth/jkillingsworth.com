@@ -200,6 +200,7 @@ set xlabel 'Profile (p, λ)'
 set xrange [0:1]
 set xtics 0, 1
 set xtics add ('A' 0, 'B' 1)
+set xzeroaxis linestyle 2
 set mxtics 5
 
 set ylabel 'Value'
