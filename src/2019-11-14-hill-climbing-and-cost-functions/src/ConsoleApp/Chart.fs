@@ -25,7 +25,7 @@ set for [i=-n:-1:+2] xtics add (sprintf('%+i', i) i)
 
 set ylabel 'Probability'
 set yrange [0:0.6]
-set format y '%0.2f'
+set format y '%4.2f'
 
 set key top left
 set key reverse Left
@@ -66,7 +66,7 @@ set for [i=-1:-n+1:-1] xtics add (sprintf('%+i', i) i)
 set ylabel 'Probability of Heads'
 set yrange [0:1]
 set ytics 0.10
-set format y '%0.2f'
+set format y '%4.2f'
 
 set key top left
 set key reverse Left
@@ -104,7 +104,7 @@ set xrange [-1:(2**n)]
 
 set ylabel 'Probability'
 set yrange [0:0.20]
-set format y '%0.2f'
+set format y '%4.2f'
 
 set key top left
 set key reverse Left
@@ -262,7 +262,7 @@ set format x '%0.4f'
 
 set ylabel 'Score'
 set yrange [0:0.8]
-set format y '%0.2f'
+set format y '%4.2f'
 
 set key top left
 set key reverse Left

@@ -27,7 +27,7 @@ if (style == 2) {{
 set ylabel 'Probability Density'
 set yrange [0:0.75]
 set ytics 0.05
-set format y '%0.2f'
+set format y '%4.2f'
 
 set key top right
 set key reverse Left

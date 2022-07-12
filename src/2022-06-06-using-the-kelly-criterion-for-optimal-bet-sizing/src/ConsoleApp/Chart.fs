@@ -71,7 +71,7 @@ set arrow nohead linestyle 2 from 0,yLower to 0,yUpper
 set xlabel 'Bet Size'
 set xrange [xLower:xUpper]
 set xtics add ('0.0' 0)
-set format x '%+4.1f'
+set format x '%+0.1f'
 
 set ylabel 'Growth Rate (Log Values)'
 set yrange [yLower:yUpper]
@@ -220,7 +220,7 @@ set xlabel 'Bet Size'
 set xrange [xLower:xUpper]
 set xtics 1
 set xtics add ('0.0' 0)
-set format x '%+4.1f'
+set format x '%+0.1f'
 
 set ylabel 'Price'
 set yrange [0:2*c]

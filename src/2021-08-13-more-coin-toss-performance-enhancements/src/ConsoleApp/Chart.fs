@@ -24,7 +24,7 @@ if (n <= 10) {{
 
 set ylabel 'Probability'
 set yrange [0:upper]
-set format y '%0.2f'
+set format y '%4.2f'
 
 set key top left
 set key reverse Left
@@ -73,7 +73,7 @@ if (n <= 10) {{
 set ylabel 'Probability of Heads'
 set yrange [0:1]
 set ytics 0.10
-set format y '%0.2f'
+set format y '%4.2f'
 
 set key top left
 set key reverse Left
@@ -172,8 +172,8 @@ set xtics add (n)
 set ylabel 'Floating Point Operations'
 set ytics 10
 set mytics 1
-set logscale y 10
 set format y ' 10^{{%T}}'
+set logscale y 10
 
 set key top left
 set key reverse Left

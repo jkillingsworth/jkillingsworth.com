@@ -13,11 +13,11 @@ EOD
 
 set xlabel 'Possible Outcome'
 set xtics add ('0' 0)
-set format x '%+2.0f'
+set format x '%+0.0f'
 
 set ylabel 'Density'
 set yrange [0:0.6]
-set format y '%5.1f'
+set format y '%4.1f'
 
 set key top left
 set key reverse Left
@@ -60,7 +60,7 @@ set for [i=-1:-sigmas:-1] xtics add (sprintf('%+iσ', i) i * σN)
 set ylabel 'Density'
 set yrange [0:high]
 set ytics 0, (high / 8.0)
-set format y '%5.1f'
+set format y '%4.1f'
 
 set key top left
 set key reverse Left

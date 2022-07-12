@@ -46,13 +46,13 @@ set ytics -0.5, 0.2
 set format y '%+0.1f'
 
 set zrange [lower:upper]
-set ztics add ('\u00A00.0' 0)
-set format z '%+0.1f'
+set ztics add ('0.0' 0)
+set format z '%+4.1f'
 
 set cblabel offset 1 'Value'
 set cbrange [lower:upper]
-set cbtics add ('\u00A00.0' 0)
-set format cb '%+0.1f'
+set cbtics add ('\u00a00.0' 0)
+set format cb '%+4.1f'
 
 set key top left
 set key reverse Left
@@ -121,12 +121,12 @@ set format x '%0.1f'
 set ylabel 'Lagrange Multiplier (λ)'
 set yrange [-0.5:+0.5]
 set ytics -0.5, 0.2
-set format y '%+0.1f'
+set format y '%+4.1f'
 
 set cblabel offset 1 'Value'
 set cbrange [lower:upper]
-set cbtics add ('\u00A00.0' 0)
-set format cb '%+0.1f'
+set cbtics add ('\u00a00.0' 0)
+set format cb '%+4.1f'
 
 set key top left
 set key reverse Left
@@ -204,8 +204,8 @@ set mxtics 5
 
 set ylabel 'Value'
 set yrange [lower:upper]
-set ytics add ('\u00A00.0' 0)
-set format y '%+0.1f'
+set ytics add ('0.0' 0)
+set format y '%+4.1f'
 
 set key top left
 set key reverse Left

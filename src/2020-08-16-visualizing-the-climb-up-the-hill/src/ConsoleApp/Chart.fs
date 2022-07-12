@@ -58,7 +58,7 @@ set for [i=-n:-1:+2] xtics add (sprintf('%+i', i) i)
 
 set ylabel 'Probability'
 set yrange [0:0.6]
-set format y '%0.2f'
+set format y '%4.2f'
 
 set key top left
 set key reverse Left
@@ -99,7 +99,7 @@ set for [i=-1:-n+1:-1] xtics add (sprintf('%+i', i) i)
 set ylabel 'Probability of Heads'
 set yrange [0:1]
 set ytics 0.10
-set format y '%0.2f'
+set format y '%4.2f'
 
 set key top left
 set key reverse Left
@@ -137,7 +137,7 @@ set xrange [-1:(2**n)]
 
 set ylabel 'Probability'
 set yrange [0:0.30]
-set format y '%0.2f'
+set format y '%4.2f'
 
 set key top left
 set key reverse Left
@@ -201,10 +201,10 @@ set format y '%0.1f'
 
 if (style == 1) {{ set zrange [0:0.25] }}
 if (style == 2) {{ set zrange [0.25:0] }}
-set format z '%0.2f'
+set format z '%4.2f'
 
 set cblabel offset 1 'Cost'
-set format cb '%0.2f'
+set format cb '%4.2f'
 
 set key top left
 set key reverse Left
@@ -249,10 +249,10 @@ set format x '%0.2f'
 set ylabel 'Coin Bias (+2)'
 set yrange [0:1]
 set ytics 0.2
-set format y '%0.2f'
+set format y '%4.2f'
 
 set cblabel offset 1 'Cost'
-set format cb '%0.2f'
+set format cb '%4.2f'
 
 set key top left
 set key reverse Left
@@ -314,10 +314,10 @@ set format x '%0.2f'
 set ylabel 'Coin Bias (+2)'
 set yrange [0:1]
 set ytics 0.2
-set format y '%0.2f'
+set format y '%4.2f'
 
 set cblabel offset 1 'Cost'
-set format cb '%0.2f'
+set format cb '%4.2f'
 
 set key top left
 set key reverse Left
@@ -389,11 +389,11 @@ set format x '%0.2f'
 set ylabel 'Coin Bias (+2)'
 set yrange [0:1]
 set ytics 0.2
-set format y '%0.2f'
+set format y '%4.2f'
 
 if (style == 1) {{ set cblabel offset 1 'Score' }}
 if (style == 2) {{ set cblabel offset 1 'Cost' }}
-set format cb '%0.2f'
+set format cb '%4.2f'
 
 set key top left
 set key reverse Left
@@ -450,7 +450,7 @@ set format x '%0.4f'
 
 set ylabel 'Score'
 set yrange [-0.05:0.8]
-set format y '%0.2f'
+set format y '%4.2f'
 
 set key top left
 set key reverse Left

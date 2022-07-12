@@ -23,7 +23,8 @@ set format x '%0.2f'
 
 set ylabel 'Value'
 set yrange [-2:+2]
-set format y '%4.1f'
+set ytics add ('0.0' 0)
+set format y '%+4.1f'
 
 set key top left
 set key reverse Left
@@ -75,16 +76,18 @@ if (style eq 're') {{
     set ylabel 'Real'
     set yrange [-1.25:+1.25]
     set ytics 0.5
+    set ytics add ('0.0' 0)
     set mytics 2
-    set format y '%4.1f'
+    set format y '%+4.1f'
 }}
 
 if (style eq 'im') {{
     set ylabel 'Imaginary'
     set yrange [-1.25:+1.25]
     set ytics 0.5
+    set ytics add ('0.0' 0)
     set mytics 2
-    set format y '%4.1f'
+    set format y '%+4.1f'
 }}
 
 if (style eq 'ma') {{

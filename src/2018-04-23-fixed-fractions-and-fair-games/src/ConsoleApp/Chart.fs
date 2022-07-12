@@ -27,7 +27,6 @@ if (style == 2) {{
     set ylabel 'Dollars'
     set yrange [lower:upper]
     set ytics 10
-    set mytics 9
     set logscale y 10
 }}
 

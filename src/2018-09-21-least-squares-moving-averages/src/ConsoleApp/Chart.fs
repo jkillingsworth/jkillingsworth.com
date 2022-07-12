@@ -19,7 +19,7 @@ set xtics 200
 set ylabel 'Price per Share'
 set yrange [lower:upper]
 set ytics lower, step
-set format y '%0.0f'
+set format y '%3.0f'
 
 set key top left
 set key reverse Left

@@ -57,7 +57,8 @@ title = '{1}'
 set xlabel 'Time (Days)'
 
 set ylabel 'Price Differences (Log Values)'
-set format y '%5.2f'
+set ytics add ('0.00' 0)
+set format y '%+5.2f'
 
 set key top left
 set key reverse Left

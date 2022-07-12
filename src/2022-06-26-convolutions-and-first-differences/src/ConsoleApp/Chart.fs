@@ -69,7 +69,7 @@ set xlabel 'Possible Outcome'
 set xrange [xmin-1:xmax+1]
 set xtics xmin, 1, xmax
 set xtics add ('0' 0)
-set format x '%+1.0f'
+set format x '%+0.0f'
 
 set ylabel 'Probability'
 set yrange [0:0.5]
@@ -115,7 +115,7 @@ set xlabel 'Possible Outcome'
 set xrange [xLower:xUpper]
 set xtics 1
 set xtics add ('0' 0)
-set format x '%+2.0f'
+set format x '%+0.0f'
 
 set ylabel 'Probability'
 set yrange [yLower:yUpper]

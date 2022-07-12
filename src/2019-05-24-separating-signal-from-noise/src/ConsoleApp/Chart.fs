@@ -85,7 +85,8 @@ title = '{2}'; tunit = '{3}'
 set xlabel sprintf('Time (%s)', tunit)
 
 set ylabel 'Noise'
-set format y '%7.4f'
+set ytics add ('0.0000' 0)
+set format y '%+7.4f'
 
 set key top left
 set key reverse Left

@@ -21,15 +21,14 @@ if (style == 1) {{
 
 if (style == 2) {{
     set xlabel 'Possible Outcome'
-    set xrange [0.001:+10000000]
+    set xrange [0.001:10000000]
     set xtics 0.001, 10
-    set xtics add (0.001, 0.01, 0.1, 1, 10, 100, '1K' 1000, '10K' 10000, '100K' 100000, '1M' 1000000, '10M' 10000000)
-    set mxtics default
+    set xtics add (0.001, 0.01, 0.1, 1, 10, 100, '1k' 1000, '10k' 10000, '100k' 100000, '1M' 1000000, '10M' 10000000)
     set logscale x 10
 }}
 
 set ylabel 'Probability'
-set format y '%0.2f'
+set format y '%4.2f'
 
 set key top right
 set key noreverse Right

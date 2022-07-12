@@ -54,7 +54,7 @@ set for [i=-n:-1:+2] xtics add (sprintf('%+i', i) i)
 
 set ylabel 'Probability'
 set yrange [0:0.4]
-set format y '%0.2f'
+set format y '%4.2f'
 
 set key top left
 set key reverse Left
@@ -94,7 +94,7 @@ set for [i=-1:-n+1:-1] xtics add (sprintf('%+i', i) i)
 set ylabel 'Probability of Heads'
 set yrange [0:1]
 set ytics 0.10
-set format y '%0.2f'
+set format y '%4.2f'
 
 set key top left
 set key reverse Left
@@ -162,10 +162,10 @@ set yrange [0:1]
 set ytics 0.2
 set format y '%0.1f'
 
-set format z '%0.2f'
+set format z '%4.2f'
 
 set cblabel offset 1 'Error'
-set format cb '%0.2f'
+set format cb '%4.2f'
 
 set key top left
 set key reverse Left
@@ -230,10 +230,10 @@ set format x '%0.2f'
 set ylabel sprintf('Coin Bias (+%i)', n - 1)
 set yrange [0:1]
 set ytics 0.2
-set format y '%0.2f'
+set format y '%4.2f'
 
 set cblabel offset 1 'Error'
-set format cb '%0.2f'
+set format cb '%4.2f'
 
 set key top left
 set key reverse Left
