@@ -16,13 +16,13 @@ EOD
 lower = {2}; upper = {3}; n = {4}
 
 stats $data1 using 1:2 nooutput prefix 'data1'
-ymax = data1_max_y
+yMax = data1_max_y
 
 set xlabel 'Location (μ)'
 
 set ylabel 'Likelihood'
 set yrange [lower:upper]
-set ytics (' Max' ymax)
+set ytics (' Max' yMax)
 
 set key top left
 set key reverse Left

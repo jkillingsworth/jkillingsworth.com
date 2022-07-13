@@ -17,11 +17,11 @@ EOD
 
 style = {1}
 
-stats $data0 using 1 nooutput prefix 'data0'
-xmax = data0_max
+stats $data0 using 1:2 nooutput prefix 'data0'
+xMax = data0_max_x
 
 set xlabel 'Time'
-set xrange [0-0.2:xmax+0.2]
+set xrange [0-0.2:xMax+0.2]
 set xtics 1
 set xzeroaxis linestyle 2
 
@@ -60,13 +60,13 @@ EOD
 
 style = {1}
 
-stats $data0 using 1 nooutput prefix 'data0'
-xmin = data0_min
-xmax = data0_max
+stats $data0 using 1:2 nooutput prefix 'data0'
+xMin = data0_min_x
+xMax = data0_max_x
 
 set xlabel 'Possible Outcome'
-set xrange [xmin-1:xmax+1]
-set xtics xmin, 1, xmax
+set xrange [xMin-1:xMax+1]
+set xtics xMin, 1, xMax
 set xtics add ('0' 0)
 set format x '%+0.0f'
 
