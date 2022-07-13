@@ -116,7 +116,7 @@ set xtics 1
 set xtics add ('0' 0)
 set format x '%+0.0f'
 
-set ylabel 'Probability'
+set ylabel 'Probability Density'
 set yrange [yLower:yUpper]
 set ytics 0.05
 set format y '%4.2f'

@@ -15,7 +15,7 @@ set xlabel 'Possible Outcome'
 set xtics add ('0' 0)
 set format x '%+0.0f'
 
-set ylabel 'Density'
+set ylabel 'Probability Density'
 set yrange [0:0.6]
 set format y '%4.1f'
 
@@ -57,7 +57,7 @@ set xtics (0)
 set for [i=+1:+sigmas:+1] xtics add (sprintf('%+iσ', i) i * σN)
 set for [i=-1:-sigmas:-1] xtics add (sprintf('%+iσ', i) i * σN)
 
-set ylabel 'Density'
+set ylabel 'Probability Density'
 set yrange [0:high]
 set ytics 0, (high / 8.0)
 set format y '%4.1f'

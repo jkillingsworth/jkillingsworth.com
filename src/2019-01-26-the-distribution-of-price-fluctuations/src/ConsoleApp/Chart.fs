@@ -96,7 +96,7 @@ set xtics (0)
 set for [i=+1:+sigmas:+1] xtics add (sprintf('%+iσ', i) i * σN)
 set for [i=-1:-sigmas:-1] xtics add (sprintf('%+iσ', i) i * σN)
 
-set ylabel 'Density'
+set ylabel 'Probability Density'
 set format y '%5.0f'
 
 set key top left

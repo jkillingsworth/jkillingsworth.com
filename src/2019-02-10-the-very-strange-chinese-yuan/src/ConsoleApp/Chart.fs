@@ -61,12 +61,12 @@ set for [i=+1:+sigmas:+1] xtics add (sprintf('%+iσ', i) i * σN)
 set for [i=-1:-sigmas:-1] xtics add (sprintf('%+iσ', i) i * σN)
 
 if (style == 1) {{
-    set ylabel 'Density'
+    set ylabel 'Probability Density'
     set format y '%5.0f'
 }}
 
 if (style == 2) {{
-    set ylabel 'Density'
+    set ylabel 'Probability Density'
     set yrange [1:]
     set format y ' 10^{{%+T}}'
     set logscale y 10

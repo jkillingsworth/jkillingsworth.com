@@ -128,7 +128,7 @@ set key reverse Left
 set linetype 1 linewidth 2 linecolor '#4080ff'
 set linetype 2 linewidth 2 linecolor '#4080ff'
 
-plot $data0 using 1:2 with lines title 'Log-Normal Distribution',\
+plot $data0 using 1:2 with lines title 'Log-Normal PDF',\
      $data0 using 1:2 with filledcurves y=0 fill solid 0.125 noborder notitle
 "
 
