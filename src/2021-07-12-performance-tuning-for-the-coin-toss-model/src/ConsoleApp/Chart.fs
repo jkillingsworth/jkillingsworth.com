@@ -338,9 +338,9 @@ set logscale y 10
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1.5 linecolor rgb baseRojo
-set linetype 2 linewidth 1.5 linecolor rgb baseBlue
-set linetype 3 linewidth 1.5 linecolor rgb baseLeaf
+set linetype 1 linewidth 2 linecolor rgb baseRojo
+set linetype 2 linewidth 2 linecolor rgb baseBlue
+set linetype 3 linewidth 2 linecolor rgb baseLeaf
 
 plot $data0 using 1:2 with lines title 'Matrix Product (R-Associative)',\
      $data0 using 1:3 with lines title 'Matrix Product (L-Associative)',\

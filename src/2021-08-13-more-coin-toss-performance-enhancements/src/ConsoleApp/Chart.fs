@@ -178,8 +178,8 @@ set logscale y 10
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1.5 linecolor rgb baseLeaf
-set linetype 2 linewidth 1.5 linecolor rgb basePurp
+set linetype 1 linewidth 2 linecolor rgb baseLeaf
+set linetype 2 linewidth 2 linecolor rgb basePurp
 
 plot $data0 using 1:2 with lines title 'Baseline Method',\
      $data0 using 1:3 with lines title 'Enhanced Method'
