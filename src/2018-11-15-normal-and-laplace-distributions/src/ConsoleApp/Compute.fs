@@ -4,7 +4,7 @@ open System
 
 //-------------------------------------------------------------------------------------------------
 
-let logLikelihoodLaplace start stop b xs =
+let logLikelihoodLaplace start final b xs =
 
     let f μ =
         let n = xs |> Array.length |> float
@@ -12,7 +12,7 @@ let logLikelihoodLaplace start stop b xs =
         let y = -n * log (2.0 * b) - (1.0 / b) * (float s)
         (μ, y, (xs |> Array.contains μ))
 
-    [| start .. stop |] |> Array.map f
+    [| start .. final |] |> Array.map f
 
 //-------------------------------------------------------------------------------------------------
 

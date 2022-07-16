@@ -27,8 +27,8 @@ set ytics (' Max' yMax)
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 2 linecolor rgb baseRojo
-set linetype 2 pointtype 7 linecolor rgb baseRojo pointsize 0.75
+set linetype 1 linewidth 2 linecolor rgb baseBlue
+set linetype 2 pointtype 7 linecolor rgb baseBlue
 
 etitle = 'Likelihood (n is even)'
 otitle = 'Likelihood (n is odd) '

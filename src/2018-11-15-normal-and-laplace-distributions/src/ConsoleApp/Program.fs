@@ -15,8 +15,8 @@ let μ = 0.0
 let σ = 1.0
 let b = 1.0
 
-let likelihoodE = Compute.logLikelihoodLaplace 0 100 b [| 0; 20; 40; 60; 80; 100 |]
-let likelihoodO = Compute.logLikelihoodLaplace 0 100 b [| 0; 25; 50; 75; 100 |]
+let likelihoodE = Compute.logLikelihoodLaplace -1 101 b [| 0; 20; 40; 60; 80; 100 |]
+let likelihoodO = Compute.logLikelihoodLaplace -1 101 b [| 0; 25; 50; 75; 100 |]
 
 let range = [| -5.0 .. 0.1 .. +5.0 |]
 let densityN = range |> Array.map (Compute.densityN μ σ)
