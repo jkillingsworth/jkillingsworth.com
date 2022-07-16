@@ -211,8 +211,8 @@ set format y '%+4.1f'
 set key top left
 set key reverse Left
 
-set linetype 1 pointtype 7 linecolor '#a000a0'
-set linetype 2 linewidth 2 linecolor '#a000a0'
+set linetype 1 pointtype 7 linecolor rgb basePurp
+set linetype 2 linewidth 2 linecolor rgb basePurp
 
 plot $data0 using 1:2 with points linetype 1 title 'Optimum',\
      $data1 using 1:2 with lines title sprintf('Slice %i', style)

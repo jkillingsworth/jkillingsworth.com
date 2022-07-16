@@ -34,8 +34,8 @@ set format y '%+4.0f'
 set key top left
 set key reverse Left
 
-if (style == 1) {{ set linetype 1 linecolor '#4080ff' }}
-if (style == 2) {{ set linetype 1 linecolor '#ff4040' }}
+if (style == 1) {{ set linetype 1 linecolor rgb baseBlue }}
+if (style == 2) {{ set linetype 1 linecolor rgb baseRojo }}
 set linetype 1 linewidth 1 pointtype 7 pointinterval -1
 set pointintervalbox 1.25
 
@@ -79,13 +79,13 @@ set key top left
 set key reverse Left
 
 if (style == 1) {{
-    set linetype 1 linewidth 1 linecolor '#a0c0ff'
-    colorPercent = '#2060e0'
+    set linetype 1 linewidth 1 linecolor rgb liteBlue
+    colorPercent = darkBlue
 }}
 
 if (style == 2) {{
-    set linetype 1 linewidth 1 linecolor '#ffa0a0'
-    colorPercent = '#e02020'
+    set linetype 1 linewidth 1 linecolor rgb liteRojo
+    colorPercent = darkRojo
 }}
 
 plot $data0 using 1:2 with boxes fill solid border linecolor '#ffffff' title 'Probability Mass',\
@@ -125,13 +125,13 @@ set key top left
 set key reverse Left
 
 if (style == 1) {{
-    set linetype 1 linewidth 2 linecolor '#4080ff'
-    set linetype 2 linewidth 2 linecolor '#4080ff'
+    set linetype 1 linewidth 2 linecolor rgb baseBlue
+    set linetype 2 linewidth 2 linecolor rgb baseBlue
 }}
 
 if (style == 2) {{
-    set linetype 1 linewidth 2 linecolor '#ff4040'
-    set linetype 2 linewidth 2 linecolor '#ff4040'
+    set linetype 1 linewidth 2 linecolor rgb baseRojo
+    set linetype 2 linewidth 2 linecolor rgb baseRojo
 }}
 
 plot $data0 using 1:2 with lines title 'Probability Density',\

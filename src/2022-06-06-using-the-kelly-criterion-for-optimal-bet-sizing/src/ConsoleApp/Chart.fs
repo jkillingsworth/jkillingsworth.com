@@ -24,9 +24,9 @@ set ylabel 'Dollars'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 2 linecolor '#ff4040'
-set linetype 2 linewidth 2 linecolor '#40c040'
-set linetype 3 linewidth 2 linecolor '#4080ff'
+set linetype 1 linewidth 2 linecolor rgb baseRojo
+set linetype 2 linewidth 2 linecolor rgb baseLeaf
+set linetype 3 linewidth 2 linecolor rgb baseBlue
 
 plot $data0 using 1:2 with lines title 'Simulation A',\
      $data1 using 1:2 with lines title 'Simulation B',\
@@ -80,8 +80,8 @@ set format y '%+5.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 2 linecolor '#a040c0'
-set linetype 2 pointtype 7 linecolor '#a040c0'
+set linetype 1 linewidth 2 linecolor rgb basePurp
+set linetype 2 pointtype 7 linecolor rgb basePurp
 
 plot $data0 using 1:2 with lines title 'EV',\
      $data1 using 1:2 with points title 'Maximum'
@@ -125,8 +125,8 @@ set format y '%5.3f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 2 linecolor '#4080ff'
-set linetype 2 linewidth 2 linecolor '#4080ff'
+set linetype 1 linewidth 2 linecolor rgb baseBlue
+set linetype 2 linewidth 2 linecolor rgb baseBlue
 
 plot $data0 using 1:2 with lines title 'Log-Normal PDF',\
      $data0 using 1:2 with filledcurves y=0 fill solid 0.125 noborder notitle
@@ -171,8 +171,8 @@ set format y '%+5.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 2 linecolor '#40c040'
-set linetype 2 linewidth 2 linecolor '#ff4040'
+set linetype 1 linewidth 2 linecolor rgb baseLeaf
+set linetype 2 linewidth 2 linecolor rgb baseRojo
 
 plot $data0 using 1:($2 >= 0 ? $2 : 1/0) with lines title 'Positive',\
      $data0 using 1:($2 <= 0 ? $2 : 1/0) with lines title 'Negative'
@@ -228,8 +228,8 @@ set key top left
 set key reverse Left
 
 set linetype 1 linewidth 2 linecolor '#c0c0c0'
-set linetype 2 linewidth 2 linecolor '#40c040'
-set linetype 3 linewidth 2 linecolor '#ff4040'
+set linetype 2 linewidth 2 linecolor rgb baseLeaf
+set linetype 3 linewidth 2 linecolor rgb baseRojo
 
 plot $data0 using ($1 <= 0 ? $1 : 1/0):2 linetype 1 with lines notitle,\
      $data1 using ($1 >= 1 ? $1 : 1/0):2 linetype 1 with lines notitle,\

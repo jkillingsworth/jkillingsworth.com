@@ -27,15 +27,15 @@ if (style == 1) {{ set key title sprintf('%s (Full)', ticker) left }}
 if (style == 2) {{ set key title sprintf('%s (Zoom)', ticker) left }}
 
 if (style == 1) {{
-    set linetype 1 linewidth 1 linecolor '#00808080'
-    set linetype 2 linewidth 1 linecolor '#00ff0000'
-    set linetype 3 linewidth 1 linecolor '#800000ff'
+    set linetype 1 linewidth 1 linecolor '#808080'
+    set linetype 2 linewidth 1 linecolor rgb richRojo
+    set linetype 3 linewidth 1 linecolor rgb richBlue
 }}
 
 if (style == 2) {{
-    set linetype 1 linewidth 1 linecolor '#00808080'
-    set linetype 2 linewidth 1 linecolor '#80ff0000'
-    set linetype 3 linewidth 1 linecolor '#000000ff'
+    set linetype 1 linewidth 1 linecolor '#808080'
+    set linetype 2 linewidth 1 linecolor rgb richRojo
+    set linetype 3 linewidth 1 linecolor rgb richBlue
 }}
 
 plot $data0 using 1:2 with lines title 'Market Price',\

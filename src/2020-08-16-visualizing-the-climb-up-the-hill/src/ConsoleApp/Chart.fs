@@ -455,7 +455,7 @@ set format y '%4.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor '#ff0000'
+set linetype 1 linewidth 1 linecolor rgb richRojo
 set linetype 2 pointtype 2 linecolor '#000000'
 
 plot $data0 using 1:2 with lines title sprintf('Score %s', tag),\

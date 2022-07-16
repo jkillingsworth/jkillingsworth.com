@@ -30,8 +30,8 @@ set key reverse Left
 set key title 'Time Domain'
 
 set linetype 1 linewidth 1 linecolor '#a0a0a0'
-set linetype 2 linewidth 2 linecolor '#ff4040'
-set linetype 3 pointtype 7 linecolor '#ff4040'
+set linetype 2 linewidth 2 linecolor rgb baseRojo
+set linetype 3 pointtype 7 linecolor rgb baseRojo
 
 plot $data0 using 1:2 with lines notitle,\
      $data1 using 1:2 with impulses notitle,\
@@ -112,23 +112,23 @@ set key title 'Frequency Domain'
 set linetype 1 linewidth 1 linecolor '#a0a0a0'
 
 if (style eq 're') {{
-    set linetype 2 linewidth 2 linecolor '#4080ff'
-    set linetype 3 pointtype 7 linecolor '#4080ff'
+    set linetype 2 linewidth 2 linecolor rgb baseBlue
+    set linetype 3 pointtype 7 linecolor rgb baseBlue
 }}
 
 if (style eq 'im') {{
-    set linetype 2 linewidth 2 linecolor '#ffc040'
-    set linetype 3 pointtype 7 linecolor '#ffc040'
+    set linetype 2 linewidth 2 linecolor rgb baseGold
+    set linetype 3 pointtype 7 linecolor rgb baseGold
 }}
 
 if (style eq 'ma') {{
-    set linetype 2 linewidth 2 linecolor '#8040c0'
-    set linetype 3 pointtype 7 linecolor '#8040c0'
+    set linetype 2 linewidth 2 linecolor rgb basePurp
+    set linetype 3 pointtype 7 linecolor rgb basePurp
 }}
 
 if (style eq 'ph') {{
-    set linetype 2 linewidth 2 linecolor '#40c040'
-    set linetype 3 pointtype 7 linecolor '#40c040'
+    set linetype 2 linewidth 2 linecolor rgb baseLeaf
+    set linetype 3 pointtype 7 linecolor rgb baseLeaf
 }}
 
 plot $data0 using 1:2 with lines notitle,\

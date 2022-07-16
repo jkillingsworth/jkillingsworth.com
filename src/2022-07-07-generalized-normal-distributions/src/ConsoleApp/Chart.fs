@@ -22,8 +22,8 @@ set format y '%4.1f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 2 linecolor '#ffc000'
-set linetype 2 linewidth 2 linecolor '#ffc000'
+set linetype 1 linewidth 2 linecolor rgb baseGold
+set linetype 2 linewidth 2 linecolor rgb baseGold
 
 plot $data0 using 1:2 with lines title sprintf('PDF (β = %4.2f)', β),\
      $data0 using 1:2 with filledcurves y=0 fill solid 0.125 noborder notitle
@@ -65,11 +65,11 @@ set format y '%4.1f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor '#f0f0f0'
-if (style eq 'N') {{ set linetype 2 linewidth 2 linecolor '#ff4040' }}
-if (style eq 'L') {{ set linetype 2 linewidth 2 linecolor '#4080ff' }}
-if (style eq 'G') {{ set linetype 2 linewidth 2 linecolor '#00c000' }}
-set style fill solid border linecolor '#c0c0c0'
+set linetype 1 linewidth 1 linecolor rgb highGray
+if (style eq 'N') {{ set linetype 2 linewidth 2 linecolor rgb baseRojo }}
+if (style eq 'L') {{ set linetype 2 linewidth 2 linecolor rgb baseBlue }}
+if (style eq 'G') {{ set linetype 2 linewidth 2 linecolor rgb baseLeaf }}
+set style fill solid border linecolor rgb liteGray
 
 plot $data0 using 1:2 with boxes title 'Histogram',\
      $data1 using 1:2 with lines title sprintf('PDF (%s)', style)

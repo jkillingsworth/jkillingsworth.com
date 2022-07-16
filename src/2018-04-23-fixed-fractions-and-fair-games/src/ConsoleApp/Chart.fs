@@ -33,7 +33,7 @@ if (style == 2) {{
 set key top right
 set key noreverse Right
 
-set linetype 1 linewidth 1 linecolor '#ff0000'
+set linetype 1 linewidth 1 linecolor rgb richRojo
 
 plot $data0 using 1:2 with lines title 'Gambler''s Bankroll'
 "

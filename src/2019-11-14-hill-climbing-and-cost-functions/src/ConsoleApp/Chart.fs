@@ -186,10 +186,10 @@ set ytics scale 1
 unset key
 
 set linetype 1 linewidth 0 linecolor '#ff000000'
-set linetype 2 linewidth 0 linecolor '#e0e0e0'
-set linetype 3 linewidth 2 linecolor '#808080'
-set linetype 4 linewidth 2 linecolor '#ff0000' dashtype 2
-set linetype 5 pointtype 7 linecolor '#000000'
+set linetype 2 linewidth 0 linecolor rgb highGray
+set linetype 3 linewidth 2 linecolor rgb baseGray
+set linetype 4 linewidth 2 linecolor rgb baseRojo dashtype 2
+set linetype 5 pointtype 7 linecolor rgb darkGray
 
 set samples 150
 
@@ -267,7 +267,7 @@ set format y '%4.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor '#ff0000'
+set linetype 1 linewidth 1 linecolor rgb richRojo
 set linetype 2 pointtype 2 linecolor '#000000'
 
 plot $data0 using 1:2 with lines title sprintf('Score %s', tag),\

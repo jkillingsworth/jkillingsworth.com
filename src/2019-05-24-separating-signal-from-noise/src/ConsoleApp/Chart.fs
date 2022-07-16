@@ -42,7 +42,7 @@ set key reverse Left
 set key title sprintf('%s', title) left
 
 set linetype 1 linewidth 1 linecolor '#808080'
-set linetype 2 linewidth 1 linecolor '#ff0000'
+set linetype 2 linewidth 1 linecolor rgb richRojo
 
 plot $data0 using 1:2 with lines title 'Market',\
      $data1 using 1:2 with lines title 'Smooth'
@@ -94,7 +94,7 @@ set key reverse Left
 set key title sprintf('%s', title) left
 
 set linetype 1 linewidth 1 linecolor '#808080'
-set linetype 2 linewidth 1 linecolor '#ff0000'
+set linetype 2 linewidth 1 linecolor rgb richRojo
 
 plot $data0 using 1:2 with lines title 'Dither',\
      $data1 using 1:2 with lines notitle
@@ -146,10 +146,10 @@ set key top left
 set key reverse Left
 set key title sprintf('%s', title) left
 
-set linetype 1 linewidth 1 linecolor '#c0c0c0'
-set linetype 2 linewidth 2 linecolor '#400000ff'
-set linetype 3 linewidth 2 linecolor '#40ff0000'
-set style fill solid border linecolor '#808080'
+set linetype 1 linewidth 1 linecolor rgb highGray
+set linetype 2 linewidth 2 linecolor rgb (richRojo + 0x40000000)
+set linetype 3 linewidth 2 linecolor rgb (richBlue + 0x40000000)
+set style fill solid border linecolor rgb liteGray
 
 set samples 1000
 

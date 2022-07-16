@@ -103,10 +103,10 @@ set key top left
 set key reverse Left
 set key title sprintf('%s', title) left
 
-set linetype 1 linewidth 1 linecolor '#c0c0c0'
-set linetype 2 linewidth 2 linecolor '#400000ff'
-set linetype 3 linewidth 2 linecolor '#40ff0000'
-set style fill solid border linecolor '#808080'
+set linetype 1 linewidth 1 linecolor rgb highGray
+set linetype 2 linewidth 2 linecolor rgb (richRojo + 0x40000000)
+set linetype 3 linewidth 2 linecolor rgb (richBlue + 0x40000000)
+set style fill solid border linecolor rgb liteGray
 
 set samples 1000
 

@@ -27,8 +27,8 @@ set ytics (' Max' yMax)
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 2 linecolor '#ff0000'
-set linetype 2 pointtype 7 linecolor '#ff0000' pointsize 0.75
+set linetype 1 linewidth 2 linecolor rgb baseRojo
+set linetype 2 pointtype 7 linecolor rgb baseRojo pointsize 0.75
 
 etitle = 'Likelihood (n is even)'
 otitle = 'Likelihood (n is odd) '
@@ -91,8 +91,8 @@ if (style == 2) {{
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 2 linecolor '#0000ff'
-set linetype 2 linewidth 2 linecolor '#ff0000'
+set linetype 1 linewidth 2 linecolor rgb (richRojo + 0x40000000)
+set linetype 2 linewidth 2 linecolor rgb (richBlue + 0x40000000)
 
 plot $data0 using 1:2 with lines title 'Normal',\
      $data0 using 1:3 with lines title 'Laplace'

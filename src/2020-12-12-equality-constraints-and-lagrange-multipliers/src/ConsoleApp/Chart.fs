@@ -212,7 +212,7 @@ set format y '%4.2f'
 set key top right
 set key reverse Left
 
-set linetype 1 linewidth 2 linecolor '#ff0000'
+set linetype 1 linewidth 2 linecolor rgb baseRojo
 
 plot $data0 using 1:($2/0.0001) with lines title 'Step Size'
 "
