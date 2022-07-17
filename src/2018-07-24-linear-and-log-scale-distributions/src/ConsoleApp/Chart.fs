@@ -33,9 +33,9 @@ set format y '%4.2f'
 set key top right
 set key noreverse Right
 
-set linetype 1 linewidth 5 linecolor rgb baseLeaf
-set linetype 2 linewidth 5 linecolor rgb baseRojo
-set linetype 3 linewidth 5 linecolor '#808080'
+set linetype 1 linewidth 6 linecolor rgb baseLeaf
+set linetype 2 linewidth 6 linecolor rgb baseRojo
+set linetype 3 linewidth 6 linecolor '#808080'
 
 plot $data0 using ($3 == 1 ? $1 : 1/0):2 with impulses title 'Profit',\
      $data0 using ($3 == 2 ? $1 : 1/0):2 with impulses title 'Loss',\
