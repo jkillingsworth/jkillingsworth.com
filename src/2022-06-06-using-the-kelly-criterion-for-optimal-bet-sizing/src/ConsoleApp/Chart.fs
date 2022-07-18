@@ -227,7 +227,7 @@ set format y '%5.0f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 2 linecolor '#c0c0c0'
+set linetype 1 linewidth 2 linecolor rgb liteGray
 set linetype 2 linewidth 2 linecolor rgb baseLeaf
 set linetype 3 linewidth 2 linecolor rgb baseRojo
 

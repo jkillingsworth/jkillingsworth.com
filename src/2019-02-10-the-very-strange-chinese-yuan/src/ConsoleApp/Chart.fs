@@ -28,7 +28,7 @@ set format y '%5.3f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor '#808080'
+set linetype 1 linewidth 1 linecolor rgb baseGray
 
 plot $data0 using 1:2 with lines title sprintf('%s', title)
 "

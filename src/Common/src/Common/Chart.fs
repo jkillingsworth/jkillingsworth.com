@@ -125,8 +125,8 @@ set output '{0}'
 
 {1}
 
-set style line 1 linewidth 1 linecolor '#e6e6e6'
-set style line 2 linewidth 2 linecolor '#e6e6e6'
+set style line 1 linewidth 1 linecolor rgb highGray
+set style line 2 linewidth 2 linecolor rgb highGray
 
 set xtics scale 0, 0.0001
 set ytics scale 0, 0.0001
@@ -166,7 +166,7 @@ set grid linestyle 1
 set grid xtics mxtics
 set grid ytics mytics
 
-set key box linecolor '#808080'
+set key box linecolor rgb baseGray
 set key opaque
 set key samplen 1
 "
@@ -184,7 +184,7 @@ set border linewidth 1.0
 
 set grid
 
-set key box linecolor '#808080'
+set key box linecolor rgb baseGray
 set key noopaque
 set key samplen 1
 "

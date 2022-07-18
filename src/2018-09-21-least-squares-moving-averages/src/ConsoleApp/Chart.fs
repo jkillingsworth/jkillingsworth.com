@@ -27,13 +27,13 @@ if (style == 1) {{ set key title sprintf('%s (Full)', ticker) left }}
 if (style == 2) {{ set key title sprintf('%s (Zoom)', ticker) left }}
 
 if (style == 1) {{
-    set linetype 1 linewidth 1 linecolor '#808080'
+    set linetype 1 linewidth 1 linecolor rgb baseGray
     set linetype 2 linewidth 1 linecolor rgb richRojo
     set linetype 3 linewidth 1 linecolor rgb richBlue
 }}
 
 if (style == 2) {{
-    set linetype 1 linewidth 1 linecolor '#808080'
+    set linetype 1 linewidth 1 linecolor rgb baseGray
     set linetype 2 linewidth 1 linecolor rgb richRojo
     set linetype 3 linewidth 1 linecolor rgb richBlue
 }}
