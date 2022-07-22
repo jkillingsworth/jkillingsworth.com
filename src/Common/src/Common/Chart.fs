@@ -7,12 +7,12 @@ open System.Text
 
 //-------------------------------------------------------------------------------------------------
 
-let hsv h s v =
+let hsl h s l =
 
     let h = h / 60.0
-    let c = v * s
+    let c = s * (1.0 - abs (2.0 * l - 1.0))
     let x = c * (1.0 - abs ((h % 2.0) - 1.0))
-    let m = v - c
+    let m = l - (c / 2.0)
 
     let (r, g, b) =
         match h with
@@ -36,8 +36,8 @@ let mix (r1, g1, b1) (r2, g2, b2) ratio =
 
 //-------------------------------------------------------------------------------------------------
 
-let parWhite = hsv 0.0 0.0 1.0
-let parBlack = hsv 0.0 0.0 0.0
+let parWhite = hsl 000.0 0.000 1.000
+let parBlack = hsl 000.0 0.000 0.000
 
 let baseGray = mix parWhite parBlack 0.50
 let liteGray = mix baseGray parWhite 0.50
@@ -50,14 +50,14 @@ let hueLeaf = 120.0
 let hueBlue = 220.0
 let huePurp = 270.0
 
-let richRojo = hsv hueRojo 1.00 1.00
-let richBlue = hsv hueBlue 1.00 1.00
+let richRojo = hsl hueRojo 1.000 0.500
+let richBlue = hsl hueBlue 1.000 0.500
 
-let baseRojo = hsv hueRojo 0.75 1.00
-let baseGold = hsv hueGold 1.00 1.00
-let baseLeaf = hsv hueLeaf 1.00 0.75
-let baseBlue = hsv hueBlue 0.75 1.00
-let basePurp = hsv huePurp 0.75 1.00
+let baseRojo = hsl hueRojo 1.000 0.625
+let baseGold = hsl hueGold 1.000 0.500
+let baseLeaf = hsl hueLeaf 1.000 0.375
+let baseBlue = hsl hueBlue 1.000 0.625
+let basePurp = hsl huePurp 1.000 0.625
 
 let liteRojo = mix baseRojo parWhite 0.50
 let liteGold = mix baseGold parWhite 0.50
