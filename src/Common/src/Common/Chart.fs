@@ -49,7 +49,7 @@ let parBlack = hsl 000.0 0.000 0.000
 
 let baseGray = parWhite |> mix 0.500 parBlack
 let liteGray = baseGray |> mix 0.500 parWhite
-let darkGray = baseGray |> mix 0.250 parBlack
+let darkGray = baseGray |> mix 0.375 parBlack
 let highGray = baseGray |> mix 0.800 parWhite
 
 let hueRojo = 000.0
@@ -73,11 +73,11 @@ let liteLeaf = baseLeaf |> mix 0.500 parWhite
 let liteBlue = baseBlue |> mix 0.500 parWhite
 let litePurp = basePurp |> mix 0.500 parWhite
 
-let darkRojo = baseRojo |> mix 0.250 parBlack
-let darkGold = baseGold |> mix 0.250 parBlack
-let darkLeaf = baseLeaf |> mix 0.250 parBlack
-let darkBlue = baseBlue |> mix 0.250 parBlack
-let darkPurp = basePurp |> mix 0.250 parBlack
+let darkRojo = baseRojo |> mix 0.375 parBlack
+let darkGold = baseGold |> mix 0.375 parBlack
+let darkLeaf = baseLeaf |> mix 0.375 parBlack
+let darkBlue = baseBlue |> mix 0.375 parBlack
+let darkPurp = basePurp |> mix 0.375 parBlack
 
 //-------------------------------------------------------------------------------------------------
 
