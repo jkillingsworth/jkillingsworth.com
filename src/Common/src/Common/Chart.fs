@@ -34,6 +34,14 @@ let mix ratio (r1, g1, b1) (r2, g2, b2) =
 
     (r, g, b)
 
+let rgbToInt (r, g, b) =
+
+    let r = int (round (r * 255.0)) <<< 16
+    let g = int (round (g * 255.0)) <<< 08
+    let b = int (round (b * 255.0)) <<< 00
+
+    r + g + b
+
 //-------------------------------------------------------------------------------------------------
 
 let parWhite = hsl 000.0 0.000 1.000
@@ -73,15 +81,9 @@ let darkPurp = basePurp |> mix 0.250 parBlack
 
 //-------------------------------------------------------------------------------------------------
 
-let private serialize name (r, g, b) =
-
-    let r = int (round (r * 255.0)) <<< 16
-    let g = int (round (g * 255.0)) <<< 08
-    let b = int (round (b * 255.0)) <<< 00
-
-    sprintf "%s = 0x%06x" name (r + g + b)
-
 let private colordef =
+
+    let serialize name rgb = sprintf "%s = 0x%06x" name (rgbToInt rgb)
 
     let colors = [|
         serialize (nameof parWhite) parWhite
