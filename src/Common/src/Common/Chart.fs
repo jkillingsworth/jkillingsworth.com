@@ -53,31 +53,47 @@ let darkGray = baseGray |> mix 0.375 parBlack
 let highGray = baseGray |> mix 0.800 parWhite
 
 let hueRojo = 000.0
+let hueRust = 030.0
 let hueGold = 045.0
+let hueLime = 075.0
 let hueLeaf = 120.0
+let hueTeal = 175.0
 let hueBlue = 220.0
 let huePurp = 270.0
+let huePink = 310.0
 
 let richRojo = hsl hueRojo 1.000 0.500
 let richBlue = hsl hueBlue 1.000 0.500
 
 let baseRojo = hsl hueRojo 1.000 0.625
+let baseRust = hsl hueRust 1.000 0.500
 let baseGold = hsl hueGold 1.000 0.500
+let baseLime = hsl hueLime 1.000 0.375
 let baseLeaf = hsl hueLeaf 1.000 0.375
+let baseTeal = hsl hueTeal 1.000 0.375
 let baseBlue = hsl hueBlue 1.000 0.625
 let basePurp = hsl huePurp 1.000 0.625
+let basePink = hsl huePink 1.000 0.625
 
 let liteRojo = baseRojo |> mix 0.500 parWhite
+let liteRust = baseRust |> mix 0.500 parWhite
 let liteGold = baseGold |> mix 0.500 parWhite
+let liteLime = baseLime |> mix 0.500 parWhite
 let liteLeaf = baseLeaf |> mix 0.500 parWhite
+let liteTeal = baseTeal |> mix 0.500 parWhite
 let liteBlue = baseBlue |> mix 0.500 parWhite
 let litePurp = basePurp |> mix 0.500 parWhite
+let litePink = basePink |> mix 0.500 parWhite
 
 let darkRojo = baseRojo |> mix 0.375 parBlack
+let darkRust = baseRust |> mix 0.375 parBlack
 let darkGold = baseGold |> mix 0.375 parBlack
+let darkLime = baseLime |> mix 0.375 parBlack
 let darkLeaf = baseLeaf |> mix 0.375 parBlack
+let darkTeal = baseTeal |> mix 0.375 parBlack
 let darkBlue = baseBlue |> mix 0.375 parBlack
 let darkPurp = basePurp |> mix 0.375 parBlack
+let darkPink = basePink |> mix 0.375 parBlack
 
 //-------------------------------------------------------------------------------------------------
 
@@ -98,22 +114,34 @@ let private colordef =
         serialize (nameof richBlue) richBlue
         ""
         serialize (nameof baseRojo) baseRojo
+        serialize (nameof baseRust) baseRust
         serialize (nameof baseGold) baseGold
+        serialize (nameof baseLime) baseLime
         serialize (nameof baseLeaf) baseLeaf
+        serialize (nameof baseTeal) baseTeal
         serialize (nameof baseBlue) baseBlue
         serialize (nameof basePurp) basePurp
+        serialize (nameof basePink) basePink
         ""
         serialize (nameof liteRojo) liteRojo
+        serialize (nameof liteRust) liteRust
         serialize (nameof liteGold) liteGold
+        serialize (nameof liteLime) liteLime
         serialize (nameof liteLeaf) liteLeaf
+        serialize (nameof liteTeal) liteTeal
         serialize (nameof liteBlue) liteBlue
         serialize (nameof litePurp) litePurp
+        serialize (nameof litePink) litePink
         ""
         serialize (nameof darkRojo) darkRojo
+        serialize (nameof darkRust) darkRust
         serialize (nameof darkGold) darkGold
+        serialize (nameof darkLime) darkLime
         serialize (nameof darkLeaf) darkLeaf
+        serialize (nameof darkTeal) darkTeal
         serialize (nameof darkBlue) darkBlue
         serialize (nameof darkPurp) darkPurp
+        serialize (nameof darkPink) darkPink
         |]
 
     colors |> String.concat "\n"
