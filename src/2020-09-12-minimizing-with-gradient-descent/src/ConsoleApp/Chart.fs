@@ -63,11 +63,11 @@ set format y '%4.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor '#808080'
-set style fill solid border linecolor '#ffffff'
+set linetype 1 linewidth 1 linecolor rgb liteGray
+set style fill solid border linecolor rgb parWhite
 
 plot $data0 using 1:2 with boxes title 'Probability Mass',\
-     $data0 using 1:(0.024):3 with labels notitle textcolor '#ffffff'
+     $data0 using 1:(0.024):3 with labels notitle textcolor rgb darkGray
 "
 
 let renderPmfunc path pmfunc =

@@ -29,8 +29,8 @@ set format y '%4.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor '#808080'
-set style fill solid border linecolor '#ffffff'
+set linetype 1 linewidth 1 linecolor rgb liteGray
+set style fill solid border linecolor rgb parWhite
 
 plot $data0 using 1:2 with boxes title 'Probability Mass'
 "
@@ -78,17 +78,17 @@ set format y '%4.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor '#80a080'
-set linetype 2 pointtype 7 linecolor '#a060a0'
-set linetype 3 linewidth 2 linecolor '#a060a0'
-set linetype 4 linewidth 1 linecolor '#908090'
-set style fill solid border linecolor '#ffffff'
+set linetype 1 linewidth 1 linecolor rgb liteLeaf
+set linetype 2 pointtype 7 linecolor rgb baseBlue
+set linetype 3 linewidth 2 linecolor rgb baseBlue
+set linetype 4 linewidth 1 linecolor rgb liteBlue
+set style fill solid border linecolor rgb parWhite
 
 if (n <= 10) {{
     xa = n + 1
     xb = n + 1 + degree
     plot $data0 using 1:2 with boxes title 'Coin Bias',\
-         $data0 using 1:2:(sprintf('p_%i', $1)) every ::xa::xb with labels offset -0.5,-1.0 point linetype 2 textcolor '#ffffff' notitle,\
+         $data0 using 1:2:(sprintf('p_%i', $1)) every ::xa::xb with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkLeaf notitle,\
          $data1 using 1:2 with lines notitle
 }}
 

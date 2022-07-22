@@ -30,12 +30,12 @@ set format y '%4.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor '#808080'
-set style fill solid border linecolor '#ffffff'
+set linetype 1 linewidth 1 linecolor rgb liteGray
+set style fill solid border linecolor rgb parWhite
 
 if (n <= 4) {{
     plot $data0 using 1:2 with boxes title 'Probability Mass',\
-         $data0 using 1:(0.024):3 with labels notitle textcolor '#ffffff'
+         $data0 using 1:(0.024):3 with labels notitle textcolor rgb darkGray
 }} else {{
     plot $data0 using 1:2 with boxes title 'Probability Mass'
 }}
@@ -75,13 +75,12 @@ set format y '%4.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor '#80a080'
-set style fill solid border linecolor '#ffffff'
+set linetype 1 linewidth 1 linecolor rgb liteLeaf
+set style fill solid border linecolor rgb parWhite
 
 if (n <= 4) {{
     plot $data0 using 1:2 with boxes title 'Coin Bias',\
-         $data0 using 1:($3 == '0.00%' ? 0.04 : 1/0):3 with labels notitle textcolor '#607860',\
-         $data0 using 1:($3 != '0.00%' ? 0.04 : 1/0):3 with labels notitle textcolor '#ffffff'
+         $data0 using 1:(0.04):3 with labels notitle textcolor rgb darkLeaf
 }} else {{
     plot $data0 using 1:2 with boxes title 'Coin Bias'
 }}

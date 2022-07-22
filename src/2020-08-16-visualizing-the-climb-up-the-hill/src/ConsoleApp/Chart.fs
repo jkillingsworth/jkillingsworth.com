@@ -63,11 +63,11 @@ set format y '%4.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor '#808080'
-set style fill solid border linecolor '#ffffff'
+set linetype 1 linewidth 1 linecolor rgb liteGray
+set style fill solid border linecolor rgb parWhite
 
 plot $data0 using 1:2 with boxes title 'Probability Mass',\
-     $data0 using 1:(0.024):3 with labels notitle textcolor '#ffffff'
+     $data0 using 1:(0.024):3 with labels notitle textcolor rgb darkGray
 "
 
 let renderPmfunc path pmfunc =
@@ -104,12 +104,11 @@ set format y '%4.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor '#80a080'
-set style fill solid border linecolor '#ffffff'
+set linetype 1 linewidth 1 linecolor rgb liteLeaf
+set style fill solid border linecolor rgb parWhite
 
 plot $data0 using 1:2 with boxes title 'Coin Bias',\
-     $data0 using 1:($3 == '0.00%' ? 0.04 : 1/0):3 with labels notitle textcolor '#607860',\
-     $data0 using 1:($3 != '0.00%' ? 0.04 : 1/0):3 with labels notitle textcolor '#ffffff'
+     $data0 using 1:(0.04):3 with labels notitle textcolor rgb darkLeaf
 "
 
 let renderBiases path biases =
@@ -130,7 +129,7 @@ $data0 << EOD
 {0}
 EOD
 
-n = {1}
+n = {1}; liteBlueGray = {2}; liteRojoGray = {3}; darkBlueGray = {4}; darkRojoGray = {5}
 
 set xlabel 'Sequence'
 set xrange [-1:(2**n)]
@@ -142,21 +141,20 @@ set format y '%4.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor '#80b0e0'
-set linetype 2 linewidth 1 linecolor '#8098b0'
-set linetype 3 linewidth 1 linecolor '#b08080'
-set linetype 4 linewidth 1 linecolor '#e08080'
-set style fill solid border linecolor '#ffffff'
+set linetype 1 linewidth 1 linecolor rgb liteBlue
+set linetype 2 linewidth 1 linecolor rgb liteBlueGray
+set linetype 3 linewidth 1 linecolor rgb liteRojoGray
+set linetype 4 linewidth 1 linecolor rgb liteRojo
+set style fill solid border linecolor rgb parWhite
 
 plot $data0 using 1:($3 == 0 ? $2 : 0):xtic(4) with boxes title '0 Heads, 4 Tails',\
      $data0 using 1:($3 == 1 ? $2 : 0):xtic(4) with boxes title '1 Heads, 3 Tails',\
      $data0 using 1:($3 == 2 ? $2 : 0):xtic(4) with boxes title '2 Heads, 2 Tails',\
      $data0 using 1:($3 == 3 ? $2 : 0):xtic(4) with boxes title '3 Heads, 1 Tails',\
-     $data0 using 1:($5 == '0.00%' && $3 == 0 ? 0.012 : 1/0):5 with labels notitle textcolor '#80b0e0',\
-     $data0 using 1:($5 == '0.00%' && $3 == 1 ? 0.012 : 1/0):5 with labels notitle textcolor '#8098b0',\
-     $data0 using 1:($5 == '0.00%' && $3 == 2 ? 0.012 : 1/0):5 with labels notitle textcolor '#b08080',\
-     $data0 using 1:($5 == '0.00%' && $3 == 3 ? 0.012 : 1/0):5 with labels notitle textcolor '#e08080',\
-     $data0 using 1:($5 != '0.00%' ? 0.012 : 1/0):5 with labels notitle textcolor '#ffffff'
+     $data0 using 1:($3 == 0 ? 0.012 : 1/0):5 with labels notitle textcolor rgb darkBlue,\
+     $data0 using 1:($3 == 1 ? 0.012 : 1/0):5 with labels notitle textcolor rgb darkBlueGray,\
+     $data0 using 1:($3 == 2 ? 0.012 : 1/0):5 with labels notitle textcolor rgb darkRojoGray,\
+     $data0 using 1:($3 == 3 ? 0.012 : 1/0):5 with labels notitle textcolor rgb darkRojo
 "
 
 let renderTosses path tosses =
@@ -174,7 +172,12 @@ let renderTosses path tosses =
         |> Array.mapi (fun i (s, x) -> sprintf "%O %O %O %s %s" i x (color s) s (percent x))
         |> String.concat "\n"
 
-    render path plotTosses [| data0; n |]
+    let liteBlueGray = liteBlue |> mix 0.5 liteGray |> rgbToInt
+    let liteRojoGray = liteRojo |> mix 0.5 liteGray |> rgbToInt
+    let darkBlueGray = darkBlue |> mix 0.5 darkGray |> rgbToInt
+    let darkRojoGray = darkRojo |> mix 0.5 darkGray |> rgbToInt
+
+    render path plotTosses [| data0; n; liteBlueGray; liteRojoGray; darkBlueGray; darkRojoGray |]
 
 //-------------------------------------------------------------------------------------------------
 
