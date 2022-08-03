@@ -153,6 +153,9 @@ set terminal svg size 720 405 font 'monospace'
 set encoding utf8
 set output '{0}'
 
+pcolorDef(x) = sprintf('#%06x', x)
+pcolorGet(x) = palette(x * 20 - 10)
+
 {1}
 
 set style line 1 linewidth 1 linecolor rgb highGray
