@@ -4,10 +4,11 @@ open System
 open System.Diagnostics
 open System.IO
 open System.Text
+open Wacton.Unicolour
 
 //-------------------------------------------------------------------------------------------------
 
-let hsl h s l =
+let private hsl h s l =
 
     let h = h / 60.0
     let c = s * (1.0 - abs (2.0 * l - 1.0))
@@ -24,9 +25,13 @@ let hsl h s l =
         | h when h >= 5 && h < 6 -> (c, 0.0, x)
         | _ -> failwith "Unexpected hue."
 
-    (r + m, g + m, b + m)
+    let r = r + m
+    let g = g + m
+    let b = b + m
 
-let mix ratio (r1, g1, b1) (r2, g2, b2) =
+    (r, g, b)
+
+let private blend ratio (r1, g1, b1) (r2, g2, b2) =
 
     let r = (r1 * ratio) + (r2 * (1.0 - ratio))
     let g = (g1 * ratio) + (g2 * (1.0 - ratio))
@@ -34,7 +39,23 @@ let mix ratio (r1, g1, b1) (r2, g2, b2) =
 
     (r, g, b)
 
-let rgbToInt (r, g, b) =
+let private adjustChroma f (r, g, b) =
+
+    let color = (r, g, b).ToValueTuple() |> Unicolour.FromRgb
+
+    let l = color.Oklch.L
+    let c = color.Oklch.C |> f
+    let h = color.Oklch.H
+
+    let color = (l, c, h).ToValueTuple() |> Unicolour.FromOklch
+
+    let r = Math.Round(color.Rgb.R, 15)
+    let g = Math.Round(color.Rgb.G, 15)
+    let b = Math.Round(color.Rgb.B, 15)
+
+    (r, g, b)
+
+let private rgbToInt (r, g, b) =
 
     let r = int (round (r * 255.0)) <<< 16
     let g = int (round (g * 255.0)) <<< 08
@@ -44,56 +65,94 @@ let rgbToInt (r, g, b) =
 
 //-------------------------------------------------------------------------------------------------
 
-let parWhite = hsl 000.0 0.000 1.000
-let parBlack = hsl 000.0 0.000 0.000
+let parWhite = hsl 000.0 0.0 1.00000
+let parBlack = hsl 000.0 0.0 0.00000
 
-let baseGray = parWhite |> mix 0.500 parBlack
-let liteGray = baseGray |> mix 0.500 parWhite
-let darkGray = baseGray |> mix 0.375 parBlack
-let highGray = baseGray |> mix 0.800 parWhite
+let private hueRojo = 000.0
+let private hueRust = 030.0
+let private hueGold = 045.0
+let private hueLime = 075.0
+let private hueMint = 120.0
+let private hueTeal = 185.0
+let private hueBlue = 220.0
+let private huePurp = 265.0
+let private huePink = 315.0
 
-let hueRojo = 000.0
-let hueRust = 030.0
-let hueGold = 045.0
-let hueLime = 075.0
-let hueMint = 120.0
-let hueTeal = 175.0
-let hueBlue = 220.0
-let huePurp = 270.0
-let huePink = 310.0
+let private fade = adjustChroma ((*) 0.50)
+let private lite = adjustChroma (min 0.12) << blend 0.500 parWhite
+let private dark = adjustChroma (min 0.15) << blend 0.375 parBlack
+let private high = adjustChroma (min 0.06) << blend 0.800 parWhite
+let private deep = adjustChroma (min 0.05) << blend 0.875 parBlack
 
-let richRojo = hsl hueRojo 1.000 0.500
-let richBlue = hsl hueBlue 1.000 0.500
+let baseGray = parWhite |> blend 0.500 parBlack
+let liteGray = baseGray |> lite
+let darkGray = baseGray |> dark
+let highGray = baseGray |> high
+let deepGray = baseGray |> deep
 
-let baseRojo = hsl hueRojo 1.000 0.625
-let baseRust = hsl hueRust 1.000 0.500
-let baseGold = hsl hueGold 1.000 0.500
-let baseLime = hsl hueLime 1.000 0.375
-let baseMint = hsl hueMint 1.000 0.375
-let baseTeal = hsl hueTeal 1.000 0.375
-let baseBlue = hsl hueBlue 1.000 0.625
-let basePurp = hsl huePurp 1.000 0.625
-let basePink = hsl huePink 1.000 0.625
+let richRojo = hsl hueRojo 1.0 0.50000
+let richMint = hsl hueMint 1.0 0.50000
+let richBlue = hsl hueBlue 1.0 0.50000
 
-let liteRojo = baseRojo |> mix 0.500 parWhite
-let liteRust = baseRust |> mix 0.500 parWhite
-let liteGold = baseGold |> mix 0.500 parWhite
-let liteLime = baseLime |> mix 0.500 parWhite
-let liteMint = baseMint |> mix 0.500 parWhite |> mix 0.250 liteGray
-let liteTeal = baseTeal |> mix 0.500 parWhite
-let liteBlue = baseBlue |> mix 0.500 parWhite
-let litePurp = basePurp |> mix 0.500 parWhite
-let litePink = basePink |> mix 0.500 parWhite
+let baseRojo = hsl hueRojo 1.0 0.62500
+let baseRust = hsl hueRust 1.0 0.50000
+let baseGold = hsl hueGold 1.0 0.50000
+let baseLime = hsl hueLime 1.0 0.40625
+let baseMint = hsl hueMint 1.0 0.37500
+let baseTeal = hsl hueTeal 1.0 0.40625
+let baseBlue = hsl hueBlue 1.0 0.62500
+let basePurp = hsl huePurp 1.0 0.68750
+let basePink = hsl huePink 1.0 0.68750
 
-let darkRojo = baseRojo |> mix 0.375 parBlack
-let darkRust = baseRust |> mix 0.375 parBlack
-let darkGold = baseGold |> mix 0.375 parBlack
-let darkLime = baseLime |> mix 0.375 parBlack
-let darkMint = baseMint |> mix 0.375 parBlack
-let darkTeal = baseTeal |> mix 0.375 parBlack
-let darkBlue = baseBlue |> mix 0.375 parBlack
-let darkPurp = basePurp |> mix 0.375 parBlack
-let darkPink = basePink |> mix 0.375 parBlack
+let fadeRojo = baseRojo |> fade
+let fadeRust = baseRust |> fade
+let fadeGold = baseGold |> fade
+let fadeLime = baseLime |> fade
+let fadeMint = baseMint |> fade
+let fadeTeal = baseTeal |> fade
+let fadeBlue = baseBlue |> fade
+let fadePurp = basePurp |> fade
+let fadePink = basePink |> fade
+
+let liteRojo = baseRojo |> lite
+let liteRust = baseRust |> lite
+let liteGold = baseGold |> lite
+let liteLime = baseLime |> lite
+let liteMint = baseMint |> lite
+let liteTeal = baseTeal |> lite
+let liteBlue = baseBlue |> lite
+let litePurp = basePurp |> lite
+let litePink = basePink |> lite
+
+let darkRojo = baseRojo |> dark
+let darkRust = baseRust |> dark
+let darkGold = baseGold |> dark
+let darkLime = baseLime |> dark
+let darkMint = baseMint |> dark
+let darkTeal = baseTeal |> dark
+let darkBlue = baseBlue |> dark
+let darkPurp = basePurp |> dark
+let darkPink = basePink |> dark
+
+let highRojo = baseRojo |> high
+let highRust = baseRust |> high
+let highGold = baseGold |> high
+let highLime = baseLime |> high
+let highMint = baseMint |> high
+let highTeal = baseTeal |> high
+let highBlue = baseBlue |> high
+let highPurp = basePurp |> high
+let highPink = basePink |> high
+
+let deepRojo = baseRojo |> deep
+let deepRust = baseRust |> deep
+let deepGold = baseGold |> deep
+let deepLime = baseLime |> deep
+let deepMint = baseMint |> deep
+let deepTeal = baseTeal |> deep
+let deepBlue = baseBlue |> deep
+let deepPurp = basePurp |> deep
+let deepPink = basePink |> deep
 
 //-------------------------------------------------------------------------------------------------
 
@@ -109,8 +168,10 @@ let private colordef =
         serialize (nameof liteGray) liteGray
         serialize (nameof darkGray) darkGray
         serialize (nameof highGray) highGray
+        serialize (nameof deepGray) deepGray
         ""
         serialize (nameof richRojo) richRojo
+        serialize (nameof richMint) richMint
         serialize (nameof richBlue) richBlue
         ""
         serialize (nameof baseRojo) baseRojo
@@ -122,6 +183,16 @@ let private colordef =
         serialize (nameof baseBlue) baseBlue
         serialize (nameof basePurp) basePurp
         serialize (nameof basePink) basePink
+        ""
+        serialize (nameof fadeRojo) fadeRojo
+        serialize (nameof fadeRust) fadeRust
+        serialize (nameof fadeGold) fadeGold
+        serialize (nameof fadeLime) fadeLime
+        serialize (nameof fadeMint) fadeMint
+        serialize (nameof fadeTeal) fadeTeal
+        serialize (nameof fadeBlue) fadeBlue
+        serialize (nameof fadePurp) fadePurp
+        serialize (nameof fadePink) fadePink
         ""
         serialize (nameof liteRojo) liteRojo
         serialize (nameof liteRust) liteRust
@@ -142,6 +213,26 @@ let private colordef =
         serialize (nameof darkBlue) darkBlue
         serialize (nameof darkPurp) darkPurp
         serialize (nameof darkPink) darkPink
+        ""
+        serialize (nameof highRojo) highRojo
+        serialize (nameof highRust) highRust
+        serialize (nameof highGold) highGold
+        serialize (nameof highLime) highLime
+        serialize (nameof highMint) highMint
+        serialize (nameof highTeal) highTeal
+        serialize (nameof highBlue) highBlue
+        serialize (nameof highPurp) highPurp
+        serialize (nameof highPink) highPink
+        ""
+        serialize (nameof deepRojo) deepRojo
+        serialize (nameof deepRust) deepRust
+        serialize (nameof deepGold) deepGold
+        serialize (nameof deepLime) deepLime
+        serialize (nameof deepMint) deepMint
+        serialize (nameof deepTeal) deepTeal
+        serialize (nameof deepBlue) deepBlue
+        serialize (nameof deepPurp) deepPurp
+        serialize (nameof deepPink) deepPink
         |]
 
     colors |> String.concat "\n"
