@@ -68,7 +68,7 @@ set key reverse Left
 set linetype 1 linewidth 1 linecolor rgb highGray
 if (style eq 'N') {{ set linetype 2 linewidth 2 linecolor rgb baseRojo }}
 if (style eq 'L') {{ set linetype 2 linewidth 2 linecolor rgb baseBlue }}
-if (style eq 'G') {{ set linetype 2 linewidth 2 linecolor rgb baseLeaf }}
+if (style eq 'G') {{ set linetype 2 linewidth 2 linecolor rgb baseMint }}
 set style fill solid border linecolor rgb liteGray
 
 plot $data0 using 1:2 with boxes title 'Histogram',\

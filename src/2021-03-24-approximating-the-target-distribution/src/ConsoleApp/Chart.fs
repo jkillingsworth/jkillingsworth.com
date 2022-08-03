@@ -99,7 +99,7 @@ set format y '%4.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor rgb liteLeaf
+set linetype 1 linewidth 1 linecolor rgb liteMint
 set linetype 2 pointtype 7 linecolor rgb baseBlue
 set linetype 3 pointtype 7 linecolor rgb baseBlue
 set linetype 4 linewidth 2 linecolor rgb baseBlue
@@ -114,7 +114,7 @@ if (style == 1) {{
     sa = n + n - 1
     plot $data0 using 1:2 with boxes title 'Coin Bias',\
          $data0 using 1:(p0=$2):(1/0) every ::s0::s0 with labels offset -0.5,-1.0 point linetype 2 notitle,\
-         $data0 using 1:(pa=$2):('a') every ::sa::sa with labels offset -0.5,-1.0 point linetype 3 textcolor rgb darkLeaf title sprintf('a = %0.4f', pa),\
+         $data0 using 1:(pa=$2):('a') every ::sa::sa with labels offset -0.5,-1.0 point linetype 3 textcolor rgb darkMint title sprintf('a = %0.4f', pa),\
          $data0 using 1:2 every ::s0::sa with lines notitle
 }}
 
@@ -122,8 +122,8 @@ if (style == 2) {{
     sa = n + 1
     sb = n + n - 1
     plot $data0 using 1:2 with boxes title 'Coin Bias',\
-         $data0 using 1:(pa=$2):('a') every ::sa::sa with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkLeaf title sprintf('a = %0.4f', pa),\
-         $data0 using 1:(pb=$2):('b') every ::sb::sb with labels offset -0.5,-1.0 point linetype 3 textcolor rgb darkLeaf title sprintf('b = %0.4f', pb),\
+         $data0 using 1:(pa=$2):('a') every ::sa::sa with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkMint title sprintf('a = %0.4f', pa),\
+         $data0 using 1:(pb=$2):('b') every ::sb::sb with labels offset -0.5,-1.0 point linetype 3 textcolor rgb darkMint title sprintf('b = %0.4f', pb),\
          $data0 using 1:2 every ::sa::sb with lines notitle
 }}
 "

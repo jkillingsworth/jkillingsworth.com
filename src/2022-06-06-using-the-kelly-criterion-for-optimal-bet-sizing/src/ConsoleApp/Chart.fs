@@ -25,7 +25,7 @@ set key top left
 set key reverse Left
 
 set linetype 1 linewidth 2 linecolor rgb baseRojo
-set linetype 2 linewidth 2 linecolor rgb baseLeaf
+set linetype 2 linewidth 2 linecolor rgb baseMint
 set linetype 3 linewidth 2 linecolor rgb baseBlue
 
 plot $data0 using 1:2 with lines title 'Simulation A',\
@@ -171,7 +171,7 @@ set format y '%+5.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 2 linecolor rgb baseLeaf
+set linetype 1 linewidth 2 linecolor rgb baseMint
 set linetype 2 linewidth 2 linecolor rgb baseRojo
 
 plot $data0 using 1:($2 >= 0 ? $2 : 1/0) with lines title 'Positive',\
@@ -228,7 +228,7 @@ set key top left
 set key reverse Left
 
 set linetype 1 linewidth 2 linecolor rgb liteGray
-set linetype 2 linewidth 2 linecolor rgb baseLeaf
+set linetype 2 linewidth 2 linecolor rgb baseMint
 set linetype 3 linewidth 2 linecolor rgb baseRojo
 
 plot $data0 using ($1 <= 0 ? $1 : 1/0):2 linetype 1 with lines notitle,\

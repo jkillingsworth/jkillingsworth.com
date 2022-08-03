@@ -127,8 +127,8 @@ if (style eq 'ma') {{
 }}
 
 if (style eq 'ph') {{
-    set linetype 2 linewidth 2 linecolor rgb baseLeaf
-    set linetype 3 pointtype 7 linecolor rgb baseLeaf
+    set linetype 2 linewidth 2 linecolor rgb baseMint
+    set linetype 3 pointtype 7 linecolor rgb baseMint
 }}
 
 plot $data0 using 1:2 with lines notitle,\

@@ -104,11 +104,11 @@ set format y '%4.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor rgb liteLeaf
+set linetype 1 linewidth 1 linecolor rgb liteMint
 set style fill solid border linecolor rgb parWhite
 
 plot $data0 using 1:2 with boxes title 'Coin Bias',\
-     $data0 using 1:(0.04):3 with labels notitle textcolor rgb darkLeaf
+     $data0 using 1:(0.04):3 with labels notitle textcolor rgb darkMint
 "
 
 let renderBiases path biases =

@@ -103,7 +103,7 @@ set format y '%4.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor rgb liteLeaf
+set linetype 1 linewidth 1 linecolor rgb liteMint
 set linetype 2 pointtype 7 linecolor rgb baseBlue
 set linetype 3 linewidth 2 linecolor rgb baseBlue
 set style fill solid border linecolor rgb parWhite
@@ -116,7 +116,7 @@ if (style == 1) {{
     x1 = n + 1
     x2 = n + 2
     plot $data0 using 1:2 with boxes title 'Coin Bias',\
-         $data0 using 1:2:(sprintf('p_%i', $1)) every ::x1::x2 with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkLeaf notitle,\
+         $data0 using 1:2:(sprintf('p_%i', $1)) every ::x1::x2 with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkMint notitle,\
          $data1 using 1:2 with lines notitle
 }}
 
@@ -124,7 +124,7 @@ if (style == 2) {{
     x1 = n + 1
     x3 = n + 3
     plot $data0 using 1:2 with boxes title 'Coin Bias',\
-         $data0 using 1:2:(sprintf('p_%i', $1)) every ::x1::x3 with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkLeaf notitle,\
+         $data0 using 1:2:(sprintf('p_%i', $1)) every ::x1::x3 with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkMint notitle,\
          $data1 using 1:2 with lines notitle
 }}
 
@@ -132,7 +132,7 @@ if (style == 3) {{
     x1 = n + 1
     x4 = n + 4
     plot $data0 using 1:2 with boxes title 'Coin Bias',\
-         $data0 using 1:2:(sprintf('p_%i', $1)) every ::x1::x4 with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkLeaf notitle,\
+         $data0 using 1:2:(sprintf('p_%i', $1)) every ::x1::x4 with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkMint notitle,\
          $data1 using 1:2 with lines notitle
 }}
 "

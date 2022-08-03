@@ -113,7 +113,7 @@ set format y '%4.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor rgb liteLeaf
+set linetype 1 linewidth 1 linecolor rgb liteMint
 set linetype 2 pointtype 7 linecolor rgb baseBlue
 set linetype 3 linewidth 2 linecolor rgb baseBlue
 set linetype 4 linewidth 1 linecolor rgb liteBlue
@@ -127,7 +127,7 @@ if (style == 1 && n <= 10) {{
     x1 = n + 1
     x2 = n + 2
     plot $data0 using 1:2 with boxes title 'Coin Bias',\
-         $data0 using 1:2:(sprintf('p_%i', $1)) every ::x1::x2 with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkLeaf notitle,\
+         $data0 using 1:2:(sprintf('p_%i', $1)) every ::x1::x2 with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkMint notitle,\
          $data1 using 1:2 with lines notitle
 }}
 
@@ -135,7 +135,7 @@ if (style == 2 && n <= 10) {{
     x1 = n + 1
     x3 = n + 3
     plot $data0 using 1:2 with boxes title 'Coin Bias',\
-         $data0 using 1:2:(sprintf('p_%i', $1)) every ::x1::x3 with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkLeaf notitle,\
+         $data0 using 1:2:(sprintf('p_%i', $1)) every ::x1::x3 with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkMint notitle,\
          $data1 using 1:2 with lines notitle
 }}
 
@@ -143,7 +143,7 @@ if (style == 3 && n <= 10) {{
     x1 = n + 1
     x4 = n + 4
     plot $data0 using 1:2 with boxes title 'Coin Bias',\
-         $data0 using 1:2:(sprintf('p_%i', $1)) every ::x1::x4 with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkLeaf notitle,\
+         $data0 using 1:2:(sprintf('p_%i', $1)) every ::x1::x4 with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkMint notitle,\
          $data1 using 1:2 with lines notitle
 }}
 
@@ -340,7 +340,7 @@ set key reverse Left
 
 set linetype 1 linewidth 2 linecolor rgb baseRojo
 set linetype 2 linewidth 2 linecolor rgb baseBlue
-set linetype 3 linewidth 2 linecolor rgb baseLeaf
+set linetype 3 linewidth 2 linecolor rgb baseMint
 
 plot $data0 using 1:2 with lines title 'Matrix Product (R-Associative)',\
      $data0 using 1:3 with lines title 'Matrix Product (L-Associative)',\

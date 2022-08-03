@@ -33,7 +33,7 @@ set format y '%4.2f'
 set key top right
 set key noreverse Right
 
-set linetype 1 linewidth 6 linecolor rgb baseLeaf
+set linetype 1 linewidth 6 linecolor rgb baseMint
 set linetype 2 linewidth 6 linecolor rgb baseRojo
 set linetype 3 linewidth 6 linecolor rgb baseGray
 

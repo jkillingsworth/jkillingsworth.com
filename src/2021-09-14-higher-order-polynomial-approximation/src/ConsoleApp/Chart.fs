@@ -78,7 +78,7 @@ set format y '%4.2f'
 set key top left
 set key reverse Left
 
-set linetype 1 linewidth 1 linecolor rgb liteLeaf
+set linetype 1 linewidth 1 linecolor rgb liteMint
 set linetype 2 pointtype 7 linecolor rgb baseBlue
 set linetype 3 linewidth 2 linecolor rgb baseBlue
 set linetype 4 linewidth 1 linecolor rgb liteBlue
@@ -88,7 +88,7 @@ if (n <= 10) {{
     xa = n + 1
     xb = n + 1 + degree
     plot $data0 using 1:2 with boxes title 'Coin Bias',\
-         $data0 using 1:2:(sprintf('p_%i', $1)) every ::xa::xb with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkLeaf notitle,\
+         $data0 using 1:2:(sprintf('p_%i', $1)) every ::xa::xb with labels offset -0.5,-1.0 point linetype 2 textcolor rgb darkMint notitle,\
          $data1 using 1:2 with lines notitle
 }}
 
