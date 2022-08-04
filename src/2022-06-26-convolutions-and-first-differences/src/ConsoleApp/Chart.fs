@@ -80,18 +80,18 @@ set key reverse Left
 
 if (style == 1) {{
     set linetype 1 linewidth 1 linecolor rgb liteBlue
-    colorPercent = darkBlue
+    darkText = darkBlue
 }}
 
 if (style == 2) {{
     set linetype 1 linewidth 1 linecolor rgb liteRojo
-    colorPercent = darkRojo
+    darkText = darkRojo
 }}
 
 set style fill solid border linecolor rgb parWhite
 
 plot $data0 using 1:2 with boxes title 'Probability Mass',\
-     $data0 using 1:(0.02):3 with labels notitle textcolor rgb colorPercent
+     $data0 using 1:(0.02):3 with labels notitle textcolor rgb darkText
 "
 
 let renderPmfunc path pmfunc style =

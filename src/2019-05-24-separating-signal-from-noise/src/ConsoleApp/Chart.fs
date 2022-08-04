@@ -153,8 +153,8 @@ set style fill solid border linecolor rgb liteGray
 
 set samples 1000
 
-distributionN(x,μ,σ) = (1 / (σ * ((2 * pi) ** 0.5))) * exp(-0.5 * ((x - μ) / σ) ** 2)
-distributionL(x,μ,b) = (1 / (2 * b)) * exp(-abs(x - μ) / b)
+distributionN(x, μ, σ) = (1 / (σ * ((2 * pi) ** 0.5))) * exp(- 0.5 * ((x - μ) / σ) ** 2)
+distributionL(x, μ, b) = (1 / (2 * b)) * exp(- abs(x - μ) / b)
 
 plot $data0 using 1:2 with boxes title 'Histogram',\
      distributionN(x, μN, σN) title 'Normal',\
