@@ -29,7 +29,7 @@ set key top left
 set key reverse Left
 set key title 'Time Domain'
 
-set linetype 1 linewidth 1 linecolor '#a0a0a0'
+set linetype 1 linewidth 1 linecolor rgb liteRojo
 set linetype 2 linewidth 2 linecolor rgb baseRojo
 set linetype 3 pointtype 7 linecolor rgb baseRojo
 
@@ -109,24 +109,26 @@ set key top left
 set key reverse Left
 set key title 'Frequency Domain'
 
-set linetype 1 linewidth 1 linecolor '#a0a0a0'
-
 if (style eq 're') {{
+    set linetype 1 linewidth 1 linecolor rgb liteBlue
     set linetype 2 linewidth 2 linecolor rgb baseBlue
     set linetype 3 pointtype 7 linecolor rgb baseBlue
 }}
 
 if (style eq 'im') {{
+    set linetype 1 linewidth 1 linecolor rgb liteGold
     set linetype 2 linewidth 2 linecolor rgb baseGold
     set linetype 3 pointtype 7 linecolor rgb baseGold
 }}
 
 if (style eq 'ma') {{
+    set linetype 1 linewidth 1 linecolor rgb litePurp
     set linetype 2 linewidth 2 linecolor rgb basePurp
     set linetype 3 pointtype 7 linecolor rgb basePurp
 }}
 
 if (style eq 'ph') {{
+    set linetype 1 linewidth 1 linecolor rgb liteMint
     set linetype 2 linewidth 2 linecolor rgb baseMint
     set linetype 3 pointtype 7 linecolor rgb baseMint
 }}
