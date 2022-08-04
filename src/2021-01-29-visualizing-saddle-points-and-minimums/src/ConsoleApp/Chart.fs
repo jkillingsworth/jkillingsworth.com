@@ -29,7 +29,7 @@ $data0 << EOD
 {0}
 EOD
 
-lower = {1}; upper = {2}; style = {3}
+lower = {1}; upper = {2}; mode = {3}; style = {4}
 
 stats $data0 using 1:2 matrix nooutput prefix 'data0'
 densityX = data0_size_x - 1
@@ -62,23 +62,34 @@ if (style == 1) {{ set view 30,30,1,1.8 }}
 if (style == 2) {{ set view 30,60,1,1.8 }}
 if (style == 3) {{ set view 60,60,1,1.2 }}
 
-set palette defined\
-(\
-0.00 pcolorDef(parBlack),\
-0.60 pcolorDef(fadePurp),\
-1.00 pcolorDef(highGray)\
-)
+if (mode == 1) {{
+    set palette defined\
+    (\
+    0.00 pcolorDef(parBlack),\
+    0.60 pcolorDef(fadePurp),\
+    1.00 pcolorDef(highGray)\
+    )
+}}
+
+if (mode == 2) {{
+    set palette defined\
+    (\
+    0.00 pcolorDef(parBlack),\
+    0.60 pcolorDef(fadePurp),\
+    1.00 pcolorDef(highBlue)\
+    )
+}}
 
 set linetype 1 linewidth 1 linecolor rgb (pcolorGet(0.50) + 0x80000000)
 
 splot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with lines title 'Surface Plot'
 "
 
-let renderSurface path heatmap (lower, upper) style =
+let renderSurface path heatmap (lower, upper) mode style =
 
     let data0 = matrix heatmap
 
-    render path plotSurface [| data0; lower; upper; style |]
+    render path plotSurface [| data0; lower; upper; mode; style |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -95,7 +106,7 @@ $data2 << EOD
 {2}
 EOD
 
-lower = {3}; upper = {4}; style = {5}
+lower = {3}; upper = {4}; mode = {5}; style = {6}
 
 stats $data0 using 1:2 matrix nooutput prefix 'data0'
 densityX = data0_size_x - 1
@@ -126,12 +137,23 @@ set key top left
 set key reverse Left
 set key textcolor rgb parWhite
 
-set palette defined\
-(\
-0.00 pcolorDef(parBlack),\
-0.60 pcolorDef(fadePurp),\
-1.00 pcolorDef(highGray)\
-)
+if (mode == 1) {{
+    set palette defined\
+    (\
+    0.00 pcolorDef(parBlack),\
+    0.60 pcolorDef(fadePurp),\
+    1.00 pcolorDef(highGray)\
+    )
+}}
+
+if (mode == 2) {{
+    set palette defined\
+    (\
+    0.00 pcolorDef(parBlack),\
+    0.60 pcolorDef(fadePurp),\
+    1.00 pcolorDef(highBlue)\
+    )
+}}
 
 set linetype 1 pointtype 7 linecolor rgb parWhite
 set linetype 2 linewidth 2 linecolor rgb parWhite dashtype 3
@@ -158,7 +180,7 @@ if (style == 2) {{
 }}
 "
 
-let renderHeatmap path heatmap (lower, upper) style optimum slice =
+let renderHeatmap path heatmap (lower, upper) mode style optimum slice =
 
     let data0 = matrix heatmap
 
@@ -169,7 +191,7 @@ let renderHeatmap path heatmap (lower, upper) style optimum slice =
         |> Array.map (fun (p, λ, v) -> sprintf "%O %O" p λ)
         |> String.concat "\n"
 
-    render path plotHeatmap [| data0; data1; data2; lower; upper; style |]
+    render path plotHeatmap [| data0; data1; data2; lower; upper; mode; style |]
 
 //-------------------------------------------------------------------------------------------------
 
@@ -182,7 +204,7 @@ $data1 << EOD
 {1}
 EOD
 
-lower = {2}; upper = {3}; style = {4}
+lower = {2}; upper = {3}; mode = {4}; style = {5}
 
 set xlabel 'Profile (p, λ)'
 set xrange [0:1]
@@ -196,17 +218,42 @@ set yrange [lower:upper]
 set ytics add ('0.0' 0)
 set format y '%+4.1f'
 
+set cblabel offset 1 'Value'
+set cbrange [lower:upper]
+set cbtics add ('\u00a00.0' 0)
+set format cb '%+4.1f'
+
 set key top left
 set key reverse Left
 
-set linetype 1 pointtype 7 linecolor rgb basePurp
-set linetype 2 linewidth 2 linecolor rgb basePurp
+if (mode == 1) {{
+    set palette defined\
+    (\
+    0.00 pcolorDef(parBlack),\
+    0.60 pcolorDef(fadePurp),\
+    1.00 pcolorDef(highGray)\
+    )
+}}
+
+if (mode == 2) {{
+    set palette defined\
+    (\
+    0.00 pcolorDef(parBlack),\
+    0.60 pcolorDef(fadePurp),\
+    1.00 pcolorDef(highBlue)\
+    )
+}}
+
+set linetype 1 pointtype 7 linecolor rgb darkPurp
+set linetype 2 linewidth 2 linecolor rgb darkPurp dashtype 3
+set linetype 3 linewidth 2 linecolor palette z
 
 plot $data0 using 1:2 with points linetype 1 title 'Optimum',\
-     $data1 using 1:2 with lines title sprintf('Slice %i', style)
+     $data1 using 1:2 with lines title sprintf('Slice %i', style),\
+     $data1 using 1:(1/0):2 with lines notitle
 "
 
-let renderProfile path samples (lower, upper) style optimum slice =
+let renderProfile path samples (lower, upper) mode style optimum slice =
 
     let data0 = sprintf "%O %O" (fst optimum) (snd optimum)
 
@@ -215,4 +262,4 @@ let renderProfile path samples (lower, upper) style optimum slice =
         |> Array.mapi (fun i (p, λ, v) -> sprintf "%O %O" (float i / float samples) v)
         |> String.concat "\n"
 
-    render path plotProfile [| data0; data1; lower; upper; style |]
+    render path plotProfile [| data0; data1; lower; upper; mode; style |]
