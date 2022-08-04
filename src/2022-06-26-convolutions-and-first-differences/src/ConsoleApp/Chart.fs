@@ -88,7 +88,9 @@ if (style == 2) {{
     colorPercent = darkRojo
 }}
 
-plot $data0 using 1:2 with boxes fill solid border linecolor '#ffffff' title 'Probability Mass',\
+set style fill solid border linecolor rgb parWhite
+
+plot $data0 using 1:2 with boxes title 'Probability Mass',\
      $data0 using 1:(0.02):3 with labels notitle textcolor rgb colorPercent
 "
 

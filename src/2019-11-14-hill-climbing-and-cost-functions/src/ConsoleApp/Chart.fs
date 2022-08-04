@@ -209,7 +209,7 @@ set ytics scale 1
 
 unset key
 
-set linetype 1 linewidth 0 linecolor '#ff000000'
+set linetype 1 linewidth 0 linecolor rgb (parBlack + 0xff000000)
 set linetype 2 linewidth 0 linecolor rgb highGray
 set linetype 3 linewidth 2 linecolor rgb baseGray
 set linetype 4 linewidth 2 linecolor rgb baseRojo dashtype 2
