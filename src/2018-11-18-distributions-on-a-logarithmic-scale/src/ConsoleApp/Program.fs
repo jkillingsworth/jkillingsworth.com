@@ -15,7 +15,7 @@ let μ = 0.0
 let σ = 1.0
 let b = 1.0
 
-let range = [| 0.0 .. 0.01 .. +100.0 |]
+let range = [| (log10 0.01) .. 0.01 .. (log10 100.0) |] |> Array.map (fun x -> 10.0 ** x)
 let densityN = range |> Array.map (Compute.densityN μ σ)
 let densityL = range |> Array.map (Compute.densityL μ b)
 let distributions = Array.zip3 range densityN densityL
