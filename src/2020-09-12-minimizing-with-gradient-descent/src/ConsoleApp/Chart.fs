@@ -125,14 +125,20 @@ set format cb '%4.2f'
 
 set key top left
 set key reverse Left
-set key textcolor '#ffffff'
+set key textcolor rgb parWhite
 
-set palette rgb 7,5,15
+set palette defined\
+(\
+0.00 pcolorDef(deepPurp),\
+0.25 pcolorDef(fadePurp),\
+0.50 pcolorDef(liteGray),\
+1.00 pcolorDef(parWhite)\
+)
 
-set linetype 1 linewidth 2 linecolor '#00ff00'
-set linetype 2 linewidth 2 linecolor '#ffffff'
-set linetype 3 pointtype 6 linecolor '#ffffff'
-set linetype 4 pointtype 7 linecolor '#ffffff'
+set linetype 1 linewidth 2 linecolor rgb richMint
+set linetype 2 linewidth 2 linecolor rgb parWhite
+set linetype 3 pointtype 6 linecolor rgb parWhite
+set linetype 4 pointtype 7 linecolor rgb parWhite
 
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
      $data1 using 1:2 with lines title 'Plateau',\

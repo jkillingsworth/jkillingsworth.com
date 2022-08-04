@@ -64,18 +64,12 @@ if (style == 3) {{ set view 60,60,1,1.2 }}
 
 set palette defined\
 (\
-0 '#000004',\
-1 '#1c1044',\
-2 '#4f127b',\
-3 '#812581',\
-4 '#b5367a',\
-5 '#e55964',\
-6 '#fb8761',\
-7 '#fec287',\
-8 '#fbfdbf' \
+0.00 pcolorDef(parBlack),\
+0.60 pcolorDef(fadePurp),\
+1.00 pcolorDef(highGray)\
 )
 
-set linetype 1 linewidth 1 linecolor '#812581'
+set linetype 1 linewidth 1 linecolor rgb (pcolorGet(0.50) + 0x80000000)
 
 splot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with lines title 'Surface Plot'
 "
@@ -130,23 +124,17 @@ set format cb '%+4.1f'
 
 set key top left
 set key reverse Left
-set key textcolor '#ffffff'
+set key textcolor rgb parWhite
 
 set palette defined\
 (\
-0 '#000004',\
-1 '#1c1044',\
-2 '#4f127b',\
-3 '#812581',\
-4 '#b5367a',\
-5 '#e55964',\
-6 '#fb8761',\
-7 '#fec287',\
-8 '#fbfdbf' \
+0.00 pcolorDef(parBlack),\
+0.60 pcolorDef(fadePurp),\
+1.00 pcolorDef(highGray)\
 )
 
-set linetype 1 pointtype 7 linecolor '#ffffff'
-set linetype 2 linewidth 2 linecolor '#ffffff' dashtype 3
+set linetype 1 pointtype 7 linecolor rgb parWhite
+set linetype 2 linewidth 2 linecolor rgb parWhite dashtype 3
 
 if (style == 0) {{
     plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
@@ -157,16 +145,16 @@ if (style == 1) {{
     plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
          $data1 using 1:2 with points title 'Optimum',\
          $data2 using 1:2 with lines title sprintf('Slice %i', style),\
-         $data2 using 1:2:('A') every ::a::a with labels offset +1.5,+1.3 textcolor '#ffffff' notitle,\
-         $data2 using 1:2:('B') every ::b::b with labels offset -1.5,-1.3 textcolor '#ffffff' notitle
+         $data2 using 1:2:('A') every ::a::a with labels offset +1.5,+1.3 textcolor rgb parWhite notitle,\
+         $data2 using 1:2:('B') every ::b::b with labels offset -1.5,-1.3 textcolor rgb parWhite notitle
 }}
 
 if (style == 2) {{
     plot $data0 using ($1/densityX):($2/densityY - 0.5):3 matrix with image pixels notitle,\
          $data1 using 1:2 with points title 'Optimum',\
          $data2 using 1:2 with lines title sprintf('Slice %i', style),\
-         $data2 using 1:2:('A') every ::a::a with labels offset -1.0,-0.7 textcolor '#ffffff' notitle,\
-         $data2 using 1:2:('B') every ::b::b with labels offset +1.0,+0.7 textcolor '#ffffff' notitle
+         $data2 using 1:2:('A') every ::a::a with labels offset -1.0,-0.7 textcolor rgb parWhite notitle,\
+         $data2 using 1:2:('B') every ::b::b with labels offset +1.0,+0.7 textcolor rgb parWhite notitle
 }}
 "
 

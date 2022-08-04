@@ -175,18 +175,13 @@ set view 30,30,1,1.8
 
 set palette defined\
 (\
-0 '#440154',\
-1 '#472c7a',\
-2 '#3b518b',\
-3 '#2c718e',\
-4 '#21908d',\
-5 '#27ad81',\
-6 '#5cc863',\
-7 '#aadc32',\
-8 '#fde725' \
+0.00 pcolorDef(deepPurp),\
+0.40 pcolorDef(fadePurp),\
+0.75 pcolorDef(liteRust),\
+1.00 pcolorDef(highRust)\
 )
 
-set linetype 1 linewidth 1 linecolor '#4021908d'
+set linetype 1 linewidth 1 linecolor rgb (pcolorGet(0.25) + 0x80000000)
 
 splot $data0 using ($1/densityX):($2/densityY):3 matrix with lines title 'Surface Plot'
 "
@@ -237,24 +232,19 @@ set format cb '%4.2f'
 
 set key top left
 set key reverse Left
-set key textcolor '#ffffff'
+set key textcolor rgb parWhite
 
 set palette defined\
 (\
-0 '#440154',\
-1 '#472c7a',\
-2 '#3b518b',\
-3 '#2c718e',\
-4 '#21908d',\
-5 '#27ad81',\
-6 '#5cc863',\
-7 '#aadc32',\
-8 '#fde725' \
+0.00 pcolorDef(deepPurp),\
+0.40 pcolorDef(fadePurp),\
+0.75 pcolorDef(liteRust),\
+1.00 pcolorDef(highRust)\
 )
 
-set linetype 1 linewidth 2 linecolor '#ffffff'
-set linetype 2 pointtype 6 linecolor '#ffffff'
-set linetype 3 pointtype 7 linecolor '#ffffff'
+set linetype 1 linewidth 2 linecolor rgb parWhite
+set linetype 2 pointtype 6 linecolor rgb parWhite
+set linetype 3 pointtype 7 linecolor rgb parWhite
 
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
      $data1 using 1:2 with lines title sprintf('Trace %s', tag),\

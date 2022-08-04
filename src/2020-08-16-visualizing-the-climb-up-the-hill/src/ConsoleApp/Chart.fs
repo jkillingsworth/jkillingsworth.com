@@ -235,9 +235,15 @@ set pm3d
 if (style == 1) {{ set view 30,30,1,1.8 }}
 if (style == 2) {{ set view 30,60,1,1.8 }}
 
-set palette rgb 7,5,15
+set palette defined\
+(\
+0.00 pcolorDef(deepPurp),\
+0.25 pcolorDef(fadePurp),\
+0.50 pcolorDef(liteGray),\
+1.00 pcolorDef(parWhite)\
+)
 
-set linetype 1 linewidth 1 linecolor '#9400d3'
+set linetype 1 linewidth 1 linecolor rgb (pcolorGet(0.25) + 0x80000000)
 
 splot $data0 using ($1/densityX):($2/densityY):3 matrix with lines title 'Surface Plot'
 "
@@ -278,11 +284,17 @@ set format cb '%4.2f'
 
 set key top left
 set key reverse Left
-set key textcolor '#ffffff'
+set key textcolor rgb parWhite
 
-set palette rgb 7,5,15
+set palette defined\
+(\
+0.00 pcolorDef(deepPurp),\
+0.25 pcolorDef(fadePurp),\
+0.50 pcolorDef(liteGray),\
+1.00 pcolorDef(parWhite)\
+)
 
-set linetype 1 linewidth 2 linecolor '#00ff00'
+set linetype 1 linewidth 2 linecolor rgb richMint
 
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
      $data1 using 1:2 with lines title 'Plateau'
@@ -343,14 +355,20 @@ set format cb '%4.2f'
 
 set key top left
 set key reverse Left
-set key textcolor '#ffffff'
+set key textcolor rgb parWhite
 
-set palette rgb 7,5,15
+set palette defined\
+(\
+0.00 pcolorDef(deepPurp),\
+0.25 pcolorDef(fadePurp),\
+0.50 pcolorDef(liteGray),\
+1.00 pcolorDef(parWhite)\
+)
 
-set linetype 1 linewidth 2 linecolor '#00ff00'
-set linetype 2 linewidth 2 linecolor '#ffffff'
-set linetype 3 pointtype 6 linecolor '#ffffff'
-set linetype 4 pointtype 7 linecolor '#ffffff'
+set linetype 1 linewidth 2 linecolor rgb richMint
+set linetype 2 linewidth 2 linecolor rgb parWhite
+set linetype 3 pointtype 6 linecolor rgb parWhite
+set linetype 4 pointtype 7 linecolor rgb parWhite
 
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
      $data1 using 1:2 with lines title 'Plateau',\
@@ -419,15 +437,31 @@ set format cb '%4.2f'
 
 set key top left
 set key reverse Left
-set key textcolor '#ffffff'
+set key textcolor rgb parWhite
 
-if (style == 1) {{ set palette defined (0 '#000000', 1 '#c0c0c0') }}
-if (style == 2) {{ set palette rgb 7,5,15 }}
+if (style == 1) {{
+    set palette defined\
+    (\
+    0.00 pcolorDef(deepBlue),\
+    0.65 pcolorDef(fadeBlue),\
+    1.00 pcolorDef(liteBlue)\
+    )
+}}
 
-set linetype 1 linewidth 2 linecolor '#00ff00'
-set linetype 2 pointtype 7 linecolor '#ffffff'
+if (style == 2) {{
+    set palette defined\
+    (\
+    0.00 pcolorDef(deepPurp),\
+    0.25 pcolorDef(fadePurp),\
+    0.50 pcolorDef(liteGray),\
+    1.00 pcolorDef(parWhite)\
+    )
+}}
 
-green(x) = (int((1 - x) * 240) << 24) + (int(255) << 8)
+set linetype 1 linewidth 2 linecolor rgb richMint
+set linetype 2 pointtype 7 linecolor rgb parWhite
+
+green(x) = richMint + (int((1 - x) * 240) << 24)
 
 plot $data0 using ($1/densityX):($2/densityY):3 matrix with image pixels notitle,\
      for [i=0:0] $data1 using 1:2:(mag=$3) every ::i-0::i+0 with lines linecolor rgb green(1.0) linewidth 2 title 'Plateau',\
