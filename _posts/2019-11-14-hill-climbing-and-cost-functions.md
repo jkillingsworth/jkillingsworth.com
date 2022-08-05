@@ -181,7 +181,7 @@ These are ascending weights instead of equal weights. If we revise the estimate 
 
 {% chart fig-14-estimate-slope-02-final-biases.svg %}
 
-As you can see, the final results found by the hill climbing algorithm depend on the initial estimate of the weights. Since there are multiple valid solutions, the hill we want to climb is actually a plateau that is flat at the top. To visualize, consider the following illustration:
+As you can see, the final results found by the hill climbing algorithm depend on the initial estimate of the weights. Since there are many valid solutions, the hill we want to climb is actually a plateau that is flat at the top. To visualize, consider the following illustration:
 
 {% chart fig-15-climb-hill-east.svg %}
 

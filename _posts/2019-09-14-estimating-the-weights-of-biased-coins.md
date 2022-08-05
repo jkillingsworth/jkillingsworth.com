@@ -75,7 +75,7 @@ In this model, the coin in the zero state is always a fair coin. A fair coin wil
     \end{document}
 {% endlatex %}
 
-Note that the positive and negative fourth states can only be terminal states, so there is never a transition out of them. Also, keep in mind that the Markov model does not necessarily have to be symmetrical. I chose to make it symmetrical to reduce the number of variables and simplify the model.
+Note that the positive and negative fourth states can only be terminal states, so there is never a transition out of them. Also, keep in mind that the Markov model does not necessarily have to be symmetrical. I chose to make it symmetrical to reduce the number of variables and to simplify the model.
 
 ## Monte Carlo Simulation
 
@@ -101,7 +101,7 @@ The values above can be presented visually on a chart like this:
 
 {% chart fig-04-binomial-equal-biases.svg %}
 
-In the Monte Carlo simulation, we use a random number generator to simulate the outcome of each coin toss. We record the terminal state after each round of four coin tosses. After running one million rounds of the coin toss game, the distribution of terminal states looks like this:
+In a Monte Carlo simulation, we use a random number generator to simulate the outcome of each coin toss. We record the terminal state after each round of four coin tosses. After running one million rounds of the coin toss game, the distribution of terminal states looks like this:
 
 {% chart fig-05-binomial-equal-pmfunc-simulated.svg %}
 
