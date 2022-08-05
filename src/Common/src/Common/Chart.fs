@@ -65,8 +65,8 @@ let private rgbToInt (r, g, b) =
 
 //-------------------------------------------------------------------------------------------------
 
-let parWhite = hsl 000.0 0.0 1.00000
-let parBlack = hsl 000.0 0.0 0.00000
+let parWhite = (1.0, 1.0, 1.0)
+let parBlack = (0.0, 0.0, 0.0)
 
 let private hueRojo = 000.0
 let private hueRust = 030.0
