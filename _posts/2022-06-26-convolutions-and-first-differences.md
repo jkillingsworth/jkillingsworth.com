@@ -40,11 +40,11 @@ The first differencing operation requires a sequential pair of input data points
     \begin{displaymath}
     h(t) =
     \begin{dcases}
-    +1              & \quad \text{if $t = 0$}
+    +1             & \quad \text{if $t = 0$}
     \\
-    -1              & \quad \text{if $t = 1$}
+    -1             & \quad \text{if $t = 1$}
     \\
-    \phantom{\pm} 0 & \quad \text{otherwise}
+    \phantom{\pm}0 & \quad \text{otherwise}
     \end{dcases}
     \end{displaymath}
     \end{document}
@@ -109,7 +109,7 @@ In the example above, the time series data was produced by generating a sequence
     \\
     0.20 & \quad \text{if $x = +1$}
     \\
-    0.40 & \quad \text{if $x = \phantom{\pm} 0$}
+    0.40 & \quad \text{if $x = \phantom{\pm}0$}
     \\
     0.20 & \quad \text{if $x = -1$}
     \\
@@ -150,7 +150,7 @@ Like before, the limits of the summation need not span an infinite range of valu
     \\
     0.20 & \quad \text{if $x = +1$}
     \\
-    0.26 & \quad \text{if $x = \phantom{\pm} 0$}
+    0.26 & \quad \text{if $x = \phantom{\pm}0$}
     \\
     0.20 & \quad \text{if $x = -1$}
     \\
@@ -181,7 +181,7 @@ What if the sequence of random numbers used to generate the time series is distr
     \begin{displaymath}
     f(x)
     =
-    \frac{1}{\sigma \sqrt{2 \pi}} \exp \2 \brace4[]{- \frac{(x - \mu)^2}{2 \sigma^2}}
+    \frac{1}{\sigma \sqrt{2 \pi}} \exp\2\brace4[]{ -\frac{(x - \mu)^2}{2 \sigma^2} }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -211,7 +211,7 @@ At first glance, this looks like a more dispersed version of the standard normal
     \begin{displaymath}
     g(x)
     =
-    \frac{1}{2 \sigma \sqrt{\pi}} \exp \2 \brace4[]{- \frac{(x - 2 \mu)^2}{4 \sigma^2}}
+    \frac{1}{2 \sigma \sqrt{\pi}} \exp\2\brace4[]{ -\frac{(x - 2 \mu)^2}{4 \sigma^2} }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -227,7 +227,7 @@ I am curious to see what happens if the distribution of the values in the initia
     \begin{displaymath}
     f(x)
     =
-    \frac{1}{2b} \exp \2 \brace3(){- \frac{|x - \mu|}{b}}
+    \frac{1}{2b} \exp\2\brace3(){ -\frac{|x - \mu|}{b} }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -251,7 +251,7 @@ Now let's say we know the distribution of the first differences. How do we work 
     \begin{displaymath}
     g(x)
     =
-    \frac{1}{2b} \exp \2 \brace3(){- \frac{|x - \mu|}{b}}
+    \frac{1}{2b} \exp\2\brace3(){ -\frac{|x - \mu|}{b} }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -303,7 +303,7 @@ The Fourier transform of the Laplace density function works out to this:
     \begin{displaymath}
     G(\omega)
     =
-    \frac{e^{- i \mu \omega}}{b^2 \omega^2 + 1}
+    \frac{e^{-i \mu \omega}}{b^2 \omega^2 + 1}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -315,7 +315,7 @@ Taking the square root of the above, we get the following:
     \begin{displaymath}
     F(\omega)
     =
-    \sqrt{\displaystyle \frac{e^{- i \mu \omega}}{b^2 \omega^2 + 1}}
+    \sqrt{\displaystyle \frac{e^{-i \mu \omega}}{b^2 \omega^2 + 1}}
     \end{displaymath}
     \end{document}
 {% endlatex %}

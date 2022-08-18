@@ -57,7 +57,7 @@ Except for a small number of cases, the L&eacute;vy alpha-stable distribution do
     \begin{dcases}
     \tan\2\brace1(){ \tfrac{\pi \alpha}{2} } & \quad \text{if $\alpha \neq 1$}
     \\[0.5em]
-    - \tfrac{2}{\pi} \log |t|                & \quad \text{if $\alpha = 1$}
+    -\tfrac{2}{\pi} \log |t|                 & \quad \text{if $\alpha = 1$}
     \end{dcases}
     \\[1em]
     &
@@ -155,7 +155,7 @@ Evaluating the integral, we can arrive at the following expression of the normal
     \begin{displaymath}
     f(x \mid \mu, \sigma)
     =
-    \frac{1}{\sigma \sqrt{2 \pi}} \exp\2\brace4[]{- \frac{(x - \mu)^2}{2 \sigma^2}}
+    \frac{1}{\sigma \sqrt{2 \pi}} \exp\2\brace4[]{ -\frac{(x - \mu)^2}{2 \sigma^2} }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -234,7 +234,7 @@ To fit a stable distribution to an observed set of data, we need to find the par
     \begin{displaymath}
     C(\mu, \gamma, \alpha)
     =
-    - \sum_{i = 1}^{n} \log\2\brace2[]{ f(x_i \mid \mu, \gamma, \alpha) }
+    -\sum_{i = 1}^{n} \log\2\brace2[]{ f(x_i \mid \mu, \gamma, \alpha) }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -278,17 +278,17 @@ In addition to using numerical optimization to find the optimum parameter values
     \\[1em]
     & =
     \frac{1}{2 \pi} \int_{-\infty}^{\infty}
-    e^{i (\mu t - x t)} e^{- |\gamma t|^\alpha} \, \dderiv t
+    e^{i (\mu t - x t)} e^{-|\gamma t|^\alpha} \, \dderiv t
     \\[1em]
     & =
     \frac{1}{2 \pi} \int_{-\infty}^{\infty}
     \brace2[]
     {
-    \cos\2\brace1(){\mu t - x t}
+    \cos\2\brace1(){ \mu t - x t }
     + i
-    \sin\2\brace1(){\mu t - x t}
+    \sin\2\brace1(){ \mu t - x t }
     }
-    \, e^{- |\gamma t|^\alpha} \, \dderiv t
+    \, e^{-|\gamma t|^\alpha} \, \dderiv t
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -302,7 +302,7 @@ The integrand has a complex exponential, so we can use Euler's formula to separa
     f(x \mid \mu, \gamma, \alpha)
     =
     \frac{1}{2 \pi} \int_{-\infty}^{\infty}
-    \cos\2\brace1(){\mu t - x t} \, e^{- |\gamma t|^\alpha} \, \dderiv t
+    \cos\2\brace1(){ \mu t - x t } \, e^{-|\gamma t|^\alpha} \, \dderiv t
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -315,7 +315,7 @@ Notice that, in the formula above, the integrand is symmetric with respect to ze
     f(x \mid \mu, \gamma, \alpha)
     =
     \frac{1}{\pi} \int_{0}^{\infty}
-    \cos\2\brace1(){\mu t - x t} \, e^{- |\gamma t|^\alpha} \, \dderiv t
+    \cos\2\brace1(){ \mu t - x t } \, e^{-|\gamma t|^\alpha} \, \dderiv t
     \end{displaymath}
     \end{document}
 {% endlatex %}

@@ -34,7 +34,7 @@ The probability of observing a realization of the random variable in a range bet
 {% latex fig-03 %}
     \begin{document}
     \begin{displaymath}
-    F(x) \1\Big|_{a}^{b}
+    F(x) \1 \Big|_{a}^{b}
     =
     F(b) - F(a)
     =
@@ -74,9 +74,9 @@ With this notation, we can express the relationship between these two distributi
 {% latex fig-06 %}
     \begin{document}
     \begin{displaymath}
-    G(x) \1\Big|_{a}^{b}
+    G(x) \1 \Big|_{a}^{b}
     =
-    F(u) \1\Big|_{\ln a}^{\ln b}
+    F(u) \1 \Big|_{\ln a}^{\ln b}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -106,7 +106,7 @@ Plugging in the substitution, we can compute the probability of observing the ra
 {% latex fig-09 %}
     \begin{document}
     \begin{displaymath}
-    F(u) \1\Big|_{\ln a}^{\ln b}
+    F(u) \1 \Big|_{\ln a}^{\ln b}
     =
     F(\ln b) - F(\ln a)
     =
@@ -162,7 +162,7 @@ To give an example, we can use the probability density function for the normal d
     \begin{displaymath}
     f(x \mid \mu, \sigma)
     =
-    \frac{1}{\sigma \sqrt{2 \pi}} \exp \2 \brace4[]{- \frac{(x - \mu)^2}{2 \sigma^2}}
+    \frac{1}{\sigma \sqrt{2 \pi}} \exp\2\brace4[]{ -\frac{(x - \mu)^2}{2 \sigma^2} }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -174,7 +174,7 @@ The logarithmic equivalent is:
     \begin{displaymath}
     g(x \mid \mu, \sigma)
     =
-    \frac{1}{x \sigma \sqrt{2 \pi}} \exp \2 \brace4[]{- \frac{(\ln x - \mu)^2}{2 \sigma^2}}
+    \frac{1}{x \sigma \sqrt{2 \pi}} \exp\2\brace4[]{ -\frac{(\ln x - \mu)^2}{2 \sigma^2} }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -212,7 +212,7 @@ The logarithmic equivalent of the Laplace distribution can be found in the same 
     \begin{displaymath}
     f(x \mid \mu, b)
     =
-    \frac{1}{2b} \exp \2 \brace3(){- \frac{|x - \mu|}{b}}
+    \frac{1}{2b} \exp\2\brace3(){ -\frac{|x - \mu|}{b} }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -224,7 +224,7 @@ The logarithmic equivalent is:
     \begin{displaymath}
     g(x \mid \mu, b)
     =
-    \frac{1}{2bx} \exp \2 \brace3(){- \frac{|\ln x - \mu|}{b}}
+    \frac{1}{2bx} \exp\2\brace3(){ -\frac{|\ln x - \mu|}{b} }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -234,7 +234,7 @@ If we have a set of samples of a random variable that we know to have a log-Lapl
 {% latex fig-19 %}
     \begin{document}
     \begin{displaymath}
-    \{\, x_1, x_2, \dots, x_m, \dots, x_{n-1}, x_n \mid x_i \leq x_{i+1} \,\}
+    \{\, x_1, x_2, \dots, x_m, \dots, x_{n - 1}, x_n \mid x_i \leq x_{i + 1} \,\}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -263,9 +263,9 @@ Here is the estimate for the location parameter:
     \hat{\mu}
     =
     \begin{dcases}
-    \frac{1}{2} (\ln x_m + \ln x_{m+1}) & \quad \text{if $n$ is even}
+    \frac{1}{2} (\ln x_m + \ln x_{m + 1}) & \quad \text{if $n$ is even}
     \\[0.5em]
-    \ln x_m                             & \quad \text{if $n$ is odd}
+    \ln x_m                               & \quad \text{if $n$ is odd}
     \end{dcases}
     \end{displaymath}
     \end{document}

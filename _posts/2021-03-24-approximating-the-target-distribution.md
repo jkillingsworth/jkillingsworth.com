@@ -19,7 +19,7 @@ In this case, we wind up with a binomial distribution for the distribution of ex
 {% latex fig-03 %}
     \begin{document}
     \begin{displaymath}
-    p_i = 0.5 + i\1\brace3(){ \frac{a - 0.5}{n - 1} }
+    p_i = 0.5 + i \1 \brace3(){ \frac{a - 0.5}{n - 1} }
     ,
     \quad \forall i \in \{\, 0, \dots, n - 1 \,\}
     \end{displaymath}

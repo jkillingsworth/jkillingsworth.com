@@ -72,7 +72,7 @@ It might even be too concise. But it makes sense if you expand the gradient and 
     \newcommand{\dS}{\pderiv S(\mathbf{p})}
     \newcommand{\dF}{\pderiv f_i(\mathbf{p})}
     \newcommand{\lhsA}{\dfrac{\dL}{\pderiv p_1}}
-    \newcommand{\lhsB}{\dfrac{\dL}{\pderiv p_{n-1}}}
+    \newcommand{\lhsB}{\dfrac{\dL}{\pderiv p_{n - 1}}}
     \newcommand{\lhsC}{\dfrac{\dL}{\pderiv \lambda_1}}
     \newcommand{\lhsD}{\dfrac{\dL}{\pderiv \lambda_m}}
     \newcommand{\rhsA}
@@ -85,9 +85,9 @@ It might even be too concise. But it makes sense if you expand the gradient and 
     \newcommand{\rhsB}
     {
         \displaystyle
-        \frac{\dS}{\pderiv p_{n-1}}
+        \frac{\dS}{\pderiv p_{n - 1}}
         -
-        \sum_{i = 1}^{m} \lambda_i \frac{\dF}{\pderiv p_{n-1}}
+        \sum_{i = 1}^{m} \lambda_i \frac{\dF}{\pderiv p_{n - 1}}
     }
     \newcommand{\rhsC}{0 - f_1(\mathbf{p})}
     \newcommand{\rhsD}{0 - f_m(\mathbf{p})}
@@ -154,11 +154,11 @@ The square of the magnitude can be found by computing the sum of the squares of 
     =
     \sum_{i = 1}^{n - 1}
     \2
-    \brace3(){\frac{\dL}{\pderiv p_i}}^2
+    \brace3(){ \frac{\dL}{\pderiv p_i} }^2
     +
     \sum_{i = 1}^{m}
     \2
-    \brace3(){\frac{\dL}{\pderiv \lambda_i}}^2
+    \brace3(){ \frac{\dL}{\pderiv \lambda_i} }^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -168,7 +168,7 @@ In the examples illustrated in the following sections, we'll use the same learni
 {% latex fig-08 %}
     \begin{document}
     \begin{displaymath}
-    s_k = \min \2 \brace3{\lbrace}{\rbrace}{\, 0.0001,\, \frac{1}{1 + k} \,}
+    s_k = \min\2\brace3{\lbrace}{\rbrace}{\, 0.0001,\, \frac{1}{1 + k} \,}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -554,7 +554,7 @@ This technique, however, does not necessarily converge to a unique set of Lagran
     \\[1.5em]
     \vdots
     \\[1.5em]
-    \dfrac{\dF}{\pderiv p_{n-1}}
+    \dfrac{\dF}{\pderiv p_{n - 1}}
     \end{matrix}
     ,
     \quad \forall i \in \{\, 1, \dots, m \,\}

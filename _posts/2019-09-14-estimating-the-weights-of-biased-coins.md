@@ -19,7 +19,7 @@ The aforementioned coin toss game can be modeled as a Markov chain. The game sta
     \begin{document}
     \begin{tikzpicture}[auto,>=stealth',shorten >=1bp,node distance=1.125in]
     \tikzset{every state/.style={minimum size=0.5in}}
-    \node[state,initial right] (00)               {$S_0$};
+    \node[state,initial right] (00)               {$S_0   $};
     \node[state]               (+1) [above of=00] {$S_{+1}$};
     \node[state]               (+2) [right of=+1] {$S_{+2}$};
     \node[state]               (+3) [right of=+2] {$S_{+3}$};
@@ -29,20 +29,20 @@ The aforementioned coin toss game can be modeled as a Markov chain. The game sta
     \node[state]               (-3) [right of=-2] {$S_{-3}$};
     \node[state]               (-4) [right of=-3] {$S_{-4}$};
     \path[->]
-    (00) edge              node [swap] {$  p_0$} (+1)
-    (+1) edge [bend right] node [swap] {$1-p_1$} (00)
-    (+1) edge [bend left]  node        {$  p_1$} (+2)
-    (+2) edge [bend left]  node        {$1-p_2$} (+1)
-    (+2) edge [bend left]  node        {$  p_2$} (+3)
-    (+3) edge [bend left]  node        {$1-p_3$} (+2)
-    (+3) edge              node        {$  p_3$} (+4)
-    (00) edge              node        {$  p_0$} (-1)
-    (-1) edge [bend left]  node        {$1-p_1$} (00)
-    (-1) edge [bend left]  node        {$  p_1$} (-2)
-    (-2) edge [bend left]  node        {$1-p_2$} (-1)
-    (-2) edge [bend left]  node        {$  p_2$} (-3)
-    (-3) edge [bend left]  node        {$1-p_3$} (-2)
-    (-3) edge              node        {$  p_3$} (-4);
+    (00) edge              node [swap] {$    p_0$} (+1)
+    (+1) edge [bend right] node [swap] {$1 - p_1$} (00)
+    (+1) edge [bend left]  node        {$    p_1$} (+2)
+    (+2) edge [bend left]  node        {$1 - p_2$} (+1)
+    (+2) edge [bend left]  node        {$    p_2$} (+3)
+    (+3) edge [bend left]  node        {$1 - p_3$} (+2)
+    (+3) edge              node        {$    p_3$} (+4)
+    (00) edge              node        {$    p_0$} (-1)
+    (-1) edge [bend left]  node        {$1 - p_1$} (00)
+    (-1) edge [bend left]  node        {$    p_1$} (-2)
+    (-2) edge [bend left]  node        {$1 - p_2$} (-1)
+    (-2) edge [bend left]  node        {$    p_2$} (-3)
+    (-3) edge [bend left]  node        {$1 - p_3$} (-2)
+    (-3) edge              node        {$    p_3$} (-4);
     \end{tikzpicture}
     \end{document}
 {% endlatex %}
@@ -181,16 +181,25 @@ Since the model is symmetrical, the chance of ending up in any given positive te
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_0 & = P(\texttt{HHTT}) + P(\texttt{HTHT}) + P(\texttt{HTTH})
-          + P(\texttt{THHT}) + P(\texttt{THTH}) + P(\texttt{TTHH})
+    r_0
+    & =
+    P(\texttt{HHTT}) + P(\texttt{HTHT}) + P(\texttt{HTTH})
+    +
+    P(\texttt{THHT}) + P(\texttt{THTH}) + P(\texttt{TTHH})
     \\[1em]
-    r_2 & = P(\texttt{HHHT}) + P(\texttt{HHTH}) + P(\texttt{HTHH}) + P(\texttt{THHH})
+    r_2
+    & =
+    P(\texttt{HHHT}) + P(\texttt{HHTH}) + P(\texttt{HTHH}) + P(\texttt{THHH})
     \\
-        & = P(\texttt{HTTT}) + P(\texttt{THTT}) + P(\texttt{TTHT}) + P(\texttt{TTTH})
+    & =
+    P(\texttt{HTTT}) + P(\texttt{THTT}) + P(\texttt{TTHT}) + P(\texttt{TTTH})
     \\[1em]
-    r_4 & = P(\texttt{HHHH})
+    r_4
+    & =
+    P(\texttt{HHHH})
     \\
-        & = P(\texttt{TTTT})
+    & =
+    P(\texttt{TTTT})
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -202,12 +211,17 @@ Plugging in the probability formula for each of the coin toss combinations, the 
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_0 & = 4\1\brace2[]{ p_0 (1 - p_1) \0 p_0 (1 - p_1) }
-          + 2\1\brace2[]{ p_0 \0 p_1 (1 - p_2) (1 - p_1) }
+    r_0 & =
+    4 \1 \brace2[]{ p_0 (1 - p_1) \0 p_0 (1 - p_1) }
+    +
+    2 \1 \brace2[]{ p_0 \0 p_1 (1 - p_2) (1 - p_1) }
     \\[1em]
-    r_2 & = 2\1\brace2[]{ p_0 (1 - p_1) \0 p_0 \0 p_1 }
-          +    \brace2[]{ p_0 \0 p_1 (1 - p_2) \0 p_1 }
-          +    \brace2[]{ p_0 \0 p_1 \0 p_2 (1 - p_3) }
+    r_2 & =
+    2 \1 \brace2[]{ p_0 (1 - p_1) \0 p_0 \0 p_1 }
+    +
+    \brace2[]{ p_0 \0 p_1 (1 - p_2) \0 p_1 }
+    +
+    \brace2[]{ p_0 \0 p_1 \0 p_2 (1 - p_3) }
     \\[1em]
     r_4 & = p_0 \0 p_1 \0 p_2 \0 p_3
     \end{aligned}
@@ -295,7 +309,7 @@ Let's introduce the following notation. We have seen a graphical illustration of
     \begin{aligned}
     P(X = k) & = \frac{f(k)}{\sum_{i = 0}^{n} f(i)}, \quad k = 0, 1, 2, \dots, n
     \\[1em]
-    f(k)     & = \binom{n}{k} = \frac{n!}{k!\1(n - k)!}
+    f(k)     & = \binom{n}{k} = \frac{n!}{k! \1 (n - k)!}
     \end{aligned}
     \end{displaymath}
     \end{document}

@@ -73,7 +73,7 @@ While there are multiple techniques for computing the binomial coefficient, the 
 {% latex fig-05 %}
     \begin{document}
     \begin{displaymath}
-    \binom{n}{k} = \frac{n!}{k!\1(n - k)!}
+    \binom{n}{k} = \frac{n!}{k! \1 (n - k)!}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -186,9 +186,9 @@ How can the reward function for the fixed fraction betting strategy be modified 
     \begin{aligned}
     \log R(\texttt{H}) & = -\log R(\texttt{T})
     \\[1em]
-                       & = -\log \2 (1 - b)
+                       & = -\log\2(1 - b)
     \\[1em]
-                       & = \phantom{-}\log \2 (1 - b)^{-1}
+                       & = \phantom{-}\log\2(1 - b)^{-1}
     \end{aligned}
     \end{displaymath}
     \end{document}

@@ -17,7 +17,7 @@ We'll use the same model of the coin toss game described in an earlier post titl
     \begin{document}
     \begin{tikzpicture}[auto,>=stealth',shorten >=1bp,node distance=1.125in]
     \tikzset{every state/.style={minimum size=0.5in}}
-    \node[state,initial right] (00)               {$S_0$};
+    \node[state,initial right] (00)               {$S_0   $};
     \node[state]               (+1) [above of=00] {$S_{+1}$};
     \node[state]               (+2) [right of=+1] {$S_{+2}$};
     \node[state]               (+3) [right of=+2] {$S_{+3}$};
@@ -25,16 +25,16 @@ We'll use the same model of the coin toss game described in an earlier post titl
     \node[state]               (-2) [right of=-1] {$S_{-2}$};
     \node[state]               (-3) [right of=-2] {$S_{-3}$};
     \path[->]
-    (00) edge              node [swap] {$  p_0$} (+1)
-    (+1) edge [bend right] node [swap] {$1-p_1$} (00)
-    (+1) edge [bend left]  node        {$  p_1$} (+2)
-    (+2) edge [bend left]  node        {$1-p_2$} (+1)
-    (+2) edge              node        {$  p_2$} (+3)
-    (00) edge              node        {$  p_0$} (-1)
-    (-1) edge [bend left]  node        {$1-p_1$} (00)
-    (-1) edge [bend left]  node        {$  p_1$} (-2)
-    (-2) edge [bend left]  node        {$1-p_2$} (-1)
-    (-2) edge              node        {$  p_2$} (-3);
+    (00) edge              node [swap] {$    p_0$} (+1)
+    (+1) edge [bend right] node [swap] {$1 - p_1$} (00)
+    (+1) edge [bend left]  node        {$    p_1$} (+2)
+    (+2) edge [bend left]  node        {$1 - p_2$} (+1)
+    (+2) edge              node        {$    p_2$} (+3)
+    (00) edge              node        {$    p_0$} (-1)
+    (-1) edge [bend left]  node        {$1 - p_1$} (00)
+    (-1) edge [bend left]  node        {$    p_1$} (-2)
+    (-2) edge [bend left]  node        {$1 - p_2$} (-1)
+    (-2) edge              node        {$    p_2$} (-3);
     \end{tikzpicture}
     \end{document}
 {% endlatex %}
@@ -113,8 +113,10 @@ Plugging in the probability formulas, the equations above can be rewritten as fo
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_1 & = 2\1\brace2[]{ p_0 (1 - p_1) \0 p_0 }
-          +    \brace2[]{ p_0 \0 p_1 (1 - p_2) }
+    r_1 & =
+    2 \1 \brace2[]{ p_0 (1 - p_1) \0 p_0 }
+    +
+    \brace2[]{ p_0 \0 p_1 (1 - p_2) }
     \\[1em]
     r_3 & = p_0 \0 p_1 \0 p_2
     \end{aligned}

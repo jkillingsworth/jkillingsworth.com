@@ -17,18 +17,18 @@ Let's start with a very simple model of the coin toss game that uses only two fl
     \begin{document}
     \begin{tikzpicture}[auto,>=stealth',shorten >=1bp,node distance=1.125in]
     \tikzset{every state/.style={minimum size=0.5in}}
-    \node[state,initial right] (00)               {$S_0$};
+    \node[state,initial right] (00)               {$S_0   $};
     \node[state]               (+1) [above of=00] {$S_{+1}$};
     \node[state]               (+2) [right of=+1] {$S_{+2}$};
     \node[state]               (-1) [below of=00] {$S_{-1}$};
     \node[state]               (-2) [right of=-1] {$S_{-2}$};
     \path[->]
-    (00) edge              node [swap] {$  p_0$} (+1)
-    (+1) edge [bend right] node [swap] {$1-p_1$} (00)
-    (+1) edge              node        {$  p_1$} (+2)
-    (00) edge              node        {$  p_0$} (-1)
-    (-1) edge [bend left]  node        {$1-p_1$} (00)
-    (-1) edge              node        {$  p_1$} (-2);
+    (00) edge              node [swap] {$    p_0$} (+1)
+    (+1) edge [bend right] node [swap] {$1 - p_1$} (00)
+    (+1) edge              node        {$    p_1$} (+2)
+    (00) edge              node        {$    p_0$} (-1)
+    (-1) edge [bend left]  node        {$1 - p_1$} (00)
+    (-1) edge              node        {$    p_1$} (-2);
     \end{tikzpicture}
     \end{document}
 {% endlatex %}
@@ -153,7 +153,7 @@ A slightly more complicated model is that of a coin toss game with three flips o
     \begin{document}
     \begin{tikzpicture}[auto,>=stealth',shorten >=1bp,node distance=1.125in]
     \tikzset{every state/.style={minimum size=0.5in}}
-    \node[state,initial right] (00)               {$S_0$};
+    \node[state,initial right] (00)               {$S_0   $};
     \node[state]               (+1) [above of=00] {$S_{+1}$};
     \node[state]               (+2) [right of=+1] {$S_{+2}$};
     \node[state]               (+3) [right of=+2] {$S_{+3}$};
@@ -161,16 +161,16 @@ A slightly more complicated model is that of a coin toss game with three flips o
     \node[state]               (-2) [right of=-1] {$S_{-2}$};
     \node[state]               (-3) [right of=-2] {$S_{-3}$};
     \path[->]
-    (00) edge              node [swap] {$  p_0$} (+1)
-    (+1) edge [bend right] node [swap] {$1-p_1$} (00)
-    (+1) edge [bend left]  node        {$  p_1$} (+2)
-    (+2) edge [bend left]  node        {$1-p_2$} (+1)
-    (+2) edge              node        {$  p_2$} (+3)
-    (00) edge              node        {$  p_0$} (-1)
-    (-1) edge [bend left]  node        {$1-p_1$} (00)
-    (-1) edge [bend left]  node        {$  p_1$} (-2)
-    (-2) edge [bend left]  node        {$1-p_2$} (-1)
-    (-2) edge              node        {$  p_2$} (-3);
+    (00) edge              node [swap] {$    p_0$} (+1)
+    (+1) edge [bend right] node [swap] {$1 - p_1$} (00)
+    (+1) edge [bend left]  node        {$    p_1$} (+2)
+    (+2) edge [bend left]  node        {$1 - p_2$} (+1)
+    (+2) edge              node        {$    p_2$} (+3)
+    (00) edge              node        {$    p_0$} (-1)
+    (-1) edge [bend left]  node        {$1 - p_1$} (00)
+    (-1) edge [bend left]  node        {$    p_1$} (-2)
+    (-2) edge [bend left]  node        {$1 - p_2$} (-1)
+    (-2) edge              node        {$    p_2$} (-3);
     \end{tikzpicture}
     \end{document}
 {% endlatex %}
@@ -275,30 +275,30 @@ In addition to the two Markov models outlined above, you can also find a detaile
     \begin{document}
     \begin{tikzpicture}[auto,>=stealth',shorten >=1bp,node distance=1.125in]
     \tikzset{every state/.style={minimum size=0.5in}}
-    \node[state,initial right] (00)               {$S_0$};
-    \node[state]               (+1) [above of=00] {$S_{+1}$};
-    \node[state,draw=none]     (+2) [right of=+1] {$\dots$};
-    \node[state]               (+3) [right of=+2] {$S_{+n-1}$};
-    \node[state]               (+4) [right of=+3] {$S_{+n}$};
-    \node[state]               (-1) [below of=00] {$S_{-1}$};
-    \node[state,draw=none]     (-2) [right of=-1] {$\dots$};
-    \node[state]               (-3) [right of=-2] {$S_{-n+1}$};
-    \node[state]               (-4) [right of=-3] {$S_{-n}$};
+    \node[state,initial right] (00)               {$S_0       $};
+    \node[state]               (+1) [above of=00] {$S_{+1}    $};
+    \node[state,draw=none]     (+2) [right of=+1] {$\dots     $};
+    \node[state]               (+3) [right of=+2] {$S_{+n - 1}$};
+    \node[state]               (+4) [right of=+3] {$S_{+n}    $};
+    \node[state]               (-1) [below of=00] {$S_{-1}    $};
+    \node[state,draw=none]     (-2) [right of=-1] {$\dots     $};
+    \node[state]               (-3) [right of=-2] {$S_{-n + 1}$};
+    \node[state]               (-4) [right of=-3] {$S_{-n}    $};
     \path[->]
-    (00) edge              node [swap] {$  p_0$} (+1)
-    (+1) edge [bend right] node [swap] {$1-p_1$} (00)
-    (+1) edge [bend left]  node        {$  p_1$} (+2)
-    (+2) edge [bend left]  node        {$1-p_2$} (+1)
-    (+2) edge [bend left]  node        {$  p_{n-2}$} (+3)
-    (+3) edge [bend left]  node        {$1-p_{n-1}$} (+2)
-    (+3) edge              node        {$  p_{n-1}$} (+4)
-    (00) edge              node        {$  p_0$} (-1)
-    (-1) edge [bend left]  node        {$1-p_1$} (00)
-    (-1) edge [bend left]  node        {$  p_1$} (-2)
-    (-2) edge [bend left]  node        {$1-p_2$} (-1)
-    (-2) edge [bend left]  node        {$  p_{n-2}$} (-3)
-    (-3) edge [bend left]  node        {$1-p_{n-1}$} (-2)
-    (-3) edge              node        {$  p_{n-1}$} (-4);
+    (00) edge              node [swap] {$    p_0      $} (+1)
+    (+1) edge [bend right] node [swap] {$1 - p_1      $} (00)
+    (+1) edge [bend left]  node        {$    p_1      $} (+2)
+    (+2) edge [bend left]  node        {$1 - p_2      $} (+1)
+    (+2) edge [bend left]  node        {$    p_{n - 2}$} (+3)
+    (+3) edge [bend left]  node        {$1 - p_{n - 1}$} (+2)
+    (+3) edge              node        {$    p_{n - 1}$} (+4)
+    (00) edge              node        {$    p_0      $} (-1)
+    (-1) edge [bend left]  node        {$1 - p_1      $} (00)
+    (-1) edge [bend left]  node        {$    p_1      $} (-2)
+    (-2) edge [bend left]  node        {$1 - p_2      $} (-1)
+    (-2) edge [bend left]  node        {$    p_{n - 2}$} (-3)
+    (-3) edge [bend left]  node        {$1 - p_{n - 1}$} (-2)
+    (-3) edge              node        {$    p_{n - 1}$} (-4);
     \end{tikzpicture}
     \end{document}
 {% endlatex %}
@@ -572,7 +572,7 @@ We can use the multivariate form of Newton's method to find the weights for whic
 {% latex fig-29 %}
     \begin{document}
     \begin{displaymath}
-    \mathbf{x}_{i+1}
+    \mathbf{x}_{i + 1}
     =
     \mathbf{x}_i - \mathbf{J}(\mathbf{x}_i)^{-1} \mathbf{f\1}(\mathbf{x}_i)
     \end{displaymath}
@@ -600,7 +600,7 @@ Here is the definition of scoring function B:
     \begin{displaymath}
     \mathrlap{S_b}\phantom{S_b}(\mathbf{p})
     =
-    \sum_{i = 1}^{n - 1} \2 \brace1(){ p_i - p_{i-1} }^2
+    \sum_{i = 1}^{n - 1} \2 \brace1(){ p_i - p_{i - 1} }^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -650,7 +650,7 @@ To find a valid set of weights, we'll use the multivariate form of Newton's meth
 {% latex fig-37 %}
     \begin{document}
     \begin{displaymath}
-    \mathbf{x}_{i+1}
+    \mathbf{x}_{i + 1}
     =
     \mathbf{x}_i - \gamma \mathbf{J}(\mathbf{x}_i)^{-1} \mathbf{f\1}(\mathbf{x}_i)
     \end{displaymath}

@@ -62,9 +62,9 @@ The seller reasons that offering the option at any price greater than zero would
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathbb{E}\1\brace1[]{V(S_T)} & = \frac{V(S_T = \$40) + V(S_T = \$60)}{2}
+    \mathbb{E}\1\brace1[]{ V(S_T) } & = \frac{V(S_T = \$40) + V(S_T = \$60)}{2}
     \\[1em]
-                                  & = \$5
+                                    & = \$5
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -146,9 +146,9 @@ We can compute the expected value of the option as a weighted average:
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathbb{E}\1\brace1[]{V(S_T)} & = \sum_{x \in X} P(S_T = x) \0 V(S_T = x)
+    \mathbb{E}\1\brace1[]{ V(S_T) } & = \sum_{x \in X} P(S_T = x) \0 V(S_T = x)
     \\[1em]
-                                  & = \$5
+                                    & = \$5
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -193,7 +193,7 @@ If we can come up with a probability density function that models our prediction
 {% latex fig-11 %}
     \begin{document}
     \begin{displaymath}
-    \mathbb{E}\1\brace1[]{V(S_T)} = \int_{0}^{\infty} V(x) \0 f(x) \, \dderiv x
+    \mathbb{E}\1\brace1[]{ V(S_T) } = \int_{0}^{\infty} V(x) \0 f(x) \, \dderiv x
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -223,9 +223,9 @@ Since the probability density is zero for all values outside the range spanning 
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    \mathbb{E}\1\brace1[]{V(S_T)} & = \int_{50}^{80} \frac{(x - 50)(80 - x)}{900} \, \dderiv x
+    \mathbb{E}\1\brace1[]{ V(S_T) } & = \int_{50}^{80} \frac{(x - 50)(80 - x)}{900} \, \dderiv x
     \\[1em]
-                                  & = \$5
+                                    & = \$5
     \end{aligned}
     \end{displaymath}
     \end{document}

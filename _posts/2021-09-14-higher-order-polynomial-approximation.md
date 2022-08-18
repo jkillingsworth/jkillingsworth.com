@@ -204,11 +204,11 @@ And here is how we express the coefficients in terms of the weights:
     \end{matrix}
     =
     \begin{matrix}{c}
-    + 3.0 p_1 - 3.0 p_2 + 1.0 p_3
+    +3.0 p_1 - 3.0 p_2 + 1.0 p_3
     \\[1em]
-    - 2.5 p_1 + 4.0 p_2 - 1.5 p_3
+    -2.5 p_1 + 4.0 p_2 - 1.5 p_3
     \\[1em]
-    + 0.5 p_1 - 1.0 p_2 + 0.5 p_3
+    +0.5 p_1 - 1.0 p_2 + 0.5 p_3
     \end{matrix}
     \end{displaymath}
     \end{document}

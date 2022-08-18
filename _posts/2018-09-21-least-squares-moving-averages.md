@@ -81,7 +81,7 @@ While there are many techniques that can be used to approximate the coefficients
     \begin{aligned}
     a_1
     & =
-    \frac{n \tsum x_i y_i - \tsum x_i \tsum y_i}{n \tsum x_i^2 - \brace1(){\tsum x_i}^2}
+    \frac{n \tsum x_i y_i - \tsum x_i \tsum y_i}{n \tsum x_i^2 - \brace1(){ \tsum x_i }^2}
     \\[1em]
     a_0
     & =
@@ -202,7 +202,7 @@ The exponential model can be transformed into the linear form by taking the loga
 {% latex fig-27 %}
     \begin{document}
     \begin{displaymath}
-    \ln \hat{y} = \ln p + x \ln \2 (1 + r)
+    \ln \hat{y} = \ln p + x \ln\2(1 + r)
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -217,7 +217,7 @@ The following equations illustrate how the parts of the transformed exponential 
     \\[1em]
     a_0      & = \ln p
     \\[1em]
-    a_1      & = \ln \2 (1 + r)
+    a_1      & = \ln\2(1 + r)
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -231,7 +231,7 @@ The following formulas can then be used to calculate the coefficients for the li
     \begin{aligned}
     a_1
     & =
-    \frac{n \tsum x_i y'_i - \tsum x_i \tsum y'_i}{n \tsum x_i^2 - \brace1(){\tsum x_i}^2}
+    \frac{n \tsum x_i y'_i - \tsum x_i \tsum y'_i}{n \tsum x_i^2 - \brace1(){ \tsum x_i }^2}
     \\[1em]
     a_0
     & =

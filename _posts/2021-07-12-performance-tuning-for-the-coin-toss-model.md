@@ -27,7 +27,7 @@ Just like we did in some of the previous posts, we can create a graphical repres
     \begin{document}
     \begin{tikzpicture}[auto,>=stealth',shorten >=1bp,node distance=1.125in]
     \tikzset{every state/.style={minimum size=0.5in}}
-    \node[state,initial right] (00)               {$S_0$};
+    \node[state,initial right] (00)               {$S_0   $};
     \node[state]               (+1) [above of=00] {$S_{+1}$};
     \node[state]               (+2) [right of=+1] {$S_{+2}$};
     \node[state]               (+3) [right of=+2] {$S_{+3}$};
@@ -1114,12 +1114,17 @@ With four coin toss events, there are sixteen possible coin toss sequences. The 
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    r_0 & = 4\1\brace1(){ p_0 \0 q_1 \0 p_0 \0 q_1 }
-          + 2\1\brace1(){ p_0 \0 p_1 \0 q_2 \0 q_1 }
+    r_0 & =
+    4 \1 \brace1(){ p_0 \0 q_1 \0 p_0 \0 q_1 }
+    +
+    2 \1 \brace1(){ p_0 \0 p_1 \0 q_2 \0 q_1 }
     \\[1em]
-    r_2 & = 2\1\brace1(){ p_0 \0 q_1 \0 p_0 \0 p_1 }
-          +    \brace1(){ p_0 \0 p_1 \0 q_2 \0 p_1 }
-          +    \brace1(){ p_0 \0 p_1 \0 p_2 \0 q_3 }
+    r_2 & =
+    2 \1 \brace1(){ p_0 \0 q_1 \0 p_0 \0 p_1 }
+    +
+    \brace1(){ p_0 \0 p_1 \0 q_2 \0 p_1 }
+    +
+    \brace1(){ p_0 \0 p_1 \0 p_2 \0 q_3 }
     \\[1em]
     r_4 & = p_0 \0 p_1 \0 p_2 \0 p_3
     \end{aligned}

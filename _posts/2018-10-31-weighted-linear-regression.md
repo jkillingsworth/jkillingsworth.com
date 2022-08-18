@@ -142,7 +142,7 @@ Let's assume the errors are normally distributed around the model. Recall the pr
     \begin{displaymath}
     f(y \mid \hat{y}, \sigma)
     =
-    \frac{1}{\sigma \sqrt{2 \pi}} \exp \2 \brace4[]{- \frac{(y - \hat{y})^2}{2 \sigma^2}}
+    \frac{1}{\sigma \sqrt{2 \pi}} \exp\2\brace4[]{ -\frac{(y - \hat{y})^2}{2 \sigma^2} }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -173,17 +173,20 @@ If the weight of one observation is twice that of all the others, for example, t
     \sum_{i = 1}^{n} w_i
     \brace4[]
     {
-    - \ln \2 \brace1(){\sigma \sqrt{2 \pi}}
-    - \frac{(y_i - \hat{y}_i)^2}{2 \sigma^2}
+    -\ln\2\brace1(){ \sigma \sqrt{2 \pi} }
+    -
+    \frac{(y_i - \hat{y}_i)^2}{2 \sigma^2}
     }
     \\[1em]
     & =
     \sum_{i = 1}^{n} w_i
     \brace4[]
     {
-    - \ln \2 (\sigma)
-    - \frac{1}{2} \ln \2 (2 \pi)
-    - \frac{(y_i - \hat{y}_i)^2}{2 \sigma^2}
+    -\ln\2(\sigma)
+    -
+    \frac{1}{2} \ln\2(2 \pi)
+    -
+    \frac{(y_i - \hat{y}_i)^2}{2 \sigma^2}
     }
     \end{aligned}
     \end{displaymath}
@@ -200,9 +203,11 @@ Let's replace the mean with the body of the model function and treat the log-lik
     \tsum w_i
     \brace3[]
     {
-    - \ln \2 (\sigma)
-    - \frac{1}{2} \ln \2 (2 \pi)
-    - \frac{1}{2 \sigma^2} (y_i - a_0 - a_1 x_i)^2
+    -\ln\2(\sigma)
+    -
+    \frac{1}{2} \ln\2(2 \pi)
+    -
+    \frac{1}{2 \sigma^2} (y_i - a_0 - a_1 x_i)^2
     }
     \end{displaymath}
     \end{document}

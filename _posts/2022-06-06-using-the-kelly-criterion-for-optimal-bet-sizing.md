@@ -106,7 +106,7 @@ This gives us a growth rate factor independent of the number of plays and the in
 {% latex fig-09 %}
     \begin{document}
     \begin{displaymath}
-    f(b) = \mathbb{E} \1 \brace1[]{ F(b) }
+    f(b) = \mathbb{E}\1\brace1[]{ F(b) }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -117,11 +117,11 @@ As we will see shortly, maximizing the logarithm of the growth rate is going to 
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    G & = \log \2 \brace3(){ \frac{V_n}{V_0} }^{\frac{1}{n}}
+    G & = \log\2\brace3(){ \frac{V_n}{V_0} }^{\frac{1}{n}}
     \\[1em]
-      & = \tfrac{1}{n} \log \2 \brace2[]{ (1 + b)^H (1 - b)^T }
+      & = \tfrac{1}{n} \log\2\brace2[]{ (1 + b)^H (1 - b)^T }
     \\[1em]
-      & = \tfrac{H}{n} \log \2 (1 + b) + \tfrac{T}{n} \log \2 (1 - b)
+      & = \tfrac{H}{n} \log\2(1 + b) + \tfrac{T}{n} \log\2(1 - b)
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -133,9 +133,9 @@ Since the natural logarithm is a monotonically increasing function, maximizing t
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    g(b) & = \mathbb{E} \1 \brace1[]{ G(b) }
+    g(b) & = \mathbb{E}\1\brace1[]{ G(b) }
     \\[1em]
-         & = p \log \2 (1 + b) + q \log \2 (1 - b)
+         & = p \log\2(1 + b) + q \log\2(1 - b)
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -150,7 +150,7 @@ Using visual inspection, we can observe that the curve peaks where the bet size 
 {% latex fig-13 %}
     \begin{document}
     \begin{displaymath}
-    b^* = \operatorname*{argmax}_{b} \2 \brace1{\lbrace}{\rbrace}{\, g(b) \,}
+    b^* = \operatorname*{argmax}_{b}\2\brace1{\lbrace}{\rbrace}{\, g(b) \,}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -220,7 +220,7 @@ Thus, our gambler would maximize his winnings by betting 20% of his current bank
 {% latex fig-20 %}
     \begin{document}
     \begin{displaymath}
-    f(b) = \exp \2 \brace1[]{ g(b) }
+    f(b) = \exp\2\brace1[]{ g(b) }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -286,7 +286,7 @@ So now the question is, how much should the gambler bet? What percentage of his 
 {% latex fig-25 %}
     \begin{document}
     \begin{displaymath}
-    g(b) = p \log \2 (1 + bu) + q \log \2 (1 + bv)
+    g(b) = p \log\2(1 + bu) + q \log\2(1 + bv)
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -310,7 +310,7 @@ Settings the derivative to zero and solving for the bet size, we can arrive at t
 {% latex fig-28 %}
     \begin{document}
     \begin{displaymath}
-    b^* = - \frac{pu + qv}{uv}
+    b^* = -\frac{pu + qv}{uv}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -358,7 +358,7 @@ This example is a generalization of the previous ones. Instead of using a coin t
     \\[0.25em]\hline
     3 & 20\% & +1
     \\[0.25em]\hline
-    4 & 30\% & \phantom{\pm} 0
+    4 & 30\% & \phantom{\pm}0
     \\[0.25em]\hline
     5 & 20\% & -1
     \\[0.25em]\hline
@@ -381,7 +381,7 @@ For our analysis, let's use the following notation to represent the payoff matri
     \\
     p_3 & = 0.2 & \quad w_3 & = +1
     \\
-    p_4 & = 0.3 & \quad w_4 & = \phantom{\pm} 0
+    p_4 & = 0.3 & \quad w_4 & = \phantom{\pm}0
     \\
     p_5 & = 0.2 & \quad w_5 & = -1
     \\
@@ -406,7 +406,7 @@ Since there is a 10% chance that we can lose twice the bet size, there is an imp
 {% latex fig-34 %}
     \begin{document}
     \begin{displaymath}
-    g(b) = \sum_{i = 1}^{6} p_i \log \2 (1 + b w_i)
+    g(b) = \sum_{i = 1}^{6} p_i \log\2(1 + b w_i)
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -507,7 +507,7 @@ Here are the computed payoff values for each one of the possible outcomes:
     \\
     w(x_3) & = +0.05
     \\
-    w(x_4) & = \phantom{\pm} 0.00
+    w(x_4) & = \phantom{\pm}0.00
     \\
     w(x_5) & = -0.05
     \\
@@ -522,7 +522,7 @@ Here is the growth rate function that we want to maximize:
 {% latex fig-43 %}
     \begin{document}
     \begin{displaymath}
-    g(b) = \sum_{i = 1}^{6} p_i \log \2 \brace1[]{1 + b w(x_i)}
+    g(b) = \sum_{i = 1}^{6} p_i \log\2\brace1[]{ 1 + b w(x_i) }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -566,7 +566,7 @@ The previous example used what is basically a discrete probability mass function
     \begin{displaymath}
     p(x)
     =
-    \frac{1}{x \sigma \sqrt{2 \pi}} \exp \2 \brace4[]{- \frac{(\log x - \mu)^2}{2 \sigma^2}}
+    \frac{1}{x \sigma \sqrt{2 \pi}} \exp\2\brace4[]{ -\frac{(\log x - \mu)^2}{2 \sigma^2} }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -641,7 +641,7 @@ Given the continuous probability density function and the continuous payoff func
 {% latex fig-54 %}
     \begin{document}
     \begin{displaymath}
-    g(b) = \int_{0}^{\infty} p(x) \0 \log \2 \brace1[]{1 + b w(x)} \, \dderiv x
+    g(b) = \int_{0}^{\infty} p(x) \0 \log\2\brace1[]{ 1 + b w(x) } \, \dderiv x
     \end{displaymath}
     \end{document}
 {% endlatex %}

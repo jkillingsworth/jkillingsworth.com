@@ -24,7 +24,7 @@ Starting with an initial guess, you can iteratively find successively closer and
 {% latex fig-02 %}
     \begin{document}
     \begin{displaymath}
-    x_{i+1} = x_i - \frac{f(x_i)}{f'(x_i)}
+    x_{i + 1} = x_i - \frac{f(x_i)}{f'(x_i)}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -64,7 +64,7 @@ The multivariate form of Newton's method works in very much the same way as the 
 {% latex fig-05 %}
     \begin{document}
     \begin{displaymath}
-    \mathbf{x}_{i+1}
+    \mathbf{x}_{i + 1}
     =
     \mathbf{x}_i - \mathbf{J}(\mathbf{x}_i)^{-1} \mathbf{f\1}(\mathbf{x}_i)
     \end{displaymath}

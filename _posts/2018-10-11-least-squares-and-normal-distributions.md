@@ -147,11 +147,11 @@ Each one of the coefficients is given in terms of the other. Since there are two
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    (n) \1 a_0 + \brace1(){\tsum x_i^{\phantom{1}}} \1 a_1
+    (n) \1 a_0 + \brace1(){ \tsum x_i^{\phantom{1}} } \1 a_1
     & =
     \tsum y_i
     \\[1em]
-    \brace1(){\tsum x_i^{\phantom{1}}} \1 a_0 + \brace1(){\tsum x_i^2} \1 a_1
+    \brace1(){ \tsum x_i^{\phantom{1}} } \1 a_0 + \brace1(){ \tsum x_i^2 } \1 a_1
     & =
     \tsum x_i y_i
     \end{aligned}
@@ -196,7 +196,7 @@ Now let's assume the errors are normally distributed. That is to say, the observ
     \begin{displaymath}
     f(y \mid \hat{y}, \sigma)
     =
-    \frac{1}{\sigma \sqrt{2 \pi}} \exp \2 \brace4[]{- \frac{(y - \hat{y})^2}{2 \sigma^2}}
+    \frac{1}{\sigma \sqrt{2 \pi}} \exp\2\brace4[]{ -\frac{(y - \hat{y})^2}{2 \sigma^2} }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -240,8 +240,9 @@ At this point, we just need to find the mean and standard deviation values that 
     \2
     \brace4[]
     {
-    - \ln \2 \brace1(){\sigma \sqrt{2 \pi}}
-    - \frac{(y_i - \hat{y}_i)^2}{2 \sigma^2}
+    -\ln\2\brace1(){ \sigma \sqrt{2 \pi} }
+    -
+    \frac{(y_i - \hat{y}_i)^2}{2 \sigma^2}
     }
     \\[1em]
     & =
@@ -249,15 +250,19 @@ At this point, we just need to find the mean and standard deviation values that 
     \2
     \brace4[]
     {
-    - \ln \2 (\sigma)
-    - \frac{1}{2} \ln \2 (2 \pi)
-    - \frac{(y_i - \hat{y}_i)^2}{2 \sigma^2}
+    -\ln\2(\sigma)
+    -
+    \frac{1}{2} \ln\2(2 \pi)
+    -
+    \frac{(y_i - \hat{y}_i)^2}{2 \sigma^2}
     }
     \\[1em]
     & =
-    - n \ln \2 (\sigma)
-    - \frac{n}{2} \ln \2 (2 \pi)
-    - \frac{1}{2 \sigma^2} \sum_{i = 1}^{n} \2 (y_i - \hat{y}_i)^2
+    -n \ln\2(\sigma)
+    -
+    \frac{n}{2} \ln\2(2 \pi)
+    -
+    \frac{1}{2 \sigma^2} \sum_{i = 1}^{n} \2 (y_i - \hat{y}_i)^2
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -270,9 +275,11 @@ Since we're interested in finding the coefficients of the model function, we can
     \begin{displaymath}
     \ln L(a_0, a_1, \sigma)
     =
-    - n \ln \2 (\sigma)
-    - \frac{n}{2} \ln \2 (2 \pi)
-    - \frac{1}{2 \sigma^2} \tsum \2 (y_i - a_0 - a_1 x_i)^2
+    -n \ln\2(\sigma)
+    -
+    \frac{n}{2} \ln\2(2 \pi)
+    -
+    \frac{1}{2 \sigma^2} \tsum \2 (y_i - a_0 - a_1 x_i)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -360,8 +367,9 @@ As you can see, we get at the same results we got from using the method of least
     \begin{displaymath}
     \frac{\pderiv \ln L}{\pderiv \sigma}
     =
-    - \frac{n}{\sigma}
-    + \frac{1}{\sigma^3} \tsum \2 (y_i - a_0 - a_1 x_i)^2
+    -\frac{n}{\sigma}
+    +
+    \frac{1}{\sigma^3} \tsum \2 (y_i - a_0 - a_1 x_i)^2
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -376,9 +384,9 @@ Setting the derivative to zero, we get the following result for the standard dev
     \\[1em]
     &
     \begin{aligned}
-    0 & = - \frac{n}{\sigma} + \frac{1}{\sigma^3} \tsum \2 (y_i - a_0 - a_1 x_i)^2
+    0 & = -\frac{n}{\sigma} + \frac{1}{\sigma^3} \tsum \2 (y_i - a_0 - a_1 x_i)^2
     \\[1em]
-      & = - n \sigma^2 + \tsum \2 (y_i - a_0 - a_1 x_i)^2
+      & = -n \sigma^2 + \tsum \2 (y_i - a_0 - a_1 x_i)^2
     \end{aligned}
     \end{aligned}
     \end{displaymath}

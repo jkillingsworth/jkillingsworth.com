@@ -19,7 +19,7 @@ The generalized normal distribution is a continuous probability distribution wit
     f(x \mid \mu, \alpha, \beta)
     =
     \frac{\beta}{2 \alpha \Gamma(\nicefrac{1}{\beta})}
-    \exp \2 \brace4[]{- \brace3(){\frac{|x - \mu|}{\alpha}}^\beta}
+    \exp\2\brace4[]{ -\brace3(){ \frac{|x - \mu|}{\alpha} }^\beta }
     \\[1em]
     &
     \begin{aligned}
@@ -87,7 +87,7 @@ We now have a familiar representation of the normal distribution:
     \begin{displaymath}
     f(x \mid \mu, \sigma)
     =
-    \frac{1}{\sigma \sqrt{2 \pi}} \exp \2 \brace4[]{- \frac{(x - \mu)^2}{2 \sigma^2}}
+    \frac{1}{\sigma \sqrt{2 \pi}} \exp\2\brace4[]{ -\frac{(x - \mu)^2}{2 \sigma^2} }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -123,7 +123,7 @@ We now have a familiar representation of the Laplace distribution:
     \begin{displaymath}
     f(x \mid \mu, b)
     =
-    \frac{1}{2b} \exp \2 \brace3(){- \frac{|x - \mu|}{b}}
+    \frac{1}{2b} \exp\2\brace3(){ -\frac{|x - \mu|}{b} }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -151,7 +151,7 @@ To fit the generalized normal distribution to an observed set of data, we need t
     \begin{displaymath}
     C(\mu, \alpha, \beta)
     =
-    - \sum_{i = 1}^{n} \log \2 \brace2[]{ f(x_i \mid \mu, \alpha, \beta) }
+    -\sum_{i = 1}^{n} \log\2\brace2[]{ f(x_i \mid \mu, \alpha, \beta) }
     \end{displaymath}
     \end{document}
 {% endlatex %}

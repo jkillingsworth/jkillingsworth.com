@@ -136,7 +136,7 @@ For our first example, let's just use a simple sine wave. And let's use a sine w
 {% latex fig-08 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \sin\2\brace1(){2 \pi t}
+    x(t) = \sin\2\brace1(){ 2 \pi t }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -146,7 +146,7 @@ To foreshadow what is to come, I think it's worth pointing out here that a sine 
 {% latex fig-09 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \cos\2\brace1(){2 \pi t - 0.5 \pi}
+    x(t) = \cos\2\brace1(){ 2 \pi t - 0.5 \pi }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -267,19 +267,19 @@ Computing the phase angle is a bit more involved. If the complex value lies on t
     \begin{displaymath}
     \phi =
     \begin{dcases}
-    \arctan\2\brace1(){\tfrac{b}{a}}       & \quad \text{if $a > 0$}
+    \arctan\2\brace1(){ \tfrac{b}{a} }       & \quad \text{if $a > 0$}
     \\[0.5em]
-    \arctan\2\brace1(){\tfrac{b}{a}} + \pi & \quad \text{if $a < 0$ and $b > 0$}
+    \arctan\2\brace1(){ \tfrac{b}{a} } + \pi & \quad \text{if $a < 0$ and $b > 0$}
     \\[0.5em]
-    \arctan\2\brace1(){\tfrac{b}{a}} - \pi & \quad \text{if $a < 0$ and $b < 0$}
+    \arctan\2\brace1(){ \tfrac{b}{a} } - \pi & \quad \text{if $a < 0$ and $b < 0$}
     \\[0.5em]
-    +\pi                                   & \quad \text{if $a < 0$ and $b = 0$}
+    +\pi                                     & \quad \text{if $a < 0$ and $b = 0$}
     \\[0.5em]
-    +\tfrac{\pi}{2}                        & \quad \text{if $a = 0$ and $b > 0$}
+    +\tfrac{\pi}{2}                          & \quad \text{if $a = 0$ and $b > 0$}
     \\[0.5em]
-    -\tfrac{\pi}{2}                        & \quad \text{if $a = 0$ and $b < 0$}
+    -\tfrac{\pi}{2}                          & \quad \text{if $a = 0$ and $b < 0$}
     \\[0.5em]
-    \mathrm{undefined}                     & \quad \text{if $a = 0$ and $b = 0$}
+    \mathrm{undefined}                       & \quad \text{if $a = 0$ and $b = 0$}
     \end{dcases}
     \end{displaymath}
     \end{document}
@@ -378,9 +378,9 @@ As shown above, we can easily consolidate the exponents when expressing our comp
     A_k \1
     \brace3[]
     {
-    \cos\2\brace1(){2 \pi f_k t + \phi_k}
+    \cos\2\brace1(){ 2 \pi f_k t + \phi_k }
     + i
-    \sin\2\brace1(){2 \pi f_k t + \phi_k}
+    \sin\2\brace1(){ 2 \pi f_k t + \phi_k }
     }
     \end{displaymath}
     \end{document}
@@ -391,7 +391,7 @@ Since the original values in the time domain are real numbers, not complex numbe
 {% latex fig-27 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \sum_{k = 0}^{N - 1} A_k \cos\2\brace1(){2 \pi f_k t + \phi_k}
+    x(t) = \sum_{k = 0}^{N - 1} A_k \cos\2\brace1(){ 2 \pi f_k t + \phi_k }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -402,9 +402,9 @@ This is the inverse transform expressed in a form that uses the magnitude and ph
     \begin{document}
     \begin{displaymath}
     x(t) =
-    A_1 \cos\2\brace1(){2 \pi f_1 t + \phi_1}
+    A_1 \cos\2\brace1(){ 2 \pi f_1 t + \phi_1 }
     +
-    A_7 \cos\2\brace1(){2 \pi f_7 t + \phi_7}
+    A_7 \cos\2\brace1(){ 2 \pi f_7 t + \phi_7 }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -422,7 +422,7 @@ In the previous example, we noted the symmetry of the transformed values on the 
 {% latex fig-30 %}
     \begin{document}
     \begin{displaymath}
-    y_k = \frac{1}{N} \sum_{n = 0}^{N - 1} \sin\2\brace1(){2 \pi t_n} \, e^{-i 2 \pi f_k t_n}
+    y_k = \frac{1}{N} \sum_{n = 0}^{N - 1} \sin\2\brace1(){ 2 \pi t_n } \, e^{-i 2 \pi f_k t_n}
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -433,9 +433,9 @@ These are the same complex values on the frequency domain we saw in the previous
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    u & = \brace1{\lfloor}{\rfloor}{\tfrac{N - 1}{2}}
+    u & = \brace1{\lfloor}{\rfloor}{ \tfrac{N - 1}{2} }
     \\[0.5em]
-    v & = \brace1{\lfloor}{\rfloor}{\tfrac{N + 2}{2}}
+    v & = \brace1{\lfloor}{\rfloor}{ \tfrac{N + 2}{2} }
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -468,7 +468,7 @@ After performing the modification, all but one of the values in the frequency do
 {% latex fig-35 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = A_1 \cos\2\brace1(){2 \pi f_1 t + \phi_1}
+    x(t) = A_1 \cos\2\brace1(){ 2 \pi f_1 t + \phi_1 }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -504,7 +504,7 @@ Analogous to the previous instance, all but one of the values in the frequency d
 {% latex fig-40 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = A_7 \cos\2\brace1(){2 \pi f_7 t + \phi_7}
+    x(t) = A_7 \cos\2\brace1(){ 2 \pi f_7 t + \phi_7 }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -618,7 +618,7 @@ Using these values in the frequency domain, we can now apply the inverse transfo
 {% latex fig-49 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \sum_{k = 0}^{N - 1} A_k \cos\2\brace1(){2 \pi f_k t + \phi_k}
+    x(t) = \sum_{k = 0}^{N - 1} A_k \cos\2\brace1(){ 2 \pi f_k t + \phi_k }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -629,11 +629,11 @@ And since there are only three nonzero values in the table above, we can represe
     \begin{document}
     \begin{displaymath}
     x(t) =
-    A_1 \cos\2\brace1(){2 \pi f_1 t + \phi_1}
+    A_1 \cos\2\brace1(){ 2 \pi f_1 t + \phi_1 }
     +
-    A_2 \cos\2\brace1(){2 \pi f_2 t + \phi_2}
+    A_2 \cos\2\brace1(){ 2 \pi f_2 t + \phi_2 }
     +
-    A_3 \cos\2\brace1(){2 \pi f_3 t + \phi_3}
+    A_3 \cos\2\brace1(){ 2 \pi f_3 t + \phi_3 }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -653,7 +653,7 @@ What happens if you shift a function vertically by some amount? How does this af
 {% latex fig-54 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \sin\2\brace1(){2 \pi t} + 0.5
+    x(t) = \sin\2\brace1(){ 2 \pi t } + 0.5
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -673,9 +673,9 @@ Notice the magnitude value for the zero frequency. This value represents the ver
     \begin{document}
     \begin{displaymath}
     x(t) =
-    A_0 \cos\2\brace1(){2 \pi f_0 t + \phi_0}
+    A_0 \cos\2\brace1(){ 2 \pi f_0 t + \phi_0 }
     +
-    A_1 \cos\2\brace1(){2 \pi f_1 t + \phi_1}
+    A_1 \cos\2\brace1(){ 2 \pi f_1 t + \phi_1 }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -695,7 +695,7 @@ Here is the simplified version of the inverse transform:
 {% latex fig-60 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \cos\2\brace1(){2 \pi t - 0.5 \pi} + 0.5
+    x(t) = \cos\2\brace1(){ 2 \pi t - 0.5 \pi } + 0.5
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -709,7 +709,7 @@ We've seen what happens if you shift a function vertically in the upward directi
 {% latex fig-61 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \sin\2\brace1(){2 \pi t} - 0.5
+    x(t) = \sin\2\brace1(){ 2 \pi t } - 0.5
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -729,9 +729,9 @@ Notice the phase offset for the zero frequency in addition to the magnitude valu
     \begin{document}
     \begin{displaymath}
     x(t) =
-    A_0 \cos\2\brace1(){2 \pi f_0 t + \phi_0}
+    A_0 \cos\2\brace1(){ 2 \pi f_0 t + \phi_0 }
     +
-    A_1 \cos\2\brace1(){2 \pi f_1 t + \phi_1}
+    A_1 \cos\2\brace1(){ 2 \pi f_1 t + \phi_1 }
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -751,7 +751,7 @@ Here is the simplified version of the inverse transform:
 {% latex fig-67 %}
     \begin{document}
     \begin{displaymath}
-    x(t) = \cos\2\brace1(){2 \pi t - 0.5 \pi} - 0.5
+    x(t) = \cos\2\brace1(){ 2 \pi t - 0.5 \pi } - 0.5
     \end{displaymath}
     \end{document}
 {% endlatex %}

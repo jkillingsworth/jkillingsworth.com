@@ -17,18 +17,18 @@ The model of the coin toss game we'll use here is a simplified version. It uses 
     \begin{document}
     \begin{tikzpicture}[auto,>=stealth',shorten >=1bp,node distance=1.125in]
     \tikzset{every state/.style={minimum size=0.5in}}
-    \node[state,initial right] (00)               {$S_0$};
+    \node[state,initial right] (00)               {$S_0   $};
     \node[state]               (+1) [above of=00] {$S_{+1}$};
     \node[state]               (+2) [right of=+1] {$S_{+2}$};
     \node[state]               (-1) [below of=00] {$S_{-1}$};
     \node[state]               (-2) [right of=-1] {$S_{-2}$};
     \path[->]
-    (00) edge              node [swap] {$0.5$} (+1)
-    (+1) edge [bend right] node [swap] {$1-p$} (00)
-    (+1) edge              node        {$  p$} (+2)
-    (00) edge              node        {$0.5$} (-1)
-    (-1) edge [bend left]  node        {$1-p$} (00)
-    (-1) edge              node        {$  p$} (-2);
+    (00) edge              node [swap] {$  0.5$} (+1)
+    (+1) edge [bend right] node [swap] {$1 - p$} (00)
+    (+1) edge              node        {$    p$} (+2)
+    (00) edge              node        {$  0.5$} (-1)
+    (-1) edge [bend left]  node        {$1 - p$} (00)
+    (-1) edge              node        {$    p$} (-2);
     \end{tikzpicture}
     \end{document}
 {% endlatex %}
@@ -40,7 +40,7 @@ The first coin toss is always a fair coin, by definition. Let's assume the proba
     \begin{displaymath}
     \mathcal{L}(p, \lambda)
     =
-    \brace1(){ p - 0.5 }^2 - \lambda\1\brace1(){ 0.5 - p }
+    \brace1(){ p - 0.5 }^2 - \lambda \1 \brace1(){ 0.5 - p }
     \end{displaymath}
     \end{document}
 {% endlatex %}

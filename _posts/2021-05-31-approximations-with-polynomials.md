@@ -39,9 +39,9 @@ We can rearrange these two equations to get the values of the coefficients in te
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    a & = \phantom{-}\mathllap{-} p_1 + p_2
+    a & = \phantom{-}\mathllap{-}p_1 + p_2
     \\[1em]
-    b & = \phantom{-}\mathllap{2} p_1 - p_2
+    b & = \phantom{-}\mathllap{2}p_1 - p_2
     \end{aligned}
     \end{displaymath}
     \end{document}
@@ -170,11 +170,11 @@ From here, we can perform a series of elementary row operations to convert the m
     \begin{displaymath}
     \newcolumntype{x}{wr{0.75em}}
     \begin{matrix}{xxx@{\quad}|@{\quad}l}
-    1 & 0 & 0 & + 0.5 p_1 - 1.0 p_2 + 0.5 p_3
+    1 & 0 & 0 & +0.5 p_1 - 1.0 p_2 + 0.5 p_3
     \\[1em]
-    0 & 1 & 0 & - 2.5 p_1 + 4.0 p_2 - 1.5 p_3
+    0 & 1 & 0 & -2.5 p_1 + 4.0 p_2 - 1.5 p_3
     \\[1em]
-    0 & 0 & 1 & + 3.0 p_1 - 3.0 p_2 + 1.0 p_3
+    0 & 0 & 1 & +3.0 p_1 - 3.0 p_2 + 1.0 p_3
     \end{matrix}
     \end{displaymath}
     \end{document}
@@ -186,11 +186,11 @@ Once we do that, we can easily express the three coefficients of the quadratic p
     \begin{document}
     \begin{displaymath}
     \begin{aligned}
-    a & = + 0.5 p_1 - 1.0 p_2 + 0.5 p_3
+    a & = +0.5 p_1 - 1.0 p_2 + 0.5 p_3
     \\[1em]
-    b & = - 2.5 p_1 + 4.0 p_2 - 1.5 p_3
+    b & = -2.5 p_1 + 4.0 p_2 - 1.5 p_3
     \\[1em]
-    c & = + 3.0 p_1 - 3.0 p_2 + 1.0 p_3
+    c & = +3.0 p_1 - 3.0 p_2 + 1.0 p_3
     \end{aligned}
     \end{displaymath}
     \end{document}
