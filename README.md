@@ -6,45 +6,46 @@ This is the source repository for my personal website.
 
 To build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) and use the [Jekyll](https://jekyllrb.com/) static site generator. Several additional packages are also required. The following instructions are designed for installing the required toolchain on a 64-bit Windows system. These tools are available on other platforms as well.
 
-1. Download and run the [MSYS2](https://www.msys2.org/) installer. Follow the installation instructions documented on the website. Make sure you update all the core system packages before proceeding:
+1. Download and run [RubyInstaller](https://rubyinstaller.org) for Windows. Follow the steps in the installation wizard. You might want to avoid installing in a folder that contains spaces in the name (e.g. Program Files).
+
+2. Download and run the [MSYS2](https://www.msys2.org/) installer. Follow the installation instructions documented on the website. Make sure you update all the core system packages before proceeding:
 
        pacman -Syu
 
    You can browse the [MSYS2 wiki page](https://www.msys2.org/wiki/Home/) for more information.
 
-2. Use the package manager to install the prerequisite packages from the MSYS2 command prompt:
+3. Use the package manager to install the prerequisite packages from the MSYS2 command prompt:
 
        pacman -S base-devel
        pacman -S git
-       pacman -S mingw-w64-x86_64-gnuplot
-       pacman -S mingw-w64-x86_64-python-fonttools
-       pacman -S mingw-w64-x86_64-python-setuptools
-       pacman -S mingw-w64-x86_64-ruby
-       pacman -S mingw-w64-x86_64-toolchain
-       pacman -S mingw-w64-x86_64-ttfautohint
-       pacman -S mingw-w64-x86_64-woff2
+       pacman -S mingw-w64-ucrt-x86_64-gnuplot
+       pacman -S mingw-w64-ucrt-x86_64-python-fonttools
+       pacman -S mingw-w64-ucrt-x86_64-python-setuptools
+       pacman -S mingw-w64-ucrt-x86_64-toolchain
+       pacman -S mingw-w64-ucrt-x86_64-ttfautohint
+       pacman -S mingw-w64-ucrt-x86_64-woff2
 
-   Run the above commands from the MSYS2 shell in the `MSYS` environment. After installing the prerequisite packages, switch to running the MSYS2 shell in the `MINGW64` environment from this point forward.
+   Run the above commands from the MSYS2 shell in the `MSYS` environment. After installing the prerequisite packages, switch to running the MSYS2 shell in the `UCRT64` environment from this point forward.
 
-3. Clone the repository using the `--shallow-exclude` option to exclude the `gh-pages` branch:
+4. Clone the repository using the `--shallow-exclude` option to exclude the `gh-pages` branch:
 
        git clone https://github.com/jkillingsworth/jkillingsworth.com.git --shallow-exclude=gh-pages
 
    The `gh-pages` branch is where the rendered files for the live website are stored.
 
-4. Install the Bundler gem using the following command:
+5. Install the Bundler gem using the following command:
 
        gem install bundler
 
-5. Install Jekyll and all dependencies using the following command:
+6. Install Jekyll and all dependencies using the following command:
 
        bundle install
 
-6. Verify the latest version of Jekyll is installed using the following command:
+7. Verify the latest version of Jekyll is installed using the following command:
 
        ./bin/jekyll --version
 
-7. Verify that you can build and host the site on your local machine:
+8. Verify that you can build and host the site on your local machine:
 
        ./bin/jekyll serve
 
@@ -54,7 +55,7 @@ To build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) and
 
    You should now be able to see a local copy of the website in your browser.
 
-8. *Optional.* Install [TeX Live](https://www.tug.org/texlive/) if you want to recreate the LaTeX output. Follow the instructions in the documentation. Make sure your `PATH` environment variable includes the directory containing the `latex` and `dvisvgm` executables. Be aware that your MSYS2 environment may not automatically inherit the directories contained in the Windows `PATH` environment variable. I prefer to launch the MSYS2 shell with the following variable set:
+9. *Optional.* Install [TeX Live](https://www.tug.org/texlive/) if you want to recreate the LaTeX output. Follow the instructions in the documentation. Make sure your `PATH` environment variable includes the directory containing the `latex` and `dvisvgm` executables. Be aware that your MSYS2 environment may not automatically inherit the directories contained in the Windows `PATH` environment variable. I prefer to launch the MSYS2 shell with the following variable set:
 
        MSYS2_PATH_TYPE=inherit
 
