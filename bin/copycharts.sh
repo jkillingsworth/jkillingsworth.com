@@ -547,3 +547,23 @@ copychart ${post} fig-26 fitted-BTCUSD-G.svg
 copychart ${post} fig-28 fitted-UNG-N.svg
 copychart ${post} fig-29 fitted-UNG-L.svg
 copychart ${post} fig-30 fitted-UNG-G.svg
+
+#--------------------------------------------------------------------------------------------------
+
+post="2022-08-17-characteristic-functions-and-stable-distributions"
+
+copychart ${post} fig-06 shape-0.45.svg
+copychart ${post} fig-07 shape-0.55.svg
+copychart ${post} fig-08 shape-0.75.svg
+copychart ${post} fig-09 shape-1.00.svg
+copychart ${post} fig-10 shape-1.35.svg
+copychart ${post} fig-11 shape-2.00.svg
+copychart ${post} fig-27 fitted-MSFT-N.svg
+copychart ${post} fig-28 fitted-MSFT-C.svg
+copychart ${post} fig-29 fitted-MSFT-S.svg
+copychart ${post} fig-31 fitted-BTCUSD-N.svg
+copychart ${post} fig-32 fitted-BTCUSD-C.svg
+copychart ${post} fig-33 fitted-BTCUSD-S.svg
+copychart ${post} fig-35 fitted-UNG-N.svg
+copychart ${post} fig-36 fitted-UNG-C.svg
+copychart ${post} fig-37 fitted-UNG-S.svg
