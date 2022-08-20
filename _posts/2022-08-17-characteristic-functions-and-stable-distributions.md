@@ -40,7 +40,6 @@ There are a variety of different purposes for which characteristic functions can
 Except for a small number of cases, the L&eacute;vy alpha-stable distribution does not have a probability density function that can be expressed analytically. However, it is possible to represent the probability density function in terms of the characteristic function. Here is the general form of the characteristic function for stable distributions:
 
 {% latex fig-03 %}
-    \newcommand{\sgn}{\operatorname{sgn}}
     \begin{document}
     \begin{displaymath}
     \begin{aligned}

@@ -156,7 +156,7 @@ To be more succinct, we can represent the derivative of the absolute value funct
     \begin{displaymath}
     \frac{\dderiv}{\dderiv \mu} |x - \mu|
     =
-    \operatorname{sgn}\2(x - \mu), \quad x \neq \mu
+    \sgn\2(x - \mu), \quad x \neq \mu
     \end{displaymath}
     \end{document}
 {% endlatex %}
@@ -166,7 +166,7 @@ The sign function simply returns the sign of a value:
 {% latex fig-12 %}
     \begin{document}
     \begin{displaymath}
-    \operatorname{sgn}\2(x - \mu)
+    \sgn\2(x - \mu)
     =
     \begin{dcases}
     -1             & \quad \text{if $x < \mu$}
@@ -186,7 +186,7 @@ We can express the partial derivative of the log-likelihood function with respec
     \begin{displaymath}
     \frac{\pderiv \ln L}{\pderiv \mu}
     =
-    \frac{1}{b} \sum_{i = 1}^{n} \operatorname{sgn}\2(x_i - \mu), \quad x_i \neq \mu
+    \frac{1}{b} \sum_{i = 1}^{n} \sgn\2(x_i - \mu), \quad x_i \neq \mu
     \end{displaymath}
     \end{document}
 {% endlatex %}

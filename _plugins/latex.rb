@@ -46,6 +46,7 @@ module Jekyll
             \newcommand{\0}{\mspace{0.5mu}}
             \newcommand{\1}{\mspace{1.0mu}}
             \newcommand{\2}{\mspace{1.5mu}}
+            \newcommand{\sgn}{\operatorname{sgn}}
             \newcommand{\tsum}{\mathop{\textstyle\sum}}
             \newcommand{\dderiv}{d\mspace{-1.5mu}}
             \newcommand{\pderiv}{\partial\mspace{-2.0mu}}
