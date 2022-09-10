@@ -567,3 +567,23 @@ copychart ${post} fig-33 fitted-BTCUSD-S.svg
 copychart ${post} fig-35 fitted-UNG-N.svg
 copychart ${post} fig-36 fitted-UNG-C.svg
 copychart ${post} fig-37 fitted-UNG-S.svg
+
+#--------------------------------------------------------------------------------------------------
+
+post="2022-09-09-generalized-hyperbolic-distributions"
+
+copychart ${post} fig-04 model-scale-1.00.svg
+copychart ${post} fig-05 model-scale-0.33.svg
+copychart ${post} fig-06 model-scale-0.01.svg
+copychart ${post} fig-07 model-shape-1.00.svg
+copychart ${post} fig-08 model-shape-0.33.svg
+copychart ${post} fig-09 model-shape-0.01.svg
+copychart ${post} fig-14 fitted-MSFT-N.svg
+copychart ${post} fig-15 fitted-MSFT-I.svg
+copychart ${post} fig-16 fitted-MSFT-H.svg
+copychart ${post} fig-18 fitted-BTCUSD-N.svg
+copychart ${post} fig-19 fitted-BTCUSD-I.svg
+copychart ${post} fig-20 fitted-BTCUSD-H.svg
+copychart ${post} fig-22 fitted-UNG-N.svg
+copychart ${post} fig-23 fitted-UNG-I.svg
+copychart ${post} fig-24 fitted-UNG-H.svg

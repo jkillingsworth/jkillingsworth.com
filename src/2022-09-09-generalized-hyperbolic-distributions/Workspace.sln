@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ConsoleApp", "src\ConsoleApp\ConsoleApp.fsproj", "{EF540C14-02FD-4BEB-AD7D-730DC4803B7D}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Common", "..\Common\src\Common\Common.fsproj", "{1D6EBCDB-4034-44C0-8FA1-0728F0472314}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF540C14-02FD-4BEB-AD7D-730DC4803B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF540C14-02FD-4BEB-AD7D-730DC4803B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF540C14-02FD-4BEB-AD7D-730DC4803B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF540C14-02FD-4BEB-AD7D-730DC4803B7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D6EBCDB-4034-44C0-8FA1-0728F0472314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D6EBCDB-4034-44C0-8FA1-0728F0472314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D6EBCDB-4034-44C0-8FA1-0728F0472314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D6EBCDB-4034-44C0-8FA1-0728F0472314}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1567695-0CCD-4713-8C55-1BEC5EC6CC1B}
+	EndGlobalSection
+EndGlobal
