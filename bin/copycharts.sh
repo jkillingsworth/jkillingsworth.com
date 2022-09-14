@@ -531,13 +531,13 @@ copychart ${post} fig-31 example-5-pdfunc-fs.svg
 
 post="2022-07-07-generalized-normal-distributions"
 
-copychart ${post} fig-03 shape-0.50.svg
-copychart ${post} fig-04 shape-0.75.svg
-copychart ${post} fig-05 shape-1.00.svg
-copychart ${post} fig-06 shape-1.50.svg
-copychart ${post} fig-07 shape-2.00.svg
-copychart ${post} fig-08 shape-4.00.svg
-copychart ${post} fig-09 shape-8.00.svg
+copychart ${post} fig-03 model-shape-0.50.svg
+copychart ${post} fig-04 model-shape-0.75.svg
+copychart ${post} fig-05 model-shape-1.00.svg
+copychart ${post} fig-06 model-shape-1.50.svg
+copychart ${post} fig-07 model-shape-2.00.svg
+copychart ${post} fig-08 model-shape-4.00.svg
+copychart ${post} fig-09 model-shape-8.00.svg
 copychart ${post} fig-20 fitted-MSFT-N.svg
 copychart ${post} fig-21 fitted-MSFT-L.svg
 copychart ${post} fig-22 fitted-MSFT-G.svg
@@ -552,12 +552,12 @@ copychart ${post} fig-30 fitted-UNG-G.svg
 
 post="2022-08-17-characteristic-functions-and-stable-distributions"
 
-copychart ${post} fig-06 shape-0.45.svg
-copychart ${post} fig-07 shape-0.55.svg
-copychart ${post} fig-08 shape-0.75.svg
-copychart ${post} fig-09 shape-1.00.svg
-copychart ${post} fig-10 shape-1.35.svg
-copychart ${post} fig-11 shape-2.00.svg
+copychart ${post} fig-06 model-shape-0.45.svg
+copychart ${post} fig-07 model-shape-0.55.svg
+copychart ${post} fig-08 model-shape-0.75.svg
+copychart ${post} fig-09 model-shape-1.00.svg
+copychart ${post} fig-10 model-shape-1.35.svg
+copychart ${post} fig-11 model-shape-2.00.svg
 copychart ${post} fig-27 fitted-MSFT-N.svg
 copychart ${post} fig-28 fitted-MSFT-C.svg
 copychart ${post} fig-29 fitted-MSFT-S.svg

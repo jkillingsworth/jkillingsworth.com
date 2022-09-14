@@ -16,14 +16,14 @@ let sigmas = 4.0
 
 //-------------------------------------------------------------------------------------------------
 
-let runModelDistribution β =
+let runModelShape β =
 
     let μ = 0.0
     let α = 1.0
 
     let data = (μ, α, β) |> Compute.pDensityG |> Compute.ps 4.0
 
-    Chart.renderShape (path $"shape-{β:F2}.svg") data β
+    Chart.renderShape (path $"model-shape-{β:F2}.svg") data β
 
 //-------------------------------------------------------------------------------------------------
 
@@ -66,13 +66,13 @@ let runFitDistributions high symbol =
 
 //-------------------------------------------------------------------------------------------------
 
-runModelDistribution 0.50
-runModelDistribution 0.75
-runModelDistribution 1.00
-runModelDistribution 1.50
-runModelDistribution 2.00
-runModelDistribution 4.00
-runModelDistribution 8.00
+runModelShape 0.50
+runModelShape 0.75
+runModelShape 1.00
+runModelShape 1.50
+runModelShape 2.00
+runModelShape 4.00
+runModelShape 8.00
 
 runFitDistributions 40 "MSFT"
 runFitDistributions 28 "BTCUSD"

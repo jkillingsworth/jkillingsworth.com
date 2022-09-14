@@ -48,13 +48,13 @@ The location parameter can be negative or positive. The scale parameter and the 
 
 For practical purposes, we can just use a numerical method to approximate the gamma function. I am using a third-party implementation of the [Lanczos approximation](https://en.wikipedia.org/wiki/Lanczos_approximation) for the illustrations in this post. If we hold the location and scale parameters constant and then vary the shape parameter, we can see what the shape of the density function looks like for different values of the shape parameter. Here are some illustrations:
 
-{% chart fig-03-shape-0.50.svg %}
-{% chart fig-04-shape-0.75.svg %}
-{% chart fig-05-shape-1.00.svg %}
-{% chart fig-06-shape-1.50.svg %}
-{% chart fig-07-shape-2.00.svg %}
-{% chart fig-08-shape-4.00.svg %}
-{% chart fig-09-shape-8.00.svg %}
+{% chart fig-03-model-shape-0.50.svg %}
+{% chart fig-04-model-shape-0.75.svg %}
+{% chart fig-05-model-shape-1.00.svg %}
+{% chart fig-06-model-shape-1.50.svg %}
+{% chart fig-07-model-shape-2.00.svg %}
+{% chart fig-08-model-shape-4.00.svg %}
+{% chart fig-09-model-shape-8.00.svg %}
 
 If you think the density function looks like that of a Laplace distribution when the shape parameter is equal to one, then you would be correct. And if you think the density function looks like that of a normal distribution when the shape parameter is equal to two, then you would be correct again. Indeed, both the normal distribution and the Laplace distribution are special cases of the generalized normal distribution. The generalized normal distribution can also take the form of a uniform distribution as the shape parameter approaches infinity.
 

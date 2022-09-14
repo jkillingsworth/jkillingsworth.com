@@ -101,12 +101,12 @@ This is the characteristic function for the symmetric alpha-stable distribution.
 
 We can use numerical integration to evaluate this function and plot charts for specific parameter values. Holding the location and scale parameters constant and varying the shape parameter, we can see what the shape of the density function looks like for different values of the shape parameter. Here are some illustrations:
 
-{% chart fig-06-shape-0.45.svg %}
-{% chart fig-07-shape-0.55.svg %}
-{% chart fig-08-shape-0.75.svg %}
-{% chart fig-09-shape-1.00.svg %}
-{% chart fig-10-shape-1.35.svg %}
-{% chart fig-11-shape-2.00.svg %}
+{% chart fig-06-model-shape-0.45.svg %}
+{% chart fig-07-model-shape-0.55.svg %}
+{% chart fig-08-model-shape-0.75.svg %}
+{% chart fig-09-model-shape-1.00.svg %}
+{% chart fig-10-model-shape-1.35.svg %}
+{% chart fig-11-model-shape-2.00.svg %}
 
 There are two special cases in the examples illustrated above. When the shape parameter is equal to two, the stable distribution is equivalent to a normal distribution. When the shape parameter is equal to one, the stable distribution is equivalent to a Cauchy distribution. For these two special cases, the probability density function can be expressed in closed form.
 

@@ -73,7 +73,7 @@ let fitDistributionL (values : float[]) =
 
     (μ, b)
 
-let fitDistributionG values =
+let fitDistributionG (values : float[]) =
 
     let (μN, σN) = fitDistributionN values
 

@@ -16,7 +16,7 @@ let sigmas = 4.0
 
 //-------------------------------------------------------------------------------------------------
 
-let runModelByScale δ =
+let runModelScale δ =
 
     let μ = 0.00
     let α = 1.00
@@ -26,7 +26,7 @@ let runModelByScale δ =
 
     Chart.renderModel (path $"model-scale-{δ:F2}.svg") data δ α λ
 
-let runModelByShape α =
+let runModelShape α =
 
     let μ = 0.00
     let δ = 1.00
@@ -80,13 +80,13 @@ let runFitDistributions high symbol =
 
 //-------------------------------------------------------------------------------------------------
 
-runModelByScale 1.00
-runModelByScale 0.33
-runModelByScale 0.01
+runModelScale 1.00
+runModelScale 0.33
+runModelScale 0.01
 
-runModelByShape 1.00
-runModelByShape 0.33
-runModelByShape 0.01
+runModelShape 1.00
+runModelShape 0.33
+runModelShape 0.01
 
 runFitDistributions 40 "MSFT"
 runFitDistributions 28 "BTCUSD"
