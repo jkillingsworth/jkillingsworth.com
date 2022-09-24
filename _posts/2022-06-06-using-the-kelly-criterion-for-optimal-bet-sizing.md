@@ -23,7 +23,7 @@ For our first example, let's consider a repeated coin toss game. The gambler bet
     \end{document}
 {% endlatex %}
 
-Let's assume the gambler is aware of this bias. Of course, the gambler will always bet on heads. But how much should he bet? Should he bet 10% of his stake? Should he bet 20%? Perhaps he should bet 30%? Maybe more? Maybe less? This is the question we want to answer. If the gambler bets too high, he risks depleting his capital too quickly during a losing streak. If he bets too low, his wealth may not grow as quickly as it might otherwise. We can being to answer this question by considering an example and then constructing a model. Suppose the gambler plays 200 rounds of the game and bets 10% on each play:
+Let's assume the gambler is aware of this bias. Of course, the gambler will always bet on heads. But how much should he bet? Should he bet 10% of his stake? Should he bet 20%? Perhaps he should bet 30%? Maybe more? Maybe less? This is the question we want to answer. If the gambler bets too high, he risks depleting his capital too quickly during a losing streak. If he bets too low, his wealth may not grow as quickly as it might otherwise. We can begin to answer this question by considering an example and then constructing a model. Suppose the gambler plays 200 rounds of the game and bets 10% on each play:
 
 {% latex fig-02 %}
     \begin{document}
@@ -57,7 +57,7 @@ Based on these numbers, we can use the following formula to calculate the size o
     \end{document}
 {% endlatex %}
 
-Because there is an element of randomness involved, there is no guarantee that we will get the same result every time we compute this value. One series of 200 coin tosses might have a different number of heads and tails than another series. However, the number of heads and the number of tails will always add up to the same amount:
+Because there is an element of randomness involved, there is no guarantee that we'll get the same result every time we compute this value. One series of 200 coin tosses might have a different number of heads and a different number of tails than another series. However, the number of heads and the number of tails will always add up to the same amount:
 
 {% latex fig-05 %}
     \begin{document}
@@ -305,7 +305,7 @@ Like we did in the previous example, we can find the maximum growth rate by find
     \end{document}
 {% endlatex %}
 
-Settings the derivative to zero and solving for the bet size, we can arrive at the optimal bet size that maximizes the growth rate:
+Setting the derivative to zero and solving for the bet size, we can arrive at the optimal bet size that maximizes the growth rate:
 
 {% latex fig-28 %}
     \begin{document}
