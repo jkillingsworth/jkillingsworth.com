@@ -6,9 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Data.fs" />
     <Compile Include="Compute.fs" />
     <Compile Include="Chart.fs" />
-    <Compile Include="Data.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
