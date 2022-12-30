@@ -18,7 +18,6 @@ To build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) and
 
        pacman -S base-devel
        pacman -S git
-       pacman -S mingw-w64-ucrt-x86_64-gnuplot
        pacman -S mingw-w64-ucrt-x86_64-python-fonttools
        pacman -S mingw-w64-ucrt-x86_64-python-setuptools
        pacman -S mingw-w64-ucrt-x86_64-toolchain
@@ -60,6 +59,8 @@ To build the site, you'll need to install [Ruby](https://www.ruby-lang.org/) and
        MSYS2_PATH_TYPE=inherit
 
    This will cause the `PATH` environment variable in your MSYS2 shell to inherit the directories contained in the Windows `PATH` environment variable. You can [consult the wiki](https://www.msys2.org/wiki/MSYS2-introduction/#path) or inspect the [launcher script](https://github.com/msys2/MSYS2-packages/blob/master/filesystem/msys2_shell.cmd) for more insights.
+
+10. *Optional.* Install [Gnuplot](http://www.gnuplot.info/) if you want to recreate the charts. After installing, create a `GNUPLOT_EXE` environment variable that points to the executable. You will also need a build environment capable of building and running the [F#](https://fsharp.org/) code that generates the data displayed in the charts.
 
 ## Usage
 
