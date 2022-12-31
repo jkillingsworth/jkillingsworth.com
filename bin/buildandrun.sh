@@ -12,7 +12,7 @@ cd "${basedir}"
 
 run_console_app()
 {
-    pushd "${dir}"/build/bin-ConsoleApp/Release/net6.0
+    pushd "${dir}"/build/bin-ConsoleApp/Release/net7.0
     ./ConsoleApp
     popd
 }
