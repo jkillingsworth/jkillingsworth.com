@@ -3,7 +3,12 @@
 .sass-cache
 .vs
 
-_drafts
-_site
+/_drafts/
+/_site/
 
-bin/fontpp*
+/bin/fontpp*
+/src/fontpp/bin/
+/src/fontpp/obj/
+
+/src/*/build/
+/src/*/private/
