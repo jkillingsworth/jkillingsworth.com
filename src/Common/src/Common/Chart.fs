@@ -8,6 +8,10 @@ open Wacton.Unicolour
 
 //-------------------------------------------------------------------------------------------------
 
+let outputPath filename = "../../../../output/" + filename
+
+//-------------------------------------------------------------------------------------------------
+
 let private hsl h s l =
 
     let h = h / 60.0
@@ -261,6 +265,12 @@ exit
 "
 
 let render path template args =
+
+    path
+    |> Path.GetFullPath
+    |> Path.GetDirectoryName
+    |> Directory.CreateDirectory
+    |> ignore
 
     let preamble = String.Format(preamble, Path.GetFullPath(path), colordef)
     let template = String.Format(template, args)
