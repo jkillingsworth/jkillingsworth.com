@@ -3,6 +3,7 @@
   <PropertyGroup>
     <BaseOutputPath>build\bin\</BaseOutputPath>
     <BaseIntermediateOutputPath>build\obj\</BaseIntermediateOutputPath>
+    <RunWorkingDirectory>.\</RunWorkingDirectory>
   </PropertyGroup>
 
 </Project>

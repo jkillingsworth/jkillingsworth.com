@@ -12,8 +12,8 @@ cd "${basedir}"
 
 run_console_app()
 {
-    pushd "${dir}"/build/bin/Release/net7.0
-    ./ConsoleApp
+    pushd "${dir}"
+    dotnet run -c Release --no-build
     popd
 }
 
