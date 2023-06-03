@@ -22,7 +22,6 @@ dotnet build -c Release ./src/Common/Common.sln
 
 for dir in ./src/20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]-*; do
     rm -rf "${dir}"/build/
-    rm -rf "${dir}"/output/
     dotnet build -c Release "${dir}"/ConsoleApp.sln
     run_console_app > /dev/null
 done
