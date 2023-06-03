@@ -12,19 +12,17 @@ cd "${basedir}"
 
 run_console_app()
 {
-    pushd "${dir}"/src/ConsoleApp/bin/Release/net7.0
+    pushd "${dir}"/build/bin/Release/net7.0
     ./ConsoleApp
     popd
 }
 
-rm -rf ./src/Common/src/Common/bin
-rm -rf ./src/Common/src/Common/obj
-dotnet build -c Release ./src/Common/Workspace.sln
+rm -rf ./src/Common/build/
+dotnet build -c Release ./src/Common/Common.sln
 
 for dir in ./src/20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]-*; do
-    rm -rf "${dir}"/output
-    rm -rf "${dir}"/src/ConsoleApp/bin
-    rm -rf "${dir}"/src/ConsoleApp/obj
-    dotnet build -c Release "${dir}"/Workspace.sln
+    rm -rf "${dir}"/build/
+    rm -rf "${dir}"/output/
+    dotnet build -c Release "${dir}"/ConsoleApp.sln
     run_console_app > /dev/null
 done
