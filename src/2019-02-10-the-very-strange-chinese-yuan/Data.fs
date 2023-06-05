@@ -8,8 +8,8 @@ open Chiron
 
 //-------------------------------------------------------------------------------------------------
 
-let private apikeytxt = "./private/apikey.txt"
-let private cachepath = "./data/"
+let private cachepath = Common.Const.cachepath
+let private apikeytxt = Common.Const.apikeytxt
 
 //-------------------------------------------------------------------------------------------------
 

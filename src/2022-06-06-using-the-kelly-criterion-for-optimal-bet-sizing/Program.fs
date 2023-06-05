@@ -7,7 +7,7 @@ open System.Text
 
 Console.OutputEncoding <- new UTF8Encoding()
 
-let path filename = Common.Chart.outputPath filename
+let path filename = Common.Const.runoutput + filename
 
 //-------------------------------------------------------------------------------------------------
 
